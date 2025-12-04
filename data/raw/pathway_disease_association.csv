@@ -1,0 +1,169 @@
+PathwayDiseaseAssociation,PathwayId,PathwayName,DiseaseCui,DiseaseName,GeneProductId,GeneProductName
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,AKT1,AKT1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,AKT1,AKT1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,AKT2,AKT2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,AKT2,AKT2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,AKT3,AKT3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,AKT3,AKT3
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,ALK,ALK
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,APAF1,APAF1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,ARAF,ARAF
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,BAD,BAD
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,BAK1,BAK1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,BAK1,BAK1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,BAX,BAX
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,BAX,BAX
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,BCL2,BCL2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,BCL2L1,BCL2L1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,BID,BID
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,BID,BID
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,BIRC2,BIRC2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,BIRC3,BIRC3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,BIRC7,BIRC7
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,BIRC8,BIRC8
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,BRAF,BRAF
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CASP3,CASP3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CASP3,CASP3
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CASP8,CASP8
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CASP8,CASP8
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CASP9,CASP9
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CASP9,CASP9
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CCND1,CCND1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CCND1,CCND1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CCNE1,CCNE1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CCNE2,CCNE2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CDK2,CDK2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CDK4,CDK4
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CDK4,CDK4
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CDK6,CDK6
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CDK6,CDK6
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CDKN1A,CDKN1A
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CDKN1A,CDKN1A
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CDKN1B,CDKN1B
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CDKN1C,CDKN1C
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CDKN2A,CDKN2A
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CDKN2B,CDKN2B
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CHUK,CHUK
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CKS1B,CKS1B
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CKS2,CKS2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,COL4A1,COL4A1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,COL4A2,COL4A2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,COL4A3,COL4A3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,COL4A4,COL4A4
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,COL4A5,COL4A5
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,COL4A6,COL4A6
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CRABP1,CRABP1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CRABP2,CRABP2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,CYCS,CYCS
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,CYCS,CYCS
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,DDB2,DDB2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,DDB2,DDB2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,E2F1,E2F1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,E2F1,E2F1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,E2F2,E2F2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,E2F2,E2F2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,E2F3,E2F3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,E2F3,E2F3
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,EGF,EGF
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,EGFR,EGFR
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,EML4,EML4
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,ERBB2,ERBB2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,FHIT,FHIT
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,FHIT,FHIT
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,FN1,FN1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,FOXO3,FOXO3
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,GADD45A,GADD45A
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,GADD45A,GADD45A
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,GADD45B,GADD45B
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,GADD45B,GADD45B
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,GADD45G,GADD45G
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,GADD45G,GADD45G
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,GRB2,GRB2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,HRAS,HRAS
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,IKBKB,IKBKB
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,IKBKG,IKBKG
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,ITGA2,ITGA2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,ITGA2B,ITGA2B
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,ITGA3,ITGA3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,ITGA6,ITGA6
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,ITGAV,ITGAV
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,ITGB1,ITGB1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,JAK3,JAK3
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,KRAS,KRAS
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMA1,LAMA1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMA2,LAMA2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMA3,LAMA3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMA4,LAMA4
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMA5,LAMA5
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMB1,LAMB1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMB2,LAMB2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMB3,LAMB3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMB4,LAMB4
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMC1,LAMC1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMC2,LAMC2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,LAMC3,LAMC3
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,MAP2K1,MAP2K1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,MAP2K2,MAP2K2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,MAPK1,MAPK1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,MAPK3,MAPK3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,MAX,MAX
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,MYC,MYC
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,NFKB1,NFKB1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,NFKBIA,NFKBIA
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,NFKBIB,NFKBIB
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,NOS2,NOS2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,NRAS,NRAS
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PDK1,PDK1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PIK3CA,PIK3CA
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,PIK3CA,PIK3CA
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PIK3CB,PIK3CB
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,PIK3CB,PIK3CB
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PIK3CD,PIK3CD
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,PIK3CD,PIK3CD
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PIK3R1,PIK3R1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,PIK3R1,PIK3R1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PIK3R2,PIK3R2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,PIK3R2,PIK3R2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PIK3R3,PIK3R3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,PIK3R3,PIK3R3
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PLCG1,PLCG1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PLCG2,PLCG2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,POLK,POLK
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,POLK,POLK
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PRKCA,PRKCA
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PRKCB,PRKCB
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,PRKCG,PRKCG
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,PTEN,PTEN
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,PTGS2,PTGS2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,PTK2,PTK2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,RAF1,RAF1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,RARB,RARB
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,RARB,RARB
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,RASSF1,RASSF1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,RASSF5,RASSF5
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,RB1,RB1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,RB1,RB1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,RELA,RELA
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,RXRA,RXRA
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,RXRA,RXRA
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,RXRB,RXRB
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,RXRB,RXRB
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,RXRG,RXRG
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,RXRG,RXRG
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,SKP1,SKP1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,SOS1,SOS1
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,SOS2,SOS2
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,STAT3,STAT3
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,STAT5A,STAT5A
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,STAT5B,STAT5B
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,STK4,STK4
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,TGFA,TGFA
+C0007131-WP4255,WP4255,Non-small cell lung cancer,C0007131,Non-Small Cell Lung Carcinoma,TP53,TP53
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,TP53,TP53
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,TRAF1,TRAF1
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,TRAF2,TRAF2
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,TRAF3,TRAF3
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,TRAF4,TRAF4
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,TRAF5,TRAF5
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,TRAF6,TRAF6
+C0149925-WP4658,WP4658,Small cell lung cancer,C0149925,Small cell carcinoma of lung,ZBTB17,ZBTB17
