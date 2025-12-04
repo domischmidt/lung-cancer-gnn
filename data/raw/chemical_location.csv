@@ -1,0 +1,374 @@
+ChemicalId,ChemicalName,CityId,CountryName,CityName,Value,Units,Population
+C5890534,Particulate matter (PM2.5),CH_zrich_664a,Switzerland,Zürich (greater city),8.6,Microgramos por metro cúbico (µg/m³),677118
+C5890534,Particulate matter (PM2.5),IT_aless_7e23,Italy,Alessandria,19.3,Microgramos por metro cúbico (µg/m³),92876
+C5890534,Particulate matter (PM2.5),DE_ulm_e90c,Germany,Ulm,8.3,Microgramos por metro cúbico (µg/m³),126790
+C5890534,Particulate matter (PM2.5),RO_clujn_1ffc,Romania,Cluj-Napoca,15.6,Microgramos por metro cúbico (µg/m³),324960
+C5890534,Particulate matter (PM2.5),DE_jena_1aa9,Germany,Jena,8.5,Microgramos por metro cúbico (µg/m³),111343
+C5890534,Particulate matter (PM2.5),IE_cork_5154,Ireland,Cork,5.2,Microgramos por metro cúbico (µg/m³),118713
+C5890534,Particulate matter (PM2.5),DE_osnab_c30e,Germany,Osnabrück,8,Microgramos por metro cúbico (µg/m³),165251
+C5890534,Particulate matter (PM2.5),FR_pau_0ea5,France,Pau,9,Microgramos por metro cúbico (µg/m³),110402
+C5890534,Particulate matter (PM2.5),FI_oulu_6504,Finland,Oulu,4,Microgramos por metro cúbico (µg/m³),205489
+C5890534,Particulate matter (PM2.5),FR_anger_0768,France,Angers,9.3,Microgramos por metro cúbico (µg/m³),180297
+C5890534,Particulate matter (PM2.5),PL_torun_6e62,Poland,Torun,14.1,Microgramos por metro cúbico (µg/m³),202074
+C5890534,Particulate matter (PM2.5),FR_lyon_10b5,France,Lyon,10.2,Microgramos por metro cúbico (µg/m³),1076752
+C5890534,Particulate matter (PM2.5),ES_sanse_7e46,Spain,San Sebastián/Donostia,8.6,Microgramos por metro cúbico (µg/m³),188240
+C5890534,Particulate matter (PM2.5),IT_asti_7a1b,Italy,Asti,18.7,Microgramos por metro cúbico (µg/m³),75051
+C5890534,Particulate matter (PM2.5),NO_trond_9bd6,Norway,Trondheim,5.2,Microgramos por metro cúbico (µg/m³),179692
+C5890534,Particulate matter (PM2.5),FI_helsi_101a,Finland,Helsinki / Helsingfors (greater city),4.9,Microgramos por metro cúbico (µg/m³),1154967
+C5890534,Particulate matter (PM2.5),FR_paris_f0d0,France,Paris (greater city),10.5,Microgramos por metro cúbico (µg/m³),9845879
+C5890534,Particulate matter (PM2.5),IT_pavia_f2f1,Italy,Pavia,19,Microgramos por metro cúbico (µg/m³),71882
+C5890534,Particulate matter (PM2.5),RO_ploie_15ca,Romania,Ploiesti,15.8,Microgramos por metro cúbico (µg/m³),227445
+C5890534,Particulate matter (PM2.5),IT_prato_c02c,Italy,Prato,15.8,Microgramos por metro cúbico (µg/m³),194223
+C5890534,Particulate matter (PM2.5),BG_ruse_e6ce,Bulgaria,Ruse,16,Microgramos por metro cúbico (µg/m³),141231
+C5890534,Particulate matter (PM2.5),CY_lemes_4b53,Cyprus,Lemesos,14,Microgramos por metro cúbico (µg/m³),189600
+C5890534,Particulate matter (PM2.5),DE_lever_9b99,Germany,Leverkusen,7.6,Microgramos por metro cúbico (µg/m³),163729
+C5890534,Particulate matter (PM2.5),DE_neuul_5ac3,Germany,Neu-Ulm,9.8,Microgramos por metro cúbico (µg/m³),58978
+C5890534,Particulate matter (PM2.5),DE_speye_a989,Germany,Speyer,10.4,Microgramos por metro cúbico (µg/m³),50561
+C5890534,Particulate matter (PM2.5),IT_venez_b0c3,Italy,Venezia,22.6,Microgramos por metro cúbico (µg/m³),258685
+C5890534,Particulate matter (PM2.5),PL_opole_5b42,Poland,Opole,14.5,Microgramos por metro cúbico (µg/m³),128137
+C5890534,Particulate matter (PM2.5),CZ_olomo_dc84,Czechia,Olomouc,14.1,Microgramos por metro cúbico (µg/m³),100663
+C5890534,Particulate matter (PM2.5),IT_caser_8c0d,Italy,Caserta,10.9,Microgramos por metro cúbico (µg/m³),73984
+C5890534,Particulate matter (PM2.5),BG_sofia_17da,Bulgaria,Sofia,10.3,Microgramos por metro cúbico (µg/m³),1242568
+C5890534,Particulate matter (PM2.5),PL_bialy_8561,Poland,Bialystok,12,Microgramos por metro cúbico (µg/m³),297459
+C5890534,Particulate matter (PM2.5),CH_basel_6aa3,Switzerland,Basel (greater city),8.8,Microgramos por metro cúbico (µg/m³),342698
+C5890534,Particulate matter (PM2.5),ES_arrec_4735,Spain,Arrecife,11.3,Microgramos por metro cúbico (µg/m³),64645
+C5890534,Particulate matter (PM2.5),DE_reutl_9b84,Germany,Reutlingen,7.7,Microgramos por metro cúbico (µg/m³),115865
+C5890534,Particulate matter (PM2.5),FR_limog_c4a7,France,Limoges,7.7,Microgramos por metro cúbico (µg/m³),143147
+C5890534,Particulate matter (PM2.5),AT_salzb_f264,Austria,Salzburg,8.1,Microgramos por metro cúbico (µg/m³),146631
+C5890534,Particulate matter (PM2.5),IT_raven_94eb,Italy,Ravenna,16.1,Microgramos por metro cúbico (µg/m³),158247
+C5890534,Particulate matter (PM2.5),PL_gdyni_0e17,Poland,Gdynia,13.3,Microgramos por metro cúbico (µg/m³),246309
+C5890534,Particulate matter (PM2.5),ES_acoru_a738,Spain,A Coruña,15.5,Microgramos por metro cúbico (µg/m³),247604
+C5890534,Particulate matter (PM2.5),GR_athin_66b5,Greece,Athina,14.2,Microgramos por metro cúbico (µg/m³),664046
+C5890534,Particulate matter (PM2.5),FR_orlan_2e33,France,Orléans,9,Microgramos por metro cúbico (µg/m³),208564
+C5890534,Particulate matter (PM2.5),NO_krist_f7c0,Norway,Kristiansand,7.2,Microgramos por metro cúbico (µg/m³),84476
+C5890534,Particulate matter (PM2.5),IT_padov_1b58,Italy,Padova,22.7,Microgramos por metro cúbico (µg/m³),210077
+C5890534,Particulate matter (PM2.5),PL_nowys_50ee,Poland,Nowy Sacz,24,Microgramos por metro cúbico (µg/m³),83896
+C5890534,Particulate matter (PM2.5),IT_pisa_9428,Italy,Pisa,12.6,Microgramos por metro cúbico (µg/m³),90036
+C5890534,Particulate matter (PM2.5),ES_madri_ed25,Spain,Madrid,8.9,Microgramos por metro cúbico (µg/m³),5098717
+C5890534,Particulate matter (PM2.5),DE_nrnbe_2bd0,Germany,Nürnberg,10.5,Microgramos por metro cúbico (µg/m³),518370
+C5890534,Particulate matter (PM2.5),FR_calai_bed6,France,Calais,9.3,Microgramos por metro cúbico (µg/m³),73911
+C5890534,Particulate matter (PM2.5),PT_sintr_a430,Portugal,Sintra,8.6,Microgramos por metro cúbico (µg/m³),391402
+C5890534,Particulate matter (PM2.5),FR_annec_6d78,France,Annecy,10.8,Microgramos por metro cúbico (µg/m³),126924
+C5890534,Particulate matter (PM2.5),ES_ceuta_dcc0,Spain,Ceuta,8.3,Microgramos por metro cúbico (µg/m³),84202
+C5890534,Particulate matter (PM2.5),PT_lisbo_66a0,Portugal,Lisboa (greater city),7,Microgramos por metro cúbico (µg/m³),1872036
+C5890534,Particulate matter (PM2.5),ES_jan_4394,Spain,Jaén,9.5,Microgramos por metro cúbico (µg/m³),112757
+C5890534,Particulate matter (PM2.5),LU_luxem_068b,Luxembourg,Luxembourg,7.6,Microgramos por metro cúbico (µg/m³),115227
+C5890534,Particulate matter (PM2.5),FR_frjus_03eb,France,Fréjus,8.9,Microgramos por metro cúbico (µg/m³),87714
+C5890534,Particulate matter (PM2.5),ES_barce_dea5,Spain,Barcelona,13.7,Microgramos por metro cúbico (µg/m³),3755512
+C5890534,Particulate matter (PM2.5),DE_gttin_a24d,Germany,Göttingen,7.2,Microgramos por metro cúbico (µg/m³),118911
+C5890534,Particulate matter (PM2.5),IT_baghe_d758,Italy,Bagheria,12.1,Microgramos por metro cúbico (µg/m³),53409
+C5890534,Particulate matter (PM2.5),IT_laspe_06c0,Italy,La Spezia,11.3,Microgramos por metro cúbico (µg/m³),92550
+C5890534,Particulate matter (PM2.5),PL_legni_e0e0,Poland,Legnica,17.3,Microgramos por metro cúbico (µg/m³),99752
+C5890534,Particulate matter (PM2.5),FR_rouen_e76e,France,Rouen,9.9,Microgramos por metro cúbico (µg/m³),309039
+C5890534,Particulate matter (PM2.5),DK_rhus_5072,Denmark,Århus,7.7,Microgramos por metro cúbico (µg/m³),319094
+C5890534,Particulate matter (PM2.5),IT_brind_2ce1,Italy,Brindisi,11.7,Microgramos por metro cúbico (µg/m³),84465
+C5890534,Particulate matter (PM2.5),FR_dunke_876d,France,Dunkerque,11,Microgramos por metro cúbico (µg/m³),135715
+C5890534,Particulate matter (PM2.5),IT_ragus_2932,Italy,Ragusa,12.2,Microgramos por metro cúbico (µg/m³),71438
+C5890534,Particulate matter (PM2.5),IT_trevi_99f8,Italy,Treviso,20.7,Microgramos por metro cúbico (µg/m³),85456
+C5890534,Particulate matter (PM2.5),IT_laqui_88cf,Italy,L'Aquila,10.3,Microgramos por metro cúbico (µg/m³),70019
+C5890534,Particulate matter (PM2.5),IT_foggi_742d,Italy,Foggia,11.5,Microgramos por metro cúbico (µg/m³),149673
+C5890534,Particulate matter (PM2.5),SE_uppsa_1db4,Sweden,Uppsala,3.5,Microgramos por metro cúbico (µg/m³),219914
+C5890534,Particulate matter (PM2.5),ES_telde_40a4,Spain,Telde,9.7,Microgramos por metro cúbico (µg/m³),102791
+C5890534,Particulate matter (PM2.5),DE_hanau_0199,Germany,Hanau,7.8,Microgramos por metro cúbico (µg/m³),96492
+C5890534,Particulate matter (PM2.5),DE_mnche_06ec,Germany,München,8.5,Microgramos por metro cúbico (µg/m³),1484226
+C5890534,Particulate matter (PM2.5),PL_pozna_0781,Poland,Poznan,17.7,Microgramos por metro cúbico (µg/m³),536438
+C5890534,Particulate matter (PM2.5),BE_antwe_63c7,Belgium,Antwerpen,11.1,Microgramos por metro cúbico (µg/m³),530014
+C5890534,Particulate matter (PM2.5),FR_creil_98d7,France,Creil,9.9,Microgramos por metro cúbico (µg/m³),75375
+C5890534,Particulate matter (PM2.5),IT_barle_9a70,Italy,Barletta,11.4,Microgramos por metro cúbico (µg/m³),93275
+C5890534,Particulate matter (PM2.5),NO_berge_a280,Norway,Bergen,5,Microgramos por metro cúbico (µg/m³),267950
+C5890534,Particulate matter (PM2.5),FR_mulho_2336,France,Mulhouse,10.2,Microgramos por metro cúbico (µg/m³),180040
+C5890534,Particulate matter (PM2.5),NL_zaans_87d8,Netherlands,Zaanstad,9,Microgramos por metro cúbico (µg/m³),155885
+C5890534,Particulate matter (PM2.5),RO_braso_e29c,Romania,Brasov,14.8,Microgramos por metro cúbico (µg/m³),289360
+C5890534,Particulate matter (PM2.5),CZ_zln_42b3,Czechia,Zlín,13.3,Microgramos por metro cúbico (µg/m³),74935
+C5890534,Particulate matter (PM2.5),LV_riga_922f,Latvia,Riga,8.9,Microgramos por metro cúbico (µg/m³),621120
+C5890534,Particulate matter (PM2.5),DK_aalbo_1f51,Denmark,Aalborg,7,Microgramos por metro cúbico (µg/m³),203448
+C5890534,Particulate matter (PM2.5),NL_nijme_6d81,Netherlands,Nijmegen,8.7,Microgramos por metro cúbico (µg/m³),176731
+C5890534,Particulate matter (PM2.5),FR_valen_2983,France,Valence,10.7,Microgramos por metro cúbico (µg/m³),94650
+C5890534,Particulate matter (PM2.5),DE_weima_c35e,Germany,Weimar,8.4,Microgramos por metro cúbico (µg/m³),65228
+C5890534,Particulate matter (PM2.5),ES_torre_1c60,Spain,Torrejón de Ardoz,9.3,Microgramos por metro cúbico (µg/m³),132853
+C5890534,Particulate matter (PM2.5),DE_hanno_6ea9,Germany,Hannover,7.8,Microgramos por metro cúbico (µg/m³),536925
+C5890534,Particulate matter (PM2.5),RO_galat_5ed3,Romania,Galati,8.5,Microgramos por metro cúbico (µg/m³),304050
+C5890534,Particulate matter (PM2.5),NL_breda_f171,Netherlands,Breda,6.8,Microgramos por metro cúbico (µg/m³),183873
+C5890534,Particulate matter (PM2.5),PL_gorzw_5038,Poland,Gorzów Wielkopolski,13.4,Microgramos por metro cúbico (µg/m³),123921
+C5890534,Particulate matter (PM2.5),BE_namur_1f07,Belgium,Namur,9.2,Microgramos por metro cúbico (µg/m³),112125
+C5890534,Particulate matter (PM2.5),PL_olszt_47b3,Poland,Olsztyn,12.5,Microgramos por metro cúbico (µg/m³),172362
+C5890534,Particulate matter (PM2.5),IT_novar_4584,Italy,Novara,16.8,Microgramos por metro cúbico (µg/m³),103287
+C5890534,Particulate matter (PM2.5),DE_karls_2126,Germany,Karlsruhe,8.1,Microgramos por metro cúbico (µg/m³),312060
+C5890534,Particulate matter (PM2.5),IT_perug_b5d7,Italy,Perugia,11.5,Microgramos por metro cúbico (µg/m³),164880
+C5890534,Particulate matter (PM2.5),AT_linz_907e,Austria,Linz,10.5,Microgramos por metro cúbico (µg/m³),193814
+C5890534,Particulate matter (PM2.5),PL_gliwi_8b72,Poland,Gliwice,19.8,Microgramos por metro cúbico (µg/m³),179806
+C5890534,Particulate matter (PM2.5),SE_gtebo_0e9b,Sweden,Göteborg,6.1,Microgramos por metro cúbico (µg/m³),564039
+C5890534,Particulate matter (PM2.5),DE_frank_8cab,Germany,Frankfurt am Main,8.4,Microgramos por metro cúbico (µg/m³),763380
+C5890534,Particulate matter (PM2.5),FR_laroc_3a6c,France,La Rochelle,8.4,Microgramos por metro cúbico (µg/m³),82783
+C5890534,Particulate matter (PM2.5),IT_gela_dc77,Italy,Gela,13.1,Microgramos por metro cúbico (µg/m³),72187
+C5890534,Particulate matter (PM2.5),EE_narva_d175,Estonia,Narva,4.6,Microgramos por metro cúbico (µg/m³),53424
+C5890534,Particulate matter (PM2.5),ES_zarag_7b8e,Spain,Zaragoza,10.5,Microgramos por metro cúbico (µg/m³),681877
+C5890534,Particulate matter (PM2.5),ES_sanfe_104b,Spain,San Fernando,7.7,Microgramos por metro cúbico (µg/m³),95001
+C5890534,Particulate matter (PM2.5),SK_bansk_7bc2,Slovakia,Banská Bystrica,11.4,Microgramos por metro cúbico (µg/m³),78084
+C5890534,Particulate matter (PM2.5),SK_bansk_7bc2,Slovak Republic,Banská Bystrica,11.4,Microgramos por metro cúbico (µg/m³),78084
+C5890534,Particulate matter (PM2.5),ES_toled_5bda,Spain,Toledo,8.3,Microgramos por metro cúbico (µg/m³),85811
+C5890534,Particulate matter (PM2.5),ES_gijn_4055,Spain,Gijón,10.2,Microgramos por metro cúbico (µg/m³),271717
+C5890534,Particulate matter (PM2.5),ES_alica_010d,Spain,Alicante/Alacant,13.7,Microgramos por metro cúbico (µg/m³),337482
+C5890534,Particulate matter (PM2.5),IT_messi_4080,Italy,Messina,11.2,Microgramos por metro cúbico (µg/m³),227424
+C5890534,Particulate matter (PM2.5),PL_walbr_0bb8,Poland,Walbrzych,17.4,Microgramos por metro cúbico (µg/m³),112594
+C5890534,Particulate matter (PM2.5),PL_elbla_5b27,Poland,Elblag,11.9,Microgramos por metro cúbico (µg/m³),120142
+C5890534,Particulate matter (PM2.5),FR_avign_a76b,France,Avignon,11.7,Microgramos por metro cúbico (µg/m³),109451
+C5890534,Particulate matter (PM2.5),DE_konst_2832,Germany,Konstanz,8.2,Microgramos por metro cúbico (µg/m³),84911
+C5890534,Particulate matter (PM2.5),SK_zilin_162f,Slovakia,Zilina,16.1,Microgramos por metro cúbico (µg/m³),80727
+C5890534,Particulate matter (PM2.5),SK_zilin_162f,Slovak Republic,Zilina,16.1,Microgramos por metro cúbico (µg/m³),80727
+C5890534,Particulate matter (PM2.5),DE_ascha_73e9,Germany,Aschaffenburg,8.6,Microgramos por metro cúbico (µg/m³),71002
+C5890534,Particulate matter (PM2.5),IT_piace_b3a7,Italy,Piacenza,22.2,Microgramos por metro cúbico (µg/m³),104260
+C5890534,Particulate matter (PM2.5),FR_toulo_43b3,France,Toulouse,9.1,Microgramos por metro cúbico (µg/m³),613199
+C5890534,Particulate matter (PM2.5),IT_reggi_9754,Italy,Reggio nell'Emilia,18.1,Microgramos por metro cúbico (µg/m³),171084
+C5890534,Particulate matter (PM2.5),FR_renne_fb84,France,Rennes,10.5,Microgramos por metro cúbico (µg/m³),216815
+C5890534,Particulate matter (PM2.5),CZ_liber_b755,Czechia,Liberec,11.5,Microgramos por metro cúbico (µg/m³),104802
+C5890534,Particulate matter (PM2.5),IT_bolog_b782,Italy,Bologna,14.2,Microgramos por metro cúbico (µg/m³),395416
+C5890534,Particulate matter (PM2.5),IT_campo_7ff8,Italy,Campobasso,11.4,Microgramos por metro cúbico (µg/m³),48337
+C5890534,Particulate matter (PM2.5),PL_suwal_da1e,Poland,Suwalki,10.2,Microgramos por metro cúbico (µg/m³),69827
+C5890534,Particulate matter (PM2.5),ES_sevil_ba5f,Spain,Sevilla,11.9,Microgramos por metro cúbico (µg/m³),884899
+C5890534,Particulate matter (PM2.5),ES_grana_9d3a,Spain,Granada,10.7,Microgramos por metro cúbico (µg/m³),404809
+C5890534,Particulate matter (PM2.5),BG_plovd_b611,Bulgaria,Plovdiv,17,Microgramos por metro cúbico (µg/m³),347851
+C5890534,Particulate matter (PM2.5),IS_reykj_6f3e,Iceland,Reykjavik,3.9,Microgramos por metro cúbico (µg/m³),132252
+C5890534,Particulate matter (PM2.5),IT_parma_68f7,Italy,Parma,15.8,Microgramos por metro cúbico (µg/m³),200455
+C5890534,Particulate matter (PM2.5),DE_cottb_a4b8,Germany,Cottbus,10.1,Microgramos por metro cúbico (µg/m³),99678
+C5890534,Particulate matter (PM2.5),FR_saint_4dfd,France,Saint-Brieuc,6.9,Microgramos por metro cúbico (µg/m³),64350
+C5890534,Particulate matter (PM2.5),IT_livor_1cfc,Italy,Livorno,7.8,Microgramos por metro cúbico (µg/m³),157017
+C5890534,Particulate matter (PM2.5),AT_graz_6e00,Austria,Graz,13.8,Microgramos por metro cúbico (µg/m³),269997
+C5890534,Particulate matter (PM2.5),IT_trent_efa4,Italy,Trento,14.9,Microgramos por metro cúbico (µg/m³),120641
+C5890534,Particulate matter (PM2.5),RO_iasi_bc7d,Romania,Iasi,16,Microgramos por metro cúbico (µg/m³),378954
+C5890534,Particulate matter (PM2.5),RO_timis_eadb,Romania,Timisoara,12.6,Microgramos por metro cúbico (µg/m³),328186
+C5890534,Particulate matter (PM2.5),PL_chelm_a7f7,Poland,Chelm,15.2,Microgramos por metro cúbico (µg/m³),62670
+C5890534,Particulate matter (PM2.5),CZ_plzen_6858,Czechia,Plzen,9.2,Microgramos por metro cúbico (µg/m³),174842
+C5890534,Particulate matter (PM2.5),IT_lecco_4089,Italy,Lecco,15.2,Microgramos por metro cúbico (µg/m³),48058
+C5890534,Particulate matter (PM2.5),CZ_brno_6a61,Czechia,Brno,12.3,Microgramos por metro cúbico (µg/m³),381346
+C5890534,Particulate matter (PM2.5),HU_budap_865f,Hungary,Budapest,11.7,Microgramos por metro cúbico (µg/m³),1750216
+C5890534,Particulate matter (PM2.5),PL_ldz_5824,Poland,Lódz,15.1,Microgramos por metro cúbico (µg/m³),685285
+C5890534,Particulate matter (PM2.5),ES_elda_bc10,Spain,Elda,6.9,Microgramos por metro cúbico (µg/m³),87054
+C5890534,Particulate matter (PM2.5),PL_czest_f31b,Poland,Czestochowa,21.9,Microgramos por metro cúbico (µg/m³),222292
+C5890534,Particulate matter (PM2.5),FR_chart_a8f1,France,Chartres,8.5,Microgramos por metro cúbico (µg/m³),75990
+C5890534,Particulate matter (PM2.5),PL_radom_1318,Poland,Radom,17.2,Microgramos por metro cúbico (µg/m³),213029
+C5890534,Particulate matter (PM2.5),IT_arezz_0f68,Italy,Arezzo,13.2,Microgramos por metro cúbico (µg/m³),98259
+C5890534,Particulate matter (PM2.5),SI_marib_c941,Slovenia,Maribor,12.1,Microgramos por metro cúbico (µg/m³),110871
+C5890534,Particulate matter (PM2.5),PL_zamos_175e,Poland,Zamosc,15.3,Microgramos por metro cúbico (µg/m³),63813
+C5890534,Particulate matter (PM2.5),DE_tbing_ae6e,Germany,Tübingen,8.1,Microgramos por metro cúbico (µg/m³),91506
+C5890534,Particulate matter (PM2.5),BG_stara_3b5e,Bulgaria,Stara Zagora,20.1,Microgramos por metro cúbico (µg/m³),134726
+C5890534,Particulate matter (PM2.5),FR_caen_80cf,France,Caen,8.2,Microgramos por metro cúbico (µg/m³),144972
+C5890534,Particulate matter (PM2.5),IT_genov_e2be,Italy,Genova,10.1,Microgramos por metro cúbico (µg/m³),565752
+C5890534,Particulate matter (PM2.5),IE_limer_09ef,Ireland,Limerick,9.3,Microgramos por metro cúbico (µg/m³),56980
+C5890534,Particulate matter (PM2.5),IT_cremo_7d21,Italy,Cremona,23.3,Microgramos por metro cúbico (µg/m³),72399
+C5890534,Particulate matter (PM2.5),NL_groni_c21f,Netherlands,Groningen,6.6,Microgramos por metro cúbico (µg/m³),231299
+C5890534,Particulate matter (PM2.5),DE_stutt_700b,Germany,Stuttgart,8.7,Microgramos por metro cúbico (µg/m³),635911
+C5890534,Particulate matter (PM2.5),FR_reims_8c34,France,Reims,9.1,Microgramos por metro cúbico (µg/m³),209507
+C5890534,Particulate matter (PM2.5),CZ_stnad_5ab3,Czechia,Ústí nad Labem,9.8,Microgramos por metro cúbico (µg/m³),92716
+C5890534,Particulate matter (PM2.5),DE_mnche_65b6,Germany,Mönchengladbach,7.8,Microgramos por metro cúbico (µg/m³),261034
+C5890534,Particulate matter (PM2.5),DE_fried_f445,Germany,Friedrichshafen,8.6,Microgramos por metro cúbico (µg/m³),61283
+C5890534,Particulate matter (PM2.5),ES_valde_327b,Spain,Valdemoro,11.8,Microgramos por metro cúbico (µg/m³),77270
+C5890534,Particulate matter (PM2.5),IT_sassu_eacf,Italy,Sassuolo,17,Microgramos por metro cúbico (µg/m³),40278
+C5890534,Particulate matter (PM2.5),RO_satum_d53a,Romania,Satu Mare,12.4,Microgramos por metro cúbico (µg/m³),119788
+C5890534,Particulate matter (PM2.5),DE_dortm_6d27,Germany,Dortmund,10.5,Microgramos por metro cúbico (µg/m³),588250
+C5890534,Particulate matter (PM2.5),CZ_most_f7c0,Czechia,Most,12.9,Microgramos por metro cúbico (µg/m³),66034
+C5890534,Particulate matter (PM2.5),PL_jelen_0e31,Poland,Jelenia Góra,16.1,Microgramos por metro cúbico (µg/m³),79480
+C5890534,Particulate matter (PM2.5),IT_rimin_80d1,Italy,Rimini,16.3,Microgramos por metro cúbico (µg/m³),149335
+C5890534,Particulate matter (PM2.5),ES_tarra_92b4,Spain,Tarragona,9.8,Microgramos por metro cúbico (µg/m³),136496
+C5890534,Particulate matter (PM2.5),SI_ljubl_7946,Slovenia,Ljubljana,15.4,Microgramos por metro cúbico (µg/m³),289518
+C5890534,Particulate matter (PM2.5),HR_zagre_90f2,Croatia,Zagreb,14.4,Microgramos por metro cúbico (µg/m³),806772
+C5890534,Particulate matter (PM2.5),BE_bruxe_e461,Belgium,Bruxelles / Brussel,9.8,Microgramos por metro cúbico (µg/m³),1223364
+C5890534,Particulate matter (PM2.5),BE_lige_6128,Belgium,Liège,7.2,Microgramos por metro cúbico (µg/m³),383700
+C5890534,Particulate matter (PM2.5),CZ_havro_0b96,Czechia,Havírov,17.2,Microgramos por metro cúbico (µg/m³),71200
+C5890534,Particulate matter (PM2.5),IT_ferra_dee7,Italy,Ferrara,16.3,Microgramos por metro cúbico (µg/m³),132899
+C5890534,Particulate matter (PM2.5),SE_ume_bd1e,Sweden,Umeå,3.6,Microgramos por metro cúbico (µg/m³),125080
+C5890534,Particulate matter (PM2.5),DE_brand_d525,Germany,Brandenburg an der Havel,8.7,Microgramos por metro cúbico (µg/m³),72184
+C5890534,Particulate matter (PM2.5),DE_kaise_df23,Germany,Kaiserslautern,8.1,Microgramos por metro cúbico (µg/m³),100030
+C5890534,Particulate matter (PM2.5),DE_kempt_01a9,Germany,Kempten (Allgäu),8.8,Microgramos por metro cúbico (µg/m³),69151
+C5890534,Particulate matter (PM2.5),FR_aixen_bceb,France,Aix-en-Provence,9.1,Microgramos por metro cúbico (µg/m³),142482
+C5890534,Particulate matter (PM2.5),IT_saler_ec55,Italy,Salerno,11,Microgramos por metro cúbico (µg/m³),131556
+C5890534,Particulate matter (PM2.5),PL_warsz_3fc5,Poland,Warszawa,15,Microgramos por metro cúbico (µg/m³),1777972
+C5890534,Particulate matter (PM2.5),IT_udine_329c,Italy,Udine,13.6,Microgramos por metro cúbico (µg/m³),100170
+C5890534,Particulate matter (PM2.5),DE_potsd_e27a,Germany,Potsdam,8.7,Microgramos por metro cúbico (µg/m³),180334
+C5890534,Particulate matter (PM2.5),ES_caste_42e2,Spain,Castellón de la Plana/Castelló de la Plana,15.8,Microgramos por metro cúbico (µg/m³),174264
+C5890534,Particulate matter (PM2.5),SE_norrk_73bc,Sweden,Norrköping,4.1,Microgramos por metro cúbico (µg/m³),140927
+C5890534,Particulate matter (PM2.5),FR_metz_dd0c,France,Metz,9.4,Microgramos por metro cúbico (µg/m³),166252
+C5890534,Particulate matter (PM2.5),HR_rijek_a7b0,Croatia,Rijeka,7.3,Microgramos por metro cúbico (µg/m³),115219
+C5890534,Particulate matter (PM2.5),DE_gelse_2b2e,Germany,Gelsenkirchen,11.5,Microgramos por metro cúbico (µg/m³),259645
+C5890534,Particulate matter (PM2.5),DE_heide_ec6f,Germany,Heidelberg,7.1,Microgramos por metro cúbico (µg/m³),161485
+C5890534,Particulate matter (PM2.5),IT_savon_674f,Italy,Savona,9.2,Microgramos por metro cúbico (µg/m³),59439
+C5890534,Particulate matter (PM2.5),DE_passa_f994,Germany,Passau,10.9,Microgramos por metro cúbico (µg/m³),52803
+C5890534,Particulate matter (PM2.5),FR_nante_3d8b,France,Nantes,9.3,Microgramos por metro cúbico (µg/m³),450218
+C5890534,Particulate matter (PM2.5),RO_arad_ed0b,Romania,Arad,12.7,Microgramos por metro cúbico (µg/m³),176846
+C5890534,Particulate matter (PM2.5),FR_cherb_aa8c,France,Cherbourg,9,Microgramos por metro cúbico (µg/m³),79200
+C5890534,Particulate matter (PM2.5),FR_troye_c750,France,Troyes,7.8,Microgramos por metro cúbico (µg/m³),106948
+C5890534,Particulate matter (PM2.5),PL_lomza_0829,Poland,Lomza,20,Microgramos por metro cúbico (µg/m³),63000
+C5890534,Particulate matter (PM2.5),IT_vicen_b46a,Italy,Vicenza,23,Microgramos por metro cúbico (µg/m³),109855
+C5890534,Particulate matter (PM2.5),CZ_hrade_6a85,Czechia,Hradec Králové,14.2,Microgramos por metro cúbico (µg/m³),92939
+C5890534,Particulate matter (PM2.5),IT_ancon_ce5e,Italy,Ancona,15.3,Microgramos por metro cúbico (µg/m³),99077
+C5890534,Particulate matter (PM2.5),FR_stras_bb29,France,Strasbourg,10.1,Microgramos por metro cúbico (µg/m³),405733
+C5890534,Particulate matter (PM2.5),FR_bayon_2562,France,Bayonne,6.1,Microgramos por metro cúbico (µg/m³),115561
+C5890534,Particulate matter (PM2.5),PL_tarnw_0a07,Poland,Tarnów,17.4,Microgramos por metro cúbico (µg/m³),109062
+C5890534,Particulate matter (PM2.5),PL_wlocl_a1b9,Poland,Wloclawek,16.2,Microgramos por metro cúbico (µg/m³),110802
+C5890534,Particulate matter (PM2.5),PL_kalis_f9b2,Poland,Kalisz,18.9,Microgramos por metro cúbico (µg/m³),100975
+C5890534,Particulate matter (PM2.5),PL_siedl_9625,Poland,Siedlce,16.3,Microgramos por metro cúbico (µg/m³),77872
+C5890534,Particulate matter (PM2.5),DE_darms_b302,Germany,Darmstadt,8,Microgramos por metro cúbico (µg/m³),159878
+C5890534,Particulate matter (PM2.5),PL_kosza_4d62,Poland,Koszalin,10.5,Microgramos por metro cúbico (µg/m³),107321
+C5890534,Particulate matter (PM2.5),PL_lubli_9be7,Poland,Lublin,17.7,Microgramos por metro cúbico (µg/m³),339682
+C5890534,Particulate matter (PM2.5),ES_lnead_c2b9,Spain,"Línea de la Concepción, La",8.8,Microgramos por metro cúbico (µg/m³),63630
+C5890534,Particulate matter (PM2.5),NL_great_47aa,Netherlands,Greater Amsterdam,8.4,Microgramos por metro cúbico (µg/m³),996915
+C5890534,Particulate matter (PM2.5),DE_saarb_c785,Germany,Saarbrücken,8.9,Microgramos por metro cúbico (µg/m³),180374
+C5890534,Particulate matter (PM2.5),ES_santa_666d,Spain,Santa Cruz de Tenerife,11.6,Microgramos por metro cúbico (µg/m³),368105
+C5890534,Particulate matter (PM2.5),ES_salam_848c,Spain,Salamanca,6.9,Microgramos por metro cúbico (µg/m³),144825
+C5890534,Particulate matter (PM2.5),AT_klage_b086,Austria,Klagenfurt,11.8,Microgramos por metro cúbico (µg/m³),96640
+C5890534,Particulate matter (PM2.5),FR_chamb_dd8a,France,Chambéry,10.3,Microgramos por metro cúbico (µg/m³),87711
+C5890534,Particulate matter (PM2.5),ES_cuenc_a21d,Spain,Cuenca,12.4,Microgramos por metro cúbico (µg/m³),54621
+C5890534,Particulate matter (PM2.5),FR_nmes_be2c,France,Nîmes,9,Microgramos por metro cúbico (µg/m³),150610
+C5890534,Particulate matter (PM2.5),NL_ensch_a90f,Netherlands,Enschede,6.6,Microgramos por metro cúbico (µg/m³),158986
+C5890534,Particulate matter (PM2.5),PL_gdans_5f55,Poland,Gdansk,12.7,Microgramos por metro cúbico (µg/m³),466631
+C5890534,Particulate matter (PM2.5),PT_faro_c538,Portugal,Faro,3.6,Microgramos por metro cúbico (µg/m³),61015
+C5890534,Particulate matter (PM2.5),ES_valen_e45c,Spain,Valencia,10.4,Microgramos por metro cúbico (µg/m³),1417464
+C5890534,Particulate matter (PM2.5),BG_varna_57c0,Bulgaria,Varna,10,Microgramos por metro cúbico (µg/m³),336216
+C5890534,Particulate matter (PM2.5),FR_montp_3f1c,France,Montpellier,9,Microgramos por metro cúbico (µg/m³),305601
+C5890534,Particulate matter (PM2.5),EE_tartu_367b,Estonia,Tartu,5.7,Microgramos por metro cúbico (µg/m³),95430
+C5890534,Particulate matter (PM2.5),PL_krakw_b75f,Poland,Kraków,19.5,Microgramos por metro cúbico (µg/m³),771069
+C5890534,Particulate matter (PM2.5),PL_kielc_d840,Poland,Kielce,17.2,Microgramos por metro cúbico (µg/m³),195774
+C5890534,Particulate matter (PM2.5),AT_innsb_aaf4,Austria,Innsbruck,8.9,Microgramos por metro cúbico (µg/m³),124579
+C5890534,Particulate matter (PM2.5),PL_grudz_8266,Poland,Grudziadz,17.7,Microgramos por metro cúbico (µg/m³),95045
+C5890534,Particulate matter (PM2.5),LV_liepa_8bd5,Latvia,Liepaja,11.2,Microgramos por metro cúbico (µg/m³),68313
+C5890534,Particulate matter (PM2.5),DE_rosto_5cef,Germany,Rostock,9.4,Microgramos por metro cúbico (µg/m³),209191
+C5890534,Particulate matter (PM2.5),IT_terni_1c72,Italy,Terni,15.2,Microgramos por metro cúbico (µg/m³),110003
+C5890534,Particulate matter (PM2.5),FR_perpi_9ba4,France,Perpignan,8.1,Microgramos por metro cúbico (µg/m³),130264
+C5890534,Particulate matter (PM2.5),IT_pesca_db27,Italy,Pescara,14.3,Microgramos por metro cúbico (µg/m³),119862
+C5890534,Particulate matter (PM2.5),DE_ludwi_6148,Germany,Ludwigsburg,7.8,Microgramos por metro cúbico (µg/m³),93584
+C5890534,Particulate matter (PM2.5),PL_wrocl_46e2,Poland,Wroclaw,14.9,Microgramos por metro cúbico (µg/m³),640648
+C5890534,Particulate matter (PM2.5),DE_berli_d35a,Germany,Berlin,11,Microgramos por metro cúbico (µg/m³),3669491
+C5890534,Particulate matter (PM2.5),FR_lehav_4e9b,France,Le Havre,10,Microgramos por metro cúbico (µg/m³),195042
+C5890534,Particulate matter (PM2.5),HR_slavo_8adb,Croatia,Slavonski Brod,26.5,Microgramos por metro cúbico (µg/m³),52836
+C5890534,Particulate matter (PM2.5),CZ_kladn_290d,Czechia,Kladno,11.1,Microgramos por metro cúbico (µg/m³),69337
+C5890534,Particulate matter (PM2.5),DE_wrzbu_34f7,Germany,Würzburg,9,Microgramos por metro cúbico (µg/m³),127934
+C5890534,Particulate matter (PM2.5),ES_bilba_7291,Spain,Bilbao,9.9,Microgramos por metro cúbico (µg/m³),797590
+C5890534,Particulate matter (PM2.5),FI_tampe_4e0d,Finland,Tampere / Tammerfors,4,Microgramos por metro cúbico (µg/m³),238140
+C5890534,Particulate matter (PM2.5),NO_oslo_8cfb,Norway,Oslo,7.1,Microgramos por metro cúbico (µg/m³),623966
+C5890534,Particulate matter (PM2.5),PL_przem_0692,Poland,Przemysl,12.2,Microgramos por metro cúbico (µg/m³),61251
+C5890534,Particulate matter (PM2.5),FR_nancy_7b0f,France,Nancy,9.6,Microgramos por metro cúbico (µg/m³),203610
+C5890534,Particulate matter (PM2.5),ES_ovied_f031,Spain,Oviedo,8.2,Microgramos por metro cúbico (µg/m³),219910
+C5890534,Particulate matter (PM2.5),FR_marse_6a5b,France,Marseille,10.8,Microgramos por metro cúbico (µg/m³),895431
+C5890534,Particulate matter (PM2.5),SK_nitra_bdb9,Slovakia,Nitra,11.7,Microgramos por metro cúbico (µg/m³),76533
+C5890534,Particulate matter (PM2.5),SK_nitra_bdb9,Slovak Republic,Nitra,11.7,Microgramos por metro cúbico (µg/m³),76533
+C5890534,Particulate matter (PM2.5),SE_malm_fe5b,Sweden,Malmö,7.1,Microgramos por metro cúbico (µg/m³),333633
+C5890534,Particulate matter (PM2.5),IT_veron_fcf4,Italy,Verona,17.8,Microgramos por metro cúbico (µg/m³),259087
+C5890534,Particulate matter (PM2.5),LT_vilni_5271,Lithuania,Vilnius,6.5,Microgramos por metro cúbico (µg/m³),561836
+C5890534,Particulate matter (PM2.5),CY_lefko_aa49,Cyprus,Lefkosia,14.1,Microgramos por metro cúbico (µg/m³),241400
+C5890534,Particulate matter (PM2.5),PL_rzesz_0397,Poland,Rzeszów,15.2,Microgramos por metro cúbico (µg/m³),191564
+C5890534,Particulate matter (PM2.5),IT_gross_567b,Italy,Grosseto,10.1,Microgramos por metro cúbico (µg/m³),81912
+C5890534,Particulate matter (PM2.5),GR_ioann_abc6,Greece,Ioannina,21.9,Microgramos por metro cúbico (µg/m³),80371
+C5890534,Particulate matter (PM2.5),DE_leipz_efea,Germany,Leipzig,7.5,Microgramos por metro cúbico (µg/m³),593145
+C5890534,Particulate matter (PM2.5),IE_water_e04e,Ireland,Waterford,8.8,Microgramos por metro cúbico (µg/m³),46583
+C5890534,Particulate matter (PM2.5),BG_perni_f3f7,Bulgaria,Pernik,19.2,Microgramos por metro cúbico (µg/m³),72241
+C5890534,Particulate matter (PM2.5),NL_great_79d2,Netherlands,Greater Heerlen,6.1,Microgramos por metro cúbico (µg/m³),198168
+C5890534,Particulate matter (PM2.5),HU_szege_ac69,Hungary,Szeged,13.2,Microgramos por metro cúbico (µg/m³),160258
+C5890534,Particulate matter (PM2.5),DE_mlhei_aac3,Germany,Mülheim a.d.Ruhr,9.9,Microgramos por metro cúbico (µg/m³),170632
+C5890534,Particulate matter (PM2.5),RO_craio_5fb1,Romania,Craiova,15.2,Microgramos por metro cúbico (µg/m³),301269
+C5890534,Particulate matter (PM2.5),CZ_ostra_92a0,Czechia,Ostrava,16.3,Microgramos por metro cúbico (µg/m³),287968
+C5890534,Particulate matter (PM2.5),IT_milan_7cdd,Italy,Milano (greater city),19.7,Microgramos por metro cúbico (µg/m³),3622641
+C5890534,Particulate matter (PM2.5),HU_pcs_a68a,Hungary,Pécs,11.9,Microgramos por metro cúbico (µg/m³),141843
+C5890534,Particulate matter (PM2.5),NO_stava_06c7,Norway,Stavanger,7,Microgramos por metro cúbico (µg/m³),129191
+C5890534,Particulate matter (PM2.5),DE_biele_726e,Germany,Bielefeld,9.6,Microgramos por metro cúbico (µg/m³),334195
+C5890534,Particulate matter (PM2.5),PL_szcze_b32a,Poland,Szczecin,11.1,Microgramos por metro cúbico (µg/m³),402465
+C5890534,Particulate matter (PM2.5),DE_dssel_42b3,Germany,Düsseldorf,9.5,Microgramos por metro cúbico (µg/m³),621877
+C5890534,Particulate matter (PM2.5),AT_wien_95b8,Austria,Wien,9.8,Microgramos por metro cúbico (µg/m³),1766746
+C5890534,Particulate matter (PM2.5),RO_slati_5f5a,Romania,Slatina,15.1,Microgramos por metro cúbico (µg/m³),82931
+C5890534,Particulate matter (PM2.5),CZ_ceskb_8738,Czechia,Ceské Budejovice,10.7,Microgramos por metro cúbico (µg/m³),94463
+C5890534,Particulate matter (PM2.5),CH_lugan_fa66,Switzerland,Lugano (greater city),10.6,Microgramos por metro cúbico (µg/m³),88484
+C5890534,Particulate matter (PM2.5),HU_veszp_d006,Hungary,Veszprém,12.1,Microgramos por metro cúbico (µg/m³),59119
+C5890534,Particulate matter (PM2.5),DE_pforz_be96,Germany,Pforzheim,7.5,Microgramos por metro cúbico (µg/m³),125957
+C5890534,Particulate matter (PM2.5),DE_magde_7712,Germany,Magdeburg,9,Microgramos por metro cúbico (µg/m³),237565
+C5890534,Particulate matter (PM2.5),EE_talli_5b3f,Estonia,Tallinn,4.4,Microgramos por metro cúbico (µg/m³),438341
+C5890534,Particulate matter (PM2.5),FR_poiti_d2cc,France,Poitiers,8.7,Microgramos por metro cúbico (µg/m³),98314
+C5890534,Particulate matter (PM2.5),DE_marbu_79a1,Germany,Marburg,7.6,Microgramos por metro cúbico (µg/m³),77129
+C5890534,Particulate matter (PM2.5),SK_brati_9489,Slovakia,Bratislava,11.2,Microgramos por metro cúbico (µg/m³),437726
+C5890534,Particulate matter (PM2.5),SK_brati_9489,Slovak Republic,Bratislava,11.2,Microgramos por metro cúbico (µg/m³),437726
+C5890534,Particulate matter (PM2.5),ES_mlaga_e9a2,Spain,Málaga,8.2,Microgramos por metro cúbico (µg/m³),578460
+C5890534,Particulate matter (PM2.5),FR_saint_1f07,France,Saint-Quentin,9,Microgramos por metro cúbico (µg/m³),53816
+C5890534,Particulate matter (PM2.5),DE_breme_0660,Germany,Bremerhaven,9,Microgramos por metro cúbico (µg/m³),113643
+C5890534,Particulate matter (PM2.5),DE_fulda_62be,Germany,Fulda,7.6,Microgramos por metro cúbico (µg/m³),68635
+C5890534,Particulate matter (PM2.5),DE_kiel_b004,Germany,Kiel,6.2,Microgramos por metro cúbico (µg/m³),246794
+C5890534,Particulate matter (PM2.5),NL_great_490f,Netherlands,Greater Eindhoven,9.7,Microgramos por metro cúbico (µg/m³),276979
+C5890534,Particulate matter (PM2.5),FR_saint_8edb,France,Saint-Nazaire,8.4,Microgramos por metro cúbico (µg/m³),69993
+C5890534,Particulate matter (PM2.5),IT_napol_63af,Italy,Napoli (greater city),13.7,Microgramos por metro cúbico (µg/m³),2855958
+C5890534,Particulate matter (PM2.5),IT_bresc_cfe2,Italy,Brescia,20.7,Microgramos por metro cúbico (µg/m³),196340
+C5890534,Particulate matter (PM2.5),DE_augsb_d413,Germany,Augsburg,9.1,Microgramos por metro cúbico (µg/m³),296582
+C5890534,Particulate matter (PM2.5),DE_wiesb_2eae,Germany,Wiesbaden,8.4,Microgramos por metro cúbico (µg/m³),278474
+C5890534,Particulate matter (PM2.5),DE_breme_37eb,Germany,Bremen,9.1,Microgramos por metro cúbico (µg/m³),567559
+C5890534,Particulate matter (PM2.5),IT_firen_99b6,Italy,Firenze,11.9,Microgramos por metro cúbico (µg/m³),366927
+C5890534,Particulate matter (PM2.5),IT_torin_ed8b,Italy,Torino,21,Microgramos por metro cúbico (µg/m³),857910
+C5890534,Particulate matter (PM2.5),CZ_pardu_1a44,Czechia,Pardubice,12.7,Microgramos por metro cúbico (µg/m³),91727
+C5890534,Particulate matter (PM2.5),IT_tries_9978,Italy,Trieste,11.5,Microgramos por metro cúbico (µg/m³),201613
+C5890534,Particulate matter (PM2.5),ES_santi_d77f,Spain,Santiago de Compostela,6.6,Microgramos por metro cúbico (µg/m³),97848
+C5890534,Particulate matter (PM2.5),ES_laspa_c89e,Spain,Las Palmas,13,Microgramos por metro cúbico (µg/m³),381223
+C5890534,Particulate matter (PM2.5),SK_kosic_40ac,Slovakia,Kosice,15.5,Microgramos por metro cúbico (µg/m³),238593
+C5890534,Particulate matter (PM2.5),SK_kosic_40ac,Slovak Republic,Kosice,15.5,Microgramos por metro cúbico (µg/m³),238593
+C5890534,Particulate matter (PM2.5),FR_besan_edba,France,Besançon,7.7,Microgramos por metro cúbico (µg/m³),115934
+C5890534,Particulate matter (PM2.5),PL_piotr_f745,Poland,Piotrków Trybunalski,20.6,Microgramos por metro cúbico (µg/m³),73670
+C5890534,Particulate matter (PM2.5),PL_biels_67be,Poland,Bielsko-Biala,17.9,Microgramos por metro cúbico (µg/m³),171259
+C5890534,Particulate matter (PM2.5),IT_moden_aed1,Italy,Modena,18.5,Microgramos por metro cúbico (µg/m³),189013
+C5890534,Particulate matter (PM2.5),IT_batti_1e6e,Italy,Battipaglia,9.6,Microgramos por metro cúbico (µg/m³),50411
+C5890534,Particulate matter (PM2.5),RO_const_3a14,Romania,Constanta,11.3,Microgramos por metro cúbico (µg/m³),313021
+C5890534,Particulate matter (PM2.5),PL_zielo_8b6b,Poland,Zielona Góra,10,Microgramos por metro cúbico (µg/m³),140297
+C5890534,Particulate matter (PM2.5),DE_wuppe_5b27,Germany,Wuppertal,9.1,Microgramos por metro cúbico (µg/m³),355100
+C5890534,Particulate matter (PM2.5),PL_katow_eece,Poland,Katowice,18.2,Microgramos por metro cúbico (µg/m³),294510
+C5890534,Particulate matter (PM2.5),PL_zory_ab63,Poland,Zory,21.8,Microgramos por metro cúbico (µg/m³),62456
+C5890534,Particulate matter (PM2.5),DE_halle_4a2d,Germany,Halle an der Saale,8.9,Microgramos por metro cúbico (µg/m³),238762
+C5890534,Particulate matter (PM2.5),SE_stock_f57d,Sweden,Stockholm (greater city),4.6,Microgramos por metro cúbico (µg/m³),1745766
+C5890534,Particulate matter (PM2.5),ES_albac_47ff,Spain,Albacete,11.1,Microgramos por metro cúbico (µg/m³),174336
+C5890534,Particulate matter (PM2.5),IT_catan_0dab,Italy,Catania,12.6,Microgramos por metro cúbico (µg/m³),296266
+C5890534,Particulate matter (PM2.5),IT_forl_efbb,Italy,Forlì,13.7,Microgramos por metro cúbico (µg/m³),118292
+C5890534,Particulate matter (PM2.5),ES_carta_af40,Spain,Cartagena,12.5,Microgramos por metro cúbico (µg/m³),216108
+C5890534,Particulate matter (PM2.5),IE_dubli_71fa,Ireland,Dublin,7.1,Microgramos por metro cúbico (µg/m³),516255
+C5890534,Particulate matter (PM2.5),IT_sassa_1617,Italy,Sassari,6.2,Microgramos por metro cúbico (µg/m³),125273
+C5890534,Particulate matter (PM2.5),FR_greno_5fdd,France,Grenoble,11,Microgramos por metro cúbico (µg/m³),305569
+C5890534,Particulate matter (PM2.5),IT_pesar_6ee1,Italy,Pesaro,18.2,Microgramos por metro cúbico (µg/m³),95152
+C5890534,Particulate matter (PM2.5),CZ_praha_ef62,Czechia,Praha,11.4,Microgramos por metro cúbico (µg/m³),1324277
+C5890534,Particulate matter (PM2.5),DE_essen_c0ea,Germany,Essen,10.3,Microgramos por metro cúbico (µg/m³),582760
+C5890534,Particulate matter (PM2.5),FR_bourg_1091,France,Bourges,8.5,Microgramos por metro cúbico (µg/m³),64551
+C5890534,Particulate matter (PM2.5),DE_heilb_ff4a,Germany,Heilbronn,8.6,Microgramos por metro cúbico (µg/m³),126592
+C5890534,Particulate matter (PM2.5),FR_tours_3c4d,France,Tours,8.9,Microgramos por metro cúbico (µg/m³),242529
+C5890534,Particulate matter (PM2.5),HU_gyr_0653,Hungary,Gyõr,14.4,Microgramos por metro cúbico (µg/m³),133946
+C5890534,Particulate matter (PM2.5),IT_berga_3ec1,Italy,Bergamo,20.9,Microgramos por metro cúbico (µg/m³),120783
+C5890534,Particulate matter (PM2.5),ES_ciuda_deae,Spain,Ciudad Real,8.7,Microgramos por metro cúbico (µg/m³),75504
+C5890534,Particulate matter (PM2.5),PL_bydgo_5f43,Poland,Bydgoszcz,13.7,Microgramos por metro cúbico (µg/m³),350178
+C5890534,Particulate matter (PM2.5),NL_great_e4a0,Netherlands,Greater Rotterdam,8.9,Microgramos por metro cúbico (µg/m³),1232747
+C5890534,Particulate matter (PM2.5),FR_leman_a287,France,Le Mans,8.9,Microgramos por metro cúbico (µg/m³),150369
+C5890534,Particulate matter (PM2.5),DE_villi_2ade,Germany,Villingen-Schwenningen,6.6,Microgramos por metro cúbico (µg/m³),85707
+C5890534,Particulate matter (PM2.5),DE_hambu_f23b,Germany,Hamburg,9.4,Microgramos por metro cúbico (µg/m³),1847253
+C5890534,Particulate matter (PM2.5),FR_lorie_abd1,France,Lorient,8.6,Microgramos por metro cúbico (µg/m³),79877
+C5890534,Particulate matter (PM2.5),DK_kbenh_c162,Denmark,København,8,Microgramos por metro cúbico (µg/m³),559440
+C5890534,Particulate matter (PM2.5),FR_douai_2f59,France,Douai,10.7,Microgramos por metro cúbico (µg/m³),86074
+C5890534,Particulate matter (PM2.5),DE_bonn_6c1d,Germany,Bonn,8.4,Microgramos por metro cúbico (µg/m³),329673
+C5890534,Particulate matter (PM2.5),FR_borde_3a4a,France,Bordeaux,9.6,Microgramos por metro cúbico (µg/m³),650138
+C5890534,Particulate matter (PM2.5),IT_paler_8669,Italy,Palermo,12.1,Microgramos por metro cúbico (µg/m³),647422
+C5890534,Particulate matter (PM2.5),DE_lbeck_1c68,Germany,Lübeck,6.8,Microgramos por metro cúbico (µg/m³),216530
+C5890534,Particulate matter (PM2.5),IT_latin_c374,Italy,Latina,10.7,Microgramos por metro cúbico (µg/m³),127037
+C5890534,Particulate matter (PM2.5),FR_clerm_41db,France,Clermont-Ferrand,8.5,Microgramos por metro cúbico (µg/m³),195162
+C5890534,Particulate matter (PM2.5),FR_saint_8534,France,Saint-Etienne,8.8,Microgramos por metro cúbico (µg/m³),194561
+C5890534,Particulate matter (PM2.5),FR_toulo_f5e6,France,Toulon,8.4,Microgramos por metro cúbico (µg/m³),334333
+C5890534,Particulate matter (PM2.5),RO_bucur_f4c2,Romania,Bucuresti,15.6,Microgramos por metro cúbico (µg/m³),2131034
+C5890534,Particulate matter (PM2.5),DE_bambe_9452,Germany,Bamberg,9.4,Microgramos por metro cúbico (µg/m³),77373
+C5890534,Particulate matter (PM2.5),FR_dijon_7c97,France,Dijon,6.8,Microgramos por metro cúbico (µg/m³),198870
+C5890534,Particulate matter (PM2.5),NL_great_ef02,Netherlands,Greater 's-Gravenhage,6.4,Microgramos por metro cúbico (µg/m³),769888
+C5890534,Particulate matter (PM2.5),PL_elk_e61d,Poland,Elk,12.6,Microgramos por metro cúbico (µg/m³),61928
+C5890534,Particulate matter (PM2.5),FR_brest_12f8,France,Brest,7.7,Microgramos por metro cúbico (µg/m³),140064
+C5890534,Particulate matter (PM2.5),DE_dresd_90be,Germany,Dresden,8.5,Microgramos por metro cúbico (µg/m³),556780
+C5890534,Particulate matter (PM2.5),IT_sirac_50c7,Italy,Siracusa,9.7,Microgramos por metro cúbico (µg/m³),119056
+C5890534,Particulate matter (PM2.5),PL_plock_bc76,Poland,Plock,13.5,Microgramos por metro cúbico (µg/m³),120000
+C5890534,Particulate matter (PM2.5),DE_mainz_efaf,Germany,Mainz,9,Microgramos por metro cúbico (µg/m³),218578
+C5890534,Particulate matter (PM2.5),PT_funch_d57e,Portugal,Funchal,4.4,Microgramos por metro cúbico (µg/m³),104024
+C5890534,Particulate matter (PM2.5),ES_crdob_82bd,Spain,Córdoba,10.7,Microgramos por metro cúbico (µg/m³),326039
+C5890534,Particulate matter (PM2.5),FR_nice_7c64,France,Nice,9.8,Microgramos por metro cúbico (µg/m³),670215
+C5890534,Particulate matter (PM2.5),DE_frank_22cb,Germany,Frankfurt (Oder),9.9,Microgramos por metro cúbico (µg/m³),57751
+C5890534,Particulate matter (PM2.5),DE_erfur_87bc,Germany,Erfurt,8.2,Microgramos por metro cúbico (µg/m³),213981
+C5890534,Particulate matter (PM2.5),BG_velik_8c2c,Bulgaria,Veliko Tarnovo,15.7,Microgramos por metro cúbico (µg/m³),68828
+C5890534,Particulate matter (PM2.5),BE_gent_4a09,Belgium,Gent,11.3,Microgramos por metro cúbico (µg/m³),263687
+C5890534,Particulate matter (PM2.5),DE_freib_1536,Germany,Freiburg im Breisgau,7.4,Microgramos por metro cúbico (µg/m³),231195
+C5890534,Particulate matter (PM2.5),IT_roma_2e92,Italy,Roma,12.8,Microgramos por metro cúbico (µg/m³),2808293
+C5890534,Particulate matter (PM2.5),BE_charl_0ee2,Belgium,Charleroi,7.7,Microgramos por metro cúbico (µg/m³),203314
+C5890534,Particulate matter (PM2.5),NL_great_c921,Netherlands,Greater Utrecht,8.1,Microgramos por metro cúbico (µg/m³),450062
+C5890534,Particulate matter (PM2.5),FR_annem_d92d,France,Annemasse,9.7,Microgramos por metro cúbico (µg/m³),61518
+C5890534,Particulate matter (PM2.5),DE_kasse_8061,Germany,Kassel,8.5,Microgramos por metro cúbico (µg/m³),202137
+C5890534,Particulate matter (PM2.5),BE_mons_1b59,Belgium,Mons,8.7,Microgramos por metro cúbico (µg/m³),95922

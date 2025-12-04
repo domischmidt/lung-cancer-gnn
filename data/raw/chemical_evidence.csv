@@ -1,0 +1,199 @@
+ChemicalId,ChemicalName,EvidenceId,EvidenceName
+C0000215,"2,4,5-Trichlorophenoxyacetic Acid",C0000215,"2,4,5-trichlorophenoxyacetic acid exposure"
+C0000220,"2,4-Dichlorophenoxyacetic Acid",C0000220,"2,4-dichlorophenoxyacetic acid exposure"
+C0067665,N-acetyl-S-(2-cyanoethyl)cysteine,C0001223,acrylonitrile exposure
+C0003380,antimony,C0003380,antimony exposure
+C0003818,arsenic,C0003818,arsenic exposure
+C0006628,Cacodylic Acid,C0003818,arsenic exposure
+C0377071,methylarsonate,C0003818,arsenic exposure
+C0004749,barium,C0004749,barium exposure
+C0005036,benzene,C0005036,benzene exposure
+C0763160,raphanusamic acid,C0007016,carbon disulfide exposure
+C0007022,carbon tetrachloride,C0007022,tetrachloromethane (carbon tetrachloride) exposure
+C0007886,cesium,C0007886,cesium exposure
+C0069809,oxychlordane,C0008184,chlordane exposure
+C0894114,trans-Nonachlor,C0008184,chlordane exposure
+C0008238,chloroform,C0008238,chloroform exposure
+C0010194,Cotinine,C0010194,cotinine exposure
+C0066733,monobutyl phthalate,C0012052,dibutyl phthalate (dbp) exposure
+C0047013,"3,5,6-trichloro-2-pyridinol",C0013328,chlorpyrifos exposure
+C0014267,Endrin,C0014267,endrin exposure
+C0015097,Ethylenethiourea,C0015090,dithiocarbamate fungicides exposure
+C0019432,Hexachlorobenzene,C0019432,hexachlorobenzene exposure
+C0023175,lead,C0023175,lead exposure
+C0012063,Dicarboxylic Acids,C0024547,malathion exposure
+C0025424,mercury,C0025424,mercury exposure
+C0026209,Mirex,C0026209,mirex exposure
+C0026402,molybdenum,C0026402,molybdenum exposure
+C0028125,Nitrates,C0028125,nitrate exposure
+C0015822,ronnel,C0029254,organophosphorus insecticides exposure
+C0057933,diethyl phosphate,C0029254,organophosphorus insecticides exposure
+C0956399,"O,O-diethyl phosphorothionate, ammonium salt",C0029254,organophosphorus insecticides exposure
+C0030855,Pentachlorophenol,C0030855,pentachlorophenol exposure
+C0069736,piroxantrone,C0031367,phenanthrene exposure
+C0294419,4-hydroxyphenanthrene,C0031367,phenanthrene exposure
+C0031368,Phenanthrenes,C0031368,3-hydroxyphenanthrene exposure
+C0031782,Phthalic Acids,C0031782,mono-(3-carboxypropyl) phthalate exposure
+C0032207,platinum,C0032207,platinum exposure
+C0032447,Polychlorinated Biphenyls,C0032447,"3,4,4',5-tetrachlorobiphenyl (pcb) exposure"
+C0003380,antimony,C0037369,smoking
+C0003818,arsenic,C0037369,smoking
+C0004749,barium,C0037369,smoking
+C0005036,benzene,C0037369,smoking
+C0006628,Cacodylic Acid,C0037369,smoking
+C0006632,cadmium,C0037369,smoking
+C0007886,cesium,C0037369,smoking
+C0009148,cobalt,C0037369,smoking
+C0010194,Cotinine,C0037369,smoking
+C0023175,lead,C0037369,smoking
+C0024706,manganese,C0037369,smoking
+C0026402,molybdenum,C0037369,smoking
+C0028125,Nitrates,C0037369,smoking
+C0031368,Phenanthrenes,C0037369,smoking
+C0038467,strontium,C0037369,smoking
+C0039738,thallium,C0037369,smoking
+C0040238,tin,C0037369,smoking
+C0040383,toluene,C0037369,smoking
+C0041383,tungsten,C0037369,smoking
+C0044415,1-hydroxypyrene,C0037369,smoking
+C0044496,1-naphthol,C0037369,smoking
+C0045565,"2,5-dimethylfuran",C0037369,smoking
+C0045863,"2-amino-9H-pyrido(2,3-b)indole",C0037369,smoking
+C0045864,2-amino-delta(2)-thiazoline-4-carboxylic acid,C0037369,smoking
+C0046382,2-methylhippuric acid,C0037369,smoking
+C0046413,2-naphthol,C0037369,smoking
+C0046596,o-xylene,C0037369,smoking
+C0047598,3-methylhippuric acid,C0037369,smoking
+C0048742,4-xylene,C0037369,smoking
+C0059792,ethylbenzene,C0037369,smoking
+C0060517,fluorene,C0037369,smoking
+C0060850,furan,C0037369,smoking
+C0062124,harman,C0037369,smoking
+C0065636,mandelic acid,C0037369,smoking
+C0068994,norharman,C0037369,smoking
+C0069736,piroxantrone,C0037369,smoking
+C0070679,phenylglyoxylic acid,C0037369,smoking
+C0136082,perchlorate,C0037369,smoking
+C0220926,thiocyanate,C0037369,smoking
+C0294418,1-hydroxyphenanthrene,C0037369,smoking
+C0294419,4-hydroxyphenanthrene,C0037369,smoking
+C0377071,methylarsonate,C0037369,smoking
+C0622263,fluoren-9-ol,C0037369,smoking
+C1312051,2-hydroxyfluorene,C0037369,smoking
+C0038515,styrene,C0038515,styrene exposure
+C0039635,tetrachlorodibenzodioxin,C0039635,"2,3,7,8-tetrachlorodibenzo-p-dioxin exposure"
+C0039637,Tetrachloroethylene,C0039637,perchloroethylene exposure
+C0039738,thallium,C0039738,thallium exposure
+C0040383,toluene,C0040383,toluene exposure
+C0073858,S-benzyl-N-acetyl-L-cysteine,C0040383,toluene exposure
+C0040958,triclosan,C0040958,triclosan exposure
+C0041383,tungsten,C0041383,tungsten exposure
+C0043741,"1,2,3,4,6,7,8-heptachlorodibenzodioxin",C0043741,"1,2,3,4,6,7,8-heptachlorodibenzo-p-dioxin exposure"
+C0043743,"1,2,3,4,7,8-hexachlorodibenzofuran",C0043743,"1,2,3,4,7,8-hexachlorodibenzofuran exposure"
+C0043755,"1,2,3,6,7,8-hexachlorodibenzodioxin",C0043755,"1,2,3,7,8,9-hexachlorodibenzo-p-dioxin exposure"
+C0043757,"1,2,3,7,8-pentachlorodibenzo-p-dioxin",C0043757,"1,2,3,7,8-pentachlorodibenzo-p-dioxin exposure"
+C0044415,1-hydroxypyrene,C0044415,1-hydroxypyrene exposure
+C0044496,1-naphthol,C0044496,1-naphthol exposure
+C0045315,"2,3,4,2',3',4'-hexachlorobiphenyl",C0045315,"2,2',3,3',4,4'-hexachlorobiphenyl (pcb) exposure"
+C0045317,"2,3,4,5,3',4',5'-heptachlorobiphenyl",C0045317,"2,3,3a,4,4a,5,5a-heptachlorobiphenyl (pcb) exposure"
+C0045322,"2,3,4,7,8-pentachlorodibenzofuran",C0045322,"2,3,4,7,8-pentachlorodibenzofuran exposure"
+C0045341,"2,3-bis(3'-hydroxybenzyl)butyrolactone",C0045341,enterolactone exposure
+C0045418,"2,4,5,2',4',5'-hexachlorobiphenyl",C0045418,"2,2',4,4',5,5'-hexachlorobiphenyl (pcb) exposure"
+C0045419,"2,4,5,2',5'-pentachlorobiphenyl",C0045419,"2,2',4,5,5'-pentachlorobiphenyl (pcb) exposure"
+C0045423,"2,4,5-trichlorophenol",C0045423,"2,4,5-trichlorophenol exposure"
+C0045437,"2,4,6-trichlorophenol",C0045437,"2,4,6-trichlorophenol exposure"
+C0045488,"2,4-dichlorophenol",C0045488,"2,4-dichlorophenol exposure"
+C0045536,"2,5,2',5'-tetrachlorobiphenyl",C0045536,"2,2',5,5'-tetrachlorobiphenyl (pcb) exposure"
+C0045552,"2,5-dichlorophenol",C0045552,"2,5-dichlorophenol exposure"
+C0045565,"2,5-dimethylfuran",C0045565,"2,5-dimethylfuran exposure"
+C0045811,"2-amino-1-methyl-6-phenylimidazo(4,5-b)pyridine",C0045811,"2-amino-1-methyl-6-phenylimidazo[4,5-b]pyridine exposure"
+C0045863,"2-amino-9H-pyrido(2,3-b)indole",C0045863,"2-amino-9h-pyrido[2,3-b]indole (a-i+--c) exposure"
+C0046413,2-naphthol,C0046413,2-naphthol exposure
+C0046525,2-phenylphenol,C0046525,ortho-phenylphenol exposure
+C0046596,o-xylene,C0046596,o-xylene exposure
+C0046928,"3,4,5,3',4',5'-hexachlorobiphenyl",C0046928,"3,3',4,4',5,5'-hexachlorobiphenyl (pcb) exposure"
+C0046929,"3,4,5,3',4'-pentachlorobiphenyl",C0046929,"3,3',4,4',5-pentachlorobiphenyl (pcb) exposure"
+C0048243,4-dichlorobenzene,C0048243,"1,4-dichlorobenzene exposure"
+C0048742,4-xylene,C0048742,p-xylene exposure
+C0050587,acrylamide,C0050587,acrylamide exposure
+C5773276,N-acetyl-S-(2-carbamoylethyl)-L-cysteine,C0050587,acrylamide exposure
+C0052421,arsenocholine,C0052421,arsenocholine exposure
+C0053448,beta-hexachlorocyclohexane,C0053448,beta-hexachlorocyclohexane exposure
+C0053800,bisphenol A,C0053800,bisphenol a exposure
+C0054119,bromodichloromethane,C0054119,bromodichloromethane exposure
+C0054122,bromoform,C0054122,tribromomethane (bromoform) exposure
+C0054302,butylparaben,C0054302,butyl paraben exposure
+C0047013,"3,5,6-trichloro-2-pyridinol",C0055474,chlorpyrifos-methyl exposure
+C5882533,4-fluoro-3-phenoxybenzoic acid,C0056836,cyfluthrin exposure
+C0057226,decachlorobiphenyl,C0057226,"2,2',3,3',4,4',5,5',6,6'-decachlorobiphenyl (pcb) exposure"
+C0047689,3-phenoxybenzoic acid,C0057233,deltamethrin exposure
+C0128774,MNOP,C0057660,di-n-octyl phthalate (dop) exposure
+C0058223,dimethyl phosphate,C0058223,dimethylphosphate exposure
+C0059497,Equol,C0059497,equol exposure
+C0059788,ethyl-p-hydroxybenzoate,C0059788,ethyl paraben exposure
+C0059792,ethylbenzene,C0059792,ethylbenzene exposure
+C0060517,fluorene,C0060517,3-hydroxyfluorene exposure
+C0061202,genistein,C0061202,genistein exposure
+C0062124,harman,C0062124,"1-methyl-9h-pyrido[3,4-b]indole (harman) exposure"
+C0066286,methyl tert-butyl ether,C0066286,methyl-tert-butyl ether exposure
+C0066415,methylparaben,C0066415,methyl paraben exposure
+C0068849,nitromethane,C0068849,nitromethane exposure
+C0068994,norharman,C0068994,"9h-pyrido[3,4-b]indole (norharman) exposure"
+C0069212,"O,O-dimethyl phosphorodithioate",C0069212,dimethyldithiophosphate exposure
+C0069803,oxybenzone,C0069803,benzophenone-3 exposure
+C0070396,perfluorodecanoic acid,C0070396,perfluorodecanoic acid exposure
+C0070403,perfluorooctanoic acid,C0070403,perfluorooctanoic acid exposure
+C0047689,3-phenoxybenzoic acid,C0070455,permethrin exposure
+C0072238,propylparaben,C0072238,n-propyl paraben exposure
+C0077072,triclocarban,C0077072,triclocarban exposure
+C0091291,"2,3',4,4',5-pentachlorobiphenyl",C0091291,"2,3',4,4',5-pentachlorobiphenyl (pcb) exposure"
+C0113660,dibromochloromethane,C0113660,dibromochloromethane (chlorodibromomethane) exposure
+C0116217,enterodiol,C0116217,enterodiol exposure
+C0119706,glycidamide,C0119706,glycidamide exposure
+C0136082,perchlorate,C0136082,perchlorate exposure
+C1174387,monoisononylphthalate,C0163065,di-isononyl phthalate (dinp) exposure
+C0164565,O-desmethylangolensin,C0164565,o-desmethylangolensin exposure
+C0172926,perfluorooctane sulfonic acid,C0172926,perfluorooctanesulfonic acid exposure
+C0210530,"1,2,3,4,7,8-hexachlorodibenzodioxin",C0210530,"1,2,3,4,7,8-hexachlorodibenzo-p-dioxin exposure"
+C0217336,"2,4,4'-trichlorobiphenyl",C0217336,"2,4,4'-trichlorobiphenyl (pcb) exposure"
+C0220926,thiocyanate,C0220926,thiocyanate exposure
+C0253007,pentabromodiphenyl ether,C0253007,"2,2a,4,4a,5-pentabromodiphenyl ether (pbde) exposure"
+C0253007,pentabromodiphenyl ether,C0253007,"2,2a,3,4,4a-pentabromodiphenyl ether (pbde) exposure"
+C0253007,pentabromodiphenyl ether,C0253007,"2,2a,4,4a,6-pentabromodiphenyl ether (pbde) exposure"
+C0255636,"2,3,3',4,4',5-hexachlorobiphenyl",C0255636,"2,3,3',4,4',5'-hexachlorobiphenyl (pcb) exposure"
+C0255636,"2,3,3',4,4',5-hexachlorobiphenyl",C0255636,"2,3,3',4,4',5-hexachlorobiphenyl (pcb) exposure"
+C0294418,1-hydroxyphenanthrene,C0294418,1-hydroxyphenanthrene exposure
+C0526754,"2,3,3',4,4'-pentachlorobiphenyl",C0526754,"2,3,3',4,4'-pentachlorobiphenyl (pcb) exposure"
+C0530568,perfluoro-n-heptanoic acid,C0530568,perfluoroheptanoic acid exposure
+C0530570,perfluoro-n-nonanoic acid,C0530570,perfluorononanoic acid exposure
+C0533648,mono-benzyl phthalate,C0533648,mono-benzyl phthalate exposure
+C0618870,"2,4,5,3',4',5'-hexachlorobiphenyl",C0618870,"2,3',4,4',5,5'-hexachlorobiphenyl (pcb) exposure"
+C0622263,fluoren-9-ol,C0622263,9-hydroxyfluorene exposure
+C0629828,2-ethyl-5-carboxypentyl phthalate,C0629828,mono-(2-ethyl-5-carboxypentyl) phthalate exposure
+C0640890,perfluorooctanesulfonamide,C0640890,perfluorooctane sulfonamide exposure
+C0643634,"2,2',3,5,5',6-hexachlorobiphenyl",C0643634,"2,2',3,5,5',6-hexachlorobiphenyl (pcb) exposure"
+C0657957,mono(2-ethyl-5-oxohexyl)phthalate,C0657957,mono-(2-ethyl-5-oxohexyl) phthalate exposure
+C0769553,"2,2',3,4',5',6-hexachlorobiphenyl",C0769553,"2,2',3,4',5',6-hexachlorobiphenyl (pcb) exposure"
+C0915269,PCB 180,C0915269,"2,2',3,4,4',5,5'-heptachlorobiphenyl (pcb) exposure"
+C0094817,"3-(2,2-dichlorovinyl)-2,2-dimethylcyclopropane carboxylic acid",C0971870,trans-permethrin exposure
+C1174119,perfluorohexanesulfonic acid,C1174119,perfluorohexane sulfonic acid exposure
+C1176159,"1,2,3,4,6,7,8-heptachlorodibenzofuran",C1176159,"1,2,3,4,6,7,8-heptachlorodibenzofuran exposure"
+C1312051,2-hydroxyfluorene,C1312051,2-hydroxyfluorene exposure
+C1313171,"2,2',4,4',5,5'-hexabrominated diphenyl ether",C1313171,"2,2a,4,4a,5,5a-hexabromodiphenyl ether (pbde) exposure"
+C1313377,mono(2-ethyl-5-hydroxyhexyl) phthalate,C1313377,mono-(2-ethyl-5-hydroxyhexyl) phthalate exposure
+C1568872,"2,2',4,4',5-pentachlorobiphenyl",C1568872,"2,2',4,4',5-pentachlorobiphenyl (pcb) exposure"
+C1722788,"2,2',4,4'-tetrabromodiphenyl ether",C1722788,"2,2a,4,4a-tetrabromodiphenyl ether (pbde) exposure"
+C2606157,tribromodiphenyl ether 28,C2606157,"2,4,4a-tribromodiphenyl ether (pbde) exposure"
+C2716298,"2,2',3,3',4,4',5-heptachlorobiphenyl",C2716298,"2,2',3,3',4,4',5-heptachlorobiphenyl (pcb) exposure"
+C2716299,"2,4,4',5-tetrachlorobiphenyl",C2716299,"2,4,4',5-tetrachlorobiphenyl (pcb) exposure"
+C2742616,bisphenol S,C2742616,bisphenol s exposure
+C3179566,"2,2',4,4',5,6'-hexabromodiphenyl ether",C3179566,"2,2a,4,4a,5,6a-hexabromodiphenyl ether (pbde) exposure"
+C3699348,"2,2',3,4,4',5-Hexachlorobiphenyl",C3699348,"2,2',3,4,4',5'-hexachlorobiphenyl (pcb) exposure"
+C3711320,perfluoroundecanoic acid,C3711320,perfluoroundecanoic acid exposure
+C4043769,"2,2',3,4',5,5',6-heptachlorobiphenyl",C4043769,"2,2',3,4',5,5',6-heptachlorobiphenyl (pcb) exposure"
+C4277574,"Dibenzofurans, Polychlorinated",C4277574,"1,2,3,6,7,8-hexachlorodibenzofuran exposure"
+C4309505,bisphenol F,C4309505,bisphenol f exposure
+C0045864,2-amino-delta(2)-thiazoline-4-carboxylic acid,C4321332,cyanide exposure
+C4547316,chondrillasterol,C4547316,chondrillasterol exposure
+C5226719,diethyldithiophosphate,C5226719,diethyldithiophosphate exposure
+C0389836,4-(methylnitrosamino)-1-(3-pyridyl)-1-butan-1-ol,C5543909,4-(methylnitrosamino)-1-(3-pyridyl)-1-butanone (nnk) exposure
