@@ -1,0 +1,51 @@
+child,childLabel,parent,parentLabel
+http://www.w3.org/2002/07/owl#Restriction,Restriction,http://www.w3.org/2002/07/owl#Class,Class
+http://www.w3.org/2002/07/owl#SymmetricProperty,SymmetricProperty,http://www.w3.org/2002/07/owl#ObjectProperty,ObjectProperty
+http://www.w3.org/2002/07/owl#InverseFunctionalProperty,InverseFunctionalProperty,http://www.w3.org/2002/07/owl#ObjectProperty,ObjectProperty
+http://www.w3.org/2002/07/owl#TransitiveProperty,TransitiveProperty,http://www.w3.org/2002/07/owl#ObjectProperty,ObjectProperty
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_COMBINED_COHORTS,Combined cohorts,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0001,Bronchus and lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_ATBC,"ATBC (Alpha-Tocopherol, Beta-Carotene Cancer Prevention Study)",http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002,Lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_CCHS,Copenhagen City Heart Study,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002,Lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_COMBINED_COHORTS,Combined cohorts,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002,Lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_ESTHER,ESTHER,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002,Lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_FINNISH_MOBILE_CLINIC_SUR,Finnish Mobile Clinic Surveys,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002,Lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_HIMS,HIMS (Health in Men Study),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002,Lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_HUNT_NORD_TRA_NDELAG_HEAL,HUNT (Nord-TrÃ¸ndelag Health Study),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002,Lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_JPHC,JPHC (Japan Public Health Center-based Prospective Study on Cancer and Cardiovascular Diseases),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002,Lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_KIHD,KIHD (Kuopio Ischaemic Heart Disease Risk Factor),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002,Lung cancer cases
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_ATBC,"ATBC (Alpha-Tocopherol, Beta-Carotene Cancer Prevention Study)",http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_CLUE,CLUE,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_EPIC,EPIC (European Prospective Investigation into Cancer and Nutrition),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_FINNISH_MOBILE_CLINIC_SUR,Finnish Mobile Clinic Surveys,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_JPHC,JPHC (Japan Public Health Center-based Prospective Study on Cancer and Cardiovascular Diseases),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_KPNC,Kaiser Permanente Northern California (KPNC),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_LC3,LC3 (Lung Cancer Cohort Consortium),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_MEC,MEC (Multiethnic Cohort Study),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_SCS,SCS (Shanghai Cohort Study),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#biospecimen/cohort/COHORT_WHI,WHI (Women's Health Initiative),http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003,Lung cancer cases and their controls
+http://www.openlinksw.com/schemas/oplweb#ProductCategory,Product Category,http://www.openlinksw.com/schemas/oplweb#ProductFamily,Product Family
+http://www.openlinksw.com/schemas/oplweb#ProductFormat,Product Format,http://www.openlinksw.com/schemas/oplweb#ProductFamily,Product Family
+http://www.openlinksw.com/schemas/oplweb#ProductFormatCategory,Product Format Category,http://www.openlinksw.com/schemas/oplweb#ProductFamily,Product Family
+http://www.openlinksw.com/schemas/oplweb#ProductFamilyFeature,Product Family Features,http://www.openlinksw.com/schemas/oplweb#ProductFamily,Product Family
+http://www.openlinksw.com/schemas/oplweb#ProductFormatCategory,Product Format Category,http://www.openlinksw.com/schemas/oplweb#ProductCategory,Product Category
+http://www.openlinksw.com/schemas/oplweb#ProductCategoryFeature,Product Category Features,http://www.openlinksw.com/schemas/oplweb#ProductCategory,Product Category
+http://www.openlinksw.com/schemas/oplweb#ProductFormatCategory,Product Format Category,http://www.openlinksw.com/schemas/oplweb#ProductFormat,Product Format
+http://www.openlinksw.com/schemas/oplweb#ProductFormatFeature,Product Format Features,http://www.openlinksw.com/schemas/oplweb#ProductFormat,Product Format
+http://www.openlinksw.com/schemas/oplweb#ProductRelease,Product Release,http://www.openlinksw.com/schemas/oplweb#Product,Product
+http://www.openlinksw.com/schemas/oplweb#ProductFeature,Product Features,http://www.openlinksw.com/schemas/oplweb#Product,Product
+http://www.openlinksw.com/schemas/oplweb#VendorCategory,vendor_category,http://www.openlinksw.com/schemas/oplweb#VendorCategoryFamily,vendor_category_family
+http://www.openlinksw.com/schemas/oplweb#Vendors,vendors,http://www.openlinksw.com/schemas/oplweb#VendorCategory,vendor_category
+http://www.openlinksw.com/schemas/oplweb#Opsys,Operating System,http://www.openlinksw.com/schemas/oplweb#OpsysFamily,OS Family
+http://www.openlinksw.com/schemas/oplweb#DbmsEngine,DBMS Engine,http://www.openlinksw.com/schemas/oplweb#DbmsFamily,DBMS Family
+http://www.openlinksw.com/schemas/oplweb#Opsys,Operating System,http://www.openlinksw.com/schemas/oplweb#OpsysType,OS Type
+http://www.openlinksw.com/schemas/oplweb#Processor,Processor,http://www.openlinksw.com/schemas/oplweb#ProcessorFamily,Processor Family
+http://www.openlinksw.com/schemas/oplweb#ProductReleaseFeature,Product Benefit,http://www.openlinksw.com/schemas/oplweb#ProductRelease,Product Release
+http://www.openlinksw.com/schemas/oplweb#ProductFeature,Product Features,http://www.openlinksw.com/schemas/oplweb#ProductBenefit,Product Benefit
+http://www.openlinksw.com/schemas/oplweb#ProductFamilyFeature,Product Family Features,http://www.openlinksw.com/schemas/oplweb#ProductBenefit,Product Benefit
+http://www.openlinksw.com/schemas/oplweb#ProductFormatFeature,Product Format Features,http://www.openlinksw.com/schemas/oplweb#ProductBenefit,Product Benefit
+http://www.openlinksw.com/schemas/oplweb#ProductCategoryFeature,Product Category Features,http://www.openlinksw.com/schemas/oplweb#ProductBenefit,Product Benefit
+http://www.openlinksw.com/schemas/oplweb#ProductReleaseFeature,Product Benefit,http://www.openlinksw.com/schemas/oplweb#ProductBenefit,Product Benefit
+http://www.openlinksw.com/schemas/oplweb#ProductBenefit,Product Benefit,http://www.openlinksw.com/schemas/oplweb#ProductBenefitCategory,Product Benefit
+http://www.openlinksw.com/schemas/oplweb#ProductFeature,Product Features,http://www.openlinksw.com/schemas/oplweb#ProductFeatureCategory,Product Feature Category
+http://www.openlinksw.com/schemas/oplweb#ProductFamilyFeature,Product Family Features,http://www.openlinksw.com/schemas/oplweb#ProductFeatureCategory,Product Feature Category
+http://www.openlinksw.com/schemas/oplweb#ProductFormatFeature,Product Format Features,http://www.openlinksw.com/schemas/oplweb#ProductFeatureCategory,Product Feature Category

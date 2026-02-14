@@ -1,0 +1,23 @@
+o,p,s
+https://w3id.org/biolink/vocab/StudyPopulation,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0001
+https://w3id.org/biolink/vocab/StudyPopulation,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002
+https://w3id.org/biolink/vocab/StudyPopulation,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003
+Bronchus and lung cancer cases,http://www.w3.org/2000/01/rdf-schema#label,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0001
+Lung cancer cases,http://www.w3.org/2000/01/rdf-schema#label,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002
+Lung cancer cases and their controls,http://www.w3.org/2000/01/rdf-schema#label,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003
+POP_0001,http://purl.org/dc/terms/identifier,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0001
+POP_0002,http://purl.org/dc/terms/identifier,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002
+POP_0003,http://purl.org/dc/terms/identifier,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DK,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0001
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DE,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DK,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FI,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NO,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/AU,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/JP,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0002
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FI,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FR,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NO,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CN,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/JP,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003
+http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/US,http://semanticscience.org/resource/SIO_000061,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#studypopulation/POP_0003
