@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix sem-lucia: <https://w3id.org/LUCIA/sem-lucia#> .
+@prefix lucia: <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#> .
+
+
+# ── New CalendarYear instances ──
+
+<http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> a <http://snomed.info/id/277267003> ;
+    rdfs:label "2023" ;
+    dcterms:identifier "2023" .
+
+<http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2024> a <http://snomed.info/id/277267003> ;
+    rdfs:label "2024" ;
+    dcterms:identifier "2024" .
+
+# ── New Chemical instances (PM10 variants) ──
+
+<http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C1720884_10> a ncit:C48807 ;
+    rdfs:label "Particulate matter (PM10)" ;
+    dcterms:identifier "C1720884_10" .
+
+<http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C1720884_10_As> a ncit:C48807 ;
+    rdfs:label "Particulate matter (PM10, Arsenic)" ;
+    dcterms:identifier "C1720884_10_As" .
+
+<http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C1720884_10_Cd> a ncit:C48807 ;
+    rdfs:label "Particulate matter (PM10, Cadmium)" ;
+    dcterms:identifier "C1720884_10_Cd" .
+
+<http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C1720884_10_Ni> a ncit:C48807 ;
+    rdfs:label "Particulate matter (PM10, Nickel)" ;
+    dcterms:identifier "C1720884_10_Ni" .
+
+<http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C1720884_10_Pb> a ncit:C48807 ;
+    rdfs:label "Particulate matter (PM10, Lead)" ;
+    dcterms:identifier "C1720884_10_Pb" .
