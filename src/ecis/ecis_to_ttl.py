@@ -1,14 +1,16 @@
 """
-Convert ECIS final CSV to TTL format for LUCIA ontology.
+Convert ECIS final CSVs to TTL format for LUCIA ontology.
+
+Combines:
+  - data/raw/ecis_final_2022.csv  (old format, 256 rows)
+  - data/processed/ecis_final.csv (2024 format, 324 rows)
+Output: data/processed/graph_ECIS.ttl
 
 Fixes per ontology review:
 - Year included in VitalStatistics URI
-- sio:SIO_000300 on Disease instance (not on VitalStatistics)
+- sio:SIO_000300 on Disease instance, linking to all VitalStatistics
 - Gender capitalized: "Male", "Female"
 - Existing Countries/CalendarYears only referenced, not redefined
-
-Input:  data/processed/ecis_final.csv
-Output: data/processed/graph_ECIS.ttl
 """
 import pandas as pd
 import os
@@ -21,24 +23,70 @@ from ttl_utils import (
 )
 
 BASE = os.path.join(os.path.dirname(__file__), "..", "..")
+RAW = os.path.join(BASE, "data", "raw")
 PROCESSED = os.path.join(BASE, "data", "processed")
 
 ETHNICITY = "undefined"
 
 
+def load_2022():
+    """Load old 2022 ECIS data and normalize to common format."""
+    path = os.path.join(RAW, "ecis_final_2022.csv")
+    if not os.path.exists(path):
+        print("  [WARN] ecis_final_2022.csv not found – skipping 2022 data.")
+        return pd.DataFrame()
+
+    df = pd.read_csv(path)
+    df["gender"] = df["gender"].str.strip().str.capitalize()
+    df["age"] = df["age"].str.strip()
+    df["ethnicity"] = "undefined"
+    df["year"] = 2022
+
+    # Rename to common columns
+    out = df.rename(columns={
+        "country_id": "CountryCode",
+        "Country": "CountryName",
+        "gender": "Gender",
+        "age": "AgeGroup",
+        "Incidence": "Incidence",
+        "Mortality": "MortalityRate",
+        "year": "Year",
+    })[["CountryName", "CountryCode", "Gender", "AgeGroup", "Incidence", "MortalityRate", "Year"]]
+
+    print(f"  2022: {len(out)} rows, {out['CountryCode'].nunique()} countries")
+    return out
+
+
+def load_2024():
+    """Load 2024 ECIS data (from ecis_pipeline.py output)."""
+    path = os.path.join(PROCESSED, "ecis_final.csv")
+    if not os.path.exists(path):
+        print("  [WARN] ecis_final.csv not found – skipping 2024 data.")
+        return pd.DataFrame()
+
+    df = pd.read_csv(path)
+    df = df.rename(columns={"Country": "CountryName"})
+    print(f"  2024: {len(df)} rows, {df['CountryCode'].nunique()} countries")
+    return df
+
+
 def ecis_to_ttl():
-    df = pd.read_csv(os.path.join(PROCESSED, "ecis_final.csv"))
-    print(f"Loaded {len(df)} rows from ecis_final.csv")
+    print("Loading ECIS data...")
+    df_2022 = load_2022()
+    df_2024 = load_2024()
+
+    df = pd.concat([df_2022, df_2024], ignore_index=True)
+    print(f"  Combined: {len(df)} rows, years {sorted(df['Year'].unique())}")
 
     lines = [PREFIXES]
 
-    disease_code = df["DiseaseCode"].iloc[0]
-    disease_name = df["DiseaseName"].iloc[0]
+    disease_code = "C0242379"
+    disease_name = "Malignant neoplasm of lung"
 
     # ── People entities (unique combinations) ────────────────────────────
     people_seen = set()
     for _, row in df.iterrows():
-        gender = row["Gender"]  # Already "Male"/"Female" from pipeline
+        gender = row["Gender"]
         key = (row["AgeGroup"], gender)
         if key not in people_seen:
             people_seen.add(key)
@@ -59,14 +107,13 @@ def ecis_to_ttl():
             countries_seen.add(code)
             if code not in EXISTING_COUNTRIES:
                 lines.append(f"{country_uri(code)} a ncit:C25464 ;")
-                lines.append(f'    rdfs:label "{row["Country"]}" ;')
+                lines.append(f'    rdfs:label "{row["CountryName"]}" ;')
                 lines.append(f'    dcterms:identifier "{code}" .')
                 lines.append("")
                 new_countries += 1
     print(f"  {new_countries} new Country entities ({len(countries_seen)} total referenced)")
 
     # ── VitalStatistics instances ────────────────────────────────────────
-    # Collect all vstat URIs for the Disease link
     vstat_uris = []
     count = 0
 
@@ -76,15 +123,17 @@ def ecis_to_ttl():
         age = row["AgeGroup"]
         year = int(row["Year"])
         inc = row["Incidence"]
-        mort = row["MortalityRate"]
+        mort = row.get("MortalityRate", None)
 
         vs = vstat_uri(code, age, gender, ETHNICITY, disease_code, year)
         vstat_uris.append(vs)
 
         lines.append(f"{vs} a ncit:C17258 ;")
         lines.append(f"    sio:SIO_000679 {calendar_year_uri(year)} ;")
-        lines.append(f'    sem-lucia:incidence "{inc}"^^xsd:float ;')
-        lines.append(f'    sem-lucia:mortalityrate "{mort}"^^xsd:float ;')
+        if pd.notna(inc):
+            lines.append(f'    sem-lucia:incidence "{float(inc)}"^^xsd:float ;')
+        if pd.notna(mort):
+            lines.append(f'    sem-lucia:mortalityrate "{float(mort)}"^^xsd:float ;')
         lines.append(f"    sio:SIO_000229 {people_uri(age, gender, ETHNICITY)} ;")
         lines.append(f"    sio:SIO_000061 {country_uri(code)} .")
         lines.append("")
@@ -96,9 +145,7 @@ def ecis_to_ttl():
     lines.append(f"{disease_uri(disease_code)} a ncit:C7057 ;")
     lines.append(f'    rdfs:label "{disease_name}" ;')
     lines.append(f'    dcterms:identifier "{disease_code}" ;')
-    # Link disease → all vital statistics
     for i, vs in enumerate(vstat_uris):
-        sep = " ;" if i == 0 else ""
         comma = " ," if i < len(vstat_uris) - 1 else " ."
         if i == 0:
             lines.append(f"    sio:SIO_000300 {vs}{comma}")

@@ -1,99 +1,133 @@
 # Graph Neural Networks for Knowledge Discovery in Lung Cancer Data
 
-Master's thesis project applying Relational Graph Convolutional Networks (R-GCN) to the LUNG-CABO knowledge graph to discover new biological and environmental risk factors for lung cancer.
+Master's Thesis – M.Sc. International Information Systems (FAU Erlangen-Nürnberg)
 
-## Knowledge Graph Extension
+**Author:** Domenic Schmidt  
+**Supervisor:** Prof. Antonio Guillen Honrubia (UPM)  
+**Co-supervisor:** Paloma Tejera Nevado (UPM)
 
-This repository contains data acquisition, cleaning, and TTL conversion pipelines for three environmental/epidemiological data sources that extend the existing LUNG-CABO knowledge graph.
+## Overview
 
-### Data Sources
+This repository contains the data pipelines for extending the LUCIA Knowledge Graph with environmental and epidemiological data from three sources (EEA, ECIS, OECD) plus corrections to the existing CDC data.
 
-| Source | Description | Coverage | Years |
-|--------|-------------|----------|-------|
-| **EEA** | European Environment Agency – Air quality measurements at city level | 30 countries, 3169 cities, 10 pollutants | 2013–2024 |
-| **OECD** | OECD Regional Air Pollution Exposure (TL2 regions) | 40 countries, 440 regions, 3 pollutants | 2021–2023 |
-| **ECIS** | European Cancer Information System – Lung cancer incidence and mortality | EU-27, 6 age groups, 2 genders | 2024 |
-
-### Pollutants
-
-- **Primary:** PM2.5, PM10, NO2, O3
-- **Heavy metals in PM10:** Arsenic (As), Cadmium (Cd), Nickel (Ni), Lead (Pb)
-- **Other:** Benzo[a]pyrene (BaP), Benzene (C6H6)
-
-## Project Structure
+## Repository Structure
 
 ```
-src/
-├── eea/
-│   ├── 01_collect_urls.py          # Collect parquet file URLs from EEA API
-│   ├── 02_download_parquets.py     # Download + compute annual means (all years)
-│   ├── eea_pipeline.py             # Merge with Eurostat LAU population data
-│   └── eea_to_ttl.py               # Convert to RDF/Turtle
-├── oecd/
-│   ├── oecd_exposure_pipeline.py   # Clean OECD regional exposure data
-│   └── oecd_exposure_to_ttl.py     # Convert to RDF/Turtle
-├── ecis/
-│   ├── ecis_pipeline.py            # Clean ECIS cancer statistics
-│   └── ecis_to_ttl.py              # Convert to RDF/Turtle
-└── shared/
-    ├── ttl_utils.py                # Shared URI builders, UMLS IDs, existing entities
-    └── generate_shared_ttl.py      # Generate shared CalendarYear + Chemical entities
-
-data/
-├── raw/            # Original downloads (CSV, XLSX, Parquet)
-├── interim/        # Intermediate results (EEA annual means)
-└── processed/      # Final CSVs + TTL files for KG ingestion
+lung-cancer-gnn/
+├── data/
+│   ├── raw/                          # Source CSVs (downloads)
+│   │   ├── eea_urls.csv              # EEA parquet file URLs
+│   │   ├── eea_urls_additional.csv   # EEA additional pollutant URLs
+│   │   ├── eea_metadata.csv          # EEA station metadata
+│   │   ├── eurostat_lau.xlsx         # Eurostat LAU population (Jan 2024)
+│   │   ├── ecis_incidence_*.csv      # ECIS 2024 incidence (6 age groups)
+│   │   ├── ecis_mortality_*.csv      # ECIS 2024 mortality (6 age groups)
+│   │   ├── ecis_final_2022.csv       # ECIS 2022 data (from drive.upm.es)
+│   │   ├── oecd_exposure.csv         # OECD air pollution exposure
+│   │   ├── oecd_population.csv       # OECD Regional Demography TL2 (1990-2023)
+│   │   └── CDC_Final.csv             # CDC lung cancer incidence (US + Puerto Rico)
+│   ├── interim/                      # Intermediate EEA processing files
+│   └── processed/                    # Final CSVs and TTL files
+│       ├── eea_final.csv
+│       ├── ecis_final.csv
+│       ├── oecd_exposure_final.csv
+│       ├── graph_EEA.ttl             # >100MB, only on GitLab
+│       ├── graph_ECIS.ttl
+│       ├── graph_OECD.ttl
+│       ├── graph_CDC.ttl
+│       └── graph_shared.ttl
+├── src/
+│   ├── shared/
+│   │   ├── ttl_utils.py              # URI builders, constants, existing entities
+│   │   └── generate_shared_ttl.py    # CalendarYear + Chemical shared entities
+│   ├── eea/
+│   │   ├── 01_collect_urls.py        # Collect parquet URLs from EEA API
+│   │   ├── 02_download_parquets.py   # Download parquets + compute annual means
+│   │   ├── eea_pipeline.py           # Population matching + city normalization
+│   │   └── eea_to_ttl.py             # CSV → TTL conversion
+│   ├── ecis/
+│   │   ├── ecis_pipeline.py          # Merge incidence + mortality CSVs (2024)
+│   │   └── ecis_to_ttl.py            # CSV → TTL (combines 2022 + 2024)
+│   ├── oecd/
+│   │   ├── oecd_exposure_pipeline.py # Clean exposure data + population merge
+│   │   └── oecd_exposure_to_ttl.py   # CSV → TTL conversion
+│   └── cdc/
+│       └── cdc_to_ttl.py             # Fix CDC: year-separated VitalStatistics
+├── readme.md
+└── requirements.txt
 ```
+
+## Data Sources
+
+### EEA (European Environment Agency)
+- **Content:** Air quality measurements at city/station level
+- **Pollutants:** PM2.5, PM10, NO2, O3, BaP, C6H6, As in PM10, Cd in PM10, Pb in PM10, Ni in PM10
+- **Coverage:** 30 European countries, 2013–2024
+- **Population:** Eurostat LAU (reference date: January 2024, 89.7% match)
+- **Location type:** `sio:SIO_000415` (Geopolitical Region)
+- **Output:** 117,609 ChemicalLocationAssociation instances, 27,809 Population entities
+
+### ECIS (European Cancer Information System)
+- **Content:** Lung cancer incidence and mortality rates
+- **Coverage:** 27–28 EU countries, 2022 + 2024
+- **Granularity:** Country-level, per gender and age group (15-year intervals)
+- **Output:** 580 VitalStatistics instances (256 × 2022 + 324 × 2024)
+
+### OECD (Organisation for Economic Co-operation and Development)
+- **Content:** Air pollution exposure at regional level
+- **Pollutants:** PM2.5, PM10, NO2
+- **Coverage:** 40 countries, 440 TL2 regions, 1990–2023
+- **Population:** OECD Regional Demography TL2 (year-matched, 97% coverage)
+- **Location type:** `sio:SIO_000414` (Geographic Region)
+- **Output:** 14,001 ChemicalLocationAssociation instances, 11,067 Population entities
+
+### CDC (Centers for Disease Control and Prevention)
+- **Content:** Lung cancer incidence (US + Puerto Rico)
+- **Coverage:** 1999–2021, by age group, gender, ethnicity
+- **Fix applied:** Year-separated VitalStatistics instances (was: all years merged in one)
+- **Output:** 1,184 VitalStatistics instances
+
+### Shared Entities
+- **CalendarYear:** 2023, 2024 (years 1990–2022 already exist in ontology)
+- **Chemicals:** 5 PM10 variants (PM2.5, BaP, C6H6, NO2, O3, NOx already exist)
+
+## Ontology Compliance
+
+All TTL files follow the LUCIA ontology (Environmental_Ontology.pdf):
+- Population modeled as separate entity (`sio:SIO_001061`) with `sio:SIO_000300` (has value), linked via `sio:SIO_000216` (has measurement value)
+- Disease → `sio:SIO_000300` → VitalStatistics (not the other way around)
+- Existing entities (Countries, CalendarYears, Chemicals, Sources) are referenced, not redefined
+- VitalStatistics URIs include the year to prevent RDF triple merging across time periods
 
 ## Pipeline Workflow
 
-```
-Raw data (API / manual download)
-        │
-        ▼
-  *_pipeline.py  →  Cleaning, matching, aggregation
-        │
-        ▼
-  *_final.csv    →  Standardized CSV
-        │
-        ▼
-  *_to_ttl.py    →  RDF/Turtle conversion
-        │
-        ▼
-  graph_*.ttl    →  Load into Virtuoso triplestore
-```
-
-## Ontology Alignment
-
-TTL files follow the LUCIA ontology conventions:
-- **Existing entities** (Countries, CalendarYears, Chemicals, Sources) are only referenced, not redefined
-- **New shared entities** (CalendarYear 2023/2024, PM10 chemical variants) are defined in `graph_shared.ttl`
-- **City URIs** include year to support year-dependent population values
-- **Chemical IDs** use UMLS identifiers (e.g. C5890534 for PM2.5, C1720884_10 for PM10)
-
-## Output TTL Files
-
-| File | Instances | Description |
-|------|-----------|-------------|
-| `graph_shared.ttl` | 7 | CalendarYear 2023+2024, 5 PM10 chemicals |
-| `graph_EEA.ttl` | 117,795 CLA | City-level air quality across Europe |
-| `graph_OECD.ttl` | 3,996 CLA | Regional air pollution exposure (OECD) |
-| `graph_ECIS.ttl` | 324 VitalStats | Lung cancer incidence and mortality (EU-27) |
-
-## Setup
-
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # Linux/Mac
-.venv\Scripts\activate      # Windows
-pip install -r requirements.txt
+# EEA
+python src/eea/01_collect_urls.py
+python src/eea/02_download_parquets.py
+python src/eea/eea_pipeline.py
+python src/eea/eea_to_ttl.py
+
+# ECIS
+python src/ecis/ecis_pipeline.py
+python src/ecis/ecis_to_ttl.py
+
+# OECD
+python src/oecd/oecd_exposure_pipeline.py
+python src/oecd/oecd_exposure_to_ttl.py
+
+# CDC
+python src/cdc/cdc_to_ttl.py
+
+# Shared
+python src/shared/generate_shared_ttl.py
 ```
 
-## Supervisors
+## Repositories
 
-- **Prof. Antonio Honrubia** – Universidad Politécnica de Madrid (UPM)
-- **Paloma Tejera Nevado** – UPM (co-supervisor)
+- **GitHub:** [github.com/domischmidt/lung-cancer-gnn](https://github.com/domischmidt/lung-cancer-gnn) (source code + small files)
+- **GitLab UPM:** medal.ctb.upm.es (deliverables including large TTL files)
 
-## Author
+## Supervisor
 
-Domenic Schmidt – M.Sc. International Information Systems, FAU Erlangen-Nürnberg
+Prof. Antonio Honrubia – Universidad Politécnica de Madrid
