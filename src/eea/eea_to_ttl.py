@@ -2,10 +2,10 @@
 Convert EEA final CSV to TTL format for LUCIA ontology.
 
 Per Virginia's review:
-- City/Geopolitical Region: one instance per city, NO year in URI
-  URI: lucia:#country/city/<CountryCode>_<slug>
+- Geopolitical Region: one instance per city, NO year in URI
+  URI: lucia:#country/gpr/<CountryCode>_<slug>
 - Population: one instance per city (2024 only, from Eurostat LAU)
-  URI: lucia:#country/city/population/<slug>_2024
+  URI: lucia:#country/gpr/population/<slug>_2024
 - CLA: links to year-free city URI, has own CalendarYear via SIO_000679
 - Source: NOT redefined (already exists)
 - Existing Countries: only referenced, not redefined
@@ -35,21 +35,21 @@ POP_YEAR = 2024  # Eurostat LAU reference date
 
 
 def city_uri_noyear(country_code, city_name):
-    """City URI without year: lucia:#country/city/{CC}_{slug}"""
+    """Geopolitical Region URI without year: lucia:#country/gpr/{CC}_{slug}"""
     slug = slugify(city_name)
-    return f"<{BASE_URI}#country/city/{country_code}_{slug}>"
+    return f"<{BASE_URI}#country/gpr/{country_code}_{slug}>"
 
 
 def city_identifier_noyear(country_code, city_name):
-    """City dcterms:identifier without year."""
+    """Geopolitical Region dcterms:identifier without year."""
     slug = slugify(city_name)
     return f"{country_code}_{slug}"
 
 
 def pop_uri(city_name):
-    """Population URI: lucia:#country/city/population/{slug}_{year}"""
+    """Population URI: lucia:#country/gpr/population/{slug}_{year}"""
     slug = slugify(city_name)
-    return f"<{BASE_URI}#country/city/population/{slug}_{POP_YEAR}>"
+    return f"<{BASE_URI}#country/gpr/population/{slug}_{POP_YEAR}>"
 
 
 def eea_to_ttl():
