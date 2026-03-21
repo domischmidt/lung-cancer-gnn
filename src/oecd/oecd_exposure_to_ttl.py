@@ -1,11 +1,16 @@
 """
 Convert OECD exposure final CSV to TTL format for LUCIA ontology.
 
+Per Virginia's review:
+- Geographic Region: 444 instances, NO year in URI
+  URI: lucia:#country/gr/<CountryCode>_<GRName>
+- Population: ≤444 instances, one per region (latest year only)
+  URI: lucia:#country/gr/population/<GRName>_<Year>
+- CLA: 14,001 instances, links to year-free Region, has own CalendarYear
+- Country: only new ones (not in EXISTING_COUNTRIES)
+
 Input:  data/processed/oecd_exposure_final.csv
 Output: data/processed/graph_OECD.ttl
-
-Handles multiple years, population as separate entity (per ontology),
-and region-level geographic entities (SIO_000414).
 """
 import pandas as pd
 import os
@@ -13,9 +18,10 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "shared"))
 from ttl_utils import (
-    PREFIXES, CHEMICAL_IDS, EXISTING_COUNTRIES, EXISTING_CHEMICALS,
-    cla_uri, cla_id, source_uri, chemical_uri, city_uri, city_identifier,
+    PREFIXES, CHEMICAL_IDS, EXISTING_COUNTRIES,
+    cla_uri, cla_id, source_uri, chemical_uri,
     country_uri, units_uri, frequency_uri, calendar_year_uri,
+    slugify,
 )
 
 BASE = os.path.join(os.path.dirname(__file__), "..", "..")
@@ -23,16 +29,25 @@ PROCESSED = os.path.join(BASE, "data", "processed")
 
 SOURCE = "OECD-2025"
 CATEGORY = "POLLUTIONEXP"
+BASE_URI = "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia"
 
 
-def population_uri(country_code, region_name, year):
-    """URI for a Population entity: lucia:#population/{CC}_{region}_{year}"""
-    from ttl_utils import normalize_ascii
-    import hashlib
-    norm = normalize_ascii(region_name)
-    short = norm[:5].replace(" ", "")
-    h = hashlib.md5(norm.encode("utf-8")).hexdigest()[:4]
-    return f"<http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#population/{country_code}_{short}_{h}_{year}>"
+def gr_uri(country_code, region_name):
+    """Geographic Region URI (no year): lucia:#country/gr/{CC}_{slug}"""
+    slug = slugify(region_name)
+    return f"<{BASE_URI}#country/gr/{country_code}_{slug}>"
+
+
+def gr_identifier(country_code, region_name):
+    """Geographic Region dcterms:identifier."""
+    slug = slugify(region_name)
+    return f"{country_code}_{slug}"
+
+
+def pop_uri(region_name, year):
+    """Population URI: lucia:#country/gr/population/{slug}_{year}"""
+    slug = slugify(region_name)
+    return f"<{BASE_URI}#country/gr/population/{slug}_{year}>"
 
 
 def oecd_exposure_to_ttl():
@@ -58,53 +73,58 @@ def oecd_exposure_to_ttl():
                 new_countries += 1
     print(f"  {new_countries} new Country entities ({len(countries_seen)} total)")
 
-    # ── Region entities (per year) + Population entities ─────────────────
+    # ── Geographic Region entities (444, no year in URI) ─────────────────
+    # ── Population entities (≤444, latest year only) ─────────────────────
     regions_seen = set()
     pop_count = 0
+
+    # Find latest population per region
+    pop_df = df[df["Population"].notna() & (df["Population"] != "")].copy()
+    pop_df["Population"] = pd.to_numeric(pop_df["Population"], errors="coerce")
+    pop_df = pop_df.dropna(subset=["Population"])
+    latest_pop = (
+        pop_df.sort_values("Year")
+        .groupby(["CountryCode", "RegionName"])
+        .last()
+        .reset_index()[["CountryCode", "RegionName", "Population", "Year"]]
+    )
+    pop_lookup = {}
+    for _, r in latest_pop.iterrows():
+        pop_lookup[(r["CountryCode"], r["RegionName"])] = (int(r["Population"]), int(r["Year"]))
+
     for _, row in df.iterrows():
         cc = row["CountryCode"]
         region = row["RegionName"]
-        year = int(row["Year"])
-        pop = row.get("Population", "")
+        region_key = (cc, region)
 
-        loc_key = (cc, region, year)
-        if loc_key not in regions_seen:
-            regions_seen.add(loc_key)
-            c_uri = city_uri(cc, region, year)
-            ident = city_identifier(cc, region, year)
+        if region_key not in regions_seen:
+            regions_seen.add(region_key)
+            r_uri = gr_uri(cc, region)
+            r_ident = gr_identifier(cc, region)
 
-            # Region entity (Geographic Region per ontology)
-            has_pop = (
-                pd.notna(pop)
-                and str(pop).strip() != ""
-                and str(pop).strip() != "nan"
-            )
+            has_pop = region_key in pop_lookup
 
-            lines.append(f"{c_uri} a sio:SIO_000414 ;")
+            lines.append(f"{r_uri} a sio:SIO_000414 ;")
             lines.append(f'    rdfs:label "{region}" ;')
-            lines.append(f'    dcterms:identifier "{ident}" ;')
+            lines.append(f'    dcterms:identifier "{r_ident}" ;')
             if has_pop:
-                # Link region to population entity via has_measurement_value
-                pop_uri = population_uri(cc, region, year)
-                lines.append(f"    sio:SIO_000216 {pop_uri} ;")
-            lines.append(f"    sio:SIO_000061 {country_uri(cc)} ;")
-            lines.append(f"    sio:SIO_000679 {calendar_year_uri(year)} .")
+                pop_val, pop_year = pop_lookup[region_key]
+                p_uri = pop_uri(region, pop_year)
+                lines.append(f"    sio:SIO_000216 {p_uri} ;")
+            lines.append(f"    sio:SIO_000061 {country_uri(cc)} .")
             lines.append("")
 
-            # Population entity (separate, per ontology)
+            # Population entity (latest year only)
             if has_pop:
-                try:
-                    pop_val = int(float(pop))
-                    pop_uri = population_uri(cc, region, year)
-                    lines.append(f"{pop_uri} a sio:SIO_001061 ;")
-                    lines.append(f'    rdfs:label "Population of {region} ({year})" ;')
-                    lines.append(f'    sio:SIO_000300 "{pop_val}"^^xsd:integer .')
-                    lines.append("")
-                    pop_count += 1
-                except (ValueError, TypeError):
-                    pass
+                pop_val, pop_year = pop_lookup[region_key]
+                p_uri = pop_uri(region, pop_year)
+                lines.append(f"{p_uri} a sio:SIO_001061 ;")
+                lines.append(f'    rdfs:label "Population of {region} ({pop_year})" ;')
+                lines.append(f'    sio:SIO_000300 "{pop_val}"^^xsd:integer .')
+                lines.append("")
+                pop_count += 1
 
-    print(f"  {len(regions_seen)} Region entities (across {len(df['Year'].unique())} years)")
+    print(f"  {len(regions_seen)} Geographic Region entities")
     print(f"  {pop_count} Population entities")
 
     # ── ChemicalLocationAssociation instances ────────────────────────────
@@ -117,14 +137,14 @@ def oecd_exposure_to_ttl():
         year = int(row["Year"])
 
         chem_id = CHEMICAL_IDS.get(chem_name, f"UNKNOWN_{chem_name}")
-        c_uri = city_uri(cc, region, year)
+        r_uri = gr_uri(cc, region)
         identifier = cla_id(SOURCE, chem_id, cc, region, year)
 
         lines.append(f"{cla_uri(identifier)} a sem-lucia:ChemicalLocationAssociation ;")
         lines.append(f'    dcterms:identifier "{identifier}" ;')
         lines.append(f"    sio:SIO_000253 {source_uri(SOURCE)} ;")
         lines.append(f"    sio:SIO_000628 {chemical_uri(chem_id)} ,")
-        lines.append(f"        {c_uri} ;")
+        lines.append(f"        {r_uri} ;")
         lines.append(f"    sio:SIO_000008 {units_uri('microgram-per-cubic-meter')} ,")
         lines.append(f"        {frequency_uri('Annual')} ;")
         lines.append(f"    sio:SIO_000679 {calendar_year_uri(year)} ;")

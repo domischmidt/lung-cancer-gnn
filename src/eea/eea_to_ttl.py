@@ -1,28 +1,28 @@
 """
 Convert EEA final CSV to TTL format for LUCIA ontology.
 
-Fixes per ontology review:
-- Source entity NOT redefined (already exists)
-- Correct UMLS chemical IDs; existing chemicals only referenced
-- City type: sio:SIO_000415 (Geopolitical Region)
-- City URI includes year, has CalendarYear link
-- Population as separate entity (sio:SIO_001061) per ontology
-- Existing Countries only referenced, not redefined
+Per Virginia's review:
+- City/Geopolitical Region: one instance per city, NO year in URI
+  URI: lucia:#country/city/<CountryCode>_<slug>
+- Population: one instance per city (2024 only, from Eurostat LAU)
+  URI: lucia:#country/city/population/<slug>_2024
+- CLA: links to year-free city URI, has own CalendarYear via SIO_000679
+- Source: NOT redefined (already exists)
+- Existing Countries: only referenced, not redefined
 
 Input:  data/processed/eea_final.csv
 Output: data/processed/graph_EEA.ttl
 """
 import pandas as pd
-import hashlib
 import os
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "shared"))
 from ttl_utils import (
-    PREFIXES, CHEMICAL_IDS, EXISTING_COUNTRIES, EXISTING_CHEMICALS,
-    cla_uri, cla_id, source_uri, chemical_uri, city_uri, city_identifier,
+    PREFIXES, CHEMICAL_IDS, EXISTING_COUNTRIES,
+    cla_uri, cla_id, source_uri, chemical_uri,
     country_uri, units_uri, frequency_uri, calendar_year_uri,
-    normalize_ascii,
+    slugify,
 )
 
 BASE = os.path.join(os.path.dirname(__file__), "..", "..")
@@ -30,14 +30,26 @@ PROCESSED = os.path.join(BASE, "data", "processed")
 
 SOURCE = "EEA-2025"
 CATEGORY = "POLLUTIONEXP"
+BASE_URI = "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia"
+POP_YEAR = 2024  # Eurostat LAU reference date
 
 
-def population_uri(country_code, city_name, year):
-    """URI for a Population entity: lucia:#population/{CC}_{slug}_{hash}_{year}"""
-    norm = normalize_ascii(city_name)
-    short = norm[:5].replace(" ", "")
-    h = hashlib.md5(norm.encode("utf-8")).hexdigest()[:4]
-    return f"<http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#population/{country_code}_{short}_{h}_{year}>"
+def city_uri_noyear(country_code, city_name):
+    """City URI without year: lucia:#country/city/{CC}_{slug}"""
+    slug = slugify(city_name)
+    return f"<{BASE_URI}#country/city/{country_code}_{slug}>"
+
+
+def city_identifier_noyear(country_code, city_name):
+    """City dcterms:identifier without year."""
+    slug = slugify(city_name)
+    return f"{country_code}_{slug}"
+
+
+def pop_uri(city_name):
+    """Population URI: lucia:#country/city/population/{slug}_{year}"""
+    slug = slugify(city_name)
+    return f"<{BASE_URI}#country/city/population/{slug}_{POP_YEAR}>"
 
 
 def eea_to_ttl():
@@ -63,49 +75,49 @@ def eea_to_ttl():
                 new_countries += 1
     print(f"  {new_countries} new Country entities ({len(countries_seen)} total)")
 
-    # ── City entities (with year) + Population entities ──────────────────
+    # ── City entities (one per city, no year) + Population (one per city, 2024) ──
     cities_seen = set()
     pop_count = 0
+
+    # Find population per city (single value, from Eurostat LAU 2024)
+    pop_df = df[df["Population"].notna()].copy()
+    pop_df["Population"] = pd.to_numeric(pop_df["Population"], errors="coerce")
+    pop_df = pop_df.dropna(subset=["Population"])
+    # Take first occurrence per city (population is same across years since it's LAU 2024)
+    pop_lookup = {}
+    for _, r in pop_df.groupby(["CountryCode", "CityName"]).first().reset_index().iterrows():
+        pop_lookup[(r["CountryCode"], r["CityName"])] = int(r["Population"])
+
     for _, row in df.iterrows():
         cc = row["CountryCode"]
         city = row["CityName"]
-        year = int(row["Year"])
-        pop = row.get("Population", "")
+        city_key = (cc, city)
 
-        loc_key = (cc, city, year)
-        if loc_key not in cities_seen:
-            cities_seen.add(loc_key)
-            c_uri = city_uri(cc, city, year)
-            ident = city_identifier(cc, city, year)
+        if city_key not in cities_seen:
+            cities_seen.add(city_key)
+            c_uri = city_uri_noyear(cc, city)
+            c_ident = city_identifier_noyear(cc, city)
 
-            has_pop = (
-                pd.notna(pop)
-                and str(pop).strip() != ""
-                and str(pop).strip() != "nan"
-            )
+            has_pop = city_key in pop_lookup
 
             lines.append(f"{c_uri} a sio:SIO_000415 ;")
             lines.append(f'    rdfs:label "{city}" ;')
-            lines.append(f'    dcterms:identifier "{ident}" ;')
+            lines.append(f'    dcterms:identifier "{c_ident}" ;')
             if has_pop:
-                pop_u = population_uri(cc, city, year)
-                lines.append(f"    sio:SIO_000216 {pop_u} ;")
-            lines.append(f"    sio:SIO_000061 {country_uri(cc)} ;")
-            lines.append(f"    sio:SIO_000679 {calendar_year_uri(year)} .")
+                p_uri = pop_uri(city)
+                lines.append(f"    sio:SIO_000216 {p_uri} ;")
+            lines.append(f"    sio:SIO_000061 {country_uri(cc)} .")
             lines.append("")
 
-            # Population entity (separate, per ontology)
+            # Population entity (single, 2024)
             if has_pop:
-                try:
-                    pop_val = int(float(pop))
-                    pop_u = population_uri(cc, city, year)
-                    lines.append(f"{pop_u} a sio:SIO_001061 ;")
-                    lines.append(f'    rdfs:label "Population of {city} ({year})" ;')
-                    lines.append(f'    sio:SIO_000300 "{pop_val}"^^xsd:integer .')
-                    lines.append("")
-                    pop_count += 1
-                except (ValueError, TypeError):
-                    pass
+                pop_val = pop_lookup[city_key]
+                p_uri = pop_uri(city)
+                lines.append(f"{p_uri} a sio:SIO_001061 ;")
+                lines.append(f'    rdfs:label "Population of {city} ({POP_YEAR})" ;')
+                lines.append(f'    sio:SIO_000300 "{pop_val}"^^xsd:integer .')
+                lines.append("")
+                pop_count += 1
 
     print(f"  {len(cities_seen)} City entities")
     print(f"  {pop_count} Population entities")
@@ -120,8 +132,8 @@ def eea_to_ttl():
         year = int(row["Year"])
 
         chem_id = CHEMICAL_IDS.get(chem_name, f"UNKNOWN_{chem_name}")
+        c_uri = city_uri_noyear(cc, city)
         identifier = cla_id(SOURCE, chem_id, cc, city, year)
-        c_uri = city_uri(cc, city, year)
 
         lines.append(f"{cla_uri(identifier)} a sem-lucia:ChemicalLocationAssociation ;")
         lines.append(f'    dcterms:identifier "{identifier}" ;')
