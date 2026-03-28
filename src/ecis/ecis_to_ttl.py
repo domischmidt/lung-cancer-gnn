@@ -29,9 +29,9 @@ BASE_URI = "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia"
 
 
 def registry_uri(country_code, registry_name):
-    """Geopolitical Region URI for a registry: country/gpr/{CC}_{slug}"""
+    """Geographic Region URI for a registry: country/gr/{CC}_{slug}"""
     slug = slugify(registry_name)
-    return f"<{BASE_URI}#country/gpr/{country_code}_{slug}>"
+    return f"<{BASE_URI}#country/gr/{country_code}_{slug}>"
 
 
 def vstat_uri(country_code, age, gender, ethnicity, disease, year, registry):
@@ -95,7 +95,7 @@ def ecis_to_ttl():
                 registries_seen.add(reg_key)
                 r_uri = registry_uri(code, registry)
                 r_slug = slugify(registry)
-                lines.append(f"{r_uri} a sio:SIO_000415 ;")
+                lines.append(f"{r_uri} a sio:SIO_000414 ;")
                 lines.append(f'    rdfs:label "{registry}" ;')
                 lines.append(f'    dcterms:identifier "{code}_{r_slug}" ;')
                 lines.append(f"    sio:SIO_000061 {country_uri(code)} .")
