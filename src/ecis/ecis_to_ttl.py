@@ -1,10 +1,11 @@
 """
 Convert ECIS final CSV to TTL format for LUCIA ontology.
 
-Supports:
-- Historical data (registry-level, 1953-2023, Age-specific Rates)
-- 2024 estimates (country-level, Incidence + Mortality)
-- Registry included in VitalStatistics URI for uniqueness
+Structure per ontology:
+- Regional registries → Geopolitical Region (SIO_000415) → is located in → Country
+- National registries → VitalStats links directly to Country
+- VitalStats → is located in → Region or Country
+- Disease → SIO_000300 → all VitalStatistics
 
 Input:  data/processed/ecis_final.csv
 Output: data/processed/graph_ECIS.ttl
@@ -16,7 +17,7 @@ import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "shared"))
 from ttl_utils import (
     PREFIXES, EXISTING_COUNTRIES, EXISTING_CALENDAR_YEARS,
-    vstat_uri, calendar_year_uri, disease_uri, people_uri, country_uri,
+    calendar_year_uri, disease_uri, people_uri, country_uri,
     slugify,
 )
 
@@ -27,7 +28,13 @@ ETHNICITY = "undefined"
 BASE_URI = "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia"
 
 
-def vstat_uri_registry(country_code, age, gender, ethnicity, disease, year, registry):
+def registry_uri(country_code, registry_name):
+    """Geopolitical Region URI for a registry: country/gpr/{CC}_{slug}"""
+    slug = slugify(registry_name)
+    return f"<{BASE_URI}#country/gpr/{country_code}_{slug}>"
+
+
+def vstat_uri(country_code, age, gender, ethnicity, disease, year, registry):
     """VitalStatistics URI including registry for uniqueness."""
     reg_slug = slugify(registry)
     ag = age.replace("+", "%2B")
@@ -73,6 +80,29 @@ def ecis_to_ttl():
                 new_countries += 1
     print(f"  {new_countries} new Country entities ({len(countries_seen)} total)")
 
+    # ── Registry/Region entities (only for regional registries) ──────────
+    registries_seen = set()
+    registry_count = 0
+    for _, row in df.iterrows():
+        code = row["CountryCode"]
+        registry = str(row["Registry"]).strip()
+        country = str(row["Country"]).strip()
+        is_national = (registry == country)
+
+        if not is_national:
+            reg_key = (code, registry)
+            if reg_key not in registries_seen:
+                registries_seen.add(reg_key)
+                r_uri = registry_uri(code, registry)
+                r_slug = slugify(registry)
+                lines.append(f"{r_uri} a sio:SIO_000415 ;")
+                lines.append(f'    rdfs:label "{registry}" ;')
+                lines.append(f'    dcterms:identifier "{code}_{r_slug}" ;')
+                lines.append(f"    sio:SIO_000061 {country_uri(code)} .")
+                lines.append("")
+                registry_count += 1
+    print(f"  {registry_count} Registry/Region entities")
+
     # ── VitalStatistics instances ────────────────────────────────────────
     vstat_uris = []
     count = 0
@@ -83,6 +113,7 @@ def ecis_to_ttl():
         age = row["AgeGroup"]
         year = int(row["Year"])
         registry = str(row["Registry"]).strip()
+        country = str(row["Country"]).strip()
         inc = row.get("Incidence", None)
         mort = row.get("MortalityRate", None)
 
@@ -91,8 +122,16 @@ def ecis_to_ttl():
         if not has_inc and not has_mort:
             continue
 
-        vs = vstat_uri_registry(code, age, gender, ETHNICITY, disease_code, year, registry)
+        is_national = (registry == country)
+
+        vs = vstat_uri(code, age, gender, ETHNICITY, disease_code, year, registry)
         vstat_uris.append(vs)
+
+        # Location: regional → Registry entity, national → Country directly
+        if is_national:
+            location_uri = country_uri(code)
+        else:
+            location_uri = registry_uri(code, registry)
 
         lines.append(f"{vs} a ncit:C17258 ;")
         lines.append(f"    sio:SIO_000679 {calendar_year_uri(year)} ;")
@@ -101,7 +140,7 @@ def ecis_to_ttl():
         if has_mort:
             lines.append(f'    sem-lucia:mortalityrate "{float(mort)}"^^xsd:float ;')
         lines.append(f"    sio:SIO_000229 {people_uri(age, gender, ETHNICITY)} ;")
-        lines.append(f"    sio:SIO_000061 {country_uri(code)} .")
+        lines.append(f"    sio:SIO_000061 {location_uri} .")
         lines.append("")
         count += 1
 
