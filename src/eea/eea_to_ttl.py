@@ -6,6 +6,7 @@ Per Virginia's review:
   URI: lucia:#country/gpr/<CountryCode>_<slug>
 - Population: one instance per city (2024 only, from Eurostat LAU)
   URI: lucia:#country/gpr/population/<slug>_2024
+  Includes sio:SIO_000679 → CalendarYear for temporal context
 - CLA: links to year-free city URI, has own CalendarYear via SIO_000679
 - Source: NOT redefined (already exists)
 - Existing Countries: only referenced, not redefined
@@ -115,6 +116,7 @@ def eea_to_ttl():
                 p_uri = pop_uri(city)
                 lines.append(f"{p_uri} a sio:SIO_001061 ;")
                 lines.append(f'    rdfs:label "Population of {city} ({POP_YEAR})" ;')
+                lines.append(f"    sio:SIO_000679 {calendar_year_uri(POP_YEAR)} ;")
                 lines.append(f'    sio:SIO_000300 "{pop_val}"^^xsd:integer .')
                 lines.append("")
                 pop_count += 1

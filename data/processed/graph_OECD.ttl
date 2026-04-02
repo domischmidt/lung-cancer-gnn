@@ -20,6 +20,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/australian_capital_territory_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Australian Capital Territory (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "466359"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AU_new_south_wales> a sio:SIO_000414 ;
@@ -30,6 +31,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/new_south_wales_2023> a sio:SIO_001061 ;
     rdfs:label "Population of New South Wales (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8341199"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AU_northern_territory> a sio:SIO_000414 ;
@@ -40,6 +42,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_territory_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern Territory (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "253062"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AU_queensland> a sio:SIO_000414 ;
@@ -50,6 +53,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/queensland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Queensland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5460477"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AU_south_australia> a sio:SIO_000414 ;
@@ -60,6 +64,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_australia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South Australia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1852972"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AU_tasmania> a sio:SIO_000414 ;
@@ -70,6 +75,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tasmania_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tasmania (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "573738"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AU_victoria> a sio:SIO_000414 ;
@@ -80,6 +86,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/victoria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Victoria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6816241"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AU_western_australia> a sio:SIO_000414 ;
@@ -90,6 +97,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/western_australia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Western Australia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2883762"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AT_burgenland> a sio:SIO_000414 ;
@@ -100,6 +108,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/burgenland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Burgenland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "301250"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AT_carinthia> a sio:SIO_000414 ;
@@ -110,6 +119,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/carinthia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Carinthia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "568984"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AT_lower_austria> a sio:SIO_000414 ;
@@ -120,6 +130,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lower_austria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lower Austria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1718373"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AT_salzburg> a sio:SIO_000414 ;
@@ -130,6 +141,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/salzburg_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Salzburg (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "568346"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AT_styria> a sio:SIO_000414 ;
@@ -140,6 +152,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/styria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Styria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1265198"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AT_tyrol> a sio:SIO_000414 ;
@@ -150,6 +163,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tyrol_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tyrol (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "771304"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AT_upper_austria> a sio:SIO_000414 ;
@@ -160,6 +174,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/upper_austria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Upper Austria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1522825"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AT_vienna> a sio:SIO_000414 ;
@@ -170,6 +185,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/vienna_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Vienna (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1982097"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/AT_vorarlberg> a sio:SIO_000414 ;
@@ -180,6 +196,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/vorarlberg_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Vorarlberg (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "406395"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/BE_brussels_capital_region> a sio:SIO_000414 ;
@@ -190,6 +207,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/brussels_capital_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Brussels-Capital Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1253178"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/BE_flemish_region> a sio:SIO_000414 ;
@@ -200,6 +218,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/flemish_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Flemish Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6787969"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/BE_walloon_region> a sio:SIO_000414 ;
@@ -210,6 +229,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/walloon_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Walloon Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3701649"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/BG_north_central> a sio:SIO_000414 ;
@@ -220,6 +240,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_central_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North Central (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "686334"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/BG_north_east> a sio:SIO_000414 ;
@@ -230,6 +251,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "823884"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/BG_north_west> a sio:SIO_000414 ;
@@ -240,6 +262,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "671502"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/BG_south_central> a sio:SIO_000414 ;
@@ -250,6 +273,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_central_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South Central (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1301026"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/BG_south_east> a sio:SIO_000414 ;
@@ -260,6 +284,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "948410"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/BG_south_west> a sio:SIO_000414 ;
@@ -270,6 +295,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2016554"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_alberta> a sio:SIO_000414 ;
@@ -280,6 +306,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/alberta_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Alberta (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4684514"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_british_columbia> a sio:SIO_000414 ;
@@ -290,6 +317,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/british_columbia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of British Columbia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5531553"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_manitoba> a sio:SIO_000414 ;
@@ -300,6 +328,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/manitoba_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Manitoba (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1454743"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_new_brunswick> a sio:SIO_000414 ;
@@ -310,6 +339,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/new_brunswick_2023> a sio:SIO_001061 ;
     rdfs:label "Population of New Brunswick (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "832190"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_newfoundland_and_labrador> a sio:SIO_000414 ;
@@ -320,6 +350,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/newfoundland_and_labrador_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Newfoundland and Labrador (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "538907"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_northwest_territories> a sio:SIO_000414 ;
@@ -330,6 +361,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northwest_territories_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northwest Territories (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "44681"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_nova_scotia> a sio:SIO_000414 ;
@@ -340,6 +372,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/nova_scotia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Nova Scotia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1056486"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_nunavut> a sio:SIO_000414 ;
@@ -350,6 +383,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/nunavut_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Nunavut (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "40700"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_ontario> a sio:SIO_000414 ;
@@ -360,6 +394,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/ontario_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Ontario (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "15623207"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_prince_edward_island> a sio:SIO_000414 ;
@@ -370,6 +405,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/prince_edward_island_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Prince Edward Island (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "173713"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_quebec> a sio:SIO_000414 ;
@@ -380,6 +416,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/quebec_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Quebec (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8848020"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_saskatchewan> a sio:SIO_000414 ;
@@ -390,6 +427,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/saskatchewan_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Saskatchewan (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1209307"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CA_yukon> a sio:SIO_000414 ;
@@ -400,6 +438,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/yukon_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Yukon (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "45463"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_antofagasta> a sio:SIO_000414 ;
@@ -410,6 +449,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/antofagasta_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Antofagasta (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "714142"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_araucania> a sio:SIO_000414 ;
@@ -420,6 +460,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/araucania_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Araucanía (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1028201"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_arica_y_parinacota> a sio:SIO_000414 ;
@@ -430,6 +471,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/arica_y_parinacota_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Arica y Parinacota (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "259802"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_atacama> a sio:SIO_000414 ;
@@ -440,6 +482,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/atacama_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Atacama (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "319048"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_aysen> a sio:SIO_000414 ;
@@ -450,6 +493,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/aysen_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Aysén (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "108306"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_biobio> a sio:SIO_000414 ;
@@ -460,6 +504,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/biobio_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Biobío (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1681430"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_coquimbo> a sio:SIO_000414 ;
@@ -470,6 +515,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/coquimbo_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Coquimbo (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "869103"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_los_lagos> a sio:SIO_000414 ;
@@ -480,6 +526,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/los_lagos_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Los Lagos (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "907429"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_los_rios> a sio:SIO_000414 ;
@@ -490,6 +537,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/los_rios_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Los Ríos (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "411205"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_magallanes_and_chilean_antarctica> a sio:SIO_000414 ;
@@ -500,6 +548,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/magallanes_and_chilean_antarctica_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Magallanes and Chilean Antarctica (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "182217"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_maule> a sio:SIO_000414 ;
@@ -510,6 +559,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/maule_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Maule (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1162641"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_o_higgins> a sio:SIO_000414 ;
@@ -520,6 +570,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/o_higgins_2023> a sio:SIO_001061 ;
     rdfs:label "Population of O'Higgins (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1017701"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_santiago_metropolitan_region> a sio:SIO_000414 ;
@@ -530,6 +581,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/santiago_metropolitan_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Santiago Metropolitan Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8367790"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_tarapaca> a sio:SIO_000414 ;
@@ -540,6 +592,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tarapaca_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tarapacá (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "401588"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_valparaiso> a sio:SIO_000414 ;
@@ -550,6 +603,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/valparaiso_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Valparaíso (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2010849"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CL_nuble> a sio:SIO_000414 ;
@@ -560,6 +614,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/nuble_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Ñuble (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "519437"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_amazonas> a sio:SIO_000414 ;
@@ -570,6 +625,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/amazonas_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Amazonas (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "85056"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_antioquia> a sio:SIO_000414 ;
@@ -580,6 +636,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/antioquia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Antioquia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6848360"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_arauca> a sio:SIO_000414 ;
@@ -590,6 +647,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/arauca_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Arauca (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "313097"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_atlantico> a sio:SIO_000414 ;
@@ -600,6 +658,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/atlantico_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Atlántico (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2803565"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_bogota_capital_district> a sio:SIO_000414 ;
@@ -610,6 +669,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/bogota_capital_district_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Bogotá Capital District (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7907281"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_bolivar> a sio:SIO_000414 ;
@@ -620,6 +680,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/bolivar_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Bolívar (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2247283"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_boyaca> a sio:SIO_000414 ;
@@ -630,6 +691,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/boyaca_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Boyacá (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1298800"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_caldas> a sio:SIO_000414 ;
@@ -640,6 +702,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/caldas_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Caldas (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1040284"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_caqueta> a sio:SIO_000414 ;
@@ -650,6 +713,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/caqueta_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Caquetá (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "425053"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_casanare> a sio:SIO_000414 ;
@@ -660,6 +724,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/casanare_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Casanare (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "467775"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_cauca> a sio:SIO_000414 ;
@@ -670,6 +735,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/cauca_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Cauca (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1558045"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_cesar> a sio:SIO_000414 ;
@@ -680,6 +746,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/cesar_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Cesar (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1373581"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_choco> a sio:SIO_000414 ;
@@ -690,6 +757,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/choco_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Chocó (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "595138"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_cundinamarca> a sio:SIO_000414 ;
@@ -700,6 +768,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/cundinamarca_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Cundinamarca (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3445327"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_cordoba> a sio:SIO_000414 ;
@@ -710,6 +779,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/cordoba_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Córdoba (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1898911"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_guainia> a sio:SIO_000414 ;
@@ -720,6 +790,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/guainia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Guainía (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "56551"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_guaviare> a sio:SIO_000414 ;
@@ -730,6 +801,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/guaviare_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Guaviare (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "97619"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_huila> a sio:SIO_000414 ;
@@ -740,6 +812,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/huila_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Huila (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1178453"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_la_guajira> a sio:SIO_000414 ;
@@ -750,6 +823,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/la_guajira_2023> a sio:SIO_001061 ;
     rdfs:label "Population of La Guajira (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1038397"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_magdalena> a sio:SIO_000414 ;
@@ -760,6 +834,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/magdalena_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Magdalena (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1496163"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_meta> a sio:SIO_000414 ;
@@ -770,6 +845,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/meta_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Meta (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1130085"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_narino> a sio:SIO_000414 ;
@@ -780,6 +856,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/narino_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Nariño (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1699570"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_norte_de_santander> a sio:SIO_000414 ;
@@ -790,6 +867,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/norte_de_santander_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Norte de Santander (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1696740"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_putumayo> a sio:SIO_000414 ;
@@ -800,6 +878,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/putumayo_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Putumayo (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "383042"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_quindio> a sio:SIO_000414 ;
@@ -810,6 +889,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/quindio_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Quindío (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "563076"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_risaralda> a sio:SIO_000414 ;
@@ -820,6 +900,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/risaralda_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Risaralda (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "972304"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_san_andres> a sio:SIO_000414 ;
@@ -830,6 +911,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/san_andres_2023> a sio:SIO_001061 ;
     rdfs:label "Population of San Andrés (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "62269"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_santander> a sio:SIO_000414 ;
@@ -840,6 +922,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/santander_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Santander (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2357127"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_sucre> a sio:SIO_000414 ;
@@ -850,6 +933,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/sucre_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Sucre (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "994060"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_tolima> a sio:SIO_000414 ;
@@ -860,6 +944,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tolima_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tolima (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1374384"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_valle_del_cauca> a sio:SIO_000414 ;
@@ -870,6 +955,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/valle_del_cauca_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Valle del Cauca (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4638029"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_vaupes> a sio:SIO_000414 ;
@@ -880,6 +966,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/vaupes_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Vaupés (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "46777"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CO_vichada> a sio:SIO_000414 ;
@@ -890,6 +977,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/vichada_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Vichada (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "123304"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CR_brunca> a sio:SIO_000414 ;
@@ -900,6 +988,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/brunca_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Brunca (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "375509"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CR_central> a sio:SIO_000414 ;
@@ -910,6 +999,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3241375"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CR_central_pacific> a sio:SIO_000414 ;
@@ -920,6 +1010,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_pacific_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Pacific (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "316212"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CR_chorotega> a sio:SIO_000414 ;
@@ -930,6 +1021,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/chorotega_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Chorotega (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "410055"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CR_huetar_caribbean> a sio:SIO_000414 ;
@@ -940,6 +1032,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/huetar_caribbean_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Huetar Caribbean (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "474527"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CR_north_huetar> a sio:SIO_000414 ;
@@ -950,6 +1043,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_huetar_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North Huetar (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "444547"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HR_adriatic_croatia> a sio:SIO_000414 ;
@@ -960,6 +1054,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/adriatic_croatia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Adriatic Croatia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1297987"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HR_northern_croatia> a sio:SIO_000414 ;
@@ -970,6 +1065,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_croatia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern Croatia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "785177"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HR_pannonian_croatia> a sio:SIO_000414 ;
@@ -980,6 +1076,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/pannonian_croatia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Pannonian Croatia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "999106"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CZ_central_bohemian_region> a sio:SIO_000414 ;
@@ -990,6 +1087,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_bohemian_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Bohemian Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1439391"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CZ_central_moravia> a sio:SIO_000414 ;
@@ -1000,6 +1098,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_moravia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Moravia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1212333"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CZ_moravia_silesia> a sio:SIO_000414 ;
@@ -1010,6 +1109,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/moravia_silesia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Moravia-Silesia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1189674"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CZ_northeast> a sio:SIO_000414 ;
@@ -1020,6 +1120,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northeast_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northeast (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1533205"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CZ_northwest> a sio:SIO_000414 ;
@@ -1030,6 +1131,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northwest_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northwest (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1105932"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CZ_prague> a sio:SIO_000414 ;
@@ -1040,6 +1142,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/prague_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Prague (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1357326"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CZ_southeast> a sio:SIO_000414 ;
@@ -1050,6 +1153,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southeast_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southeast (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1731977"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CZ_southwest> a sio:SIO_000414 ;
@@ -1060,6 +1164,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southwest_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southwest (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1257691"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DK_capital_region> a sio:SIO_000414 ;
@@ -1070,6 +1175,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/capital_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Capital region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1891871"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DK_central_denmark> a sio:SIO_000414 ;
@@ -1080,6 +1186,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_denmark_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Denmark (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1358879"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DK_northern_denmark> a sio:SIO_000414 ;
@@ -1090,6 +1197,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_denmark_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern Denmark (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "594634"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DK_southern_denmark> a sio:SIO_000414 ;
@@ -1100,6 +1208,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southern_denmark_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southern Denmark (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1237413"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DK_zealand> a sio:SIO_000414 ;
@@ -1110,6 +1219,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/zealand_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Zealand (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "849857"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/EE_estonia> a sio:SIO_000414 ;
@@ -1120,6 +1230,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/estonia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Estonia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1365884"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FI_helsinki_uusimaa> a sio:SIO_000414 ;
@@ -1130,6 +1241,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/helsinki_uusimaa_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Helsinki-Uusimaa (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1733033"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FI_northern_and_eastern_finland> a sio:SIO_000414 ;
@@ -1140,6 +1252,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_and_eastern_finland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern and Eastern Finland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1271344"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FI_southern_finland> a sio:SIO_000414 ;
@@ -1150,6 +1263,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southern_finland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southern Finland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1144473"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FI_western_finland> a sio:SIO_000414 ;
@@ -1160,6 +1274,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/western_finland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Western Finland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1384761"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FI_aland> a sio:SIO_000414 ;
@@ -1170,6 +1285,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/aland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Åland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "30359"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_auvergne_rhone_alpes> a sio:SIO_000414 ;
@@ -1180,6 +1296,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/auvergne_rhone_alpes_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Auvergne-Rhône-Alpes (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8196436"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_bourgogne_franche_comte> a sio:SIO_000414 ;
@@ -1190,6 +1307,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/bourgogne_franche_comte_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Bourgogne-Franche-Comté (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2800234"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_brittany> a sio:SIO_000414 ;
@@ -1200,6 +1318,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/brittany_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Brittany (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3440248"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_centre_val_de_loire> a sio:SIO_000414 ;
@@ -1210,6 +1329,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/centre_val_de_loire_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Centre-Val de Loire (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2581716"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_corsica> a sio:SIO_000414 ;
@@ -1220,6 +1340,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/corsica_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Corsica (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "354266"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_french_guiana> a sio:SIO_000414 ;
@@ -1230,6 +1351,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/french_guiana_2023> a sio:SIO_001061 ;
     rdfs:label "Population of French Guiana (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "290110"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_grand_est> a sio:SIO_000414 ;
@@ -1240,6 +1362,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/grand_est_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Grand Est (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5554472"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_guadeloupe> a sio:SIO_000414 ;
@@ -1250,6 +1373,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/guadeloupe_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Guadeloupe (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "413861"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_hauts_de_france> a sio:SIO_000414 ;
@@ -1260,6 +1384,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/hauts_de_france_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Hauts-de-France (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5990292"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_la_reunion> a sio:SIO_000414 ;
@@ -1270,6 +1395,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/la_reunion_2023> a sio:SIO_001061 ;
     rdfs:label "Population of La Réunion (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "886453"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_martinique> a sio:SIO_000414 ;
@@ -1280,6 +1406,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/martinique_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Martinique (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "359202"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_mayotte> a sio:SIO_000414 ;
@@ -1290,6 +1417,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/mayotte_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Mayotte (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "310199"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_normandy> a sio:SIO_000414 ;
@@ -1300,6 +1428,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/normandy_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Normandy (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3339522"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_nouvelle_aquitaine> a sio:SIO_000414 ;
@@ -1310,6 +1439,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/nouvelle_aquitaine_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Nouvelle-Aquitaine (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6138814"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_occitanie> a sio:SIO_000414 ;
@@ -1320,6 +1450,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/occitanie_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Occitanie (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6121253"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_pays_de_la_loire> a sio:SIO_000414 ;
@@ -1330,6 +1461,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/pays_de_la_loire_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Pays de la Loire (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3898424"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_provence_alpes_cote_dazur> a sio:SIO_000414 ;
@@ -1340,6 +1472,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/provence_alpes_cote_dazur_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Provence-Alpes-Côte d’Azur (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5194349"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_ile_de_france> a sio:SIO_000414 ;
@@ -1350,6 +1483,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/ile_de_france_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Île-de-France (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "12407359"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_baden_wurttemberg> a sio:SIO_000414 ;
@@ -1360,6 +1494,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/baden_wurttemberg_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Baden-Württemberg (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "11167721"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_bavaria> a sio:SIO_000414 ;
@@ -1370,6 +1505,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/bavaria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Bavaria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "13105221"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_berlin> a sio:SIO_000414 ;
@@ -1380,6 +1516,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/berlin_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Berlin (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3632853"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_brandenburg> a sio:SIO_000414 ;
@@ -1390,6 +1527,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/brandenburg_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Brandenburg (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2545159"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_bremen> a sio:SIO_000414 ;
@@ -1400,6 +1538,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/bremen_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Bremen (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "695758"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_hamburg> a sio:SIO_000414 ;
@@ -1410,6 +1549,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/hamburg_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Hamburg (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1832675"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_hesse> a sio:SIO_000414 ;
@@ -1420,6 +1560,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/hesse_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Hesse (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6236933"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_lower_saxony> a sio:SIO_000414 ;
@@ -1430,6 +1571,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lower_saxony_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lower Saxony (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7982947"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_mecklenburg_vorpommern> a sio:SIO_000414 ;
@@ -1440,6 +1582,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/mecklenburg_vorpommern_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Mecklenburg-Vorpommern (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1576049"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_north_rhine_westphalia> a sio:SIO_000414 ;
@@ -1450,6 +1593,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_rhine_westphalia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North Rhine-Westphalia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "17964420"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_rhineland_palatinate> a sio:SIO_000414 ;
@@ -1460,6 +1604,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/rhineland_palatinate_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Rhineland-Palatinate (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4108555"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_saarland> a sio:SIO_000414 ;
@@ -1470,6 +1615,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/saarland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Saarland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1011891"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_saxony> a sio:SIO_000414 ;
@@ -1480,6 +1626,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/saxony_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Saxony (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4049967"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_saxony_anhalt> a sio:SIO_000414 ;
@@ -1490,6 +1637,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/saxony_anhalt_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Saxony-Anhalt (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2150239"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_schleswig_holstein> a sio:SIO_000414 ;
@@ -1500,6 +1648,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/schleswig_holstein_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Schleswig-Holstein (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2939283"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_thuringia> a sio:SIO_000414 ;
@@ -1510,6 +1659,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/thuringia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Thuringia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2118830"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_attica> a sio:SIO_000414 ;
@@ -1520,6 +1670,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/attica_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Attica (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3795536"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_central_greece> a sio:SIO_000414 ;
@@ -1530,6 +1681,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_greece_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Greece (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "503941"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_central_macedonia> a sio:SIO_000414 ;
@@ -1540,6 +1692,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_macedonia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Macedonia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1782592"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_crete> a sio:SIO_000414 ;
@@ -1550,6 +1703,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/crete_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Crete (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "622624"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_eastern_macedonia_thrace> a sio:SIO_000414 ;
@@ -1560,6 +1714,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/eastern_macedonia_thrace_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Eastern Macedonia, Thrace (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "558835"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_epirus> a sio:SIO_000414 ;
@@ -1570,6 +1725,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/epirus_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Epirus (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "318505"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_ionian_islands> a sio:SIO_000414 ;
@@ -1580,6 +1736,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/ionian_islands_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Ionian Islands (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "202269"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_north_aegean> a sio:SIO_000414 ;
@@ -1590,6 +1747,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_aegean_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North Aegean (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "194784"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_peloponnese> a sio:SIO_000414 ;
@@ -1600,6 +1758,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/peloponnese_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Peloponnese (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "533865"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_south_aegean> a sio:SIO_000414 ;
@@ -1610,6 +1769,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_aegean_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South Aegean (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "326841"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_thessaly> a sio:SIO_000414 ;
@@ -1620,6 +1780,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/thessaly_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Thessaly (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "681190"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_western_greece> a sio:SIO_000414 ;
@@ -1630,6 +1791,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/western_greece_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Western Greece (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "642721"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GR_western_macedonia> a sio:SIO_000414 ;
@@ -1640,6 +1802,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/western_macedonia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Western Macedonia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "250279"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HU_budapest> a sio:SIO_000414 ;
@@ -1650,6 +1813,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/budapest_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Budapest (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1671004"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HU_central_transdanubia> a sio:SIO_000414 ;
@@ -1660,6 +1824,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_transdanubia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Transdanubia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1059399"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HU_northern_great_plain> a sio:SIO_000414 ;
@@ -1670,6 +1835,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_great_plain_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern Great Plain (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1405012"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HU_northern_hungary> a sio:SIO_000414 ;
@@ -1680,6 +1846,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_hungary_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern Hungary (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1093790"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HU_pest> a sio:SIO_000414 ;
@@ -1690,6 +1857,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/pest_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Pest (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1328790"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HU_southern_great_plain> a sio:SIO_000414 ;
@@ -1700,6 +1868,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southern_great_plain_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southern Great Plain (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1200150"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HU_southern_transdanubia> a sio:SIO_000414 ;
@@ -1710,6 +1879,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southern_transdanubia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southern Transdanubia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "858675"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HU_western_transdanubia> a sio:SIO_000414 ;
@@ -1720,6 +1890,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/western_transdanubia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Western Transdanubia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "982924"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IS_capital_region> a sio:SIO_000414 ;
@@ -1730,6 +1901,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/capital_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Capital Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "247533"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IS_other_regions> a sio:SIO_000414 ;
@@ -1740,6 +1912,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/other_regions_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Other Regions (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "140225"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IE_eastern_and_midland> a sio:SIO_000414 ;
@@ -1750,6 +1923,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/eastern_and_midland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Eastern and Midland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2600007"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IE_northern_and_western> a sio:SIO_000414 ;
@@ -1760,6 +1934,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_and_western_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern and Western (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "930208"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IE_southern> a sio:SIO_000414 ;
@@ -1770,6 +1945,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southern_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southern (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1741180"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_abruzzo> a sio:SIO_000414 ;
@@ -1780,6 +1956,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/abruzzo_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Abruzzo (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1272627"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_aosta_valley> a sio:SIO_000414 ;
@@ -1790,6 +1967,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/aosta_valley_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Aosta Valley (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "123130"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_apulia> a sio:SIO_000414 ;
@@ -1800,6 +1978,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/apulia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Apulia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3907683"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_autonomous_prov_bolzano> a sio:SIO_000414 ;
@@ -1810,6 +1989,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/autonomous_prov_bolzano_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Autonomous prov. Bolzano (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "534147"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_autonomous_prov_trento> a sio:SIO_000414 ;
@@ -1820,6 +2000,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/autonomous_prov_trento_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Autonomous prov. Trento (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "542996"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_basilicata> a sio:SIO_000414 ;
@@ -1830,6 +2011,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/basilicata_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Basilicata (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "537577"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_calabria> a sio:SIO_000414 ;
@@ -1840,6 +2022,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/calabria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Calabria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1846610"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_campania> a sio:SIO_000414 ;
@@ -1850,6 +2033,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/campania_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Campania (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5609536"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_emilia_romagna> a sio:SIO_000414 ;
@@ -1860,6 +2044,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/emilia_romagna_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Emilia-Romagna (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4437578"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_friuli_venezia_giulia> a sio:SIO_000414 ;
@@ -1870,6 +2055,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/friuli_venezia_giulia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Friuli-Venezia Giulia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1194248"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_lazio> a sio:SIO_000414 ;
@@ -1880,6 +2066,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lazio_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lazio (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5720536"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_liguria> a sio:SIO_000414 ;
@@ -1890,6 +2077,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/liguria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Liguria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1507636"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_lombardy> a sio:SIO_000414 ;
@@ -1900,6 +2088,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lombardy_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lombardy (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "9976509"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_marche> a sio:SIO_000414 ;
@@ -1910,6 +2099,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/marche_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Marche (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1484298"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_molise> a sio:SIO_000414 ;
@@ -1920,6 +2110,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/molise_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Molise (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "290636"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_piedmont> a sio:SIO_000414 ;
@@ -1930,6 +2121,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/piedmont_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Piedmont (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4251351"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_sardinia> a sio:SIO_000414 ;
@@ -1940,6 +2132,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/sardinia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Sardinia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1578146"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_sicily> a sio:SIO_000414 ;
@@ -1950,6 +2143,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/sicily_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Sicily (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4814016"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_tuscany> a sio:SIO_000414 ;
@@ -1960,6 +2154,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tuscany_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tuscany (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3661981"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_umbria> a sio:SIO_000414 ;
@@ -1970,6 +2165,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/umbria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Umbria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "856407"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_veneto> a sio:SIO_000414 ;
@@ -1980,6 +2176,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/veneto_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Veneto (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4849553"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_chugoku> a sio:SIO_000414 ;
@@ -1990,6 +2187,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/chugoku_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Chugoku (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7069116"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_hokkaido> a sio:SIO_000414 ;
@@ -2000,6 +2198,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/hokkaido_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Hokkaido (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5092453"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_hokuriku> a sio:SIO_000414 ;
@@ -2010,6 +2209,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/hokuriku_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Hokuriku (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4986446"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_kansai_region> a sio:SIO_000414 ;
@@ -2020,6 +2220,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/kansai_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Kansai region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "20261944"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_kyushu_okinawa> a sio:SIO_000414 ;
@@ -2030,6 +2231,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/kyushu_okinawa_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Kyushu, Okinawa (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "14028804"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_northern_kanto_koshin> a sio:SIO_000414 ;
@@ -2040,6 +2242,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_kanto_koshin_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern-Kanto, Koshin (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "9423543"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_shikoku> a sio:SIO_000414 ;
@@ -2050,6 +2253,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/shikoku_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Shikoku (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3578293"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_southern_kanto> a sio:SIO_000414 ;
@@ -2060,6 +2264,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southern_kanto_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southern-Kanto (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "36902802"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_tohoku> a sio:SIO_000414 ;
@@ -2070,6 +2275,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tohoku_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tohoku (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8318472"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/JP_toukai> a sio:SIO_000414 ;
@@ -2080,6 +2286,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/toukai_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Toukai (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "14690004"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/LV_latvia> a sio:SIO_000414 ;
@@ -2090,6 +2297,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/latvia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Latvia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1883008"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/LT_capital_region> a sio:SIO_000414 ;
@@ -2100,6 +2308,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/capital_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Capital Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "848724"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/LT_central_and_western_lithuania_region> a sio:SIO_000414 ;
@@ -2110,6 +2319,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_and_western_lithuania_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central and Western Lithuania Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2008555"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/LU_luxembourg> a sio:SIO_000414 ;
@@ -2120,6 +2330,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/luxembourg_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Luxembourg (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "660809"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_aguascalientes> a sio:SIO_000414 ;
@@ -2130,6 +2341,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/aguascalientes_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Aguascalientes (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1501081"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_baja_california> a sio:SIO_000414 ;
@@ -2140,6 +2352,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/baja_california_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Baja California (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3979513"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_baja_california_sur> a sio:SIO_000414 ;
@@ -2150,6 +2363,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/baja_california_sur_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Baja California Sur (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "858560"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_campeche> a sio:SIO_000414 ;
@@ -2160,6 +2374,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/campeche_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Campeche (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "948000"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_chiapas> a sio:SIO_000414 ;
@@ -2170,6 +2385,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/chiapas_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Chiapas (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5904967"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_chihuahua> a sio:SIO_000414 ;
@@ -2180,6 +2396,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/chihuahua_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Chihuahua (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3923261"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_coahuila> a sio:SIO_000414 ;
@@ -2190,6 +2407,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/coahuila_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Coahuila (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3295384"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_colima> a sio:SIO_000414 ;
@@ -2200,6 +2418,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/colima_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Colima (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "754866"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_durango> a sio:SIO_000414 ;
@@ -2210,6 +2429,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/durango_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Durango (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1892074"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_guanajuato> a sio:SIO_000414 ;
@@ -2220,6 +2440,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/guanajuato_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Guanajuato (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6392255"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_guerrero> a sio:SIO_000414 ;
@@ -2230,6 +2451,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/guerrero_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Guerrero (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3602510"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_hidalgo> a sio:SIO_000414 ;
@@ -2240,6 +2462,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/hidalgo_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Hidalgo (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3209273"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_jalisco> a sio:SIO_000414 ;
@@ -2250,6 +2473,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/jalisco_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Jalisco (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8692181"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_mexico> a sio:SIO_000414 ;
@@ -2260,6 +2484,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/mexico_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Mexico (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "17441998"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_mexico_city> a sio:SIO_000414 ;
@@ -2270,6 +2495,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/mexico_city_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Mexico City (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "9229871"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_michoacan> a sio:SIO_000414 ;
@@ -2280,6 +2506,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/michoacan_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Michoacan (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4926226"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_morelos> a sio:SIO_000414 ;
@@ -2290,6 +2517,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/morelos_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Morelos (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2024147"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_nayarit> a sio:SIO_000414 ;
@@ -2300,6 +2528,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/nayarit_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Nayarit (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1286397"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_nuevo_leon> a sio:SIO_000414 ;
@@ -2310,6 +2539,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/nuevo_leon_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Nuevo Leon (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6148962"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_oaxaca> a sio:SIO_000414 ;
@@ -2320,6 +2550,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/oaxaca_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Oaxaca (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4260710"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_puebla> a sio:SIO_000414 ;
@@ -2330,6 +2561,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/puebla_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Puebla (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6866167"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_queretaro> a sio:SIO_000414 ;
@@ -2340,6 +2572,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/queretaro_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Queretaro (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2533271"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_quintana_roo> a sio:SIO_000414 ;
@@ -2350,6 +2583,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/quintana_roo_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Quintana Roo (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1998609"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_san_luis_potosi> a sio:SIO_000414 ;
@@ -2360,6 +2594,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/san_luis_potosi_2023> a sio:SIO_001061 ;
     rdfs:label "Population of San Luis Potosi (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2918486"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_sinaloa> a sio:SIO_000414 ;
@@ -2370,6 +2605,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/sinaloa_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Sinaloa (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3130893"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_sonora> a sio:SIO_000414 ;
@@ -2380,6 +2616,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/sonora_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Sonora (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3066575"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_tabasco> a sio:SIO_000414 ;
@@ -2390,6 +2627,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tabasco_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tabasco (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2451193"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_tamaulipas> a sio:SIO_000414 ;
@@ -2400,6 +2638,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tamaulipas_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tamaulipas (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3669309"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_tlaxcala> a sio:SIO_000414 ;
@@ -2410,6 +2649,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tlaxcala_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tlaxcala (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1404030"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_veracruz> a sio:SIO_000414 ;
@@ -2420,6 +2660,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/veracruz_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Veracruz (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8132954"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_yucatan> a sio:SIO_000414 ;
@@ -2430,6 +2671,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/yucatan_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Yucatan (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2436635"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/MX_zacatecas> a sio:SIO_000414 ;
@@ -2440,6 +2682,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/zacatecas_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Zacatecas (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1675298"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_drenthe> a sio:SIO_000414 ;
@@ -2450,6 +2693,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/drenthe_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Drenthe (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "502051"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_flevoland> a sio:SIO_000414 ;
@@ -2460,6 +2704,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/flevoland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Flevoland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "444701"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_friesland> a sio:SIO_000414 ;
@@ -2470,6 +2715,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/friesland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Friesland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "659551"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_gelderland> a sio:SIO_000414 ;
@@ -2480,6 +2726,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/gelderland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Gelderland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2133708"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_groningen> a sio:SIO_000414 ;
@@ -2490,6 +2737,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/groningen_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Groningen (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "596075"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_limburg> a sio:SIO_000414 ;
@@ -2500,6 +2748,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/limburg_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Limburg (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1128367"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_north_brabant> a sio:SIO_000414 ;
@@ -2510,6 +2759,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_brabant_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North Brabant (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2626210"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_north_holland> a sio:SIO_000414 ;
@@ -2520,6 +2770,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_holland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North Holland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2952622"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_overijssel> a sio:SIO_000414 ;
@@ -2530,6 +2781,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/overijssel_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Overijssel (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1184333"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NL_south_holland_tl2021> a sio:SIO_000414 ;
@@ -2550,6 +2802,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/zeeland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Zeeland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "391124"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_auckland> a sio:SIO_000414 ;
@@ -2560,6 +2813,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/auckland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Auckland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1755200"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_bay_of_plenty> a sio:SIO_000414 ;
@@ -2570,6 +2824,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/bay_of_plenty_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Bay of Plenty (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "346500"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_canterbury> a sio:SIO_000414 ;
@@ -2580,6 +2835,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/canterbury_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Canterbury (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "676600"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_gisborne> a sio:SIO_000414 ;
@@ -2590,6 +2846,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/gisborne_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Gisborne (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "52300"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_hawke_s_bay> a sio:SIO_000414 ;
@@ -2600,6 +2857,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/hawke_s_bay_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Hawke's Bay (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "179000"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_manawatu_wanganui> a sio:SIO_000414 ;
@@ -2610,6 +2868,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/manawatu_wanganui_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Manawatu-Wanganui (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "257800"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_northland> a sio:SIO_000414 ;
@@ -2620,6 +2879,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "198500"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_otago> a sio:SIO_000414 ;
@@ -2630,6 +2890,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/otago_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Otago (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "248500"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_southland> a sio:SIO_000414 ;
@@ -2640,6 +2901,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "102700"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_taranaki> a sio:SIO_000414 ;
@@ -2650,6 +2912,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/taranaki_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Taranaki (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "129400"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_tasman_nelson_marlborough> a sio:SIO_000414 ;
@@ -2660,6 +2923,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tasman_nelson_marlborough_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tasman-Nelson-Marlborough (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "164200"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_waikato> a sio:SIO_000414 ;
@@ -2670,6 +2934,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/waikato_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Waikato (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "516800"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_wellington> a sio:SIO_000414 ;
@@ -2680,6 +2945,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/wellington_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Wellington (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "538000"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NZ_west_coast> a sio:SIO_000414 ;
@@ -2690,6 +2956,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/west_coast_2023> a sio:SIO_001061 ;
     rdfs:label "Population of West Coast (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "33900"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NO_agder_and_sr_stlandet> a sio:SIO_000414 ;
@@ -2700,6 +2967,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/agder_and_sr_stlandet_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Agder and Sør-Østlandet (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "745152"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NO_innlandet> a sio:SIO_000414 ;
@@ -2710,6 +2978,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/innlandet_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Innlandet (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "373628"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NO_northern_norway> a sio:SIO_000414 ;
@@ -2720,6 +2989,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_norway_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern Norway (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "483536"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NO_oslo_and_viken> a sio:SIO_000414 ;
@@ -2730,6 +3000,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/oslo_and_viken_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Oslo and Viken (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2001278"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NO_trndelag> a sio:SIO_000414 ;
@@ -2740,6 +3011,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/trndelag_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Trøndelag (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "478470"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_greater_poland> a sio:SIO_000414 ;
@@ -2750,6 +3022,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/greater_poland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Greater Poland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3444228"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_kuyavian_pomerania> a sio:SIO_000414 ;
@@ -2760,6 +3033,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/kuyavian_pomerania_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Kuyavian-Pomerania (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1943197"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_lesser_poland> a sio:SIO_000414 ;
@@ -2770,6 +3044,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lesser_poland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lesser Poland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3319305"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_lodzkie> a sio:SIO_000414 ;
@@ -2780,6 +3055,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lodzkie_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lodzkie (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2343021"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_lower_silesia> a sio:SIO_000414 ;
@@ -2790,6 +3066,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lower_silesia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lower Silesia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2813919"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_lublin_province> a sio:SIO_000414 ;
@@ -2800,6 +3077,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lublin_province_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lublin Province (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1948400"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_lubusz> a sio:SIO_000414 ;
@@ -2810,6 +3088,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lubusz_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lubusz (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "952793"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_mazowiecki_region> a sio:SIO_000414 ;
@@ -2820,6 +3099,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/mazowiecki_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Mazowiecki region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2210253"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_opole_region> a sio:SIO_000414 ;
@@ -2830,6 +3110,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/opole_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Opole region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "896370"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_podkarpacia> a sio:SIO_000414 ;
@@ -2840,6 +3121,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/podkarpacia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Podkarpacia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1962332"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_podlaskie> a sio:SIO_000414 ;
@@ -2850,6 +3132,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/podlaskie_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Podlaskie (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1083854"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_pomerania> a sio:SIO_000414 ;
@@ -2860,6 +3143,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/pomerania_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Pomerania (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2295745"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_silesia> a sio:SIO_000414 ;
@@ -2870,6 +3154,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/silesia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Silesia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4245283"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_swietokrzyskie> a sio:SIO_000414 ;
@@ -2880,6 +3165,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/swietokrzyskie_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Swietokrzyskie (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1133097"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_warmian_masuria> a sio:SIO_000414 ;
@@ -2890,6 +3176,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/warmian_masuria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Warmian-Masuria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1303380"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_warsaw> a sio:SIO_000414 ;
@@ -2900,6 +3187,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/warsaw_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Warsaw (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3269510"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PL_west_pomerania> a sio:SIO_000414 ;
@@ -2910,6 +3198,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/west_pomerania_2023> a sio:SIO_001061 ;
     rdfs:label "Population of West Pomerania (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1589049"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_alentejo> a sio:SIO_000414 ;
@@ -2925,6 +3214,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/algarve_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Algarve (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "478618"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_autonomous_region_of_madeira> a sio:SIO_000414 ;
@@ -2935,6 +3225,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/autonomous_region_of_madeira_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Autonomous Region of Madeira (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "254070"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_autonomous_region_of_the_azores> a sio:SIO_000414 ;
@@ -2945,6 +3236,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/autonomous_region_of_the_azores_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Autonomous Region of the Azores (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "240125"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_centro> a sio:SIO_000414 ;
@@ -2965,6 +3257,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3640294"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/RO_bucharest_ilfov> a sio:SIO_000414 ;
@@ -2975,6 +3268,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/bucharest_ilfov_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Bucharest - Ilfov (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2290125"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/RO_center> a sio:SIO_000414 ;
@@ -2985,6 +3279,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/center_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Center (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2280856"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/RO_north_east> a sio:SIO_000414 ;
@@ -2995,6 +3290,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3224213"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/RO_north_west> a sio:SIO_000414 ;
@@ -3005,6 +3301,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2531913"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/RO_south_muntenia> a sio:SIO_000414 ;
@@ -3015,6 +3312,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_muntenia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South - Muntenia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2841139"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/RO_south_east> a sio:SIO_000414 ;
@@ -3025,6 +3323,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2353162"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/RO_south_west_oltenia> a sio:SIO_000414 ;
@@ -3035,6 +3334,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_west_oltenia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South West Oltenia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1861680"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/RO_west> a sio:SIO_000414 ;
@@ -3045,6 +3345,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1671460"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SK_bratislava_region> a sio:SIO_000414 ;
@@ -3055,6 +3356,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/bratislava_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Bratislava Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "728370"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SK_central_slovakia> a sio:SIO_000414 ;
@@ -3065,6 +3367,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_slovakia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Slovakia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1305883"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SK_east_slovakia> a sio:SIO_000414 ;
@@ -3075,6 +3378,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/east_slovakia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of East Slovakia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1587595"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SK_west_slovakia> a sio:SIO_000414 ;
@@ -3085,6 +3389,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/west_slovakia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of West Slovakia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1806944"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SI_eastern_slovenia> a sio:SIO_000414 ;
@@ -3095,6 +3400,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/eastern_slovenia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Eastern Slovenia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1107885"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SI_western_slovenia> a sio:SIO_000414 ;
@@ -3105,6 +3411,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/western_slovenia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Western Slovenia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1009087"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_andalusia> a sio:SIO_000414 ;
@@ -3115,6 +3422,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/andalusia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Andalusia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8584147"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_aragon> a sio:SIO_000414 ;
@@ -3125,6 +3433,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/aragon_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Aragon (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1341289"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_asturias> a sio:SIO_000414 ;
@@ -3135,6 +3444,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/asturias_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Asturias (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1006060"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_balearic_islands> a sio:SIO_000414 ;
@@ -3145,6 +3455,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/balearic_islands_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Balearic Islands (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1209906"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_basque_country> a sio:SIO_000414 ;
@@ -3155,6 +3466,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/basque_country_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Basque Country (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2216302"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_canary_islands> a sio:SIO_000414 ;
@@ -3165,6 +3477,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/canary_islands_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Canary Islands (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2213016"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_cantabria> a sio:SIO_000414 ;
@@ -3175,6 +3488,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/cantabria_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Cantabria (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "588387"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_castile_and_leon> a sio:SIO_000414 ;
@@ -3185,6 +3499,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/castile_and_leon_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Castile and León (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2383703"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_castile_la_mancha> a sio:SIO_000414 ;
@@ -3195,6 +3510,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/castile_la_mancha_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Castile-La Mancha (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2084086"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_catalonia> a sio:SIO_000414 ;
@@ -3205,6 +3521,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/catalonia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Catalonia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7901963"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_ceuta> a sio:SIO_000414 ;
@@ -3215,6 +3532,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/ceuta_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Ceuta (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "83052"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_extremadura> a sio:SIO_000414 ;
@@ -3225,6 +3543,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/extremadura_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Extremadura (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1054306"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_galicia> a sio:SIO_000414 ;
@@ -3235,6 +3554,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/galicia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Galicia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2699424"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_la_rioja> a sio:SIO_000414 ;
@@ -3245,6 +3565,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/la_rioja_2023> a sio:SIO_001061 ;
     rdfs:label "Population of La Rioja (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "322282"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_madrid> a sio:SIO_000414 ;
@@ -3255,6 +3576,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/madrid_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Madrid (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6871903"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_melilla> a sio:SIO_000414 ;
@@ -3265,6 +3587,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/melilla_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Melilla (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "85493"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_murcia> a sio:SIO_000414 ;
@@ -3275,6 +3598,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/murcia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Murcia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1551692"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_navarra> a sio:SIO_000414 ;
@@ -3285,6 +3609,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/navarra_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Navarra (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "672155"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_valencian_community> a sio:SIO_000414 ;
@@ -3295,6 +3620,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/valencian_community_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Valencian Community (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5216195"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SE_central_norrland> a sio:SIO_000414 ;
@@ -3305,6 +3631,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_norrland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Norrland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "375935"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SE_east_middle_sweden> a sio:SIO_000414 ;
@@ -3315,6 +3642,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/east_middle_sweden_2023> a sio:SIO_001061 ;
     rdfs:label "Population of East Middle Sweden (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1763645"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SE_north_middle_sweden> a sio:SIO_000414 ;
@@ -3325,6 +3653,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_middle_sweden_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North Middle Sweden (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "859620"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SE_smaland_with_islands> a sio:SIO_000414 ;
@@ -3335,6 +3664,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/smaland_with_islands_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Småland with Islands (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "882332"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SE_south_sweden> a sio:SIO_000414 ;
@@ -3345,6 +3675,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_sweden_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South Sweden (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1573064"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SE_stockholm> a sio:SIO_000414 ;
@@ -3355,6 +3686,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/stockholm_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Stockholm (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2440027"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SE_upper_norrland> a sio:SIO_000414 ;
@@ -3365,6 +3697,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/upper_norrland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Upper Norrland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "525472"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/SE_west_sweden> a sio:SIO_000414 ;
@@ -3375,6 +3708,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/west_sweden_2023> a sio:SIO_001061 ;
     rdfs:label "Population of West Sweden (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2101461"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_central_switzerland> a sio:SIO_000414 ;
@@ -3385,6 +3719,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_switzerland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Switzerland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "841372"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_eastern_switzerland> a sio:SIO_000414 ;
@@ -3395,6 +3730,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/eastern_switzerland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Eastern Switzerland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1217015"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_espace_mittelland> a sio:SIO_000414 ;
@@ -3405,6 +3741,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/espace_mittelland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Espace Mittelland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1918746"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_lake_geneva_region> a sio:SIO_000414 ;
@@ -3415,6 +3752,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/lake_geneva_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Lake Geneva Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1701827"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_northwestern_switzerland> a sio:SIO_000414 ;
@@ -3425,6 +3763,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northwestern_switzerland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northwestern Switzerland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1202435"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_ticino> a sio:SIO_000414 ;
@@ -3435,6 +3774,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/ticino_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Ticino (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "354023"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_zurich> a sio:SIO_000414 ;
@@ -3445,6 +3785,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/zurich_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Zurich (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1579967"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_ankara> a sio:SIO_000414 ;
@@ -3455,6 +3796,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/ankara_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Ankara (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5782285"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_central_anatolia_east> a sio:SIO_000414 ;
@@ -3465,6 +3807,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_anatolia_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Anatolia - East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2494889"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_central_anatolia_middle> a sio:SIO_000414 ;
@@ -3475,6 +3818,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_anatolia_middle_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Anatolia - Middle (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1630050"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_central_anatolia_west_and_south> a sio:SIO_000414 ;
@@ -3485,6 +3829,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/central_anatolia_west_and_south_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Central Anatolia - West and South (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2557185"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_eastern_anatolia_east> a sio:SIO_000414 ;
@@ -3495,6 +3840,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/eastern_anatolia_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Eastern Anatolia - East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2157272"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_eastern_anatolia_west> a sio:SIO_000414 ;
@@ -3505,6 +3851,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/eastern_anatolia_west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Eastern Anatolia - West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1770999"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_eastern_black_sea> a sio:SIO_000414 ;
@@ -3515,6 +3862,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/eastern_black_sea_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Eastern Black Sea (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2690038"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_eastern_marmara_north> a sio:SIO_000414 ;
@@ -3525,6 +3873,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/eastern_marmara_north_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Eastern Marmara - North (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4181440"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_eastern_marmara_south> a sio:SIO_000414 ;
@@ -3535,6 +3884,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/eastern_marmara_south_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Eastern Marmara - South (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4330010"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_istanbul> a sio:SIO_000414 ;
@@ -3545,6 +3895,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/istanbul_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Istanbul (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "15907951"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_izmir> a sio:SIO_000414 ;
@@ -3555,6 +3906,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/izmir_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Izmir (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4462056"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_mediterranean_region_east> a sio:SIO_000414 ;
@@ -3565,6 +3917,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/mediterranean_region_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Mediterranean region - East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3422884"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_mediterranean_region_middle> a sio:SIO_000414 ;
@@ -3575,6 +3928,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/mediterranean_region_middle_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Mediterranean region - Middle (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4190538"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_mediterranean_region_west> a sio:SIO_000414 ;
@@ -3585,6 +3939,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/mediterranean_region_west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Mediterranean region - West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3407128"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_middle_black_sea> a sio:SIO_000414 ;
@@ -3595,6 +3950,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/middle_black_sea_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Middle Black Sea (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2827339"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_northeastern_anatolia_east> a sio:SIO_000414 ;
@@ -3605,6 +3961,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northeastern_anatolia_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northeastern Anatolia - East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1081530"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_northeastern_anatolia_west> a sio:SIO_000414 ;
@@ -3615,6 +3972,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northeastern_anatolia_west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northeastern Anatolia - West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1073218"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_northern_aegean> a sio:SIO_000414 ;
@@ -3625,6 +3983,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_aegean_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern Aegean (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3171989"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_southeastern_anatolia_east> a sio:SIO_000414 ;
@@ -3635,6 +3994,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southeastern_anatolia_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southeastern Anatolia - East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2393781"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_southeastern_anatolia_middle> a sio:SIO_000414 ;
@@ -3645,6 +4005,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southeastern_anatolia_middle_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southeastern Anatolia - Middle (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3974990"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_southeastern_anatolia_west> a sio:SIO_000414 ;
@@ -3655,6 +4016,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southeastern_anatolia_west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southeastern Anatolia - West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2937139"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_southern_aegean> a sio:SIO_000414 ;
@@ -3665,6 +4027,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southern_aegean_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southern Aegean (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3252758"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_southern_marmara_west> a sio:SIO_000414 ;
@@ -3675,6 +4038,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/southern_marmara_west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Southern Marmara - West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1816973"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_thrace> a sio:SIO_000414 ;
@@ -3685,6 +4049,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/thrace_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Thrace (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1926512"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_western_black_sea_middle_and_east> a sio:SIO_000414 ;
@@ -3695,6 +4060,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/western_black_sea_middle_and_east_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Western Black Sea - Middle and East (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "794680"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/TR_western_black_sea_west> a sio:SIO_000414 ;
@@ -3705,6 +4071,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/western_black_sea_west_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Western Black Sea - West (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1043919"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_east_midlands> a sio:SIO_000414 ;
@@ -3715,6 +4082,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/east_midlands_2023> a sio:SIO_001061 ;
     rdfs:label "Population of East Midlands (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4991265"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_east_of_england> a sio:SIO_000414 ;
@@ -3725,6 +4093,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/east_of_england_2023> a sio:SIO_001061 ;
     rdfs:label "Population of East of England (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6468665"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_greater_london> a sio:SIO_000414 ;
@@ -3735,6 +4104,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/greater_london_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Greater London (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8945309"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_north_east_england> a sio:SIO_000414 ;
@@ -3745,6 +4115,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_east_england_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North East England (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2711380"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_north_west_england> a sio:SIO_000414 ;
@@ -3755,6 +4126,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_west_england_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North West England (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7600126"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_northern_ireland> a sio:SIO_000414 ;
@@ -3765,6 +4137,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/northern_ireland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Northern Ireland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1920382"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_scotland> a sio:SIO_000414 ;
@@ -3775,6 +4148,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/scotland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Scotland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5490100"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_south_east_england> a sio:SIO_000414 ;
@@ -3785,6 +4159,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_east_england_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South East England (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "9482507"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_south_west_england> a sio:SIO_000414 ;
@@ -3795,6 +4170,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_west_england_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South West England (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5811259"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_wales> a sio:SIO_000414 ;
@@ -3805,6 +4181,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/wales_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Wales (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3164404"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_west_midlands> a sio:SIO_000414 ;
@@ -3815,6 +4192,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/west_midlands_2023> a sio:SIO_001061 ;
     rdfs:label "Population of West Midlands (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6085687"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_yorkshire_and_the_humber> a sio:SIO_000414 ;
@@ -3825,6 +4203,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/yorkshire_and_the_humber_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Yorkshire and The Humber (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5594125"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_alabama> a sio:SIO_000414 ;
@@ -3835,6 +4214,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/alabama_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Alabama (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5117673"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_alaska> a sio:SIO_000414 ;
@@ -3845,6 +4225,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/alaska_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Alaska (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "736510"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_arizona> a sio:SIO_000414 ;
@@ -3855,6 +4236,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/arizona_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Arizona (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7473027"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_arkansas> a sio:SIO_000414 ;
@@ -3865,6 +4247,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/arkansas_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Arkansas (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3069463"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_california> a sio:SIO_000414 ;
@@ -3875,6 +4258,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/california_2023> a sio:SIO_001061 ;
     rdfs:label "Population of California (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "39198693"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_colorado> a sio:SIO_000414 ;
@@ -3885,6 +4269,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/colorado_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Colorado (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5901339"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_connecticut> a sio:SIO_000414 ;
@@ -3895,6 +4280,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/connecticut_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Connecticut (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3643023"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_delaware> a sio:SIO_000414 ;
@@ -3905,6 +4291,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/delaware_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Delaware (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1036423"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_district_of_columbia> a sio:SIO_000414 ;
@@ -3915,6 +4302,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/district_of_columbia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of District of Columbia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "687324"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_florida> a sio:SIO_000414 ;
@@ -3925,6 +4313,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/florida_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Florida (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "22904868"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_georgia> a sio:SIO_000414 ;
@@ -3935,6 +4324,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/georgia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Georgia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "11064432"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_hawaii> a sio:SIO_000414 ;
@@ -3945,6 +4335,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/hawaii_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Hawaii (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1441387"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_idaho> a sio:SIO_000414 ;
@@ -3955,6 +4346,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/idaho_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Idaho (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1971122"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_illinois> a sio:SIO_000414 ;
@@ -3965,6 +4357,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/illinois_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Illinois (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "12642259"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_indiana> a sio:SIO_000414 ;
@@ -3975,6 +4368,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/indiana_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Indiana (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6880131"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_iowa> a sio:SIO_000414 ;
@@ -3985,6 +4379,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/iowa_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Iowa (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3218414"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_kansas> a sio:SIO_000414 ;
@@ -3995,6 +4390,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/kansas_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Kansas (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2951500"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_kentucky> a sio:SIO_000414 ;
@@ -4005,6 +4401,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/kentucky_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Kentucky (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4550595"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_louisiana> a sio:SIO_000414 ;
@@ -4015,6 +4412,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/louisiana_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Louisiana (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4588071"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_maine> a sio:SIO_000414 ;
@@ -4025,6 +4423,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/maine_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Maine (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1399646"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_maryland> a sio:SIO_000414 ;
@@ -4035,6 +4434,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/maryland_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Maryland (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6217062"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_massachusetts> a sio:SIO_000414 ;
@@ -4045,6 +4445,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/massachusetts_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Massachusetts (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7066568"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_michigan> a sio:SIO_000414 ;
@@ -4055,6 +4456,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/michigan_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Michigan (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "10083356"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_minnesota> a sio:SIO_000414 ;
@@ -4065,6 +4467,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/minnesota_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Minnesota (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5753048"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_mississippi> a sio:SIO_000414 ;
@@ -4075,6 +4478,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/mississippi_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Mississippi (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2943172"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_missouri> a sio:SIO_000414 ;
@@ -4085,6 +4489,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/missouri_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Missouri (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "6208038"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_montana> a sio:SIO_000414 ;
@@ -4095,6 +4500,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/montana_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Montana (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1131302"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_nebraska> a sio:SIO_000414 ;
@@ -4105,6 +4511,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/nebraska_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Nebraska (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1987864"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_nevada> a sio:SIO_000414 ;
@@ -4115,6 +4522,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/nevada_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Nevada (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3214363"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_new_hampshire> a sio:SIO_000414 ;
@@ -4125,6 +4533,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/new_hampshire_2023> a sio:SIO_001061 ;
     rdfs:label "Population of New Hampshire (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1402199"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_new_jersey> a sio:SIO_000414 ;
@@ -4135,6 +4544,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/new_jersey_2023> a sio:SIO_001061 ;
     rdfs:label "Population of New Jersey (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "9379642"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_new_mexico> a sio:SIO_000414 ;
@@ -4145,6 +4555,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/new_mexico_2023> a sio:SIO_001061 ;
     rdfs:label "Population of New Mexico (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "2121164"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_new_york> a sio:SIO_000414 ;
@@ -4155,6 +4566,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/new_york_2023> a sio:SIO_001061 ;
     rdfs:label "Population of New York (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "19737367"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_north_carolina> a sio:SIO_000414 ;
@@ -4165,6 +4577,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_carolina_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North Carolina (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "10881189"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_north_dakota> a sio:SIO_000414 ;
@@ -4175,6 +4588,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/north_dakota_2023> a sio:SIO_001061 ;
     rdfs:label "Population of North Dakota (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "789047"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_ohio> a sio:SIO_000414 ;
@@ -4185,6 +4599,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/ohio_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Ohio (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "11824034"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_oklahoma> a sio:SIO_000414 ;
@@ -4195,6 +4610,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/oklahoma_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Oklahoma (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4063882"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_oregon> a sio:SIO_000414 ;
@@ -4205,6 +4621,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/oregon_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Oregon (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4253653"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_pennsylvania> a sio:SIO_000414 ;
@@ -4215,6 +4632,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/pennsylvania_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Pennsylvania (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "13017721"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_rhode_island> a sio:SIO_000414 ;
@@ -4225,6 +4643,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/rhode_island_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Rhode Island (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1103429"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_south_carolina> a sio:SIO_000414 ;
@@ -4235,6 +4654,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_carolina_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South Carolina (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5387830"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_south_dakota> a sio:SIO_000414 ;
@@ -4245,6 +4665,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/south_dakota_2023> a sio:SIO_001061 ;
     rdfs:label "Population of South Dakota (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "918305"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_tennessee> a sio:SIO_000414 ;
@@ -4255,6 +4676,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/tennessee_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Tennessee (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7148304"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_texas> a sio:SIO_000414 ;
@@ -4265,6 +4687,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/texas_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Texas (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "30727890"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_utah> a sio:SIO_000414 ;
@@ -4275,6 +4698,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/utah_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Utah (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "3443222"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_vermont> a sio:SIO_000414 ;
@@ -4285,6 +4709,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/vermont_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Vermont (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "648708"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_virginia> a sio:SIO_000414 ;
@@ -4295,6 +4720,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/virginia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Virginia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "8734685"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_washington> a sio:SIO_000414 ;
@@ -4305,6 +4731,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/washington_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Washington (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7857320"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_west_virginia> a sio:SIO_000414 ;
@@ -4315,6 +4742,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/west_virginia_2023> a sio:SIO_001061 ;
     rdfs:label "Population of West Virginia (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1770495"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_wisconsin> a sio:SIO_000414 ;
@@ -4325,6 +4753,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/wisconsin_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Wisconsin (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5930405"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/US_wyoming> a sio:SIO_000414 ;
@@ -4335,6 +4764,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/wyoming_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Wyoming (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "585067"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/HR_city_of_zagreb> a sio:SIO_000414 ;
@@ -4345,6 +4775,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/city_of_zagreb_2023> a sio:SIO_001061 ;
     rdfs:label "Population of City of Zagreb (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "768624"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/KR_chungcheong_region> a sio:SIO_000414 ;
@@ -4355,6 +4786,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/chungcheong_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Chungcheong Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "5165804"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/KR_gangwon_region> a sio:SIO_000414 ;
@@ -4365,6 +4797,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/gangwon_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Gangwon Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1527807"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/KR_gyeongbuk_region> a sio:SIO_000414 ;
@@ -4375,6 +4808,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/gyeongbuk_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Gyeongbuk Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4929284"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/KR_gyeongnam_region> a sio:SIO_000414 ;
@@ -4385,6 +4819,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/gyeongnam_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Gyeongnam Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "7648181"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/KR_jeju> a sio:SIO_000414 ;
@@ -4395,6 +4830,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/jeju_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Jeju (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "675252"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/KR_jeolla_region> a sio:SIO_000414 ;
@@ -4405,6 +4841,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/jeolla_region_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Jeolla Region (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "4978211"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/KR_seoul_capital_area> a sio:SIO_000414 ;
@@ -4415,6 +4852,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/seoul_capital_area_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Seoul Capital Area (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "26014265"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/NO_western_norway> a sio:SIO_000414 ;
@@ -4425,6 +4863,7 @@
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/population/western_norway_2023> a sio:SIO_001061 ;
     rdfs:label "Population of Western Norway (2023)" ;
+    sio:SIO_000679 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023> ;
     sio:SIO_000300 "1406920"^^xsd:integer .
 
 <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#cla/CLAc4e807d73fb69a0a264528d8ac267ba75be34931d8f694ea4a8967fd7f3c86a2> a sem-lucia:ChemicalLocationAssociation ;

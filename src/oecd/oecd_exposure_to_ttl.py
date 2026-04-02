@@ -6,6 +6,7 @@ Per Virginia's review:
   URI: lucia:#country/gr/<CountryCode>_<GRName>
 - Population: ≤444 instances, one per region (latest year only)
   URI: lucia:#country/gr/population/<GRName>_<Year>
+  Includes sio:SIO_000679 → CalendarYear for temporal context
 - CLA: 14,001 instances, links to year-free Region, has own CalendarYear
 - Country: only new ones (not in EXISTING_COUNTRIES)
 
@@ -120,6 +121,7 @@ def oecd_exposure_to_ttl():
                 p_uri = pop_uri(region, pop_year)
                 lines.append(f"{p_uri} a sio:SIO_001061 ;")
                 lines.append(f'    rdfs:label "Population of {region} ({pop_year})" ;')
+                lines.append(f"    sio:SIO_000679 {calendar_year_uri(pop_year)} ;")
                 lines.append(f'    sio:SIO_000300 "{pop_val}"^^xsd:integer .')
                 lines.append("")
                 pop_count += 1
