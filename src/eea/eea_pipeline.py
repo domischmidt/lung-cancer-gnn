@@ -1,16 +1,3 @@
-"""
-EEA Pipeline: Merge air quality measurements with Eurostat LAU population data.
-
-Reads:  data/interim/eea_all_results.csv
-        data/raw/eurostat_lau.xlsx
-        data/raw/eea_metadata.csv
-
-Output: data/processed/eea_final.csv
-
-Columns: ChemicalID, CountryName, CountryCode, CityName, Value, Units, Population, Year
-
-Supports multiple years (2013-2024).
-"""
 import pandas as pd
 import re
 import unicodedata
@@ -65,10 +52,6 @@ DE_ABBREVS = {
     "i.opf.": "in der oberpfalz",
 }
 
-
-# ═════════════════════════════════════════════════════════════════════════════
-#  Name normalization helpers (unchanged)
-# ═════════════════════════════════════════════════════════════════════════════
 
 def normalize(name, country=None):
     if pd.isna(name):
@@ -193,9 +176,6 @@ def extract_base_city(name, country):
     return s
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-#  1. Load Eurostat LAU population reference
-# ═════════════════════════════════════════════════════════════════════════════
 print("Loading LAU population data...")
 lau_all = []
 for c in COUNTRIES_LAU:
@@ -228,9 +208,6 @@ for _, row in lau.iterrows():
 print(f"  {sum(len(v) for v in lau_lookup.values())} lookup entries")
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-#  2. Load EEA measurement results
-# ═════════════════════════════════════════════════════════════════════════════
 print("\nLoading EEA results...")
 result_files = [
     os.path.join(INTERIM, "eea_all_results.csv"),
@@ -252,7 +229,6 @@ if not frames:
 
 eea = pd.concat(frames, ignore_index=True)
 
-# Handle legacy format: annual_mean_2024 → annual_mean + year
 if "annual_mean_2024" in eea.columns and "annual_mean" not in eea.columns:
     eea.rename(columns={"annual_mean_2024": "annual_mean"}, inplace=True)
 if "year" not in eea.columns:
@@ -260,22 +236,18 @@ if "year" not in eea.columns:
 
 eea["year"] = eea["year"].astype(int)
 
-# Clean municipality names: strip trailing semicolons, whitespace
 if "municipality" in eea.columns:
     eea["municipality"] = eea["municipality"].astype(str).str.strip().str.rstrip(";").str.strip()
     eea["municipality"] = eea["municipality"].replace({"nan": None, "": None})
 
-# Also clean station_name
 if "station_name" in eea.columns:
     eea["station_name"] = eea["station_name"].astype(str).str.strip().str.rstrip(";").str.strip()
 
-# Filter: only verified data (2013-2024), exclude 2025+ (unverified UTD)
 before = len(eea)
 eea = eea[(eea["year"] >= 2013) & (eea["year"] <= 2024)]
 if before > len(eea):
     print(f"  Filtered to 2013-2024: {before} → {len(eea)} (removed {before - len(eea)} rows)")
 
-# Deduplicate per pollutant+country+station+year
 if "sampling_point" in eea.columns:
     before = len(eea)
     eea = eea.drop_duplicates(subset=["pollutant", "country", "sampling_point", "year"], keep="first")
@@ -286,16 +258,10 @@ print(f"  Total: {len(eea)} records")
 print(f"  Years: {sorted(eea['year'].unique())}")
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-#  3. Clean pollutant names
-# ═════════════════════════════════════════════════════════════════════════════
 eea["pollutant"] = eea["pollutant"].map(POLLUTANT_MAP).fillna(eea["pollutant"])
 print(f"\n  Pollutants: {sorted(eea['pollutant'].unique())}")
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-#  4. Match stations to LAU population
-# ═════════════════════════════════════════════════════════════════════════════
 print("\nMatching population...")
 populations = []
 for _, row in eea.iterrows():
@@ -328,28 +294,21 @@ total_n = eea["municipality"].notna().sum()
 print(f"  Matched: {matched_n}/{total_n} ({matched_n/total_n*100:.1f}%)")
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-#  5. Normalize city names + aggregate PER YEAR
-# ═════════════════════════════════════════════════════════════════════════════
 print("\nNormalizing city names...")
 
 eea["city_clean"] = eea.apply(
     lambda r: extract_base_city(r["municipality"], r["country"]), axis=1
 )
 
-# Normalize case + accents to merge near-duplicates (KARABÜK/KARABUK, KAKANJ/Kakanj)
 def normalize_city_label(name):
     if pd.isna(name):
         return name
     s = str(name).strip()
-    # Strip trailing semicolons (from comma→semicolon replacement in download)
     s = s.rstrip(";").strip()
     # Turkish special chars
     for old, new in [("İ", "I"), ("ı", "i"), ("ş", "s"), ("ç", "c"), ("ğ", "g")]:
         s = s.replace(old, new)
-    # Strip accents
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
-    # Title case
     s = s.title()
     return s
 
@@ -365,9 +324,6 @@ eea.rename(columns={"city_clean": "municipality"}, inplace=True)
 print(f"  {before} → {len(eea)} rows ({before - len(eea)} sub-entries merged)")
 
 
-# ═════════════════════════════════════════════════════════════════════════════
-#  6. Build final output
-# ═════════════════════════════════════════════════════════════════════════════
 print("\nBuilding final dataset...")
 final = eea[["pollutant", "country", "municipality", "annual_mean", "unit", "population", "year"]].copy()
 final.columns = ["ChemicalID", "CountryCode", "CityName", "Value", "Units", "Population", "Year"]
@@ -375,7 +331,6 @@ final["CountryName"] = final["CountryCode"].map(COUNTRY_NAMES).fillna(final["Cou
 final["Value"] = final["Value"].round(4)
 final["Population"] = final["Population"].astype("Int64")
 
-# Reorder columns
 final = final[["ChemicalID", "CountryName", "CountryCode", "CityName", "Value", "Units", "Population", "Year"]]
 
 before = len(final)

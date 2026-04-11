@@ -1,12 +1,3 @@
-"""
-OECD Pipeline: Clean regional air pollution exposure CSV.
-
-Input:  data/raw/oecd_exposure.csv
-        data/raw/oecd_population.csv   (OECD Regional Demography TL2, 1990-2023)
-Output: data/processed/oecd_exposure_final.csv
-
-Columns: Country, CountryCode, RegionName, Chemical, Measure, Units, Frequency, Year, Value, Population
-"""
 import pandas as pd
 import os
 
@@ -15,18 +6,14 @@ RAW = os.path.join(BASE, "data", "raw")
 PROCESSED = os.path.join(BASE, "data", "processed")
 os.makedirs(PROCESSED, exist_ok=True)
 
-# Aggregate groups to exclude
 EXCLUDE = {"OECD", "OECDE", "OECDA", "OECDSO", "EU27_2020", "EA20", "G7", "G20", "WXOECD"}
 
-# Clean pollutant names
 CHEMICAL_MAP = {
     "Fine particulate matter (PM2.5)": "PM2.5",
     "Particulates (PM10)": "PM10",
     "Nitrogen dioxide (NO2)": "NO2",
 }
 
-# Region prefix (= ISO2) → (Country name, ISO2 code)
-# Built from the actual OECD TL2 region codes
 PREFIX_TO_COUNTRY = {
     "AT": ("Austria", "AT"),
     "AU": ("Australia", "AU"),
@@ -72,7 +59,6 @@ PREFIX_TO_COUNTRY = {
 
 
 def get_country_info(ref_area, ref_name):
-    """Determine country name, ISO2 code, and region name from REF_AREA."""
     prefix = ref_area[:2]
     if prefix in PREFIX_TO_COUNTRY:
         name, iso2 = PREFIX_TO_COUNTRY[prefix]
@@ -81,12 +67,6 @@ def get_country_info(ref_area, ref_name):
 
 
 def load_population():
-    """
-    Load OECD Regional Demography TL2 population (1990-2023, per year).
-
-    Returns:
-      - pop_lookup: dict of (REF_AREA, year) -> population (int)
-    """
     pop_path = os.path.join(RAW, "oecd_population.csv")
     if not os.path.exists(pop_path):
         print("  [WARN] oecd_population.csv not found – Population column will be empty.")
@@ -95,7 +75,6 @@ def load_population():
     pop = pd.read_csv(pop_path)
     pop = pop[pop["MEASURE"] == "POP"]  # safety filter
 
-    # Build lookup: (REF_AREA, year) -> population
     pop_lookup = {}
     for _, r in pop.iterrows():
         key = (r["REF_AREA"], int(r["TIME_PERIOD"]))
@@ -110,15 +89,12 @@ def oecd_exposure_pipeline():
     df = pd.read_csv(os.path.join(RAW, "oecd_exposure.csv"))
     print(f"Loaded {len(df)} rows from oecd_exposure.csv")
 
-    # Exclude aggregates
     before = len(df)
     df = df[~df["REF_AREA"].isin(EXCLUDE)]
     print(f"  After removing aggregates: {len(df)} (removed {before - len(df)})")
 
-    # Load population data
     pop_lookup = load_population()
 
-    # Build output
     rows = []
     pop_matched = 0
     pop_missing = 0
@@ -130,7 +106,6 @@ def oecd_exposure_pipeline():
             ref_area, r["Reference area"]
         )
 
-        # Look up population by (REF_AREA, year)
         population = pop_lookup.get((ref_area, year))
 
         if population is not None:

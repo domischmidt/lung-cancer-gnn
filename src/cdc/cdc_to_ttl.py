@@ -1,17 +1,3 @@
-"""
-Convert CDC Final CSV to TTL format for LUCIA ontology.
-
-Fixes per Virginia's Arreglos document:
-- Each row becomes ONE VitalStatistics instance (one year, one value)
-- VitalStatistics URI includes year
-- sio:SIO_000300 on Disease (not on VitalStatistics)
-- Gender capitalized: "Male", "Female"
-- Ethnicity preserved (Hispanic, Non-Hispanic)
-- Country US_PRI already exists, only referenced
-
-Input:  data/raw/CDC_Final.csv
-Output: data/processed/graph_CDC.ttl
-"""
 import pandas as pd
 import os
 import sys
@@ -43,15 +29,11 @@ def cdc_to_ttl():
     df["age_code"] = df["age_code"].str.strip()
     df["Ethnicity"] = df["Ethnicity"].str.strip()
 
-    # Ethnicity slug for URI (no spaces, lowercase)
     df["eth_slug"] = df["Ethnicity"].str.lower().str.replace("-", "").str.replace(" ", "")
 
     lines = [PREFIXES]
 
-    # ── Disease entity with SIO_000300 links ─────────────────────────────
-    # Will be added at the end after collecting all vstat URIs
 
-    # ── People entities (unique combinations) ────────────────────────────
     people_seen = set()
     for _, row in df.iterrows():
         key = (row["age_code"], row["Sex"], row["eth_slug"])
@@ -65,9 +47,7 @@ def cdc_to_ttl():
             lines.append("")
     print(f"  {len(people_seen)} People entities")
 
-    # ── Country: US_PRI already exists, only reference ───────────────────
 
-    # ── VitalStatistics instances (one per row = one per year) ───────────
     vstat_uris = []
     count = 0
     for _, row in df.iterrows():
@@ -91,7 +71,6 @@ def cdc_to_ttl():
 
     print(f"  {count} VitalStatistics instances")
 
-    # ── Disease entity with sio:SIO_000300 links to all VitalStatistics ──
     lines.append(f"{disease_uri(DISEASE_CODE)} a ncit:C7057 ;")
     lines.append(f'    rdfs:label "{DISEASE_NAME}" ;')
     lines.append(f'    dcterms:identifier "{DISEASE_CODE}" ;')

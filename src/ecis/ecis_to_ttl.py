@@ -1,15 +1,3 @@
-"""
-Convert ECIS final CSV to TTL format for LUCIA ontology.
-
-Structure per ontology:
-- Regional registries → Geopolitical Region (SIO_000415) → is located in → Country
-- National registries → VitalStats links directly to Country
-- VitalStats → is located in → Region or Country
-- Disease → SIO_000300 → all VitalStatistics
-
-Input:  data/processed/ecis_final.csv
-Output: data/processed/graph_ECIS.ttl
-"""
 import pandas as pd
 import os
 import sys
@@ -65,7 +53,6 @@ def ecis_to_ttl():
             lines.append("")
     print(f"  {len(people_seen)} People entities")
 
-    # ── Country entities (only NEW ones) ─────────────────────────────────
     new_countries = 0
     countries_seen = set()
     for _, row in df.iterrows():
@@ -80,7 +67,6 @@ def ecis_to_ttl():
                 new_countries += 1
     print(f"  {new_countries} new Country entities ({len(countries_seen)} total)")
 
-    # ── Registry/Region entities (only for regional registries) ──────────
     registries_seen = set()
     registry_count = 0
     for _, row in df.iterrows():
@@ -103,7 +89,6 @@ def ecis_to_ttl():
                 registry_count += 1
     print(f"  {registry_count} Registry/Region entities")
 
-    # ── VitalStatistics instances ────────────────────────────────────────
     vstat_uris = []
     count = 0
 
@@ -127,7 +112,6 @@ def ecis_to_ttl():
         vs = vstat_uri(code, age, gender, ETHNICITY, disease_code, year, registry)
         vstat_uris.append(vs)
 
-        # Location: regional → Registry entity, national → Country directly
         if is_national:
             location_uri = country_uri(code)
         else:
@@ -146,7 +130,6 @@ def ecis_to_ttl():
 
     print(f"  {count} VitalStatistics instances")
 
-    # ── Disease entity with sio:SIO_000300 links ─────────────────────────
     lines.append(f"{disease_uri(disease_code)} a ncit:C7057 ;")
     lines.append(f'    rdfs:label "{disease_name}" ;')
     lines.append(f'    dcterms:identifier "{disease_code}" ;')

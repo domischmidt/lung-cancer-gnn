@@ -1,18 +1,3 @@
-"""
-Convert OECD exposure final CSV to TTL format for LUCIA ontology.
-
-Per Virginia's review:
-- Geographic Region: 444 instances, NO year in URI
-  URI: lucia:#country/gr/<CountryCode>_<GRName>
-- Population: ≤444 instances, one per region (latest year only)
-  URI: lucia:#country/gr/population/<GRName>_<Year>
-  Includes sio:SIO_000679 → CalendarYear for temporal context
-- CLA: 14,001 instances, links to year-free Region, has own CalendarYear
-- Country: only new ones (not in EXISTING_COUNTRIES)
-
-Input:  data/processed/oecd_exposure_final.csv
-Output: data/processed/graph_OECD.ttl
-"""
 import pandas as pd
 import os
 import sys
@@ -57,9 +42,6 @@ def oecd_exposure_to_ttl():
 
     lines = [PREFIXES]
 
-    # ── Source: only reference, do NOT redefine ──────────────────────────
-
-    # ── Country entities (only NEW ones) ─────────────────────────────────
     new_countries = 0
     countries_seen = set()
     for _, row in df.iterrows():
@@ -74,12 +56,9 @@ def oecd_exposure_to_ttl():
                 new_countries += 1
     print(f"  {new_countries} new Country entities ({len(countries_seen)} total)")
 
-    # ── Geographic Region entities (444, no year in URI) ─────────────────
-    # ── Population entities (≤444, latest year only) ─────────────────────
     regions_seen = set()
     pop_count = 0
 
-    # Find latest population per region
     pop_df = df[df["Population"].notna() & (df["Population"] != "")].copy()
     pop_df["Population"] = pd.to_numeric(pop_df["Population"], errors="coerce")
     pop_df = pop_df.dropna(subset=["Population"])
@@ -115,7 +94,6 @@ def oecd_exposure_to_ttl():
             lines.append(f"    sio:SIO_000061 {country_uri(cc)} .")
             lines.append("")
 
-            # Population entity (latest year only)
             if has_pop:
                 pop_val, pop_year = pop_lookup[region_key]
                 p_uri = pop_uri(region, pop_year)
@@ -129,7 +107,6 @@ def oecd_exposure_to_ttl():
     print(f"  {len(regions_seen)} Geographic Region entities")
     print(f"  {pop_count} Population entities")
 
-    # ── ChemicalLocationAssociation instances ────────────────────────────
     count = 0
     for _, row in df.iterrows():
         cc = row["CountryCode"]

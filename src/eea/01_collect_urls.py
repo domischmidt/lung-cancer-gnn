@@ -1,8 +1,3 @@
-"""
-Collect Parquet file URLs from the EEA Air Quality Download API.
-Covers all 10 pollutants: PM2.5, PM10, NO2, O3, BaP, C6H6, As, Cd, Pb, Ni.
-Output: data/raw/eea_urls.csv + data/raw/eea_urls_additional.csv
-"""
 import requests
 import os
 import time
@@ -19,11 +14,8 @@ EU_COUNTRIES = [
     "AL", "BA", "CH", "GB", "IS", "LI", "ME", "MK", "NO", "RS", "TR", "XK"
 ]
 
-# Primary pollutants (EU Air Quality Directive dashboards)
 PRIMARY = ["PM2.5", "PM10", "NO2", "O3"]
 
-# Additional pollutants: BaP + heavy metals measured within PM10 filters
-# "As in PM10" = arsenic content in PM10 particles, NOT PM10 itself
 ADDITIONAL = ["BaP", "C6H6", "As in PM10", "Cd in PM10", "Pb in PM10", "Ni in PM10"]
 
 

@@ -1,16 +1,3 @@
-"""
-ECIS Pipeline: Combine historical ECIS data + 2024 estimates.
-
-Inputs:
-  data/raw/ecis_historical/*.csv  (32 country CSVs, semicolon-separated)
-  data/raw/ecis_incidence_*.csv   (2024 estimates, 6 age groups)
-  data/raw/ecis_mortality_*.csv   (2024 estimates, 6 age groups)
-Output:
-  data/processed/ecis_final.csv
-
-Columns: DiseaseName, DiseaseCode, Country, CountryCode, Registry,
-         Gender, AgeGroup, Incidence, MortalityRate, Year
-"""
 import pandas as pd
 import os
 
@@ -19,14 +6,12 @@ RAW = os.path.join(BASE, "data", "raw")
 PROCESSED = os.path.join(BASE, "data", "processed")
 os.makedirs(PROCESSED, exist_ok=True)
 
-# File code → ISO2 country code (where they differ)
 FILE_TO_COUNTRY = {
-    "BH": "BA",  # Bosnia Herzegovina
-    "IR": "IE",  # Ireland
-    "PO": "PL",  # Poland
+    "BH": "BA",  
+    "IR": "IE",  
+    "PO": "PL",  
 }
 
-# Registry → Country name (for display)
 COUNTRY_NAMES = {
     "AT": "Austria", "BA": "Bosnia and Herzegovina", "BE": "Belgium",
     "BG": "Bulgaria", "CH": "Switzerland", "CY": "Cyprus", "CZ": "Czechia",
@@ -39,7 +24,6 @@ COUNTRY_NAMES = {
     "UA": "Ukraine",
 }
 
-# Age group mapping: historical 75-89 and 90-95+ → 75-85+
 AGE_MAP = {
     "0-14": "0-14",
     "15-29": "15-29",
@@ -51,7 +35,6 @@ AGE_MAP = {
     "75-85+": "75-85+",  # 2024 format
 }
 
-# 2024 estimates: age group labels
 AGE_GROUPS_2024 = ["0_14", "15_29", "30_44", "45_59", "60_74", "75_85"]
 AGE_LABELS_2024 = {
     "0_14": "0-14", "15_29": "15-29", "30_44": "30-44",
@@ -121,17 +104,14 @@ def load_historical():
 
     df = pd.DataFrame(all_rows)
 
-    # Merge Incidence + Mortality rows for same key
-    # (some countries have both, some only one)
+
     group_cols = ["Country", "CountryCode", "Registry", "Gender", "AgeGroup", "Year"]
     merged = df.groupby(group_cols, dropna=False).agg({
         "Incidence": "first",
         "MortalityRate": "first",
     }).reset_index()
 
-    # For 75-85+ mapped group: average the values from 75-89 and 90-95+
-    # Actually they're already mapped to same group, so groupby will merge them
-    # But we need to re-aggregate in case both 75-89 and 90-95+ exist
+
     final = merged.groupby(group_cols, dropna=False).agg({
         "Incidence": "mean",
         "MortalityRate": "mean",
@@ -184,7 +164,7 @@ def load_2024_estimates():
     df["CountryCode"] = df["Country"].map(COUNTRY_CODES_2024).fillna(
         df["Country"].str[:2].str.upper()
     )
-    df["Registry"] = df["Country"]  # national level = registry is country
+    df["Registry"] = df["Country"] 
 
     df = df[["Country", "CountryCode", "Registry", "Gender", "AgeGroup",
              "Incidence", "MortalityRate", "Year"]]
@@ -207,11 +187,9 @@ def ecis_pipeline():
 
     final = pd.concat(dfs, ignore_index=True)
 
-    # Add disease info
     final["DiseaseName"] = "Malignant neoplasm of lung"
     final["DiseaseCode"] = "C0242379"
 
-    # Reorder
     final = final[["DiseaseName", "DiseaseCode", "Country", "CountryCode",
                     "Registry", "Gender", "AgeGroup", "Incidence",
                     "MortalityRate", "Year"]]

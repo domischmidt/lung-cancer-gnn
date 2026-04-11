@@ -1,13 +1,3 @@
-"""
-Generate graph_shared.ttl with entities reused across EEA, ECIS, and OECD.
-
-Only creates instances that do NOT already exist in the ontology:
-- CalendarYear: 2023, 2024 (1990-2022 already exist)
-- Countries: only those not in the existing 171
-- Chemicals: PM10 variants (PM2.5, BaP, C6H6, NO2, O3, NOx already exist)
-
-Output: data/processed/graph_shared.ttl
-"""
 import os
 import sys
 
@@ -22,10 +12,8 @@ BASE = os.path.join(os.path.dirname(__file__), "..", "..")
 PROCESSED = os.path.join(BASE, "data", "processed")
 os.makedirs(PROCESSED, exist_ok=True)
 
-# New calendar years needed by our datasets
 NEW_YEARS = {2023, 2024} - EXISTING_CALENDAR_YEARS
 
-# New chemicals: only PM10 variants
 NEW_CHEMICALS = {
     cid: label
     for cid, label in CHEMICAL_LABELS.items()
@@ -36,7 +24,6 @@ NEW_CHEMICALS = {
 def generate_shared():
     lines = [PREFIXES]
 
-    # ── New CalendarYear instances ────────────────────────────────────────
     lines.append("# ── New CalendarYear instances ──")
     lines.append("")
     for year in sorted(NEW_YEARS):
@@ -46,7 +33,6 @@ def generate_shared():
         lines.append("")
     print(f"  {len(NEW_YEARS)} new CalendarYear instances: {sorted(NEW_YEARS)}")
 
-    # ── New Chemical instances ───────────────────────────────────────────
     lines.append("# ── New Chemical instances (PM10 variants) ──")
     lines.append("")
     for chem_id, label in sorted(NEW_CHEMICALS.items()):

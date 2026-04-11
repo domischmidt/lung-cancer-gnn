@@ -1,13 +1,3 @@
-"""
-Shared utilities for CSV → TTL conversion.
-URI patterns follow the LUCIA ontology conventions.
-
-Updated based on ontology review feedback:
-- Correct UMLS chemical IDs
-- City type: ncit:C0008848 (not C61066)
-- City URI includes year
-- Existing entities tracked to avoid redefinition
-"""
 import hashlib
 import unicodedata
 import re
@@ -25,10 +15,6 @@ PREFIXES = """\
 @prefix lucia: <http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#> .
 
 """
-
-# ═════════════════════════════════════════════════════════════════════════════
-#  Existing entities in the ontology (DO NOT redefine these)
-# ═════════════════════════════════════════════════════════════════════════════
 
 EXISTING_COUNTRIES = {
     "AE", "AF", "AL", "AM", "AO", "AR", "AT", "AU", "AZ", "BA", "BD", "BE",
@@ -54,7 +40,6 @@ EXISTING_CALENDAR_YEARS = {
     2021, 2022,
 }
 
-# Chemicals already in the ontology (only reference, do NOT redefine)
 EXISTING_CHEMICALS = {
     "C5890534",   # PM2.5
     "C0005052",   # BaP (Benzopyrene)
@@ -64,22 +49,16 @@ EXISTING_CHEMICALS = {
     "C0028167",   # NOx (Nitrogen Oxides)
 }
 
-# Sources already in the ontology
 EXISTING_SOURCES = {"EEA-2025", "OECD-2025"}
 
-# ═════════════════════════════════════════════════════════════════════════════
-#  Chemical ID mapping (UMLS identifiers per Virginia's review)
-# ═════════════════════════════════════════════════════════════════════════════
 
 CHEMICAL_IDS = {
-    # Existing in ontology (reference only)
     "PM2.5":    "C5890534",
     "BaP":      "C0005052",
     "C6H6":     "C0005036",
     "NO2":      "C0028160",
     "O3":       "C0030106",
     "Nitrogen oxides": "C0028167",
-    # New PM10-related (must be created)
     "PM10":     "C1720884_10",
     "As_PM10":  "C1720884_10_As",
     "Cd_PM10":  "C1720884_10_Cd",
@@ -87,7 +66,6 @@ CHEMICAL_IDS = {
     "Pb_PM10":  "C1720884_10_Pb",
 }
 
-# Labels for new chemicals
 CHEMICAL_LABELS = {
     "C1720884_10":    "Particulate matter (PM10)",
     "C1720884_10_As": "Particulate matter (PM10, Arsenic)",
@@ -95,10 +73,6 @@ CHEMICAL_LABELS = {
     "C1720884_10_Ni": "Particulate matter (PM10, Nickel)",
     "C1720884_10_Pb": "Particulate matter (PM10, Lead)",
 }
-
-# ═════════════════════════════════════════════════════════════════════════════
-#  URI builders
-# ═════════════════════════════════════════════════════════════════════════════
 
 def uri(path):
     return f"<{BASE}#{path}>"
@@ -152,9 +126,6 @@ def cla_id(*parts):
     raw = "_".join(str(p) for p in parts)
     return "CLA" + hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
-# ═════════════════════════════════════════════════════════════════════════════
-#  Helpers
-# ═════════════════════════════════════════════════════════════════════════════
 
 def slugify(name):
     """Convert name to URI-safe slug: lowercase, underscores, alphanumeric only."""
@@ -176,7 +147,6 @@ def normalize_ascii(name):
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
-# Country name → ISO 2-letter code mapping
 COUNTRY_CODES = {
     "Austria": "AT", "Belgium": "BE", "Bulgaria": "BG", "Croatia": "HR",
     "Cyprus": "CY", "Czechia": "CZ", "Denmark": "DK", "Estonia": "EE",

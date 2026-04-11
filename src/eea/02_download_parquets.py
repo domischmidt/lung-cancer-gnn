@@ -1,11 +1,3 @@
-"""
-Download individual parquet files from EEA and compute annual means.
-Reads URLs from data/raw/eea_urls.csv + data/raw/eea_urls_additional.csv.
-Output: data/interim/eea_all_results.csv (single combined file)
-
-Extracts ALL available years from each parquet file (typically 2013-2024).
-Resume-safe: tracks progress in data/interim/eea_download_progress.txt.
-"""
 import requests
 import pandas as pd
 import io
@@ -20,7 +12,6 @@ os.makedirs(INTERIM, exist_ok=True)
 RESULTS_FILE = os.path.join(INTERIM, "eea_all_results.csv")
 PROGRESS_FILE = os.path.join(INTERIM, "eea_download_progress.txt")
 
-# Minimum year to include (EEA verified data starts ~2013)
 MIN_YEAR = 2013
 
 COLUMNS = [
@@ -29,7 +20,6 @@ COLUMNS = [
     "n_observations", "unit", "agg_type", "year"
 ]
 
-# ── Load metadata for municipality lookup ────────────────────────────────────
 META_FILE = os.path.join(RAW, "eea_metadata.csv")
 print("Loading metadata...")
 meta = pd.read_csv(META_FILE, low_memory=False)
@@ -47,7 +37,6 @@ meta_lookup = (
 )
 print(f"  {len(meta_lookup)} sampling points in metadata")
 
-# ── Load ALL URLs (primary + additional) ─────────────────────────────────────
 url_files = [
     os.path.join(RAW, "eea_urls.csv"),
     os.path.join(RAW, "eea_urls_additional.csv"),
@@ -64,12 +53,10 @@ urls = pd.concat(url_frames, ignore_index=True)
 print(f"  Total: {len(urls)} URLs to process")
 print(f"  Extracting all years >= {MIN_YEAR}")
 
-# ── Bootstrap: create results file if needed ─────────────────────────────────
 if not os.path.exists(RESULTS_FILE):
     pd.DataFrame(columns=COLUMNS).to_csv(RESULTS_FILE, index=False)
     print("  Created fresh results file")
 
-# ── Resume support ───────────────────────────────────────────────────────────
 done = set()
 if os.path.exists(PROGRESS_FILE):
     with open(PROGRESS_FILE, "r") as f:
@@ -90,7 +77,6 @@ if len(remaining) == 0:
         ).to_string())
     exit(0)
 
-# ── Download loop ────────────────────────────────────────────────────────────
 errors = 0
 new_results = 0
 
@@ -108,11 +94,11 @@ for idx, row in remaining.iterrows():
 
         df = pd.read_parquet(io.BytesIO(r.content))
 
-        # Sampling point ID
+        
         sp_raw = df["Samplingpoint"].iloc[0]
         sp_id = sp_raw.split("/", 1)[1] if "/" in str(sp_raw) else str(sp_raw)
 
-        # Parse dates + filter validity
+        
         df["Start"] = pd.to_datetime(df["Start"], errors="coerce")
         if "Validity" in df.columns:
             df = df[df["Validity"] == 1]
@@ -125,7 +111,7 @@ for idx, row in remaining.iterrows():
             done.add(url)
             continue
 
-        # Metadata lookup
+        
         station_name = municipality = lat = lon = area = ""
         if sp_id in meta_lookup.index:
             m = meta_lookup.loc[sp_id]
@@ -135,7 +121,7 @@ for idx, row in remaining.iterrows():
             lon = m.get("Longitude", "")
             area = m.get("Air Quality Station Area", "")
 
-        # Compute annual mean for EACH year in the data
+        
         for target_year, df_year in df.groupby("year"):
             annual_mean = df_year["Value"].mean()
             n_obs = len(df_year)
@@ -153,7 +139,7 @@ for idx, row in remaining.iterrows():
 
     done.add(url)
 
-    # Checkpoint every 200 files
+    
     if len(done) % 200 == 0:
         with open(PROGRESS_FILE, "w") as f:
             f.write("\n".join(done))
@@ -162,14 +148,12 @@ for idx, row in remaining.iterrows():
 
     time.sleep(0.1)
 
-# ── Final save ───────────────────────────────────────────────────────────────
 with open(PROGRESS_FILE, "w") as f:
     f.write("\n".join(done))
 
 print(f"\nDone: {new_results} new results, {errors} errors")
 print(f"Results: {RESULTS_FILE}")
 
-# Summary
 df_results = pd.read_csv(RESULTS_FILE, low_memory=False)
 print(f"\n=== Total: {len(df_results)} records ===")
 if "year" in df_results.columns:

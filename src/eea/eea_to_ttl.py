@@ -1,19 +1,3 @@
-"""
-Convert EEA final CSV to TTL format for LUCIA ontology.
-
-Per Virginia's review:
-- Geopolitical Region: one instance per city, NO year in URI
-  URI: lucia:#country/gpr/<CountryCode>_<slug>
-- Population: one instance per city (2024 only, from Eurostat LAU)
-  URI: lucia:#country/gpr/population/<slug>_2024
-  Includes sio:SIO_000679 → CalendarYear for temporal context
-- CLA: links to year-free city URI, has own CalendarYear via SIO_000679
-- Source: NOT redefined (already exists)
-- Existing Countries: only referenced, not redefined
-
-Input:  data/processed/eea_final.csv
-Output: data/processed/graph_EEA.ttl
-"""
 import pandas as pd
 import os
 import sys
@@ -59,9 +43,6 @@ def eea_to_ttl():
 
     lines = [PREFIXES]
 
-    # ── Source: only reference, do NOT redefine ──────────────────────────
-
-    # ── Country entities (only NEW ones) ─────────────────────────────────
     new_countries = 0
     countries_seen = set()
     for _, row in df.iterrows():
@@ -76,15 +57,12 @@ def eea_to_ttl():
                 new_countries += 1
     print(f"  {new_countries} new Country entities ({len(countries_seen)} total)")
 
-    # ── City entities (one per city, no year) + Population (one per city, 2024) ──
     cities_seen = set()
     pop_count = 0
 
-    # Find population per city (single value, from Eurostat LAU 2024)
     pop_df = df[df["Population"].notna()].copy()
     pop_df["Population"] = pd.to_numeric(pop_df["Population"], errors="coerce")
     pop_df = pop_df.dropna(subset=["Population"])
-    # Take first occurrence per city (population is same across years since it's LAU 2024)
     pop_lookup = {}
     for _, r in pop_df.groupby(["CountryCode", "CityName"]).first().reset_index().iterrows():
         pop_lookup[(r["CountryCode"], r["CityName"])] = int(r["Population"])
@@ -110,7 +88,7 @@ def eea_to_ttl():
             lines.append(f"    sio:SIO_000061 {country_uri(cc)} .")
             lines.append("")
 
-            # Population entity (single, 2024)
+            
             if has_pop:
                 pop_val = pop_lookup[city_key]
                 p_uri = pop_uri(city)
@@ -124,7 +102,6 @@ def eea_to_ttl():
     print(f"  {len(cities_seen)} City entities")
     print(f"  {pop_count} Population entities")
 
-    # ── ChemicalLocationAssociation instances ────────────────────────────
     count = 0
     for _, row in df.iterrows():
         cc = row["CountryCode"]
