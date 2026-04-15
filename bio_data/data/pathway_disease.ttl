@@ -1,0 +1,1348 @@
+@prefix res: <http://www.w3.org/2005/sparql-results#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+_:_ a res:ResultSet .
+_:_ res:resultVariable "PathwayDiseaseAssociation" , "PathwayId" , "PathwayName" , "DiseaseCui" , "DiseaseName" , "GeneProductId" , "GeneProductName" .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "AKT1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "AKT1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "AKT1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "AKT1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "AKT2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "AKT2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "AKT2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "AKT2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "AKT3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "AKT3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "AKT3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "AKT3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ALK" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ALK" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "APAF1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "APAF1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ARAF" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ARAF" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BAD" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BAD" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BAK1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BAK1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BAK1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BAK1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BAX" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BAX" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BAX" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BAX" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BCL2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BCL2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BCL2L1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BCL2L1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BID" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BID" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BID" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BID" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BIRC2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BIRC2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BIRC3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BIRC3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BIRC7" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BIRC7" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BIRC8" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BIRC8" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "BRAF" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "BRAF" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CASP3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CASP3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CASP3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CASP3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CASP8" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CASP8" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CASP8" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CASP8" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CASP9" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CASP9" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CASP9" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CASP9" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CCND1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CCND1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CCND1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CCND1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CCNE1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CCNE1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CCNE2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CCNE2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDK2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDK2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDK4" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDK4" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDK4" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDK4" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDK6" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDK6" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDK6" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDK6" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDKN1A" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDKN1A" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDKN1A" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDKN1A" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDKN1B" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDKN1B" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDKN1C" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDKN1C" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDKN2A" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDKN2A" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CDKN2B" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CDKN2B" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CHUK" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CHUK" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CKS1B" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CKS1B" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CKS2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CKS2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "COL4A1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "COL4A1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "COL4A2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "COL4A2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "COL4A3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "COL4A3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "COL4A4" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "COL4A4" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "COL4A5" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "COL4A5" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "COL4A6" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "COL4A6" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CRABP1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CRABP1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CRABP2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CRABP2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CYCS" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CYCS" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "CYCS" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "CYCS" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "DDB2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "DDB2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "DDB2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "DDB2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "E2F1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "E2F1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "E2F1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "E2F1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "E2F2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "E2F2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "E2F2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "E2F2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "E2F3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "E2F3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "E2F3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "E2F3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "EGF" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "EGF" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "EGFR" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "EGFR" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "EML4" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "EML4" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ERBB2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ERBB2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "FHIT" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "FHIT" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "FHIT" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "FHIT" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "FN1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "FN1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "FOXO3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "FOXO3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "GADD45A" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "GADD45A" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "GADD45A" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "GADD45A" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "GADD45B" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "GADD45B" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "GADD45B" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "GADD45B" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "GADD45G" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "GADD45G" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "GADD45G" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "GADD45G" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "GRB2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "GRB2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "HRAS" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "HRAS" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "IKBKB" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "IKBKB" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "IKBKG" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "IKBKG" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ITGA2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ITGA2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ITGA2B" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ITGA2B" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ITGA3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ITGA3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ITGA6" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ITGA6" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ITGAV" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ITGAV" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ITGB1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ITGB1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "JAK3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "JAK3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "KRAS" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "KRAS" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMA1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMA1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMA2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMA2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMA3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMA3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMA4" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMA4" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMA5" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMA5" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMB1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMB1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMB2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMB2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMB3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMB3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMB4" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMB4" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMC1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMC1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMC2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMC2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "LAMC3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "LAMC3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "MAP2K1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "MAP2K1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "MAP2K2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "MAP2K2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "MAPK1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "MAPK1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "MAPK3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "MAPK3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "MAX" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "MAX" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "MYC" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "MYC" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "NFKB1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "NFKB1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "NFKBIA" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "NFKBIA" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "NFKBIB" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "NFKBIB" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "NOS2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "NOS2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "NRAS" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "NRAS" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PDK1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PDK1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3CA" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3CA" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3CA" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3CA" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3CB" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3CB" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3CB" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3CB" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3CD" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3CD" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3CD" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3CD" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3R1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3R1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3R1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3R1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3R2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3R2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3R2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3R2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3R3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3R3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PIK3R3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PIK3R3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PLCG1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PLCG1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PLCG2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PLCG2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "POLK" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "POLK" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "POLK" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "POLK" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PRKCA" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PRKCA" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PRKCB" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PRKCB" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PRKCG" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PRKCG" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PTEN" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PTEN" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PTGS2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PTGS2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "PTK2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "PTK2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RAF1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RAF1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RARB" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RARB" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RARB" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RARB" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RASSF1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RASSF1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RASSF5" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RASSF5" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RB1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RB1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RB1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RB1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RELA" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RELA" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RXRA" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RXRA" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RXRA" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RXRA" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RXRB" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RXRB" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RXRB" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RXRB" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RXRG" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RXRG" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "RXRG" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "RXRG" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "SKP1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "SKP1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "SOS1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "SOS1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "SOS2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "SOS2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "STAT3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "STAT3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "STAT5A" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "STAT5A" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "STAT5B" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "STAT5B" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "STK4" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "STK4" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "TGFA" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "TGFA" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0007131-WP4255" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4255" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Non-small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0007131" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Non-Small Cell Lung Carcinoma" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "TP53" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "TP53" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "TP53" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "TP53" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "TRAF1" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "TRAF1" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "TRAF2" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "TRAF2" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "TRAF3" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "TRAF3" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "TRAF4" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "TRAF4" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "TRAF5" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "TRAF5" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "TRAF6" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "TRAF6" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "PathwayDiseaseAssociation" ; res:value "C0149925-WP4658" ] ;
+      res:binding [ res:variable "PathwayId" ; res:value "WP4658" ] ;
+      res:binding [ res:variable "PathwayName" ; res:value "Small cell lung cancer" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0149925" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Small cell carcinoma of lung" ] ;
+      res:binding [ res:variable "GeneProductId" ; res:value "ZBTB17" ] ;
+      res:binding [ res:variable "GeneProductName" ; res:value "ZBTB17" ] ] .

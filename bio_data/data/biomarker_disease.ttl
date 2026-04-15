@@ -1,0 +1,124 @@
+@prefix res: <http://www.w3.org/2005/sparql-results#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+_:_ a res:ResultSet .
+_:_ res:resultVariable "BiomarkerId" , "BiomarkerName" , "DiseaseCui" , "DiseaseName" .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0003968" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Ascorbic Acid" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0006657" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "25-Hydroxycholecalciferol" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0007271" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Carotenoids" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0017054" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "gamma-Tocopherol" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0019878" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Homocysteine" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0022179" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Isoflavones" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0034266" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "pyridoxal phosphate" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0035527" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Riboflavin" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0036581" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Selenium" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0042845" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Vitamin B12" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0051336" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "alpha-carotene" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0053396" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "beta-Carotene" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0057090" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "daidzein" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0059497" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Equol" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0061202" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Genistein" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0065331" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Lycopene" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0087161" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Retinol" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0178638" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "folate" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0253391" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "glycitein" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0552327" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Beta+gamma tocopherol" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0896117" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Beta-Cryptoxanthin" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C0969677" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "alpha-Tocopherol" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C2929534" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "lutein / zeaxanthin" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
+_:_ res:solution [
+      res:binding [ res:variable "BiomarkerId" ; res:value "C3255108" ] ;
+      res:binding [ res:variable "BiomarkerName" ; res:value "Tocopherols" ] ;
+      res:binding [ res:variable "DiseaseCui" ; res:value "C0242379" ] ;
+      res:binding [ res:variable "DiseaseName" ; res:value "Malignant neoplasm of lung" ] ] .
