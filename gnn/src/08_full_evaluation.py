@@ -101,11 +101,16 @@ class DistMult(nn.Module):
         return (pos_loss + neg_loss) / 2
 
 
-class RGCN(nn.Module):
-    def __init__(self, n_nodes, n_relations, hidden_dim, num_layers, num_bases, dropout):
+class RGCNWithFeatures(nn.Module):
+    def __init__(self, n_nodes, n_relations, hidden_dim, num_layers, num_bases, dropout, node_features=None):
         super().__init__()
         self.node_emb = nn.Embedding(n_nodes, hidden_dim)
         nn.init.xavier_uniform_(self.node_emb.weight)
+        self.feat_projections = nn.ModuleDict()
+        self.node_feature_info = node_features or {}
+        for nt, info in self.node_feature_info.items():
+            feat_dim = info["feat"].shape[1]
+            self.feat_projections[nt] = nn.Linear(feat_dim, hidden_dim)
         self.convs = nn.ModuleList()
         for _ in range(num_layers):
             self.convs.append(RGCNConv(hidden_dim, hidden_dim, n_relations, num_bases=num_bases))
@@ -113,11 +118,21 @@ class RGCN(nn.Module):
         nn.init.xavier_uniform_(self.rel_emb.weight)
         self.dropout = dropout
 
+    def get_initial_embeddings(self):
+        x = self.node_emb.weight.clone()
+        for nt, info in self.node_feature_info.items():
+            offset = info["offset"]
+            n = info["n"]
+            feat = info["feat"].to(x.device)
+            projected = self.feat_projections[nt](feat)
+            x[offset:offset + n] = x[offset:offset + n] + projected
+        return x
+
     def score(self, h, r, t):
         return (h * self.rel_emb(r) * t).sum(dim=-1)
 
     def encode(self, edge_index, edge_type):
-        x = self.node_emb.weight
+        x = self.get_initial_embeddings()
         for conv in self.convs:
             x = conv(x, edge_index, edge_type)
             x = F.relu(x)
@@ -135,9 +150,13 @@ def load_graph():
     data = torch.load(PROCESSED_DIR / "hetero_graph.pt", weights_only=False)
     node_offsets = {}
     offset = 0
+    node_features = {}
     for nt in data.node_types:
         node_offsets[nt] = offset
-        offset += data[nt].num_nodes
+        n = data[nt].num_nodes
+        if hasattr(data[nt], 'x') and data[nt].x is not None:
+            node_features[nt] = {"offset": offset, "n": n, "feat": data[nt].x}
+        offset += n
     total_nodes = offset
 
     all_triples = []
@@ -160,7 +179,7 @@ def load_graph():
             all_triples.append((ei[0, i].item() + src_off, rid, ei[1, i].item() + dst_off))
 
     triples = torch.tensor(all_triples, dtype=torch.long)
-    return triples, total_nodes, rel_to_id, edge_type_names, edge_type_meta, node_offsets, data
+    return triples, total_nodes, rel_to_id, edge_type_names, edge_type_meta, node_offsets, node_features, data
 
 
 def split_triples(triples, seed):
@@ -293,7 +312,7 @@ def filter_triples_by_relations(triples, rel_to_id, keep_rels):
 # 1. Multi-seed evaluation
 # =========================================================================
 
-def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names):
+def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names, node_features):
     print("\n" + "=" * 70)
     print("PART 1: Multi-Seed Evaluation")
     print("=" * 70)
@@ -309,14 +328,14 @@ def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names):
         for model_name, ModelClass, is_rgcn in [
             ("TransE", TransE, False),
             ("DistMult", DistMult, False),
-            ("R-GCN", RGCN, True),
+            ("R-GCN", RGCNWithFeatures, True),
         ]:
             print(f"    {model_name} ...", end=" ", flush=True)
             t0 = time.time()
             set_seed(seed)
 
             if is_rgcn:
-                model = ModelClass(n_entities, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT)
+                model = ModelClass(n_entities, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
                 train_rgcn(model, train, triples, n_entities)
                 results = evaluate_model(model, test, filter_set, n_entities, edge_type_names, True, triples)
             else:
@@ -361,7 +380,7 @@ def aggregate_multi_seed(all_seed_results):
 # 2. Ablation study
 # =========================================================================
 
-def run_ablation(triples, n_entities, rel_to_id, edge_type_names):
+def run_ablation(triples, n_entities, rel_to_id, edge_type_names, node_features):
     print("\n" + "=" * 70)
     print("PART 2: Ablation Study (R-GCN)")
     print("=" * 70)
@@ -401,7 +420,7 @@ def run_ablation(triples, n_entities, rel_to_id, edge_type_names):
             t0 = time.time()
 
             n_rels_used = len(keep_rels) if keep_rels else len(rel_to_id)
-            model = RGCN(n_entities, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT)
+            model = RGCNWithFeatures(n_entities, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
             train_rgcn(model, train_filtered, all_filtered, n_entities)
 
             gda_key = "Gene__associated_with__Disease"
@@ -454,7 +473,7 @@ def aggregate_ablation(ablation_results):
 # 3. Significance test
 # =========================================================================
 
-def run_significance_test(triples, n_entities, rel_to_id, edge_type_names, node_offsets, node_id_maps):
+def run_significance_test(triples, n_entities, rel_to_id, edge_type_names, node_offsets, node_id_maps, node_features):
     print("\n" + "=" * 70)
     print("PART 3: Embedding Similarity Significance Test")
     print("=" * 70)
@@ -462,7 +481,7 @@ def run_significance_test(triples, n_entities, rel_to_id, edge_type_names, node_
     set_seed(42)
     train, val, test = split_triples(triples, 42)
 
-    model = RGCN(n_entities, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT)
+    model = RGCNWithFeatures(n_entities, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
     model.load_state_dict(torch.load(PROCESSED_DIR / "rgcn_weights.pt", map_location=DEVICE, weights_only=True))
     model.to(DEVICE)
     model.eval()
@@ -665,22 +684,24 @@ def main():
     print(f"Seeds: {SEEDS}")
 
     print("\nLoading graph ...")
-    triples, n_entities, rel_to_id, edge_type_names, edge_type_meta, node_offsets, data = load_graph()
+    triples, n_entities, rel_to_id, edge_type_names, edge_type_meta, node_offsets, node_features, data = load_graph()
     print(f"  {n_entities:,} nodes, {len(rel_to_id)} relations, {triples.size(0):,} triples")
+    feat_str = ", ".join(f"{nt}({info['feat'].shape[1]}d)" for nt, info in node_features.items())
+    print(f"  Node features: {feat_str}")
 
     with open(PROCESSED_DIR / "node_id_maps.json") as f:
         node_id_maps = json.load(f)
 
     # Part 1
-    multi_seed_results = run_multi_seed(triples, n_entities, rel_to_id, edge_type_names)
+    multi_seed_results = run_multi_seed(triples, n_entities, rel_to_id, edge_type_names, node_features)
     multi_seed_agg = aggregate_multi_seed(multi_seed_results)
 
     # Part 2
-    ablation_results = run_ablation(triples, n_entities, rel_to_id, edge_type_names)
+    ablation_results = run_ablation(triples, n_entities, rel_to_id, edge_type_names, node_features)
     ablation_agg = aggregate_ablation(ablation_results)
 
     # Part 3
-    sig_results = run_significance_test(triples, n_entities, rel_to_id, edge_type_names, node_offsets, node_id_maps)
+    sig_results = run_significance_test(triples, n_entities, rel_to_id, edge_type_names, node_offsets, node_id_maps, node_features)
 
     # Save
     print("\nSaving results ...")

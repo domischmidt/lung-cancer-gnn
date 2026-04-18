@@ -1,271 +1,222 @@
-import { useState, useMemo } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lung-CABO Knowledge Graph Schema</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #1a1a2e; color: #e0e0e0; font-family: system-ui, -apple-system, sans-serif; }
+.header { padding: 16px 24px 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+h2 { color: #fff; font-size: 18px; }
+h2 span { font-weight: 400; font-size: 13px; margin-left: 12px; color: #aaa; }
+.subtitle { margin-top: 4px; font-size: 12px; color: #888; }
+.legend { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 4px; font-size: 11px; }
+.legend-dot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+svg { width: 100%; max-height: 640px; }
+.node-group { cursor: pointer; }
+.edge-label { display: none; font-size: 8px; font-family: system-ui; }
+.info-bar { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.9); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 20px; font-size: 12px; display: none; gap: 20px; align-items: center; }
+table { width: 100%; font-size: 11px; border-collapse: collapse; }
+th { text-align: left; padding: 6px 8px; color: #aaa; border-bottom: 1px solid rgba(255,255,255,0.15); }
+td { padding: 4px 8px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.td-right { text-align: right; font-variant-numeric: tabular-nums; }
+.btn { padding: 4px 10px; font-size: 11px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: #ccc; cursor: pointer; margin-left: 8px; }
+.btn:hover { background: rgba(255,255,255,0.2); }
+#table-wrap { display: none; max-height: 260px; overflow-y: auto; padding: 0 24px 16px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h2>Lung-CABO Knowledge Graph<span>22,553 nodes &middot; 177,719 edges &middot; 13 types &middot; 20 relations</span></h2>
+    <p class="subtitle">Heterogeneous schema with node features and temporal edges. Click nodes to explore. Gold = features/new edges.</p>
+  </div>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-dot" style="background:#4c72b0"></span> Bio</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#55a868"></span> Env</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#c44e52"></span> Bridge</span>
+    <span class="legend-item"><span class="legend-dot" style="border:1.5px dashed #ffd700"></span> Features</span>
+    <button class="btn" onclick="toggleTable()">Edges</button>
+  </div>
+</div>
+<svg id="graph" viewBox="-20 10 620 710"></svg>
+<div id="table-wrap"></div>
+<div class="info-bar" id="info-bar"></div>
 
-const schema = {
-  nodes: {
-    Gene:                { count: 10099, color: "#4c72b0", layer: "bio", features: "none (learnable)" },
-    Disease:             { count: 43,    color: "#c44e52", layer: "bridge", features: "none (learnable)" },
-    Pathway:             { count: 1492,  color: "#6a9dca", layer: "bio", features: "none (learnable)" },
-    Variant:             { count: 709,   color: "#7a8fb5", layer: "bio", features: "none (learnable)" },
-    GeneProduct:         { count: 133,   color: "#8ca5c0", layer: "bio", features: "none (learnable)" },
-    Biomarker:           { count: 24,    color: "#9db8cc", layer: "bio", features: "none (learnable)" },
-    ChromoRearr:         { count: 1993,  color: "#5a82a6", layer: "bio", features: "none (learnable)" },
-    GeneFusion:          { count: 4266,  color: "#3a628a", layer: "bio", features: "none (learnable)" },
-    Chemical:            { count: 10,    color: "#55a868", layer: "env", features: "3-dim (mean exp, n_regions, max)" },
-    GeoPoliticalRegion:  { count: 3143,  color: "#2d8e4e", layer: "env", features: "12-dim (10 pollutants + inc + mort)" },
-    GeographicRegion:    { count: 518,   color: "#3da85e", layer: "env", features: "12-dim (10 pollutants + inc + mort)" },
-    Country:             { count: 51,    color: "#1a7a3a", layer: "env", features: "none (learnable)" },
-    CalendarYear:        { count: 72,    color: "#228B22", layer: "env", features: "1-dim (year normalized)" },
-  },
-  edges: [
-    { src: "Gene", rel: "in_pathway", dst: "Pathway", count: 54005 },
-    { src: "GeoPoliticalRegion", rel: "measured_in", dst: "CalendarYear", count: 31142 },
-    { src: "Disease", rel: "cancer_stats_in", dst: "GeographicRegion", count: 23076 },
-    { src: "Gene", rel: "associated_with", dst: "Disease", count: 17701 },
-    { src: "Chemical", rel: "exposure_in", dst: "GeoPoliticalRegion", count: 13988 },
-    { src: "GeographicRegion", rel: "measured_in", dst: "CalendarYear", count: 11337 },
-    { src: "Disease", rel: "cancer_stats_in", dst: "Country", count: 10412 },
-    { src: "Disease", rel: "has_fusion", dst: "GeneFusion", count: 4289 },
-    { src: "GeoPoliticalRegion", rel: "part_of", dst: "Country", count: 3143 },
-    { src: "Disease", rel: "has_rearrangement", dst: "ChromoRearr", count: 2309 },
-    { src: "GeographicRegion", rel: "cancer_data_in", dst: "CalendarYear", count: 1923 },
-    { src: "Chemical", rel: "exposure_in", dst: "GeographicRegion", count: 1332 },
-    { src: "Country", rel: "cancer_data_in", dst: "CalendarYear", count: 792 },
-    { src: "Variant", rel: "located_in_gene", dst: "Gene", count: 783 },
-    { src: "Variant", rel: "variant_of", dst: "Disease", count: 733 },
-    { src: "GeographicRegion", rel: "part_of", dst: "Country", count: 518 },
-    { src: "GeneProduct", rel: "part_of_pathway", dst: "Pathway", count: 168 },
-    { src: "Disease", rel: "subtype_of", dst: "Disease", count: 42 },
-    { src: "Biomarker", rel: "marker_for", dst: "Disease", count: 24 },
-    { src: "Pathway", rel: "linked_to", dst: "Disease", count: 2 },
-  ],
+<script>
+const nodes = {
+  Gene:               { count: 10099, color: "#4c72b0", x: 140, y: 70,  feat: null },
+  Pathway:            { count: 1492,  color: "#6a9dca", x: 40,  y: 190, feat: null },
+  GeneProduct:        { count: 133,   color: "#8ca5c0", x: 40,  y: 300, feat: null },
+  Variant:            { count: 709,   color: "#7a8fb5", x: 290, y: 150, feat: null },
+  Biomarker:          { count: 24,    color: "#9db8cc", x: 290, y: 300, feat: null },
+  ChromoRearr:        { count: 1993,  color: "#5a82a6", x: 500, y: 70,  feat: null },
+  GeneFusion:         { count: 4266,  color: "#3a628a", x: 500, y: 190, feat: null },
+  Disease:            { count: 43,    color: "#c44e52", x: 380, y: 370, feat: null },
+  Chemical:           { count: 10,    color: "#55a868", x: 100, y: 500, feat: "3-dim" },
+  GeoPoliticalRegion: { count: 3143,  color: "#2d8e4e", x: 40,  y: 630, feat: "12-dim" },
+  GeographicRegion:   { count: 518,   color: "#3da85e", x: 300, y: 560, feat: "12-dim" },
+  Country:            { count: 51,    color: "#1a7a3a", x: 500, y: 630, feat: null },
+  CalendarYear:       { count: 72,    color: "#228B22", x: 500, y: 500, feat: "1-dim" },
 };
 
-const positions = {
-  Gene:                { x: 140, y: 70 },
-  Pathway:             { x: 40,  y: 190 },
-  GeneProduct:         { x: 40,  y: 300 },
-  Variant:             { x: 290, y: 150 },
-  Biomarker:           { x: 290, y: 300 },
-  ChromoRearr:         { x: 500, y: 70 },
-  GeneFusion:          { x: 500, y: 190 },
-  Disease:             { x: 380, y: 370 },
-  Chemical:            { x: 100, y: 500 },
-  GeoPoliticalRegion:  { x: 40,  y: 630 },
-  GeographicRegion:    { x: 300, y: 560 },
-  Country:             { x: 500, y: 630 },
-  CalendarYear:        { x: 500, y: 500 },
-};
+const edges = [
+  { src: "Gene", rel: "in_pathway", dst: "Pathway", count: 54005 },
+  { src: "GeoPoliticalRegion", rel: "measured_in", dst: "CalendarYear", count: 31142, isNew: true },
+  { src: "Disease", rel: "cancer_stats_in", dst: "GeographicRegion", count: 23076 },
+  { src: "Gene", rel: "associated_with", dst: "Disease", count: 17701 },
+  { src: "Chemical", rel: "exposure_in", dst: "GeoPoliticalRegion", count: 13988 },
+  { src: "GeographicRegion", rel: "measured_in", dst: "CalendarYear", count: 11337, isNew: true },
+  { src: "Disease", rel: "cancer_stats_in", dst: "Country", count: 10412 },
+  { src: "Disease", rel: "has_fusion", dst: "GeneFusion", count: 4289 },
+  { src: "GeoPoliticalRegion", rel: "part_of", dst: "Country", count: 3143 },
+  { src: "Disease", rel: "has_rearrangement", dst: "ChromoRearr", count: 2309 },
+  { src: "GeographicRegion", rel: "cancer_data_in", dst: "CalendarYear", count: 1923, isNew: true },
+  { src: "Chemical", rel: "exposure_in", dst: "GeographicRegion", count: 1332 },
+  { src: "Country", rel: "cancer_data_in", dst: "CalendarYear", count: 792, isNew: true },
+  { src: "Variant", rel: "located_in_gene", dst: "Gene", count: 783 },
+  { src: "Variant", rel: "variant_of", dst: "Disease", count: 733 },
+  { src: "GeographicRegion", rel: "part_of", dst: "Country", count: 518 },
+  { src: "GeneProduct", rel: "part_of_pathway", dst: "Pathway", count: 168 },
+  { src: "Disease", rel: "subtype_of", dst: "Disease", count: 42, isNew: true },
+  { src: "Biomarker", rel: "marker_for", dst: "Disease", count: 24 },
+  { src: "Pathway", rel: "linked_to", dst: "Disease", count: 2 },
+];
 
-function NodeBox({ name, info, pos, selected, onSelect, hovered, onHover }) {
-  const isActive = selected === name || hovered === name;
-  const scale = Math.max(20, Math.min(50, Math.log10(info.count + 1) * 18));
-  const hasFeatures = info.features !== "none (learnable)";
+const ns = "http://www.w3.org/2000/svg";
+const svg = document.getElementById("graph");
+let selected = null;
 
-  return (
-    <g
-      transform={`translate(${pos.x}, ${pos.y})`}
-      onClick={() => onSelect(selected === name ? null : name)}
-      onMouseEnter={() => onHover(name)}
-      onMouseLeave={() => onHover(null)}
-      style={{ cursor: "pointer" }}
-    >
-      <rect
-        x={-scale * 1.8} y={-scale * 0.7}
-        width={scale * 3.6} height={scale * 1.4}
-        rx={6}
-        fill={info.color}
-        opacity={isActive ? 1 : 0.82}
-        stroke={isActive ? "#fff" : hasFeatures ? "#ffd700" : "transparent"}
-        strokeWidth={isActive ? 2.5 : hasFeatures ? 1.5 : 0}
-        strokeDasharray={hasFeatures && !isActive ? "4,2" : "none"}
-      />
-      <text y={-6} textAnchor="middle" fill="#fff"
-        fontSize={Math.max(9, Math.min(12, scale * 0.3))} fontWeight="bold" fontFamily="system-ui">
-        {name}
-      </text>
-      <text y={8} textAnchor="middle" fill="rgba(255,255,255,0.8)"
-        fontSize={Math.max(7, Math.min(9, scale * 0.24))} fontFamily="system-ui">
-        {info.count.toLocaleString()} nodes
-      </text>
-      {hasFeatures && (
-        <text y={20} textAnchor="middle" fill="#ffd700"
-          fontSize={7} fontFamily="system-ui">
-          {info.features.split(" ")[0]}
-        </text>
-      )}
-    </g>
-  );
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(ns, tag);
+  for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v);
+  if (parent) parent.appendChild(e);
+  return e;
 }
 
-function EdgeLine({ edge, hovered, selected }) {
-  const sp = positions[edge.src];
-  const dp = positions[edge.dst];
-  if (!sp || !dp) return null;
+el("line", { x1: 0, y1: 440, x2: 580, y2: 440, stroke: "rgba(255,255,255,0.08)", "stroke-dasharray": "6,4" }, svg);
+let lbl;
+lbl = el("text", { x: 560, y: 60, "text-anchor": "end", fill: "rgba(255,255,255,0.25)", "font-size": 11 }, svg);
+lbl.textContent = "Biological Layer";
+lbl = el("text", { x: 560, y: 475, "text-anchor": "end", fill: "rgba(255,255,255,0.25)", "font-size": 11 }, svg);
+lbl.textContent = "Environmental Layer";
+lbl = el("text", { x: 280, y: 455, "text-anchor": "middle", fill: "rgba(255,200,100,0.3)", "font-size": 9, "font-style": "italic" }, svg);
+lbl.textContent = "Disease bridges both layers via subtype_of edges";
 
-  const isSelfLoop = edge.src === edge.dst;
-  const isActive = hovered === edge.src || hovered === edge.dst || selected === edge.src || selected === edge.dst;
+const edgeEls = edges.map((e) => {
+  const s = nodes[e.src], d = nodes[e.dst];
+  const isNew = e.isNew || false;
+  const isSelf = e.src === e.dst;
+  let path, label;
 
-  if (isSelfLoop) {
-    const cx = sp.x + 60, cy = sp.y - 40;
-    return (
-      <g>
-        <path
-          d={`M${sp.x + 20},${sp.y - 10} C${cx},${cy - 30} ${cx + 30},${cy} ${sp.x + 20},${sp.y + 10}`}
-          fill="none"
-          stroke={isActive ? "rgba(255,200,100,0.8)" : "rgba(255,200,100,0.25)"}
-          strokeWidth={isActive ? 2 : 1}
-        />
-        {isActive && (
-          <text x={cx + 15} y={cy - 10} textAnchor="middle" fill="rgba(255,200,100,0.9)" fontSize={8} fontFamily="system-ui">
-            {edge.rel} ({edge.count})
-          </text>
-        )}
-      </g>
-    );
+  if (isSelf) {
+    const cx = s.x + 65, cy = s.y - 45;
+    path = el("path", {
+      d: "M"+(s.x+25)+","+(s.y-12)+" C"+cx+","+(cy-30)+" "+(cx+30)+","+cy+" "+(s.x+25)+","+(s.y+12),
+      fill: "none", stroke: "rgba(255,200,100,0.25)", "stroke-width": 1, "stroke-dasharray": "6,3",
+      "data-src": e.src, "data-dst": e.dst
+    }, svg);
+    label = el("text", { x: cx+20, y: cy-12, "text-anchor": "middle", class: "edge-label",
+      fill: "rgba(255,200,100,0.9)", "data-src": e.src, "data-dst": e.dst }, svg);
+    label.textContent = e.rel + " (" + e.count + ")";
+  } else {
+    const mx = (s.x+d.x)/2, my = (s.y+d.y)/2;
+    const dx = d.x-s.x, dy = d.y-s.y;
+    const len = Math.sqrt(dx*dx+dy*dy)||1;
+    const cx = mx+(-dy/len)*20, cy = my+(dx/len)*20;
+    const bc = isNew ? "rgba(255,200,100," : "rgba(255,255,255,";
+    path = el("path", {
+      d: "M"+s.x+","+s.y+" Q"+cx+","+cy+" "+d.x+","+d.y,
+      fill: "none", stroke: bc+"0.12)", "stroke-width": 1,
+      "stroke-dasharray": isNew ? "6,3" : "none",
+      "data-src": e.src, "data-dst": e.dst, "data-new": isNew?"1":"0"
+    }, svg);
+    label = el("text", { x: cx, y: cy-6, "text-anchor": "middle", class: "edge-label",
+      fill: isNew ? "rgba(255,200,100,0.9)" : "rgba(255,255,255,0.9)",
+      "data-src": e.src, "data-dst": e.dst }, svg);
+    label.textContent = e.rel + " (" + e.count.toLocaleString() + ")";
+  }
+  return { path, label, edge: e };
+});
+
+Object.entries(nodes).forEach(([name, n]) => {
+  const sc = Math.max(20, Math.min(50, Math.log10(n.count+1)*18));
+  const g = el("g", { transform: "translate("+n.x+","+n.y+")", class: "node-group" }, svg);
+  const hf = !!n.feat;
+
+  el("rect", {
+    x: -sc*1.8, y: -sc*0.7, width: sc*3.6, height: sc*1.4, rx: 6,
+    fill: n.color, opacity: 0.82,
+    stroke: hf ? "#ffd700" : "transparent", "stroke-width": hf ? 1.5 : 0,
+    "stroke-dasharray": hf ? "4,2" : "none", "data-name": name
+  }, g);
+
+  let t;
+  t = el("text", { y: hf?-8:-3, "text-anchor": "middle", fill: "#fff",
+    "font-size": Math.max(9, Math.min(12, sc*0.3)), "font-weight": "bold", "font-family": "system-ui" }, g);
+  t.textContent = name;
+
+  t = el("text", { y: hf?5:12, "text-anchor": "middle", fill: "rgba(255,255,255,0.8)",
+    "font-size": Math.max(7, Math.min(9, sc*0.24)), "font-family": "system-ui" }, g);
+  t.textContent = n.count.toLocaleString() + " nodes";
+
+  if (hf) {
+    t = el("text", { y: 18, "text-anchor": "middle", fill: "#ffd700",
+      "font-size": 7, "font-family": "system-ui" }, g);
+    t.textContent = n.feat;
   }
 
-  const mx = (sp.x + dp.x) / 2;
-  const my = (sp.y + dp.y) / 2;
-  const dx = dp.x - sp.x, dy = dp.y - sp.y;
-  const len = Math.sqrt(dx * dx + dy * dy) || 1;
-  const curve = 20;
-  const cx = mx + (-dy / len) * curve;
-  const cy = my + (dx / len) * curve;
+  g.addEventListener("click", () => { selected = selected===name ? null : name; update(); });
+  g.addEventListener("mouseenter", () => { if (!selected) highlight(name); });
+  g.addEventListener("mouseleave", () => { if (!selected) highlight(null); });
+});
 
-  const isNewEdge = ["measured_in", "cancer_data_in", "subtype_of"].includes(edge.rel);
+function highlight(name) {
+  document.querySelectorAll("[data-name]").forEach(r => {
+    const nm = r.dataset.name;
+    r.setAttribute("opacity", name ? (nm===name?1:0.4) : 0.82);
+    if (nm===name) { r.setAttribute("stroke","#fff"); r.setAttribute("stroke-width","2.5"); }
+    else if (nodes[nm] && nodes[nm].feat) { r.setAttribute("stroke","#ffd700"); r.setAttribute("stroke-width","1.5"); }
+    else { r.setAttribute("stroke","transparent"); r.setAttribute("stroke-width","0"); }
+  });
 
-  return (
-    <g>
-      <path
-        d={`M${sp.x},${sp.y} Q${cx},${cy} ${dp.x},${dp.y}`}
-        fill="none"
-        stroke={isActive ? (isNewEdge ? "rgba(255,200,100,0.8)" : "rgba(255,255,255,0.6)") : (isNewEdge ? "rgba(255,200,100,0.15)" : "rgba(255,255,255,0.12)")}
-        strokeWidth={isActive ? 2 : 1}
-        strokeDasharray={isNewEdge ? "6,3" : "none"}
-      />
-      {isActive && (
-        <text x={cx} y={cy - 6} textAnchor="middle"
-          fill={isNewEdge ? "rgba(255,200,100,0.9)" : "rgba(255,255,255,0.9)"}
-          fontSize={8} fontFamily="system-ui">
-          {edge.rel} ({edge.count.toLocaleString()})
-        </text>
-      )}
-    </g>
-  );
+  edgeEls.forEach(({ path, label, edge }) => {
+    const active = !name || edge.src===name || edge.dst===name;
+    const isNew = edge.isNew;
+    const bc = isNew ? "rgba(255,200,100," : "rgba(255,255,255,";
+    path.setAttribute("stroke", active&&name ? bc+"0.8)" : bc+"0.12)");
+    path.setAttribute("stroke-width", active&&name ? 2 : 1);
+    label.style.display = active&&name ? "block" : "none";
+  });
+
+  const bar = document.getElementById("info-bar");
+  if (name) {
+    const n = nodes[name];
+    const conn = edges.filter(e => e.src===name || e.dst===name);
+    const te = conn.reduce((s,e) => s+e.count, 0);
+    const fs = n.feat ? '<span style="color:#ffd700">'+n.feat+' features</span>' : "learnable embedding";
+    bar.innerHTML = '<span style="font-weight:600;color:'+n.color+'">'+name+'</span> <span>'+n.count.toLocaleString()+' nodes</span> <span>'+fs+'</span> <span>'+conn.length+' relations</span> <span>'+te.toLocaleString()+' edges</span>';
+    bar.style.display = "flex";
+  } else { bar.style.display = "none"; }
 }
 
-export default function App() {
-  const [selected, setSelected] = useState(null);
-  const [hovered, setHovered] = useState(null);
-  const [showTable, setShowTable] = useState(false);
+function update() { highlight(selected); }
 
-  const activeNode = selected || hovered;
-
-  const connectedEdges = useMemo(() => {
-    if (!activeNode) return schema.edges;
-    return schema.edges.filter(e => e.src === activeNode || e.dst === activeNode);
-  }, [activeNode]);
-
-  const totalNodes = Object.values(schema.nodes).reduce((s, n) => s + n.count, 0);
-  const totalEdges = schema.edges.reduce((s, e) => s + e.count, 0);
-
-  return (
-    <div style={{ background: "#1a1a2e", minHeight: "100vh", color: "#e0e0e0", fontFamily: "system-ui, sans-serif" }}>
-      <div style={{ padding: "16px 24px 8px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <div>
-          <h2 style={{ margin: 0, color: "#fff", fontSize: 18 }}>
-            Lung-CABO Knowledge Graph
-            <span style={{ fontWeight: 400, fontSize: 13, marginLeft: 12, color: "#aaa" }}>
-              {totalNodes.toLocaleString()} nodes, {totalEdges.toLocaleString()} edges, 13 types, 20 relations
-            </span>
-          </h2>
-          <p style={{ margin: "4px 0 0", fontSize: 12, color: "#888" }}>
-            Heterogeneous schema with node features (exposure values, mortality rates) and temporal edges.
-            Click nodes to explore. Gold borders = node features. Dashed gold edges = new edges (temporal, subtype).
-          </p>
-        </div>
-        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 11 }}>
-            <span style={{ width: 10, height: 10, borderRadius: 2, background: "#4c72b0", display: "inline-block" }} /> Bio
-          </span>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 11 }}>
-            <span style={{ width: 10, height: 10, borderRadius: 2, background: "#55a868", display: "inline-block" }} /> Env
-          </span>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 11 }}>
-            <span style={{ width: 10, height: 10, borderRadius: 2, background: "#c44e52", display: "inline-block" }} /> Bridge
-          </span>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 11 }}>
-            <span style={{ width: 10, height: 10, borderRadius: 2, border: "1.5px dashed #ffd700", display: "inline-block" }} /> Features
-          </span>
-          <button onClick={() => setShowTable(!showTable)}
-            style={{ marginLeft: 8, padding: "4px 10px", fontSize: 11, background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 4, color: "#ccc", cursor: "pointer" }}>
-            {showTable ? "Hide" : "Edges"}
-          </button>
-        </div>
-      </div>
-
-      <svg viewBox="-20 10 620 700" style={{ width: "100%", maxHeight: showTable ? 420 : 620 }}>
-        <line x1={0} y1={440} x2={580} y2={440} stroke="rgba(255,255,255,0.08)" strokeDasharray="6,4" />
-        <text x={560} y={60} textAnchor="end" fill="rgba(255,255,255,0.25)" fontSize={11}>Biological Layer</text>
-        <text x={560} y={475} textAnchor="end" fill="rgba(255,255,255,0.25)" fontSize={11}>Environmental Layer</text>
-        <text x={280} y={455} textAnchor="middle" fill="rgba(255,200,100,0.3)" fontSize={9} fontStyle="italic">
-          Disease bridges both layers via subtype_of edges
-        </text>
-
-        {schema.edges.map((e, i) => (
-          <EdgeLine key={i} edge={e} hovered={hovered} selected={selected} />
-        ))}
-        {Object.entries(schema.nodes).map(([name, info]) => (
-          <NodeBox key={name} name={name} info={info} pos={positions[name]}
-            selected={selected} onSelect={setSelected} hovered={hovered} onHover={setHovered} />
-        ))}
-      </svg>
-
-      {showTable && (
-        <div style={{ padding: "0 24px 16px", maxHeight: 260, overflowY: "auto" }}>
-          <table style={{ width: "100%", fontSize: 11, borderCollapse: "collapse" }}>
-            <thead>
-              <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.15)" }}>
-                <th style={{ textAlign: "left", padding: "6px 8px", color: "#aaa" }}>Source</th>
-                <th style={{ textAlign: "left", padding: "6px 8px", color: "#aaa" }}>Relation</th>
-                <th style={{ textAlign: "left", padding: "6px 8px", color: "#aaa" }}>Target</th>
-                <th style={{ textAlign: "right", padding: "6px 8px", color: "#aaa" }}>Edges</th>
-                <th style={{ textAlign: "center", padding: "6px 8px", color: "#aaa" }}>New</th>
-              </tr>
-            </thead>
-            <tbody>
-              {(activeNode ? connectedEdges : schema.edges).map((e, i) => {
-                const isNew = ["measured_in", "cancer_data_in", "subtype_of"].includes(e.rel);
-                return (
-                  <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", background: isNew ? "rgba(255,200,100,0.05)" : "transparent" }}>
-                    <td style={{ padding: "4px 8px" }}>
-                      <span style={{ display: "inline-block", width: 8, height: 8, borderRadius: 2, background: schema.nodes[e.src]?.color, marginRight: 6 }} />
-                      {e.src}
-                    </td>
-                    <td style={{ padding: "4px 8px", color: isNew ? "#ffd700" : "#999" }}>{e.rel}</td>
-                    <td style={{ padding: "4px 8px" }}>
-                      <span style={{ display: "inline-block", width: 8, height: 8, borderRadius: 2, background: schema.nodes[e.dst]?.color, marginRight: 6 }} />
-                      {e.dst}
-                    </td>
-                    <td style={{ padding: "4px 8px", textAlign: "right", fontVariantNumeric: "tabular-nums" }}>{e.count.toLocaleString()}</td>
-                    <td style={{ padding: "4px 8px", textAlign: "center" }}>{isNew ? "✦" : ""}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      )}
-
-      {activeNode && (
-        <div style={{ position: "fixed", bottom: 16, left: "50%", transform: "translateX(-50%)", background: "rgba(0,0,0,0.9)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, padding: "10px 20px", fontSize: 12, display: "flex", gap: 20, alignItems: "center" }}>
-          <span style={{ fontWeight: 600, color: schema.nodes[activeNode]?.color }}>{activeNode}</span>
-          <span>{schema.nodes[activeNode]?.count.toLocaleString()} nodes</span>
-          <span style={{ color: "#ffd700" }}>{schema.nodes[activeNode]?.features}</span>
-          <span>{connectedEdges.length} relations</span>
-          <span>{connectedEdges.reduce((s, e) => s + e.count, 0).toLocaleString()} edges</span>
-        </div>
-      )}
-    </div>
-  );
+function toggleTable() {
+  const w = document.getElementById("table-wrap");
+  if (w.style.display==="none" || !w.style.display) {
+    const shown = selected ? edges.filter(e => e.src===selected||e.dst===selected) : edges;
+    let h = '<table><thead><tr><th>Source</th><th>Relation</th><th>Target</th><th style="text-align:right">Edges</th><th style="text-align:center">New</th></tr></thead><tbody>';
+    shown.forEach(e => {
+      const isN = e.isNew||false;
+      h += '<tr style="border-bottom:1px solid rgba(255,255,255,0.05);'+(isN?'background:rgba(255,200,100,0.05)':'')+'"><td><span class="legend-dot" style="background:'+nodes[e.src].color+';width:8px;height:8px;margin-right:6px;vertical-align:middle"></span>'+e.src+'</td><td style="color:'+(isN?'#ffd700':'#999')+'">'+e.rel+'</td><td><span class="legend-dot" style="background:'+nodes[e.dst].color+';width:8px;height:8px;margin-right:6px;vertical-align:middle"></span>'+e.dst+'</td><td class="td-right">'+e.count.toLocaleString()+'</td><td style="text-align:center">'+(isN?'&#10022;':'')+'</td></tr>';
+    });
+    h += '</tbody></table>';
+    w.innerHTML = h;
+    w.style.display = "block";
+  } else { w.style.display = "none"; }
 }
+</script>
+</body>
+</html>
