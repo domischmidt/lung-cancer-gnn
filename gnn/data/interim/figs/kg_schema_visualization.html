@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lung-CABO Knowledge Graph Schema</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #1a1a2e; color: #e0e0e0; font-family: system-ui, -apple-system, sans-serif; }
+.header { padding: 16px 24px 8px; display: flex; justify-content: space-between; align-items: center; }
+h2 { color: #fff; font-size: 18px; }
+h2 span { font-weight: 400; font-size: 13px; margin-left: 12px; color: #aaa; }
+.subtitle { margin-top: 4px; font-size: 12px; color: #888; }
+.legend { display: flex; gap: 12px; align-items: center; }
+.legend-item { display: flex; align-items: center; gap: 4px; font-size: 11px; }
+.legend-dot { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+svg { width: 100%; max-height: 620px; }
+.node-group { cursor: pointer; }
+.node-rect { transition: opacity 0.15s, stroke-width 0.15s; }
+.node-label { fill: #fff; font-weight: bold; font-family: system-ui, sans-serif; }
+.node-count { fill: rgba(255,255,255,0.8); font-family: system-ui, sans-serif; }
+.edge-path { transition: stroke 0.15s, stroke-width 0.15s; }
+.edge-label { fill: rgba(255,255,255,0.9); font-size: 8px; font-family: system-ui, sans-serif; display: none; }
+.info-bar { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.85); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 20px; font-size: 12px; display: none; gap: 24px; align-items: center; }
+table { width: 100%; font-size: 11px; border-collapse: collapse; margin: 0 24px 16px; max-width: calc(100% - 48px); }
+th { text-align: left; padding: 6px 8px; color: #aaa; border-bottom: 1px solid rgba(255,255,255,0.15); }
+td { padding: 4px 8px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.td-right { text-align: right; font-variant-numeric: tabular-nums; }
+.btn { padding: 4px 10px; font-size: 11px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; color: #ccc; cursor: pointer; margin-left: 12px; }
+.btn:hover { background: rgba(255,255,255,0.2); }
+#table-wrap { display: none; max-height: 260px; overflow-y: auto; padding: 0 24px 16px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h2>Lung-CABO Knowledge Graph<span>22,481 nodes &middot; 248,773 edges</span></h2>
+    <p class="subtitle">Collapsed heterogeneous schema. Click a node to highlight connections.</p>
+  </div>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-dot" style="background:#4c72b0"></span> Biological</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#55a868"></span> Environmental</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#c44e52"></span> Bridge</span>
+    <button class="btn" onclick="toggleTable()">Edge Table</button>
+  </div>
+</div>
+
+<svg id="graph" viewBox="-20 20 640 700"></svg>
+<div id="table-wrap"></div>
+<div class="info-bar" id="info-bar"></div>
+
+<script>
+const nodes = {
+  Gene:               { count: 10099, color: "#4c72b0", x: 160, y: 80 },
+  Pathway:            { count: 1492,  color: "#6a9dca", x: 60,  y: 200 },
+  GeneProduct:        { count: 133,   color: "#8ca5c0", x: 60,  y: 320 },
+  Variant:            { count: 709,   color: "#7a8fb5", x: 300, y: 180 },
+  Biomarker:          { count: 24,    color: "#9db8cc", x: 300, y: 320 },
+  ChromoRearr:        { count: 1993,  color: "#5a82a6", x: 520, y: 80 },
+  GeneFusion:         { count: 4266,  color: "#3a628a", x: 520, y: 200 },
+  Disease:            { count: 43,    color: "#c44e52", x: 400, y: 380 },
+  Chemical:           { count: 10,    color: "#55a868", x: 160, y: 520 },
+  GeoPoliticalRegion: { count: 3143,  color: "#2d8e4e", x: 60,  y: 640 },
+  GeographicRegion:   { count: 518,   color: "#3da85e", x: 340, y: 580 },
+  Country:            { count: 51,    color: "#1a7a3a", x: 520, y: 640 },
+};
+
+const edges = [
+  { src: "Chemical", rel: "exposure_in", dst: "GeoPoliticalRegion", count: 117609 },
+  { src: "Gene", rel: "in_pathway", dst: "Pathway", count: 54005 },
+  { src: "Disease", rel: "cancer_stats_in", dst: "GeographicRegion", count: 23076 },
+  { src: "Gene", rel: "associated_with", dst: "Disease", count: 17701 },
+  { src: "Chemical", rel: "exposure_in", dst: "GeographicRegion", count: 14001 },
+  { src: "Disease", rel: "cancer_stats_in", dst: "Country", count: 10412 },
+  { src: "Disease", rel: "has_fusion", dst: "GeneFusion", count: 4289 },
+  { src: "GeoPoliticalRegion", rel: "part_of", dst: "Country", count: 3143 },
+  { src: "Disease", rel: "has_rearrangement", dst: "ChromoRearr", count: 2309 },
+  { src: "Variant", rel: "located_in_gene", dst: "Gene", count: 783 },
+  { src: "Variant", rel: "variant_of", dst: "Disease", count: 733 },
+  { src: "GeographicRegion", rel: "part_of", dst: "Country", count: 518 },
+  { src: "GeneProduct", rel: "part_of_pathway", dst: "Pathway", count: 168 },
+  { src: "Biomarker", rel: "marker_for", dst: "Disease", count: 24 },
+  { src: "Pathway", rel: "linked_to", dst: "Disease", count: 2 },
+];
+
+const svg = document.getElementById("graph");
+const ns = "http://www.w3.org/2000/svg";
+let selected = null;
+
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(ns, tag);
+  for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+
+// divider
+el("line", { x1: 0, y1: 450, x2: 600, y2: 450, stroke: "rgba(255,255,255,0.1)", "stroke-dasharray": "6,4" }, svg);
+const lblBio = el("text", { x: 580, y: 70, "text-anchor": "end", fill: "rgba(255,255,255,0.3)", "font-size": 11 }, svg);
+lblBio.textContent = "Biological";
+const lblEnv = el("text", { x: 580, y: 510, "text-anchor": "end", fill: "rgba(255,255,255,0.3)", "font-size": 11 }, svg);
+lblEnv.textContent = "Environmental";
+
+// edges
+const edgeEls = edges.map((e, i) => {
+  const s = nodes[e.src], d = nodes[e.dst];
+  const mx = (s.x + d.x) / 2, my = (s.y + d.y) / 2;
+  const dx = d.x - s.x, dy = d.y - s.y;
+  const len = Math.sqrt(dx*dx + dy*dy) || 1;
+  const cx = mx + (-dy/len) * 20, cy = my + (dx/len) * 20;
+
+  const path = el("path", {
+    d: `M${s.x},${s.y} Q${cx},${cy} ${d.x},${d.y}`,
+    fill: "none", stroke: "rgba(255,255,255,0.15)", "stroke-width": 1,
+    class: "edge-path", "data-src": e.src, "data-dst": e.dst
+  }, svg);
+
+  const label = el("text", {
+    x: cx, y: cy - 6, "text-anchor": "middle",
+    class: "edge-label", "data-src": e.src, "data-dst": e.dst
+  }, svg);
+  label.textContent = `${e.rel} (${e.count.toLocaleString()})`;
+
+  return { path, label, edge: e };
+});
+
+// nodes
+Object.entries(nodes).forEach(([name, n]) => {
+  const sc = Math.max(18, Math.min(50, Math.log10(n.count + 1) * 18));
+  const g = el("g", { transform: `translate(${n.x},${n.y})`, class: "node-group" }, svg);
+
+  el("rect", {
+    x: -sc * 1.8, y: -sc * 0.6, width: sc * 3.6, height: sc * 1.2, rx: 6,
+    fill: n.color, opacity: 0.82, stroke: "transparent", "stroke-width": 0,
+    class: "node-rect", "data-name": name
+  }, g);
+
+  const t1 = el("text", { y: -3, "text-anchor": "middle", "font-size": Math.max(9, Math.min(12, sc * 0.32)), class: "node-label" }, g);
+  t1.textContent = name;
+
+  const t2 = el("text", { y: 12, "text-anchor": "middle", "font-size": Math.max(8, Math.min(10, sc * 0.26)), class: "node-count" }, g);
+  t2.textContent = n.count.toLocaleString() + " nodes";
+
+  g.addEventListener("click", () => {
+    selected = selected === name ? null : name;
+    update();
+  });
+  g.addEventListener("mouseenter", () => { if (!selected) highlight(name); });
+  g.addEventListener("mouseleave", () => { if (!selected) highlight(null); });
+});
+
+function highlight(name) {
+  document.querySelectorAll(".node-rect").forEach(r => {
+    r.setAttribute("opacity", name ? (r.dataset.name === name ? 1 : 0.4) : 0.82);
+    r.setAttribute("stroke", r.dataset.name === name ? "#fff" : "transparent");
+    r.setAttribute("stroke-width", r.dataset.name === name ? 2.5 : 0);
+  });
+  edgeEls.forEach(({ path, label, edge }) => {
+    const active = !name || edge.src === name || edge.dst === name;
+    path.setAttribute("stroke", active ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.08)");
+    path.setAttribute("stroke-width", active && name ? 2 : 1);
+    label.style.display = active && name ? "block" : "none";
+  });
+
+  const bar = document.getElementById("info-bar");
+  if (name) {
+    const n = nodes[name];
+    const conn = edges.filter(e => e.src === name || e.dst === name);
+    const totalE = conn.reduce((s, e) => s + e.count, 0);
+    bar.innerHTML = `<span style="font-weight:600;color:${n.color}">${name}</span>
+      <span>${n.count.toLocaleString()} nodes</span>
+      <span>${conn.length} edge types</span>
+      <span>${totalE.toLocaleString()} total edges</span>`;
+    bar.style.display = "flex";
+  } else {
+    bar.style.display = "none";
+  }
+}
+
+function update() { highlight(selected); }
+
+function toggleTable() {
+  const w = document.getElementById("table-wrap");
+  if (w.style.display === "none" || !w.style.display) {
+    let html = `<table><thead><tr><th>Source</th><th>Relation</th><th>Target</th><th style="text-align:right">Edges</th></tr></thead><tbody>`;
+    edges.forEach(e => {
+      html += `<tr>
+        <td><span class="legend-dot" style="background:${nodes[e.src].color};width:8px;height:8px;margin-right:6px;vertical-align:middle"></span>${e.src}</td>
+        <td style="color:#999">${e.rel}</td>
+        <td><span class="legend-dot" style="background:${nodes[e.dst].color};width:8px;height:8px;margin-right:6px;vertical-align:middle"></span>${e.dst}</td>
+        <td class="td-right">${e.count.toLocaleString()}</td>
+      </tr>`;
+    });
+    html += `</tbody></table>`;
+    w.innerHTML = html;
+    w.style.display = "block";
+  } else {
+    w.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>

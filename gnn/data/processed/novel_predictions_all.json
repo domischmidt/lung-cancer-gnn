@@ -1,0 +1,5469 @@
+{
+  "summary": {
+    "GeoPoliticalRegion__part_of__Country": {
+      "n_predictions": 50,
+      "top_confidence": -0.6604,
+      "total_candidates": 160293,
+      "time_seconds": 43.9
+    },
+    "GeographicRegion__part_of__Country": {
+      "n_predictions": 50,
+      "top_confidence": -0.8559,
+      "total_candidates": 26418,
+      "time_seconds": 7.5
+    },
+    "Gene__associated_with__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 5.0247,
+      "total_candidates": 434257,
+      "time_seconds": 219.0
+    },
+    "Variant__variant_of__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 2.1176,
+      "total_candidates": 30487,
+      "time_seconds": 20.9
+    },
+    "Variant__located_in_gene__Gene": {
+      "n_predictions": 50,
+      "top_confidence": 2.053,
+      "total_candidates": 7160191,
+      "time_seconds": 137.5
+    },
+    "Gene__in_pathway__Pathway": {
+      "n_predictions": 50,
+      "top_confidence": 5.5149,
+      "total_candidates": 15067708,
+      "time_seconds": 161.4
+    },
+    "Pathway__linked_to__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 4.3046,
+      "total_candidates": 64156,
+      "time_seconds": 47.6
+    },
+    "GeneProduct__part_of_pathway__Pathway": {
+      "n_predictions": 50,
+      "top_confidence": 1.7813,
+      "total_candidates": 198436,
+      "time_seconds": 58.2
+    },
+    "Biomarker__marker_for__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 0.9765,
+      "total_candidates": 1032,
+      "time_seconds": 0.9
+    },
+    "Disease__has_rearrangement__ChromoRearr": {
+      "n_predictions": 50,
+      "top_confidence": 4.0076,
+      "total_candidates": 85699,
+      "time_seconds": 16.8
+    },
+    "Disease__has_fusion__GeneFusion": {
+      "n_predictions": 50,
+      "top_confidence": 3.0824,
+      "total_candidates": 183438,
+      "time_seconds": 37.7
+    },
+    "Chemical__exposure_in__GeoPoliticalRegion": {
+      "n_predictions": 50,
+      "top_confidence": 4.5865,
+      "total_candidates": 31430,
+      "time_seconds": 3.5
+    },
+    "Chemical__exposure_in__GeographicRegion": {
+      "n_predictions": 50,
+      "top_confidence": 6.4136,
+      "total_candidates": 5180,
+      "time_seconds": 1.1
+    },
+    "Disease__cancer_stats_in__Country": {
+      "n_predictions": 50,
+      "top_confidence": 0.5914,
+      "total_candidates": 2193,
+      "time_seconds": 1.5
+    },
+    "Disease__cancer_stats_in__GeographicRegion": {
+      "n_predictions": 50,
+      "top_confidence": 0.6284,
+      "total_candidates": 22274,
+      "time_seconds": 5.0
+    }
+  },
+  "predictions": {
+    "GeoPoliticalRegion__part_of__Country": [
+      {
+        "src_label": "Treibach-Althofen",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/AT_treibach_althofen",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6604,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Austria",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Mysliborz",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/PL_mysliborz",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6619,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Poland",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Rieme (Evergem)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/BE_rieme_evergem",
+        "dst_label": "Serbia",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RS",
+        "confidence": -0.6663,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Belgium",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Szombathely",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/HU_szombathely",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6718,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Hungary",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Rieme (Evergem)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/BE_rieme_evergem",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6796,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Belgium",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Tournai (Havinnes)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/BE_tournai_havinnes",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6811,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Belgium",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Strovolos",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/CY_strovolos",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6825,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Cyprus",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Nik_I_",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/ME_nik_i",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6879,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Montenegro",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Brandys Nad Labem-Stara Boleslav",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/CZ_brandys_nad_labem_stara_boleslav",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6906,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Czechia",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Bojano",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/IT_bojano",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6954,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Polaca",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/HR_polaca",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6985,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Croatia",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Viviez",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/FR_viviez",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.6992,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "France",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Bourg-Fidele",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/FR_bourg_fidele",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.7008,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "France",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Pierre-Benite",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/FR_pierre_benite",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.701,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "France",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Brindisi Zi",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/IT_brindisi_zi",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.701,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Berre-L'Etang",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/FR_berre_l_etang",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.7032,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "France",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Pierre-Benite",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/FR_pierre_benite",
+        "dst_label": "Serbia",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RS",
+        "confidence": -0.7041,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "France",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Saare",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/EE_saare",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.7046,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Estonia",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Halmajugra",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/HU_halmajugra",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.705,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Hungary",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Hodonin",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/CZ_hodonin",
+        "dst_label": "Bosnia and Herzegovina",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA",
+        "confidence": -0.7061,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Czechia",
+            "type": "Country"
+          }
+        ]
+      }
+    ],
+    "GeographicRegion__part_of__Country": [
+      {
+        "src_label": "Trapani",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_trapani",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.8559,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "South Region",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_south_region",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.866,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Portugal",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Naples South",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_naples_south",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.8883,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Monza-Brianza-Lecco",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_monza_brianza_lecco",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.914,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Reggio Calabria",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_reggio_calabria",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9231,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "North Region",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_north_region",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9321,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Portugal",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Bergamo",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_bergamo",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9432,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Avellino",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_avellino",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9499,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Nuoro",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_nuoro",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.952,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Valais",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_valais",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9593,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Switzerland",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Castell\u00f3n",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_castellon",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9683,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Spain",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Cuenca",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_cuenca",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9696,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Spain",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Benevento",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_benevento",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9728,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Gironde",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_gironde",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9784,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "France",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Trapani",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_trapani",
+        "dst_label": "United Kingdom",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB",
+        "confidence": -0.9785,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Insubria-Como",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_insubria_como",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9848,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "South Region",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_south_region",
+        "dst_label": "United Kingdom",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB",
+        "confidence": -0.9865,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Portugal",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Bern Solothurn",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_bern_solothurn",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -0.9895,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Switzerland",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Agrigento",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_agrigento",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -1.0003,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Caserta",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_caserta",
+        "dst_label": "Korea",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR",
+        "confidence": -1.0016,
+        "src_context": [
+          {
+            "relation": "part_of",
+            "node": "Italy",
+            "type": "Country"
+          }
+        ]
+      }
+    ],
+    "Gene__associated_with__Disease": [
+      {
+        "src_label": "NBN",
+        "src_uri": "lucia:gene/ncbigene:4683",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 5.0247,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Adenocarcinoma of lung (disorder)",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "SOD2",
+        "src_uri": "lucia:gene/ncbigene:6648",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.8024,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "PLAU",
+        "src_uri": "lucia:gene/ncbigene:5328",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 4.7655,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Hyperplasia",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "TSC2",
+        "src_uri": "lucia:gene/ncbigene:7249",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.7367,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Proteus Syndrome",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "CD274",
+        "src_uri": "lucia:gene/ncbigene:29126",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 4.6756,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "SPP1",
+        "src_uri": "lucia:gene/ncbigene:6696",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.6606,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "CCNB1",
+        "src_uri": "lucia:gene/ncbigene:891",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.6379,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Hyperplasia",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Adenocarcinoma of lung (disorder)",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "SLC16A1",
+        "src_uri": "lucia:gene/ncbigene:6566",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.5961,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Adenocarcinoma of lung (disorder)",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Small cell carcinoma of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "ABCB1",
+        "src_uri": "lucia:gene/ncbigene:5243",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 4.5449,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Squamous cell carcinoma of lung",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "FLT1",
+        "src_uri": "lucia:gene/ncbigene:2321",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.531,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Small cell carcinoma of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "IDH1",
+        "src_uri": "lucia:gene/ncbigene:3417",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.5166,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Adenocarcinoma of lung (disorder)",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Small cell carcinoma of lung",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "ABCG2",
+        "src_uri": "lucia:gene/ncbigene:9429",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.5152,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "ALK",
+        "src_uri": "lucia:gene/ncbigene:238",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 4.513,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Squamous cell carcinoma of lung",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "PLAUR",
+        "src_uri": "lucia:gene/ncbigene:5329",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.5084,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Hyperplasia",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "BCL2",
+        "src_uri": "lucia:gene/ncbigene:596",
+        "dst_label": "Lymphoepithelial carcinoma",
+        "dst_uri": "lucia:disease/C0334254",
+        "confidence": 4.4959,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Hyperplasia",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Metaplasia",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "COL11A2",
+        "src_uri": "lucia:gene/ncbigene:1302",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 4.4957,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Squamous cell carcinoma of lung",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Small cell carcinoma of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "BCL2",
+        "src_uri": "lucia:gene/ncbigene:596",
+        "dst_label": "Squamous non-small cell lung cancer",
+        "dst_uri": "lucia:disease/C4509816",
+        "confidence": 4.4823,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Hyperplasia",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Metaplasia",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "CD274",
+        "src_uri": "lucia:gene/ncbigene:29126",
+        "dst_label": "Adenocarcinoma, Oxyphilic",
+        "dst_uri": "lucia:disease/C0205642",
+        "confidence": 4.474,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "CXCL12",
+        "src_uri": "lucia:gene/ncbigene:6387",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.4463,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "BCL2",
+        "src_uri": "lucia:gene/ncbigene:596",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 4.4252,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Hyperplasia",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Metaplasia",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          }
+        ]
+      }
+    ],
+    "Variant__variant_of__Disease": [
+      {
+        "src_label": "rs397517112",
+        "src_uri": "lucia:variant/rs397517112",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 2.1176,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR-AS1",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913446",
+        "src_uri": "lucia:variant/rs121913446",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 2.0938,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs909797662",
+        "src_uri": "lucia:variant/rs909797662",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 2.0776,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs13312840",
+        "src_uri": "lucia:variant/rs13312840",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 2.0705,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "NBN",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs17851045",
+        "src_uri": "lucia:variant/rs17851045",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 2.025,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "KRAS",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs149840192",
+        "src_uri": "lucia:variant/rs149840192",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 2.0107,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs50872",
+        "src_uri": "lucia:variant/rs50872",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.987,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "ERCC2",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs754426793",
+        "src_uri": "lucia:variant/rs754426793",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.986,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR-AS1",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs1077424",
+        "src_uri": "lucia:variant/rs1077424",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.978,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "DAB1",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913369",
+        "src_uri": "lucia:variant/rs121913369",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9513,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "BRAF",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs1427028322",
+        "src_uri": "lucia:variant/rs1427028322",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9504,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs61764370",
+        "src_uri": "lucia:variant/rs61764370",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9385,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "KRAS",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs1061302",
+        "src_uri": "lucia:variant/rs1061302",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9284,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "NBN",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs774487133",
+        "src_uri": "lucia:variant/rs774487133",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9275,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs228729",
+        "src_uri": "lucia:variant/rs228729",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9264,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "PER3",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs1394960893",
+        "src_uri": "lucia:variant/rs1394960893",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9261,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "GSTP1",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913467",
+        "src_uri": "lucia:variant/rs121913467",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9214,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs727502902",
+        "src_uri": "lucia:variant/rs727502902",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9132,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "BRAF",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs17425189",
+        "src_uri": "lucia:variant/rs17425189",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9095,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "DAB1",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs1799793",
+        "src_uri": "lucia:variant/rs1799793",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 1.9049,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "ERCC2",
+            "type": "Gene"
+          }
+        ]
+      }
+    ],
+    "Variant__located_in_gene__Gene": [
+      {
+        "src_label": "rs121913231",
+        "src_uri": "lucia:variant/rs121913231",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 2.053,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913231",
+        "src_uri": "lucia:variant/rs121913231",
+        "dst_label": "AXL",
+        "dst_uri": "lucia:gene/ncbigene:558",
+        "confidence": 1.9311,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs1057519975",
+        "src_uri": "lucia:variant/rs1057519975",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.9222,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "TP53",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913240",
+        "src_uri": "lucia:variant/rs121913240",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.8982,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "KRAS",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913231",
+        "src_uri": "lucia:variant/rs121913231",
+        "dst_label": "DAB1",
+        "dst_uri": "lucia:gene/ncbigene:1600",
+        "confidence": 1.8531,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs2307486",
+        "src_uri": "lucia:variant/rs2307486",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.8385,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "APEX1",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs1057519975",
+        "src_uri": "lucia:variant/rs1057519975",
+        "dst_label": "AXL",
+        "dst_uri": "lucia:gene/ncbigene:558",
+        "confidence": 1.8359,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "TP53",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913240",
+        "src_uri": "lucia:variant/rs121913240",
+        "dst_label": "AXL",
+        "dst_uri": "lucia:gene/ncbigene:558",
+        "confidence": 1.8343,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "KRAS",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs201661522",
+        "src_uri": "lucia:variant/rs201661522",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.8323,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "ABCB1",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs31490",
+        "src_uri": "lucia:variant/rs31490",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.8289,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "CLPTM1L",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913418",
+        "src_uri": "lucia:variant/rs121913418",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.8003,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs1171287261",
+        "src_uri": "lucia:variant/rs1171287261",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.7863,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913231",
+        "src_uri": "lucia:variant/rs121913231",
+        "dst_label": "PER3",
+        "dst_uri": "lucia:gene/ncbigene:8863",
+        "confidence": 1.7751,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs10735810",
+        "src_uri": "lucia:variant/rs10735810",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.7746,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "VDR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs876660754",
+        "src_uri": "lucia:variant/rs876660754",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.7743,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Small cell carcinoma of lung",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "TP53",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs397517132",
+        "src_uri": "lucia:variant/rs397517132",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.7738,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs11554290",
+        "src_uri": "lucia:variant/rs11554290",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.7641,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "NRAS",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs2839698",
+        "src_uri": "lucia:variant/rs2839698",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.7592,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "H19",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs1430452530",
+        "src_uri": "lucia:variant/rs1430452530",
+        "dst_label": "EGFR-AS1",
+        "dst_uri": "lucia:gene/ncbigene:100507500",
+        "confidence": 1.7512,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "HIF1A",
+            "type": "Gene"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "HIF1A-AS3",
+            "type": "Gene"
+          }
+        ]
+      },
+      {
+        "src_label": "rs121913231",
+        "src_uri": "lucia:variant/rs121913231",
+        "dst_label": "H19",
+        "dst_uri": "lucia:gene/ncbigene:283120",
+        "confidence": 1.7463,
+        "src_context": [
+          {
+            "relation": "variant_of",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "located_in_gene",
+            "node": "EGFR",
+            "type": "Gene"
+          }
+        ]
+      }
+    ],
+    "Gene__in_pathway__Pathway": [
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP5293",
+        "dst_uri": "lucia:pathway/WP5293",
+        "confidence": 5.5149,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "RAF1",
+        "src_uri": "lucia:gene/ncbigene:5894",
+        "dst_label": "WP254",
+        "dst_uri": "lucia:pathway/WP254",
+        "confidence": 5.4818,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Adenocarcinoma of lung (disorder)",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "TSC2",
+        "src_uri": "lucia:gene/ncbigene:7249",
+        "dst_label": "WP254",
+        "dst_uri": "lucia:pathway/WP254",
+        "confidence": 5.4686,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Proteus Syndrome",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP22",
+        "dst_uri": "lucia:pathway/WP22",
+        "confidence": 5.4232,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP395",
+        "dst_uri": "lucia:pathway/WP395",
+        "confidence": 5.3891,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP2059",
+        "dst_uri": "lucia:pathway/WP2059",
+        "confidence": 5.3464,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP3334",
+        "dst_uri": "lucia:pathway/WP3334",
+        "confidence": 5.3291,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP4105",
+        "dst_uri": "lucia:pathway/WP4105",
+        "confidence": 5.3147,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP3545",
+        "dst_uri": "lucia:pathway/WP3545",
+        "confidence": 5.2899,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP4120",
+        "dst_uri": "lucia:pathway/WP4120",
+        "confidence": 5.2764,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP4494",
+        "dst_uri": "lucia:pathway/WP4494",
+        "confidence": 5.267,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP3312",
+        "dst_uri": "lucia:pathway/WP3312",
+        "confidence": 5.2625,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP1919",
+        "dst_uri": "lucia:pathway/WP1919",
+        "confidence": 5.2324,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP5124",
+        "dst_uri": "lucia:pathway/WP5124",
+        "confidence": 5.2323,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "TSC2",
+        "src_uri": "lucia:gene/ncbigene:7249",
+        "dst_label": "WP5434",
+        "dst_uri": "lucia:pathway/WP5434",
+        "confidence": 5.2284,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Proteus Syndrome",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP4329",
+        "dst_uri": "lucia:pathway/WP4329",
+        "confidence": 5.2235,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP3915",
+        "dst_uri": "lucia:pathway/WP3915",
+        "confidence": 5.2119,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP5001",
+        "dst_uri": "lucia:pathway/WP5001",
+        "confidence": 5.2108,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP5158",
+        "dst_uri": "lucia:pathway/WP5158",
+        "confidence": 5.203,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "JUN",
+        "src_uri": "lucia:gene/ncbigene:3725",
+        "dst_label": "WP4107",
+        "dst_uri": "lucia:pathway/WP4107",
+        "confidence": 5.1966,
+        "src_context": [
+          {
+            "relation": "associated_with",
+            "node": "Lung Neoplasms",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Lung cancer panel",
+            "type": "Disease"
+          },
+          {
+            "relation": "associated_with",
+            "node": "Non-Small Cell Lung Carcinoma",
+            "type": "Disease"
+          }
+        ]
+      }
+    ],
+    "Pathway__linked_to__Disease": [
+      {
+        "src_label": "WP5528",
+        "src_uri": "lucia:pathway/WP5528",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 4.3046,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5528",
+        "src_uri": "lucia:pathway/WP5528",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 4.2794,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5528",
+        "src_uri": "lucia:pathway/WP5528",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 4.2276,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5528",
+        "src_uri": "lucia:pathway/WP5528",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 4.1553,
+        "src_context": []
+      },
+      {
+        "src_label": "WP1438",
+        "src_uri": "lucia:pathway/WP1438",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 4.1492,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5528",
+        "src_uri": "lucia:pathway/WP5528",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 4.1062,
+        "src_context": []
+      },
+      {
+        "src_label": "WP1438",
+        "src_uri": "lucia:pathway/WP1438",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 4.0985,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5441",
+        "src_uri": "lucia:pathway/WP5441",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 4.0674,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5428",
+        "src_uri": "lucia:pathway/WP5428",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 4.0609,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5441",
+        "src_uri": "lucia:pathway/WP5441",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 4.0561,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5428",
+        "src_uri": "lucia:pathway/WP5428",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 4.0354,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5526",
+        "src_uri": "lucia:pathway/WP5526",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 4.0288,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5526",
+        "src_uri": "lucia:pathway/WP5526",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 4.0248,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5531",
+        "src_uri": "lucia:pathway/WP5531",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 4.0225,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5531",
+        "src_uri": "lucia:pathway/WP5531",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 4.0174,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5528",
+        "src_uri": "lucia:pathway/WP5528",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 3.9925,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5528",
+        "src_uri": "lucia:pathway/WP5528",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 3.9724,
+        "src_context": []
+      },
+      {
+        "src_label": "WP1438",
+        "src_uri": "lucia:pathway/WP1438",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 3.9332,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5441",
+        "src_uri": "lucia:pathway/WP5441",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 3.9013,
+        "src_context": []
+      },
+      {
+        "src_label": "WP5428",
+        "src_uri": "lucia:pathway/WP5428",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 3.8979,
+        "src_context": []
+      }
+    ],
+    "GeneProduct__part_of_pathway__Pathway": [
+      {
+        "src_label": "FN1",
+        "src_uri": "lucia:geneproduct/FN1",
+        "dst_label": "WP1438",
+        "dst_uri": "lucia:pathway/WP1438",
+        "confidence": 1.7813,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "AKT1",
+        "src_uri": "lucia:geneproduct/AKT1",
+        "dst_label": "WP1438",
+        "dst_uri": "lucia:pathway/WP1438",
+        "confidence": 1.7719,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          },
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "EGFR",
+        "src_uri": "lucia:geneproduct/EGFR",
+        "dst_label": "WP1438",
+        "dst_uri": "lucia:pathway/WP1438",
+        "confidence": 1.7154,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "AKT1",
+        "src_uri": "lucia:geneproduct/AKT1",
+        "dst_label": "WP5441",
+        "dst_uri": "lucia:pathway/WP5441",
+        "confidence": 1.7134,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          },
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "PIK3CB",
+        "src_uri": "lucia:geneproduct/PIK3CB",
+        "dst_label": "WP1438",
+        "dst_uri": "lucia:pathway/WP1438",
+        "confidence": 1.7018,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          },
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "FN1",
+        "src_uri": "lucia:geneproduct/FN1",
+        "dst_label": "WP5441",
+        "dst_uri": "lucia:pathway/WP5441",
+        "confidence": 1.6991,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "AKT1",
+        "src_uri": "lucia:geneproduct/AKT1",
+        "dst_label": "WP5526",
+        "dst_uri": "lucia:pathway/WP5526",
+        "confidence": 1.6828,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          },
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "FN1",
+        "src_uri": "lucia:geneproduct/FN1",
+        "dst_label": "WP5526",
+        "dst_uri": "lucia:pathway/WP5526",
+        "confidence": 1.6786,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "PRKCG",
+        "src_uri": "lucia:geneproduct/PRKCG",
+        "dst_label": "WP1438",
+        "dst_uri": "lucia:pathway/WP1438",
+        "confidence": 1.6632,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "NFKBIA",
+        "src_uri": "lucia:geneproduct/NFKBIA",
+        "dst_label": "WP1438",
+        "dst_uri": "lucia:pathway/WP1438",
+        "confidence": 1.6624,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "EGFR",
+        "src_uri": "lucia:geneproduct/EGFR",
+        "dst_label": "WP5441",
+        "dst_uri": "lucia:pathway/WP5441",
+        "confidence": 1.6554,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "PIK3CB",
+        "src_uri": "lucia:geneproduct/PIK3CB",
+        "dst_label": "WP5441",
+        "dst_uri": "lucia:pathway/WP5441",
+        "confidence": 1.6494,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          },
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "CASP8",
+        "src_uri": "lucia:geneproduct/CASP8",
+        "dst_label": "WP1438",
+        "dst_uri": "lucia:pathway/WP1438",
+        "confidence": 1.6444,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          },
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "AKT1",
+        "src_uri": "lucia:geneproduct/AKT1",
+        "dst_label": "WP5531",
+        "dst_uri": "lucia:pathway/WP5531",
+        "confidence": 1.636,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          },
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "FN1",
+        "src_uri": "lucia:geneproduct/FN1",
+        "dst_label": "WP4255",
+        "dst_uri": "lucia:pathway/WP4255",
+        "confidence": 1.6343,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "EGFR",
+        "src_uri": "lucia:geneproduct/EGFR",
+        "dst_label": "WP5526",
+        "dst_uri": "lucia:pathway/WP5526",
+        "confidence": 1.6312,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "FN1",
+        "src_uri": "lucia:geneproduct/FN1",
+        "dst_label": "WP5531",
+        "dst_uri": "lucia:pathway/WP5531",
+        "confidence": 1.6308,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "NFKBIA",
+        "src_uri": "lucia:geneproduct/NFKBIA",
+        "dst_label": "WP5441",
+        "dst_uri": "lucia:pathway/WP5441",
+        "confidence": 1.6241,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "AKT1",
+        "src_uri": "lucia:geneproduct/AKT1",
+        "dst_label": "WP5100",
+        "dst_uri": "lucia:pathway/WP5100",
+        "confidence": 1.6203,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4255",
+            "type": "Pathway"
+          },
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      },
+      {
+        "src_label": "FN1",
+        "src_uri": "lucia:geneproduct/FN1",
+        "dst_label": "WP5100",
+        "dst_uri": "lucia:pathway/WP5100",
+        "confidence": 1.6181,
+        "src_context": [
+          {
+            "relation": "part_of_pathway",
+            "node": "WP4658",
+            "type": "Pathway"
+          }
+        ]
+      }
+    ],
+    "Biomarker__marker_for__Disease": [
+      {
+        "src_label": "glycitein",
+        "src_uri": "lucia:biomarker/C0253391",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.9765,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "glycitein",
+        "src_uri": "lucia:biomarker/C0253391",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.9686,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "glycitein",
+        "src_uri": "lucia:biomarker/C0253391",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 0.9611,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Beta+gamma tocopherol",
+        "src_uri": "lucia:biomarker/C0552327",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.9392,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Beta+gamma tocopherol",
+        "src_uri": "lucia:biomarker/C0552327",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.9283,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Beta+gamma tocopherol",
+        "src_uri": "lucia:biomarker/C0552327",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 0.925,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Equol",
+        "src_uri": "lucia:biomarker/C0059497",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.9243,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Equol",
+        "src_uri": "lucia:biomarker/C0059497",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.9162,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Equol",
+        "src_uri": "lucia:biomarker/C0059497",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 0.8999,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "daidzein",
+        "src_uri": "lucia:biomarker/C0057090",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.8893,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "daidzein",
+        "src_uri": "lucia:biomarker/C0057090",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.8882,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "glycitein",
+        "src_uri": "lucia:biomarker/C0253391",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 0.8829,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "daidzein",
+        "src_uri": "lucia:biomarker/C0057090",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 0.8746,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "folate",
+        "src_uri": "lucia:biomarker/C0178638",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.8716,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "alpha-Tocopherol",
+        "src_uri": "lucia:biomarker/C0969677",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.8681,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Genistein",
+        "src_uri": "lucia:biomarker/C0061202",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.8637,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "folate",
+        "src_uri": "lucia:biomarker/C0178638",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.858,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Lycopene",
+        "src_uri": "lucia:biomarker/C0065331",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.8539,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Tocopherols",
+        "src_uri": "lucia:biomarker/C3255108",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.853,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      },
+      {
+        "src_label": "Beta-Cryptoxanthin",
+        "src_uri": "lucia:biomarker/C0896117",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.8513,
+        "src_context": [
+          {
+            "relation": "marker_for",
+            "node": "Malignant neoplasm of lung",
+            "type": "Disease"
+          }
+        ]
+      }
+    ],
+    "Disease__has_rearrangement__ChromoRearr": [
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(20;20)(q11;q12)",
+        "dst_uri": "lucia:chromo_rearr/t(20;20)(q11;q12)",
+        "confidence": 4.0076,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(4;16)(p13;q22)",
+        "dst_uri": "lucia:chromo_rearr/t(4;16)(p13;q22)",
+        "confidence": 3.9844,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "t(9;9)(p21;p22)",
+        "dst_uri": "lucia:chromo_rearr/t(9;9)(p21;p22)",
+        "confidence": 3.8998,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "der(10)(q11)",
+        "dst_uri": "lucia:chromo_rearr/der(10)(q11)",
+        "confidence": 3.8563,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "t(10;10)(q26;q22)",
+        "dst_uri": "lucia:chromo_rearr/t(10;10)(q26;q22)",
+        "confidence": 3.8552,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(6;19)(q21;q13)",
+        "dst_uri": "lucia:chromo_rearr/t(6;19)(q21;q13)",
+        "confidence": 3.8314,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(12;16)(q23;p13)",
+        "dst_uri": "lucia:chromo_rearr/t(12;16)(q23;p13)",
+        "confidence": 3.8288,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(3;3)(p22;p24)",
+        "dst_uri": "lucia:chromo_rearr/t(3;3)(p22;p24)",
+        "confidence": 3.8206,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(2;17)(p23;p11)",
+        "dst_uri": "lucia:chromo_rearr/t(2;17)(p23;p11)",
+        "confidence": 3.8199,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(8;8)(p22;q22)",
+        "dst_uri": "lucia:chromo_rearr/t(8;8)(p22;q22)",
+        "confidence": 3.8023,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(7;17)(q31;q24)",
+        "dst_uri": "lucia:chromo_rearr/t(7;17)(q31;q24)",
+        "confidence": 3.7919,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(9;17)(q21;q25)",
+        "dst_uri": "lucia:chromo_rearr/t(9;17)(q21;q25)",
+        "confidence": 3.7784,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "t(2;17)(q33;q21)",
+        "dst_uri": "lucia:chromo_rearr/t(2;17)(q33;q21)",
+        "confidence": 3.7738,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "t(3;5)(q26;p12)",
+        "dst_uri": "lucia:chromo_rearr/t(3;5)(q26;p12)",
+        "confidence": 3.7719,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(2;22)(p15;q11)",
+        "dst_uri": "lucia:chromo_rearr/t(2;22)(p15;q11)",
+        "confidence": 3.7718,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(7;11)(p13;q13)",
+        "dst_uri": "lucia:chromo_rearr/t(7;11)(p13;q13)",
+        "confidence": 3.7644,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(2;6)(p13;p24)",
+        "dst_uri": "lucia:chromo_rearr/t(2;6)(p13;p24)",
+        "confidence": 3.7632,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(12;16)(p13;q23)",
+        "dst_uri": "lucia:chromo_rearr/t(12;16)(p13;q23)",
+        "confidence": 3.7628,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "t(1;5)(q25;p13)",
+        "dst_uri": "lucia:chromo_rearr/t(1;5)(q25;p13)",
+        "confidence": 3.762,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(2;2)(p15;p23)",
+        "dst_uri": "lucia:chromo_rearr/t(2;2)(p15;p23)",
+        "confidence": 3.7598,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      }
+    ],
+    "Disease__has_fusion__GeneFusion": [
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "EYS::DEK",
+        "dst_uri": "lucia:gene_fusion/EYS::DEK",
+        "confidence": 3.0824,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "FXR1::KLHL24",
+        "dst_uri": "lucia:gene_fusion/FXR1::KLHL24",
+        "confidence": 3.0681,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "TMEM104::PCYT2",
+        "dst_uri": "lucia:gene_fusion/TMEM104::PCYT2",
+        "confidence": 3.0519,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "FBXW7::INPP4B",
+        "dst_uri": "lucia:gene_fusion/FBXW7::INPP4B",
+        "confidence": 3.0504,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "C6ORF132::TRERF1",
+        "dst_uri": "lucia:gene_fusion/C6ORF132::TRERF1",
+        "confidence": 3.0451,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "ALAS1::PARP3",
+        "dst_uri": "lucia:gene_fusion/ALAS1::PARP3",
+        "confidence": 3.0423,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "PTPRG::MCM3AP",
+        "dst_uri": "lucia:gene_fusion/PTPRG::MCM3AP",
+        "confidence": 3.0394,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "EFR3B::NCAN",
+        "dst_uri": "lucia:gene_fusion/EFR3B::NCAN",
+        "confidence": 3.0368,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "ADAT1::KARS1",
+        "dst_uri": "lucia:gene_fusion/ADAT1::KARS1",
+        "confidence": 3.0355,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "NCAM2::APOL2",
+        "dst_uri": "lucia:gene_fusion/NCAM2::APOL2",
+        "confidence": 3.0335,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "PRKCA::SDK1",
+        "dst_uri": "lucia:gene_fusion/PRKCA::SDK1",
+        "confidence": 3.0322,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "FAM174B::LRRC49",
+        "dst_uri": "lucia:gene_fusion/FAM174B::LRRC49",
+        "confidence": 3.0301,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "TBCK::PAPSS1",
+        "dst_uri": "lucia:gene_fusion/TBCK::PAPSS1",
+        "confidence": 3.0269,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "EIF3L::ASCC2",
+        "dst_uri": "lucia:gene_fusion/EIF3L::ASCC2",
+        "confidence": 3.0266,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "PARD3B::VWC2L",
+        "dst_uri": "lucia:gene_fusion/PARD3B::VWC2L",
+        "confidence": 3.0252,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "RAPGEF1::MCU",
+        "dst_uri": "lucia:gene_fusion/RAPGEF1::MCU",
+        "confidence": 3.0228,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "SPIRE2::CDK10",
+        "dst_uri": "lucia:gene_fusion/SPIRE2::CDK10",
+        "confidence": 3.0191,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "FAM222B::TLCD1",
+        "dst_uri": "lucia:gene_fusion/FAM222B::TLCD1",
+        "confidence": 3.016,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "PUS7L::SMCO2",
+        "dst_uri": "lucia:gene_fusion/PUS7L::SMCO2",
+        "confidence": 3.0079,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(4)(p16p16)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(15)(q14)",
+            "type": "ChromoRearr"
+          }
+        ]
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "ANGPT1::CXCL12",
+        "dst_uri": "lucia:gene_fusion/ANGPT1::CXCL12",
+        "confidence": 3.0078,
+        "src_context": [
+          {
+            "relation": "has_rearrangement",
+            "node": "del(2)(p23p21)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(2)(p23)",
+            "type": "ChromoRearr"
+          },
+          {
+            "relation": "has_rearrangement",
+            "node": "der(6)(q22)",
+            "type": "ChromoRearr"
+          }
+        ]
+      }
+    ],
+    "Chemical__exposure_in__GeoPoliticalRegion": [
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Rybnik",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/PL_rybnik",
+        "confidence": 4.5865,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Leoben",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/AT_leoben",
+        "confidence": 4.5163,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Mostoles",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/ES_mostoles",
+        "confidence": 4.4299,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Burjassot",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/ES_burjassot",
+        "confidence": 4.3787,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Morella",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/ES_morella",
+        "confidence": 4.2978,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Gueret",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/FR_gueret",
+        "confidence": 4.2944,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Sacca Fisola; Venezia",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/IT_sacca_fisola_venezia",
+        "confidence": 4.2585,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Linden",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/DE_linden",
+        "confidence": 4.2221,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Vila-Seca",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/ES_vila_seca",
+        "confidence": 4.1826,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Manlleu",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/ES_manlleu",
+        "confidence": 4.1816,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Benzene",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0005036",
+        "dst_label": "Via Cimitero - Casirate D'Adda (Bg)",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/IT_via_cimitero_casirate_d_adda_bg",
+        "confidence": 4.1785,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Priolo Gargallo",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Grenland",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Trabzon",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Sant Andreu De La Barca",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/ES_sant_andreu_de_la_barca",
+        "confidence": 4.1761,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Viale Roma 7/E",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/IT_viale_roma_7_e",
+        "confidence": 4.1537,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Via Perdalonga - Quartu Sant'Elena (Ca)",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/IT_via_perdalonga_quartu_sant_elena_ca",
+        "confidence": 4.1488,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Freiberg",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/DE_freiberg",
+        "confidence": 4.1399,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Comuna Sinandrei",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/RO_comuna_sinandrei",
+        "confidence": 4.1148,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Benzene",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0005036",
+        "dst_label": "Leoben",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/AT_leoben",
+        "confidence": 4.085,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Priolo Gargallo",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Grenland",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Trabzon",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Benzene",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0005036",
+        "dst_label": "Bunyola",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/ES_bunyola",
+        "confidence": 4.0824,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Priolo Gargallo",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Grenland",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Trabzon",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Benzene",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0005036",
+        "dst_label": "Castro-Urdiales",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/ES_castro_urdiales",
+        "confidence": 4.071,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Priolo Gargallo",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Grenland",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Trabzon",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "PM2.5",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C5890534",
+        "dst_label": "Loc. Zambelli",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gpr/IT_loc_zambelli",
+        "confidence": 4.0334,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Piazza Rebaudengo 23",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Lappeenranta",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Malaga",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      }
+    ],
+    "Chemical__exposure_in__GeographicRegion": [
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Basilicata",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_basilicata",
+        "confidence": 6.4136,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Murcia",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_murcia",
+        "confidence": 6.3865,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Scotland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_scotland",
+        "confidence": 6.363,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Canary Islands",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_canary_islands",
+        "confidence": 6.3404,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Wales",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_wales",
+        "confidence": 6.2772,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Saarland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_saarland",
+        "confidence": 6.274,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Basque Country",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_basque_country",
+        "confidence": 6.2143,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Umbria",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_umbria",
+        "confidence": 6.2031,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Friuli-Venezia Giulia",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_friuli_venezia_giulia",
+        "confidence": 6.1915,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Piedmont",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_piedmont",
+        "confidence": 6.1908,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Benzene",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0005036",
+        "dst_label": "Basilicata",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_basilicata",
+        "confidence": 6.156,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Priolo Gargallo",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Grenland",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Trabzon",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Veneto",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_veneto",
+        "confidence": 6.1558,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Hamburg",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/DE_hamburg",
+        "confidence": 6.1423,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Navarra",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_navarra",
+        "confidence": 6.1416,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Benzene",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0005036",
+        "dst_label": "Murcia",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_murcia",
+        "confidence": 6.1217,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Priolo Gargallo",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Grenland",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Trabzon",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Benzene",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0005036",
+        "dst_label": "Scotland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_scotland",
+        "confidence": 6.1054,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Priolo Gargallo",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Grenland",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Trabzon",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Particulate matter (PM10, Lead)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C1720884_10_Pb",
+        "dst_label": "Basilicata",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_basilicata",
+        "confidence": 6.0938,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Klatovy",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Piatra Neamt",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Fort-De-France",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Benzene",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0005036",
+        "dst_label": "Canary Islands",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_canary_islands",
+        "confidence": 6.0855,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Priolo Gargallo",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Grenland",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Trabzon",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Northern Ireland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/GB_northern_ireland",
+        "confidence": 6.0779,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      },
+      {
+        "src_label": "Ozone (O3)",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0030106",
+        "dst_label": "Ticino",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_ticino",
+        "confidence": 6.0707,
+        "src_context": [
+          {
+            "relation": "exposure_in",
+            "node": "Ragusa; Via Archimede C/O Villa Santa Domenica",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Burgbernheim",
+            "type": "GeoPoliticalRegion"
+          },
+          {
+            "relation": "exposure_in",
+            "node": "Montseny",
+            "type": "GeoPoliticalRegion"
+          }
+        ]
+      }
+    ],
+    "Disease__cancer_stats_in__Country": [
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Iceland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IS",
+        "confidence": 0.5914,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Bulgaria",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BG",
+        "confidence": 0.5898,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Ireland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IE",
+        "confidence": 0.3748,
+        "src_context": []
+      },
+      {
+        "src_label": "Small cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149925",
+        "dst_label": "Bulgaria",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BG",
+        "confidence": 0.1799,
+        "src_context": []
+      },
+      {
+        "src_label": "Small cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149925",
+        "dst_label": "Iceland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IS",
+        "confidence": 0.1694,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "US_PRI",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/US_PRI",
+        "confidence": 0.0627,
+        "src_context": []
+      },
+      {
+        "src_label": "Small cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149925",
+        "dst_label": "Ireland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IE",
+        "confidence": -0.0493,
+        "src_context": []
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "Bulgaria",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BG",
+        "confidence": -0.1042,
+        "src_context": []
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "Iceland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IS",
+        "confidence": -0.1293,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "LI",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LI",
+        "confidence": -0.1974,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Ukraine",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/UA",
+        "confidence": -0.2068,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Portugal",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/PT",
+        "confidence": -0.3503,
+        "src_context": []
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "Ireland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IE",
+        "confidence": -0.3922,
+        "src_context": []
+      },
+      {
+        "src_label": "Small cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149925",
+        "dst_label": "US_PRI",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/US_PRI",
+        "confidence": -0.4315,
+        "src_context": []
+      },
+      {
+        "src_label": "Malignant neoplasm of lung",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379",
+        "dst_label": "Kosovo",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/XK",
+        "confidence": -0.5021,
+        "src_context": [
+          {
+            "relation": "cancer_stats_in",
+            "node": "Ukraine",
+            "type": "Country"
+          },
+          {
+            "relation": "cancer_stats_in",
+            "node": "US_PRI",
+            "type": "Country"
+          },
+          {
+            "relation": "cancer_stats_in",
+            "node": "US_PRI",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Switzerland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH",
+        "confidence": -0.5318,
+        "src_context": []
+      },
+      {
+        "src_label": "Malignant neoplasm of lung",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379",
+        "dst_label": "Montenegro",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/ME",
+        "confidence": -0.557,
+        "src_context": [
+          {
+            "relation": "cancer_stats_in",
+            "node": "Ukraine",
+            "type": "Country"
+          },
+          {
+            "relation": "cancer_stats_in",
+            "node": "US_PRI",
+            "type": "Country"
+          },
+          {
+            "relation": "cancer_stats_in",
+            "node": "US_PRI",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Malignant neoplasm of lung",
+        "src_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379",
+        "dst_label": "Albania",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/AL",
+        "confidence": -0.5999,
+        "src_context": [
+          {
+            "relation": "cancer_stats_in",
+            "node": "Ukraine",
+            "type": "Country"
+          },
+          {
+            "relation": "cancer_stats_in",
+            "node": "US_PRI",
+            "type": "Country"
+          },
+          {
+            "relation": "cancer_stats_in",
+            "node": "US_PRI",
+            "type": "Country"
+          }
+        ]
+      },
+      {
+        "src_label": "Small cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149925",
+        "dst_label": "Switzerland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH",
+        "confidence": -0.6515,
+        "src_context": []
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "Switzerland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH",
+        "confidence": -0.6754,
+        "src_context": []
+      }
+    ],
+    "Disease__cancer_stats_in__GeographicRegion": [
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Calvados",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_calvados",
+        "confidence": 0.6284,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Bas-Rhin",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_bas_rhin",
+        "confidence": 0.5963,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Isere",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_isere",
+        "confidence": 0.5957,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Tarn",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_tarn",
+        "confidence": 0.5863,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "East Switzerland",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_east_switzerland",
+        "confidence": 0.5837,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Geneva",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_geneva",
+        "confidence": 0.5776,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Siracusa",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_siracusa",
+        "confidence": 0.576,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Manche",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_manche",
+        "confidence": 0.5642,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Zurich, Zug, Schaffhausen, and Schwyz",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_zurich_zug_schaffhausen_and_schwyz",
+        "confidence": 0.5538,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Sassari",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_sassari",
+        "confidence": 0.5509,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Tarragona",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_tarragona",
+        "confidence": 0.5495,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Graub\u00fcnden and Glarus",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_graubunden_and_glarus",
+        "confidence": 0.5355,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Granada",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_granada",
+        "confidence": 0.4928,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Basel",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_basel",
+        "confidence": 0.4863,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Vaud",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_vaud",
+        "confidence": 0.4666,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Neuchatel and Jura",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_neuchatel_and_jura",
+        "confidence": 0.4635,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Somme",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_somme",
+        "confidence": 0.4586,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Trento",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_trento",
+        "confidence": 0.4374,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Mantova and Cremona",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_mantova_and_cremona",
+        "confidence": 0.4173,
+        "src_context": []
+      },
+      {
+        "src_label": "Non-Small Cell Lung Carcinoma",
+        "src_uri": "lucia:disease/C0007131",
+        "dst_label": "Brescia",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_brescia",
+        "confidence": 0.3954,
+        "src_context": []
+      }
+    ]
+  }
+}

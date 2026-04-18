@@ -1,0 +1,51 @@
+rank,Variant_label,Variant_uri,Disease_label,Disease_uri,confidence,context
+1,rs397517112,lucia:variant/rs397517112,Small cell carcinoma of lung,lucia:disease/C0149925,2.1176,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR; located_in_gene -> EGFR-AS1
+2,rs121913446,lucia:variant/rs121913446,Small cell carcinoma of lung,lucia:disease/C0149925,2.0938,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+3,rs909797662,lucia:variant/rs909797662,Small cell carcinoma of lung,lucia:disease/C0149925,2.0776,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+4,rs13312840,lucia:variant/rs13312840,Small cell carcinoma of lung,lucia:disease/C0149925,2.0705,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NBN
+5,rs17851045,lucia:variant/rs17851045,Small cell carcinoma of lung,lucia:disease/C0149925,2.025,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KRAS
+6,rs149840192,lucia:variant/rs149840192,Small cell carcinoma of lung,lucia:disease/C0149925,2.0107,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+7,rs50872,lucia:variant/rs50872,Small cell carcinoma of lung,lucia:disease/C0149925,1.987,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ERCC2
+8,rs754426793,lucia:variant/rs754426793,Small cell carcinoma of lung,lucia:disease/C0149925,1.986,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR; located_in_gene -> EGFR-AS1
+9,rs1077424,lucia:variant/rs1077424,Small cell carcinoma of lung,lucia:disease/C0149925,1.978,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DAB1
+10,rs121913369,lucia:variant/rs121913369,Small cell carcinoma of lung,lucia:disease/C0149925,1.9513,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> BRAF
+11,rs1427028322,lucia:variant/rs1427028322,Small cell carcinoma of lung,lucia:disease/C0149925,1.9504,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+12,rs61764370,lucia:variant/rs61764370,Small cell carcinoma of lung,lucia:disease/C0149925,1.9385,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KRAS
+13,rs1061302,lucia:variant/rs1061302,Small cell carcinoma of lung,lucia:disease/C0149925,1.9284,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NBN
+14,rs774487133,lucia:variant/rs774487133,Small cell carcinoma of lung,lucia:disease/C0149925,1.9275,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+15,rs228729,lucia:variant/rs228729,Small cell carcinoma of lung,lucia:disease/C0149925,1.9264,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> PER3
+16,rs1394960893,lucia:variant/rs1394960893,Small cell carcinoma of lung,lucia:disease/C0149925,1.9261,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> GSTP1
+17,rs121913467,lucia:variant/rs121913467,Small cell carcinoma of lung,lucia:disease/C0149925,1.9214,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+18,rs727502902,lucia:variant/rs727502902,Small cell carcinoma of lung,lucia:disease/C0149925,1.9132,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> BRAF
+19,rs17425189,lucia:variant/rs17425189,Small cell carcinoma of lung,lucia:disease/C0149925,1.9095,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DAB1
+20,rs1799793,lucia:variant/rs1799793,Small cell carcinoma of lung,lucia:disease/C0149925,1.9049,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ERCC2
+21,rs121913357,lucia:variant/rs121913357,Small cell carcinoma of lung,lucia:disease/C0149925,1.9036,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> BRAF
+22,rs744166,lucia:variant/rs744166,Small cell carcinoma of lung,lucia:disease/C0149925,1.8994,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
+23,rs958335893,lucia:variant/rs958335893,Small cell carcinoma of lung,lucia:disease/C0149925,1.8948,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ALK
+24,rs121913353,lucia:variant/rs121913353,Small cell carcinoma of lung,lucia:disease/C0149925,1.8944,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> BRAF
+25,rs121913231,lucia:variant/rs121913231,Small cell carcinoma of lung,lucia:disease/C0149925,1.8873,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+26,rs121913355,lucia:variant/rs121913355,Small cell carcinoma of lung,lucia:disease/C0149925,1.8823,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> BRAF
+27,rs121913283,lucia:variant/rs121913283,Small cell carcinoma of lung,lucia:disease/C0149925,1.8771,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> PIK3CA
+28,rs1057519781,lucia:variant/rs1057519781,Small cell carcinoma of lung,lucia:disease/C0149925,1.8716,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ALK
+29,rs863225283,lucia:variant/rs863225283,Small cell carcinoma of lung,lucia:disease/C0149925,1.8689,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ALK
+30,rs1805794,lucia:variant/rs1805794,Small cell carcinoma of lung,lucia:disease/C0149925,1.8661,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NBN
+31,rs121913386,lucia:variant/rs121913386,Small cell carcinoma of lung,lucia:disease/C0149925,1.851,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> CDKN2A
+32,rs28929495,lucia:variant/rs28929495,Small cell carcinoma of lung,lucia:disease/C0149925,1.8413,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+33,rs113488022,lucia:variant/rs113488022,Small cell carcinoma of lung,lucia:disease/C0149925,1.8313,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> BRAF
+34,rs397516981,lucia:variant/rs397516981,Small cell carcinoma of lung,lucia:disease/C0149925,1.8311,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ERBB2
+35,rs746965070,lucia:variant/rs746965070,Small cell carcinoma of lung,lucia:disease/C0149925,1.8283,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NBN
+36,rs779346343,lucia:variant/rs779346343,Small cell carcinoma of lung,lucia:disease/C0149925,1.8256,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NBN
+37,rs121913420,lucia:variant/rs121913420,Small cell carcinoma of lung,lucia:disease/C0149925,1.8246,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+38,rs774188914,lucia:variant/rs774188914,Small cell carcinoma of lung,lucia:disease/C0149925,1.8189,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> BIVM-ERCC5; located_in_gene -> ERCC5
+39,rs17024869,lucia:variant/rs17024869,Small cell carcinoma of lung,lucia:disease/C0149925,1.814,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NPAS2
+40,rs238416,lucia:variant/rs238416,Small cell carcinoma of lung,lucia:disease/C0149925,1.8136,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ERCC2
+41,rs121913348,lucia:variant/rs121913348,Small cell carcinoma of lung,lucia:disease/C0149925,1.8038,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> BRAF
+42,rs121913229,lucia:variant/rs121913229,Small cell carcinoma of lung,lucia:disease/C0149925,1.8016,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+43,rs895520,lucia:variant/rs895520,Small cell carcinoma of lung,lucia:disease/C0149925,1.8015,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NPAS2
+44,rs113994091,lucia:variant/rs113994091,Small cell carcinoma of lung,lucia:disease/C0149925,1.8012,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ALK
+45,rs217727,lucia:variant/rs217727,Small cell carcinoma of lung,lucia:disease/C0149925,1.7903,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> H19
+46,rs397517128,lucia:variant/rs397517128,Small cell carcinoma of lung,lucia:disease/C0149925,1.7892,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+47,rs372043866,lucia:variant/rs372043866,Small cell carcinoma of lung,lucia:disease/C0149925,1.7886,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ERBB2
+48,rs1554350366,lucia:variant/rs1554350366,Small cell carcinoma of lung,lucia:disease/C0149925,1.7885,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR; located_in_gene -> EGFR-AS1
+49,rs228727,lucia:variant/rs228727,Small cell carcinoma of lung,lucia:disease/C0149925,1.7863,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> PER3
+50,rs712829,lucia:variant/rs712829,Small cell carcinoma of lung,lucia:disease/C0149925,1.7826,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR

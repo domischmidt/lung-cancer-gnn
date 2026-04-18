@@ -1,0 +1,51 @@
+rank,Variant_label,Variant_uri,Gene_label,Gene_uri,confidence,context
+1,rs121913231,lucia:variant/rs121913231,EGFR-AS1,lucia:gene/ncbigene:100507500,2.053,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+2,rs121913231,lucia:variant/rs121913231,AXL,lucia:gene/ncbigene:558,1.9311,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+3,rs1057519975,lucia:variant/rs1057519975,EGFR-AS1,lucia:gene/ncbigene:100507500,1.9222,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> TP53
+4,rs121913240,lucia:variant/rs121913240,EGFR-AS1,lucia:gene/ncbigene:100507500,1.8982,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KRAS
+5,rs121913231,lucia:variant/rs121913231,DAB1,lucia:gene/ncbigene:1600,1.8531,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+6,rs2307486,lucia:variant/rs2307486,EGFR-AS1,lucia:gene/ncbigene:100507500,1.8385,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> APEX1
+7,rs1057519975,lucia:variant/rs1057519975,AXL,lucia:gene/ncbigene:558,1.8359,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> TP53
+8,rs121913240,lucia:variant/rs121913240,AXL,lucia:gene/ncbigene:558,1.8343,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KRAS
+9,rs201661522,lucia:variant/rs201661522,EGFR-AS1,lucia:gene/ncbigene:100507500,1.8323,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ABCB1
+10,rs31490,lucia:variant/rs31490,EGFR-AS1,lucia:gene/ncbigene:100507500,1.8289,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> CLPTM1L
+11,rs121913418,lucia:variant/rs121913418,EGFR-AS1,lucia:gene/ncbigene:100507500,1.8003,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+12,rs1171287261,lucia:variant/rs1171287261,EGFR-AS1,lucia:gene/ncbigene:100507500,1.7863,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+13,rs121913231,lucia:variant/rs121913231,PER3,lucia:gene/ncbigene:8863,1.7751,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+14,rs10735810,lucia:variant/rs10735810,EGFR-AS1,lucia:gene/ncbigene:100507500,1.7746,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> VDR
+15,rs876660754,lucia:variant/rs876660754,EGFR-AS1,lucia:gene/ncbigene:100507500,1.7743,variant_of -> Small cell carcinoma of lung; located_in_gene -> TP53
+16,rs397517132,lucia:variant/rs397517132,EGFR-AS1,lucia:gene/ncbigene:100507500,1.7738,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+17,rs11554290,lucia:variant/rs11554290,EGFR-AS1,lucia:gene/ncbigene:100507500,1.7641,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NRAS
+18,rs2839698,lucia:variant/rs2839698,EGFR-AS1,lucia:gene/ncbigene:100507500,1.7592,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> H19
+19,rs1430452530,lucia:variant/rs1430452530,EGFR-AS1,lucia:gene/ncbigene:100507500,1.7512,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> HIF1A; located_in_gene -> HIF1A-AS3
+20,rs121913231,lucia:variant/rs121913231,H19,lucia:gene/ncbigene:283120,1.7463,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+21,rs2307486,lucia:variant/rs2307486,AXL,lucia:gene/ncbigene:558,1.7446,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> APEX1
+22,rs121913231,lucia:variant/rs121913231,NLRP2,lucia:gene/ncbigene:55655,1.7366,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+23,rs201661522,lucia:variant/rs201661522,AXL,lucia:gene/ncbigene:558,1.7293,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ABCB1
+24,rs1057519975,lucia:variant/rs1057519975,DAB1,lucia:gene/ncbigene:1600,1.729,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> TP53
+25,rs31490,lucia:variant/rs31490,AXL,lucia:gene/ncbigene:558,1.7236,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> CLPTM1L
+26,rs121913240,lucia:variant/rs121913240,NBN,lucia:gene/ncbigene:4683,1.7231,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KRAS
+27,rs121913231,lucia:variant/rs121913231,NBN,lucia:gene/ncbigene:4683,1.7099,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+28,rs121913231,lucia:variant/rs121913231,NPRL3,lucia:gene/ncbigene:8131,1.6993,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+29,rs4588,lucia:variant/rs4588,EGFR-AS1,lucia:gene/ncbigene:100507500,1.6983,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> GC
+30,rs121913231,lucia:variant/rs121913231,BIVM-ERCC5,lucia:gene/ncbigene:100533467,1.6921,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+31,rs11554290,lucia:variant/rs11554290,AXL,lucia:gene/ncbigene:558,1.6914,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NRAS
+32,rs1057519975,lucia:variant/rs1057519975,NBN,lucia:gene/ncbigene:4683,1.6906,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> TP53
+33,rs1171287261,lucia:variant/rs1171287261,AXL,lucia:gene/ncbigene:558,1.688,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+34,rs1950902,lucia:variant/rs1950902,EGFR-AS1,lucia:gene/ncbigene:100507500,1.6836,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> MTHFD1
+35,rs1057519975,lucia:variant/rs1057519975,PER3,lucia:gene/ncbigene:8863,1.6831,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> TP53
+36,rs121913418,lucia:variant/rs121913418,AXL,lucia:gene/ncbigene:558,1.683,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+37,rs1430452530,lucia:variant/rs1430452530,AXL,lucia:gene/ncbigene:558,1.6821,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> HIF1A; located_in_gene -> HIF1A-AS3
+38,rs121913231,lucia:variant/rs121913231,ERCC5,lucia:gene/ncbigene:2073,1.6791,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+39,rs121913240,lucia:variant/rs121913240,DAB1,lucia:gene/ncbigene:1600,1.6784,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KRAS
+40,rs397517132,lucia:variant/rs397517132,AXL,lucia:gene/ncbigene:558,1.6757,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+41,rs876660754,lucia:variant/rs876660754,AXL,lucia:gene/ncbigene:558,1.6753,variant_of -> Small cell carcinoma of lung; located_in_gene -> TP53
+42,rs2839698,lucia:variant/rs2839698,AXL,lucia:gene/ncbigene:558,1.6717,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> H19
+43,rs10735810,lucia:variant/rs10735810,AXL,lucia:gene/ncbigene:558,1.6694,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> VDR
+44,rs1801133,lucia:variant/rs1801133,EGFR-AS1,lucia:gene/ncbigene:100507500,1.6686,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> MTHFR
+45,rs121913240,lucia:variant/rs121913240,PER3,lucia:gene/ncbigene:8863,1.659,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KRAS
+46,rs2307486,lucia:variant/rs2307486,DAB1,lucia:gene/ncbigene:1600,1.6583,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> APEX1
+47,rs1137101,lucia:variant/rs1137101,EGFR-AS1,lucia:gene/ncbigene:100507500,1.6582,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> LEPR
+48,rs60369023,lucia:variant/rs60369023,EGFR-AS1,lucia:gene/ncbigene:100507500,1.658,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> CDA
+49,rs31490,lucia:variant/rs31490,DAB1,lucia:gene/ncbigene:1600,1.655,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> CLPTM1L
+50,rs1537514,lucia:variant/rs1537514,EGFR-AS1,lucia:gene/ncbigene:100507500,1.6541,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> C1orf167; located_in_gene -> MTHFR

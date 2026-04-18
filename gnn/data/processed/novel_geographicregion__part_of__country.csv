@@ -1,0 +1,51 @@
+rank,GeographicRegion_label,GeographicRegion_uri,Country_label,Country_uri,confidence,context
+1,Trapani,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_trapani,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.8559,part_of -> Italy
+2,South Region,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_south_region,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.866,part_of -> Portugal
+3,Naples South,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_naples_south,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.8883,part_of -> Italy
+4,Monza-Brianza-Lecco,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_monza_brianza_lecco,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.914,part_of -> Italy
+5,Reggio Calabria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_reggio_calabria,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9231,part_of -> Italy
+6,North Region,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_north_region,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9321,part_of -> Portugal
+7,Bergamo,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_bergamo,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9432,part_of -> Italy
+8,Avellino,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_avellino,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9499,part_of -> Italy
+9,Nuoro,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_nuoro,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.952,part_of -> Italy
+10,Valais,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_valais,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9593,part_of -> Switzerland
+11,Castellón,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_castellon,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9683,part_of -> Spain
+12,Cuenca,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_cuenca,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9696,part_of -> Spain
+13,Benevento,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_benevento,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9728,part_of -> Italy
+14,Gironde,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_gironde,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9784,part_of -> France
+15,Trapani,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_trapani,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-0.9785,part_of -> Italy
+16,Insubria-Como,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_insubria_como,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9848,part_of -> Italy
+17,South Region,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_south_region,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-0.9865,part_of -> Portugal
+18,Bern Solothurn,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_bern_solothurn,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.9895,part_of -> Switzerland
+19,Agrigento,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_agrigento,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0003,part_of -> Italy
+20,Caserta,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_caserta,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0016,part_of -> Italy
+21,Naples South,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_naples_south,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0074,part_of -> Italy
+22,Herault,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_herault,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0083,part_of -> France
+23,Sondrio,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_sondrio,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0123,part_of -> Italy
+24,Ragusa,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_ragusa,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.024,part_of -> Italy
+25,Trapani,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_trapani,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-1.0305,part_of -> Italy
+26,South Tyrol,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_south_tyrol,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0331,part_of -> Italy
+27,Monza-Brianza-Lecco,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_monza_brianza_lecco,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0342,part_of -> Italy
+28,Reggio Calabria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_reggio_calabria,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0405,part_of -> Italy
+29,Girona,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_girona,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0442,part_of -> Spain
+30,Pavia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_pavia,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0454,part_of -> Italy
+31,Trento,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_trento,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0463,part_of -> Italy
+32,North Region,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_north_region,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0513,part_of -> Portugal
+33,Castilla y León,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_castilla_y_leon,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0527,part_of -> Spain
+34,Aargau,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_aargau,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0534,part_of -> Switzerland
+35,Milan,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_milan,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0565,part_of -> Italy
+36,South Region,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_south_region,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-1.0584,part_of -> Portugal
+37,Naples South,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_naples_south,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-1.059,part_of -> Italy
+38,Bergamo,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_bergamo,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0601,part_of -> Italy
+39,Somme,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/FR_somme,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.063,part_of -> France
+40,Avellino,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_avellino,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0635,part_of -> Italy
+41,Salerno,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_salerno,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0678,part_of -> Italy
+42,Nuoro,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_nuoro,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0681,part_of -> Italy
+43,Valais,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_valais,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0733,part_of -> Switzerland
+44,Reggio Calabria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_reggio_calabria,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-1.0738,part_of -> Italy
+45,Naples Center,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_naples_center,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0784,part_of -> Italy
+46,North Region,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/PT_north_region,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-1.0793,part_of -> Portugal
+47,Monza-Brianza-Lecco,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/IT_monza_brianza_lecco,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-1.0804,part_of -> Italy
+48,Castellón,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_castellon,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0812,part_of -> Spain
+49,"Zurich, Zug, Schaffhausen, and Schwyz",http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/CH_zurich_zug_schaffhausen_and_schwyz,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-1.0824,part_of -> Switzerland
+50,Cuenca,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/gr/ES_cuenca,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-1.0853,part_of -> Spain
