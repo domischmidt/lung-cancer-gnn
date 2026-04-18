@@ -1,124 +1,124 @@
 {
   "embedding_similarities_top20": [
     {
-      "chemical": "Ozone (O\u2083)",
-      "chemical_id": "C0030106",
+      "chemical": "PM2.5",
+      "chemical_id": "C5890534",
       "disease": "Adenocarcinoma of lung (disorder)",
-      "cosine_similarity": 0.76
-    },
-    {
-      "chemical": "NO\u2082",
-      "chemical_id": "C0028160",
-      "disease": "Adenocarcinoma of lung (disorder)",
-      "cosine_similarity": 0.7516
-    },
-    {
-      "chemical": "Ozone (O\u2083)",
-      "chemical_id": "C0030106",
-      "disease": "Squamous cell carcinoma of lung",
-      "cosine_similarity": 0.7499
-    },
-    {
-      "chemical": "PM10",
-      "chemical_id": "C1720884_10",
-      "disease": "Adenocarcinoma of lung (disorder)",
-      "cosine_similarity": 0.7496
-    },
-    {
-      "chemical": "Ozone (O\u2083)",
-      "chemical_id": "C0030106",
-      "disease": "Non-Small Cell Lung Carcinoma",
-      "cosine_similarity": 0.7424
-    },
-    {
-      "chemical": "NO\u2082",
-      "chemical_id": "C0028160",
-      "disease": "Squamous cell carcinoma of lung",
-      "cosine_similarity": 0.7419
-    },
-    {
-      "chemical": "Benzene",
-      "chemical_id": "C0005036",
-      "disease": "Adenocarcinoma of lung (disorder)",
-      "cosine_similarity": 0.7403
-    },
-    {
-      "chemical": "PM10",
-      "chemical_id": "C1720884_10",
-      "disease": "Squamous cell carcinoma of lung",
-      "cosine_similarity": 0.7399
-    },
-    {
-      "chemical": "Ozone (O\u2083)",
-      "chemical_id": "C0030106",
-      "disease": "Malignant neoplasm of lung",
-      "cosine_similarity": 0.7379
-    },
-    {
-      "chemical": "NO\u2082",
-      "chemical_id": "C0028160",
-      "disease": "Non-Small Cell Lung Carcinoma",
-      "cosine_similarity": 0.7322
-    },
-    {
-      "chemical": "Benzo[a]pyrene",
-      "chemical_id": "C0005052",
-      "disease": "Adenocarcinoma of lung (disorder)",
-      "cosine_similarity": 0.7312
-    },
-    {
-      "chemical": "Benzene",
-      "chemical_id": "C0005036",
-      "disease": "Squamous cell carcinoma of lung",
-      "cosine_similarity": 0.7307
-    },
-    {
-      "chemical": "PM10",
-      "chemical_id": "C1720884_10",
-      "disease": "Non-Small Cell Lung Carcinoma",
-      "cosine_similarity": 0.729
-    },
-    {
-      "chemical": "NO\u2082",
-      "chemical_id": "C0028160",
-      "disease": "Malignant neoplasm of lung",
-      "cosine_similarity": 0.7257
-    },
-    {
-      "chemical": "PM10",
-      "chemical_id": "C1720884_10",
-      "disease": "Malignant neoplasm of lung",
-      "cosine_similarity": 0.7235
-    },
-    {
-      "chemical": "Benzo[a]pyrene",
-      "chemical_id": "C0005052",
-      "disease": "Squamous cell carcinoma of lung",
-      "cosine_similarity": 0.7219
-    },
-    {
-      "chemical": "Benzene",
-      "chemical_id": "C0005036",
-      "disease": "Non-Small Cell Lung Carcinoma",
-      "cosine_similarity": 0.7195
-    },
-    {
-      "chemical": "Benzene",
-      "chemical_id": "C0005036",
-      "disease": "Malignant neoplasm of lung",
-      "cosine_similarity": 0.716
+      "cosine_similarity": 0.7859
     },
     {
       "chemical": "PM2.5",
       "chemical_id": "C5890534",
-      "disease": "Adenocarcinoma of lung (disorder)",
-      "cosine_similarity": 0.7107
+      "disease": "Squamous cell carcinoma of lung",
+      "cosine_similarity": 0.7817
     },
     {
-      "chemical": "Ozone (O\u2083)",
-      "chemical_id": "C0030106",
+      "chemical": "Benzene",
+      "chemical_id": "C0005036",
+      "disease": "Adenocarcinoma of lung (disorder)",
+      "cosine_similarity": 0.7754
+    },
+    {
+      "chemical": "Benzene",
+      "chemical_id": "C0005036",
+      "disease": "Squamous cell carcinoma of lung",
+      "cosine_similarity": 0.7732
+    },
+    {
+      "chemical": "PM10 (Nickel)",
+      "chemical_id": "C1720884_10_Ni",
+      "disease": "Adenocarcinoma of lung (disorder)",
+      "cosine_similarity": 0.77
+    },
+    {
+      "chemical": "PM10 (Cadmium)",
+      "chemical_id": "C1720884_10_Cd",
+      "disease": "Adenocarcinoma of lung (disorder)",
+      "cosine_similarity": 0.7698
+    },
+    {
+      "chemical": "PM10 (Arsenic)",
+      "chemical_id": "C1720884_10_As",
+      "disease": "Adenocarcinoma of lung (disorder)",
+      "cosine_similarity": 0.7682
+    },
+    {
+      "chemical": "PM10 (Nickel)",
+      "chemical_id": "C1720884_10_Ni",
+      "disease": "Squamous cell carcinoma of lung",
+      "cosine_similarity": 0.7682
+    },
+    {
+      "chemical": "PM10 (Cadmium)",
+      "chemical_id": "C1720884_10_Cd",
+      "disease": "Squamous cell carcinoma of lung",
+      "cosine_similarity": 0.7681
+    },
+    {
+      "chemical": "PM10 (Lead)",
+      "chemical_id": "C1720884_10_Pb",
+      "disease": "Adenocarcinoma of lung (disorder)",
+      "cosine_similarity": 0.768
+    },
+    {
+      "chemical": "PM10 (Arsenic)",
+      "chemical_id": "C1720884_10_As",
+      "disease": "Squamous cell carcinoma of lung",
+      "cosine_similarity": 0.7666
+    },
+    {
+      "chemical": "PM10 (Lead)",
+      "chemical_id": "C1720884_10_Pb",
+      "disease": "Squamous cell carcinoma of lung",
+      "cosine_similarity": 0.7664
+    },
+    {
+      "chemical": "PM10",
+      "chemical_id": "C1720884_10",
+      "disease": "Adenocarcinoma of lung (disorder)",
+      "cosine_similarity": 0.7397
+    },
+    {
+      "chemical": "Benzo[a]pyrene",
+      "chemical_id": "C0005052",
+      "disease": "Adenocarcinoma of lung (disorder)",
+      "cosine_similarity": 0.7356
+    },
+    {
+      "chemical": "Benzo[a]pyrene",
+      "chemical_id": "C0005052",
+      "disease": "Squamous cell carcinoma of lung",
+      "cosine_similarity": 0.7354
+    },
+    {
+      "chemical": "PM10",
+      "chemical_id": "C1720884_10",
+      "disease": "Squamous cell carcinoma of lung",
+      "cosine_similarity": 0.7347
+    },
+    {
+      "chemical": "Benzene",
+      "chemical_id": "C0005036",
       "disease": "Lung Carcinoma Metastatic in the Brain",
-      "cosine_similarity": 0.7097
+      "cosine_similarity": 0.7291
+    },
+    {
+      "chemical": "PM10 (Nickel)",
+      "chemical_id": "C1720884_10_Ni",
+      "disease": "Lung Carcinoma Metastatic in the Brain",
+      "cosine_similarity": 0.7259
+    },
+    {
+      "chemical": "PM10 (Cadmium)",
+      "chemical_id": "C1720884_10_Cd",
+      "disease": "Lung Carcinoma Metastatic in the Brain",
+      "cosine_similarity": 0.7251
+    },
+    {
+      "chemical": "PM10 (Arsenic)",
+      "chemical_id": "C1720884_10_As",
+      "disease": "Lung Carcinoma Metastatic in the Brain",
+      "cosine_similarity": 0.7248
     }
   ],
   "geographic_correlations": {

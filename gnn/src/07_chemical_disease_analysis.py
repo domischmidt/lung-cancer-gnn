@@ -63,11 +63,16 @@ CHEMICAL_NAMES = {
 }
 
 
-class RGCN(nn.Module):
-    def __init__(self, n_nodes, n_relations, hidden_dim, num_layers, num_bases, dropout):
+class RGCNWithFeatures(nn.Module):
+    def __init__(self, n_nodes, n_relations, hidden_dim, num_layers, num_bases, dropout, node_features):
         super().__init__()
         self.node_emb = nn.Embedding(n_nodes, hidden_dim)
         nn.init.xavier_uniform_(self.node_emb.weight)
+        self.feat_projections = nn.ModuleDict()
+        for nt, info in node_features.items():
+            feat_dim = info["feat"].shape[1]
+            self.feat_projections[nt] = nn.Linear(feat_dim, hidden_dim)
+        self.node_feature_info = node_features
         self.convs = nn.ModuleList()
         for _ in range(num_layers):
             self.convs.append(RGCNConv(hidden_dim, hidden_dim, n_relations, num_bases=num_bases))
@@ -75,8 +80,18 @@ class RGCN(nn.Module):
         nn.init.xavier_uniform_(self.rel_emb.weight)
         self.dropout = dropout
 
+    def get_initial_embeddings(self):
+        x = self.node_emb.weight.clone()
+        for nt, info in self.node_feature_info.items():
+            offset = info["offset"]
+            n = info["n"]
+            feat = info["feat"].to(x.device)
+            projected = self.feat_projections[nt](feat)
+            x[offset:offset + n] = x[offset:offset + n] + projected
+        return x
+
     def encode(self, edge_index, edge_type):
-        x = self.node_emb.weight
+        x = self.get_initial_embeddings()
         for conv in self.convs:
             x = conv(x, edge_index, edge_type)
             x = F.relu(x)
@@ -89,9 +104,13 @@ def load_model_and_embeddings():
 
     node_offsets = {}
     offset = 0
+    node_features = {}
     for nt in data.node_types:
         node_offsets[nt] = offset
-        offset += data[nt].num_nodes
+        n = data[nt].num_nodes
+        if hasattr(data[nt], 'x') and data[nt].x is not None:
+            node_features[nt] = {"offset": offset, "n": n, "feat": data[nt].x}
+        offset += n
     total_nodes = offset
 
     all_src, all_dst, all_rel = [], [], []
@@ -110,7 +129,7 @@ def load_model_and_embeddings():
     edge_index = torch.stack([torch.cat(all_src), torch.cat(all_dst)])
     edge_type = torch.cat(all_rel)
 
-    model = RGCN(total_nodes, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT)
+    model = RGCNWithFeatures(total_nodes, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
     model.load_state_dict(torch.load(PROCESSED_DIR / "rgcn_weights.pt", map_location=DEVICE, weights_only=True))
     model.to(DEVICE)
     model.eval()

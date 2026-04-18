@@ -1,51 +1,51 @@
 rank,Disease_label,Disease_uri,Country_label,Country_uri,confidence,context
-1,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Iceland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IS,0.5914,
-2,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Bulgaria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BG,0.5898,
-3,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Ireland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IE,0.3748,
-4,Small cell carcinoma of lung,lucia:disease/C0149925,Bulgaria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BG,0.1799,
-5,Small cell carcinoma of lung,lucia:disease/C0149925,Iceland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IS,0.1694,
-6,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,US_PRI,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/US_PRI,0.0627,
-7,Small cell carcinoma of lung,lucia:disease/C0149925,Ireland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IE,-0.0493,
-8,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,Bulgaria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BG,-0.1042,
-9,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,Iceland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IS,-0.1293,
-10,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,LI,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LI,-0.1974,
-11,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Ukraine,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/UA,-0.2068,
-12,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Portugal,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/PT,-0.3503,
-13,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,Ireland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IE,-0.3922,
-14,Small cell carcinoma of lung,lucia:disease/C0149925,US_PRI,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/US_PRI,-0.4315,
-15,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Kosovo,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/XK,-0.5021,cancer_stats_in -> Ukraine; cancer_stats_in -> US_PRI; cancer_stats_in -> US_PRI
-16,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.5318,
-17,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Montenegro,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/ME,-0.557,cancer_stats_in -> Ukraine; cancer_stats_in -> US_PRI; cancer_stats_in -> US_PRI
-18,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Albania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/AL,-0.5999,cancer_stats_in -> Ukraine; cancer_stats_in -> US_PRI; cancer_stats_in -> US_PRI
-19,Small cell carcinoma of lung,lucia:disease/C0149925,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.6515,
-20,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.6754,
-21,Small cell carcinoma of lung,lucia:disease/C0149925,LI,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LI,-0.69,
-22,Small cell carcinoma of lung,lucia:disease/C0149925,Ukraine,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/UA,-0.6979,
-23,Lung cancer panel,lucia:disease/C0024115,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.7136,
-24,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Greece,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GR,-0.759,
-25,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.765,
-26,Lung Neoplasms,lucia:disease/C0024121,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.765,
-27,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-0.7671,
-28,Small cell carcinoma of lung,lucia:disease/C0149925,Portugal,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/PT,-0.7692,
-29,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.7879,
-30,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,US_PRI,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/US_PRI,-0.7928,
-31,Large cell carcinoma of lung,lucia:disease/C0345958,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.8003,
-32,Combined Lung Small Cell Carcinoma,lucia:disease/C1333125,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.8379,
-33,"stage, non-small cell lung cancer",lucia:disease/C0280217,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.848,
-34,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.848,cancer_stats_in -> Ukraine; cancer_stats_in -> US_PRI; cancer_stats_in -> US_PRI
-35,Hyperplasia,lucia:disease/C0020507,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.8552,
-36,Metaplasia,lucia:disease/C0025568,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.857,
-37,Carcinoid tumor of lung,lucia:disease/C0280089,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.8584,
-38,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Korea,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/KR,-0.8647,
-39,Lymphoepithelial carcinoma,lucia:disease/C0334254,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.8817,
-40,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.8934,
-41,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Luxembourg,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LU,-0.8972,
-42,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Serbia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RS,-0.8992,cancer_stats_in -> Ukraine; cancer_stats_in -> US_PRI; cancer_stats_in -> US_PRI
-43,Non-small cell lung cancer recurrent,lucia:disease/C0278517,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.9439,
-44,Small cell carcinoma of lung,lucia:disease/C0149925,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-0.9482,
-45,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.9495,has_rearrangement -> del(2)(p23p21); has_rearrangement -> der(2)(p23); has_rearrangement -> der(6)(q22)
-46,Small cell lung cancer recurrent,lucia:disease/C0278727,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.9498,
-47,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,New Zealand,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NZ,-0.9702,
-48,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,Switzerland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CH,-0.9768,
-49,Lung Neoplasms,lucia:disease/C0024121,Bulgaria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BG,-0.9772,
-50,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,United Kingdom,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/GB,-0.992,
+1,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Turkey,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/TR,16.1277,cancer_stats_in -> Granada; cancer_stats_in -> Mantova and Cremona; cancer_stats_in -> Cuenca
+2,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Bosnia and Herzegovina,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BA,13.3668,cancer_stats_in -> Granada; cancer_stats_in -> Mantova and Cremona; cancer_stats_in -> Cuenca
+3,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Denmark,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DK,12.305,subtype_of -> Malignant neoplasm of lung
+4,Small cell carcinoma of lung,lucia:disease/C0149925,Denmark,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DK,12.2838,subtype_of -> Malignant neoplasm of lung
+5,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Serbia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RS,11.9438,cancer_stats_in -> Granada; cancer_stats_in -> Mantova and Cremona; cancer_stats_in -> Cuenca
+6,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Norway,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NO,11.9434,subtype_of -> Malignant neoplasm of lung
+7,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Finland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FI,11.937,subtype_of -> Malignant neoplasm of lung
+8,Small cell carcinoma of lung,lucia:disease/C0149925,Norway,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NO,11.9002,subtype_of -> Malignant neoplasm of lung
+9,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Sweden,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SE,11.8558,subtype_of -> Malignant neoplasm of lung
+10,Small cell carcinoma of lung,lucia:disease/C0149925,Finland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FI,11.8475,subtype_of -> Malignant neoplasm of lung
+11,Small cell carcinoma of lung,lucia:disease/C0149925,Sweden,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SE,11.7898,subtype_of -> Malignant neoplasm of lung
+12,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Lithuania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LT,10.8804,subtype_of -> Malignant neoplasm of lung
+13,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Estonia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/EE,10.8739,subtype_of -> Malignant neoplasm of lung
+14,Small cell carcinoma of lung,lucia:disease/C0149925,Lithuania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LT,10.8135,subtype_of -> Malignant neoplasm of lung
+15,Small cell carcinoma of lung,lucia:disease/C0149925,Estonia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/EE,10.8018,subtype_of -> Malignant neoplasm of lung
+16,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Croatia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HR,10.798,subtype_of -> Malignant neoplasm of lung
+17,Small cell carcinoma of lung,lucia:disease/C0149925,Croatia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HR,10.7461,subtype_of -> Malignant neoplasm of lung
+18,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Slovenia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SI,10.6719,subtype_of -> Malignant neoplasm of lung
+19,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,10.5825,subtype_of -> Malignant neoplasm of lung
+20,Small cell carcinoma of lung,lucia:disease/C0149925,Slovenia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SI,10.5751,subtype_of -> Malignant neoplasm of lung
+21,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Austria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/AT,10.5444,subtype_of -> Malignant neoplasm of lung
+22,Small cell carcinoma of lung,lucia:disease/C0149925,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,10.5351,subtype_of -> Malignant neoplasm of lung
+23,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,10.4999,subtype_of -> Malignant neoplasm of lung
+24,Small cell carcinoma of lung,lucia:disease/C0149925,Austria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/AT,10.4615,subtype_of -> Malignant neoplasm of lung
+25,Small cell carcinoma of lung,lucia:disease/C0149925,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,10.4585,subtype_of -> Malignant neoplasm of lung
+26,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,10.3927,subtype_of -> Malignant neoplasm of lung
+27,Small cell carcinoma of lung,lucia:disease/C0149925,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,10.3135,subtype_of -> Malignant neoplasm of lung
+28,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,New Zealand,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NZ,10.2835,cancer_stats_in -> Granada; cancer_stats_in -> Mantova and Cremona; cancer_stats_in -> Cuenca
+29,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Poland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/PL,10.2494,subtype_of -> Malignant neoplasm of lung
+30,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Netherlands,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NL,10.2132,subtype_of -> Malignant neoplasm of lung
+31,Small cell carcinoma of lung,lucia:disease/C0149925,Poland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/PL,10.2049,subtype_of -> Malignant neoplasm of lung
+32,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Canada,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CA,10.1662,cancer_stats_in -> Granada; cancer_stats_in -> Mantova and Cremona; cancer_stats_in -> Cuenca
+33,Small cell carcinoma of lung,lucia:disease/C0149925,Netherlands,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NL,10.0981,subtype_of -> Malignant neoplasm of lung
+34,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Czechia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CZ,10.0504,subtype_of -> Malignant neoplasm of lung
+35,Small cell carcinoma of lung,lucia:disease/C0149925,Czechia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CZ,10.0015,subtype_of -> Malignant neoplasm of lung
+36,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,France,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FR,9.9782,subtype_of -> Malignant neoplasm of lung
+37,Small cell carcinoma of lung,lucia:disease/C0149925,France,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FR,9.8006,subtype_of -> Malignant neoplasm of lung
+38,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Spain,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/ES,9.6313,subtype_of -> Malignant neoplasm of lung
+39,Lung Neoplasms,lucia:disease/C0024121,Denmark,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DK,9.5566,subtype_of -> Malignant neoplasm of lung
+40,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Belgium,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BE,9.5484,subtype_of -> Malignant neoplasm of lung
+41,Small cell carcinoma of lung,lucia:disease/C0149925,Belgium,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BE,9.4672,subtype_of -> Malignant neoplasm of lung
+42,Small cell carcinoma of lung,lucia:disease/C0149925,Spain,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/ES,9.4407,subtype_of -> Malignant neoplasm of lung
+43,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,9.3833,subtype_of -> Malignant neoplasm of lung
+44,Small cell carcinoma of lung,lucia:disease/C0149925,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,9.311,subtype_of -> Malignant neoplasm of lung
+45,Lung Neoplasms,lucia:disease/C0024121,Norway,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NO,9.2558,subtype_of -> Malignant neoplasm of lung
+46,Lung Neoplasms,lucia:disease/C0024121,Finland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FI,9.1641,subtype_of -> Malignant neoplasm of lung
+47,Lung Neoplasms,lucia:disease/C0024121,Sweden,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SE,9.1535,subtype_of -> Malignant neoplasm of lung
+48,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,Italy,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/IT,9.1265,subtype_of -> Malignant neoplasm of lung
+49,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,United States,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/US,9.0038,cancer_stats_in -> Granada; cancer_stats_in -> Mantova and Cremona; cancer_stats_in -> Cuenca
+50,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,Australia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/AU,8.9685,cancer_stats_in -> Granada; cancer_stats_in -> Mantova and Cremona; cancer_stats_in -> Cuenca

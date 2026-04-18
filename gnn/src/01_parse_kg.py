@@ -379,6 +379,84 @@ def extract_bio_nodes_and_edges(bio_files):
     return nodes, edges
 
 
+# All 42 diseases to be linked as subtypes of C0242379 (Malignant neoplasm of lung).
+# NOTE: Some are not strictly subtypes (marked with ?). To be reviewed by domain expert.
+LUNG_CANCER_SUBTYPES = {
+    "C0007120": "Bronchioloalveolar Adenocarcinoma",
+    "C0007131": "Non-Small Cell Lung Carcinoma",
+    "C0020507": "Hyperplasia",                            # ? general pathology
+    "C0024115": "Lung cancer panel",
+    "C0024121": "Lung Neoplasms",
+    "C0025568": "Metaplasia",                             # ? general pathology
+    "C0085261": "Proteus Syndrome",                       # ? genetic syndrome
+    "C0149782": "Squamous cell carcinoma of lung",
+    "C0149925": "Small cell carcinoma of lung",
+    "C0149927": "Hamartoma of lung",                      # ? benign tumor
+    "C0152013": "Adenocarcinoma of lung (disorder)",
+    "C0205642": "Adenocarcinoma, Oxyphilic",
+    "C0205697": "Carcinoma, Spindle-Cell",
+    "C0278517": "Non-small cell lung cancer recurrent",
+    "C0278725": "Small cell lung cancer limited stage",
+    "C0278726": "Small cell lung cancer extensive stage",
+    "C0278727": "Small cell lung cancer recurrent",
+    "C0279557": "Adenosquamous cell lung cancer",
+    "C0280089": "Carcinoid tumor of lung",
+    "C0280217": "stage, non-small cell lung cancer",
+    "C0334254": "Lymphoepithelial carcinoma",             # ? not lung-specific
+    "C0345958": "Large cell carcinoma of lung",
+    "C0345960": "Giant cell carcinoma of lung",
+    "C0349649": "Pulmonary lymphangioleiomyomatosis",     # ? not cancer
+    "C0684249": "Lung Carcinoma Metastatic in the Brain",
+    "C0685053": "Carcinoma in situ of lung",
+    "C1332137": "Lung Acinar Adenocarcinoma",
+    "C1333125": "Combined Lung Small Cell Carcinoma",
+    "C1334363": "large cell neuroendocrine carcinoma of lung",
+    "C1334439": "adenoid cystic carcinoma of lung",
+    "C1334455": "Pulmonary Sclerosing Hemangioma",        # ? benign tumor
+    "C1708045": "Fetal adenocarcinoma of lung",
+    "C1708778": "mucoepidermoid carcinoma of lung",
+    "C1708781": "Pseudosarcomatous carcinoma of lung",
+    "C1711276": "carcinosarcoma of lung",
+    "C1960396": "EGFR- non-small cell lung cancer",
+    "C1960925": "EGFR+ non-small cell lung cancer",
+    "C4072942": "Atypical pulmonary carcinoid tumor",
+    "C4324656": "Non-squamous non-small cell lung cancer",
+    "C4509816": "Squamous non-small cell lung cancer",
+    "C4521520": "Lung Adenocarcinoma In Situ",
+    "C4522160": "Invasive Lung Mucinous Adenocarcinoma",
+}
+
+PARENT_DISEASE = "C0242379"
+
+
+def add_subtype_edges(nodes, edges, disease_uri_map):
+    parent_uri = None
+    for uri, info in nodes.items():
+        if info["type"] == "Disease" and PARENT_DISEASE in uri:
+            parent_uri = uri
+            break
+    if not parent_uri:
+        print("  [WARN] Parent disease C0242379 not found, skipping subtype edges")
+        return edges
+
+    count = 0
+    for code in LUNG_CANCER_SUBTYPES:
+        child_uri = f"lucia:disease/{code}"
+        if child_uri in nodes or disease_uri_map.get(code):
+            resolved = disease_uri_map.get(code, child_uri)
+            if resolved == parent_uri:
+                continue
+            edges.append({
+                "src": resolved, "src_type": "Disease",
+                "rel": "subtype_of",
+                "dst": parent_uri, "dst_type": "Disease",
+                "attrs": {},
+            })
+            count += 1
+    print(f"  Added {count} (Disease, subtype_of, Disease) edges bridging to env layer")
+    return edges
+
+
 def merge_nodes(env_nodes, bio_nodes):
     merged = dict(env_nodes)
     disease_uri_map = {}
@@ -523,6 +601,7 @@ def main():
                 merged[uri] = info
     all_edges = env_edges + remap_bio_edges(bio_edges, disease_map)
     print(f"  Bridged {len(disease_map)} Disease entities across layers")
+    all_edges = add_subtype_edges(merged, all_edges, disease_map)
     summary = write_outputs(merged, all_edges, OUTPUT_DIR)
 
     print("\n[5/5] Generating thesis figures ...")

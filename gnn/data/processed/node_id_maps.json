@@ -1,4 +1,294 @@
 {
+ "CalendarYear": {
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1953": {
+   "idx": 0,
+   "label": "1953"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1954": {
+   "idx": 1,
+   "label": "1954"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1955": {
+   "idx": 2,
+   "label": "1955"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1956": {
+   "idx": 3,
+   "label": "1956"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1957": {
+   "idx": 4,
+   "label": "1957"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1958": {
+   "idx": 5,
+   "label": "1958"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1959": {
+   "idx": 6,
+   "label": "1959"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1960": {
+   "idx": 7,
+   "label": "1960"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1961": {
+   "idx": 8,
+   "label": "1961"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1962": {
+   "idx": 9,
+   "label": "1962"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1963": {
+   "idx": 10,
+   "label": "1963"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1964": {
+   "idx": 11,
+   "label": "1964"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1965": {
+   "idx": 12,
+   "label": "1965"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1966": {
+   "idx": 13,
+   "label": "1966"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1967": {
+   "idx": 14,
+   "label": "1967"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1968": {
+   "idx": 15,
+   "label": "1968"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1969": {
+   "idx": 16,
+   "label": "1969"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1970": {
+   "idx": 17,
+   "label": "1970"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1971": {
+   "idx": 18,
+   "label": "1971"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1972": {
+   "idx": 19,
+   "label": "1972"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1973": {
+   "idx": 20,
+   "label": "1973"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1974": {
+   "idx": 21,
+   "label": "1974"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1975": {
+   "idx": 22,
+   "label": "1975"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1976": {
+   "idx": 23,
+   "label": "1976"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1977": {
+   "idx": 24,
+   "label": "1977"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1978": {
+   "idx": 25,
+   "label": "1978"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1979": {
+   "idx": 26,
+   "label": "1979"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1980": {
+   "idx": 27,
+   "label": "1980"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1981": {
+   "idx": 28,
+   "label": "1981"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1982": {
+   "idx": 29,
+   "label": "1982"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1983": {
+   "idx": 30,
+   "label": "1983"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1984": {
+   "idx": 31,
+   "label": "1984"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1985": {
+   "idx": 32,
+   "label": "1985"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1986": {
+   "idx": 33,
+   "label": "1986"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1987": {
+   "idx": 34,
+   "label": "1987"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1988": {
+   "idx": 35,
+   "label": "1988"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1989": {
+   "idx": 36,
+   "label": "1989"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1990": {
+   "idx": 37,
+   "label": "1990"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1991": {
+   "idx": 38,
+   "label": "1991"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1992": {
+   "idx": 39,
+   "label": "1992"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1993": {
+   "idx": 40,
+   "label": "1993"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1994": {
+   "idx": 41,
+   "label": "1994"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1995": {
+   "idx": 42,
+   "label": "1995"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1996": {
+   "idx": 43,
+   "label": "1996"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1997": {
+   "idx": 44,
+   "label": "1997"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1998": {
+   "idx": 45,
+   "label": "1998"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1999": {
+   "idx": 46,
+   "label": "1999"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2000": {
+   "idx": 47,
+   "label": "2000"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2001": {
+   "idx": 48,
+   "label": "2001"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2002": {
+   "idx": 49,
+   "label": "2002"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2003": {
+   "idx": 50,
+   "label": "2003"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2004": {
+   "idx": 51,
+   "label": "2004"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2005": {
+   "idx": 52,
+   "label": "2005"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2006": {
+   "idx": 53,
+   "label": "2006"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2007": {
+   "idx": 54,
+   "label": "2007"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2008": {
+   "idx": 55,
+   "label": "2008"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2009": {
+   "idx": 56,
+   "label": "2009"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2010": {
+   "idx": 57,
+   "label": "2010"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2011": {
+   "idx": 58,
+   "label": "2011"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2012": {
+   "idx": 59,
+   "label": "2012"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2013": {
+   "idx": 60,
+   "label": "2013"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2014": {
+   "idx": 61,
+   "label": "2014"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2015": {
+   "idx": 62,
+   "label": "2015"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2016": {
+   "idx": 63,
+   "label": "2016"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2017": {
+   "idx": 64,
+   "label": "2017"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2018": {
+   "idx": 65,
+   "label": "2018"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2019": {
+   "idx": 66,
+   "label": "2019"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2020": {
+   "idx": 67,
+   "label": "2020"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021": {
+   "idx": 68,
+   "label": "2021"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2022": {
+   "idx": 69,
+   "label": "2022"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2023": {
+   "idx": 70,
+   "label": "2023"
+  },
+  "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2024": {
+   "idx": 71,
+   "label": "2024"
+  }
+ },
  "Chemical": {
   "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#chemical/C0005036": {
    "idx": 0,

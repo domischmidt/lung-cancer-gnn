@@ -1,51 +1,51 @@
 rank,GeneProduct_label,GeneProduct_uri,Pathway_label,Pathway_uri,confidence,context
-1,FN1,lucia:geneproduct/FN1,WP1438,lucia:pathway/WP1438,1.7813,part_of_pathway -> WP4658
-2,AKT1,lucia:geneproduct/AKT1,WP1438,lucia:pathway/WP1438,1.7719,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-3,EGFR,lucia:geneproduct/EGFR,WP1438,lucia:pathway/WP1438,1.7154,part_of_pathway -> WP4255
-4,AKT1,lucia:geneproduct/AKT1,WP5441,lucia:pathway/WP5441,1.7134,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-5,PIK3CB,lucia:geneproduct/PIK3CB,WP1438,lucia:pathway/WP1438,1.7018,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-6,FN1,lucia:geneproduct/FN1,WP5441,lucia:pathway/WP5441,1.6991,part_of_pathway -> WP4658
-7,AKT1,lucia:geneproduct/AKT1,WP5526,lucia:pathway/WP5526,1.6828,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-8,FN1,lucia:geneproduct/FN1,WP5526,lucia:pathway/WP5526,1.6786,part_of_pathway -> WP4658
-9,PRKCG,lucia:geneproduct/PRKCG,WP1438,lucia:pathway/WP1438,1.6632,part_of_pathway -> WP4255
-10,NFKBIA,lucia:geneproduct/NFKBIA,WP1438,lucia:pathway/WP1438,1.6624,part_of_pathway -> WP4658
-11,EGFR,lucia:geneproduct/EGFR,WP5441,lucia:pathway/WP5441,1.6554,part_of_pathway -> WP4255
-12,PIK3CB,lucia:geneproduct/PIK3CB,WP5441,lucia:pathway/WP5441,1.6494,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-13,CASP8,lucia:geneproduct/CASP8,WP1438,lucia:pathway/WP1438,1.6444,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-14,AKT1,lucia:geneproduct/AKT1,WP5531,lucia:pathway/WP5531,1.636,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-15,FN1,lucia:geneproduct/FN1,WP4255,lucia:pathway/WP4255,1.6343,part_of_pathway -> WP4658
-16,EGFR,lucia:geneproduct/EGFR,WP5526,lucia:pathway/WP5526,1.6312,part_of_pathway -> WP4255
-17,FN1,lucia:geneproduct/FN1,WP5531,lucia:pathway/WP5531,1.6308,part_of_pathway -> WP4658
-18,NFKBIA,lucia:geneproduct/NFKBIA,WP5441,lucia:pathway/WP5441,1.6241,part_of_pathway -> WP4658
-19,AKT1,lucia:geneproduct/AKT1,WP5100,lucia:pathway/WP5100,1.6203,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-20,FN1,lucia:geneproduct/FN1,WP5100,lucia:pathway/WP5100,1.6181,part_of_pathway -> WP4658
-21,PIK3CB,lucia:geneproduct/PIK3CB,WP5526,lucia:pathway/WP5526,1.6154,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-22,TRAF3,lucia:geneproduct/TRAF3,WP1438,lucia:pathway/WP1438,1.6109,part_of_pathway -> WP4658
-23,PRKCG,lucia:geneproduct/PRKCG,WP5441,lucia:pathway/WP5441,1.61,part_of_pathway -> WP4255
-24,LAMC3,lucia:geneproduct/LAMC3,WP1438,lucia:pathway/WP1438,1.5942,part_of_pathway -> WP4658
-25,ITGA2B,lucia:geneproduct/ITGA2B,WP1438,lucia:pathway/WP1438,1.5925,part_of_pathway -> WP4658
-26,PRKCG,lucia:geneproduct/PRKCG,WP5526,lucia:pathway/WP5526,1.589,part_of_pathway -> WP4255
-27,NFKBIA,lucia:geneproduct/NFKBIA,WP5526,lucia:pathway/WP5526,1.5873,part_of_pathway -> WP4658
-28,EGFR,lucia:geneproduct/EGFR,WP5531,lucia:pathway/WP5531,1.5854,part_of_pathway -> WP4255
-29,AKT1,lucia:geneproduct/AKT1,WP2489,lucia:pathway/WP2489,1.5809,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-30,FN1,lucia:geneproduct/FN1,WP2489,lucia:pathway/WP2489,1.5799,part_of_pathway -> WP4658
-31,FN1,lucia:geneproduct/FN1,WP5512,lucia:pathway/WP5512,1.5783,part_of_pathway -> WP4658
-32,RXRG,lucia:geneproduct/RXRG,WP1438,lucia:pathway/WP1438,1.5772,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-33,PIK3CB,lucia:geneproduct/PIK3CB,WP5531,lucia:pathway/WP5531,1.5713,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-34,CCNE1,lucia:geneproduct/CCNE1,WP1438,lucia:pathway/WP1438,1.5699,part_of_pathway -> WP4658
-35,CRABP2,lucia:geneproduct/CRABP2,WP1438,lucia:pathway/WP1438,1.5693,part_of_pathway -> WP4255
-36,ITGB1,lucia:geneproduct/ITGB1,WP1438,lucia:pathway/WP1438,1.5684,part_of_pathway -> WP4658
-37,EGFR,lucia:geneproduct/EGFR,WP5100,lucia:pathway/WP5100,1.5677,part_of_pathway -> WP4255
-38,AKT1,lucia:geneproduct/AKT1,WP5512,lucia:pathway/WP5512,1.564,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-39,ALK,lucia:geneproduct/ALK,WP1438,lucia:pathway/WP1438,1.5621,part_of_pathway -> WP4255
-40,RASSF5,lucia:geneproduct/RASSF5,WP1438,lucia:pathway/WP1438,1.5605,part_of_pathway -> WP4255
-41,CASP8,lucia:geneproduct/CASP8,WP5441,lucia:pathway/WP5441,1.5593,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-42,PIK3CB,lucia:geneproduct/PIK3CB,WP5100,lucia:pathway/WP5100,1.5588,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-43,PIK3R1,lucia:geneproduct/PIK3R1,WP1438,lucia:pathway/WP1438,1.557,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-44,NFKBIA,lucia:geneproduct/NFKBIA,WP4255,lucia:pathway/WP4255,1.5564,part_of_pathway -> WP4658
-45,HRAS,lucia:geneproduct/HRAS,WP1438,lucia:pathway/WP1438,1.556,part_of_pathway -> WP4255
-46,CYCS,lucia:geneproduct/CYCS,WP1438,lucia:pathway/WP1438,1.5539,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-47,FN1,lucia:geneproduct/FN1,WP4186,lucia:pathway/WP4186,1.5498,part_of_pathway -> WP4658
-48,TRAF4,lucia:geneproduct/TRAF4,WP1438,lucia:pathway/WP1438,1.5488,part_of_pathway -> WP4658
-49,CASP8,lucia:geneproduct/CASP8,WP5526,lucia:pathway/WP5526,1.5446,part_of_pathway -> WP4255; part_of_pathway -> WP4658
-50,PRKCG,lucia:geneproduct/PRKCG,WP5531,lucia:pathway/WP5531,1.5434,part_of_pathway -> WP4255
+1,CASP9,lucia:geneproduct/CASP9,WP3577,lucia:pathway/WP3577,1.2743,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+2,CASP9,lucia:geneproduct/CASP9,WP1889,lucia:pathway/WP1889,1.2167,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+3,CASP9,lucia:geneproduct/CASP9,WP4102,lucia:pathway/WP4102,1.2132,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+4,CASP9,lucia:geneproduct/CASP9,WP2858,lucia:pathway/WP2858,1.2103,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+5,CASP9,lucia:geneproduct/CASP9,WP4098,lucia:pathway/WP4098,1.2091,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+6,CASP9,lucia:geneproduct/CASP9,WP4049,lucia:pathway/WP4049,1.2051,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+7,CASP9,lucia:geneproduct/CASP9,WP1822,lucia:pathway/WP1822,1.201,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+8,CASP9,lucia:geneproduct/CASP9,WP411,lucia:pathway/WP411,1.2009,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+9,CASP9,lucia:geneproduct/CASP9,WP3797,lucia:pathway/WP3797,1.1979,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+10,CASP9,lucia:geneproduct/CASP9,WP1917,lucia:pathway/WP1917,1.1887,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+11,CASP9,lucia:geneproduct/CASP9,WP3842,lucia:pathway/WP3842,1.1883,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+12,CASP9,lucia:geneproduct/CASP9,WP4121,lucia:pathway/WP4121,1.1753,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+13,CASP9,lucia:geneproduct/CASP9,WP1829,lucia:pathway/WP1829,1.165,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+14,CASP9,lucia:geneproduct/CASP9,WP4071,lucia:pathway/WP4071,1.1648,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+15,CASP9,lucia:geneproduct/CASP9,WP4096,lucia:pathway/WP4096,1.1631,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+16,CASP9,lucia:geneproduct/CASP9,WP3315,lucia:pathway/WP3315,1.1631,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+17,CASP9,lucia:geneproduct/CASP9,WP1936,lucia:pathway/WP1936,1.1592,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+18,CASP9,lucia:geneproduct/CASP9,WP4419,lucia:pathway/WP4419,1.1532,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+19,CASP9,lucia:geneproduct/CASP9,WP5323,lucia:pathway/WP5323,1.1525,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+20,CASP9,lucia:geneproduct/CASP9,WP2853,lucia:pathway/WP2853,1.1492,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+21,CASP9,lucia:geneproduct/CASP9,WP5390,lucia:pathway/WP5390,1.1456,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+22,CASP9,lucia:geneproduct/CASP9,WP4441,lucia:pathway/WP4441,1.1419,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+23,CASP9,lucia:geneproduct/CASP9,WP4803,lucia:pathway/WP4803,1.137,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+24,CASP9,lucia:geneproduct/CASP9,WP1906,lucia:pathway/WP1906,1.134,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+25,CASP9,lucia:geneproduct/CASP9,WP2743,lucia:pathway/WP2743,1.1216,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+26,CASP9,lucia:geneproduct/CASP9,WP1887,lucia:pathway/WP1887,1.1167,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+27,CASP9,lucia:geneproduct/CASP9,WP2740,lucia:pathway/WP2740,1.1134,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+28,CASP9,lucia:geneproduct/CASP9,WP111,lucia:pathway/WP111,1.1125,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+29,CASP9,lucia:geneproduct/CASP9,WP1903,lucia:pathway/WP1903,1.1121,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+30,CASP9,lucia:geneproduct/CASP9,WP455,lucia:pathway/WP455,1.1113,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+31,CASP9,lucia:geneproduct/CASP9,WP1785,lucia:pathway/WP1785,1.1099,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+32,CASP9,lucia:geneproduct/CASP9,WP4111,lucia:pathway/WP4111,1.1082,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+33,CASP9,lucia:geneproduct/CASP9,WP4110,lucia:pathway/WP4110,1.104,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+34,CASP9,lucia:geneproduct/CASP9,WP4070,lucia:pathway/WP4070,1.1026,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+35,CASP9,lucia:geneproduct/CASP9,WP4352,lucia:pathway/WP4352,1.0999,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+36,CASP9,lucia:geneproduct/CASP9,WP1793,lucia:pathway/WP1793,1.0988,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+37,CASP9,lucia:geneproduct/CASP9,WP1902,lucia:pathway/WP1902,1.0984,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+38,CASP9,lucia:geneproduct/CASP9,WP2747,lucia:pathway/WP2747,1.0981,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+39,CASP9,lucia:geneproduct/CASP9,WP4536,lucia:pathway/WP4536,1.0981,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+40,CASP9,lucia:geneproduct/CASP9,WP2788,lucia:pathway/WP2788,1.0954,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+41,CASP9,lucia:geneproduct/CASP9,WP5234,lucia:pathway/WP5234,1.0922,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+42,CASP9,lucia:geneproduct/CASP9,WP2005,lucia:pathway/WP2005,1.0921,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+43,CASP9,lucia:geneproduct/CASP9,WP2774,lucia:pathway/WP2774,1.088,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+44,CASP9,lucia:geneproduct/CASP9,WP1892,lucia:pathway/WP1892,1.0805,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+45,CASP9,lucia:geneproduct/CASP9,WP5417,lucia:pathway/WP5417,1.0799,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+46,CASP9,lucia:geneproduct/CASP9,WP1836,lucia:pathway/WP1836,1.0786,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+47,CASP9,lucia:geneproduct/CASP9,WP2884,lucia:pathway/WP2884,1.0776,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+48,CASP9,lucia:geneproduct/CASP9,WP3810,lucia:pathway/WP3810,1.0726,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+49,CASP9,lucia:geneproduct/CASP9,WP2857,lucia:pathway/WP2857,1.072,part_of_pathway -> WP4255; part_of_pathway -> WP4658
+50,CASP9,lucia:geneproduct/CASP9,WP117,lucia:pathway/WP117,1.0692,part_of_pathway -> WP4255; part_of_pathway -> WP4658

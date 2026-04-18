@@ -1,51 +1,51 @@
 rank,Biomarker_label,Biomarker_uri,Disease_label,Disease_uri,confidence,context
-1,glycitein,lucia:biomarker/C0253391,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9765,marker_for -> Malignant neoplasm of lung
-2,glycitein,lucia:biomarker/C0253391,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.9686,marker_for -> Malignant neoplasm of lung
-3,glycitein,lucia:biomarker/C0253391,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9611,marker_for -> Malignant neoplasm of lung
-4,Beta+gamma tocopherol,lucia:biomarker/C0552327,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9392,marker_for -> Malignant neoplasm of lung
-5,Beta+gamma tocopherol,lucia:biomarker/C0552327,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.9283,marker_for -> Malignant neoplasm of lung
-6,Beta+gamma tocopherol,lucia:biomarker/C0552327,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.925,marker_for -> Malignant neoplasm of lung
-7,Equol,lucia:biomarker/C0059497,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.9243,marker_for -> Malignant neoplasm of lung
-8,Equol,lucia:biomarker/C0059497,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9162,marker_for -> Malignant neoplasm of lung
-9,Equol,lucia:biomarker/C0059497,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.8999,marker_for -> Malignant neoplasm of lung
-10,daidzein,lucia:biomarker/C0057090,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.8893,marker_for -> Malignant neoplasm of lung
-11,daidzein,lucia:biomarker/C0057090,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8882,marker_for -> Malignant neoplasm of lung
-12,glycitein,lucia:biomarker/C0253391,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.8829,marker_for -> Malignant neoplasm of lung
-13,daidzein,lucia:biomarker/C0057090,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.8746,marker_for -> Malignant neoplasm of lung
-14,folate,lucia:biomarker/C0178638,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8716,marker_for -> Malignant neoplasm of lung
-15,alpha-Tocopherol,lucia:biomarker/C0969677,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8681,marker_for -> Malignant neoplasm of lung
-16,Genistein,lucia:biomarker/C0061202,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8637,marker_for -> Malignant neoplasm of lung
-17,folate,lucia:biomarker/C0178638,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.858,marker_for -> Malignant neoplasm of lung
-18,Lycopene,lucia:biomarker/C0065331,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8539,marker_for -> Malignant neoplasm of lung
-19,Tocopherols,lucia:biomarker/C3255108,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.853,marker_for -> Malignant neoplasm of lung
-20,Beta-Cryptoxanthin,lucia:biomarker/C0896117,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8513,marker_for -> Malignant neoplasm of lung
-21,Homocysteine,lucia:biomarker/C0019878,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8452,marker_for -> Malignant neoplasm of lung
-22,Beta+gamma tocopherol,lucia:biomarker/C0552327,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.8451,marker_for -> Malignant neoplasm of lung
-23,Genistein,lucia:biomarker/C0061202,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.8432,marker_for -> Malignant neoplasm of lung
-24,folate,lucia:biomarker/C0178638,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.8426,marker_for -> Malignant neoplasm of lung
-25,alpha-Tocopherol,lucia:biomarker/C0969677,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.8355,marker_for -> Malignant neoplasm of lung
-26,Equol,lucia:biomarker/C0059497,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.8337,marker_for -> Malignant neoplasm of lung
-27,alpha-carotene,lucia:biomarker/C0051336,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.833,marker_for -> Malignant neoplasm of lung
-28,Tocopherols,lucia:biomarker/C3255108,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.8324,marker_for -> Malignant neoplasm of lung
-29,Genistein,lucia:biomarker/C0061202,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.8276,marker_for -> Malignant neoplasm of lung
-30,glycitein,lucia:biomarker/C0253391,Small cell carcinoma of lung,lucia:disease/C0149925,0.8254,marker_for -> Malignant neoplasm of lung
-31,alpha-Tocopherol,lucia:biomarker/C0969677,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.8179,marker_for -> Malignant neoplasm of lung
-32,Tocopherols,lucia:biomarker/C3255108,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.8171,marker_for -> Malignant neoplasm of lung
-33,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8164,marker_for -> Malignant neoplasm of lung
-34,Lycopene,lucia:biomarker/C0065331,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.8146,marker_for -> Malignant neoplasm of lung
-35,Beta-Cryptoxanthin,lucia:biomarker/C0896117,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.8094,marker_for -> Malignant neoplasm of lung
-36,glycitein,lucia:biomarker/C0253391,Lung Neoplasms,lucia:disease/C0024121,0.8057,marker_for -> Malignant neoplasm of lung
-37,daidzein,lucia:biomarker/C0057090,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.8036,marker_for -> Malignant neoplasm of lung
-38,Homocysteine,lucia:biomarker/C0019878,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.8025,marker_for -> Malignant neoplasm of lung
-39,Ascorbic Acid,lucia:biomarker/C0003968,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.799,marker_for -> Malignant neoplasm of lung
-40,Lycopene,lucia:biomarker/C0065331,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.7976,marker_for -> Malignant neoplasm of lung
-41,Isoflavones,lucia:biomarker/C0022179,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.7962,marker_for -> Malignant neoplasm of lung
-42,Beta+gamma tocopherol,lucia:biomarker/C0552327,Small cell carcinoma of lung,lucia:disease/C0149925,0.7943,marker_for -> Malignant neoplasm of lung
-43,beta-Carotene,lucia:biomarker/C0053396,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.7927,marker_for -> Malignant neoplasm of lung
-44,Beta-Cryptoxanthin,lucia:biomarker/C0896117,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.7922,marker_for -> Malignant neoplasm of lung
-45,alpha-carotene,lucia:biomarker/C0051336,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.7911,marker_for -> Malignant neoplasm of lung
-46,Selenium,lucia:biomarker/C0036581,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.7907,marker_for -> Malignant neoplasm of lung
-47,Homocysteine,lucia:biomarker/C0019878,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.785,marker_for -> Malignant neoplasm of lung
-48,folate,lucia:biomarker/C0178638,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.7819,marker_for -> Malignant neoplasm of lung
-49,Carotenoids,lucia:biomarker/C0007271,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.7809,marker_for -> Malignant neoplasm of lung
-50,pyridoxal phosphate,lucia:biomarker/C0034266,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.7776,marker_for -> Malignant neoplasm of lung
+1,Retinol,lucia:biomarker/C0087161,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0849,marker_for -> Malignant neoplasm of lung
+2,Vitamin B12,lucia:biomarker/C0042845,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0848,marker_for -> Malignant neoplasm of lung
+3,Homocysteine,lucia:biomarker/C0019878,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0838,marker_for -> Malignant neoplasm of lung
+4,folate,lucia:biomarker/C0178638,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0809,marker_for -> Malignant neoplasm of lung
+5,Ascorbic Acid,lucia:biomarker/C0003968,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0717,marker_for -> Malignant neoplasm of lung
+6,beta-Carotene,lucia:biomarker/C0053396,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.068,marker_for -> Malignant neoplasm of lung
+7,glycitein,lucia:biomarker/C0253391,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0634,marker_for -> Malignant neoplasm of lung
+8,pyridoxal phosphate,lucia:biomarker/C0034266,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0617,marker_for -> Malignant neoplasm of lung
+9,Beta-Cryptoxanthin,lucia:biomarker/C0896117,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0606,marker_for -> Malignant neoplasm of lung
+10,Tocopherols,lucia:biomarker/C3255108,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0509,marker_for -> Malignant neoplasm of lung
+11,Vitamin B12,lucia:biomarker/C0042845,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0465,marker_for -> Malignant neoplasm of lung
+12,Homocysteine,lucia:biomarker/C0019878,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0443,marker_for -> Malignant neoplasm of lung
+13,Retinol,lucia:biomarker/C0087161,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0418,marker_for -> Malignant neoplasm of lung
+14,lutein / zeaxanthin,lucia:biomarker/C2929534,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0382,marker_for -> Malignant neoplasm of lung
+15,folate,lucia:biomarker/C0178638,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0373,marker_for -> Malignant neoplasm of lung
+16,Ascorbic Acid,lucia:biomarker/C0003968,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0292,marker_for -> Malignant neoplasm of lung
+17,beta-Carotene,lucia:biomarker/C0053396,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0275,marker_for -> Malignant neoplasm of lung
+18,glycitein,lucia:biomarker/C0253391,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0239,marker_for -> Malignant neoplasm of lung
+19,pyridoxal phosphate,lucia:biomarker/C0034266,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0219,marker_for -> Malignant neoplasm of lung
+20,Beta-Cryptoxanthin,lucia:biomarker/C0896117,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0215,marker_for -> Malignant neoplasm of lung
+21,Tocopherols,lucia:biomarker/C3255108,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.013,marker_for -> Malignant neoplasm of lung
+22,lutein / zeaxanthin,lucia:biomarker/C2929534,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,1.0022,marker_for -> Malignant neoplasm of lung
+23,gamma-Tocopherol,lucia:biomarker/C0017054,Squamous cell carcinoma of lung,lucia:disease/C0149782,1.0009,marker_for -> Malignant neoplasm of lung
+24,Genistein,lucia:biomarker/C0061202,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9992,marker_for -> Malignant neoplasm of lung
+25,alpha-Tocopherol,lucia:biomarker/C0969677,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9978,marker_for -> Malignant neoplasm of lung
+26,Lycopene,lucia:biomarker/C0065331,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9949,marker_for -> Malignant neoplasm of lung
+27,Selenium,lucia:biomarker/C0036581,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9893,marker_for -> Malignant neoplasm of lung
+28,Equol,lucia:biomarker/C0059497,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9853,marker_for -> Malignant neoplasm of lung
+29,Riboflavin,lucia:biomarker/C0035527,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9829,marker_for -> Malignant neoplasm of lung
+30,Isoflavones,lucia:biomarker/C0022179,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9696,marker_for -> Malignant neoplasm of lung
+31,Genistein,lucia:biomarker/C0061202,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9659,marker_for -> Malignant neoplasm of lung
+32,gamma-Tocopherol,lucia:biomarker/C0017054,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9655,marker_for -> Malignant neoplasm of lung
+33,alpha-Tocopherol,lucia:biomarker/C0969677,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9627,marker_for -> Malignant neoplasm of lung
+34,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9617,marker_for -> Malignant neoplasm of lung
+35,Lycopene,lucia:biomarker/C0065331,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9602,marker_for -> Malignant neoplasm of lung
+36,Selenium,lucia:biomarker/C0036581,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.956,marker_for -> Malignant neoplasm of lung
+37,Equol,lucia:biomarker/C0059497,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9537,marker_for -> Malignant neoplasm of lung
+38,Beta+gamma tocopherol,lucia:biomarker/C0552327,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9523,marker_for -> Malignant neoplasm of lung
+39,Carotenoids,lucia:biomarker/C0007271,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9522,marker_for -> Malignant neoplasm of lung
+40,alpha-carotene,lucia:biomarker/C0051336,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9514,marker_for -> Malignant neoplasm of lung
+41,Riboflavin,lucia:biomarker/C0035527,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9479,marker_for -> Malignant neoplasm of lung
+42,daidzein,lucia:biomarker/C0057090,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9349,marker_for -> Malignant neoplasm of lung
+43,Isoflavones,lucia:biomarker/C0022179,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9345,marker_for -> Malignant neoplasm of lung
+44,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9288,marker_for -> Malignant neoplasm of lung
+45,Carotenoids,lucia:biomarker/C0007271,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9235,marker_for -> Malignant neoplasm of lung
+46,Beta+gamma tocopherol,lucia:biomarker/C0552327,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9228,marker_for -> Malignant neoplasm of lung
+47,alpha-carotene,lucia:biomarker/C0051336,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9212,marker_for -> Malignant neoplasm of lung
+48,daidzein,lucia:biomarker/C0057090,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.9023,marker_for -> Malignant neoplasm of lung
+49,Ascorbic Acid,lucia:biomarker/C0003968,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8321,marker_for -> Malignant neoplasm of lung
+50,Vitamin B12,lucia:biomarker/C0042845,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.8312,marker_for -> Malignant neoplasm of lung
