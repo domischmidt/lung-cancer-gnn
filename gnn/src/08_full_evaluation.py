@@ -684,7 +684,8 @@ def main():
     print("\nLoading graph ...")
     triples, n_entities, rel_to_id, edge_type_names, edge_type_meta, node_offsets, node_features, data = load_graph()
     print(f"  {n_entities:,} nodes, {len(rel_to_id)} relations, {triples.size(0):,} triples")
-    print(f"  Node features: {', '.join(f'{nt}({info[\"feat\"].shape[1]}d)' for nt, info in node_features.items())}")
+    feat_str = ", ".join(f"{nt}({info['feat'].shape[1]}d)" for nt, info in node_features.items())
+    print(f"  Node features: {feat_str}")
 
     with open(PROCESSED_DIR / "node_id_maps.json") as f:
         node_id_maps = json.load(f)
