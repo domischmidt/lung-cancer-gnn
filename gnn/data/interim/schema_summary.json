@@ -1,6 +1,6 @@
 {
   "total_nodes": 190941,
-  "total_edges": 618953,
+  "total_edges": 618946,
   "node_types": {
     "ChemicalLocationAssociation": 131610,
     "VitalStatistics": 33488,
@@ -21,13 +21,13 @@
     "Chemical": 10
   },
   "edge_types": {
-    "(ChemicalLocationAssociation, refers_to, Chemical)": 131610,
     "(ChemicalLocationAssociation, has_time_boundary, CalendarYear)": 131610,
+    "(ChemicalLocationAssociation, refers_to, Chemical)": 131610,
     "(ChemicalLocationAssociation, refers_to, GeoPoliticalRegion)": 117609,
     "(Gene, in_pathway, Pathway)": 54005,
-    "(VitalStatistics, has_time_boundary, CalendarYear)": 33488,
-    "(Disease, detected_finding, VitalStatistics)": 33488,
     "(VitalStatistics, has_output, People)": 33488,
+    "(Disease, detected_finding, VitalStatistics)": 33488,
+    "(VitalStatistics, has_time_boundary, CalendarYear)": 33488,
     "(VitalStatistics, part_of, GeographicRegion)": 23076,
     "(Gene, associated_with, Disease)": 17701,
     "(ChemicalLocationAssociation, refers_to, GeographicRegion)": 14001,
@@ -42,7 +42,7 @@
     "(GeographicRegion, part_of, Country)": 518,
     "(GeographicRegion, has_measurement_value, Population)": 439,
     "(GeneProduct, part_of_pathway, Pathway)": 168,
-    "(Disease, subtype_of, Disease)": 42,
+    "(Disease, subtype_of, Disease)": 35,
     "(Biomarker, marker_for, Disease)": 24,
     "(Pathway, linked_to, Disease)": 2
   }

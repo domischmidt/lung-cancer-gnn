@@ -1,51 +1,51 @@
 rank,Country_label,Country_uri,CalendarYear_label,CalendarYear_uri,confidence,context
-1,Estonia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/EE,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,16.0656,cancer_data_in -> 2019; cancer_data_in -> 2006; cancer_data_in -> 1980
-2,Lithuania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LT,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,15.8966,cancer_data_in -> 2019; cancer_data_in -> 2006; cancer_data_in -> 1993
-3,Estonia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/EE,2020,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2020,15.8725,cancer_data_in -> 2019; cancer_data_in -> 2006; cancer_data_in -> 1980
-4,Austria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/AT,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,15.7188,cancer_data_in -> 2019; cancer_data_in -> 2006; cancer_data_in -> 2015
-5,Netherlands,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/NL,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,15.5767,cancer_data_in -> 2019; cancer_data_in -> 2006; cancer_data_in -> 1993
-6,Austria,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/AT,2020,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2020,15.5282,cancer_data_in -> 2019; cancer_data_in -> 2006; cancer_data_in -> 2015
-7,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,15.2792,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-8,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2020,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2020,15.0995,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-9,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,15.0935,cancer_data_in -> 2024
-10,Belgium,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BE,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,15.0093,cancer_data_in -> 2019; cancer_data_in -> 2018; cancer_data_in -> 2006
-11,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,14.9756,cancer_data_in -> 2006; cancer_data_in -> 2015; cancer_data_in -> 2005
-12,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2020,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2020,14.9177,cancer_data_in -> 2024
-13,Czechia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/CZ,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,14.8523,cancer_data_in -> 2019; cancer_data_in -> 2006; cancer_data_in -> 2015
-14,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2019,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2019,14.8359,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-15,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,2020,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2020,14.8103,cancer_data_in -> 2006; cancer_data_in -> 2015; cancer_data_in -> 2005
-16,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2019,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2019,14.6584,cancer_data_in -> 2024
-17,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2018,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2018,14.56,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-18,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,2019,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2019,14.5504,cancer_data_in -> 2006; cancer_data_in -> 2015; cancer_data_in -> 2005
-19,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2016,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2016,14.5047,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-20,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2017,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2017,14.4351,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-21,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2015,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2015,14.3886,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-22,France,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FR,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,14.385,cancer_data_in -> 2024
-23,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2018,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2018,14.3822,cancer_data_in -> 2024
-24,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2014,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2014,14.351,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-25,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2012,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2012,14.3494,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-26,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2011,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2011,14.3476,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-27,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2016,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2016,14.3278,cancer_data_in -> 2024
-28,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2013,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2013,14.3001,cancer_data_in -> 2006; cancer_data_in -> 1980; cancer_data_in -> 1993
-29,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,2018,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2018,14.2712,cancer_data_in -> 2006; cancer_data_in -> 2015; cancer_data_in -> 2005
-30,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2017,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2017,14.2615,cancer_data_in -> 2024
-31,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,14.2563,cancer_data_in -> 2024
-32,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2009,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2009,14.244,cancer_data_in -> 2024
-33,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2011,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2011,14.2276,cancer_data_in -> 2024
-34,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2012,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2012,14.2273,cancer_data_in -> 2024
-35,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2015,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2015,14.2163,cancer_data_in -> 2024
-36,France,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FR,2020,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2020,14.1802,cancer_data_in -> 2024
-37,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2014,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2014,14.1774,cancer_data_in -> 2024
-38,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2010,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2010,14.1306,cancer_data_in -> 2024
-39,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2013,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2013,14.1271,cancer_data_in -> 2024
-40,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2020,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2020,14.0615,cancer_data_in -> 2024
-41,Croatia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HR,2000,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2000,14.0362,cancer_data_in -> 2019; cancer_data_in -> 2006; cancer_data_in -> 2015
-42,Spain,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/ES,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,13.9689,cancer_data_in -> 2024
-43,France,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/FR,2019,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2019,13.9688,cancer_data_in -> 2024
-44,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2007,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2007,13.9538,cancer_data_in -> 2024
-45,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2008,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2008,13.9407,cancer_data_in -> 2024
-46,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2005,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2005,13.9351,cancer_data_in -> 2024
-47,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2006,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2006,13.9347,cancer_data_in -> 2024
-48,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2019,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2019,13.8501,cancer_data_in -> 2024
-49,Lithuania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LT,1990,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1990,13.8045,cancer_data_in -> 2019; cancer_data_in -> 2006; cancer_data_in -> 1993
-50,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2004,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2004,13.767,cancer_data_in -> 2024
+1,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2012,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2012,16.1012,cancer_data_in -> 2024
+2,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2011,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2011,16.0187,cancer_data_in -> 2024
+3,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2012,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2012,16.0049,cancer_data_in -> 2024
+4,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2012,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2012,15.9697,cancer_data_in -> 1996; cancer_data_in -> 2000; cancer_data_in -> 1982
+5,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2011,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2011,15.9197,cancer_data_in -> 2024
+6,Slovakia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/SK,2011,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2011,15.891,cancer_data_in -> 1996; cancer_data_in -> 2000; cancer_data_in -> 1982
+7,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2009,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2009,15.8487,cancer_data_in -> 2024
+8,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2010,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2010,15.8241,cancer_data_in -> 2024
+9,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2007,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2007,15.8227,cancer_data_in -> 2024
+10,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2004,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2004,15.8117,cancer_data_in -> 2024
+11,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2008,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2008,15.7571,cancer_data_in -> 2024
+12,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2009,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2009,15.7453,cancer_data_in -> 2024
+13,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,1995,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1995,15.7381,cancer_data_in -> 2000; cancer_data_in -> 2009; cancer_data_in -> 2003
+14,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2010,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2010,15.7188,cancer_data_in -> 2024
+15,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2007,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2007,15.7167,cancer_data_in -> 2024
+16,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2004,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2004,15.7016,cancer_data_in -> 2024
+17,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2005,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2005,15.6959,cancer_data_in -> 2024
+18,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2003,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2003,15.6946,cancer_data_in -> 2024
+19,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2002,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2002,15.6701,cancer_data_in -> 2024
+20,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2008,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2008,15.6536,cancer_data_in -> 2024
+21,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2006,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2006,15.641,cancer_data_in -> 2024
+22,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2003,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2003,15.5835,cancer_data_in -> 2024
+23,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2005,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2005,15.5835,cancer_data_in -> 2024
+24,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2001,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2001,15.565,cancer_data_in -> 2024
+25,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2002,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2002,15.5562,cancer_data_in -> 2024
+26,Belgium,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BE,2003,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2003,15.5425,cancer_data_in -> 2008; cancer_data_in -> 2019; cancer_data_in -> 2018
+27,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2006,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2006,15.5324,cancer_data_in -> 2024
+28,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,2000,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2000,15.5201,cancer_data_in -> 2024
+29,Belgium,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BE,2002,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2002,15.5179,cancer_data_in -> 2008; cancer_data_in -> 2019; cancer_data_in -> 2018
+30,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2001,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2001,15.4499,cancer_data_in -> 2024
+31,Belgium,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BE,2001,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2001,15.4135,cancer_data_in -> 2008; cancer_data_in -> 2019; cancer_data_in -> 2018
+32,Poland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/PL,1995,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1995,15.4077,cancer_data_in -> 2000; cancer_data_in -> 2009; cancer_data_in -> 2003
+33,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,2000,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2000,15.4025,cancer_data_in -> 2024
+34,Belgium,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BE,2000,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2000,15.367,cancer_data_in -> 2008; cancer_data_in -> 2019; cancer_data_in -> 2018
+35,Germany,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DE,2012,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2012,15.3648,cancer_data_in -> 2024
+36,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,1990,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1990,15.3347,cancer_data_in -> 2000; cancer_data_in -> 2009; cancer_data_in -> 2003
+37,Hungary,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HU,1995,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1995,15.2899,cancer_data_in -> 2024
+38,Germany,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DE,2011,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2011,15.277,cancer_data_in -> 2024
+39,Romania,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/RO,1995,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1995,15.1633,cancer_data_in -> 2024
+40,Belgium,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/BE,1995,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1995,15.1415,cancer_data_in -> 2008; cancer_data_in -> 2019; cancer_data_in -> 2018
+41,Croatia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/HR,2000,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2000,15.1156,cancer_data_in -> 2009; cancer_data_in -> 2003; cancer_data_in -> 2019
+42,Germany,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DE,2009,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2009,15.0919,cancer_data_in -> 2024
+43,Germany,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DE,2010,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2010,15.0666,cancer_data_in -> 2024
+44,Spain,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/ES,2012,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2012,15.0558,cancer_data_in -> 2024
+45,Germany,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DE,2007,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2007,15.0557,cancer_data_in -> 2024
+46,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,2021,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2021,15.0366,cancer_data_in -> 2000; cancer_data_in -> 2009; cancer_data_in -> 2003
+47,Latvia,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/LV,2019,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2019,15.0323,cancer_data_in -> 2000; cancer_data_in -> 2009; cancer_data_in -> 2003
+48,Germany,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DE,2004,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2004,15.0204,cancer_data_in -> 2024
+49,Poland,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/PL,1990,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/1990,15.009,cancer_data_in -> 2000; cancer_data_in -> 2009; cancer_data_in -> 2003
+50,Germany,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#country/DE,2008,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#calendaryear/2008,15.0002,cancer_data_in -> 2024

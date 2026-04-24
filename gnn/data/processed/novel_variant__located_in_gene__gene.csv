@@ -1,51 +1,51 @@
 rank,Variant_label,Variant_uri,Gene_label,Gene_uri,confidence,context
-1,rs744166,lucia:variant/rs744166,AKT1,lucia:gene/ncbigene:207,1.7274,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-2,rs744166,lucia:variant/rs744166,PIK3R1,lucia:gene/ncbigene:5295,1.6517,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-3,rs744166,lucia:variant/rs744166,PTGS2,lucia:gene/ncbigene:5743,1.5844,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-4,rs104886003,lucia:variant/rs104886003,AKT1,lucia:gene/ncbigene:207,1.4967,variant_of -> Non-Small Cell Lung Carcinoma; variant_of -> Small cell carcinoma of lung; located_in_gene -> PIK3CA
-5,rs752967378,lucia:variant/rs752967378,AKT1,lucia:gene/ncbigene:207,1.4862,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> RAF1
-6,rs744166,lucia:variant/rs744166,RAF1,lucia:gene/ncbigene:5894,1.4788,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-7,rs752967378,lucia:variant/rs752967378,PIK3R1,lucia:gene/ncbigene:5295,1.4407,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> RAF1
-8,rs744166,lucia:variant/rs744166,KDR,lucia:gene/ncbigene:3791,1.4371,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-9,rs744166,lucia:variant/rs744166,CASP8,lucia:gene/ncbigene:841,1.4342,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-10,rs744166,lucia:variant/rs744166,BCL2,lucia:gene/ncbigene:596,1.4282,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-11,rs5275,lucia:variant/rs5275,AKT1,lucia:gene/ncbigene:207,1.4199,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> PTGS2
-12,rs104886003,lucia:variant/rs104886003,PIK3R1,lucia:gene/ncbigene:5295,1.4071,variant_of -> Non-Small Cell Lung Carcinoma; variant_of -> Small cell carcinoma of lung; located_in_gene -> PIK3CA
-13,rs1061302,lucia:variant/rs1061302,AKT1,lucia:gene/ncbigene:207,1.4027,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NBN
-14,rs744166,lucia:variant/rs744166,CTNNB1,lucia:gene/ncbigene:1499,1.3957,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-15,rs104886003,lucia:variant/rs104886003,PTGS2,lucia:gene/ncbigene:5743,1.3951,variant_of -> Non-Small Cell Lung Carcinoma; variant_of -> Small cell carcinoma of lung; located_in_gene -> PIK3CA
-16,rs744166,lucia:variant/rs744166,PIK3CB,lucia:gene/ncbigene:5291,1.3915,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-17,rs744166,lucia:variant/rs744166,PIK3CA,lucia:gene/ncbigene:5290,1.3805,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-18,rs744166,lucia:variant/rs744166,VEGFA,lucia:gene/ncbigene:7422,1.3804,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-19,rs744166,lucia:variant/rs744166,SMAD3,lucia:gene/ncbigene:4088,1.3804,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-20,rs5275,lucia:variant/rs5275,PIK3R1,lucia:gene/ncbigene:5295,1.3757,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> PTGS2
-21,rs9752,lucia:variant/rs9752,AKT1,lucia:gene/ncbigene:207,1.3745,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> SFTPB
-22,rs744166,lucia:variant/rs744166,CDKN2A,lucia:gene/ncbigene:1029,1.3644,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-23,rs744166,lucia:variant/rs744166,MAP2K1,lucia:gene/ncbigene:5604,1.3432,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-24,rs752967378,lucia:variant/rs752967378,PTGS2,lucia:gene/ncbigene:5743,1.3361,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> RAF1
-25,rs1061302,lucia:variant/rs1061302,PTGS2,lucia:gene/ncbigene:5743,1.3325,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NBN
-26,rs1799794,lucia:variant/rs1799794,AKT1,lucia:gene/ncbigene:207,1.326,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KLC1; located_in_gene -> XRCC3
-27,rs744166,lucia:variant/rs744166,PIK3CG,lucia:gene/ncbigene:5294,1.325,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-28,rs744166,lucia:variant/rs744166,TSC2,lucia:gene/ncbigene:7249,1.3223,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-29,rs104886003,lucia:variant/rs104886003,STAT3,lucia:gene/ncbigene:6774,1.31,variant_of -> Non-Small Cell Lung Carcinoma; variant_of -> Small cell carcinoma of lung; located_in_gene -> PIK3CA
-30,rs9752,lucia:variant/rs9752,PTGS2,lucia:gene/ncbigene:5743,1.3092,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> SFTPB
-31,rs530941076,lucia:variant/rs530941076,AKT1,lucia:gene/ncbigene:207,1.3054,variant_of -> Small cell carcinoma of lung; located_in_gene -> TP53
-32,rs1061302,lucia:variant/rs1061302,PIK3R1,lucia:gene/ncbigene:5295,1.2963,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NBN
-33,rs17577,lucia:variant/rs17577,AKT1,lucia:gene/ncbigene:207,1.2949,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> MMP9
-34,rs744166,lucia:variant/rs744166,JAK2,lucia:gene/ncbigene:3717,1.2873,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-35,rs752967378,lucia:variant/rs752967378,STAT3,lucia:gene/ncbigene:6774,1.2847,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> RAF1
-36,rs121913507,lucia:variant/rs121913507,AKT1,lucia:gene/ncbigene:207,1.2834,variant_of -> Small cell carcinoma of lung; located_in_gene -> KIT
-37,rs104886003,lucia:variant/rs104886003,RAF1,lucia:gene/ncbigene:5894,1.2797,variant_of -> Non-Small Cell Lung Carcinoma; variant_of -> Small cell carcinoma of lung; located_in_gene -> PIK3CA
-38,rs744166,lucia:variant/rs744166,HRAS,lucia:gene/ncbigene:3265,1.278,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-39,rs7316,lucia:variant/rs7316,AKT1,lucia:gene/ncbigene:207,1.2729,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> SFTPB
-40,rs744166,lucia:variant/rs744166,BRCA1,lucia:gene/ncbigene:672,1.2727,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-41,rs121913238,lucia:variant/rs121913238,AKT1,lucia:gene/ncbigene:207,1.27,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KRAS
-42,rs9752,lucia:variant/rs9752,PIK3R1,lucia:gene/ncbigene:5295,1.2658,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> SFTPB
-43,rs744166,lucia:variant/rs744166,TGFB1,lucia:gene/ncbigene:7040,1.257,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> STAT3
-44,rs1799794,lucia:variant/rs1799794,PTGS2,lucia:gene/ncbigene:5743,1.2568,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> KLC1; located_in_gene -> XRCC3
-45,rs752967378,lucia:variant/rs752967378,KDR,lucia:gene/ncbigene:3791,1.2511,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> RAF1
-46,rs752967378,lucia:variant/rs752967378,CASP8,lucia:gene/ncbigene:841,1.248,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> RAF1
-47,rs2239144,lucia:variant/rs2239144,AKT1,lucia:gene/ncbigene:207,1.2479,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> VWF
-48,rs530941076,lucia:variant/rs530941076,PTGS2,lucia:gene/ncbigene:5743,1.2445,variant_of -> Small cell carcinoma of lung; located_in_gene -> TP53
-49,rs752967378,lucia:variant/rs752967378,BCL2,lucia:gene/ncbigene:596,1.2418,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> RAF1
-50,rs1032737355,lucia:variant/rs1032737355,AKT1,lucia:gene/ncbigene:207,1.2351,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+1,rs397517114,lucia:variant/rs397517114,ALK,lucia:gene/ncbigene:238,0.5275,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+2,rs755024903,lucia:variant/rs755024903,ALK,lucia:gene/ncbigene:238,0.5221,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+3,rs755024903,lucia:variant/rs755024903,TP53,lucia:gene/ncbigene:7157,0.5064,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+4,rs755024903,lucia:variant/rs755024903,EGFR,lucia:gene/ncbigene:1956,0.5061,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+5,rs397517114,lucia:variant/rs397517114,TP53,lucia:gene/ncbigene:7157,0.5039,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+6,rs397517114,lucia:variant/rs397517114,MTHFR,lucia:gene/ncbigene:4524,0.4837,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+7,rs121913420,lucia:variant/rs121913420,ALK,lucia:gene/ncbigene:238,0.4834,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+8,rs755024903,lucia:variant/rs755024903,MTHFR,lucia:gene/ncbigene:4524,0.4826,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+9,rs5879422,lucia:variant/rs5879422,ALK,lucia:gene/ncbigene:238,0.4815,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DCBLD1
+10,rs397517108,lucia:variant/rs397517108,ALK,lucia:gene/ncbigene:238,0.4744,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+11,rs397517114,lucia:variant/rs397517114,CD274,lucia:gene/ncbigene:29126,0.469,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+12,rs755024903,lucia:variant/rs755024903,ERBB2,lucia:gene/ncbigene:2064,0.4681,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+13,rs755024903,lucia:variant/rs755024903,CD274,lucia:gene/ncbigene:29126,0.4676,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+14,rs755024903,lucia:variant/rs755024903,BRAF,lucia:gene/ncbigene:673,0.4669,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+15,rs5879422,lucia:variant/rs5879422,EGFR,lucia:gene/ncbigene:1956,0.4662,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DCBLD1
+16,rs587781495,lucia:variant/rs587781495,ALK,lucia:gene/ncbigene:238,0.4661,variant_of -> Small cell carcinoma of lung; located_in_gene -> TP53
+17,rs121913420,lucia:variant/rs121913420,TP53,lucia:gene/ncbigene:7157,0.4661,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+18,rs397517114,lucia:variant/rs397517114,ERBB2,lucia:gene/ncbigene:2064,0.4633,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+19,rs5879422,lucia:variant/rs5879422,TP53,lucia:gene/ncbigene:7157,0.4625,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DCBLD1
+20,rs755024903,lucia:variant/rs755024903,XRCC1,lucia:gene/ncbigene:7515,0.462,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+21,rs587781495,lucia:variant/rs587781495,EGFR,lucia:gene/ncbigene:1956,0.4599,variant_of -> Small cell carcinoma of lung; located_in_gene -> TP53
+22,rs755024903,lucia:variant/rs755024903,KRAS,lucia:gene/ncbigene:3845,0.4577,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+23,rs397517114,lucia:variant/rs397517114,BRAF,lucia:gene/ncbigene:673,0.4565,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+24,rs121913420,lucia:variant/rs121913420,MTHFR,lucia:gene/ncbigene:4524,0.454,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+25,rs397517114,lucia:variant/rs397517114,KRAS,lucia:gene/ncbigene:3845,0.4525,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+26,rs397517114,lucia:variant/rs397517114,XRCC1,lucia:gene/ncbigene:7515,0.451,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+27,rs397517108,lucia:variant/rs397517108,TP53,lucia:gene/ncbigene:7157,0.447,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+28,rs748625642,lucia:variant/rs748625642,ALK,lucia:gene/ncbigene:238,0.4464,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> MMAB
+29,rs5879422,lucia:variant/rs5879422,MTHFR,lucia:gene/ncbigene:4524,0.441,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DCBLD1
+30,rs587781495,lucia:variant/rs587781495,MTHFR,lucia:gene/ncbigene:4524,0.4383,variant_of -> Small cell carcinoma of lung; located_in_gene -> TP53
+31,rs1061622,lucia:variant/rs1061622,ALK,lucia:gene/ncbigene:238,0.4369,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> TNFRSF1B
+32,rs755024903,lucia:variant/rs755024903,ABCB1,lucia:gene/ncbigene:5243,0.4357,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+33,rs748625642,lucia:variant/rs748625642,EGFR,lucia:gene/ncbigene:1956,0.435,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> MMAB
+34,rs397517108,lucia:variant/rs397517108,MTHFR,lucia:gene/ncbigene:4524,0.4344,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+35,rs1554350366,lucia:variant/rs1554350366,ALK,lucia:gene/ncbigene:238,0.433,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR; located_in_gene -> EGFR-AS1
+36,rs5879422,lucia:variant/rs5879422,CD274,lucia:gene/ncbigene:29126,0.4327,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DCBLD1
+37,rs751306825,lucia:variant/rs751306825,EGFR,lucia:gene/ncbigene:1956,0.4312,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> ALK
+38,rs5879422,lucia:variant/rs5879422,ERBB2,lucia:gene/ncbigene:2064,0.4283,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DCBLD1
+39,rs5879422,lucia:variant/rs5879422,XRCC1,lucia:gene/ncbigene:7515,0.4273,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DCBLD1
+40,rs1061622,lucia:variant/rs1061622,EGFR,lucia:gene/ncbigene:1956,0.4271,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> TNFRSF1B
+41,rs121913420,lucia:variant/rs121913420,ERBB2,lucia:gene/ncbigene:2064,0.4258,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+42,rs121913420,lucia:variant/rs121913420,CD274,lucia:gene/ncbigene:29126,0.4253,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+43,rs748625642,lucia:variant/rs748625642,TP53,lucia:gene/ncbigene:7157,0.4248,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> MMAB
+44,rs5879422,lucia:variant/rs5879422,BRAF,lucia:gene/ncbigene:673,0.4247,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> DCBLD1
+45,rs1554350366,lucia:variant/rs1554350366,TP53,lucia:gene/ncbigene:7157,0.4224,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR; located_in_gene -> EGFR-AS1
+46,rs121913420,lucia:variant/rs121913420,KRAS,lucia:gene/ncbigene:3845,0.4214,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR
+47,rs397517114,lucia:variant/rs397517114,ABCB1,lucia:gene/ncbigene:5243,0.421,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+48,rs755024903,lucia:variant/rs755024903,MPO,lucia:gene/ncbigene:4353,0.4192,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2
+49,rs397517108,lucia:variant/rs397517108,CD274,lucia:gene/ncbigene:29126,0.4189,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> EGFR-AS1; located_in_gene -> EGFR
+50,rs755024903,lucia:variant/rs755024903,SLC31A1,lucia:gene/ncbigene:1317,0.4185,variant_of -> Non-Small Cell Lung Carcinoma; located_in_gene -> NLRP2

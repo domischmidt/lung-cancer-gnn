@@ -120,9 +120,9 @@ class TransE(nn.Module):
         return -torch.norm(self.ent_emb(h) + self.rel_emb(r) - self.ent_emb(t), p=2, dim=-1)
 
     def forward(self, pos_h, pos_r, pos_t, neg_h, neg_r, neg_t):
-        pos_score = self.score(pos_h, pos_r, pos_t)
-        neg_score = self.score(neg_h, neg_r, neg_t)
-        return torch.relu(MARGIN - pos_score + neg_score).mean()
+            pos_score = self.score(pos_h, pos_r, pos_t)
+            neg_score = self.score(neg_h, neg_r, neg_t).view(-1, NEG_RATIO)
+            return torch.relu(MARGIN - pos_score.unsqueeze(1) + neg_score).mean()
 
 
 class DotProduct(nn.Module):

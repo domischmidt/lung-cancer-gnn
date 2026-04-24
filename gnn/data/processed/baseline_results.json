@@ -1,202 +1,209 @@
 {
   "TransE": {
     "overall": {
-      "mrr": 0.5500182366798869,
-      "hits@1": 0.508,
-      "hits@3": 0.55,
-      "hits@10": 0.634,
+      "mrr": 0.5185291839200782,
+      "hits@1": 0.458,
+      "hits@3": 0.536,
+      "hits@10": 0.642,
       "n_triples": 500
-    },
-    "GeoPoliticalRegion__part_of__Country": {
-      "mrr": 0.0688082285869367,
-      "hits@1": 0.0,
-      "hits@3": 0.0,
-      "hits@10": 0.18181818181818182,
-      "n_triples": 11
-    },
-    "Disease__cancer_stats_in__GeographicRegion": {
-      "mrr": 1.0,
-      "hits@1": 1.0,
-      "hits@3": 1.0,
-      "hits@10": 1.0,
-      "n_triples": 64
-    },
-    "GeographicRegion__measured_in__CalendarYear": {
-      "mrr": 1.0,
-      "hits@1": 1.0,
-      "hits@3": 1.0,
-      "hits@10": 1.0,
-      "n_triples": 28
-    },
-    "Gene__in_pathway__Pathway": {
-      "mrr": 0.2404475737122067,
-      "hits@1": 0.18493150684931506,
-      "hits@3": 0.23972602739726026,
-      "hits@10": 0.3356164383561644,
-      "n_triples": 146
-    },
-    "Disease__cancer_stats_in__Country": {
-      "mrr": 1.0,
-      "hits@1": 1.0,
-      "hits@3": 1.0,
-      "hits@10": 1.0,
-      "n_triples": 27
-    },
-    "Disease__has_rearrangement__ChromoRearr": {
-      "mrr": 0.0007680892126187281,
-      "hits@1": 0.0,
-      "hits@3": 0.0,
-      "hits@10": 0.0,
-      "n_triples": 12
-    },
-    "Chemical__exposure_in__GeoPoliticalRegion": {
-      "mrr": 0.15284862617810427,
-      "hits@1": 0.0851063829787234,
-      "hits@3": 0.14893617021276595,
-      "hits@10": 0.3191489361702128,
-      "n_triples": 47
-    },
-    "Variant__variant_of__Disease": {
-      "mrr": 0.6875,
-      "hits@1": 0.5,
-      "hits@3": 0.75,
-      "hits@10": 1.0,
-      "n_triples": 4
-    },
-    "Gene__associated_with__Disease": {
-      "mrr": 0.3532892887645074,
-      "hits@1": 0.225,
-      "hits@3": 0.35,
-      "hits@10": 0.65,
-      "n_triples": 40
-    },
-    "GeoPoliticalRegion__measured_in__CalendarYear": {
-      "mrr": 0.9523252184769039,
-      "hits@1": 0.9325842696629213,
-      "hits@3": 0.9662921348314607,
-      "hits@10": 0.9887640449438202,
-      "n_triples": 89
-    },
-    "GeographicRegion__cancer_data_in__CalendarYear": {
-      "mrr": 0.6315359477124183,
-      "hits@1": 0.5555555555555556,
-      "hits@3": 0.5555555555555556,
-      "hits@10": 0.8888888888888888,
-      "n_triples": 9
     },
     "Disease__has_fusion__GeneFusion": {
-      "mrr": 0.00042933587641141353,
+      "mrr": 0.0003070865248163804,
       "hits@1": 0.0,
       "hits@3": 0.0,
       "hits@10": 0.0,
-      "n_triples": 15
+      "n_triples": 16
     },
-    "Chemical__exposure_in__GeographicRegion": {
-      "mrr": 0.8333333333333334,
-      "hits@1": 0.6666666666666666,
-      "hits@3": 1.0,
-      "hits@10": 1.0,
-      "n_triples": 3
-    }
-  },
-  "DistMult": {
-    "overall": {
-      "mrr": 0.3739983215669706,
-      "hits@1": 0.284,
-      "hits@3": 0.422,
-      "hits@10": 0.554,
-      "n_triples": 500
-    },
-    "Disease__cancer_stats_in__GeographicRegion": {
-      "mrr": 1.0,
-      "hits@1": 1.0,
-      "hits@3": 1.0,
-      "hits@10": 1.0,
-      "n_triples": 64
-    },
-    "GeoPoliticalRegion__part_of__Country": {
-      "mrr": 0.0020426178623806786,
-      "hits@1": 0.0,
-      "hits@3": 0.0,
-      "hits@10": 0.0,
-      "n_triples": 7
-    },
-    "GeographicRegion__measured_in__CalendarYear": {
-      "mrr": 0.9772727272727273,
-      "hits@1": 0.9696969696969697,
-      "hits@3": 0.9696969696969697,
-      "hits@10": 1.0,
-      "n_triples": 33
+    "GeoPoliticalRegion__measured_in__CalendarYear": {
+      "mrr": 0.8882711038961039,
+      "hits@1": 0.8409090909090909,
+      "hits@3": 0.9204545454545454,
+      "hits@10": 0.9659090909090909,
+      "n_triples": 88
     },
     "Gene__in_pathway__Pathway": {
-      "mrr": 0.1941295098912578,
-      "hits@1": 0.09868421052631579,
-      "hits@3": 0.23026315789473684,
-      "hits@10": 0.40131578947368424,
+      "mrr": 0.2242431851889185,
+      "hits@1": 0.1513157894736842,
+      "hits@3": 0.23684210526315788,
+      "hits@10": 0.39473684210526316,
       "n_triples": 152
     },
+    "Disease__cancer_stats_in__GeographicRegion": {
+      "mrr": 1.0,
+      "hits@1": 1.0,
+      "hits@3": 1.0,
+      "hits@10": 1.0,
+      "n_triples": 63
+    },
+    "Variant__located_in_gene__Gene": {
+      "mrr": 0.3202777777777778,
+      "hits@1": 0.25,
+      "hits@3": 0.25,
+      "hits@10": 0.5,
+      "n_triples": 4
+    },
+    "GeographicRegion__measured_in__CalendarYear": {
+      "mrr": 1.0,
+      "hits@1": 1.0,
+      "hits@3": 1.0,
+      "hits@10": 1.0,
+      "n_triples": 21
+    },
+    "GeoPoliticalRegion__part_of__Country": {
+      "mrr": 0.13941213358049057,
+      "hits@1": 0.08333333333333333,
+      "hits@3": 0.08333333333333333,
+      "hits@10": 0.25,
+      "n_triples": 12
+    },
     "Gene__associated_with__Disease": {
-      "mrr": 0.04144113024310429,
-      "hits@1": 0.0,
-      "hits@3": 0.03773584905660377,
-      "hits@10": 0.09433962264150944,
-      "n_triples": 53
+      "mrr": 0.27957035744660924,
+      "hits@1": 0.08695652173913043,
+      "hits@3": 0.32608695652173914,
+      "hits@10": 0.6956521739130435,
+      "n_triples": 46
     },
-    "Chemical__exposure_in__GeoPoliticalRegion": {
-      "mrr": 0.03585420447157236,
-      "hits@1": 0.0,
-      "hits@3": 0.02702702702702703,
-      "hits@10": 0.10810810810810811,
-      "n_triples": 37
+    "GeographicRegion__cancer_data_in__CalendarYear": {
+      "mrr": 0.634920634920635,
+      "hits@1": 0.5,
+      "hits@3": 0.8333333333333334,
+      "hits@10": 1.0,
+      "n_triples": 6
     },
-    "GeoPoliticalRegion__measured_in__CalendarYear": {
-      "mrr": 0.2740662789919095,
-      "hits@1": 0.0,
-      "hits@3": 0.4777777777777778,
-      "hits@10": 0.8222222222222222,
-      "n_triples": 90
-    },
-    "Disease__has_fusion__GeneFusion": {
-      "mrr": 7.283397879423606e-05,
+    "Disease__has_rearrangement__ChromoRearr": {
+      "mrr": 0.0027358874024094385,
       "hits@1": 0.0,
       "hits@3": 0.0,
       "hits@10": 0.0,
-      "n_triples": 12
+      "n_triples": 4
     },
-    "GeographicRegion__part_of__Country": {
-      "mrr": 0.09708639313902472,
-      "hits@1": 0.0,
-      "hits@3": 0.16666666666666666,
-      "hits@10": 0.16666666666666666,
-      "n_triples": 6
+    "Chemical__exposure_in__GeoPoliticalRegion": {
+      "mrr": 0.12955688254092315,
+      "hits@1": 0.061224489795918366,
+      "hits@3": 0.14285714285714285,
+      "hits@10": 0.22448979591836735,
+      "n_triples": 49
+    },
+    "Country__cancer_data_in__CalendarYear": {
+      "mrr": 0.6666666666666666,
+      "hits@1": 0.3333333333333333,
+      "hits@3": 1.0,
+      "hits@10": 1.0,
+      "n_triples": 3
     },
     "Disease__cancer_stats_in__Country": {
       "mrr": 1.0,
       "hits@1": 1.0,
       "hits@3": 1.0,
       "hits@10": 1.0,
-      "n_triples": 24
+      "n_triples": 29
     },
-    "Variant__variant_of__Disease": {
-      "mrr": 0.01735675250431693,
+    "Chemical__exposure_in__GeographicRegion": {
+      "mrr": 1.0,
+      "hits@1": 1.0,
+      "hits@3": 1.0,
+      "hits@10": 1.0,
+      "n_triples": 5
+    }
+  },
+  "DotProduct": {
+    "overall": {
+      "mrr": 0.10830705749878289,
+      "hits@1": 0.07,
+      "hits@3": 0.118,
+      "hits@10": 0.176,
+      "n_triples": 500
+    },
+    "Gene__in_pathway__Pathway": {
+      "mrr": 0.19473589074118336,
+      "hits@1": 0.12048192771084337,
+      "hits@3": 0.21084337349397592,
+      "hits@10": 0.3433734939759036,
+      "n_triples": 166
+    },
+    "GeoPoliticalRegion__measured_in__CalendarYear": {
+      "mrr": 0.00524478190134021,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.03488372093023256,
+      "n_triples": 86
+    },
+    "Chemical__exposure_in__GeoPoliticalRegion": {
+      "mrr": 0.005630383479933578,
       "hits@1": 0.0,
       "hits@3": 0.0,
       "hits@10": 0.0,
-      "n_triples": 5
+      "n_triples": 38
+    },
+    "Gene__associated_with__Disease": {
+      "mrr": 7.357543044802293e-05,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 55
+    },
+    "Disease__cancer_stats_in__GeographicRegion": {
+      "mrr": 0.024990335265978568,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 60
+    },
+    "GeographicRegion__measured_in__CalendarYear": {
+      "mrr": 0.5627430575965963,
+      "hits@1": 0.5416666666666666,
+      "hits@3": 0.5833333333333334,
+      "hits@10": 0.5833333333333334,
+      "n_triples": 24
+    },
+    "Disease__cancer_stats_in__Country": {
+      "mrr": 0.16605675137481543,
+      "hits@1": 0.0,
+      "hits@3": 0.34782608695652173,
+      "hits@10": 0.5217391304347826,
+      "n_triples": 23
+    },
+    "Disease__has_fusion__GeneFusion": {
+      "mrr": 6.500825713576607e-05,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 18
     },
     "Disease__has_rearrangement__ChromoRearr": {
-      "mrr": 0.0003627712368184661,
+      "mrr": 6.973542713641423e-05,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 4
+    },
+    "GeoPoliticalRegion__part_of__Country": {
+      "mrr": 0.03525094915474331,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 8
+    },
+    "GeographicRegion__cancer_data_in__CalendarYear": {
+      "mrr": 0.33699296573816184,
+      "hits@1": 0.3333333333333333,
+      "hits@3": 0.3333333333333333,
+      "hits@10": 0.3333333333333333,
+      "n_triples": 6
+    },
+    "Chemical__exposure_in__GeographicRegion": {
+      "mrr": 0.00042590635058111843,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 4
+    },
+    "Country__cancer_data_in__CalendarYear": {
+      "mrr": 0.008194528388129606,
       "hits@1": 0.0,
       "hits@3": 0.0,
       "hits@10": 0.0,
       "n_triples": 3
-    },
-    "GeographicRegion__cancer_data_in__CalendarYear": {
-      "mrr": 0.8400000000000001,
-      "hits@1": 0.8,
-      "hits@3": 0.8,
-      "hits@10": 1.0,
-      "n_triples": 5
     }
   }
 }
