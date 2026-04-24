@@ -384,14 +384,10 @@ def extract_bio_nodes_and_edges(bio_files):
 LUNG_CANCER_SUBTYPES = {
     "C0007120": "Bronchioloalveolar Adenocarcinoma",
     "C0007131": "Non-Small Cell Lung Carcinoma",
-    "C0020507": "Hyperplasia",                            # ? general pathology
     "C0024115": "Lung cancer panel",
     "C0024121": "Lung Neoplasms",
-    "C0025568": "Metaplasia",                             # ? general pathology
-    "C0085261": "Proteus Syndrome",                       # ? genetic syndrome
     "C0149782": "Squamous cell carcinoma of lung",
     "C0149925": "Small cell carcinoma of lung",
-    "C0149927": "Hamartoma of lung",                      # ? benign tumor
     "C0152013": "Adenocarcinoma of lung (disorder)",
     "C0205642": "Adenocarcinoma, Oxyphilic",
     "C0205697": "Carcinoma, Spindle-Cell",
@@ -402,17 +398,14 @@ LUNG_CANCER_SUBTYPES = {
     "C0279557": "Adenosquamous cell lung cancer",
     "C0280089": "Carcinoid tumor of lung",
     "C0280217": "stage, non-small cell lung cancer",
-    "C0334254": "Lymphoepithelial carcinoma",             # ? not lung-specific
     "C0345958": "Large cell carcinoma of lung",
     "C0345960": "Giant cell carcinoma of lung",
-    "C0349649": "Pulmonary lymphangioleiomyomatosis",     # ? not cancer
     "C0684249": "Lung Carcinoma Metastatic in the Brain",
     "C0685053": "Carcinoma in situ of lung",
     "C1332137": "Lung Acinar Adenocarcinoma",
     "C1333125": "Combined Lung Small Cell Carcinoma",
     "C1334363": "large cell neuroendocrine carcinoma of lung",
     "C1334439": "adenoid cystic carcinoma of lung",
-    "C1334455": "Pulmonary Sclerosing Hemangioma",        # ? benign tumor
     "C1708045": "Fetal adenocarcinoma of lung",
     "C1708778": "mucoepidermoid carcinoma of lung",
     "C1708781": "Pseudosarcomatous carcinoma of lung",

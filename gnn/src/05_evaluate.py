@@ -25,7 +25,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 PROCESSED_DIR = REPO_ROOT / "gnn" / "data" / "processed"
 FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 
-MODEL_COLORS = {"TransE": "#4c72b0", "DistMult": "#55a868", "R-GCN": "#c44e52"}
+MODEL_COLORS = {"TransE": "#4c72b0", "DotProduct": "#55a868", "R-GCN": "#c44e52"}
 METRICS = ["mrr", "hits@1", "hits@3", "hits@10"]
 
 RELATION_DISPLAY = {

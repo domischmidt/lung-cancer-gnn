@@ -1,5 +1,5 @@
 """
-03_train_baselines.py - TransE and DistMult link prediction baselines.
+03_train_baselines.py - TransE and DotProduct link prediction baselines.
 
 Trains on the full heterogeneous graph, evaluates per edge type.
 Uses filtered ranking protocol with MRR, Hits@1, Hits@3, Hits@10.
@@ -121,19 +121,18 @@ class TransE(nn.Module):
 
     def forward(self, pos_h, pos_r, pos_t, neg_h, neg_r, neg_t):
         pos_score = self.score(pos_h, pos_r, pos_t)
-        neg_score = self.score(neg_h, neg_r, neg_t).view(-1, NEG_RATIO)
-        return torch.relu(MARGIN - pos_score.unsqueeze(1) + neg_score).mean()
+        neg_score = self.score(neg_h, neg_r, neg_t)
+        return torch.relu(MARGIN - pos_score + neg_score).mean()
 
-class DistMult(nn.Module):
+
+class DotProduct(nn.Module):
     def __init__(self, n_entities, n_relations, dim):
         super().__init__()
         self.ent_emb = nn.Embedding(n_entities, dim)
-        self.rel_emb = nn.Embedding(n_relations, dim)
         nn.init.xavier_uniform_(self.ent_emb.weight)
-        nn.init.xavier_uniform_(self.rel_emb.weight)
 
     def score(self, h, r, t):
-        return (self.ent_emb(h) * self.rel_emb(r) * self.ent_emb(t)).sum(dim=-1)
+        return (self.ent_emb(h) * self.ent_emb(t)).sum(dim=-1)
 
     def forward(self, pos_h, pos_r, pos_t, neg_h, neg_r, neg_t):
         pos_score = self.score(pos_h, pos_r, pos_t)
@@ -337,7 +336,7 @@ def main():
     all_losses = {}
     all_results = {}
 
-    for model_name, ModelClass in [("TransE", TransE), ("DistMult", DistMult)]:
+    for model_name, ModelClass in [("TransE", TransE), ("DotProduct", DotProduct)]:
         print(f"\n[{'3' if model_name == 'TransE' else '4'}/6] Training {model_name} ...")
         model = ModelClass(n_entities, len(rel_to_id), EMBEDDING_DIM)
         t0 = time.time()

@@ -1,7 +1,7 @@
 """
 08_full_evaluation.py - Multi-seed evaluation, ablation study, significance tests.
 
-1. Multi-seed: 5 seeds x 3 models (TransE, DistMult, R-GCN), reports mean +/- std
+1. Multi-seed: 5 seeds x 3 models (TransE, DotProduct, R-GCN), reports mean +/- std
 2. Ablation: R-GCN on Bio-only vs Env-only vs Combined graph
 3. Significance: Chemical-Disease embedding similarity vs random pairs (permutation test)
 
@@ -82,16 +82,14 @@ class TransE(nn.Module):
         return torch.relu(MARGIN - pos_score.unsqueeze(1) + neg_score).mean()
 
 
-class DistMult(nn.Module):
+class DotProduct(nn.Module):
     def __init__(self, n_entities, n_relations, dim):
         super().__init__()
         self.ent_emb = nn.Embedding(n_entities, dim)
-        self.rel_emb = nn.Embedding(n_relations, dim)
         nn.init.xavier_uniform_(self.ent_emb.weight)
-        nn.init.xavier_uniform_(self.rel_emb.weight)
 
     def score(self, h, r, t):
-        return (self.ent_emb(h) * self.rel_emb(r) * self.ent_emb(t)).sum(dim=-1)
+        return (self.ent_emb(h) * self.ent_emb(t)).sum(dim=-1)
 
     def forward(self, pos_h, pos_r, pos_t, neg_h, neg_r, neg_t):
         pos_score = self.score(pos_h, pos_r, pos_t)
@@ -317,7 +315,7 @@ def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names, node_feature
     print("PART 1: Multi-Seed Evaluation")
     print("=" * 70)
 
-    all_seed_results = {m: [] for m in ["TransE", "DistMult", "R-GCN"]}
+    all_seed_results = {m: [] for m in ["TransE", "DotProduct", "R-GCN"]}
     filter_set = build_filter_set(triples)
 
     for seed in SEEDS:
@@ -327,7 +325,7 @@ def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names, node_feature
 
         for model_name, ModelClass, is_rgcn in [
             ("TransE", TransE, False),
-            ("DistMult", DistMult, False),
+            ("DotProduct", DotProduct, False),
             ("R-GCN", RGCNWithFeatures, True),
         ]:
             print(f"    {model_name} ...", end=" ", flush=True)
@@ -552,7 +550,7 @@ def fig_multi_seed(aggregated, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
     models = list(aggregated.keys())
     metrics = ["mrr", "hits@1", "hits@3", "hits@10"]
-    colors = {"TransE": "#4c72b0", "DistMult": "#55a868", "R-GCN": "#c44e52"}
+    colors = {"TransE": "#4c72b0", "DotProduct": "#55a868", "R-GCN": "#c44e52"}
     x = np.arange(len(metrics))
     width = 0.22
 
@@ -686,8 +684,7 @@ def main():
     print("\nLoading graph ...")
     triples, n_entities, rel_to_id, edge_type_names, edge_type_meta, node_offsets, node_features, data = load_graph()
     print(f"  {n_entities:,} nodes, {len(rel_to_id)} relations, {triples.size(0):,} triples")
-    feat_str = ", ".join(f"{nt}({info['feat'].shape[1]}d)" for nt, info in node_features.items())
-    print(f"  Node features: {feat_str}")
+    print(f"  Node features: {', '.join(f'{nt}({info[\"feat\"].shape[1]}d)' for nt, info in node_features.items())}")
 
     with open(PROCESSED_DIR / "node_id_maps.json") as f:
         node_id_maps = json.load(f)
@@ -732,7 +729,7 @@ def main():
     print("=" * 70)
 
     print("\nMulti-Seed Overall (mean +/- std):")
-    for model in ["TransE", "DistMult", "R-GCN"]:
+    for model in ["TransE", "DotProduct", "R-GCN"]:
         o = multi_seed_agg[model].get("overall", {})
         mrr = o.get("mrr", {})
         h10 = o.get("hits@10", {})
@@ -741,7 +738,7 @@ def main():
 
     gda = "Gene__associated_with__Disease"
     print(f"\nMulti-Seed Gene-Disease (mean +/- std):")
-    for model in ["TransE", "DistMult", "R-GCN"]:
+    for model in ["TransE", "DotProduct", "R-GCN"]:
         o = multi_seed_agg[model].get(gda, {})
         mrr = o.get("mrr", {})
         h10 = o.get("hits@10", {})
