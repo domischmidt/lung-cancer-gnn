@@ -1,2 +1,71 @@
-gnn/data/interim/edges.csv
-gnn/data/interim/nodes.csv
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[codz]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.installed.cfg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Testing / Coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.hypothesis/
+htmlcov/
+coverage.xml
+*.cover
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# IDEs
+.idea/
+.vscode/
+.spyderproject
+.spyproject
+.ropeproject
+.cursorignore
+.cursorindexingignore
+
+# Jupyter
+.ipynb_checkpoints
+
+# Documentation builds
+docs/_build/
+/site
+
+# === PROJECT-SPECIFIC ===
+
+# Raw data (download from sources, never commit)
+env_data/data/raw/
+
+# Interim data (regenerate via pipelines)
+env_data/data/interim/
+gnn/data/interim/
+
+# Large processed data files (>100MB GitHub limit)
+env_data/data/processed/graph_EEA.ttl
+
+# Trained model weights (regenerate via training)
+gnn/data/processed/*.pt
