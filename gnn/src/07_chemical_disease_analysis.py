@@ -7,12 +7,11 @@ using R-GCN learned embeddings and geographic co-occurrence patterns.
 Three analyses:
   1. Embedding proximity: cosine similarity between Chemical and Disease
      embeddings in the R-GCN latent space
-  2. Geographic correlation: per-region pollutant exposure vs cancer rates
-  3. Region risk profiling: which regions have high exposure AND high mortality
+  2. Geographic correlation: per-country pollutant exposure vs cancer mortality
+  3. Region risk profiling: which countries have high exposure AND high mortality
 
 Usage:  python gnn/src/07_chemical_disease_analysis.py
 Input:  gnn/data/processed/{hetero_graph.pt, rgcn_weights.pt, node_id_maps.json}
-        gnn/data/interim/{nodes.csv, edges.csv}
         env_data/data/processed/{eea_final.csv, ecis_final.csv, oecd_exposure_final.csv}
 Output: gnn/data/processed/chemical_disease_analysis.json
         gnn/data/interim/figs/crossdomain_*.png
@@ -31,8 +30,6 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.colors import Normalize
-import matplotlib.cm as cm
 
 from torch_geometric.nn import RGCNConv
 
@@ -45,8 +42,8 @@ ENV_DATA = REPO_ROOT / "env_data" / "data" / "processed"
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 
 HIDDEN_DIM = 128
-NUM_LAYERS = 2
-NUM_BASES = 4
+NUM_LAYERS = 4
+NUM_BASES = 6
 DROPOUT = 0.2
 
 CHEMICAL_NAMES = {
@@ -143,6 +140,10 @@ def load_model_and_embeddings():
     return z, node_offsets, node_id_maps, data
 
 
+# =========================================================================
+# Analysis 1: Embedding proximity
+# =========================================================================
+
 def analysis_embedding_proximity(z, node_offsets, node_id_maps):
     print("\n  Computing Chemical-Disease cosine similarities ...")
 
@@ -174,6 +175,10 @@ def analysis_embedding_proximity(z, node_offsets, node_id_maps):
     results.sort(key=lambda x: -x["cosine_similarity"])
     return results
 
+
+# =========================================================================
+# Analysis 2: Geographic correlation
+# =========================================================================
 
 def load_exposure_data():
     exposure = defaultdict(lambda: defaultdict(list))
@@ -207,7 +212,6 @@ def load_exposure_data():
     country_means = {}
     for country, chems in exposure.items():
         country_means[country] = {c: np.mean(vals) for c, vals in chems.items()}
-
     return country_means
 
 
@@ -241,9 +245,7 @@ def analysis_geographic_correlation(exposure_data, mortality_data):
 
     correlations = {}
     for chem in sorted(all_chems):
-        countries = []
-        exp_vals = []
-        mort_vals = []
+        countries, exp_vals, mort_vals = [], [], []
         for country in exposure_data:
             if country in mortality_data and chem in exposure_data[country]:
                 countries.append(country)
@@ -268,23 +270,21 @@ def analysis_geographic_correlation(exposure_data, mortality_data):
     return correlations
 
 
+# =========================================================================
+# Analysis 3: Risk region profiling
+# =========================================================================
+
 def analysis_risk_regions(exposure_data, mortality_data):
     print("\n  Identifying high-risk regions ...")
 
     pm25_key = None
-    for chem in list(exposure_data.values())[0] if exposure_data else []:
-        if "PM2.5" in chem or chem == "PM2.5":
-            pm25_key = chem
-            break
-
-    if not pm25_key:
-        for country_chems in exposure_data.values():
-            for c in country_chems:
-                if "2.5" in str(c) or "PM2" in str(c):
-                    pm25_key = c
-                    break
-            if pm25_key:
+    for country_chems in exposure_data.values():
+        for c in country_chems:
+            if "PM2.5" in str(c) or "2.5" in str(c) or "PM2" in str(c) or c == "C5890534":
+                pm25_key = c
                 break
+        if pm25_key:
+            break
 
     if not pm25_key:
         print("    No PM2.5 data found")
@@ -323,6 +323,10 @@ def analysis_risk_regions(exposure_data, mortality_data):
     return regions
 
 
+# =========================================================================
+# Figures
+# =========================================================================
+
 def fig_embedding_similarity(similarities, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
 
@@ -359,8 +363,9 @@ def fig_embedding_similarity(similarities, fig_dir):
             color = "black" if abs(v) < 0.5 else "white"
             ax.text(j, i, f"{v:.2f}", ha="center", va="center", fontsize=6, color=color)
 
-    plt.colorbar(im, ax=ax, label="Cosine Similarity", shrink=0.8)
-    ax.set_title("R-GCN Embedding Similarity: Air Pollutants vs Lung Cancer Types", fontsize=11, fontweight="bold")
+    plt.colorbar(im, ax=ax, label="Cosine similarity", shrink=0.8)
+    ax.set_title("R-GCN embedding similarity: air pollutants vs lung cancer types",
+                 fontsize=11, fontweight="bold")
     plt.tight_layout()
     fig.savefig(fig_dir / "crossdomain_embedding_similarity.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
@@ -372,20 +377,20 @@ def fig_geographic_correlation(correlations, fig_dir):
     if not correlations:
         return
 
-    fig, axes = plt.subplots(1, min(3, len(correlations)), figsize=(6 * min(3, len(correlations)), 5))
-    if not isinstance(axes, np.ndarray):
+    sorted_chems = sorted(correlations.keys(), key=lambda c: abs(correlations[c]["pearson_r"]), reverse=True)
+    n_plots = min(3, len(sorted_chems))
+
+    fig, axes = plt.subplots(1, n_plots, figsize=(6 * n_plots, 5))
+    if n_plots == 1:
         axes = [axes]
 
-    sorted_chems = sorted(correlations.keys(), key=lambda c: abs(correlations[c]["pearson_r"]), reverse=True)
-
-    for ax, chem in zip(axes, sorted_chems[:3]):
+    for ax, chem in zip(axes, sorted_chems[:n_plots]):
         data = correlations[chem]
         exp = np.array(data["exposure_values"])
         mort = np.array(data["mortality_values"])
         r = data["pearson_r"]
 
         ax.scatter(exp, mort, alpha=0.6, s=40, c="#c44e52", edgecolors="white", linewidth=0.5)
-
         for i, country in enumerate(data["countries"]):
             ax.annotate(country, (exp[i], mort[i]), fontsize=6, alpha=0.7,
                         xytext=(3, 3), textcoords="offset points")
@@ -396,14 +401,16 @@ def fig_geographic_correlation(correlations, fig_dir):
             x_line = np.linspace(exp.min(), exp.max(), 100)
             ax.plot(x_line, p(x_line), "--", color="#4c72b0", alpha=0.7, linewidth=1.5)
 
-        ax.set_xlabel(f"{data['chemical_name']} Exposure", fontsize=10)
-        ax.set_ylabel("Lung Cancer Mortality Rate", fontsize=10)
-        ax.set_title(f"{data['chemical_name']}\nr = {r:+.3f} (n={data['n_countries']})", fontsize=11, fontweight="bold")
+        ax.set_xlabel(f"{data['chemical_name']} exposure", fontsize=10)
+        ax.set_ylabel("Lung cancer mortality rate", fontsize=10)
+        ax.set_title(f"{data['chemical_name']}\nr = {r:+.3f} (n={data['n_countries']})",
+                     fontsize=11, fontweight="bold")
         ax.grid(True, alpha=0.2)
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
 
-    plt.suptitle("Air Pollutant Exposure vs Lung Cancer Mortality by Country", fontsize=13, fontweight="bold", y=1.02)
+    plt.suptitle("Air pollutant exposure vs lung cancer mortality by country",
+                 fontsize=13, fontweight="bold", y=1.02)
     plt.tight_layout()
     fig.savefig(fig_dir / "crossdomain_geographic_correlation.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
@@ -415,20 +422,24 @@ def fig_correlation_summary(correlations, fig_dir):
     if not correlations:
         return
 
-    names = [correlations[c]["chemical_name"] for c in sorted(correlations.keys(), key=lambda c: correlations[c]["pearson_r"])]
-    vals = [correlations[c]["pearson_r"] for c in sorted(correlations.keys(), key=lambda c: correlations[c]["pearson_r"])]
+    names = [correlations[c]["chemical_name"]
+             for c in sorted(correlations.keys(), key=lambda c: correlations[c]["pearson_r"])]
+    vals = [correlations[c]["pearson_r"]
+            for c in sorted(correlations.keys(), key=lambda c: correlations[c]["pearson_r"])]
     colors = ["#c44e52" if v > 0 else "#4c72b0" for v in vals]
 
     fig, ax = plt.subplots(figsize=(8, max(3, len(names) * 0.4)))
     bars = ax.barh(names, vals, color=colors, alpha=0.85, edgecolor="white", linewidth=0.5)
     ax.axvline(x=0, color="gray", linewidth=0.8)
-    ax.set_xlabel("Pearson Correlation (r)")
-    ax.set_title("Correlation: Pollutant Exposure vs Lung Cancer Mortality", fontsize=12, fontweight="bold")
+    ax.set_xlabel("Pearson correlation (r)")
+    ax.set_title("Correlation: pollutant exposure vs lung cancer mortality",
+                 fontsize=12, fontweight="bold")
 
     for bar, v in zip(bars, vals):
         x_pos = bar.get_width() + 0.01 if v >= 0 else bar.get_width() - 0.01
         ha = "left" if v >= 0 else "right"
-        ax.text(x_pos, bar.get_y() + bar.get_height() / 2, f"{v:+.3f}", va="center", ha=ha, fontsize=9, fontweight="bold")
+        ax.text(x_pos, bar.get_y() + bar.get_height() / 2, f"{v:+.3f}",
+                va="center", ha=ha, fontsize=9, fontweight="bold")
 
     ax.set_xlim(min(vals) - 0.15, max(vals) + 0.15)
     ax.grid(True, alpha=0.2, axis="x")
@@ -445,12 +456,16 @@ def fig_risk_quadrant(risk_regions, fig_dir):
     if not risk_regions:
         return
 
-    cat_colors = {"High Risk": "#c44e52", "High Exposure": "#dd8452", "High Mortality": "#4c72b0", "Low Risk": "#55a868"}
+    cat_colors = {
+        "High Risk": "#c44e52", "High Exposure": "#dd8452",
+        "High Mortality": "#4c72b0", "Low Risk": "#55a868",
+    }
 
     fig, ax = plt.subplots(figsize=(10, 7))
     for r in risk_regions:
         color = cat_colors.get(r["risk_category"], "#888")
-        ax.scatter(r["pm25_exposure"], r["mortality_rate"], c=color, s=60, alpha=0.75, edgecolors="white", linewidth=0.5)
+        ax.scatter(r["pm25_exposure"], r["mortality_rate"], c=color, s=60,
+                   alpha=0.75, edgecolors="white", linewidth=0.5)
         ax.annotate(r["country"], (r["pm25_exposure"], r["mortality_rate"]),
                     fontsize=7, alpha=0.8, xytext=(4, 4), textcoords="offset points")
 
@@ -459,19 +474,22 @@ def fig_risk_quadrant(risk_regions, fig_dir):
     ax.axvline(x=np.median(exp_vals), color="gray", linestyle="--", alpha=0.4)
     ax.axhline(y=np.median(mort_vals), color="gray", linestyle="--", alpha=0.4)
 
-    ax.text(max(exp_vals) * 0.95, max(mort_vals) * 0.95, "HIGH RISK", fontsize=10, color="#c44e52",
-            ha="right", va="top", fontweight="bold", alpha=0.5)
-    ax.text(min(exp_vals) * 1.05, min(mort_vals) * 1.05, "LOW RISK", fontsize=10, color="#55a868",
-            ha="left", va="bottom", fontweight="bold", alpha=0.5)
+    ax.text(max(exp_vals) * 0.95, max(mort_vals) * 0.95, "HIGH RISK",
+            fontsize=10, color="#c44e52", ha="right", va="top", fontweight="bold", alpha=0.5)
+    ax.text(min(exp_vals) * 1.05, min(mort_vals) * 1.05, "LOW RISK",
+            fontsize=10, color="#55a868", ha="left", va="bottom", fontweight="bold", alpha=0.5)
 
     from matplotlib.lines import Line2D
-    legend_elements = [Line2D([0], [0], marker="o", color="w", markerfacecolor=c, markersize=8, label=l)
-                       for l, c in cat_colors.items()]
+    legend_elements = [
+        Line2D([0], [0], marker="o", color="w", markerfacecolor=c, markersize=8, label=l)
+        for l, c in cat_colors.items()
+    ]
     ax.legend(handles=legend_elements, loc="upper left", fontsize=9)
 
-    ax.set_xlabel("Mean PM2.5 Exposure", fontsize=11)
-    ax.set_ylabel("Mean Lung Cancer Mortality Rate", fontsize=11)
-    ax.set_title("PM2.5 Exposure vs Lung Cancer Mortality: Country Risk Quadrant", fontsize=13, fontweight="bold")
+    ax.set_xlabel("Mean PM2.5 exposure", fontsize=11)
+    ax.set_ylabel("Mean lung cancer mortality rate", fontsize=11)
+    ax.set_title("PM2.5 exposure vs lung cancer mortality: country risk quadrant",
+                 fontsize=13, fontweight="bold")
     ax.grid(True, alpha=0.2)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -480,6 +498,10 @@ def fig_risk_quadrant(risk_regions, fig_dir):
     plt.close(fig)
     print(f"  -> figs/crossdomain_risk_quadrant.png")
 
+
+# =========================================================================
+# Main
+# =========================================================================
 
 def main():
     print("=" * 70)
@@ -519,8 +541,14 @@ def main():
 
     analysis_results = {
         "embedding_similarities_top20": similarities[:20],
-        "geographic_correlations": {k: {kk: vv for kk, vv in v.items() if kk != "countries"} for k, v in correlations.items()},
-        "high_risk_countries": [{"country": r["country"], "pm25": r["pm25_exposure"], "mortality": r["mortality_rate"]} for r in high_risk],
+        "geographic_correlations": {
+            k: {kk: vv for kk, vv in v.items() if kk != "countries"}
+            for k, v in correlations.items()
+        },
+        "high_risk_countries": [
+            {"country": r["country"], "pm25": r["pm25_exposure"], "mortality": r["mortality_rate"]}
+            for r in high_risk
+        ],
     }
     with open(PROCESSED_DIR / "chemical_disease_analysis.json", "w") as f:
         json.dump(analysis_results, f, indent=2)

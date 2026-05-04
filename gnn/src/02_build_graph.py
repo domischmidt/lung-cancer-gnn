@@ -1,33 +1,46 @@
 """
-02_build_graph.py - Build PyG HeteroData with node features from parsed KG.
+02_build_graph.py - Build PyG HeteroData preserving the full KG structure.
 
-Instead of discarding exposure values and mortality rates during collapsing,
-this version:
-  - Aggregates exposure values per region as node features
-  - Aggregates mortality/incidence per region as node features  
-  - Keeps CalendarYear nodes with temporal edges
-  - Preserves exposure values as edge weights on Chemical->Region edges
+This script keeps ALL n-ary reification nodes as first-class graph nodes,
+consistent with the Lung-CABO ontology. Each reification carries its literal
+values as node features:
+
+  Environmental reifications:
+    - ChemicalLocationAssociation: concentration value (1-dim)
+    - VitalStatistics: incidence + mortality (2-dim)
+
+  Biological reifications (NEW):
+    - GeneDiseaseAssociation: GDA score from DisGeNET (1-dim)
+    - VariantDiseaseAssociation: DSI + DPI scores (2-dim)
+
+  Other featured nodes:
+    - People: age + gender (2-dim, no ethnicity)
+    - Variant: chromosome + consequence type + position (3-dim)
+    - ChromoRearr: rearrangement type (1-dim)
+    - GeoPoliticalRegion / GeographicRegion: population (1-dim)
+    - CalendarYear: normalized year (1-dim)
+
+  Dropped nodes:
+    - Population (folded into Region features)
+    - Source (administrative only)
 
 Usage:  python gnn/src/02_build_graph.py
 Input:  gnn/data/interim/{nodes.csv, edges.csv}
+        env_data/data/processed/{graph_EEA.ttl, graph_OECD.ttl, graph_ECIS.ttl, graph_CDC.ttl}
+        bio_data/data/{gene_disease_assoc.ttl, variant_disease.ttl, ...}
 Output: gnn/data/processed/hetero_graph.pt
         gnn/data/processed/node_id_maps.json
-        gnn/data/interim/figs/collapsed_schema.png
+        gnn/data/interim/figs/graph_schema.png
 """
 
 import json
 import csv
+import re
 import time
 from pathlib import Path
 from collections import defaultdict, Counter
 
 import torch
-
-def normalize_features(feat_matrix):
-    mean = feat_matrix.mean(dim=0, keepdim=True)
-    std = feat_matrix.std(dim=0, keepdim=True).clamp(min=1e-6)
-    return (feat_matrix - mean) / std
-
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -38,15 +51,59 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 INTERIM_DIR = REPO_ROOT / "gnn" / "data" / "interim"
 PROCESSED_DIR = REPO_ROOT / "gnn" / "data" / "processed"
 FIG_DIR = INTERIM_DIR / "figs"
+ENV_DATA = REPO_ROOT / "env_data" / "data" / "processed"
+BIO_DATA = REPO_ROOT / "bio_data" / "data"
 
-REIFICATION_TYPES = {"ChemicalLocationAssociation", "VitalStatistics", "Population"}
-BIO_NODE_TYPES = {"Disease", "Gene", "Variant", "Pathway", "GeneProduct", "Biomarker", "ChromoRearr", "GeneFusion"}
+# Node types to EXCLUDE entirely
+EXCLUDED_TYPES = {"Source"}
+# Node types to DROP (fold info into other nodes)
+DROP_TYPES = {"Population"}
+# Relations to exclude
+EXCLUDED_RELATIONS = {"has_source", "has_attribute"}
 
-CHEMICAL_FEATURE_ORDER = [
-    "C5890534", "C0028160", "C0030106", "C1720884_10", "C0005036",
-    "C0005052", "C1720884_10_As", "C1720884_10_Cd", "C1720884_10_Ni", "C1720884_10_Pb",
-]
+BIO_NODE_TYPES = {
+    "Disease", "Gene", "Variant", "Pathway", "GeneProduct",
+    "Biomarker", "ChromoRearr", "GeneFusion",
+    "GeneDiseaseAssociation", "VariantDiseaseAssociation",
+}
 
+# Consequence type encoding for Variant features
+CONSEQUENCE_MAP = {
+    "missense_variant": 0,
+    "intron_variant": 1,
+    "3_prime_UTR_variant": 2,
+    "synonymous_variant": 3,
+    "non_coding_transcript_exon_variant": 4,
+    "5_prime_UTR_variant": 5,
+    "frameshift_variant": 6,
+    "stop_gained": 7,
+    "splice_region_variant": 8,
+    "inframe_deletion": 9,
+    "inframe_insertion": 10,
+}
+N_CONSEQUENCE_TYPES = len(CONSEQUENCE_MAP) + 1  # +1 for "other"
+
+# ChromoRearr type encoding
+REARR_TYPE_MAP = {
+    "Translocations": 0,
+    "Inverstions": 1,  # typo in source data
+    "Inversions": 1,
+    "Derivative chromosomes": 2,
+    "Deletions": 3,
+}
+N_REARR_TYPES = 4
+
+
+def normalize_features(feat_matrix):
+    """Z-score normalization per feature dimension."""
+    mean = feat_matrix.mean(dim=0, keepdim=True)
+    std = feat_matrix.std(dim=0, keepdim=True).clamp(min=1e-6)
+    return (feat_matrix - mean) / std
+
+
+# =========================================================================
+# Step 1: Load interim data
+# =========================================================================
 
 def load_interim():
     nodes = {}
@@ -64,81 +121,29 @@ def load_interim():
                 "attrs": json.loads(row["attrs_json"]) if row["attrs_json"] != "{}" else {},
             })
 
-    print(f"Loaded {len(nodes):,} nodes, {len(edges):,} edges")
+    print(f"  Loaded {len(nodes):,} nodes, {len(edges):,} edges from interim")
     return nodes, edges
 
 
-def extract_cla_data(edges):
-    cla_chemical = {}
-    cla_region = {}
-    cla_year = {}
-    cla_value = {}
+# =========================================================================
+# Step 2: Read literal values from env TTLs
+# =========================================================================
 
-    literal_edges = defaultdict(dict)
-
-    with open(INTERIM_DIR / "edges.csv", "r", encoding="utf-8") as f:
-        for row in csv.DictReader(f):
-            pass
-
-    for e in edges:
-        if e["src_type"] != "ChemicalLocationAssociation":
-            continue
-        cla_id = e["src"]
-        if e["dst_type"] == "Chemical":
-            cla_chemical[cla_id] = e["dst"]
-        elif e["dst_type"] in ("GeoPoliticalRegion", "GeographicRegion"):
-            cla_region[cla_id] = (e["dst"], e["dst_type"])
-        elif e["dst_type"] == "CalendarYear":
-            cla_year[cla_id] = e["dst"]
-
-    with open(INTERIM_DIR / "edges.csv", "r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            if row["src_type"] == "ChemicalLocationAssociation":
-                attrs = json.loads(row["attrs_json"]) if row["attrs_json"] != "{}" else {}
-                if attrs:
-                    cla_id = row["src_id"]
-                    if "value" in attrs:
-                        cla_value[cla_id] = attrs["value"]
-
-    return cla_chemical, cla_region, cla_year, cla_value
-
-
-def extract_vitalstats_data(nodes, edges):
-    vs_region = {}
-    vs_year = {}
-    vs_people = {}
-    disease_to_vs = {}
-
-    for e in edges:
-        if e["dst_type"] == "VitalStatistics" and e["src_type"] == "Disease":
-            disease_to_vs[e["dst"]] = e["src"]
-        if e["src_type"] != "VitalStatistics":
-            continue
-        vs_id = e["src"]
-        if e["dst_type"] in ("GeographicRegion", "Country"):
-            vs_region[vs_id] = (e["dst"], e["dst_type"])
-        elif e["dst_type"] == "CalendarYear":
-            vs_year[vs_id] = e["dst"]
-        elif e["dst_type"] == "People":
-            vs_people[vs_id] = e["dst"]
-
-    return vs_region, vs_year, vs_people, disease_to_vs
-
-
-def read_literal_values_from_ttls():
+def read_env_literal_values():
+    """Read concentration, incidence, mortality, population from TTL files."""
     import rdflib
 
-    env_dir = REPO_ROOT / "env_data" / "data" / "processed"
     cla_values = {}
     vs_incidence = {}
     vs_mortality = {}
+    population_values = {}
 
     for ttl_name in ["graph_EEA.ttl", "graph_OECD.ttl"]:
-        ttl_path = env_dir / ttl_name
+        ttl_path = ENV_DATA / ttl_name
         if not ttl_path.exists():
+            print(f"    [WARN] {ttl_name} not found")
             continue
-        print(f"  Reading values from {ttl_name} ...")
+        print(f"    {ttl_name} ...")
         g = rdflib.Graph()
         g.parse(str(ttl_path), format="turtle")
         for s, p, o in g:
@@ -148,211 +153,407 @@ def read_literal_values_from_ttls():
                     v = float(o.toPython())
                     if v > -9000:
                         cla_values[s_str] = v
+            if "/population/" in s_str and isinstance(o, rdflib.Literal):
+                if "value" in p_str or "SIO_000300" in p_str:
+                    try:
+                        population_values[s_str] = float(o.toPython())
+                    except (ValueError, TypeError):
+                        pass
 
     for ttl_name in ["graph_ECIS.ttl", "graph_CDC.ttl"]:
-        ttl_path = env_dir / ttl_name
+        ttl_path = ENV_DATA / ttl_name
         if not ttl_path.exists():
+            print(f"    [WARN] {ttl_name} not found")
             continue
-        print(f"  Reading values from {ttl_name} ...")
+        print(f"    {ttl_name} ...")
         g = rdflib.Graph()
         g.parse(str(ttl_path), format="turtle")
         for s, p, o in g:
             s_str, p_str = str(s), str(p)
             if "#vitalstatistics/" in s_str and isinstance(o, rdflib.Literal):
+                try:
+                    val = float(o.toPython())
+                except (ValueError, TypeError):
+                    continue
                 if "incidence" in p_str:
-                    vs_incidence[s_str] = float(o.toPython())
+                    vs_incidence[s_str] = val
                 elif "mortalityrate" in p_str:
-                    vs_mortality[s_str] = float(o.toPython())
+                    vs_mortality[s_str] = val
 
-    print(f"  CLA values: {len(cla_values):,}")
-    print(f"  VS incidence: {len(vs_incidence):,}, mortality: {len(vs_mortality):,}")
-    return cla_values, vs_incidence, vs_mortality
-
-
-def build_region_features(cla_chemical, cla_region, cla_values, vs_region, vs_incidence, vs_mortality):
-    region_chem_vals = defaultdict(lambda: defaultdict(list))
-    for cla_id, (region_uri, _) in cla_region.items():
-        chem = cla_chemical.get(cla_id)
-        val = cla_values.get(cla_id)
-        if chem and val is not None:
-            chem_id = chem.split("/")[-1]
-            region_chem_vals[region_uri][chem_id].append(val)
-
-    region_health = defaultdict(lambda: {"incidence": [], "mortality": []})
-    for vs_id, (region_uri, _) in vs_region.items():
-        if vs_id in vs_incidence:
-            region_health[region_uri]["incidence"].append(vs_incidence[vs_id])
-        if vs_id in vs_mortality:
-            region_health[region_uri]["mortality"].append(vs_mortality[vs_id])
-
-    region_features = {}
-    for region_uri in set(list(region_chem_vals.keys()) + list(region_health.keys())):
-        feat = []
-        for chem_id in CHEMICAL_FEATURE_ORDER:
-            vals = region_chem_vals.get(region_uri, {}).get(chem_id, [])
-            feat.append(np.mean(vals) if vals else 0.0)
-        health = region_health.get(region_uri, {"incidence": [], "mortality": []})
-        feat.append(np.mean(health["incidence"]) if health["incidence"] else 0.0)
-        feat.append(np.mean(health["mortality"]) if health["mortality"] else 0.0)
-        region_features[region_uri] = feat
-
-    return region_features
+    print(f"    CLA values: {len(cla_values):,}")
+    print(f"    VS incidence: {len(vs_incidence):,}, mortality: {len(vs_mortality):,}")
+    print(f"    Population: {len(population_values):,}")
+    return cla_values, vs_incidence, vs_mortality, population_values
 
 
-def build_chemical_features(cla_chemical, cla_region, cla_values):
-    chem_vals = defaultdict(list)
-    chem_regions = defaultdict(set)
-    for cla_id, chem_uri in cla_chemical.items():
-        val = cla_values.get(cla_id)
-        if val is not None:
-            chem_vals[chem_uri].append(val)
-            region = cla_region.get(cla_id)
-            if region:
-                chem_regions[chem_uri].add(region[0])
+# =========================================================================
+# Step 3: Read bio reification data (GDA scores, VDA scores, Variant features)
+# =========================================================================
 
-    chem_features = {}
-    for chem_uri in chem_vals:
-        vals = chem_vals[chem_uri]
-        chem_features[chem_uri] = [np.mean(vals), len(chem_regions[chem_uri]), np.max(vals)]
-    return chem_features
+def read_bio_features():
+    """Parse SPARQL result TTLs for GDA scores, VDA scores, and Variant metadata."""
+    import rdflib
+    from rdflib.namespace import RDF
+
+    RES_NS = rdflib.Namespace("http://www.w3.org/2005/sparql-results#")
+
+    def parse_resultset(filepath):
+        g = rdflib.Graph()
+        g.parse(str(filepath), format="turtle")
+        rows = []
+        for solution in g.objects(predicate=RES_NS.solution):
+            row = {}
+            for binding in g.objects(solution, RES_NS.binding):
+                var = str(list(g.objects(binding, RES_NS.variable))[0])
+                val_list = list(g.objects(binding, RES_NS.value))
+                if val_list:
+                    v = val_list[0]
+                    row[var] = v.toPython() if isinstance(v, rdflib.Literal) else str(v)
+            rows.append(row)
+        return rows
+
+    # --- GDA scores ---
+    gda_scores = {}  # (gene_uri, disease_code) -> score
+    gda_path = BIO_DATA / "gene_disease_assoc.ttl"
+    if gda_path.exists():
+        print(f"    gene_disease_assoc.ttl ...")
+        rows = parse_resultset(gda_path)
+        for r in rows:
+            gene_id = r.get("GeneId", "")
+            disease_cui = r.get("DiseaseCui", "")
+            score = r.get("GdaScore")
+            if gene_id and disease_cui and score is not None:
+                # Use full gene_id as-is (e.g. "ncbigene:29799") to match 01's make_uri("gene", g_id)
+                gda_scores[(gene_id, disease_cui)] = float(score)
+        print(f"      {len(gda_scores):,} GDA scores")
+
+    # --- VDA scores + Variant metadata ---
+    vda_scores = {}  # (variant_id, disease_code) -> {dsi, dpi, gene_num}
+    variant_meta = {}  # variant_uri -> [chrom, consequence, position]
+    vda_path = BIO_DATA / "variant_disease.ttl"
+    if vda_path.exists():
+        print(f"    variant_disease.ttl ...")
+        rows = parse_resultset(vda_path)
+        for r in rows:
+            variant_id = r.get("VariantId", "")
+            disease_cui = r.get("DiseaseCui", "")
+            gene_id = r.get("GeneId", "")
+            dsi = r.get("DiseaseSpecificity")
+            dpi = r.get("DiseasePleiotropy")
+            if variant_id and disease_cui:
+                # Keep full gene_id (e.g. "ncbigene:1956") to match 01's make_uri("gene", g_id)
+                vda_scores[(variant_id, disease_cui)] = {
+                    "dsi": float(dsi) if dsi is not None else 0.0,
+                    "dpi": float(dpi) if dpi is not None else 0.0,
+                    "gene_id": gene_id,
+                }
+            if variant_id:
+                v_uri = f"lucia:variant/{variant_id}"
+                if v_uri not in variant_meta:
+                    chrom = r.get("Chromosome", "")
+                    consequence = r.get("Consequence", "")
+                    start_pos = r.get("ChromosomeStartPosition", "")
+                    chrom_val = 0.0
+                    if chrom:
+                        if str(chrom).isdigit():
+                            chrom_val = int(chrom) / 24.0
+                        elif str(chrom).upper() == "X":
+                            chrom_val = 23.0 / 24.0
+                        elif str(chrom).upper() == "Y":
+                            chrom_val = 24.0 / 24.0
+                    cons_val = CONSEQUENCE_MAP.get(str(consequence), len(CONSEQUENCE_MAP)) / N_CONSEQUENCE_TYPES
+                    pos_val = 0.0
+                    if start_pos:
+                        try:
+                            pos_val = float(start_pos) / 250_000_000.0
+                        except (ValueError, TypeError):
+                            pass
+                    variant_meta[v_uri] = [chrom_val, cons_val, pos_val]
+        print(f"      {len(vda_scores):,} VDA scores, {len(variant_meta):,} variant metadata")
+
+    # --- ChromoRearr type ---
+    rearr_types = {}
+    rearr_path = BIO_DATA / "disease_and_chromo_arr.ttl"
+    if rearr_path.exists():
+        print(f"    disease_and_chromo_arr.ttl ...")
+        rows = parse_resultset(rearr_path)
+        for r in rows:
+            name = r.get("ChromosomalRearrengementName", "")
+            rtype = r.get("ChromosomalRearrengementType", "")
+            if name:
+                uri = f"lucia:chromo_rearr/{name}"
+                rearr_types[uri] = REARR_TYPE_MAP.get(rtype, 0) / N_REARR_TYPES
+        print(f"      {len(rearr_types):,} rearrangement types")
+
+    return gda_scores, vda_scores, variant_meta, rearr_types
 
 
-def build_collapsed_edges(nodes, edges, cla_chemical, cla_region, cla_year, cla_values,
-                          vs_region, vs_year, disease_to_vs):
-    direct_edges = [
-        e for e in edges
-        if e["src_type"] not in REIFICATION_TYPES and e["dst_type"] not in REIFICATION_TYPES
-    ]
+# =========================================================================
+# Step 4: Extract People features and Region population
+# =========================================================================
 
-    # Chemical -> Region edges with mean exposure value
-    chem_region_vals = defaultdict(list)
-    for cla_id in set(cla_chemical.keys()) & set(cla_region.keys()):
-        chem = cla_chemical[cla_id]
-        region_uri, region_type = cla_region[cla_id]
-        val = cla_values.get(cla_id, 0.0)
-        chem_region_vals[(chem, region_uri, region_type)].append(val)
-
-    exposure_edges = []
-    for (chem, region_uri, region_type), vals in chem_region_vals.items():
-        mean_val = np.mean([v for v in vals if v > -9000]) if vals else 0.0
-        exposure_edges.append({
-            "src": chem, "src_type": "Chemical", "rel": "exposure_in",
-            "dst": region_uri, "dst_type": region_type,
-            "attrs": {"mean_value": round(float(mean_val), 4)},
-        })
-
-    # Disease -> Region edges from VitalStats
-    cancer_edges = []
-    for vs_id, (region_uri, region_type) in vs_region.items():
-        disease = disease_to_vs.get(vs_id)
-        if not disease:
+def extract_people_features(nodes):
+    people_features = {}
+    for uri, info in nodes.items():
+        if info["type"] != "People":
             continue
-        cancer_edges.append({
-            "src": disease, "src_type": "Disease", "rel": "cancer_stats_in",
-            "dst": region_uri, "dst_type": region_type, "attrs": {},
-        })
-
-    # Region -> CalendarYear edges (from CLA years)
-    region_years_cla = defaultdict(set)
-    for cla_id, year_uri in cla_year.items():
-        if cla_id in cla_region:
-            region_uri, region_type = cla_region[cla_id]
-            region_years_cla[(region_uri, region_type)].add(year_uri)
-
-    region_years_vs = defaultdict(set)
-    for vs_id, year_uri in vs_year.items():
-        if vs_id in vs_region:
-            region_uri, region_type = vs_region[vs_id]
-            region_years_vs[(region_uri, region_type)].add(year_uri)
-
-    temporal_edges = []
-    for (region_uri, region_type), years in region_years_cla.items():
-        for year_uri in years:
-            temporal_edges.append({
-                "src": region_uri, "src_type": region_type, "rel": "measured_in",
-                "dst": year_uri, "dst_type": "CalendarYear", "attrs": {},
-            })
-    for (region_uri, region_type), years in region_years_vs.items():
-        for year_uri in years:
-            temporal_edges.append({
-                "src": region_uri, "src_type": region_type, "rel": "cancer_data_in",
-                "dst": year_uri, "dst_type": "CalendarYear", "attrs": {},
-            })
-
-    # Deduplicate temporal edges
-    seen_temporal = set()
-    deduped_temporal = []
-    for e in temporal_edges:
-        key = (e["src"], e["rel"], e["dst"])
-        if key not in seen_temporal:
-            seen_temporal.add(key)
-            deduped_temporal.append(e)
-
-    all_edges = direct_edges + exposure_edges + cancer_edges + deduped_temporal
-
-    print(f"  Direct edges: {len(direct_edges):,}")
-    print(f"  Exposure edges (Chemical->Region): {len(exposure_edges):,}")
-    print(f"  Cancer stats edges (Disease->Region): {len(cancer_edges):,}")
-    print(f"  Temporal edges (Region->CalendarYear): {len(deduped_temporal):,}")
-
-    kept_ids = set()
-    for e in all_edges:
-        kept_ids.add(e["src"])
-        kept_ids.add(e["dst"])
-    kept_nodes = {nid: info for nid, info in nodes.items() if nid in kept_ids and info["type"] not in REIFICATION_TYPES}
-
-    return kept_nodes, all_edges
+        parts = uri.split("/")[-1].split("_") if "/" in uri else []
+        age_str, gender_str = "", ""
+        for p in parts:
+            p_lower = p.lower()
+            if p_lower in ("male", "female"):
+                gender_str = p_lower
+            elif "-" in p or "+" in p or p.replace("-", "").isdigit():
+                age_str = p
+        age_val = 0.5
+        if age_str:
+            # Strip trailing + first (e.g. "85+" -> "85", "75-85+" -> "75-85")
+            clean = age_str.rstrip("+")
+            if "-" in clean:
+                try:
+                    lo, hi = clean.split("-", 1)
+                    age_val = (float(lo) + float(hi)) / 2.0 / 100.0
+                except ValueError:
+                    pass
+            else:
+                try:
+                    age_val = float(clean) / 100.0
+                except ValueError:
+                    pass
+        gender_val = 0.0 if gender_str == "male" else 1.0 if gender_str == "female" else 0.5
+        people_features[uri] = [age_val, gender_val]
+    return people_features
 
 
-def build_pyg_heterodata(nodes, edges, region_features, chemical_features):
+def build_region_population(nodes, edges, population_values):
+    region_pop = {}
+    for e in edges:
+        if e["rel"] == "has_measurement_value" and e["dst_type"] == "Population":
+            if e["dst"] in population_values:
+                region_pop[e["src"]] = population_values[e["dst"]]
+        if e["src_type"] == "Population" and e["dst_type"] in ("GeoPoliticalRegion", "GeographicRegion"):
+            if e["src"] in population_values:
+                region_pop[e["dst"]] = population_values[e["src"]]
+    return region_pop
+
+
+# =========================================================================
+# Step 5: Create bio reification nodes and replace direct edges
+# =========================================================================
+
+def create_bio_reification_nodes(nodes, edges, gda_scores, vda_scores):
+    """Replace direct Gene-Disease and Variant-Disease edges with reification nodes."""
+    new_nodes = dict(nodes)
+    new_edges = []
+    gda_counter = 0
+    vda_counter = 0
+
+    for e in edges:
+        # Replace Gene -> associated_with -> Disease
+        if e["rel"] == "associated_with" and e["src_type"] == "Gene" and e["dst_type"] == "Disease":
+            gene_uri = e["src"]
+            disease_uri = e["dst"]
+            disease_code = disease_uri.split("/")[-1]
+            gene_num = gene_uri.split("/")[-1]
+
+            score = gda_scores.get((gene_num, disease_code), 0.0)
+
+            gda_uri = f"lucia:gda/gda_{gda_counter}"
+            gda_counter += 1
+            new_nodes[gda_uri] = {
+                "type": "GeneDiseaseAssociation",
+                "label": f"GDA_{gene_num}_{disease_code}",
+                "gda_score": score,
+            }
+            new_edges.append({"src": gene_uri, "src_type": "Gene", "rel": "has_association",
+                              "dst": gda_uri, "dst_type": "GeneDiseaseAssociation", "attrs": {}})
+            new_edges.append({"src": gda_uri, "src_type": "GeneDiseaseAssociation", "rel": "associated_with",
+                              "dst": disease_uri, "dst_type": "Disease", "attrs": {}})
+
+        # Replace Variant -> variant_of -> Disease
+        elif e["rel"] == "variant_of" and e["src_type"] == "Variant" and e["dst_type"] == "Disease":
+            variant_uri = e["src"]
+            disease_uri = e["dst"]
+            disease_code = disease_uri.split("/")[-1]
+            variant_id = variant_uri.split("/")[-1]
+
+            vda_info = vda_scores.get((variant_id, disease_code), {"dsi": 0.0, "dpi": 0.0, "gene_id": ""})
+
+            vda_uri = f"lucia:vda/vda_{vda_counter}"
+            vda_counter += 1
+            new_nodes[vda_uri] = {
+                "type": "VariantDiseaseAssociation",
+                "label": f"VDA_{variant_id}_{disease_code}",
+                "dsi": vda_info["dsi"],
+                "dpi": vda_info["dpi"],
+            }
+            new_edges.append({"src": variant_uri, "src_type": "Variant", "rel": "has_variant_association",
+                              "dst": vda_uri, "dst_type": "VariantDiseaseAssociation", "attrs": {}})
+            new_edges.append({"src": vda_uri, "src_type": "VariantDiseaseAssociation", "rel": "variant_of",
+                              "dst": disease_uri, "dst_type": "Disease", "attrs": {}})
+            # VDA -> Gene (which gene this variant belongs to)
+            gene_id = vda_info["gene_id"]
+            if gene_id:
+                gene_uri = f"lucia:gene/{gene_id}"
+                if gene_uri in new_nodes:
+                    new_edges.append({"src": vda_uri, "src_type": "VariantDiseaseAssociation",
+                                      "rel": "located_in_gene",
+                                      "dst": gene_uri, "dst_type": "Gene", "attrs": {}})
+        else:
+            new_edges.append(e)
+
+    print(f"  Created {gda_counter:,} GDA reification nodes")
+    print(f"  Created {vda_counter:,} VDA reification nodes")
+    return new_nodes, new_edges
+
+
+# =========================================================================
+# Step 6: Filter graph
+# =========================================================================
+
+def filter_graph(nodes, edges):
+    remove_types = EXCLUDED_TYPES | DROP_TYPES
+    kept_nodes = {uri: info for uri, info in nodes.items() if info["type"] not in remove_types}
+    kept_edges = []
+    for e in edges:
+        if e["src_type"] in remove_types or e["dst_type"] in remove_types:
+            continue
+        if e["rel"] in EXCLUDED_RELATIONS:
+            continue
+        if e["src"] in kept_nodes and e["dst"] in kept_nodes:
+            kept_edges.append(e)
+    print(f"  Filtered: {len(kept_nodes):,} nodes, {len(kept_edges):,} edges")
+    return kept_nodes, kept_edges
+
+
+# =========================================================================
+# Step 7: Build PyG HeteroData
+# =========================================================================
+
+def build_pyg_heterodata(nodes, edges, cla_values, vs_incidence, vs_mortality,
+                         people_features, region_population, variant_meta, rearr_types):
     from torch_geometric.data import HeteroData
 
     node_type_to_ids = defaultdict(dict)
-    for nid, info in nodes.items():
+    for uri, info in nodes.items():
         nt = info["type"]
-        if nid not in node_type_to_ids[nt]:
-            node_type_to_ids[nt][nid] = len(node_type_to_ids[nt])
+        if uri not in node_type_to_ids[nt]:
+            node_type_to_ids[nt][uri] = len(node_type_to_ids[nt])
 
     data = HeteroData()
 
     for nt, id_map in node_type_to_ids.items():
-        data[nt].num_nodes = len(id_map)
-        data[nt].node_ids = list(id_map.keys())
+        n_nodes = len(id_map)
+        data[nt].num_nodes = n_nodes
 
-        if nt in ("GeoPoliticalRegion", "GeographicRegion"):
-            feat_dim = len(CHEMICAL_FEATURE_ORDER) + 2  # chemicals + incidence + mortality
-            feat_matrix = torch.zeros(len(id_map), feat_dim)
-            for nid, idx in id_map.items():
-                if nid in region_features:
-                    feat_matrix[idx] = torch.tensor(region_features[nid], dtype=torch.float)
-            data[nt].x = normalize_features(feat_matrix)
-            print(f"  {nt}: {len(id_map)} nodes, features={feat_dim}-dim")
+        if nt == "ChemicalLocationAssociation":
+            feat = torch.zeros(n_nodes, 1)
+            found = 0
+            for uri, idx in id_map.items():
+                if uri in cla_values:
+                    feat[idx, 0] = cla_values[uri]
+                    found += 1
+            data[nt].x = normalize_features(feat)
+            print(f"  {nt}: {n_nodes:,} nodes, 1d (concentration) [{found:,} with values]")
 
-        elif nt == "Chemical":
-            feat_matrix = torch.zeros(len(id_map), 3)
-            for nid, idx in id_map.items():
-                if nid in chemical_features:
-                    feat_matrix[idx] = torch.tensor(chemical_features[nid], dtype=torch.float)
-            data[nt].x = normalize_features(feat_matrix)
-            print(f"  {nt}: {len(id_map)} nodes, features=3-dim")
+        elif nt == "VitalStatistics":
+            feat = torch.zeros(n_nodes, 2)
+            fi, fm = 0, 0
+            for uri, idx in id_map.items():
+                if uri in vs_incidence:
+                    feat[idx, 0] = vs_incidence[uri]
+                    fi += 1
+                if uri in vs_mortality:
+                    feat[idx, 1] = vs_mortality[uri]
+                    fm += 1
+            data[nt].x = normalize_features(feat)
+            print(f"  {nt}: {n_nodes:,} nodes, 2d (inc+mort) [{fi:,} inc, {fm:,} mort]")
+
+        elif nt == "GeneDiseaseAssociation":
+            feat = torch.zeros(n_nodes, 1)
+            found = 0
+            for uri, idx in id_map.items():
+                score = nodes[uri].get("gda_score", 0.0)
+                if score > 0:
+                    feat[idx, 0] = score
+                    found += 1
+            data[nt].x = normalize_features(feat)
+            print(f"  {nt}: {n_nodes:,} nodes, 1d (GDA score) [{found:,} with scores]")
+
+        elif nt == "VariantDiseaseAssociation":
+            feat = torch.zeros(n_nodes, 2)
+            found = 0
+            for uri, idx in id_map.items():
+                dsi = nodes[uri].get("dsi", 0.0)
+                dpi = nodes[uri].get("dpi", 0.0)
+                feat[idx, 0] = dsi
+                feat[idx, 1] = dpi
+                if dsi > 0 or dpi > 0:
+                    found += 1
+            data[nt].x = normalize_features(feat)
+            print(f"  {nt}: {n_nodes:,} nodes, 2d (DSI+DPI) [{found:,} with scores]")
+
+        elif nt == "People":
+            feat = torch.zeros(n_nodes, 2)
+            found = 0
+            for uri, idx in id_map.items():
+                if uri in people_features:
+                    feat[idx] = torch.tensor(people_features[uri])
+                    found += 1
+            data[nt].x = normalize_features(feat)
+            print(f"  {nt}: {n_nodes:,} nodes, 2d (age+gender) [{found:,} parsed]")
+
+        elif nt == "Variant":
+            feat = torch.zeros(n_nodes, 3)
+            found = 0
+            for uri, idx in id_map.items():
+                if uri in variant_meta:
+                    feat[idx] = torch.tensor(variant_meta[uri])
+                    found += 1
+            data[nt].x = normalize_features(feat)
+            print(f"  {nt}: {n_nodes:,} nodes, 3d (chrom+cons+pos) [{found:,} with meta]")
+
+        elif nt == "ChromoRearr":
+            feat = torch.zeros(n_nodes, 1)
+            found = 0
+            for uri, idx in id_map.items():
+                if uri in rearr_types:
+                    feat[idx, 0] = rearr_types[uri]
+                    found += 1
+            data[nt].x = normalize_features(feat)
+            print(f"  {nt}: {n_nodes:,} nodes, 1d (rearr type) [{found:,} with type]")
+
+        elif nt in ("GeoPoliticalRegion", "GeographicRegion"):
+            feat = torch.zeros(n_nodes, 1)
+            found = 0
+            for uri, idx in id_map.items():
+                if uri in region_population:
+                    feat[idx, 0] = region_population[uri]
+                    found += 1
+            data[nt].x = normalize_features(feat)
+            print(f"  {nt}: {n_nodes:,} nodes, 1d (population) [{found:,} with pop]")
 
         elif nt == "CalendarYear":
-            feat_matrix = torch.zeros(len(id_map), 1)
-            for nid, idx in id_map.items():
-                year_str = nid.split("/")[-1]
+            feat = torch.zeros(n_nodes, 1)
+            for uri, idx in id_map.items():
+                year_str = uri.split("/")[-1]
                 try:
-                    year = int(year_str)
-                    feat_matrix[idx] = (year - 1950) / 80.0
+                    feat[idx, 0] = (int(year_str) - 1950) / 80.0
                 except ValueError:
                     pass
-            data[nt].x = normalize_features(feat_matrix)
-            print(f"  {nt}: {len(id_map)} nodes, features=1-dim")
-        else:
-            print(f"  {nt}: {len(id_map)} nodes, no features (learnable)")
+            data[nt].x = normalize_features(feat)
+            print(f"  {nt}: {n_nodes:,} nodes, 1d (year)")
 
+        else:
+            print(f"  {nt}: {n_nodes:,} nodes, no features (learnable)")
+
+    # --- Edges ---
+    print(f"\n  Building edges ({len(edges):,} total) ...")
     edge_index_dict = defaultdict(lambda: ([], []))
     skipped = 0
-    for e in edges:
+    for i, e in enumerate(edges):
+        if i > 0 and i % 100_000 == 0:
+            print(f"    processed {i:,} / {len(edges):,} edges ...")
         st, rel, dt = e["src_type"], e["rel"], e["dst_type"]
         src_map = node_type_to_ids.get(st, {})
         dst_map = node_type_to_ids.get(dt, {})
@@ -365,6 +566,7 @@ def build_pyg_heterodata(nodes, edges, region_features, chemical_features):
         edge_index_dict[key][0].append(src_idx)
         edge_index_dict[key][1].append(dst_idx)
 
+    print(f"  Converting to tensors ...")
     for key, (src_list, dst_list) in edge_index_dict.items():
         data[key].edge_index = torch.tensor([src_list, dst_list], dtype=torch.long)
 
@@ -383,6 +585,10 @@ def build_pyg_heterodata(nodes, edges, region_features, chemical_features):
     return data, node_type_to_ids
 
 
+# =========================================================================
+# Step 8: Save
+# =========================================================================
+
 def save_outputs(data, node_type_to_ids, nodes):
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     torch.save(data, PROCESSED_DIR / "hetero_graph.pt")
@@ -390,85 +596,100 @@ def save_outputs(data, node_type_to_ids, nodes):
 
     id_maps = {}
     for nt, id_map in node_type_to_ids.items():
-        id_maps[nt] = {nid: {"idx": idx, "label": nodes.get(nid, {}).get("label", "")} for nid, idx in id_map.items()}
+        id_maps[nt] = {
+            uri: {"idx": idx, "label": nodes.get(uri, {}).get("label", "")}
+            for uri, idx in id_map.items()
+        }
     with open(PROCESSED_DIR / "node_id_maps.json", "w") as f:
         json.dump(id_maps, f, indent=1)
     print(f"  -> {PROCESSED_DIR / 'node_id_maps.json'}")
 
 
-def fig_collapsed_schema(nodes, edges, fig_dir):
+# =========================================================================
+# Step 9: Figure
+# =========================================================================
+
+def fig_graph_schema(nodes, edges, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
     node_counts = Counter(info["type"] for info in nodes.values())
     edge_counts = Counter((e["src_type"], e["rel"], e["dst_type"]) for e in edges)
 
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, max(6, len(node_counts) * 0.4)))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, max(8, len(edge_counts) * 0.35)))
+
     types = [k for k, _ in node_counts.most_common()]
     counts = [node_counts[t] for t in types]
     colors = ["#1f77b4" if t in BIO_NODE_TYPES else "#2ca02c" for t in types]
     ax1.barh(types[::-1], counts[::-1], color=colors[::-1], edgecolor="white", linewidth=0.5)
     ax1.set_xlabel("Nodes")
-    ax1.set_title("Node Types (with features)", fontsize=11, fontweight="bold")
+    ax1.set_title("Node types (full KG structure)", fontsize=11, fontweight="bold")
     ax1.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"{int(x):,}"))
     for i, cnt in enumerate(counts[::-1]):
         ax1.text(cnt + max(counts) * 0.01, i, f"{cnt:,}", va="center", fontsize=7)
-    ax1.legend(handles=[mpatches.Patch(color="#1f77b4", label="Biological"),
-                        mpatches.Patch(color="#2ca02c", label="Environmental")], loc="lower right", fontsize=8)
+    ax1.legend(handles=[
+        mpatches.Patch(color="#1f77b4", label="Biological"),
+        mpatches.Patch(color="#2ca02c", label="Environmental"),
+    ], loc="lower right", fontsize=8)
 
     labels = [f"({s}, {r}, {d})" for (s, r, d), _ in edge_counts.most_common()]
     ecounts = [c for _, c in edge_counts.most_common()]
     ax2.barh(labels[::-1], ecounts[::-1], color="#4c72b0", edgecolor="white", linewidth=0.5)
     ax2.set_xlabel("Edges")
-    ax2.set_title("Edge Types", fontsize=11, fontweight="bold")
+    ax2.set_title("Edge types", fontsize=11, fontweight="bold")
     ax2.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"{int(x):,}"))
     for i, cnt in enumerate(ecounts[::-1]):
         ax2.text(cnt + max(ecounts) * 0.01, i, f"{cnt:,}", va="center", fontsize=6)
 
-    fig.suptitle("Lung-CABO KG: Heterogeneous Graph with Node Features", fontsize=13, fontweight="bold")
+    fig.suptitle("Lung-CABO KG: full heterogeneous graph structure", fontsize=13, fontweight="bold")
     plt.tight_layout()
-    fig.savefig(fig_dir / "collapsed_schema.png", dpi=200, bbox_inches="tight")
+    fig.savefig(fig_dir / "graph_schema.png", dpi=200, bbox_inches="tight")
     plt.close(fig)
-    print(f"  -> figs/collapsed_schema.png")
+    print(f"  -> figs/graph_schema.png")
 
+
+# =========================================================================
+# Main
+# =========================================================================
 
 def main():
     print("=" * 70)
-    print("02_build_graph.py (with node features)")
+    print("02_build_graph.py (full structure, bio + env reifications)")
     print("=" * 70)
-
     t0 = time.time()
 
-    print("\n[1/6] Loading interim data ...")
+    print("\n[1/8] Loading interim data ...")
     nodes, edges = load_interim()
 
-    print("\n[2/6] Reading literal values from TTLs ...")
-    cla_values, vs_incidence, vs_mortality = read_literal_values_from_ttls()
+    print("\n[2/8] Reading environmental literal values ...")
+    cla_values, vs_incidence, vs_mortality, population_values = read_env_literal_values()
 
-    print("\n[3/6] Extracting reification data ...")
-    cla_chemical, cla_region, cla_year, _ = extract_cla_data(edges)
-    vs_region, vs_year, vs_people, disease_to_vs = extract_vitalstats_data(nodes, edges)
-    print(f"  CLAs: {len(cla_chemical):,} with chemical, {len(cla_region):,} with region, "
-          f"{len(cla_year):,} with year, {len(cla_values):,} with value")
-    print(f"  VitalStats: {len(vs_region):,} with region, {len(vs_year):,} with year")
+    print("\n[3/8] Reading biological features (GDA, VDA, Variant, ChromoRearr) ...")
+    gda_scores, vda_scores, variant_meta, rearr_types = read_bio_features()
 
-    print("\n[4/6] Building node features ...")
-    region_features = build_region_features(cla_chemical, cla_region, cla_values, vs_region, vs_incidence, vs_mortality)
-    chemical_features = build_chemical_features(cla_chemical, cla_region, cla_values)
-    print(f"  Regions with features: {len(region_features):,}")
-    print(f"  Chemicals with features: {len(chemical_features):,}")
+    print("\n[4/8] Extracting People features ...")
+    people_features = extract_people_features(nodes)
+    print(f"  People with parsed features: {len(people_features):,}")
 
-    print("\n[5/6] Building collapsed edges ...")
-    collapsed_nodes, collapsed_edges = build_collapsed_edges(
-        nodes, edges, cla_chemical, cla_region, cla_year, cla_values,
-        vs_region, vs_year, disease_to_vs
+    print("\n[5/8] Building Region population features ...")
+    region_population = build_region_population(nodes, edges, population_values)
+    print(f"  Regions with population: {len(region_population):,}")
+
+    print("\n[6/8] Creating bio reification nodes (GDA, VDA) ...")
+    nodes, edges = create_bio_reification_nodes(nodes, edges, gda_scores, vda_scores)
+
+    print("\n[7/8] Filtering graph ...")
+    kept_nodes, kept_edges = filter_graph(nodes, edges)
+
+    print("\n[8/8] Building PyG HeteroData ...")
+    data, id_maps = build_pyg_heterodata(
+        kept_nodes, kept_edges,
+        cla_values, vs_incidence, vs_mortality,
+        people_features, region_population,
+        variant_meta, rearr_types,
     )
-    print(f"  Collapsed graph: {len(collapsed_nodes):,} nodes, {len(collapsed_edges):,} edges")
-
-    print("\n[6/6] Building PyG HeteroData ...")
-    data, id_maps = build_pyg_heterodata(collapsed_nodes, collapsed_edges, region_features, chemical_features)
-    save_outputs(data, id_maps, collapsed_nodes)
+    save_outputs(data, id_maps, kept_nodes)
 
     print("\n  Generating figure ...")
-    fig_collapsed_schema(collapsed_nodes, collapsed_edges, FIG_DIR)
+    fig_graph_schema(kept_nodes, kept_edges, FIG_DIR)
 
     dt = time.time() - t0
     print(f"\n{'=' * 70}")

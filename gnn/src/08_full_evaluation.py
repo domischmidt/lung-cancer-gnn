@@ -1,9 +1,16 @@
 """
 08_full_evaluation.py - Multi-seed evaluation, ablation study, significance tests.
 
-1. Multi-seed: 5 seeds x 3 models (TransE, DotProduct, R-GCN), reports mean +/- std
+1. Multi-seed: 5 seeds x 3 models (TransE, DotProduct, R-GCN)
+   - Type-aware negative sampling and evaluation (consistent with 03/04)
+   - Reports mean +/- std for overall and GDA->Disease metrics
+
 2. Ablation: R-GCN on Bio-only vs Env-only vs Combined graph
-3. Significance: Chemical-Disease embedding similarity vs random pairs (permutation test)
+   - Tests whether environmental data improves Gene-Disease predictions
+   - Key metric: GDA->Disease MRR
+
+3. Significance: Chemical-Disease embedding similarity vs random pairs
+   - Permutation test (1000 permutations)
 
 Usage:  python gnn/src/08_full_evaluation.py
 Output: gnn/data/processed/full_evaluation_results.json
@@ -34,8 +41,8 @@ FIG_DIR = INTERIM_DIR / "figs"
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 
 HIDDEN_DIM = 128
-NUM_LAYERS = 2
-NUM_BASES = 4
+NUM_LAYERS = 4
+NUM_BASES = 6
 DROPOUT = 0.2
 EPOCHS = 200
 BATCH_SIZE = 4096
@@ -45,25 +52,37 @@ NEG_RATIO = 10
 VAL_RATIO = 0.1
 TEST_RATIO = 0.1
 
-SEEDS = [42, 123, 456, 789, 1337]
+SEEDS = [42, 123, 456]
+ABLATION_SEEDS = [42, 123, 456]
 N_EVAL_SAMPLES = 500
 N_PERMUTATIONS = 1000
 
+# The key relation for Gene-Disease evaluation (through GDA reification)
+GDA_KEY = "GeneDiseaseAssociation__associated_with__Disease"
+
+# Biological relations (for ablation split)
 BIO_RELATIONS = {
-    "Gene__associated_with__Disease", "Gene__in_pathway__Pathway",
-    "Disease__has_fusion__GeneFusion", "Disease__has_rearrangement__ChromoRearr",
-    "Variant__variant_of__Disease", "Variant__located_in_gene__Gene",
-    "GeneProduct__part_of_pathway__Pathway", "Biomarker__marker_for__Disease",
+    "Gene__has_association__GeneDiseaseAssociation",
+    "GeneDiseaseAssociation__associated_with__Disease",
+    "Gene__in_pathway__Pathway",
+    "Variant__has_variant_association__VariantDiseaseAssociation",
+    "VariantDiseaseAssociation__variant_of__Disease",
+    "VariantDiseaseAssociation__located_in_gene__Gene",
+    "Variant__located_in_gene__Gene",
+    "Disease__has_fusion__GeneFusion",
+    "Disease__has_rearrangement__ChromoRearr",
+    "GeneProduct__part_of_pathway__Pathway",
+    "Biomarker__marker_for__Disease",
     "Pathway__linked_to__Disease",
+    "Disease__subtype_of__Disease",
 }
 
-CHEMICAL_NAMES = {
-    "C0030106": "Ozone", "C5890534": "PM2.5", "C0005036": "Benzene",
-    "C0005052": "BaP", "C0028160": "NO2", "C1720884_10": "PM10",
-    "C1720884_10_As": "PM10(As)", "C1720884_10_Cd": "PM10(Cd)",
-    "C1720884_10_Ni": "PM10(Ni)", "C1720884_10_Pb": "PM10(Pb)",
-}
+MODEL_COLORS = {"TransE": "#4c72b0", "DotProduct": "#55a868", "R-GCN": "#c44e52"}
 
+
+# =========================================================================
+# Models
+# =========================================================================
 
 class TransE(nn.Module):
     def __init__(self, n_entities, n_relations, dim):
@@ -126,8 +145,8 @@ class RGCNWithFeatures(nn.Module):
             x[offset:offset + n] = x[offset:offset + n] + projected
         return x
 
-    def score(self, h, r, t):
-        return (h * self.rel_emb(r) * t).sum(dim=-1)
+    def score(self, z_h, r, z_t):
+        return (z_h * self.rel_emb(r) * z_t).sum(dim=-1)
 
     def encode(self, edge_index, edge_type):
         x = self.get_initial_embeddings()
@@ -138,6 +157,10 @@ class RGCNWithFeatures(nn.Module):
         return x
 
 
+# =========================================================================
+# Utilities
+# =========================================================================
+
 def set_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
@@ -146,12 +169,15 @@ def set_seed(seed):
 
 def load_graph():
     data = torch.load(PROCESSED_DIR / "hetero_graph.pt", weights_only=False)
+
     node_offsets = {}
+    type_ranges = {}
     offset = 0
     node_features = {}
     for nt in data.node_types:
         node_offsets[nt] = offset
         n = data[nt].num_nodes
+        type_ranges[nt] = (offset, offset + n)
         if hasattr(data[nt], 'x') and data[nt].x is not None:
             node_features[nt] = {"offset": offset, "n": n, "feat": data[nt].x}
         offset += n
@@ -160,7 +186,7 @@ def load_graph():
     all_triples = []
     rel_to_id = {}
     edge_type_names = []
-    edge_type_meta = {}
+    rel_type_info = {}
 
     for et in data.edge_types:
         src_type, rel, dst_type = et
@@ -168,7 +194,7 @@ def load_graph():
         if rel_key not in rel_to_id:
             rel_to_id[rel_key] = len(rel_to_id)
             edge_type_names.append(rel_key)
-            edge_type_meta[rel_key] = {"src_type": src_type, "dst_type": dst_type}
+            rel_type_info[rel_to_id[rel_key]] = (src_type, dst_type)
         rid = rel_to_id[rel_key]
         ei = data[et].edge_index
         src_off = node_offsets[src_type]
@@ -177,7 +203,8 @@ def load_graph():
             all_triples.append((ei[0, i].item() + src_off, rid, ei[1, i].item() + dst_off))
 
     triples = torch.tensor(all_triples, dtype=torch.long)
-    return triples, total_nodes, rel_to_id, edge_type_names, edge_type_meta, node_offsets, node_features, data
+    return (triples, total_nodes, rel_to_id, edge_type_names, rel_type_info,
+            type_ranges, node_offsets, node_features, data)
 
 
 def split_triples(triples, seed):
@@ -186,29 +213,51 @@ def split_triples(triples, seed):
     perm = torch.randperm(n)
     n_test = int(n * TEST_RATIO)
     n_val = int(n * VAL_RATIO)
-    test = triples[perm[:n_test]]
-    val = triples[perm[n_test:n_test + n_val]]
-    train = triples[perm[n_test + n_val:]]
-    return train, val, test
+    return triples[perm[n_test + n_val:]], triples[perm[n_test:n_test + n_val]], triples[perm[:n_test]]
 
 
 def build_filter_set(triples):
-    s = set()
-    for i in range(triples.size(0)):
-        s.add(tuple(triples[i].tolist()))
-    return s
+    return {tuple(triples[i].tolist()) for i in range(triples.size(0))}
 
 
-def generate_negatives(batch, n_entities):
+def build_type_range_tensors(rel_type_info, type_ranges):
+    n_rels = len(rel_type_info)
+    rel_ranges = torch.zeros(n_rels, 4, dtype=torch.long)
+    for rid, (src_type, dst_type) in rel_type_info.items():
+        s_lo, s_hi = type_ranges[src_type]
+        d_lo, d_hi = type_ranges[dst_type]
+        rel_ranges[rid] = torch.tensor([s_lo, s_hi, d_lo, d_hi])
+    return rel_ranges
+
+
+def generate_negatives_type_aware(batch, rel_ranges):
     neg = batch.repeat(NEG_RATIO, 1)
-    mask = torch.randint(0, 2, (neg.size(0),), dtype=torch.bool)
-    rand_ents = torch.randint(0, n_entities, (neg.size(0),))
-    neg[mask, 0] = rand_ents[mask]
-    neg[~mask, 2] = rand_ents[~mask]
+    n_neg = neg.size(0)
+    mask = torch.randint(0, 2, (n_neg,), dtype=torch.bool)
+    rels = neg[:, 1]
+    ranges = rel_ranges[rels]
+    head_lo = ranges[:, 0]
+    head_range = (ranges[:, 1] - ranges[:, 0]).clamp(min=1)
+    tail_lo = ranges[:, 2]
+    tail_range = (ranges[:, 3] - ranges[:, 2]).clamp(min=1)
+    rand_heads = head_lo + (torch.rand(n_neg) * head_range.float()).long()
+    rand_tails = tail_lo + (torch.rand(n_neg) * tail_range.float()).long()
+    neg[mask, 0] = rand_heads[mask]
+    neg[~mask, 2] = rand_tails[~mask]
     return neg
 
 
-def train_shallow(model, train_triples, n_entities):
+def filter_triples_by_relations(triples, rel_to_id, keep_rels):
+    keep_ids = {rel_to_id[r] for r in keep_rels if r in rel_to_id}
+    mask = torch.tensor([triples[i, 1].item() in keep_ids for i in range(triples.size(0))])
+    return triples[mask]
+
+
+# =========================================================================
+# Training
+# =========================================================================
+
+def train_shallow(model, train_triples, rel_ranges):
     optimizer = torch.optim.Adam(model.parameters(), lr=LR)
     model.to(DEVICE)
     model.train()
@@ -216,7 +265,7 @@ def train_shallow(model, train_triples, n_entities):
         perm = torch.randperm(train_triples.size(0))
         for i in range(0, train_triples.size(0), BATCH_SIZE):
             batch = train_triples[perm[i:i + BATCH_SIZE]]
-            neg = generate_negatives(batch, n_entities)
+            neg = generate_negatives_type_aware(batch, rel_ranges)
             loss = model(batch[:, 0].to(DEVICE), batch[:, 1].to(DEVICE), batch[:, 2].to(DEVICE),
                          neg[:, 0].to(DEVICE), neg[:, 1].to(DEVICE), neg[:, 2].to(DEVICE))
             optimizer.zero_grad()
@@ -224,41 +273,50 @@ def train_shallow(model, train_triples, n_entities):
             optimizer.step()
 
 
-def train_rgcn(model, train_triples, all_triples, n_entities):
+def train_rgcn(model, train_triples, all_triples, rel_ranges, n_entities):
     optimizer = torch.optim.Adam(model.parameters(), lr=LR)
     model.to(DEVICE)
-    train_ei = all_triples[:, [0, 2]].t()
-    train_et = all_triples[:, 1]
+    ei = all_triples[:, [0, 2]].t().to(DEVICE)
+    et = all_triples[:, 1].to(DEVICE)
 
     for epoch in range(1, EPOCHS + 1):
         model.train()
-        z = model.encode(train_ei.to(DEVICE), train_et.to(DEVICE))
+        z = model.encode(ei, et)
         perm = torch.randperm(train_triples.size(0))
-        batch = train_triples[perm[:BATCH_SIZE]]
-        neg = generate_negatives(batch, n_entities)
 
-        pos_score = model.score(z[batch[:, 0].to(DEVICE)], batch[:, 1].to(DEVICE), z[batch[:, 2].to(DEVICE)])
-        neg_score = model.score(z[neg[:, 0].to(DEVICE)], neg[:, 1].to(DEVICE), z[neg[:, 2].to(DEVICE)])
+        for i in range(0, train_triples.size(0), BATCH_SIZE):
+            batch = train_triples[perm[i:i + BATCH_SIZE]]
+            neg = generate_negatives_type_aware(batch, rel_ranges)
 
-        pos_loss = -torch.log(torch.sigmoid(pos_score) + 1e-9).mean()
-        neg_loss = -torch.log(1 - torch.sigmoid(neg_score) + 1e-9).mean()
-        loss = (pos_loss + neg_loss) / 2
+            pos_score = model.score(z[batch[:, 0].to(DEVICE)], batch[:, 1].to(DEVICE), z[batch[:, 2].to(DEVICE)])
+            neg_score = model.score(z[neg[:, 0].to(DEVICE)], neg[:, 1].to(DEVICE), z[neg[:, 2].to(DEVICE)])
 
-        optimizer.zero_grad()
-        loss.backward()
-        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-        optimizer.step()
+            pos_loss = -torch.log(torch.sigmoid(pos_score) + 1e-9).mean()
+            neg_loss = -torch.log(1 - torch.sigmoid(neg_score) + 1e-9).mean()
+            loss = (pos_loss + neg_loss) / 2
 
+            optimizer.zero_grad()
+            loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+            optimizer.step()
+
+            z = model.encode(ei, et)
+
+
+# =========================================================================
+# Evaluation (type-aware)
+# =========================================================================
 
 @torch.no_grad()
-def evaluate_model(model, test_triples, filter_set, n_entities, edge_type_names, is_rgcn=False, all_triples=None):
+def evaluate_model(model, test_triples, filter_set, n_entities, edge_type_names,
+                   rel_type_info, type_ranges, is_rgcn=False, all_triples=None):
     model.eval()
     model.to(DEVICE)
 
     if is_rgcn:
-        train_ei = all_triples[:, [0, 2]].t()
-        train_et = all_triples[:, 1]
-        z = model.encode(train_ei.to(DEVICE), train_et.to(DEVICE))
+        ei = all_triples[:, [0, 2]].t().to(DEVICE)
+        et = all_triples[:, 1].to(DEVICE)
+        z = model.encode(ei, et)
 
     if test_triples.size(0) > N_EVAL_SAMPLES:
         idx = torch.randperm(test_triples.size(0))[:N_EVAL_SAMPLES]
@@ -269,21 +327,30 @@ def evaluate_model(model, test_triples, filter_set, n_entities, edge_type_names,
 
     for i in range(test_triples.size(0)):
         h, r, t = test_triples[i].tolist()
-        all_ents = torch.arange(n_entities, device=DEVICE)
-        h_rep = torch.full((n_entities,), h, dtype=torch.long, device=DEVICE)
-        r_rep = torch.full((n_entities,), r, dtype=torch.long, device=DEVICE)
+        dst_type = rel_type_info[r][1]
+        dst_lo, dst_hi = type_ranges[dst_type]
+        n_candidates = dst_hi - dst_lo
+
+        all_ents = torch.arange(dst_lo, dst_hi, device=DEVICE)
+        h_rep = torch.full((n_candidates,), h, dtype=torch.long, device=DEVICE)
+        r_rep = torch.full((n_candidates,), r, dtype=torch.long, device=DEVICE)
 
         if is_rgcn:
             scores = model.score(z[h_rep], r_rep, z[all_ents])
         else:
             scores = model.score(h_rep, r_rep, all_ents)
 
-        for eid in range(n_entities):
+        for j, eid in enumerate(range(dst_lo, dst_hi)):
             if eid != t and (h, r, eid) in filter_set:
-                scores[eid] = -1e9
+                scores[j] = -1e9
 
-        rank = (scores >= scores[t]).sum().item()
-        rank = max(rank, 1)
+        t_local = t - dst_lo
+        if 0 <= t_local < n_candidates:
+            rank = (scores >= scores[t_local]).sum().item()
+            rank = max(rank, 1)
+        else:
+            rank = n_candidates
+
         all_ranks.append(rank)
         rel_name = edge_type_names[r] if r < len(edge_type_names) else f"rel_{r}"
         per_rel[rel_name].append(rank)
@@ -300,17 +367,12 @@ def evaluate_model(model, test_triples, filter_set, n_entities, edge_type_names,
     return results
 
 
-def filter_triples_by_relations(triples, rel_to_id, keep_rels):
-    keep_ids = {rel_to_id[r] for r in keep_rels if r in rel_to_id}
-    mask = torch.tensor([triples[i, 1].item() in keep_ids for i in range(triples.size(0))])
-    return triples[mask]
-
-
 # =========================================================================
-# 1. Multi-seed evaluation
+# Part 1: Multi-seed
 # =========================================================================
 
-def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names, node_features):
+def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names,
+                   rel_type_info, type_ranges, node_features, rel_ranges):
     print("\n" + "=" * 70)
     print("PART 1: Multi-Seed Evaluation")
     print("=" * 70)
@@ -320,7 +382,6 @@ def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names, node_feature
 
     for seed in SEEDS:
         print(f"\n  Seed {seed}")
-        set_seed(seed)
         train, val, test = split_triples(triples, seed)
 
         for model_name, ModelClass, is_rgcn in [
@@ -333,21 +394,30 @@ def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names, node_feature
             set_seed(seed)
 
             if is_rgcn:
-                model = ModelClass(n_entities, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
-                train_rgcn(model, train, triples, n_entities)
-                results = evaluate_model(model, test, filter_set, n_entities, edge_type_names, True, triples)
+                model = ModelClass(n_entities, len(rel_to_id), HIDDEN_DIM,
+                                   NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
+                train_rgcn(model, train, triples, rel_ranges, n_entities)
+                results = evaluate_model(model, test, filter_set, n_entities,
+                                         edge_type_names, rel_type_info, type_ranges,
+                                         True, triples)
             else:
                 model = ModelClass(n_entities, len(rel_to_id), HIDDEN_DIM)
-                train_shallow(model, train, n_entities)
-                results = evaluate_model(model, test, filter_set, n_entities, edge_type_names, False)
+                train_shallow(model, train, rel_ranges)
+                results = evaluate_model(model, test, filter_set, n_entities,
+                                         edge_type_names, rel_type_info, type_ranges,
+                                         False)
 
             dt = time.time() - t0
             m = results["overall"]
-            print(f"MRR={m['mrr']:.4f}  H@10={m['hits@10']:.4f}  ({dt:.0f}s)")
+            gda = results.get(GDA_KEY, {})
+            gda_mrr = gda.get("mrr", 0)
+            print(f"MRR={m['mrr']:.4f}  H@10={m['hits@10']:.4f}  "
+                  f"GDA_MRR={gda_mrr:.4f}  ({dt:.0f}s)")
             all_seed_results[model_name].append(results)
 
             del model
-            torch.cuda.empty_cache() if torch.cuda.is_available() else None
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
 
     return all_seed_results
 
@@ -375,10 +445,11 @@ def aggregate_multi_seed(all_seed_results):
 
 
 # =========================================================================
-# 2. Ablation study
+# Part 2: Ablation
 # =========================================================================
 
-def run_ablation(triples, n_entities, rel_to_id, edge_type_names, node_features):
+def run_ablation(triples, n_entities, rel_to_id, edge_type_names,
+                 rel_type_info, type_ranges, node_features, rel_ranges):
     print("\n" + "=" * 70)
     print("PART 2: Ablation Study (R-GCN)")
     print("=" * 70)
@@ -386,10 +457,13 @@ def run_ablation(triples, n_entities, rel_to_id, edge_type_names, node_features)
     bio_rels = {r for r in rel_to_id if r in BIO_RELATIONS}
     env_rels = {r for r in rel_to_id if r not in BIO_RELATIONS}
 
+    # Env-only keeps subtype_of bridge so env signals can reach Disease subtypes
+    env_rels_with_bridge = env_rels | {"Disease__subtype_of__Disease"}
+
     configs = {
         "Combined": None,
         "Bio-only": bio_rels,
-        "Env-only": env_rels,
+        "Env-only": env_rels_with_bridge,
     }
 
     filter_set = build_filter_set(triples)
@@ -399,7 +473,7 @@ def run_ablation(triples, n_entities, rel_to_id, edge_type_names, node_features)
         print(f"\n  {config_name}:")
         seed_results = []
 
-        for seed in SEEDS[:3]:
+        for seed in ABLATION_SEEDS:
             set_seed(seed)
             train, val, test = split_triples(triples, seed)
 
@@ -417,27 +491,34 @@ def run_ablation(triples, n_entities, rel_to_id, edge_type_names, node_features)
             print(f"    Seed {seed} ({train_filtered.size(0):,} train triples) ...", end=" ", flush=True)
             t0 = time.time()
 
-            n_rels_used = len(keep_rels) if keep_rels else len(rel_to_id)
-            model = RGCNWithFeatures(n_entities, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
-            train_rgcn(model, train_filtered, all_filtered, n_entities)
+            model = RGCNWithFeatures(n_entities, len(rel_to_id), HIDDEN_DIM,
+                                     NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
+            train_rgcn(model, train_filtered, all_filtered, rel_ranges, n_entities)
 
-            gda_key = "Gene__associated_with__Disease"
-            if gda_key in rel_to_id:
-                gda_test = filter_triples_by_relations(test, rel_to_id, {gda_key})
+            # Always evaluate on GDA->Disease test triples
+            if GDA_KEY in rel_to_id:
+                gda_test = filter_triples_by_relations(test, rel_to_id, {GDA_KEY})
                 if gda_test.size(0) > 0:
-                    results = evaluate_model(model, gda_test, filter_set, n_entities, edge_type_names, True, all_filtered)
+                    results = evaluate_model(model, gda_test, filter_set, n_entities,
+                                             edge_type_names, rel_type_info, type_ranges,
+                                             True, all_filtered)
                 else:
-                    results = evaluate_model(model, test, filter_set, n_entities, edge_type_names, True, all_filtered)
+                    results = evaluate_model(model, test, filter_set, n_entities,
+                                             edge_type_names, rel_type_info, type_ranges,
+                                             True, all_filtered)
             else:
-                results = evaluate_model(model, test, filter_set, n_entities, edge_type_names, True, all_filtered)
+                results = evaluate_model(model, test, filter_set, n_entities,
+                                         edge_type_names, rel_type_info, type_ranges,
+                                         True, all_filtered)
 
             dt = time.time() - t0
-            m = results.get("Gene__associated_with__Disease", results.get("overall", {}))
-            print(f"GDA MRR={m.get('mrr', 0):.4f}  H@10={m.get('hits@10', 0):.4f}  ({dt:.0f}s)")
+            gda = results.get(GDA_KEY, results.get("overall", {}))
+            print(f"GDA MRR={gda.get('mrr', 0):.4f}  H@10={gda.get('hits@10', 0):.4f}  ({dt:.0f}s)")
             seed_results.append(results)
 
             del model
-            torch.cuda.empty_cache() if torch.cuda.is_available() else None
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
 
         ablation_results[config_name] = seed_results
 
@@ -446,48 +527,55 @@ def run_ablation(triples, n_entities, rel_to_id, edge_type_names, node_features)
 
 def aggregate_ablation(ablation_results):
     aggregated = {}
-    gda_key = "Gene__associated_with__Disease"
-
     for config, seed_results in ablation_results.items():
         gda_metrics = {m: [] for m in ["mrr", "hits@1", "hits@3", "hits@10"]}
         overall_metrics = {m: [] for m in ["mrr", "hits@1", "hits@3", "hits@10"]}
 
         for sr in seed_results:
-            if gda_key in sr:
+            if GDA_KEY in sr:
                 for m in gda_metrics:
-                    gda_metrics[m].append(sr[gda_key][m])
+                    gda_metrics[m].append(sr[GDA_KEY][m])
             if "overall" in sr:
                 for m in overall_metrics:
                     overall_metrics[m].append(sr["overall"][m])
 
         aggregated[config] = {
-            "gda": {m: {"mean": float(np.mean(v)), "std": float(np.std(v))} for m, v in gda_metrics.items() if v},
-            "overall": {m: {"mean": float(np.mean(v)), "std": float(np.std(v))} for m, v in overall_metrics.items() if v},
+            "gda": {m: {"mean": float(np.mean(v)), "std": float(np.std(v))}
+                    for m, v in gda_metrics.items() if v},
+            "overall": {m: {"mean": float(np.mean(v)), "std": float(np.std(v))}
+                        for m, v in overall_metrics.items() if v},
         }
     return aggregated
 
 
 # =========================================================================
-# 3. Significance test
+# Part 3: Significance test
 # =========================================================================
 
-def run_significance_test(triples, n_entities, rel_to_id, edge_type_names, node_offsets, node_id_maps, node_features):
+def run_significance_test(triples, n_entities, rel_to_id, edge_type_names,
+                          node_offsets, node_id_maps, node_features,
+                          type_ranges, rel_type_info):
     print("\n" + "=" * 70)
     print("PART 3: Embedding Similarity Significance Test")
     print("=" * 70)
 
     set_seed(42)
-    train, val, test = split_triples(triples, 42)
 
-    model = RGCNWithFeatures(n_entities, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
-    model.load_state_dict(torch.load(PROCESSED_DIR / "rgcn_weights.pt", map_location=DEVICE, weights_only=True))
+    model = RGCNWithFeatures(n_entities, len(rel_to_id), HIDDEN_DIM,
+                             NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
+    weights_path = PROCESSED_DIR / "rgcn_weights.pt"
+    if not weights_path.exists():
+        print("  [SKIP] rgcn_weights.pt not found (run 04 first)")
+        return {}
+
+    model.load_state_dict(torch.load(weights_path, map_location=DEVICE, weights_only=True))
     model.to(DEVICE)
     model.eval()
 
-    train_ei = triples[:, [0, 2]].t()
-    train_et = triples[:, 1]
+    ei = triples[:, [0, 2]].t().to(DEVICE)
+    et = triples[:, 1].to(DEVICE)
     with torch.no_grad():
-        z = model.encode(train_ei.to(DEVICE), train_et.to(DEVICE)).cpu()
+        z = model.encode(ei, et).cpu()
 
     chem_offset = node_offsets.get("Chemical", 0)
     disease_offset = node_offsets.get("Disease", 0)
@@ -513,7 +601,7 @@ def run_significance_test(triples, n_entities, rel_to_id, edge_type_names, node_
 
     all_indices = list(range(n_entities))
     perm_means = []
-    for p in range(N_PERMUTATIONS):
+    for _ in range(N_PERMUTATIONS):
         random_a = random.sample(all_indices, len(chem_indices))
         random_b = random.sample(all_indices, len(disease_indices))
         sims = []
@@ -550,61 +638,38 @@ def fig_multi_seed(aggregated, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
     models = list(aggregated.keys())
     metrics = ["mrr", "hits@1", "hits@3", "hits@10"]
-    colors = {"TransE": "#4c72b0", "DotProduct": "#55a868", "R-GCN": "#c44e52"}
     x = np.arange(len(metrics))
     width = 0.22
 
-    # Overall
-    fig, ax = plt.subplots(figsize=(10, 5))
-    for i, m in enumerate(models):
-        means = [aggregated[m].get("overall", {}).get(metric, {}).get("mean", 0) for metric in metrics]
-        stds = [aggregated[m].get("overall", {}).get(metric, {}).get("std", 0) for metric in metrics]
-        offset = (i - (len(models) - 1) / 2) * width
-        bars = ax.bar(x + offset, means, width, yerr=stds, capsize=3,
-                      label=m, color=colors.get(m, "#888"), alpha=0.85, edgecolor="white")
-        for bar, mean, std in zip(bars, means, stds):
-            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + std + 0.01,
-                    f"{mean:.3f}", ha="center", va="bottom", fontsize=7.5)
-    ax.set_ylabel("Score")
-    ax.set_title("Overall Link Prediction (5 Seeds, mean +/- std)", fontsize=12, fontweight="bold")
-    ax.set_xticks(x)
-    ax.set_xticklabels([m.upper() for m in metrics])
-    ax.legend()
-    ax.set_ylim(0, 1.1)
-    ax.grid(True, alpha=0.2, axis="y")
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    plt.tight_layout()
-    fig.savefig(fig_dir / "eval_multi_seed_overall.png", dpi=300, bbox_inches="tight")
-    plt.close(fig)
-    print(f"  -> figs/eval_multi_seed_overall.png")
-
-    # Gene-Disease
-    gda = "Gene__associated_with__Disease"
-    fig, ax = plt.subplots(figsize=(10, 5))
-    for i, m in enumerate(models):
-        means = [aggregated[m].get(gda, {}).get(metric, {}).get("mean", 0) for metric in metrics]
-        stds = [aggregated[m].get(gda, {}).get(metric, {}).get("std", 0) for metric in metrics]
-        offset = (i - (len(models) - 1) / 2) * width
-        bars = ax.bar(x + offset, means, width, yerr=stds, capsize=3,
-                      label=m, color=colors.get(m, "#888"), alpha=0.85, edgecolor="white")
-        for bar, mean, std in zip(bars, means, stds):
-            if mean > 0:
-                ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + std + 0.01,
-                        f"{mean:.3f}", ha="center", va="bottom", fontsize=7.5)
-    ax.set_ylabel("Score")
-    ax.set_title("Gene-Disease Link Prediction (5 Seeds, mean +/- std)", fontsize=12, fontweight="bold")
-    ax.set_xticks(x)
-    ax.set_xticklabels([m.upper() for m in metrics])
-    ax.legend()
-    ax.set_ylim(0, 1.1)
-    ax.grid(True, alpha=0.2, axis="y")
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    plt.tight_layout()
-    fig.savefig(fig_dir / "eval_multi_seed_gda.png", dpi=300, bbox_inches="tight")
-    plt.close(fig)
-    print(f"  -> figs/eval_multi_seed_gda.png")
+    for title_suffix, rel_key, filename in [
+        ("overall", "overall", "eval_multi_seed_overall.png"),
+        ("GDA -> Disease", GDA_KEY, "eval_multi_seed_gda.png"),
+    ]:
+        fig, ax = plt.subplots(figsize=(10, 5))
+        for i, m in enumerate(models):
+            means = [aggregated[m].get(rel_key, {}).get(metric, {}).get("mean", 0) for metric in metrics]
+            stds = [aggregated[m].get(rel_key, {}).get(metric, {}).get("std", 0) for metric in metrics]
+            offset = (i - (len(models) - 1) / 2) * width
+            bars = ax.bar(x + offset, means, width, yerr=stds, capsize=3,
+                          label=m, color=MODEL_COLORS.get(m, "#888"), alpha=0.85, edgecolor="white")
+            for bar, mean, std in zip(bars, means, stds):
+                if mean > 0:
+                    ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + std + 0.01,
+                            f"{mean:.3f}", ha="center", va="bottom", fontsize=7.5)
+        ax.set_ylabel("Score")
+        ax.set_title(f"Link prediction {title_suffix} (3 seeds, mean +/- std)",
+                     fontsize=12, fontweight="bold")
+        ax.set_xticks(x)
+        ax.set_xticklabels([m.upper() for m in metrics])
+        ax.legend()
+        ax.set_ylim(0, 1.1)
+        ax.grid(True, alpha=0.2, axis="y")
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        plt.tight_layout()
+        fig.savefig(fig_dir / filename, dpi=300, bbox_inches="tight")
+        plt.close(fig)
+        print(f"  -> figs/{filename}")
 
 
 def fig_ablation(ablation_agg, fig_dir):
@@ -622,14 +687,16 @@ def fig_ablation(ablation_agg, fig_dir):
         stds = [gda.get(m, {}).get("std", 0) for m in metrics]
         offset = (i - (len(configs) - 1) / 2) * width
         bars = ax.bar(x + offset, means, width, yerr=stds, capsize=3,
-                      label=config, color=colors_list[i % len(colors_list)], alpha=0.85, edgecolor="white")
+                      label=config, color=colors_list[i % len(colors_list)],
+                      alpha=0.85, edgecolor="white")
         for bar, mean, std in zip(bars, means, stds):
             if mean > 0:
                 ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + std + 0.01,
                         f"{mean:.3f}", ha="center", va="bottom", fontsize=7.5)
 
     ax.set_ylabel("Score")
-    ax.set_title("Ablation Study: Gene-Disease Prediction by Graph Composition\n(R-GCN, 3 Seeds, mean +/- std)",
+    ax.set_title(f"Ablation: GDA -> Disease by graph composition\n"
+                 f"(R-GCN, {len(ABLATION_SEEDS)} seeds, mean +/- std)",
                  fontsize=12, fontweight="bold")
     ax.set_xticks(x)
     ax.set_xticklabels([m.upper() for m in metrics])
@@ -654,11 +721,14 @@ def fig_significance(sig_results, fig_dir):
     p_val = sig_results["p_value"]
 
     fig, ax = plt.subplots(figsize=(8, 5))
-    ax.hist(perm_dist, bins=50, color="#4c72b0", alpha=0.7, edgecolor="white", linewidth=0.5, label="Random pair similarities")
-    ax.axvline(x=observed, color="#c44e52", linewidth=2.5, linestyle="-", label=f"Observed Chemical-Disease (mean={observed:.4f})")
-    ax.set_xlabel("Mean Cosine Similarity")
+    ax.hist(perm_dist, bins=50, color="#4c72b0", alpha=0.7, edgecolor="white", linewidth=0.5,
+            label="Random pair similarities")
+    ax.axvline(x=observed, color="#c44e52", linewidth=2.5, linestyle="-",
+               label=f"Observed Chemical-Disease (mean={observed:.4f})")
+    ax.set_xlabel("Mean cosine similarity")
     ax.set_ylabel("Frequency")
-    ax.set_title(f"Permutation Test: Chemical-Disease Embedding Similarity\n(p = {p_val:.4f}, n = {sig_results['n_permutations']} permutations)",
+    ax.set_title(f"Permutation test: Chemical-Disease embedding similarity\n"
+                 f"(p = {p_val:.4f}, n = {sig_results['n_permutations']} permutations)",
                  fontsize=12, fontweight="bold")
     ax.legend(fontsize=9)
     ax.grid(True, alpha=0.2, axis="y")
@@ -676,30 +746,38 @@ def fig_significance(sig_results, fig_dir):
 
 def main():
     print("=" * 70)
-    print("08_full_evaluation.py")
+    print("08_full_evaluation.py (type-aware, 4 layers)")
     print("=" * 70)
     print(f"Device: {DEVICE}")
-    print(f"Seeds: {SEEDS}")
+    print(f"Multi-seed seeds: {SEEDS}")
+    print(f"Ablation seeds: {ABLATION_SEEDS}")
 
     print("\nLoading graph ...")
-    triples, n_entities, rel_to_id, edge_type_names, edge_type_meta, node_offsets, node_features, data = load_graph()
+    (triples, n_entities, rel_to_id, edge_type_names, rel_type_info,
+     type_ranges, node_offsets, node_features, data) = load_graph()
     print(f"  {n_entities:,} nodes, {len(rel_to_id)} relations, {triples.size(0):,} triples")
-    feat_str = ", ".join(f"{nt}({info['feat'].shape[1]}d)" for nt, info in node_features.items())
-    print(f"  Node features: {feat_str}")
 
     with open(PROCESSED_DIR / "node_id_maps.json") as f:
         node_id_maps = json.load(f)
 
+    rel_ranges = build_type_range_tensors(rel_type_info, type_ranges)
+
     # Part 1
-    multi_seed_results = run_multi_seed(triples, n_entities, rel_to_id, edge_type_names, node_features)
+    multi_seed_results = run_multi_seed(
+        triples, n_entities, rel_to_id, edge_type_names,
+        rel_type_info, type_ranges, node_features, rel_ranges)
     multi_seed_agg = aggregate_multi_seed(multi_seed_results)
 
     # Part 2
-    ablation_results = run_ablation(triples, n_entities, rel_to_id, edge_type_names, node_features)
+    ablation_results = run_ablation(
+        triples, n_entities, rel_to_id, edge_type_names,
+        rel_type_info, type_ranges, node_features, rel_ranges)
     ablation_agg = aggregate_ablation(ablation_results)
 
     # Part 3
-    sig_results = run_significance_test(triples, n_entities, rel_to_id, edge_type_names, node_offsets, node_id_maps, node_features)
+    sig_results = run_significance_test(
+        triples, n_entities, rel_to_id, edge_type_names,
+        node_offsets, node_id_maps, node_features, type_ranges, rel_type_info)
 
     # Save
     print("\nSaving results ...")
@@ -729,7 +807,7 @@ def main():
     print("SUMMARY")
     print("=" * 70)
 
-    print("\nMulti-Seed Overall (mean +/- std):")
+    print("\nMulti-seed overall (mean +/- std):")
     for model in ["TransE", "DotProduct", "R-GCN"]:
         o = multi_seed_agg[model].get("overall", {})
         mrr = o.get("mrr", {})
@@ -737,21 +815,20 @@ def main():
         print(f"  {model:10s}  MRR={mrr.get('mean',0):.4f}+/-{mrr.get('std',0):.4f}  "
               f"H@10={h10.get('mean',0):.4f}+/-{h10.get('std',0):.4f}")
 
-    gda = "Gene__associated_with__Disease"
-    print(f"\nMulti-Seed Gene-Disease (mean +/- std):")
+    print(f"\nMulti-seed GDA -> Disease (mean +/- std):")
     for model in ["TransE", "DotProduct", "R-GCN"]:
-        o = multi_seed_agg[model].get(gda, {})
+        o = multi_seed_agg[model].get(GDA_KEY, {})
         mrr = o.get("mrr", {})
         h10 = o.get("hits@10", {})
         print(f"  {model:10s}  MRR={mrr.get('mean',0):.4f}+/-{mrr.get('std',0):.4f}  "
               f"H@10={h10.get('mean',0):.4f}+/-{h10.get('std',0):.4f}")
 
-    print(f"\nAblation (Gene-Disease MRR, R-GCN):")
+    print(f"\nAblation (GDA -> Disease MRR, R-GCN):")
     for config in ["Combined", "Bio-only", "Env-only"]:
         g = ablation_agg.get(config, {}).get("gda", {}).get("mrr", {})
         print(f"  {config:12s}  MRR={g.get('mean',0):.4f}+/-{g.get('std',0):.4f}")
 
-    print(f"\nSignificance Test:")
+    print(f"\nSignificance test:")
     print(f"  Observed Chemical-Disease similarity: {sig_results.get('observed_mean', 0):.4f}")
     print(f"  Random pairs: {sig_results.get('random_mean', 0):.4f}+/-{sig_results.get('random_std', 0):.4f}")
     print(f"  p-value: {sig_results.get('p_value', 1):.4f}")

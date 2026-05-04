@@ -1,13 +1,18 @@
 """
 03_train_baselines.py - TransE and DotProduct link prediction baselines.
 
-Trains on the full heterogeneous graph, evaluates per edge type.
+Trains on the full heterogeneous graph (flattened to homogeneous), evaluates
+per edge type. Uses type-aware negative sampling: corrupted entities are
+always sampled from the correct node type for the relation, so the model
+is never rewarded for trivially rejecting type mismatches.
+
 Uses filtered ranking protocol with MRR, Hits@1, Hits@3, Hits@10.
 
 Usage:  python gnn/src/03_train_baselines.py
 Input:  gnn/data/processed/hetero_graph.pt
 Output: gnn/data/processed/baseline_results.json
-        gnn/data/interim/figs/baseline_metrics.png
+        gnn/data/processed/baseline_type_ranges.json
+        gnn/data/interim/figs/baseline_*.png
 """
 
 import json
@@ -48,19 +53,29 @@ def set_seed(seed):
     torch.manual_seed(seed)
 
 
+# =========================================================================
+# Graph loading
+# =========================================================================
+
 def load_graph():
     data = torch.load(PROCESSED_DIR / "hetero_graph.pt", weights_only=False)
 
+    # Build node type ranges (global offset, count)
     node_offsets = {}
+    type_ranges = {}  # node_type -> (start, end) in global index space
     offset = 0
     for nt in data.node_types:
+        n = data[nt].num_nodes
         node_offsets[nt] = offset
-        offset += data[nt].num_nodes
+        type_ranges[nt] = (offset, offset + n)
+        offset += n
     total_nodes = offset
 
+    # Build relation metadata and flatten triples
     all_triples = []
     rel_to_id = {}
     edge_type_names = []
+    rel_type_info = {}  # rel_id -> (src_type, dst_type)
 
     for et in data.edge_types:
         src_type, rel, dst_type = et
@@ -69,33 +84,48 @@ def load_graph():
             rel_to_id[rel_key] = len(rel_to_id)
             edge_type_names.append(rel_key)
         rid = rel_to_id[rel_key]
+        rel_type_info[rid] = (src_type, dst_type)
 
         ei = data[et].edge_index
-        src_offset = node_offsets[src_type]
-        dst_offset = node_offsets[dst_type]
-
+        src_off = node_offsets[src_type]
+        dst_off = node_offsets[dst_type]
         for i in range(ei.size(1)):
-            h = ei[0, i].item() + src_offset
-            t = ei[1, i].item() + dst_offset
+            h = ei[0, i].item() + src_off
+            t = ei[1, i].item() + dst_off
             all_triples.append((h, rid, t))
 
     triples = torch.tensor(all_triples, dtype=torch.long)
+
     print(f"Graph: {total_nodes:,} nodes, {len(rel_to_id)} relations, {triples.size(0):,} triples")
+    print(f"Node types: {len(type_ranges)}")
+    for nt, (lo, hi) in sorted(type_ranges.items(), key=lambda x: -(x[1][1]-x[1][0])):
+        print(f"  {nt}: [{lo:,} - {hi:,}) = {hi-lo:,} nodes")
     print(f"Device: {DEVICE}")
 
-    return triples, total_nodes, rel_to_id, edge_type_names, node_offsets
+    # Save type ranges for use by other scripts
+    type_ranges_serializable = {nt: [lo, hi] for nt, (lo, hi) in type_ranges.items()}
+    with open(PROCESSED_DIR / "baseline_type_ranges.json", "w") as f:
+        json.dump({
+            "type_ranges": type_ranges_serializable,
+            "rel_type_info": {str(k): list(v) for k, v in rel_type_info.items()},
+            "edge_type_names": edge_type_names,
+        }, f, indent=2)
 
+    return triples, total_nodes, rel_to_id, edge_type_names, rel_type_info, type_ranges
+
+
+# =========================================================================
+# Data splitting
+# =========================================================================
 
 def split_triples(triples):
     n = triples.size(0)
     perm = torch.randperm(n)
     n_test = int(n * TEST_RATIO)
     n_val = int(n * VAL_RATIO)
-
     test = triples[perm[:n_test]]
     val = triples[perm[n_test:n_test + n_val]]
     train = triples[perm[n_test + n_val:]]
-
     print(f"Split: {train.size(0):,} train, {val.size(0):,} val, {test.size(0):,} test")
     return train, val, test
 
@@ -107,6 +137,60 @@ def build_filter_set(triples):
         s.add((h, r, t))
     return s
 
+
+# =========================================================================
+# Type-aware negative sampling
+# =========================================================================
+
+def build_type_range_tensors(rel_type_info, type_ranges):
+    """Pre-compute per-relation src/dst type ranges as tensors for fast lookup."""
+    n_rels = len(rel_type_info)
+    # For each relation: (src_start, src_end, dst_start, dst_end)
+    rel_ranges = torch.zeros(n_rels, 4, dtype=torch.long)
+    for rid, (src_type, dst_type) in rel_type_info.items():
+        s_lo, s_hi = type_ranges[src_type]
+        d_lo, d_hi = type_ranges[dst_type]
+        rel_ranges[rid] = torch.tensor([s_lo, s_hi, d_lo, d_hi])
+    return rel_ranges
+
+
+def generate_negatives_type_aware(batch, rel_ranges):
+    """Generate type-aware negative samples.
+
+    For each positive triple (h, r, t), generate NEG_RATIO negatives by
+    corrupting either h or t. The replacement entity is sampled uniformly
+    from the correct node type for that relation.
+    """
+    neg = batch.repeat(NEG_RATIO, 1)
+    n_neg = neg.size(0)
+
+    # Decide which side to corrupt: 0 = head, 1 = tail
+    mask = torch.randint(0, 2, (n_neg,), dtype=torch.bool)
+
+    # Look up type ranges for each relation in the batch
+    rels = neg[:, 1]
+    ranges = rel_ranges[rels]  # (n_neg, 4): src_lo, src_hi, dst_lo, dst_hi
+
+    # Sample random entities within correct type range
+    # For head corruption: sample from [src_lo, src_hi)
+    # For tail corruption: sample from [dst_lo, dst_hi)
+    head_lo = ranges[:, 0]
+    head_range = (ranges[:, 1] - ranges[:, 0]).clamp(min=1)
+    tail_lo = ranges[:, 2]
+    tail_range = (ranges[:, 3] - ranges[:, 2]).clamp(min=1)
+
+    rand_heads = head_lo + (torch.rand(n_neg) * head_range.float()).long()
+    rand_tails = tail_lo + (torch.rand(n_neg) * tail_range.float()).long()
+
+    neg[mask, 0] = rand_heads[mask]
+    neg[~mask, 2] = rand_tails[~mask]
+
+    return neg
+
+
+# =========================================================================
+# Models
+# =========================================================================
 
 class TransE(nn.Module):
     def __init__(self, n_entities, n_relations, dim):
@@ -120,9 +204,9 @@ class TransE(nn.Module):
         return -torch.norm(self.ent_emb(h) + self.rel_emb(r) - self.ent_emb(t), p=2, dim=-1)
 
     def forward(self, pos_h, pos_r, pos_t, neg_h, neg_r, neg_t):
-            pos_score = self.score(pos_h, pos_r, pos_t)
-            neg_score = self.score(neg_h, neg_r, neg_t).view(-1, NEG_RATIO)
-            return torch.relu(MARGIN - pos_score.unsqueeze(1) + neg_score).mean()
+        pos_score = self.score(pos_h, pos_r, pos_t)
+        neg_score = self.score(neg_h, neg_r, neg_t).view(-1, NEG_RATIO)
+        return torch.relu(MARGIN - pos_score.unsqueeze(1) + neg_score).mean()
 
 
 class DotProduct(nn.Module):
@@ -142,16 +226,11 @@ class DotProduct(nn.Module):
         return (pos_loss + neg_loss) / 2
 
 
-def generate_negatives(batch, n_entities):
-    neg = batch.repeat(NEG_RATIO, 1)
-    mask = torch.randint(0, 2, (neg.size(0),), dtype=torch.bool)
-    rand_ents = torch.randint(0, n_entities, (neg.size(0),))
-    neg[mask, 0] = rand_ents[mask]
-    neg[~mask, 2] = rand_ents[~mask]
-    return neg
+# =========================================================================
+# Training
+# =========================================================================
 
-
-def train_model(model, train_triples, n_entities, epochs):
+def train_model(model, train_triples, rel_ranges, epochs):
     optimizer = optim.Adam(model.parameters(), lr=LR)
     model.to(DEVICE)
     model.train()
@@ -164,16 +243,12 @@ def train_model(model, train_triples, n_entities, epochs):
 
         for i in range(0, train_triples.size(0), BATCH_SIZE):
             batch = train_triples[perm[i:i + BATCH_SIZE]]
-            neg = generate_negatives(batch, n_entities)
+            neg = generate_negatives_type_aware(batch, rel_ranges)
 
-            pos_h = batch[:, 0].to(DEVICE)
-            pos_r = batch[:, 1].to(DEVICE)
-            pos_t = batch[:, 2].to(DEVICE)
-            neg_h = neg[:, 0].to(DEVICE)
-            neg_r = neg[:, 1].to(DEVICE)
-            neg_t = neg[:, 2].to(DEVICE)
-
-            loss = model(pos_h, pos_r, pos_t, neg_h, neg_r, neg_t)
+            loss = model(
+                batch[:, 0].to(DEVICE), batch[:, 1].to(DEVICE), batch[:, 2].to(DEVICE),
+                neg[:, 0].to(DEVICE), neg[:, 1].to(DEVICE), neg[:, 2].to(DEVICE),
+            )
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
@@ -189,8 +264,13 @@ def train_model(model, train_triples, n_entities, epochs):
     return losses
 
 
+# =========================================================================
+# Evaluation (type-aware filtered ranking)
+# =========================================================================
+
 @torch.no_grad()
-def evaluate(model, test_triples, filter_set, n_entities, edge_type_names, n_sample=500):
+def evaluate(model, test_triples, filter_set, n_entities, edge_type_names,
+             rel_type_info, type_ranges, n_sample=500):
     model.eval()
     model.to(DEVICE)
 
@@ -204,21 +284,31 @@ def evaluate(model, test_triples, filter_set, n_entities, edge_type_names, n_sam
     for i in range(test_triples.size(0)):
         h, r, t = test_triples[i].tolist()
 
-        # tail prediction
-        all_ents = torch.arange(n_entities, device=DEVICE)
-        h_rep = torch.full((n_entities,), h, dtype=torch.long, device=DEVICE)
-        r_rep = torch.full((n_entities,), r, dtype=torch.long, device=DEVICE)
+        # Get the valid tail type range for this relation
+        dst_type = rel_type_info[r][1]
+        dst_lo, dst_hi = type_ranges[dst_type]
+        n_candidates = dst_hi - dst_lo
+
+        # Score all entities of the correct tail type
+        all_ents = torch.arange(dst_lo, dst_hi, device=DEVICE)
+        h_rep = torch.full((n_candidates,), h, dtype=torch.long, device=DEVICE)
+        r_rep = torch.full((n_candidates,), r, dtype=torch.long, device=DEVICE)
         scores = model.score(h_rep, r_rep, all_ents)
 
-        # filtered: set scores of known true triples (except target) to -inf
-        for eid in range(n_entities):
+        # Filtered: mask out known true triples (except the target)
+        for j, eid in enumerate(range(dst_lo, dst_hi)):
             if eid != t and (h, r, eid) in filter_set:
-                scores[eid] = -1e9
+                scores[j] = -1e9
 
-        rank = (scores >= scores[t]).sum().item()
-        rank = max(rank, 1)
+        # Rank: how many candidates score >= the true tail
+        t_local = t - dst_lo
+        if 0 <= t_local < n_candidates:
+            rank = (scores >= scores[t_local]).sum().item()
+            rank = max(rank, 1)
+        else:
+            rank = n_candidates  # tail not in expected type range (shouldn't happen)
+
         all_ranks.append(rank)
-
         rel_name = edge_type_names[r] if r < len(edge_type_names) else f"rel_{r}"
         per_rel[rel_name]["ranks"].append(rank)
 
@@ -240,6 +330,40 @@ def evaluate(model, test_triples, filter_set, n_entities, edge_type_names, n_sam
     return results
 
 
+# =========================================================================
+# Figures
+# =========================================================================
+
+RELATION_DISPLAY = {
+    "Gene__has_association__GeneDiseaseAssociation": "Gene - GDA",
+    "GeneDiseaseAssociation__associated_with__Disease": "GDA - Disease",
+    "Gene__in_pathway__Pathway": "Gene - Pathway",
+    "Chemical__exposure_in__GeoPoliticalRegion": "Chemical - City",
+    "Chemical__exposure_in__GeographicRegion": "Chemical - Region",
+    "ChemicalLocationAssociation__refers_to__Chemical": "CLA - Chemical",
+    "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion": "CLA - City",
+    "ChemicalLocationAssociation__refers_to__GeographicRegion": "CLA - Region",
+    "ChemicalLocationAssociation__has_time_boundary__CalendarYear": "CLA - Year",
+    "Disease__detected_finding__VitalStatistics": "Disease - VitalStats",
+    "VitalStatistics__part_of__GeographicRegion": "VitalStats - Region",
+    "VitalStatistics__part_of__Country": "VitalStats - Country",
+    "VitalStatistics__has_time_boundary__CalendarYear": "VitalStats - Year",
+    "VitalStatistics__has_output__People": "VitalStats - People",
+    "Disease__has_fusion__GeneFusion": "Disease - GeneFusion",
+    "Disease__has_rearrangement__ChromoRearr": "Disease - ChromoRearr",
+    "Disease__subtype_of__Disease": "Disease - subtype_of",
+    "Variant__has_variant_association__VariantDiseaseAssociation": "Variant - VDA",
+    "VariantDiseaseAssociation__variant_of__Disease": "VDA - Disease",
+    "VariantDiseaseAssociation__located_in_gene__Gene": "VDA - Gene",
+    "Variant__located_in_gene__Gene": "Variant - Gene",
+    "GeoPoliticalRegion__part_of__Country": "City - Country",
+    "GeographicRegion__part_of__Country": "Region - Country",
+    "GeneProduct__part_of_pathway__Pathway": "GeneProduct - Pathway",
+    "Biomarker__marker_for__Disease": "Biomarker - Disease",
+    "Pathway__linked_to__Disease": "Pathway - Disease",
+}
+
+
 def fig_training_curves(all_losses, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
     fig, ax = plt.subplots(figsize=(8, 4))
@@ -247,7 +371,7 @@ def fig_training_curves(all_losses, fig_dir):
         ax.plot(range(1, len(losses) + 1), losses, label=name, linewidth=1.5)
     ax.set_xlabel("Epoch")
     ax.set_ylabel("Loss")
-    ax.set_title("Baseline Training Curves")
+    ax.set_title("Baseline training curves")
     ax.legend()
     ax.grid(True, alpha=0.3)
     plt.tight_layout()
@@ -273,7 +397,7 @@ def fig_metrics_comparison(all_results, fig_dir):
                     f"{v:.3f}", ha="center", va="bottom", fontsize=8)
 
     ax.set_ylabel("Score")
-    ax.set_title("Link Prediction: Baseline Comparison (Overall)")
+    ax.set_title("Baseline link prediction (overall, type-aware negatives)")
     ax.set_xticks(x)
     ax.set_xticklabels([m.upper() for m in metrics])
     ax.legend()
@@ -296,23 +420,25 @@ def fig_per_relation(all_results, fig_dir):
         return
 
     models = list(all_results.keys())
-    fig, axes = plt.subplots(1, len(models), figsize=(7 * len(models), max(4, len(rels) * 0.35)), sharey=True)
+    fig, axes = plt.subplots(1, len(models), figsize=(7 * len(models), max(4, len(rels) * 0.3)), sharey=True)
     if len(models) == 1:
         axes = [axes]
 
+    bio_keywords = {"associated_with", "in_pathway", "variant_of", "located_in_gene",
+                    "linked_to", "marker_for", "has_rearrangement", "has_fusion",
+                    "part_of_pathway", "has_association", "has_variant_association"}
+
     for ax, model_name in zip(axes, models):
         mrrs = [all_results[model_name].get(r, {}).get("mrr", 0) for r in rels]
-        colors = ["#4c72b0" if "__associated_with__" in r or "__in_pathway__" in r or "__variant_of__" in r
-                   or "__linked_to__" in r or "__marker_for__" in r or "__has_rearrangement__" in r
-                   or "__has_fusion__" in r or "__part_of_pathway__" in r or "__located_in_gene__" in r
-                   else "#2ca02c" for r in rels]
-        short_names = [r.replace("__", " > ").replace("_", " ") for r in rels]
+        colors = ["#1f77b4" if any(kw in r for kw in bio_keywords) else "#2ca02c" for r in rels]
+        short_names = [RELATION_DISPLAY.get(r, r.replace("__", " > ")) for r in rels]
         ax.barh(short_names, mrrs, color=colors, edgecolor="white", linewidth=0.5)
         ax.set_xlabel("MRR")
-        ax.set_title(f"{model_name}: MRR per Edge Type")
+        ax.set_title(f"{model_name}: MRR per edge type")
         ax.set_xlim(0, 1)
         for i, v in enumerate(mrrs):
-            ax.text(v + 0.01, i, f"{v:.3f}", va="center", fontsize=7)
+            if v > 0.01:
+                ax.text(v + 0.01, i, f"{v:.3f}", va="center", fontsize=6)
 
     plt.tight_layout()
     fig.savefig(fig_dir / "baseline_per_relation.png", dpi=200, bbox_inches="tight")
@@ -320,37 +446,53 @@ def fig_per_relation(all_results, fig_dir):
     print(f"  -> figs/baseline_per_relation.png")
 
 
+# =========================================================================
+# Main
+# =========================================================================
+
 def main():
     print("=" * 70)
-    print("03_train_baselines.py")
+    print("03_train_baselines.py (type-aware negative sampling)")
     print("=" * 70)
     set_seed(SEED)
 
     print("\n[1/6] Loading graph ...")
-    triples, n_entities, rel_to_id, edge_type_names, node_offsets = load_graph()
+    triples, n_entities, rel_to_id, edge_type_names, rel_type_info, type_ranges = load_graph()
 
     print("\n[2/6] Splitting triples ...")
     train, val, test = split_triples(triples)
     filter_set = build_filter_set(triples)
+    print(f"  Filter set: {len(filter_set):,} known triples")
+
+    # Pre-compute type range tensors for negative sampling
+    rel_ranges = build_type_range_tensors(rel_type_info, type_ranges)
 
     all_losses = {}
     all_results = {}
 
     for model_name, ModelClass in [("TransE", TransE), ("DotProduct", DotProduct)]:
         print(f"\n[{'3' if model_name == 'TransE' else '4'}/6] Training {model_name} ...")
+        set_seed(SEED)
         model = ModelClass(n_entities, len(rel_to_id), EMBEDDING_DIM)
         t0 = time.time()
-        losses = train_model(model, train, n_entities, EPOCHS)
+        losses = train_model(model, train, rel_ranges, EPOCHS)
         dt = time.time() - t0
         print(f"    Done in {dt:.1f}s")
         all_losses[model_name] = losses
 
         print(f"  Evaluating {model_name} ...")
-        results = evaluate(model, test, filter_set, n_entities, edge_type_names)
+        results = evaluate(model, test, filter_set, n_entities, edge_type_names,
+                           rel_type_info, type_ranges)
         all_results[model_name] = results
 
         m = results["overall"]
         print(f"    Overall: MRR={m['mrr']:.4f}  H@1={m['hits@1']:.4f}  H@3={m['hits@3']:.4f}  H@10={m['hits@10']:.4f}")
+        for rel in sorted(results.keys()):
+            if rel == "overall":
+                continue
+            rm = results[rel]
+            display = RELATION_DISPLAY.get(rel, rel)
+            print(f"    {display}: MRR={rm['mrr']:.4f}  H@10={rm['hits@10']:.4f}  (n={rm['n_triples']})")
 
         torch.save(model.state_dict(), PROCESSED_DIR / f"{model_name.lower()}_weights.pt")
 
@@ -359,7 +501,7 @@ def main():
         json.dump(all_results, f, indent=2)
     print(f"  -> baseline_results.json")
 
-    print("\n[6/6] Generating thesis figures ...")
+    print("\n[6/6] Generating figures ...")
     fig_training_curves(all_losses, FIG_DIR)
     fig_metrics_comparison(all_results, FIG_DIR)
     fig_per_relation(all_results, FIG_DIR)
