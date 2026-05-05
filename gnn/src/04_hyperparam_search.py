@@ -426,12 +426,13 @@ def main():
         }
         all_trial_results.append(trial_result)
 
+        gda_str = f"{gda['mrr']:.4f}" if gda else "N/A"
         print(f"    Trial {trial.number:>3d}  "
               f"layers={config['num_layers']} bases={config['num_bases']} "
               f"hidden={config['hidden_dim']} dropout={config['dropout']:.2f} "
               f"lr={config['lr']:.5f}  "
               f"MRR={overall['mrr']:.4f}  "
-              f"GDA={gda['mrr']:.4f if gda else 'N/A':>7}  "
+              f"GDA={gda_str:>7}  "
               f"({dt:.0f}s)")
 
         return score
