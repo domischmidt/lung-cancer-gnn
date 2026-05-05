@@ -1,0 +1,223 @@
+{
+  "TransE": {
+    "overall": {
+      "mrr": 0.24659409447064518,
+      "hits@1": 0.128,
+      "hits@3": 0.272,
+      "hits@10": 0.536,
+      "n_triples": 500
+    },
+    "ChemicalLocationAssociation__has_time_boundary__CalendarYear": {
+      "mrr": 0.1815293699565331,
+      "hits@1": 0.042105263157894736,
+      "hits@3": 0.1368421052631579,
+      "hits@10": 0.6526315789473685,
+      "n_triples": 95
+    },
+    "ChemicalLocationAssociation__refers_to__Chemical": {
+      "mrr": 0.45875564292995485,
+      "hits@1": 0.2018348623853211,
+      "hits@3": 0.6238532110091743,
+      "hits@10": 1.0,
+      "n_triples": 109
+    },
+    "VitalStatistics__has_time_boundary__CalendarYear": {
+      "mrr": 0.115590562989831,
+      "hits@1": 0.03125,
+      "hits@3": 0.09375,
+      "hits@10": 0.28125,
+      "n_triples": 32
+    },
+    "Gene__has_association__GeneDiseaseAssociation": {
+      "mrr": 0.00013103830366438526,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 17
+    },
+    "Gene__in_pathway__Pathway": {
+      "mrr": 0.2534746575706261,
+      "hits@1": 0.15217391304347827,
+      "hits@3": 0.2608695652173913,
+      "hits@10": 0.4782608695652174,
+      "n_triples": 46
+    },
+    "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion": {
+      "mrr": 0.00433971551805725,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.011111111111111112,
+      "n_triples": 90
+    },
+    "GeneDiseaseAssociation__associated_with__Disease": {
+      "mrr": 0.24700038523567933,
+      "hits@1": 0.09090909090909091,
+      "hits@3": 0.18181818181818182,
+      "hits@10": 0.6363636363636364,
+      "n_triples": 11
+    },
+    "VitalStatistics__part_of__GeographicRegion": {
+      "mrr": 0.03633537540570426,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0625,
+      "n_triples": 16
+    },
+    "Disease__detected_finding__VitalStatistics": {
+      "mrr": 1.0,
+      "hits@1": 1.0,
+      "hits@3": 1.0,
+      "hits@10": 1.0,
+      "n_triples": 26
+    },
+    "ChemicalLocationAssociation__refers_to__GeographicRegion": {
+      "mrr": 0.0032020402973707805,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 8
+    },
+    "VitalStatistics__part_of__Country": {
+      "mrr": 0.1425189393939394,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.5,
+      "n_triples": 4
+    },
+    "VitalStatistics__has_output__People": {
+      "mrr": 0.20582304600161744,
+      "hits@1": 0.03571428571428571,
+      "hits@3": 0.21428571428571427,
+      "hits@10": 0.75,
+      "n_triples": 28
+    },
+    "GeoPoliticalRegion__part_of__Country": {
+      "mrr": 0.45176470588235296,
+      "hits@1": 0.2,
+      "hits@3": 0.6,
+      "hits@10": 0.8,
+      "n_triples": 5
+    },
+    "Disease__has_fusion__GeneFusion": {
+      "mrr": 0.005062701737690577,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 6
+    },
+    "Variant__has_variant_association__VariantDiseaseAssociation": {
+      "mrr": 0.24603174603174602,
+      "hits@1": 0.0,
+      "hits@3": 0.3333333333333333,
+      "hits@10": 0.6666666666666666,
+      "n_triples": 3
+    }
+  },
+  "DotProduct": {
+    "overall": {
+      "mrr": 0.23592028484625974,
+      "hits@1": 0.13,
+      "hits@3": 0.24,
+      "hits@10": 0.536,
+      "n_triples": 500
+    },
+    "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion": {
+      "mrr": 0.0015709666365955658,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 93
+    },
+    "Gene__in_pathway__Pathway": {
+      "mrr": 0.35694079026822906,
+      "hits@1": 0.23809523809523808,
+      "hits@3": 0.40476190476190477,
+      "hits@10": 0.5714285714285714,
+      "n_triples": 42
+    },
+    "ChemicalLocationAssociation__refers_to__Chemical": {
+      "mrr": 0.42549415992812223,
+      "hits@1": 0.20754716981132076,
+      "hits@3": 0.49056603773584906,
+      "hits@10": 1.0,
+      "n_triples": 106
+    },
+    "ChemicalLocationAssociation__has_time_boundary__CalendarYear": {
+      "mrr": 0.19834178082100523,
+      "hits@1": 0.06140350877192982,
+      "hits@3": 0.14912280701754385,
+      "hits@10": 0.6842105263157895,
+      "n_triples": 114
+    },
+    "VitalStatistics__has_output__People": {
+      "mrr": 0.23410808767951624,
+      "hits@1": 0.047619047619047616,
+      "hits@3": 0.2857142857142857,
+      "hits@10": 0.9047619047619048,
+      "n_triples": 21
+    },
+    "VitalStatistics__has_time_boundary__CalendarYear": {
+      "mrr": 0.1381429360873095,
+      "hits@1": 0.041666666666666664,
+      "hits@3": 0.125,
+      "hits@10": 0.25,
+      "n_triples": 24
+    },
+    "VitalStatistics__part_of__Country": {
+      "mrr": 0.07639359372138009,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.25,
+      "n_triples": 12
+    },
+    "ChemicalLocationAssociation__refers_to__GeographicRegion": {
+      "mrr": 0.00725867574746144,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 14
+    },
+    "Gene__has_association__GeneDiseaseAssociation": {
+      "mrr": 0.00012701647947325833,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 10
+    },
+    "VitalStatistics__part_of__GeographicRegion": {
+      "mrr": 0.010783141113699102,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 21
+    },
+    "Disease__has_rearrangement__ChromoRearr": {
+      "mrr": 0.0024130883506050397,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 3
+    },
+    "Disease__detected_finding__VitalStatistics": {
+      "mrr": 1.0,
+      "hits@1": 1.0,
+      "hits@3": 1.0,
+      "hits@10": 1.0,
+      "n_triples": 20
+    },
+    "GeneDiseaseAssociation__associated_with__Disease": {
+      "mrr": 0.41185897435897434,
+      "hits@1": 0.3,
+      "hits@3": 0.3,
+      "hits@10": 0.9,
+      "n_triples": 10
+    },
+    "Disease__has_fusion__GeneFusion": {
+      "mrr": 0.0005280511458517932,
+      "hits@1": 0.0,
+      "hits@3": 0.0,
+      "hits@10": 0.0,
+      "n_triples": 4
+    }
+  }
+}

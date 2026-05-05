@@ -1,0 +1,200 @@
+{
+  "type_ranges": {
+    "CalendarYear": [
+      0,
+      72
+    ],
+    "Chemical": [
+      72,
+      82
+    ],
+    "ChemicalLocationAssociation": [
+      82,
+      131692
+    ],
+    "Country": [
+      131692,
+      131743
+    ],
+    "GeoPoliticalRegion": [
+      131743,
+      134886
+    ],
+    "GeographicRegion": [
+      134886,
+      135404
+    ],
+    "Disease": [
+      135404,
+      135447
+    ],
+    "People": [
+      135447,
+      135513
+    ],
+    "VitalStatistics": [
+      135513,
+      169001
+    ],
+    "Biomarker": [
+      169001,
+      169025
+    ],
+    "ChromoRearr": [
+      169025,
+      171018
+    ],
+    "Gene": [
+      171018,
+      181117
+    ],
+    "GeneFusion": [
+      181117,
+      185383
+    ],
+    "GeneProduct": [
+      185383,
+      185516
+    ],
+    "Pathway": [
+      185516,
+      187008
+    ],
+    "Variant": [
+      187008,
+      187717
+    ],
+    "GeneDiseaseAssociation": [
+      187717,
+      205418
+    ],
+    "VariantDiseaseAssociation": [
+      205418,
+      206151
+    ]
+  },
+  "rel_type_info": {
+    "0": [
+      "ChemicalLocationAssociation",
+      "GeoPoliticalRegion"
+    ],
+    "1": [
+      "VitalStatistics",
+      "People"
+    ],
+    "2": [
+      "Disease",
+      "VitalStatistics"
+    ],
+    "3": [
+      "ChemicalLocationAssociation",
+      "CalendarYear"
+    ],
+    "4": [
+      "ChemicalLocationAssociation",
+      "Chemical"
+    ],
+    "5": [
+      "VitalStatistics",
+      "Country"
+    ],
+    "6": [
+      "VitalStatistics",
+      "CalendarYear"
+    ],
+    "7": [
+      "VitalStatistics",
+      "GeographicRegion"
+    ],
+    "8": [
+      "ChemicalLocationAssociation",
+      "GeographicRegion"
+    ],
+    "9": [
+      "GeographicRegion",
+      "Country"
+    ],
+    "10": [
+      "GeoPoliticalRegion",
+      "Country"
+    ],
+    "11": [
+      "Gene",
+      "GeneDiseaseAssociation"
+    ],
+    "12": [
+      "GeneDiseaseAssociation",
+      "Disease"
+    ],
+    "13": [
+      "Variant",
+      "VariantDiseaseAssociation"
+    ],
+    "14": [
+      "VariantDiseaseAssociation",
+      "Disease"
+    ],
+    "15": [
+      "VariantDiseaseAssociation",
+      "Gene"
+    ],
+    "16": [
+      "Variant",
+      "Gene"
+    ],
+    "17": [
+      "Gene",
+      "Pathway"
+    ],
+    "18": [
+      "Pathway",
+      "Disease"
+    ],
+    "19": [
+      "GeneProduct",
+      "Pathway"
+    ],
+    "20": [
+      "Biomarker",
+      "Disease"
+    ],
+    "21": [
+      "Disease",
+      "ChromoRearr"
+    ],
+    "22": [
+      "Disease",
+      "GeneFusion"
+    ],
+    "23": [
+      "Disease",
+      "Disease"
+    ]
+  },
+  "edge_type_names": [
+    "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion",
+    "VitalStatistics__has_output__People",
+    "Disease__detected_finding__VitalStatistics",
+    "ChemicalLocationAssociation__has_time_boundary__CalendarYear",
+    "ChemicalLocationAssociation__refers_to__Chemical",
+    "VitalStatistics__part_of__Country",
+    "VitalStatistics__has_time_boundary__CalendarYear",
+    "VitalStatistics__part_of__GeographicRegion",
+    "ChemicalLocationAssociation__refers_to__GeographicRegion",
+    "GeographicRegion__part_of__Country",
+    "GeoPoliticalRegion__part_of__Country",
+    "Gene__has_association__GeneDiseaseAssociation",
+    "GeneDiseaseAssociation__associated_with__Disease",
+    "Variant__has_variant_association__VariantDiseaseAssociation",
+    "VariantDiseaseAssociation__variant_of__Disease",
+    "VariantDiseaseAssociation__located_in_gene__Gene",
+    "Variant__located_in_gene__Gene",
+    "Gene__in_pathway__Pathway",
+    "Pathway__linked_to__Disease",
+    "GeneProduct__part_of_pathway__Pathway",
+    "Biomarker__marker_for__Disease",
+    "Disease__has_rearrangement__ChromoRearr",
+    "Disease__has_fusion__GeneFusion",
+    "Disease__subtype_of__Disease"
+  ]
+}
