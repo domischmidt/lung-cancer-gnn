@@ -1,5 +1,5 @@
 """
-04_train_rgcn.py - R-GCN with node features on the full Lung-CABO KG.
+05_train_rgcn.py - R-GCN with node features on the full Lung-CABO KG.
 
 Architecture changes vs previous version:
   - 4 R-GCN layers (was 2) to cover Chemical->CLA->Region->VitalStats->Disease
@@ -14,7 +14,7 @@ Node features:
   Variant (3d: chrom+cons+pos), ChromoRearr (1d: type),
   Region (1d: population), CalendarYear (1d: year)
 
-Usage:  python gnn/src/04_train_rgcn.py
+Usage:  python gnn/src/05_train_rgcn.py
 Input:  gnn/data/processed/hetero_graph.pt
 Output: gnn/data/processed/rgcn_results.json, rgcn_weights.pt
         gnn/data/interim/figs/rgcn_*.png
@@ -43,6 +43,7 @@ FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 SEED = 42
 
+# Default hyperparameters (overridden by best_config.json if available)
 HIDDEN_DIM = 128
 NUM_LAYERS = 4
 NUM_BASES = 6
@@ -51,6 +52,25 @@ EPOCHS = 200
 BATCH_SIZE = 4096
 LR = 0.001
 NEG_RATIO = 10
+
+# Load best config from hyperparameter search if available
+_config_path = PROCESSED_DIR / "best_config.json"
+if _config_path.exists():
+    with open(_config_path) as _f:
+        _cfg = json.load(_f)
+    HIDDEN_DIM = _cfg.get("hidden_dim", HIDDEN_DIM)
+    NUM_LAYERS = _cfg.get("num_layers", NUM_LAYERS)
+    NUM_BASES = _cfg.get("num_bases", NUM_BASES)
+    DROPOUT = _cfg.get("dropout", DROPOUT)
+    EPOCHS = _cfg.get("epochs", EPOCHS)
+    BATCH_SIZE = _cfg.get("batch_size", BATCH_SIZE)
+    LR = _cfg.get("lr", LR)
+    NEG_RATIO = _cfg.get("neg_ratio", NEG_RATIO)
+    print(f"[Config] Loaded from best_config.json: layers={NUM_LAYERS}, bases={NUM_BASES}, "
+          f"hidden={HIDDEN_DIM}, dropout={DROPOUT}, lr={LR}, epochs={EPOCHS}")
+else:
+    print(f"[Config] Using defaults: layers={NUM_LAYERS}, bases={NUM_BASES}, "
+          f"hidden={HIDDEN_DIM}, dropout={DROPOUT}, lr={LR}, epochs={EPOCHS}")
 EVAL_EVERY = 20
 VAL_RATIO = 0.1
 TEST_RATIO = 0.1
@@ -439,7 +459,7 @@ def fig_comparison(rgcn_results, fig_dir):
 
 def main():
     print("=" * 70)
-    print("04_train_rgcn.py (4 layers, type-aware negatives, multi-batch)")
+    print("05_train_rgcn.py (4 layers, type-aware negatives, multi-batch)")
     print("=" * 70)
     set_seed(SEED)
 

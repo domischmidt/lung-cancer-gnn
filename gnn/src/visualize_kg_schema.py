@@ -1,10 +1,5 @@
 """
-visualize_kg_schema.py - Generate a presentation-ready schema diagram of the KG.
-
-Draws the node types as colored circles (sized by log-count) and edge types
-as labeled arrows. Biological nodes on the left, environmental on the right,
-Disease bridge in the center. Reification nodes (CLA, VitalStats, GDA, VDA)
-shown with distinct styling.
+visualize_kg_schema.py - Presentation-ready schema diagram of the KG.
 
 Usage:  python gnn/src/visualize_kg_schema.py
 Input:  gnn/data/processed/hetero_graph.pt
@@ -22,43 +17,41 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-from matplotlib.patches import FancyArrowPatch
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 PROCESSED_DIR = REPO_ROOT / "gnn" / "data" / "processed"
 FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 
-# Layout: manually position node types for clarity
-# x: 0 = left (bio), 0.5 = center (bridge), 1.0 = right (env)
-# y: 0 = top, 1 = bottom
-NODE_POSITIONS = {
-    # Biological (left side)
-    "Gene":           (0.08, 0.25),
-    "Pathway":        (0.08, 0.45),
-    "GeneProduct":    (0.08, 0.65),
-    "Variant":        (0.22, 0.15),
-    "Biomarker":      (0.22, 0.75),
-    "GeneFusion":     (0.22, 0.45),
-    "ChromoRearr":    (0.22, 0.58),
-    # Bio reifications
-    "GeneDiseaseAssociation":       (0.38, 0.25),
-    "VariantDiseaseAssociation":    (0.38, 0.15),
+# ---- Layout positions (x, y) in [0,1] space ----
+# Spread nodes more for readability
+POS = {
+    # Biological (left)
+    "Gene":           (0.06, 0.40),
+    "Pathway":        (0.06, 0.62),
+    "GeneProduct":    (0.06, 0.80),
+    "Variant":        (0.20, 0.22),
+    "Biomarker":      (0.20, 0.80),
+    "GeneFusion":     (0.20, 0.52),
+    "ChromoRearr":    (0.20, 0.65),
+    # Bio reifications (center-left)
+    "GeneDiseaseAssociation":    (0.36, 0.40),
+    "VariantDiseaseAssociation": (0.36, 0.22),
     # Bridge (center)
-    "Disease":        (0.50, 0.40),
-    # Env reifications
-    "VitalStatistics": (0.62, 0.50),
-    "ChemicalLocationAssociation":  (0.62, 0.25),
-    # Environmental (right side)
-    "Chemical":             (0.78, 0.12),
-    "GeoPoliticalRegion":   (0.78, 0.32),
-    "GeographicRegion":     (0.78, 0.52),
-    "Country":              (0.92, 0.42),
-    "CalendarYear":         (0.92, 0.18),
-    "People":               (0.78, 0.70),
+    "Disease":        (0.50, 0.48),
+    # Env reifications (center-right)
+    "VitalStatistics":             (0.64, 0.58),
+    "ChemicalLocationAssociation": (0.64, 0.32),
+    # Environmental (right)
+    "Chemical":           (0.80, 0.18),
+    "GeoPoliticalRegion": (0.80, 0.40),
+    "GeographicRegion":   (0.80, 0.60),
+    "Country":            (0.94, 0.50),
+    "CalendarYear":       (0.94, 0.25),
+    "People":             (0.80, 0.78),
 }
 
-# Color scheme by category
-NODE_COLORS = {
+# ---- Colors ----
+FILL = {
     "Gene": "#CECBF6", "Pathway": "#CECBF6", "GeneProduct": "#CECBF6",
     "Variant": "#CECBF6", "Biomarker": "#CECBF6", "GeneFusion": "#CECBF6",
     "ChromoRearr": "#CECBF6",
@@ -69,8 +62,7 @@ NODE_COLORS = {
     "GeographicRegion": "#C0DD97", "Country": "#C0DD97",
     "CalendarYear": "#FAC775", "People": "#F4C0D1",
 }
-
-NODE_EDGE_COLORS = {
+STROKE = {
     "Gene": "#534AB7", "Pathway": "#534AB7", "GeneProduct": "#534AB7",
     "Variant": "#534AB7", "Biomarker": "#534AB7", "GeneFusion": "#534AB7",
     "ChromoRearr": "#534AB7",
@@ -82,8 +74,7 @@ NODE_EDGE_COLORS = {
     "CalendarYear": "#854F0B", "People": "#993556",
 }
 
-# Short display names
-SHORT_NAMES = {
+SHORT = {
     "GeneDiseaseAssociation": "GDA",
     "VariantDiseaseAssociation": "VDA",
     "ChemicalLocationAssociation": "CLA",
@@ -91,42 +82,75 @@ SHORT_NAMES = {
     "GeoPoliticalRegion": "City (EEA)",
     "GeographicRegion": "Region (OECD)",
     "CalendarYear": "Year",
-    "ChromoRearr": "ChromoRearr",
-    "GeneProduct": "GeneProduct",
-    "GeneFusion": "GeneFusion",
 }
 
-# Feature descriptions
-FEATURES = {
+FEAT = {
     "ChemicalLocationAssociation": "conc. 1d",
-    "VitalStatistics": "inc+mort 2d",
+    "VitalStatistics": "inc + mort 2d",
     "GeneDiseaseAssociation": "score 1d",
-    "VariantDiseaseAssociation": "DSI+DPI 2d",
-    "People": "age+gender 2d",
-    "Variant": "chrom+cons+pos 3d",
+    "VariantDiseaseAssociation": "DSI + DPI 2d",
+    "People": "age + gender 2d",
+    "Variant": "chrom + cons + pos 3d",
     "ChromoRearr": "type 1d",
     "GeoPoliticalRegion": "pop. 1d",
     "GeographicRegion": "pop. 1d",
     "CalendarYear": "year 1d",
 }
 
+# ---- Manual edge label offsets to avoid overlaps ----
+# key: (src_type, dst_type) -> (dx, dy) offset from midpoint for label
+LABEL_NUDGE = {
+    ("Disease", "VitalStatistics"): (0.0, 0.02),
+    ("Disease", "GeneFusion"): (0.0, 0.02),
+    ("Disease", "ChromoRearr"): (0.0, -0.02),
+    ("GeneDiseaseAssociation", "Disease"): (0.0, 0.02),
+    ("VariantDiseaseAssociation", "Disease"): (0.0, -0.02),
+    ("VariantDiseaseAssociation", "Gene"): (0.0, 0.02),
+    ("VitalStatistics", "GeographicRegion"): (0.0, 0.02),
+    ("VitalStatistics", "Country"): (0.02, 0.0),
+    ("VitalStatistics", "CalendarYear"): (0.02, -0.02),
+    ("VitalStatistics", "People"): (0.0, 0.02),
+    ("ChemicalLocationAssociation", "CalendarYear"): (0.0, -0.02),
+    ("ChemicalLocationAssociation", "GeoPoliticalRegion"): (0.0, 0.02),
+    ("ChemicalLocationAssociation", "GeographicRegion"): (0.02, 0.0),
+    ("ChemicalLocationAssociation", "Chemical"): (0.0, 0.02),
+    ("GeoPoliticalRegion", "Country"): (0.0, -0.02),
+    ("GeographicRegion", "Country"): (0.0, 0.02),
+}
+
 
 def load_graph_schema():
     data = torch.load(PROCESSED_DIR / "hetero_graph.pt", weights_only=False)
-
     node_counts = {}
     for nt in data.node_types:
         node_counts[nt] = data[nt].num_nodes
-
     edge_types = []
-    edge_counts = {}
     for et in data.edge_types:
         src_type, rel, dst_type = et
         n = data[et].edge_index.size(1)
         edge_types.append((src_type, rel, dst_type, n))
-        edge_counts[(src_type, rel, dst_type)] = n
-
     return node_counts, edge_types
+
+
+def draw_arrow(ax, sx, sy, dx, dy, label, nudge=(0, 0), color="#888"):
+    """Draw an arrow with a label at the midpoint."""
+    ax.annotate("",
+                xy=(dx, dy), xytext=(sx, sy),
+                arrowprops=dict(arrowstyle="-|>", color=color, lw=0.8,
+                                shrinkA=20, shrinkB=20, alpha=0.45))
+    mx = (sx + dx) / 2 + nudge[0]
+    my = (sy + dy) / 2 + nudge[1]
+
+    # Compute angle so text reads left-to-right
+    angle = math.degrees(math.atan2(dy - sy, dx - sx))
+    if angle > 90:
+        angle -= 180
+    elif angle < -90:
+        angle += 180
+
+    ax.text(mx, my, label, fontsize=5.5, ha="center", va="center",
+            color="#555", alpha=0.85, rotation=angle, rotation_mode="anchor",
+            bbox=dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="none", alpha=0.7))
 
 
 def main():
@@ -136,131 +160,114 @@ def main():
 
     print("\nLoading graph schema ...")
     node_counts, edge_types = load_graph_schema()
-
     total_nodes = sum(node_counts.values())
     total_edges = sum(e[3] for e in edge_types)
     print(f"  {total_nodes:,} nodes, {total_edges:,} edges")
     print(f"  {len(node_counts)} node types, {len(edge_types)} edge types")
 
-    # --- Draw ---
     FIG_DIR.mkdir(parents=True, exist_ok=True)
-    fig, ax = plt.subplots(figsize=(20, 12))
-    ax.set_xlim(-0.05, 1.05)
-    ax.set_ylim(-0.05, 1.05)
+    fig, ax = plt.subplots(figsize=(22, 13))
+    ax.set_xlim(-0.03, 1.03)
+    ax.set_ylim(-0.03, 1.03)
     ax.set_aspect("equal")
     ax.axis("off")
 
     # Background regions
-    ax.axvspan(-0.05, 0.32, alpha=0.03, color="#534AB7")
-    ax.axvspan(0.32, 0.68, alpha=0.03, color="#993C1D")
-    ax.axvspan(0.68, 1.05, alpha=0.03, color="#0F6E56")
+    ax.axvspan(-0.03, 0.30, alpha=0.025, color="#534AB7")
+    ax.axvspan(0.30, 0.56, alpha=0.020, color="#993C1D")
+    ax.axvspan(0.56, 1.03, alpha=0.025, color="#0F6E56")
 
-    ax.text(0.13, 0.98, "Biological", fontsize=14, fontweight="bold", color="#534AB7",
-            ha="center", va="top", alpha=0.6)
-    ax.text(0.50, 0.98, "Bridge", fontsize=14, fontweight="bold", color="#993C1D",
-            ha="center", va="top", alpha=0.6)
-    ax.text(0.85, 0.98, "Environmental", fontsize=14, fontweight="bold", color="#0F6E56",
-            ha="center", va="top", alpha=0.6)
+    ax.text(0.15, 0.97, "Biological", fontsize=15, fontweight="bold", color="#534AB7",
+            ha="center", va="top", alpha=0.5)
+    ax.text(0.43, 0.97, "Bridge", fontsize=15, fontweight="bold", color="#993C1D",
+            ha="center", va="top", alpha=0.5)
+    ax.text(0.82, 0.97, "Environmental", fontsize=15, fontweight="bold", color="#0F6E56",
+            ha="center", va="top", alpha=0.5)
 
-    # Draw edges first (behind nodes)
-    drawn_edges = set()
+    # ---- Draw edges ----
+    drawn = set()
     for src_type, rel, dst_type, n in edge_types:
-        if src_type not in NODE_POSITIONS or dst_type not in NODE_POSITIONS:
+        if src_type not in POS or dst_type not in POS:
             continue
 
-        edge_key = (src_type, dst_type)
-        if edge_key in drawn_edges:
-            continue
-        drawn_edges.add(edge_key)
-
-        sx, sy = NODE_POSITIONS[src_type]
-        dx, dy = NODE_POSITIONS[dst_type]
-
-        # Skip self-loops in drawing (subtype_of Disease->Disease)
+        # Self-loop (Disease -> subtype_of -> Disease)
         if src_type == dst_type:
-            # Draw a small curved self-loop
-            ax.annotate("", xy=(sx + 0.02, sy - 0.04), xytext=(sx - 0.02, sy - 0.04),
-                        arrowprops=dict(arrowstyle="->", color="#888", lw=0.8,
-                                        connectionstyle="arc3,rad=-0.5"))
-            ax.text(sx, sy - 0.065, rel, fontsize=6, ha="center", color="#888", alpha=0.8)
+            x, y = POS[src_type]
+            # Draw loop below the node
+            loop_y = y + 0.06
+            ax.annotate("",
+                        xy=(x + 0.025, y + 0.025), xytext=(x - 0.025, y + 0.025),
+                        arrowprops=dict(arrowstyle="-|>", color="#888", lw=0.8,
+                                        connectionstyle="arc3,rad=-0.8", alpha=0.5))
+            ax.text(x, loop_y + 0.015, "subtype_of", fontsize=5.5, ha="center", va="bottom",
+                    color="#555", alpha=0.85,
+                    bbox=dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="none", alpha=0.7))
             continue
 
-        # Relation label
-        rel_short = rel.replace("_", " ")
-        if len(rel_short) > 18:
-            rel_short = rel_short[:16] + ".."
+        edge_key = (src_type, rel, dst_type)
+        if edge_key in drawn:
+            continue
+        drawn.add(edge_key)
 
-        # Count formatting
-        count_str = f"{n:,}" if n < 10000 else f"{n/1000:.0f}k"
+        sx, sy = POS[src_type]
+        dx, dy = POS[dst_type]
+        label = rel.replace("_", " ")
+        nudge = LABEL_NUDGE.get((src_type, dst_type), (0, 0.015))
+        draw_arrow(ax, sx, sy, dx, dy, label, nudge)
 
-        # Draw arrow
-        ax.annotate("",
-                    xy=(dx, dy), xytext=(sx, sy),
-                    arrowprops=dict(arrowstyle="-|>", color="#888", lw=0.7,
-                                    shrinkA=18, shrinkB=18, alpha=0.5))
-
-        # Label at midpoint
-        mx, my = (sx + dx) / 2, (sy + dy) / 2
-        angle = math.degrees(math.atan2(dy - sy, dx - sx))
-        if abs(angle) > 90:
-            angle += 180
-
-        ax.text(mx, my + 0.015, rel_short, fontsize=5.5, ha="center", va="bottom",
-                color="#666", alpha=0.8, rotation=angle, rotation_mode="anchor")
-
-    # Draw nodes
-    for nt, (x, y) in NODE_POSITIONS.items():
+    # ---- Draw nodes ----
+    for nt, (x, y) in POS.items():
         count = node_counts.get(nt, 0)
         if count == 0:
             continue
 
-        # Size based on log count
-        size = 300 + 150 * math.log10(max(count, 1))
-        size = min(size, 2200)
+        # Circle size based on log
+        radius = 300 + 180 * math.log10(max(count, 2))
+        radius = min(radius, 2500)
 
-        color = NODE_COLORS.get(nt, "#ddd")
-        edge_color = NODE_EDGE_COLORS.get(nt, "#888")
-        display = SHORT_NAMES.get(nt, nt)
-        feat = FEATURES.get(nt, "")
+        fill = FILL.get(nt, "#ddd")
+        stroke = STROKE.get(nt, "#888")
+        name = SHORT.get(nt, nt)
+        feat = FEAT.get(nt, "")
 
-        # Node circle
-        ax.scatter(x, y, s=size, c=color, edgecolors=edge_color, linewidth=1.5, zorder=5)
+        # Draw circle
+        ax.scatter(x, y, s=radius, c=fill, edgecolors=stroke, linewidth=1.8, zorder=5)
 
-        # Node label (name)
-        ax.text(x, y + 0.003, display, fontsize=8, fontweight="bold", ha="center", va="center",
-                color=edge_color, zorder=6)
+        # Name inside circle
+        ax.text(x, y + 0.005, name, fontsize=8.5, fontweight="bold", ha="center", va="center",
+                color=stroke, zorder=6)
 
-        # Count below
+        # Count below circle
         count_str = f"{count:,}"
-        ax.text(x, y - 0.035, count_str, fontsize=6.5, ha="center", va="top",
-                color="#666", zorder=6)
+        ax.text(x, y - 0.038, count_str, fontsize=7, ha="center", va="top",
+                color="#444", zorder=6)
 
-        # Feature label
+        # Feature annotation below count
         if feat:
-            ax.text(x, y - 0.055, feat, fontsize=5.5, ha="center", va="top",
-                    color="#999", style="italic", zorder=6)
+            ax.text(x, y - 0.058, feat, fontsize=5.5, ha="center", va="top",
+                    color="#888", style="italic", zorder=6)
 
-    # Title and stats
-    ax.text(0.50, 1.04, "Lung-CABO Knowledge Graph", fontsize=18, fontweight="bold",
-            ha="center", va="bottom", color="#333")
-    ax.text(0.50, -0.03,
+    # ---- Title ----
+    ax.text(0.50, 1.02, "Lung-CABO Knowledge Graph Schema", fontsize=19, fontweight="bold",
+            ha="center", va="bottom", color="#222")
+    ax.text(0.50, -0.015,
             f"{total_nodes:,} nodes  |  {total_edges:,} edges  |  "
             f"{len(node_counts)} node types  |  {len(edge_types)} edge types  |  "
-            f"4 R-GCN layers",
-            fontsize=10, ha="center", va="top", color="#888")
+            f"4 R-GCN layers required",
+            fontsize=10, ha="center", va="top", color="#777")
 
-    # Legend
+    # ---- Legend ----
     legend_items = [
-        mpatches.Patch(facecolor="#CECBF6", edgecolor="#534AB7", label="Biological"),
+        mpatches.Patch(facecolor="#CECBF6", edgecolor="#534AB7", label="Biological entity"),
         mpatches.Patch(facecolor="#B5D4F4", edgecolor="#185FA5", label="Bio reification (GDA, VDA)"),
         mpatches.Patch(facecolor="#F5C4B3", edgecolor="#993C1D", label="Bridge (Disease)"),
         mpatches.Patch(facecolor="#9FE1CB", edgecolor="#0F6E56", label="Env reification (CLA, VitalStats)"),
-        mpatches.Patch(facecolor="#C0DD97", edgecolor="#3B6D11", label="Environmental"),
+        mpatches.Patch(facecolor="#C0DD97", edgecolor="#3B6D11", label="Environmental entity"),
         mpatches.Patch(facecolor="#FAC775", edgecolor="#854F0B", label="Temporal (CalendarYear)"),
         mpatches.Patch(facecolor="#F4C0D1", edgecolor="#993556", label="Demographic (People)"),
     ]
-    ax.legend(handles=legend_items, loc="lower left", fontsize=8, framealpha=0.9,
-              edgecolor="#ccc", fancybox=True)
+    ax.legend(handles=legend_items, loc="lower left", fontsize=8.5, framealpha=0.92,
+              edgecolor="#bbb", fancybox=True, borderpad=1.0)
 
     plt.tight_layout()
     out_path = FIG_DIR / "kg_schema_network.png"
