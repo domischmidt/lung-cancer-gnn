@@ -1,0 +1,51 @@
+rank,Biomarker_label,Biomarker_uri,Disease_label,Disease_uri,confidence
+1,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Small cell carcinoma of lung,lucia:disease/C0149925,0.1002
+2,Lycopene,lucia:biomarker/C0065331,Small cell carcinoma of lung,lucia:disease/C0149925,0.0888
+3,Homocysteine,lucia:biomarker/C0019878,Small cell carcinoma of lung,lucia:disease/C0149925,0.0584
+4,Lycopene,lucia:biomarker/C0065331,Lung cancer panel,lucia:disease/C0024115,0.036
+5,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Lung cancer panel,lucia:disease/C0024115,0.0248
+6,Homocysteine,lucia:biomarker/C0019878,Lung cancer panel,lucia:disease/C0024115,0.0155
+7,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0019
+8,Lycopene,lucia:biomarker/C0065331,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0011
+9,Equol,lucia:biomarker/C0059497,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0009
+10,Lycopene,lucia:biomarker/C0065331,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0002
+11,gamma-Tocopherol,lucia:biomarker/C0017054,Carcinoma in situ of lung,lucia:disease/C0685053,0.0001
+12,Homocysteine,lucia:biomarker/C0019878,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0001
+13,Selenium,lucia:biomarker/C0036581,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0001
+14,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0001
+15,Selenium,lucia:biomarker/C0036581,Carcinoma in situ of lung,lucia:disease/C0685053,0.0001
+16,lutein / zeaxanthin,lucia:biomarker/C2929534,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0001
+17,Carotenoids,lucia:biomarker/C0007271,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0001
+18,Tocopherols,lucia:biomarker/C3255108,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0001
+19,Vitamin B12,lucia:biomarker/C0042845,Carcinoma in situ of lung,lucia:disease/C0685053,0.0001
+20,Genistein,lucia:biomarker/C0061202,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+21,Homocysteine,lucia:biomarker/C0019878,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0
+22,Lycopene,lucia:biomarker/C0065331,Lung Neoplasms,lucia:disease/C0024121,0.0
+23,Homocysteine,lucia:biomarker/C0019878,Lung Neoplasms,lucia:disease/C0024121,0.0
+24,Lycopene,lucia:biomarker/C0065331,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+25,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Lung Neoplasms,lucia:disease/C0024121,0.0
+26,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+27,Homocysteine,lucia:biomarker/C0019878,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+28,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+29,Homocysteine,lucia:biomarker/C0019878,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+30,Lycopene,lucia:biomarker/C0065331,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+31,Lycopene,lucia:biomarker/C0065331,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0
+32,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0
+33,Homocysteine,lucia:biomarker/C0019878,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0
+34,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+35,Homocysteine,lucia:biomarker/C0019878,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+36,Lycopene,lucia:biomarker/C0065331,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+37,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0
+38,Lycopene,lucia:biomarker/C0065331,Metaplasia,lucia:disease/C0025568,0.0
+39,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Metaplasia,lucia:disease/C0025568,0.0
+40,Lycopene,lucia:biomarker/C0065331,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0
+41,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Hyperplasia,lucia:disease/C0020507,0.0
+42,Lycopene,lucia:biomarker/C0065331,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.0
+43,Vitamin B12,lucia:biomarker/C0042845,Fetal adenocarcinoma of lung,lucia:disease/C1708045,0.0
+44,Homocysteine,lucia:biomarker/C0019878,Metaplasia,lucia:disease/C0025568,0.0
+45,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.0
+46,Lycopene,lucia:biomarker/C0065331,Hyperplasia,lucia:disease/C0020507,0.0
+47,Lycopene,lucia:biomarker/C0065331,Small cell lung cancer extensive stage,lucia:disease/C0278726,0.0
+48,gamma-Tocopherol,lucia:biomarker/C0017054,Fetal adenocarcinoma of lung,lucia:disease/C1708045,0.0
+49,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Large cell carcinoma of lung,lucia:disease/C0345958,0.0
+50,Homocysteine,lucia:biomarker/C0019878,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0

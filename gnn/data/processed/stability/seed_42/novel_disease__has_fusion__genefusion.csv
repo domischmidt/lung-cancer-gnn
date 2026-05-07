@@ -1,0 +1,51 @@
+rank,Disease_label,Disease_uri,GeneFusion_label,GeneFusion_uri,confidence
+1,Lung Adenocarcinoma In Situ,lucia:disease/C4521520,SQSTM1::NTRK2,lucia:gene_fusion/SQSTM1::NTRK2,0.4601
+2,Fetal adenocarcinoma of lung,lucia:disease/C1708045,SQSTM1::NTRK2,lucia:gene_fusion/SQSTM1::NTRK2,0.1942
+3,Lung Acinar Adenocarcinoma,lucia:disease/C1332137,SQSTM1::NTRK2,lucia:gene_fusion/SQSTM1::NTRK2,0.0634
+4,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,TMEM87B::MERTK,lucia:gene_fusion/TMEM87B::MERTK,0.0116
+5,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,SND1::BRAF,lucia:gene_fusion/SND1::BRAF,0.0082
+6,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,CCSER1::MMRN1,lucia:gene_fusion/CCSER1::MMRN1,0.0074
+7,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,SDC4::ROS1,lucia:gene_fusion/SDC4::ROS1,0.0062
+8,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,LAMA3::RMC1,lucia:gene_fusion/LAMA3::RMC1,0.0061
+9,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,THRA::PSMD3,lucia:gene_fusion/THRA::PSMD3,0.0061
+10,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,CD74::ROS1,lucia:gene_fusion/CD74::ROS1,0.0054
+11,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,EML4::ALK,lucia:gene_fusion/EML4::ALK,0.0052
+12,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,LYST::NID1,lucia:gene_fusion/LYST::NID1,0.0038
+13,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,EZR::ROS1,lucia:gene_fusion/EZR::ROS1,0.0035
+14,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,ZSWIM4::YJU2B,lucia:gene_fusion/ZSWIM4::YJU2B,0.003
+15,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,SLC34A2::ROS1,lucia:gene_fusion/SLC34A2::ROS1,0.0026
+16,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,DNAJC1::SKIDA1,lucia:gene_fusion/DNAJC1::SKIDA1,0.0022
+17,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,ZNRF3::EWSR1,lucia:gene_fusion/ZNRF3::EWSR1,0.002
+18,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,POLR3E::MOSMO,lucia:gene_fusion/POLR3E::MOSMO,0.0016
+19,Lung Neoplasms,lucia:disease/C0024121,SAMHD1::SCAND1,lucia:gene_fusion/SAMHD1::SCAND1,0.0016
+20,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,KIAA1958::HSDL2,lucia:gene_fusion/KIAA1958::HSDL2,0.0014
+21,Lung Neoplasms,lucia:disease/C0024121,CCDC85A::ALK,lucia:gene_fusion/CCDC85A::ALK,0.0014
+22,Lung Neoplasms,lucia:disease/C0024121,TNRC18::RSPH10B,lucia:gene_fusion/TNRC18::RSPH10B,0.0013
+23,Lung Neoplasms,lucia:disease/C0024121,UNK::B4GALNT2,lucia:gene_fusion/UNK::B4GALNT2,0.0011
+24,Lung Neoplasms,lucia:disease/C0024121,TFDP1::CUL4A,lucia:gene_fusion/TFDP1::CUL4A,0.0009
+25,Lung Neoplasms,lucia:disease/C0024121,CAPN13::GALNT14,lucia:gene_fusion/CAPN13::GALNT14,0.0007
+26,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,FGFR3::TACC3,lucia:gene_fusion/FGFR3::TACC3,0.0007
+27,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,ARHGAP5::AKAP6,lucia:gene_fusion/ARHGAP5::AKAP6,0.0007
+28,Lung Neoplasms,lucia:disease/C0024121,AKAP6::SPTSSA,lucia:gene_fusion/AKAP6::SPTSSA,0.0007
+29,Lung Neoplasms,lucia:disease/C0024121,POLR3E::MOSMO,lucia:gene_fusion/POLR3E::MOSMO,0.0006
+30,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,SDC4::NRG1,lucia:gene_fusion/SDC4::NRG1,0.0005
+31,Lung Neoplasms,lucia:disease/C0024121,PPTC7::ARPC3,lucia:gene_fusion/PPTC7::ARPC3,0.0004
+32,Lung Neoplasms,lucia:disease/C0024121,FGFR3::TACC3,lucia:gene_fusion/FGFR3::TACC3,0.0004
+33,Lung Neoplasms,lucia:disease/C0024121,INPP5A::JAKMIP3,lucia:gene_fusion/INPP5A::JAKMIP3,0.0004
+34,Lung Neoplasms,lucia:disease/C0024121,ERCC3::MAP3K2,lucia:gene_fusion/ERCC3::MAP3K2,0.0003
+35,Lung Neoplasms,lucia:disease/C0024121,BCL2L1::VWA5B1,lucia:gene_fusion/BCL2L1::VWA5B1,0.0003
+36,Lung Neoplasms,lucia:disease/C0024121,NQO1::JAG1,lucia:gene_fusion/NQO1::JAG1,0.0003
+37,Lung Neoplasms,lucia:disease/C0024121,STK39::B3GALT1,lucia:gene_fusion/STK39::B3GALT1,0.0002
+38,Lung Neoplasms,lucia:disease/C0024121,FXYD5::FXYD3,lucia:gene_fusion/FXYD5::FXYD3,0.0002
+39,Lung Neoplasms,lucia:disease/C0024121,EZR::SLC22A2,lucia:gene_fusion/EZR::SLC22A2,0.0002
+40,Lung Neoplasms,lucia:disease/C0024121,FXYD6::CD3G,lucia:gene_fusion/FXYD6::CD3G,0.0002
+41,Lung Neoplasms,lucia:disease/C0024121,MET::WNT2,lucia:gene_fusion/MET::WNT2,0.0002
+42,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,KIF5B::RET,lucia:gene_fusion/KIF5B::RET,0.0002
+43,Lung Neoplasms,lucia:disease/C0024121,ZBTB20::EPHA6,lucia:gene_fusion/ZBTB20::EPHA6,0.0002
+44,Lung Neoplasms,lucia:disease/C0024121,ARAP1::FADD,lucia:gene_fusion/ARAP1::FADD,0.0002
+45,Lung Neoplasms,lucia:disease/C0024121,USF2::CLASRP,lucia:gene_fusion/USF2::CLASRP,0.0002
+46,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,CAPN13::GALNT14,lucia:gene_fusion/CAPN13::GALNT14,0.0002
+47,Lung Neoplasms,lucia:disease/C0024121,PUM1::NKAIN1,lucia:gene_fusion/PUM1::NKAIN1,0.0002
+48,Lung Neoplasms,lucia:disease/C0024121,SFTPB::DPYSL2,lucia:gene_fusion/SFTPB::DPYSL2,0.0002
+49,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,AGPAT3::APP,lucia:gene_fusion/AGPAT3::APP,0.0002
+50,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,MGA::ANKLE1,lucia:gene_fusion/MGA::ANKLE1,0.0001

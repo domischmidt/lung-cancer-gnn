@@ -1,0 +1,51 @@
+rank,gene_label,gene_uri,disease_label,disease_uri,confidence
+1,DDR2,lucia:gene/ncbigene:4921,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9905
+2,EGFR,lucia:gene/ncbigene:1956,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9893
+3,CCDC6,lucia:gene/ncbigene:8030,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9874
+4,KRT19,lucia:gene/ncbigene:3880,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9866
+5,IL6ST,lucia:gene/ncbigene:3572,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9829
+6,DDR2,lucia:gene/ncbigene:4921,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.9829
+7,DDR2,lucia:gene/ncbigene:4921,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.9824
+8,DDR2,lucia:gene/ncbigene:4921,Combined Lung Small Cell Carcinoma,lucia:disease/C1333125,0.9823
+9,PIK3CD,lucia:gene/ncbigene:5293,Hyperplasia,lucia:disease/C0020507,0.9816
+10,AR,lucia:gene/ncbigene:367,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9811
+11,DDR2,lucia:gene/ncbigene:4921,Epidermal growth factor receptor positive non-small cell lung cancer,lucia:disease/C1960925,0.9798
+12,FOXM1,lucia:gene/ncbigene:2305,Combined Lung Small Cell Carcinoma,lucia:disease/C1333125,0.9796
+13,OGG1,lucia:gene/ncbigene:4968,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9784
+14,PTGS2,lucia:gene/ncbigene:5743,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.978
+15,DLL3,lucia:gene/ncbigene:10683,Small cell lung cancer extensive stage,lucia:disease/C0278726,0.9779
+16,MIR499A,lucia:gene/ncbigene:574501,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9777
+17,LEP,lucia:gene/ncbigene:3952,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9773
+18,EGFR,lucia:gene/ncbigene:1956,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.9767
+19,DDR2,lucia:gene/ncbigene:4921,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.9766
+20,FGFR3,lucia:gene/ncbigene:2261,Hyperplasia,lucia:disease/C0020507,0.9751
+21,BTG2,lucia:gene/ncbigene:7832,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9745
+22,EGFR,lucia:gene/ncbigene:1956,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.9744
+23,HGF,lucia:gene/ncbigene:3082,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9741
+24,SELP,lucia:gene/ncbigene:6403,Hyperplasia,lucia:disease/C0020507,0.9738
+25,KRT19,lucia:gene/ncbigene:3880,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.9734
+26,HIF1A,lucia:gene/ncbigene:3091,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.9723
+27,CSF2,lucia:gene/ncbigene:1437,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9721
+28,DDR2,lucia:gene/ncbigene:4921,Invasive Lung Mucinous Adenocarcinoma,lucia:disease/C4522160,0.9701
+29,BRCA2,lucia:gene/ncbigene:675,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9694
+30,TSC2,lucia:gene/ncbigene:7249,Large cell carcinoma of lung,lucia:disease/C0345958,0.9685
+31,EGFR,lucia:gene/ncbigene:1956,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.9681
+32,PIK3CD,lucia:gene/ncbigene:5293,Large cell carcinoma of lung,lucia:disease/C0345958,0.9681
+33,DDR2,lucia:gene/ncbigene:4921,large cell neuroendocrine carcinoma of lung,lucia:disease/C1334363,0.9668
+34,CDX1,lucia:gene/ncbigene:1044,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9665
+35,PIK3CD,lucia:gene/ncbigene:5293,Metaplasia,lucia:disease/C0025568,0.9612
+36,BCL2L11,lucia:gene/ncbigene:10018,Combined Lung Small Cell Carcinoma,lucia:disease/C1333125,0.9601
+37,EGFR,lucia:gene/ncbigene:1956,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.9598
+38,HGF,lucia:gene/ncbigene:3082,Metaplasia,lucia:disease/C0025568,0.9586
+39,EGFR,lucia:gene/ncbigene:1956,Epidermal growth factor receptor positive non-small cell lung cancer,lucia:disease/C1960925,0.9584
+40,PIK3CD,lucia:gene/ncbigene:5293,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9564
+41,EGFR,lucia:gene/ncbigene:1956,Metaplasia,lucia:disease/C0025568,0.9559
+42,NKX2-1,lucia:gene/ncbigene:7080,Proteus Syndrome,lucia:disease/C0085261,0.9493
+43,PIK3CD,lucia:gene/ncbigene:5293,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9481
+44,PPARGC1A,lucia:gene/ncbigene:10891,Lung Neoplasms,lucia:disease/C0024121,0.948
+45,EGFR,lucia:gene/ncbigene:1956,large cell neuroendocrine carcinoma of lung,lucia:disease/C1334363,0.9471
+46,PTGS2,lucia:gene/ncbigene:5743,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9459
+47,AKT1S1,lucia:gene/ncbigene:84335,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9451
+48,AKT1,lucia:gene/ncbigene:207,Large cell carcinoma of lung,lucia:disease/C0345958,0.9441
+49,DLL4,lucia:gene/ncbigene:54567,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9416
+50,RABGEF1,lucia:gene/ncbigene:27342,Small cell lung cancer limited stage,lucia:disease/C0278725,0.9414
