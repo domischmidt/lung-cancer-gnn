@@ -1,0 +1,83 @@
+[Config] Loaded best_config.json: hidden=128, layers=2, bases=6, dropout=0.15000000000000002, lr=0.00030012301808980484, neg=5, batch=4096, epochs=100
+======================================================================
+09_full_evaluation.py (type-aware, 2 layers)
+======================================================================
+Device: cuda
+Multi-seed seeds: [42, 123]
+Ablation seeds: [42, 123]
+
+Loading graph ...
+  206,151 nodes, 24 relations, 631,659 triples
+
+======================================================================
+PART 1: Multi-Seed Evaluation
+======================================================================
+
+  Seed 42
+    TransE ... MRR=0.2529  H@10=0.5300  GDA_MRR=0.3099  (803s)
+    DotProduct ... MRR=0.2193  H@10=0.4440  GDA_MRR=0.1288  (821s)
+    R-GCN ... MRR=0.2944  H@10=0.5380  GDA_MRR=0.4502  (3109s)
+
+  Seed 123
+    TransE ... MRR=0.2643  H@10=0.5840  GDA_MRR=0.3424  (1576s)
+    DotProduct ... MRR=0.2184  H@10=0.4260  GDA_MRR=0.2262  (732s)
+    R-GCN ... MRR=0.3030  H@10=0.5740  GDA_MRR=0.3060  (2879s)
+
+======================================================================
+PART 2: Ablation Study (R-GCN)
+======================================================================
+
+  Combined:
+    Seed 42 (505,329 train triples) ... GDA MRR=0.3185  H@10=0.8540  (2861s)
+    Seed 123 (505,329 train triples) ... GDA MRR=0.3498  H@10=0.9020  (2773s)
+
+  Bio-only:
+    Seed 42 (79,408 train triples) ... GDA MRR=0.2969  H@10=0.9400  (435s)
+    Seed 123 (79,394 train triples) ... GDA MRR=0.3935  H@10=0.8240  (435s)
+
+  Env-only:
+    Seed 42 (425,948 train triples) ... GDA MRR=0.0971  H@10=0.2240  (2293s)
+    Seed 123 (425,960 train triples) ... GDA MRR=0.1382  H@10=0.1380  (2316s)
+
+======================================================================
+PART 3: Embedding Similarity Significance Test
+======================================================================
+  Observed mean Chemical-Disease similarity: 0.3469
+  Running 500 permutations ...
+  Random pair mean similarity: 0.4086 +/- 0.0295
+  p-value: 0.9800
+  Significant (p < 0.05): No
+
+Saving results ...
+  -> full_evaluation_results.json
+
+Generating thesis figures ...
+  -> figs/eval_multi_seed_overall.png
+  -> figs/eval_multi_seed_gda.png
+  -> figs/eval_ablation_gda.png
+  -> figs/eval_significance_test.png
+
+======================================================================
+SUMMARY
+======================================================================
+
+Multi-seed overall (mean +/- std):
+  TransE      MRR=0.2586+/-0.0057  H@10=0.5570+/-0.0270
+  DotProduct  MRR=0.2188+/-0.0004  H@10=0.4350+/-0.0090
+  R-GCN       MRR=0.2987+/-0.0043  H@10=0.5560+/-0.0180
+
+Multi-seed GDA -> Disease (mean +/- std):
+  TransE      MRR=0.3262+/-0.0163  H@10=0.8776+/-0.0315
+  DotProduct  MRR=0.1775+/-0.0487  H@10=0.2571+/-0.0429
+  R-GCN       MRR=0.3781+/-0.0721  H@10=0.9199+/-0.0032
+
+Ablation (GDA -> Disease MRR, R-GCN):
+  Combined      MRR=0.3341+/-0.0156
+  Bio-only      MRR=0.3452+/-0.0483
+  Env-only      MRR=0.1177+/-0.0205
+
+Significance test:
+  Observed Chemical-Disease similarity: 0.3469
+  Random pairs: 0.4086+/-0.0295
+  p-value: 0.9800
+======================================================================
