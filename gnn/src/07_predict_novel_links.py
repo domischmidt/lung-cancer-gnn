@@ -47,15 +47,30 @@ FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 
+# Default architecture; overridden by best_config.json if available
 HIDDEN_DIM = 128
 NUM_LAYERS = 4
 NUM_BASES = 6
 DROPOUT = 0.2
+
+_config_path = PROCESSED_DIR / "best_config.json"
+if _config_path.exists():
+    with open(_config_path) as _f:
+        _cfg = json.load(_f)
+    HIDDEN_DIM = _cfg.get("hidden_dim", HIDDEN_DIM)
+    NUM_LAYERS = _cfg.get("num_layers", NUM_LAYERS)
+    NUM_BASES = _cfg.get("num_bases", NUM_BASES)
+    DROPOUT = _cfg.get("dropout", DROPOUT)
+    print(f"[Config] Loaded R-GCN architecture from best_config.json: "
+          f"hidden={HIDDEN_DIM}, layers={NUM_LAYERS}, bases={NUM_BASES}, dropout={DROPOUT}")
 TOP_K = 50
 MAX_PER_TAIL = 3       # diversity: max predictions per unique tail entity
 MAX_CANDIDATES = 500_000
 
 # Relations where novel predictions are meaningful
+# Keep only biomedical discovery-oriented relations.
+# Exclude administrative / measurement-completion relations such as
+# CLA -> Region/Country and VitalStats -> Region/Country.
 DISCOVERY_RELATIONS = {
     "GeneDiseaseAssociation__associated_with__Disease",
     "VariantDiseaseAssociation__variant_of__Disease",
@@ -63,11 +78,6 @@ DISCOVERY_RELATIONS = {
     "Disease__has_fusion__GeneFusion",
     "Disease__has_rearrangement__ChromoRearr",
     "Biomarker__marker_for__Disease",
-    "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion",
-    "ChemicalLocationAssociation__refers_to__GeographicRegion",
-    "Disease__detected_finding__VitalStatistics",
-    "VitalStatistics__part_of__GeographicRegion",
-    "VitalStatistics__part_of__Country",
 }
 
 RELATION_DISPLAY = {

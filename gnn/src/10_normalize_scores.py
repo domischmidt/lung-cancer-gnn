@@ -35,10 +35,22 @@ FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 SEED = 42
 
+# Default architecture; overridden by best_config.json if available
 HIDDEN_DIM = 128
 NUM_LAYERS = 4
 NUM_BASES = 6
 DROPOUT = 0.2
+
+_config_path = PROCESSED_DIR / "best_config.json"
+if _config_path.exists():
+    with open(_config_path) as _f:
+        _cfg = json.load(_f)
+    HIDDEN_DIM = _cfg.get("hidden_dim", HIDDEN_DIM)
+    NUM_LAYERS = _cfg.get("num_layers", NUM_LAYERS)
+    NUM_BASES = _cfg.get("num_bases", NUM_BASES)
+    DROPOUT = _cfg.get("dropout", DROPOUT)
+    print(f"[Config] Loaded R-GCN architecture from best_config.json: "
+          f"hidden={HIDDEN_DIM}, layers={NUM_LAYERS}, bases={NUM_BASES}, dropout={DROPOUT}")
 N_RANDOM_FALSE = 1000
 
 # Key relations to show in the validation figure
@@ -182,7 +194,7 @@ def main():
             h = edge_index[0, mask].to(DEVICE)
             t = edge_index[1, mask].to(DEVICE)
             r = torch.full((h.size(0),), r_idx, dtype=torch.long, device=DEVICE)
-            scores = model.decode(z, h, r, t).cpu().numpy()
+            scores = torch.sigmoid(model.decode(z, h, r, t)).cpu().numpy()
             known_scores_per_rel[edge_type_names[r_idx]] = scores
             display = RELATION_DISPLAY.get(edge_type_names[r_idx], edge_type_names[r_idx])
             print(f"  {display}: {len(scores):,} TRUE, "
@@ -216,7 +228,7 @@ def main():
             h = torch.tensor(random_h, dtype=torch.long, device=DEVICE)
             t = torch.tensor(random_t, dtype=torch.long, device=DEVICE)
             r = torch.full((len(random_h),), r_idx, dtype=torch.long, device=DEVICE)
-            scores = model.decode(z, h, r, t).cpu().numpy()
+            scores = torch.sigmoid(model.decode(z, h, r, t)).cpu().numpy()
             random_scores_per_rel[rel_key] = scores
             display = RELATION_DISPLAY.get(rel_key, rel_key)
             print(f"  {display}: {len(scores)} FALSE, "
@@ -320,7 +332,7 @@ def main():
 
                 validated[rel_key].append({
                     **pred,
-                    "raw_score": score,
+                    "normalized_score": score,
                     "pct_above_true": round(pct_true, 1),
                     "pct_above_false": round(pct_false, 1),
                     "above_false_p95": score > false_p95,
@@ -359,7 +371,7 @@ def main():
                     label=f"Known true (n={len(true_arr):,})", density=True)
 
             if rel in validated:
-                top_scores = sorted([p["raw_score"] for p in validated[rel]], reverse=True)[:5]
+                top_scores = sorted([p.get("normalized_score", p.get("raw_score", 0)) for p in validated[rel]], reverse=True)[:5]
                 for s in top_scores:
                     ax.axvline(s, color="#2ca02c", linestyle="--", linewidth=1.5, alpha=0.85)
                 if top_scores:
@@ -367,7 +379,7 @@ def main():
                                label="Top 5 novel predictions")
 
             ax.set_title(display, fontsize=10, fontweight="bold")
-            ax.set_xlabel("DistMult score")
+            ax.set_xlabel("Sigmoid-normalized R-GCN score")
             ax.set_ylabel("Density")
             ax.legend(fontsize=7)
             ax.grid(True, alpha=0.3)
@@ -412,7 +424,7 @@ def main():
             for i, p in enumerate(validated[rel][:5], 1):
                 disp = p.get("display", f"{p.get('src_label', '?')} -> {p.get('dst_label', '?')}")
                 print(f"    {i}. {disp[:40]:<40s} "
-                      f"score={p['raw_score']:.3f}  "
+                      f"score={p.get('normalized_score', p.get('raw_score', 0)):.3f}  "
                       f"vs_false={p['pct_above_false']:>5.1f}%  "
                       f"vs_true={p['pct_above_true']:>5.1f}%  "
                       f"[{p['confidence_label']}]")
