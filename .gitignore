@@ -69,3 +69,4 @@ env_data/data/processed/graph_EEA.ttl
 
 # Trained model weights (regenerate via training)
 gnn/data/processed/*.pt
+gnn/data/processed/stability/*/rgcn_weights.pt
