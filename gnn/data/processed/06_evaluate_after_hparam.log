@@ -1,0 +1,59 @@
+======================================================================
+05_evaluate.py
+======================================================================
+
+[1/3] Loading results ...
+Loaded results for: TransE, DotProduct, R-GCN
+
+================================================================================
+OVERALL RESULTS
+================================================================================
+Model             MRR      H@1      H@3     H@10
+------------------------------------------------
+TransE         0.2466   0.1280   0.2720   0.5360
+DotProduct     0.2359   0.1300   0.2400   0.5360
+R-GCN          0.2863   0.1820   0.3080   0.5500
+
+GDA -> DISEASE (key relation)
+Model             MRR      H@1      H@3     H@10      n
+------------------------------------------------------
+TransE         0.2470   0.0909   0.1818   0.6364     11
+DotProduct     0.4119   0.3000   0.3000   0.9000     10
+R-GCN          0.2648   0.0909   0.2727   0.9091     11
+
+================================================================================
+PER-RELATION MRR
+================================================================================
+Relation                                 TransE  DotProduct       R-GCN
+-----------------------------------------------------------------------
+CLA - Year                               0.1815      0.1983      0.2057
+CLA - Chemical                           0.4588      0.4255      0.5455
+CLA - City                               0.0043      0.0016      0.0040
+CLA - Region                             0.0032      0.0073      0.0419
+Disease - VitalStats                     1.0000      1.0000      1.0000
+Disease - GeneFusion                     0.0051      0.0005      0.3339
+Disease - ChromoRearr                       ---      0.0024         ---
+GDA - Disease                            0.2470      0.4119      0.2648
+Gene - GDA                               0.0001      0.0001      0.5718
+Gene - Pathway                           0.2535      0.3569      0.1304
+City - Country                           0.4518         ---      0.1419
+Variant - VDA                            0.2460         ---         ---
+VitalStats - People                      0.2058      0.2341      0.3183
+VitalStats - Year                        0.1156      0.1381      0.0766
+VitalStats - Country                     0.1425      0.0764      0.4098
+VitalStats - Region                      0.0363      0.0108      0.0603
+
+[2/3] Writing results table ...
+
+  -> /workspace/lung-cancer-gnn/gnn/data/processed/final_results_table.csv
+
+[3/3] Generating thesis figures ...
+  -> figs/final_overall_comparison.png
+  -> figs/final_gda_focus.png
+  -> figs/final_mrr_heatmap.png
+  -> figs/final_bio_vs_env.png
+  -> figs/final_radar.png
+
+======================================================================
+All figures and tables generated.
+======================================================================

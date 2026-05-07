@@ -1,0 +1,107 @@
+{
+  "overall": {
+    "mrr": 0.28632905554744176,
+    "hits@1": 0.182,
+    "hits@3": 0.308,
+    "hits@10": 0.55,
+    "n": 500
+  },
+  "ChemicalLocationAssociation__has_time_boundary__CalendarYear": {
+    "mrr": 0.2057358036603362,
+    "hits@1": 0.05454545454545454,
+    "hits@3": 0.18181818181818182,
+    "hits@10": 0.6545454545454545,
+    "n": 110
+  },
+  "GeneDiseaseAssociation__associated_with__Disease": {
+    "mrr": 0.2647940443394989,
+    "hits@1": 0.09090909090909091,
+    "hits@3": 0.2727272727272727,
+    "hits@10": 0.9090909090909091,
+    "n": 11
+  },
+  "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion": {
+    "mrr": 0.003983655747976924,
+    "hits@1": 0.0,
+    "hits@3": 0.0,
+    "hits@10": 0.009523809523809525,
+    "n": 105
+  },
+  "ChemicalLocationAssociation__refers_to__Chemical": {
+    "mrr": 0.5454861111111111,
+    "hits@1": 0.34615384615384615,
+    "hits@3": 0.6442307692307693,
+    "hits@10": 1.0,
+    "n": 104
+  },
+  "VitalStatistics__has_time_boundary__CalendarYear": {
+    "mrr": 0.07664358185980777,
+    "hits@1": 0.0,
+    "hits@3": 0.0,
+    "hits@10": 0.24,
+    "n": 25
+  },
+  "Gene__in_pathway__Pathway": {
+    "mrr": 0.13037233551474786,
+    "hits@1": 0.02702702702702703,
+    "hits@3": 0.1891891891891892,
+    "hits@10": 0.32432432432432434,
+    "n": 37
+  },
+  "Disease__detected_finding__VitalStatistics": {
+    "mrr": 1.0,
+    "hits@1": 1.0,
+    "hits@3": 1.0,
+    "hits@10": 1.0,
+    "n": 35
+  },
+  "VitalStatistics__has_output__People": {
+    "mrr": 0.31832613908541013,
+    "hits@1": 0.2,
+    "hits@3": 0.4,
+    "hits@10": 0.55,
+    "n": 20
+  },
+  "ChemicalLocationAssociation__refers_to__GeographicRegion": {
+    "mrr": 0.04194771117575125,
+    "hits@1": 0.0,
+    "hits@3": 0.1111111111111111,
+    "hits@10": 0.1111111111111111,
+    "n": 9
+  },
+  "Gene__has_association__GeneDiseaseAssociation": {
+    "mrr": 0.5717592592592592,
+    "hits@1": 0.4166666666666667,
+    "hits@3": 0.6666666666666666,
+    "hits@10": 0.9166666666666666,
+    "n": 12
+  },
+  "Disease__has_fusion__GeneFusion": {
+    "mrr": 0.3338818071999199,
+    "hits@1": 0.3333333333333333,
+    "hits@3": 0.3333333333333333,
+    "hits@10": 0.3333333333333333,
+    "n": 3
+  },
+  "VitalStatistics__part_of__GeographicRegion": {
+    "mrr": 0.06025357488934749,
+    "hits@1": 0.0,
+    "hits@3": 0.05263157894736842,
+    "hits@10": 0.21052631578947367,
+    "n": 19
+  },
+  "GeoPoliticalRegion__part_of__Country": {
+    "mrr": 0.1418888888888889,
+    "hits@1": 0.0,
+    "hits@3": 0.2,
+    "hits@10": 0.8,
+    "n": 5
+  },
+  "VitalStatistics__part_of__Country": {
+    "mrr": 0.4098039215686275,
+    "hits@1": 0.3333333333333333,
+    "hits@3": 0.3333333333333333,
+    "hits@10": 0.6666666666666666,
+    "n": 3
+  }
+}

@@ -1,0 +1,51 @@
+rank,Disease_label,Disease_uri,ChromoRearr_label,ChromoRearr_uri,confidence
+1,Squamous cell carcinoma of lung,lucia:disease/C0149782,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.6619
+2,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,del(4)(p16p16),lucia:chromo_rearr/del(4)(p16p16),0.5485
+3,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,der(15)(q14),lucia:chromo_rearr/der(15)(q14),0.2971
+4,Fetal adenocarcinoma of lung,lucia:disease/C1708045,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.2556
+5,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.1978
+6,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(15;15)(q25;q25),lucia:chromo_rearr/t(15;15)(q25;q25),0.0029
+7,Squamous cell carcinoma of lung,lucia:disease/C0149782,der(10)(q11),lucia:chromo_rearr/der(10)(q11),0.0025
+8,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(6;6)(p12;p12),lucia:chromo_rearr/t(6;6)(p12;p12),0.0022
+9,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(7;12)(q11;q14),lucia:chromo_rearr/t(7;12)(q11;q14),0.0021
+10,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(1;1)(p35;p35),lucia:chromo_rearr/t(1;1)(p35;p35),0.0019
+11,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(11;11)(p11;q23),lucia:chromo_rearr/t(11;11)(p11;q23),0.0018
+12,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(6;17)(p21;q21),lucia:chromo_rearr/t(6;17)(p21;q21),0.0017
+13,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(6;6)(q22;q22),lucia:chromo_rearr/t(6;6)(q22;q22),0.0017
+14,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(21;21)(q22;q22),lucia:chromo_rearr/t(21;21)(q22;q22),0.0016
+15,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(7;7)(q21;q21),lucia:chromo_rearr/t(7;7)(q21;q21),0.0014
+16,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(5;22)(q11;q13),lucia:chromo_rearr/t(5;22)(q11;q13),0.0014
+17,Squamous cell carcinoma of lung,lucia:disease/C0149782,t(15;15)(q14;q15),lucia:chromo_rearr/t(15;15)(q14;q15),0.0014
+18,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(12;12)(p12;p12),lucia:chromo_rearr/t(12;12)(p12;p12),0.0013
+19,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(14;14)(q23;q23),lucia:chromo_rearr/t(14;14)(q23;q23),0.0013
+20,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(10;10)(q26;q26),lucia:chromo_rearr/t(10;10)(q26;q26),0.0013
+21,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(16;16)(p11;p12),lucia:chromo_rearr/t(16;16)(p11;p12),0.0013
+22,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(6;20)(q22;q13),lucia:chromo_rearr/t(6;20)(q22;q13),0.0013
+23,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(12;12)(q23;q24),lucia:chromo_rearr/t(12;12)(q23;q24),0.0012
+24,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(17;17)(q11;q21),lucia:chromo_rearr/t(17;17)(q11;q21),0.0012
+25,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(20;20)(q11;q11),lucia:chromo_rearr/t(20;20)(q11;q11),0.0012
+26,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(11;11)(p11;p13),lucia:chromo_rearr/t(11;11)(p11;p13),0.0012
+27,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(20;20)(p12;p13),lucia:chromo_rearr/t(20;20)(p12;p13),0.0011
+28,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(6;6)(p21;p21),lucia:chromo_rearr/t(6;6)(p21;p21),0.0011
+29,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(18;18)(q11;q11),lucia:chromo_rearr/t(18;18)(q11;q11),0.0011
+30,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(18;18)(p11;q22),lucia:chromo_rearr/t(18;18)(p11;q22),0.0011
+31,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(2;2)(p23;q37),lucia:chromo_rearr/t(2;2)(p23;q37),0.0011
+32,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(11;11)(q13;q23),lucia:chromo_rearr/t(11;11)(q13;q23),0.0011
+33,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(16;16)(p13;q22),lucia:chromo_rearr/t(16;16)(p13;q22),0.0011
+34,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(17;17)(q22;q25),lucia:chromo_rearr/t(17;17)(q22;q25),0.0011
+35,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(14;14)(q32;q32),lucia:chromo_rearr/t(14;14)(q32;q32),0.0011
+36,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(17;17)(q23;q23),lucia:chromo_rearr/t(17;17)(q23;q23),0.0011
+37,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(17;17)(q24;q24),lucia:chromo_rearr/t(17;17)(q24;q24),0.001
+38,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,inv(10)(p11q11),lucia:chromo_rearr/inv(10)(p11q11),0.001
+39,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(7;7)(q21;q22),lucia:chromo_rearr/t(7;7)(q21;q22),0.001
+40,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(17;17)(q23;q24),lucia:chromo_rearr/t(17;17)(q23;q24),0.001
+41,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(5;5)(p13;p15),lucia:chromo_rearr/t(5;5)(p13;p15),0.001
+42,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(3;3)(p25;p25),lucia:chromo_rearr/t(3;3)(p25;p25),0.001
+43,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(6;6)(q21;q25),lucia:chromo_rearr/t(6;6)(q21;q25),0.001
+44,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(2;2)(q13;q13),lucia:chromo_rearr/t(2;2)(q13;q13),0.001
+45,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(10;10)(p11;q11),lucia:chromo_rearr/t(10;10)(p11;q11),0.001
+46,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(2;2)(q37;q37),lucia:chromo_rearr/t(2;2)(q37;q37),0.001
+47,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(8;9)(p12;p13),lucia:chromo_rearr/t(8;9)(p12;p13),0.001
+48,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(4;4)(q24;q24),lucia:chromo_rearr/t(4;4)(q24;q24),0.001
+49,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(12;12)(p11;p11),lucia:chromo_rearr/t(12;12)(p11;p11),0.0009
+50,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,t(20;20)(q11;q13),lucia:chromo_rearr/t(20;20)(q11;q13),0.0009
