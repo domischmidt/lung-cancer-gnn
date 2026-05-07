@@ -1,0 +1,77 @@
+======================================================================
+04_hyperparam_search.py (10 trials, 30 epochs each)
+======================================================================
+Device: cuda
+Objective: maximize GDA -> Disease MRR on validation set
+
+[1/4] Loading graph ...
+  206,151 nodes, 24 relations, 631,659 triples
+
+[2/4] Splitting data ...
+  Train: 505,329, Val: 63,165, Test: 63,165
+
+[3/4] Running Optuna search (10 trials) ...
+      epoch   1/30 loss=0.6187
+      epoch  20/30 loss=0.3969
+      epoch  30/30 loss=0.3736
+    Trial   0  layers=3 bases=2 hidden=128 dropout=0.35 lr=0.00105 neg=5 batch=1024  MRR=0.2897  GDA= 0.3142  (4883s)
+      epoch   1/30 loss=0.5779
+      epoch  20/30 loss=0.2490
+      epoch  30/30 loss=0.2027
+    Trial   1  layers=3 bases=6 hidden=192 dropout=0.05 lr=0.00031 neg=10 batch=1024  MRR=0.3256  GDA= 0.3985  (7833s)
+      epoch   1/30 loss=0.6478
+      epoch  20/30 loss=0.4440
+      epoch  30/30 loss=0.3822
+    Trial   2  layers=2 bases=6 hidden=192 dropout=0.30 lr=0.00033 neg=10 batch=4096  MRR=0.3183  GDA= 0.4008  (1740s)
+      epoch   1/30 loss=0.5904
+      epoch  20/30 loss=0.2487
+      epoch  30/30 loss=0.2216
+    Trial   3  layers=3 bases=6 hidden=128 dropout=0.10 lr=0.00444 neg=10 batch=4096  MRR=0.3055  GDA= 0.2543  (1610s)
+      epoch   1/30 loss=0.6488
+      epoch  20/30 loss=0.4347
+      epoch  30/30 loss=0.3632
+    Trial   4  layers=2 bases=6 hidden=128 dropout=0.15 lr=0.00030 neg=5 batch=4096  MRR=0.3216  GDA= 0.4100  (953s)
+      epoch   1/30 loss=0.6053
+      epoch  20/30 loss=0.3029
+      epoch  30/30 loss=0.2675
+    Trial   5  layers=4 bases=6 hidden=64 dropout=0.05 lr=0.00041 neg=10 batch=1024  MRR=0.2755  GDA= 0.3009  (3700s)
+      epoch   1/30 loss=0.5929
+      epoch  20/30 loss=0.3037
+      epoch  30/30 loss=0.2632
+    Trial   6  layers=3 bases=2 hidden=192 dropout=0.25 lr=0.00196 neg=10 batch=2048  MRR=0.3143  GDA= 0.1347  (4172s)
+      epoch   1/30 loss=0.6111
+      epoch  20/30 loss=0.3032
+      epoch  30/30 loss=0.2466
+    Trial   7  layers=3 bases=6 hidden=128 dropout=0.10 lr=0.00050 neg=5 batch=2048  MRR=0.2905  GDA= 0.3414  (2586s)
+      epoch   1/30 loss=0.6302
+      epoch  20/30 loss=0.3860
+      epoch  30/30 loss=0.3672
+    Trial   8  layers=4 bases=6 hidden=64 dropout=0.20 lr=0.00235 neg=5 batch=4096  MRR=0.2917  GDA= 0.2700  (952s)
+      epoch   1/30 loss=0.5975
+      epoch  20/30 loss=0.2832
+      epoch  30/30 loss=0.2521
+    Trial   9  layers=3 bases=2 hidden=128 dropout=0.15 lr=0.00400 neg=10 batch=4096  MRR=0.3098  GDA= 0.2637  (1340s)
+
+  Best valid trial: 4
+  Best objective MRR: 0.4100
+  Best config:
+    hidden_dim: 128
+    num_layers: 2
+    num_bases: 6
+    dropout: 0.15000000000000002
+    lr: 0.00030012301808980484
+    neg_ratio: 5
+    batch_size: 4096
+    epochs: 200
+
+[4/4] Saving results ...
+  -> best_config.json
+  -> hyperparam_search_results.json
+  -> figs/hyperparam_optimization_history.png
+  [SKIP] Could not compute parameter importances: Tried to import 'sklearn' but failed. Please make sure that the package is installed correctly to use this feature. Actual error: No module named 'sklearn'.
+
+======================================================================
+Hyperparameter search complete.
+Best config saved to best_config.json
+Run 05_train_rgcn.py to train with the best configuration.
+======================================================================

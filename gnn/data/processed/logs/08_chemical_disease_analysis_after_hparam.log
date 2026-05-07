@@ -1,0 +1,62 @@
+[Config] Loaded R-GCN architecture from best_config.json: hidden=128, layers=2, bases=6, dropout=0.15000000000000002
+======================================================================
+07_chemical_disease_analysis.py
+======================================================================
+
+[1/5] Loading model and embeddings ...
+
+[2/5] Embedding proximity analysis ...
+
+  Computing Chemical-Disease cosine similarities ...
+  Top 10 Chemical-Disease similarities:
+    PM10 (Cadmium)                 <-> Lung Neoplasms                            sim=+0.7764
+    PM10 (Cadmium)                 <-> Bronchioloalveolar Adenocarcinoma         sim=+0.7356
+    PM10 (Arsenic)                 <-> Lung Neoplasms                            sim=+0.7094
+    PM10 (Nickel)                  <-> Lung Neoplasms                            sim=+0.6851
+    PM10 (Nickel)                  <-> Bronchioloalveolar Adenocarcinoma         sim=+0.6661
+    PM10 (Arsenic)                 <-> Adenocarcinoma of lung (disorder)         sim=+0.6468
+    PM10 (Nickel)                  <-> Metaplasia                                sim=+0.6453
+    PM10 (Cadmium)                 <-> Metaplasia                                sim=+0.6412
+    PM10 (Cadmium)                 <-> stage, non-small cell lung cancer         sim=+0.6407
+    PM10 (Nickel)                  <-> Pulmonary Sclerosing Hemangioma           sim=+0.6388
+
+[3/5] Geographic correlation analysis ...
+  Exposure data: 48 countries
+  Mortality data: 34 countries
+
+  Computing geographic correlations ...
+    As_PM10                         r=+0.1080  (n=24)
+    BaP                             r=+0.1720  (n=12)
+    C6H6                            r=-0.0018  (n=24)
+    Cd_PM10                         r=-0.0269  (n=24)
+    NO2                             r=-0.1452  (n=32)
+    Ni_PM10                         r=-0.1004  (n=24)
+    O3                              r=-0.2086  (n=24)
+    PM10                            r=-0.1110  (n=32)
+    PM2.5                           r=-0.1435  (n=32)
+    Pb_PM10                         r=+0.4458  (n=24)
+
+[4/5] Risk region profiling ...
+
+  Identifying high-risk regions ...
+  8 high-risk countries (high exposure + high mortality):
+    NL     PM2.5=12.9  Mortality=134.8
+    HR     PM2.5=16.8  Mortality=130.4
+    HU     PM2.5=17.3  Mortality=126.8
+    PL     PM2.5=21.4  Mortality=118.6
+    RS     PM2.5=24.1  Mortality=113.3
+    IT     PM2.5=15.8  Mortality=120.7
+    SI     PM2.5=16.0  Mortality=118.4
+    LV     PM2.5=13.8  Mortality=113.3
+
+[5/5] Generating thesis figures ...
+  -> figs/crossdomain_embedding_similarity.png
+  -> figs/crossdomain_geographic_correlation.png
+  -> figs/crossdomain_correlation_summary.png
+  -> figs/crossdomain_risk_quadrant.png
+
+  -> chemical_disease_analysis.json
+
+======================================================================
+Cross-domain analysis complete.
+======================================================================
