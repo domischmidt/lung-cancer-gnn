@@ -1,0 +1,246 @@
+candidate,VariantDiseaseAssociation_label,Disease_label,appears_in_seeds,seeds,mean_rank,best_rank,mean_confidence,std_confidence
+VDA_rs140013431_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs140013431_C0149925,Non-Small Cell Lung Carcinoma,2,"42,1337",4.0,4,0.68405,0.019162593770155487
+VDA_rs3756668_C0149925 -> Large cell carcinoma of lung,VDA_rs3756668_C0149925,Large cell carcinoma of lung,2,"123,456",25.0,24,0.0017,0.0024041630560342614
+VDA_rs3124599_C0149925 -> Lung Carcinoma Metastatic in the Brain,VDA_rs3124599_C0149925,Lung Carcinoma Metastatic in the Brain,2,"42,789",12.5,12,0.0002,0.000282842712474619
+VDA_rs10023113_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs10023113_C0007131,Adenocarcinoma of lung (disorder),2,"456,789",11.0,8,0.0001,0.0001414213562373095
+VDA_rs3124599_C0149925 -> Adenocarcinoma of lung (disorder),VDA_rs3124599_C0149925,Adenocarcinoma of lung (disorder),2,"42,456",26.5,17,0.0,0.0
+VDA_rs17851045_C0007131 -> Small cell carcinoma of lung,VDA_rs17851045_C0007131,Small cell carcinoma of lung,1,42,1.0,1,0.8921,0.0
+VDA_rs1057519729_C0007131 -> Small cell carcinoma of lung,VDA_rs1057519729_C0007131,Small cell carcinoma of lung,1,42,2.0,2,0.8801,0.0
+VDA_rs727503094_C0007131 -> Small cell carcinoma of lung,VDA_rs727503094_C0007131,Small cell carcinoma of lung,1,42,3.0,3,0.863,0.0
+VDA_rs31490_C0007131 -> Small cell carcinoma of lung,VDA_rs31490_C0007131,Small cell carcinoma of lung,1,456,1.0,1,0.8538,0.0
+VDA_rs1131691014_C0007131 -> Small cell carcinoma of lung,VDA_rs1131691014_C0007131,Small cell carcinoma of lung,1,1337,1.0,1,0.7969,0.0
+VDA_rs30259_C0007131 -> Small cell carcinoma of lung,VDA_rs30259_C0007131,Small cell carcinoma of lung,1,1337,2.0,2,0.7837,0.0
+VDA_rs4134816_C0007131 -> Small cell carcinoma of lung,VDA_rs4134816_C0007131,Small cell carcinoma of lung,1,1337,3.0,3,0.7313,0.0
+VDA_rs761032372_C0007131 -> Small cell carcinoma of lung,VDA_rs761032372_C0007131,Small cell carcinoma of lung,1,456,2.0,2,0.7246,0.0
+VDA_rs1535045_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs1535045_C0149925,Non-Small Cell Lung Carcinoma,1,456,3.0,3,0.7124,0.0
+VDA_rs3756668_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs3756668_C0149925,Non-Small Cell Lung Carcinoma,1,123,1.0,1,0.6813,0.0
+VDA_rs731236_C0007131 -> Small cell carcinoma of lung,VDA_rs731236_C0007131,Small cell carcinoma of lung,1,123,2.0,2,0.6753,0.0
+VDA_rs758272654_C0007131 -> Small cell carcinoma of lung,VDA_rs758272654_C0007131,Small cell carcinoma of lung,1,456,4.0,4,0.6559,0.0
+VDA_rs11571833_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs11571833_C0149925,Non-Small Cell Lung Carcinoma,1,456,5.0,5,0.6538,0.0
+VDA_rs1778335_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs1778335_C0149925,Non-Small Cell Lung Carcinoma,1,42,5.0,5,0.6535,0.0
+VDA_rs116427960_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs116427960_C0149925,Non-Small Cell Lung Carcinoma,1,42,6.0,6,0.6524,0.0
+VDA_rs1360583020_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs1360583020_C0149925,Non-Small Cell Lung Carcinoma,1,1337,5.0,5,0.6484,0.0
+VDA_rs1023835002_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs1023835002_C0149925,Non-Small Cell Lung Carcinoma,1,1337,6.0,6,0.644,0.0
+VDA_rs56113850_C0007131 -> Small cell carcinoma of lung,VDA_rs56113850_C0007131,Small cell carcinoma of lung,1,789,1.0,1,0.618,0.0
+VDA_rs1045494_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs1045494_C0149925,Non-Small Cell Lung Carcinoma,1,789,2.0,2,0.588,0.0
+VDA_rs717620_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs717620_C0149925,Non-Small Cell Lung Carcinoma,1,456,6.0,6,0.5767,0.0
+VDA_rs1200399_C0007131 -> Small cell carcinoma of lung,VDA_rs1200399_C0007131,Small cell carcinoma of lung,1,789,3.0,3,0.5527,0.0
+VDA_rs397516982_C0007131 -> Small cell carcinoma of lung,VDA_rs397516982_C0007131,Small cell carcinoma of lung,1,123,3.0,3,0.5102,0.0
+VDA_rs1805388_C0007131 -> Small cell carcinoma of lung,VDA_rs1805388_C0007131,Small cell carcinoma of lung,1,789,4.0,4,0.4968,0.0
+VDA_rs104886003_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs104886003_C0149925,Non-Small Cell Lung Carcinoma,1,789,5.0,5,0.4903,0.0
+VDA_rs1138272_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs1138272_C0149925,Non-Small Cell Lung Carcinoma,1,789,6.0,6,0.4784,0.0
+VDA_rs2228001_C0007131 -> Small cell carcinoma of lung,VDA_rs2228001_C0007131,Small cell carcinoma of lung,1,123,4.0,4,0.3694,0.0
+VDA_rs121913682_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs121913682_C0149925,Non-Small Cell Lung Carcinoma,1,123,5.0,5,0.1631,0.0
+VDA_rs1454328441_C0149925 -> Non-Small Cell Lung Carcinoma,VDA_rs1454328441_C0149925,Non-Small Cell Lung Carcinoma,1,123,6.0,6,0.1259,0.0
+VDA_rs2032582_C0149925 -> Lung cancer panel,VDA_rs2032582_C0149925,Lung cancer panel,1,42,7.0,7,0.0274,0.0
+VDA_rs1045642_C0149925 -> Hyperplasia,VDA_rs1045642_C0149925,Hyperplasia,1,123,7.0,7,0.0247,0.0
+VDA_rs11571833_C0149925 -> Lung Neoplasms,VDA_rs11571833_C0149925,Lung Neoplasms,1,123,8.0,8,0.019,0.0
+VDA_rs758272654_C0007131 -> Lung Carcinoma Metastatic in the Brain,VDA_rs758272654_C0007131,Lung Carcinoma Metastatic in the Brain,1,123,9.0,9,0.0166,0.0
+VDA_rs786201059_C0149925 -> Large cell carcinoma of lung,VDA_rs786201059_C0149925,Large cell carcinoma of lung,1,123,10.0,10,0.0156,0.0
+VDA_rs11045585_C0007131 -> Lung Carcinoma Metastatic in the Brain,VDA_rs11045585_C0007131,Lung Carcinoma Metastatic in the Brain,1,123,11.0,11,0.0154,0.0
+VDA_rs3756668_C0149925 -> Lung Neoplasms,VDA_rs3756668_C0149925,Lung Neoplasms,1,123,12.0,12,0.0154,0.0
+VDA_rs1360583020_C0149925 -> Lung cancer panel,VDA_rs1360583020_C0149925,Lung cancer panel,1,42,8.0,8,0.0126,0.0
+VDA_rs8049634_C0149925 -> Lung cancer panel,VDA_rs8049634_C0149925,Lung cancer panel,1,42,9.0,9,0.0123,0.0
+VDA_rs11571833_C0149925 -> Lung cancer panel,VDA_rs11571833_C0149925,Lung cancer panel,1,123,13.0,13,0.01,0.0
+"VDA_rs3756668_C0149925 -> Adenocarcinoma, Oxyphilic",VDA_rs3756668_C0149925,"Adenocarcinoma, Oxyphilic",1,123,14.0,14,0.0086,0.0
+VDA_rs1057519858_C0007131 -> Lung Carcinoma Metastatic in the Brain,VDA_rs1057519858_C0007131,Lung Carcinoma Metastatic in the Brain,1,123,15.0,15,0.007,0.0
+VDA_rs121909224_C0149925 -> Hyperplasia,VDA_rs121909224_C0149925,Hyperplasia,1,123,16.0,16,0.0064,0.0
+VDA_rs2395655_C0007131 -> Lung Neoplasms,VDA_rs2395655_C0007131,Lung Neoplasms,1,123,17.0,17,0.0053,0.0
+VDA_rs121909224_C0149925 -> Bronchioloalveolar Adenocarcinoma,VDA_rs121909224_C0149925,Bronchioloalveolar Adenocarcinoma,1,123,18.0,18,0.0041,0.0
+VDA_rs397516435_C0149925 -> Large cell carcinoma of lung,VDA_rs397516435_C0149925,Large cell carcinoma of lung,1,123,19.0,19,0.0041,0.0
+VDA_rs11571833_C0149925 -> Bronchioloalveolar Adenocarcinoma,VDA_rs11571833_C0149925,Bronchioloalveolar Adenocarcinoma,1,123,20.0,20,0.0041,0.0
+VDA_rs717620_C0149925 -> Bronchioloalveolar Adenocarcinoma,VDA_rs717620_C0149925,Bronchioloalveolar Adenocarcinoma,1,123,21.0,21,0.0039,0.0
+VDA_rs1458974438_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs1458974438_C0007131,Adenocarcinoma of lung (disorder),1,123,22.0,22,0.0037,0.0
+"VDA_rs3756668_C0149925 -> Carcinoma, Spindle-Cell",VDA_rs3756668_C0149925,"Carcinoma, Spindle-Cell",1,123,23.0,23,0.0034,0.0
+VDA_rs121912470_C0007131 -> Malignant neoplasm of lung,VDA_rs121912470_C0007131,Malignant neoplasm of lung,1,456,7.0,7,0.0021,0.0
+VDA_rs121909224_C0149925 -> Metaplasia,VDA_rs121909224_C0149925,Metaplasia,1,123,25.0,25,0.0017,0.0
+VDA_rs758272654_C0007131 -> Lung cancer panel,VDA_rs758272654_C0007131,Lung cancer panel,1,123,26.0,26,0.0014,0.0
+VDA_rs2395655_C0007131 -> Lung cancer panel,VDA_rs2395655_C0007131,Lung cancer panel,1,123,27.0,27,0.0013,0.0
+"VDA_rs2395655_C0007131 -> Adenocarcinoma, Oxyphilic",VDA_rs2395655_C0007131,"Adenocarcinoma, Oxyphilic",1,123,28.0,28,0.0012,0.0
+VDA_rs11571833_C0149925 -> Metaplasia,VDA_rs11571833_C0149925,Metaplasia,1,123,29.0,29,0.0011,0.0
+VDA_rs2032582_C0149925 -> Bronchioloalveolar Adenocarcinoma,VDA_rs2032582_C0149925,Bronchioloalveolar Adenocarcinoma,1,42,10.0,10,0.0008,0.0
+VDA_rs1057519927_C0149925 -> Squamous cell carcinoma of lung,VDA_rs1057519927_C0149925,Squamous cell carcinoma of lung,1,789,7.0,7,0.0007,0.0
+"VDA_rs758272654_C0007131 -> stage, non-small cell lung cancer",VDA_rs758272654_C0007131,"stage, non-small cell lung cancer",1,123,30.0,30,0.0007,0.0
+VDA_rs3124599_C0149925 -> Bronchioloalveolar Adenocarcinoma,VDA_rs3124599_C0149925,Bronchioloalveolar Adenocarcinoma,1,42,11.0,11,0.0006,0.0
+VDA_rs4759314_C0149925 -> Hyperplasia,VDA_rs4759314_C0149925,Hyperplasia,1,123,31.0,31,0.0006,0.0
+VDA_rs717620_C0149925 -> Metaplasia,VDA_rs717620_C0149925,Metaplasia,1,123,32.0,32,0.0006,0.0
+"VDA_rs121913682_C0007131 -> Adenocarcinoma, Oxyphilic",VDA_rs121913682_C0007131,"Adenocarcinoma, Oxyphilic",1,123,33.0,33,0.0006,0.0
+"VDA_rs2395655_C0007131 -> Carcinoma, Spindle-Cell",VDA_rs2395655_C0007131,"Carcinoma, Spindle-Cell",1,123,34.0,34,0.0005,0.0
+VDA_rs2032582_C0149925 -> Lung Carcinoma Metastatic in the Brain,VDA_rs2032582_C0149925,Lung Carcinoma Metastatic in the Brain,1,42,13.0,13,0.0004,0.0
+VDA_rs758272654_C0007131 -> Pulmonary Sclerosing Hemangioma,VDA_rs758272654_C0007131,Pulmonary Sclerosing Hemangioma,1,123,35.0,35,0.0003,0.0
+VDA_rs1416580204_C0007131 -> Malignant neoplasm of lung,VDA_rs1416580204_C0007131,Malignant neoplasm of lung,1,789,8.0,8,0.0002,0.0
+VDA_rs77375493_C0007131 -> Malignant neoplasm of lung,VDA_rs77375493_C0007131,Malignant neoplasm of lung,1,789,9.0,9,0.0002,0.0
+VDA_rs121909229_C0149925 -> Lung Carcinoma Metastatic in the Brain,VDA_rs121909229_C0149925,Lung Carcinoma Metastatic in the Brain,1,42,14.0,14,0.0002,0.0
+"VDA_rs2032582_C0149925 -> stage, non-small cell lung cancer",VDA_rs2032582_C0149925,"stage, non-small cell lung cancer",1,42,15.0,15,0.0002,0.0
+VDA_rs1057519927_C0149925 -> Bronchioloalveolar Adenocarcinoma,VDA_rs1057519927_C0149925,Bronchioloalveolar Adenocarcinoma,1,42,16.0,16,0.0002,0.0
+VDA_rs121909224_C0149925 -> Carcinoid tumor of lung,VDA_rs121909224_C0149925,Carcinoid tumor of lung,1,123,36.0,36,0.0002,0.0
+VDA_rs3756668_C0149925 -> Proteus Syndrome,VDA_rs3756668_C0149925,Proteus Syndrome,1,123,37.0,37,0.0002,0.0
+VDA_rs1057519989_C0149925 -> Squamous cell carcinoma of lung,VDA_rs1057519989_C0149925,Squamous cell carcinoma of lung,1,123,38.0,38,0.0002,0.0
+VDA_rs74799832_C0149925 -> Squamous cell carcinoma of lung,VDA_rs74799832_C0149925,Squamous cell carcinoma of lung,1,123,39.0,39,0.0002,0.0
+VDA_rs55768116_C0007131 -> Lung Neoplasms,VDA_rs55768116_C0007131,Lung Neoplasms,1,1337,7.0,7,0.0001,0.0
+VDA_rs1333049_C0149925 -> Lung Neoplasms,VDA_rs1333049_C0149925,Lung Neoplasms,1,1337,8.0,8,0.0001,0.0
+VDA_rs1026411_C0007131 -> Malignant neoplasm of lung,VDA_rs1026411_C0007131,Malignant neoplasm of lung,1,456,9.0,9,0.0001,0.0
+VDA_rs1799966_C0007131 -> Malignant neoplasm of lung,VDA_rs1799966_C0007131,Malignant neoplasm of lung,1,789,10.0,10,0.0001,0.0
+VDA_rs3218536_C0007131 -> Malignant neoplasm of lung,VDA_rs3218536_C0007131,Malignant neoplasm of lung,1,456,10.0,10,0.0001,0.0
+VDA_rs1360583020_C0149925 -> Lung Carcinoma Metastatic in the Brain,VDA_rs1360583020_C0149925,Lung Carcinoma Metastatic in the Brain,1,789,11.0,11,0.0001,0.0
+"VDA_rs854560_C0007131 -> Adenocarcinoma, Oxyphilic",VDA_rs854560_C0007131,"Adenocarcinoma, Oxyphilic",1,42,17.0,17,0.0001,0.0
+VDA_rs1045642_C0149925 -> Carcinoid tumor of lung,VDA_rs1045642_C0149925,Carcinoid tumor of lung,1,123,40.0,40,0.0001,0.0
+VDA_rs74799832_C0149925 -> Malignant neoplasm of lung,VDA_rs74799832_C0149925,Malignant neoplasm of lung,1,123,41.0,41,0.0001,0.0
+"VDA_rs758272654_C0007131 -> Carcinoma, Spindle-Cell",VDA_rs758272654_C0007131,"Carcinoma, Spindle-Cell",1,123,42.0,42,0.0001,0.0
+VDA_rs121909224_C0149925 -> Lymphoepithelial carcinoma,VDA_rs121909224_C0149925,Lymphoepithelial carcinoma,1,123,43.0,43,0.0001,0.0
+VDA_rs1394960893_C0007131 -> Malignant neoplasm of lung,VDA_rs1394960893_C0007131,Malignant neoplasm of lung,1,123,44.0,44,0.0001,0.0
+VDA_rs11045585_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs11045585_C0007131,Adenocarcinoma of lung (disorder),1,123,45.0,45,0.0001,0.0
+VDA_rs13173911_C0007131 -> Malignant neoplasm of lung,VDA_rs13173911_C0007131,Malignant neoplasm of lung,1,1337,9.0,9,0.0,0.0
+VDA_rs1800975_C0007131 -> Malignant neoplasm of lung,VDA_rs1800975_C0007131,Malignant neoplasm of lung,1,1337,10.0,10,0.0,0.0
+"VDA_rs3124599_C0149925 -> Adenocarcinoma, Oxyphilic",VDA_rs3124599_C0149925,"Adenocarcinoma, Oxyphilic",1,456,11.0,11,0.0,0.0
+VDA_rs7897947_C0007131 -> Lung Neoplasms,VDA_rs7897947_C0007131,Lung Neoplasms,1,1337,11.0,11,0.0,0.0
+VDA_rs121913274_C0149925 -> Lung Carcinoma Metastatic in the Brain,VDA_rs121913274_C0149925,Lung Carcinoma Metastatic in the Brain,1,789,12.0,12,0.0,0.0
+VDA_rs3756712_C0007131 -> Malignant neoplasm of lung,VDA_rs3756712_C0007131,Malignant neoplasm of lung,1,1337,12.0,12,0.0,0.0
+VDA_rs4353229_C0149925 -> Lung Neoplasms,VDA_rs4353229_C0149925,Lung Neoplasms,1,456,12.0,12,0.0,0.0
+VDA_rs1333049_C0149925 -> Adenocarcinoma of lung (disorder),VDA_rs1333049_C0149925,Adenocarcinoma of lung (disorder),1,1337,13.0,13,0.0,0.0
+"VDA_rs3124599_C0149925 -> Carcinoma, Spindle-Cell",VDA_rs3124599_C0149925,"Carcinoma, Spindle-Cell",1,456,13.0,13,0.0,0.0
+VDA_rs10937405_C0149925 -> Lung Neoplasms,VDA_rs10937405_C0149925,Lung Neoplasms,1,456,14.0,14,0.0,0.0
+VDA_rs1333049_C0149925 -> Lung cancer panel,VDA_rs1333049_C0149925,Lung cancer panel,1,1337,14.0,14,0.0,0.0
+"VDA_rs121913274_C0149925 -> Carcinoma, Spindle-Cell",VDA_rs121913274_C0149925,"Carcinoma, Spindle-Cell",1,789,15.0,15,0.0,0.0
+VDA_rs1333049_C0149925 -> Lung Carcinoma Metastatic in the Brain,VDA_rs1333049_C0149925,Lung Carcinoma Metastatic in the Brain,1,1337,15.0,15,0.0,0.0
+VDA_rs6790167_C0149925 -> Lung Neoplasms,VDA_rs6790167_C0149925,Lung Neoplasms,1,456,15.0,15,0.0,0.0
+VDA_rs1804429_C0007131 -> Lung cancer panel,VDA_rs1804429_C0007131,Lung cancer panel,1,1337,16.0,16,0.0,0.0
+VDA_rs577715207_C0149925 -> Squamous cell carcinoma of lung,VDA_rs577715207_C0149925,Squamous cell carcinoma of lung,1,789,16.0,16,0.0,0.0
+"VDA_rs7519667_C0149925 -> Adenocarcinoma, Oxyphilic",VDA_rs7519667_C0149925,"Adenocarcinoma, Oxyphilic",1,456,16.0,16,0.0,0.0
+VDA_rs2069433_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs2069433_C0007131,Adenocarcinoma of lung (disorder),1,789,17.0,17,0.0,0.0
+VDA_rs9535826_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs9535826_C0007131,Adenocarcinoma of lung (disorder),1,1337,17.0,17,0.0,0.0
+"VDA_rs1045642_C0149925 -> stage, non-small cell lung cancer",VDA_rs1045642_C0149925,"stage, non-small cell lung cancer",1,42,18.0,18,0.0,0.0
+"VDA_rs10937405_C0149925 -> Adenocarcinoma, Oxyphilic",VDA_rs10937405_C0149925,"Adenocarcinoma, Oxyphilic",1,456,18.0,18,0.0,0.0
+VDA_rs33922584_C0007131 -> Lung cancer panel,VDA_rs33922584_C0007131,Lung cancer panel,1,1337,18.0,18,0.0,0.0
+VDA_rs5743551_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs5743551_C0007131,Adenocarcinoma of lung (disorder),1,789,18.0,18,0.0,0.0
+VDA_rs10937405_C0149925 -> Adenocarcinoma of lung (disorder),VDA_rs10937405_C0149925,Adenocarcinoma of lung (disorder),1,456,19.0,19,0.0,0.0
+VDA_rs121913273_C0149925 -> Squamous cell carcinoma of lung,VDA_rs121913273_C0149925,Squamous cell carcinoma of lung,1,789,19.0,19,0.0,0.0
+VDA_rs2042253_C0007131 -> Malignant neoplasm of lung,VDA_rs2042253_C0007131,Malignant neoplasm of lung,1,42,19.0,19,0.0,0.0
+VDA_rs55768116_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs55768116_C0007131,Adenocarcinoma of lung (disorder),1,1337,19.0,19,0.0,0.0
+VDA_rs121434569_C0149925 -> Bronchioloalveolar Adenocarcinoma,VDA_rs121434569_C0149925,Bronchioloalveolar Adenocarcinoma,1,456,20.0,20,0.0,0.0
+"VDA_rs1333049_C0149925 -> Carcinoma, Spindle-Cell",VDA_rs1333049_C0149925,"Carcinoma, Spindle-Cell",1,1337,20.0,20,0.0,0.0
+VDA_rs137853294_C0149925 -> Hamartoma of lung,VDA_rs137853294_C0149925,Hamartoma of lung,1,789,20.0,20,0.0,0.0
+"VDA_rs854560_C0007131 -> Carcinoma, Spindle-Cell",VDA_rs854560_C0007131,"Carcinoma, Spindle-Cell",1,42,20.0,20,0.0,0.0
+VDA_rs121912470_C0007131 -> Lung Carcinoma Metastatic in the Brain,VDA_rs121912470_C0007131,Lung Carcinoma Metastatic in the Brain,1,456,21.0,21,0.0,0.0
+VDA_rs1333049_C0149925 -> Carcinoma in situ of lung,VDA_rs1333049_C0149925,Carcinoma in situ of lung,1,1337,21.0,21,0.0,0.0
+"VDA_rs1360583020_C0149925 -> stage, non-small cell lung cancer",VDA_rs1360583020_C0149925,"stage, non-small cell lung cancer",1,789,21.0,21,0.0,0.0
+VDA_rs919968_C0007131 -> Malignant neoplasm of lung,VDA_rs919968_C0007131,Malignant neoplasm of lung,1,42,21.0,21,0.0,0.0
+VDA_rs137853294_C0149925 -> Fetal adenocarcinoma of lung,VDA_rs137853294_C0149925,Fetal adenocarcinoma of lung,1,789,22.0,22,0.0,0.0
+VDA_rs401681_C0149925 -> Large cell carcinoma of lung,VDA_rs401681_C0149925,Large cell carcinoma of lung,1,456,22.0,22,0.0,0.0
+"VDA_rs55768116_C0007131 -> Carcinoma, Spindle-Cell",VDA_rs55768116_C0007131,"Carcinoma, Spindle-Cell",1,1337,22.0,22,0.0,0.0
+VDA_rs854560_C0007131 -> Malignant neoplasm of lung,VDA_rs854560_C0007131,Malignant neoplasm of lung,1,42,22.0,22,0.0,0.0
+VDA_rs121913273_C0149925 -> Invasive Lung Mucinous Adenocarcinoma,VDA_rs121913273_C0149925,Invasive Lung Mucinous Adenocarcinoma,1,789,23.0,23,0.0,0.0
+"VDA_rs1804429_C0007131 -> Carcinoma, Spindle-Cell",VDA_rs1804429_C0007131,"Carcinoma, Spindle-Cell",1,1337,23.0,23,0.0,0.0
+VDA_rs3124599_C0149925 -> Lung cancer panel,VDA_rs3124599_C0149925,Lung cancer panel,1,456,23.0,23,0.0,0.0
+"VDA_rs3775291_C0007131 -> stage, non-small cell lung cancer",VDA_rs3775291_C0007131,"stage, non-small cell lung cancer",1,42,23.0,23,0.0,0.0
+VDA_rs104886003_C0007131 -> Lung Carcinoma Metastatic in the Brain,VDA_rs104886003_C0007131,Lung Carcinoma Metastatic in the Brain,1,456,24.0,24,0.0,0.0
+VDA_rs2032582_C0149925 -> Lung Neoplasms,VDA_rs2032582_C0149925,Lung Neoplasms,1,42,24.0,24,0.0,0.0
+VDA_rs55768116_C0007131 -> Lung Carcinoma Metastatic in the Brain,VDA_rs55768116_C0007131,Lung Carcinoma Metastatic in the Brain,1,1337,24.0,24,0.0,0.0
+VDA_rs9308062_C0149925 -> Hyperplasia,VDA_rs9308062_C0149925,Hyperplasia,1,789,24.0,24,0.0,0.0
+VDA_rs1535045_C0149925 -> Squamous cell carcinoma of lung,VDA_rs1535045_C0149925,Squamous cell carcinoma of lung,1,42,25.0,25,0.0,0.0
+VDA_rs1778335_C0149925 -> Pulmonary Sclerosing Hemangioma,VDA_rs1778335_C0149925,Pulmonary Sclerosing Hemangioma,1,456,25.0,25,0.0,0.0
+VDA_rs1804429_C0007131 -> Lung Carcinoma Metastatic in the Brain,VDA_rs1804429_C0007131,Lung Carcinoma Metastatic in the Brain,1,1337,25.0,25,0.0,0.0
+"VDA_rs3124599_C0149925 -> stage, non-small cell lung cancer",VDA_rs3124599_C0149925,"stage, non-small cell lung cancer",1,789,25.0,25,0.0,0.0
+VDA_rs121913295_C0149925 -> Squamous cell carcinoma of lung,VDA_rs121913295_C0149925,Squamous cell carcinoma of lung,1,42,26.0,26,0.0,0.0
+VDA_rs137853294_C0149925 -> large cell neuroendocrine carcinoma of lung,VDA_rs137853294_C0149925,large cell neuroendocrine carcinoma of lung,1,789,26.0,26,0.0,0.0
+VDA_rs4513061_C0149925 -> Carcinoid tumor of lung,VDA_rs4513061_C0149925,Carcinoid tumor of lung,1,1337,26.0,26,0.0,0.0
+VDA_rs137853294_C0149925 -> Small cell lung cancer recurrent,VDA_rs137853294_C0149925,Small cell lung cancer recurrent,1,789,27.0,27,0.0,0.0
+VDA_rs402710_C0149925 -> Large cell carcinoma of lung,VDA_rs402710_C0149925,Large cell carcinoma of lung,1,456,27.0,27,0.0,0.0
+"VDA_rs55768116_C0007131 -> Adenocarcinoma, Oxyphilic",VDA_rs55768116_C0007131,"Adenocarcinoma, Oxyphilic",1,1337,27.0,27,0.0,0.0
+"VDA_rs662_C0007131 -> Adenocarcinoma, Oxyphilic",VDA_rs662_C0007131,"Adenocarcinoma, Oxyphilic",1,42,27.0,27,0.0,0.0
+VDA_rs1360583020_C0149925 -> Squamous non-small cell lung cancer,VDA_rs1360583020_C0149925,Squamous non-small cell lung cancer,1,42,28.0,28,0.0,0.0
+VDA_rs137853294_C0149925 -> Atypical pulmonary carcinoid tumor,VDA_rs137853294_C0149925,Atypical pulmonary carcinoid tumor,1,789,28.0,28,0.0,0.0
+VDA_rs1804429_C0007131 -> Hamartoma of lung,VDA_rs1804429_C0007131,Hamartoma of lung,1,1337,28.0,28,0.0,0.0
+VDA_rs3756668_C0149925 -> Lung cancer panel,VDA_rs3756668_C0149925,Lung cancer panel,1,456,28.0,28,0.0,0.0
+VDA_rs1026411_C0007131 -> Lung Carcinoma Metastatic in the Brain,VDA_rs1026411_C0007131,Lung Carcinoma Metastatic in the Brain,1,456,29.0,29,0.0,0.0
+VDA_rs1804429_C0007131 -> Carcinoid tumor of lung,VDA_rs1804429_C0007131,Carcinoid tumor of lung,1,1337,29.0,29,0.0,0.0
+"VDA_rs1805388_C0007131 -> Carcinoma, Spindle-Cell",VDA_rs1805388_C0007131,"Carcinoma, Spindle-Cell",1,789,29.0,29,0.0,0.0
+VDA_rs3124599_C0149925 -> Lung Neoplasms,VDA_rs3124599_C0149925,Lung Neoplasms,1,42,29.0,29,0.0,0.0
+VDA_rs121913682_C0149925 -> Epidermal growth factor receptor negative non-small cell lung cancer,VDA_rs121913682_C0149925,Epidermal growth factor receptor negative non-small cell lung cancer,1,789,30.0,30,0.0,0.0
+VDA_rs1804429_C0007131 -> Small cell lung cancer limited stage,VDA_rs1804429_C0007131,Small cell lung cancer limited stage,1,1337,30.0,30,0.0,0.0
+"VDA_rs7519667_C0149925 -> Carcinoma, Spindle-Cell",VDA_rs7519667_C0149925,"Carcinoma, Spindle-Cell",1,456,30.0,30,0.0,0.0
+VDA_rs8252_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs8252_C0007131,Adenocarcinoma of lung (disorder),1,42,30.0,30,0.0,0.0
+VDA_rs104886003_C0149925 -> Squamous cell carcinoma of lung,VDA_rs104886003_C0149925,Squamous cell carcinoma of lung,1,456,31.0,31,0.0,0.0
+VDA_rs121909229_C0149925 -> Invasive Lung Mucinous Adenocarcinoma,VDA_rs121909229_C0149925,Invasive Lung Mucinous Adenocarcinoma,1,789,31.0,31,0.0,0.0
+VDA_rs3775291_C0007131 -> Metaplasia,VDA_rs3775291_C0007131,Metaplasia,1,42,31.0,31,0.0,0.0
+VDA_rs4513061_C0149925 -> Metaplasia,VDA_rs4513061_C0149925,Metaplasia,1,1337,31.0,31,0.0,0.0
+VDA_rs1778335_C0149925 -> Lymphoepithelial carcinoma,VDA_rs1778335_C0149925,Lymphoepithelial carcinoma,1,456,32.0,32,0.0,0.0
+VDA_rs1804429_C0007131 -> Metaplasia,VDA_rs1804429_C0007131,Metaplasia,1,1337,32.0,32,0.0,0.0
+"VDA_rs942190_C0149925 -> Carcinoma, Spindle-Cell",VDA_rs942190_C0149925,"Carcinoma, Spindle-Cell",1,789,32.0,32,0.0,0.0
+VDA_rs942190_C0149925 -> Squamous cell carcinoma of lung,VDA_rs942190_C0149925,Squamous cell carcinoma of lung,1,42,32.0,32,0.0,0.0
+VDA_rs1057519847_C0149925 -> Hamartoma of lung,VDA_rs1057519847_C0149925,Hamartoma of lung,1,789,33.0,33,0.0,0.0
+VDA_rs121434569_C0149925 -> Squamous non-small cell lung cancer,VDA_rs121434569_C0149925,Squamous non-small cell lung cancer,1,456,33.0,33,0.0,0.0
+VDA_rs1804429_C0007131 -> Small cell lung cancer recurrent,VDA_rs1804429_C0007131,Small cell lung cancer recurrent,1,1337,33.0,33,0.0,0.0
+"VDA_rs7041_C0007131 -> Adenocarcinoma, Oxyphilic",VDA_rs7041_C0007131,"Adenocarcinoma, Oxyphilic",1,42,33.0,33,0.0,0.0
+"VDA_rs10937405_C0149925 -> Carcinoma, Spindle-Cell",VDA_rs10937405_C0149925,"Carcinoma, Spindle-Cell",1,456,34.0,34,0.0,0.0
+VDA_rs1804429_C0007131 -> Atypical pulmonary carcinoid tumor,VDA_rs1804429_C0007131,Atypical pulmonary carcinoid tumor,1,1337,34.0,34,0.0,0.0
+VDA_rs2032582_C0149925 -> Invasive Lung Mucinous Adenocarcinoma,VDA_rs2032582_C0149925,Invasive Lung Mucinous Adenocarcinoma,1,789,34.0,34,0.0,0.0
+"VDA_rs7041_C0007131 -> Carcinoma, Spindle-Cell",VDA_rs7041_C0007131,"Carcinoma, Spindle-Cell",1,42,34.0,34,0.0,0.0
+VDA_rs121909229_C0149925 -> Fetal adenocarcinoma of lung,VDA_rs121909229_C0149925,Fetal adenocarcinoma of lung,1,789,35.0,35,0.0,0.0
+VDA_rs351855_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs351855_C0007131,Adenocarcinoma of lung (disorder),1,42,35.0,35,0.0,0.0
+VDA_rs402710_C0149925 -> Atypical pulmonary carcinoid tumor,VDA_rs402710_C0149925,Atypical pulmonary carcinoid tumor,1,456,35.0,35,0.0,0.0
+VDA_rs55768116_C0007131 -> Metaplasia,VDA_rs55768116_C0007131,Metaplasia,1,1337,35.0,35,0.0,0.0
+VDA_rs121913273_C0149925 -> Epidermal growth factor receptor positive non-small cell lung cancer,VDA_rs121913273_C0149925,Epidermal growth factor receptor positive non-small cell lung cancer,1,789,36.0,36,0.0,0.0
+VDA_rs1333049_C0149925 -> Hyperplasia,VDA_rs1333049_C0149925,Hyperplasia,1,1337,36.0,36,0.0,0.0
+VDA_rs402710_C0149925 -> Hamartoma of lung,VDA_rs402710_C0149925,Hamartoma of lung,1,456,36.0,36,0.0,0.0
+VDA_rs17185553_C0149925 -> Pulmonary Sclerosing Hemangioma,VDA_rs17185553_C0149925,Pulmonary Sclerosing Hemangioma,1,456,37.0,37,0.0,0.0
+VDA_rs1804429_C0007131 -> Hyperplasia,VDA_rs1804429_C0007131,Hyperplasia,1,1337,37.0,37,0.0,0.0
+"VDA_rs4588_C0007131 -> Carcinoma, Spindle-Cell",VDA_rs4588_C0007131,"Carcinoma, Spindle-Cell",1,42,37.0,37,0.0,0.0
+VDA_rs9308062_C0149925 -> Lung cancer panel,VDA_rs9308062_C0149925,Lung cancer panel,1,789,37.0,37,0.0,0.0
+VDA_rs1057519848_C0149925 -> Hamartoma of lung,VDA_rs1057519848_C0149925,Hamartoma of lung,1,789,38.0,38,0.0,0.0
+"VDA_rs1333049_C0149925 -> Adenocarcinoma, Oxyphilic",VDA_rs1333049_C0149925,"Adenocarcinoma, Oxyphilic",1,1337,38.0,38,0.0,0.0
+VDA_rs17185553_C0149925 -> Lymphoepithelial carcinoma,VDA_rs17185553_C0149925,Lymphoepithelial carcinoma,1,456,38.0,38,0.0,0.0
+VDA_rs3775291_C0007131 -> Squamous non-small cell lung cancer,VDA_rs3775291_C0007131,Squamous non-small cell lung cancer,1,42,38.0,38,0.0,0.0
+VDA_rs1057519848_C0149925 -> large cell neuroendocrine carcinoma of lung,VDA_rs1057519848_C0149925,large cell neuroendocrine carcinoma of lung,1,789,39.0,39,0.0,0.0
+VDA_rs1360583020_C0149925 -> Metaplasia,VDA_rs1360583020_C0149925,Metaplasia,1,42,39.0,39,0.0,0.0
+VDA_rs402710_C0149925 -> Pulmonary Sclerosing Hemangioma,VDA_rs402710_C0149925,Pulmonary Sclerosing Hemangioma,1,456,39.0,39,0.0,0.0
+VDA_rs748625642_C0007131 -> Hamartoma of lung,VDA_rs748625642_C0007131,Hamartoma of lung,1,1337,39.0,39,0.0,0.0
+VDA_rs1057519927_C0149925 -> Metaplasia,VDA_rs1057519927_C0149925,Metaplasia,1,42,40.0,40,0.0,0.0
+VDA_rs121913273_C0149925 -> Small cell lung cancer limited stage,VDA_rs121913273_C0149925,Small cell lung cancer limited stage,1,789,40.0,40,0.0,0.0
+VDA_rs401681_C0007131 -> Small cell lung cancer limited stage,VDA_rs401681_C0007131,Small cell lung cancer limited stage,1,456,40.0,40,0.0,0.0
+VDA_rs4513061_C0149925 -> Hyperplasia,VDA_rs4513061_C0149925,Hyperplasia,1,1337,40.0,40,0.0,0.0
+VDA_rs10937405_C0149925 -> Lung cancer panel,VDA_rs10937405_C0149925,Lung cancer panel,1,456,41.0,41,0.0,0.0
+VDA_rs121913295_C0149925 -> Atypical pulmonary carcinoid tumor,VDA_rs121913295_C0149925,Atypical pulmonary carcinoid tumor,1,42,41.0,41,0.0,0.0
+VDA_rs121913507_C0149925 -> Fetal adenocarcinoma of lung,VDA_rs121913507_C0149925,Fetal adenocarcinoma of lung,1,789,41.0,41,0.0,0.0
+VDA_rs1333049_C0149925 -> Squamous cell carcinoma of lung,VDA_rs1333049_C0149925,Squamous cell carcinoma of lung,1,1337,41.0,41,0.0,0.0
+VDA_rs121909224_C0149925 -> Lung Neoplasms,VDA_rs121909224_C0149925,Lung Neoplasms,1,42,42.0,42,0.0,0.0
+VDA_rs2032582_C0149925 -> Epidermal growth factor receptor negative non-small cell lung cancer,VDA_rs2032582_C0149925,Epidermal growth factor receptor negative non-small cell lung cancer,1,789,42.0,42,0.0,0.0
+"VDA_rs4065_C0007131 -> stage, non-small cell lung cancer",VDA_rs4065_C0007131,"stage, non-small cell lung cancer",1,456,42.0,42,0.0,0.0
+VDA_rs55768116_C0007131 -> Squamous cell carcinoma of lung,VDA_rs55768116_C0007131,Squamous cell carcinoma of lung,1,1337,42.0,42,0.0,0.0
+VDA_rs137853294_C0149925 -> Combined Lung Small Cell Carcinoma,VDA_rs137853294_C0149925,Combined Lung Small Cell Carcinoma,1,789,43.0,43,0.0,0.0
+VDA_rs3756668_C0149925 -> Atypical pulmonary carcinoid tumor,VDA_rs3756668_C0149925,Atypical pulmonary carcinoid tumor,1,456,43.0,43,0.0,0.0
+VDA_rs3775291_C0007131 -> Pulmonary Sclerosing Hemangioma,VDA_rs3775291_C0007131,Pulmonary Sclerosing Hemangioma,1,42,43.0,43,0.0,0.0
+VDA_rs4513061_C0149925 -> Small cell lung cancer limited stage,VDA_rs4513061_C0149925,Small cell lung cancer limited stage,1,1337,43.0,43,0.0,0.0
+VDA_rs1057519927_C0149925 -> Squamous non-small cell lung cancer,VDA_rs1057519927_C0149925,Squamous non-small cell lung cancer,1,42,44.0,44,0.0,0.0
+VDA_rs121434569_C0149925 -> Metaplasia,VDA_rs121434569_C0149925,Metaplasia,1,456,44.0,44,0.0,0.0
+VDA_rs121913274_C0149925 -> Atypical pulmonary carcinoid tumor,VDA_rs121913274_C0149925,Atypical pulmonary carcinoid tumor,1,789,44.0,44,0.0,0.0
+VDA_rs1804429_C0007131 -> Small cell lung cancer extensive stage,VDA_rs1804429_C0007131,Small cell lung cancer extensive stage,1,1337,44.0,44,0.0,0.0
+VDA_rs1057519927_C0149925 -> Pulmonary Sclerosing Hemangioma,VDA_rs1057519927_C0149925,Pulmonary Sclerosing Hemangioma,1,42,45.0,45,0.0,0.0
+"VDA_rs121912470_C0007131 -> stage, non-small cell lung cancer",VDA_rs121912470_C0007131,"stage, non-small cell lung cancer",1,456,45.0,45,0.0,0.0
+VDA_rs121913507_C0149925 -> large cell neuroendocrine carcinoma of lung,VDA_rs121913507_C0149925,large cell neuroendocrine carcinoma of lung,1,789,45.0,45,0.0,0.0
+"VDA_rs1804429_C0007131 -> Adenocarcinoma, Oxyphilic",VDA_rs1804429_C0007131,"Adenocarcinoma, Oxyphilic",1,1337,45.0,45,0.0,0.0
+VDA_rs1045642_C0149925 -> Proteus Syndrome,VDA_rs1045642_C0149925,Proteus Syndrome,1,123,46.0,46,0.0,0.0
+VDA_rs1217691063_C0007131 -> Lung Acinar Adenocarcinoma,VDA_rs1217691063_C0007131,Lung Acinar Adenocarcinoma,1,456,46.0,46,0.0,0.0
+VDA_rs121913507_C0149925 -> Epidermal growth factor receptor negative non-small cell lung cancer,VDA_rs121913507_C0149925,Epidermal growth factor receptor negative non-small cell lung cancer,1,789,46.0,46,0.0,0.0
+VDA_rs1804429_C0007131 -> Large cell carcinoma of lung,VDA_rs1804429_C0007131,Large cell carcinoma of lung,1,1337,46.0,46,0.0,0.0
+VDA_rs2032582_C0149925 -> Lymphoepithelial carcinoma,VDA_rs2032582_C0149925,Lymphoepithelial carcinoma,1,42,46.0,46,0.0,0.0
+VDA_rs121913275_C0149925 -> Pulmonary Sclerosing Hemangioma,VDA_rs121913275_C0149925,Pulmonary Sclerosing Hemangioma,1,42,47.0,47,0.0,0.0
+VDA_rs121913682_C0149925 -> adenoid cystic carcinoma of lung,VDA_rs121913682_C0149925,adenoid cystic carcinoma of lung,1,789,47.0,47,0.0,0.0
+VDA_rs16932912_C0007131 -> Small cell lung cancer limited stage,VDA_rs16932912_C0007131,Small cell lung cancer limited stage,1,456,47.0,47,0.0,0.0
+VDA_rs402710_C0007131 -> Adenocarcinoma of lung (disorder),VDA_rs402710_C0007131,Adenocarcinoma of lung (disorder),1,123,47.0,47,0.0,0.0
+VDA_rs55768116_C0007131 -> Carcinoma in situ of lung,VDA_rs55768116_C0007131,Carcinoma in situ of lung,1,1337,47.0,47,0.0,0.0
+VDA_rs1045642_C0149925 -> Lymphoepithelial carcinoma,VDA_rs1045642_C0149925,Lymphoepithelial carcinoma,1,42,48.0,48,0.0,0.0
+VDA_rs121913273_C0149925 -> Carcinoma in situ of lung,VDA_rs121913273_C0149925,Carcinoma in situ of lung,1,789,48.0,48,0.0,0.0
+VDA_rs1333049_C0149925 -> Lymphoepithelial carcinoma,VDA_rs1333049_C0149925,Lymphoepithelial carcinoma,1,456,48.0,48,0.0,0.0
+VDA_rs4513061_C0149925 -> Atypical pulmonary carcinoid tumor,VDA_rs4513061_C0149925,Atypical pulmonary carcinoid tumor,1,1337,48.0,48,0.0,0.0
+VDA_rs74501188_C0149925 -> Carcinoma in situ of lung,VDA_rs74501188_C0149925,Carcinoma in situ of lung,1,123,48.0,48,0.0,0.0
+VDA_rs11571833_C0149925 -> Carcinoid tumor of lung,VDA_rs11571833_C0149925,Carcinoid tumor of lung,1,123,49.0,49,0.0,0.0
+VDA_rs121434568_C0149925 -> Lymphoepithelial carcinoma,VDA_rs121434568_C0149925,Lymphoepithelial carcinoma,1,42,49.0,49,0.0,0.0
+VDA_rs137853294_C0149925 -> Small cell lung cancer extensive stage,VDA_rs137853294_C0149925,Small cell lung cancer extensive stage,1,789,49.0,49,0.0,0.0
+VDA_rs1804429_C0007131 -> large cell neuroendocrine carcinoma of lung,VDA_rs1804429_C0007131,large cell neuroendocrine carcinoma of lung,1,1337,49.0,49,0.0,0.0
+VDA_rs402710_C0149925 -> Proteus Syndrome,VDA_rs402710_C0149925,Proteus Syndrome,1,456,49.0,49,0.0,0.0
+VDA_rs17185553_C0149925 -> Non-squamous non-small cell lung cancer,VDA_rs17185553_C0149925,Non-squamous non-small cell lung cancer,1,456,50.0,50,0.0,0.0
+VDA_rs2032582_C0149925 -> Lung Adenocarcinoma In Situ,VDA_rs2032582_C0149925,Lung Adenocarcinoma In Situ,1,789,50.0,50,0.0,0.0
+VDA_rs3124599_C0149925 -> Small cell lung cancer extensive stage,VDA_rs3124599_C0149925,Small cell lung cancer extensive stage,1,42,50.0,50,0.0,0.0
+VDA_rs3756668_C0149925 -> Carcinoma in situ of lung,VDA_rs3756668_C0149925,Carcinoma in situ of lung,1,123,50.0,50,0.0,0.0
+VDA_rs7086803_C0007131 -> Hamartoma of lung,VDA_rs7086803_C0007131,Hamartoma of lung,1,1337,50.0,50,0.0,0.0

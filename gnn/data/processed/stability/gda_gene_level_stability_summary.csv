@@ -1,0 +1,150 @@
+gene_label,appears_in_seeds,seeds,n_predictions,mean_rank,best_rank,mean_confidence,std_confidence,diseases
+EGFR,3,"42,123,789",10,32.4,2,0.96219,0.014712613635924736,Adenosquamous cell lung cancer | Epidermal growth factor receptor positive non-small cell lung cancer | Metaplasia | Non-small cell lung cancer recurrent | Non-squamous non-small cell lung cancer
+HIF1A,3,"42,456,789",4,34.75,26,0.957925,0.013600337005628479,Epidermal growth factor receptor positive non-small cell lung cancer | Non-squamous non-small cell lung cancer | Pseudosarcomatous carcinoma of lung | Small cell lung cancer recurrent
+PIK3CA,3,"123,789,1337",3,39.0,34,0.9456000000000001,0.016058642532916636,Large cell carcinoma of lung | Squamous cell carcinoma of lung | Squamous non-small cell lung cancer
+ALK,3,"123,789,1337",3,43.666666666666664,36,0.9410999999999999,0.00778909494100575,Non-small cell lung cancer recurrent | Pseudosarcomatous carcinoma of lung | Squamous cell carcinoma of lung
+DDR2,2,"42,1337",10,17.7,1,0.97179,0.018025441896263105,Adenosquamous cell lung cancer | Combined Lung Small Cell Carcinoma | Epidermal growth factor receptor positive non-small cell lung cancer | Invasive Lung Mucinous Adenocarcinoma | Non-small cell lung cancer recurrent
+PIK3CD,2,"42,789",6,31.833333333333332,9,0.9622666666666667,0.011494288436726598,Hyperplasia | Large cell carcinoma of lung | Lymphoepithelial carcinoma | Metaplasia | Non-squamous non-small cell lung cancer
+CD274,2,"456,1337",6,29.0,13,0.9495833333333333,0.013174432309085132,Adenosquamous cell lung cancer | Giant cell carcinoma of lung | Non-squamous non-small cell lung cancer | Squamous non-small cell lung cancer
+DAXX,2,"123,456",4,26.25,17,0.9687,0.010973908449894553,Bronchioloalveolar Adenocarcinoma | Large cell carcinoma of lung | Metaplasia | Proteus Syndrome
+BCL2L11,2,"42,789",4,32.0,22,0.959375,0.006997797272475535,Carcinoid tumor of lung | Combined Lung Small Cell Carcinoma | Non-small cell lung cancer recurrent | Pseudosarcomatous carcinoma of lung
+MMP13,2,"456,789",3,6.666666666666667,2,0.9861333333333334,0.008848352012286379,"Adenocarcinoma, Oxyphilic | Carcinoma, Spindle-Cell | Hyperplasia"
+KRT19,2,"42,789",3,26.333333333333332,4,0.9671666666666666,0.02318713723885145,Adenosquamous cell lung cancer | Non-squamous non-small cell lung cancer | Pseudosarcomatous carcinoma of lung
+CHPT1,2,"123,789",3,25.666666666666668,17,0.9666333333333333,0.005050082507576846,Lymphoepithelial carcinoma | Pulmonary Sclerosing Hemangioma | Small cell lung cancer extensive stage
+ESR2,2,"789,1337",3,21.333333333333332,8,0.9664999999999999,0.01647027625754952,Bronchioloalveolar Adenocarcinoma | Lymphoepithelial carcinoma | Small cell carcinoma of lung
+SDHD,2,"123,1337",3,21.333333333333332,4,0.9653999999999999,0.023350160599019523,Bronchioloalveolar Adenocarcinoma | Large cell carcinoma of lung | Lung Neoplasms
+PTGS2,2,"42,1337",3,23.333333333333332,10,0.9652666666666666,0.017047091638556233,"Adenocarcinoma, Oxyphilic | Pulmonary Sclerosing Hemangioma | stage, non-small cell lung cancer"
+KRT20,2,"123,1337",3,25.0,4,0.9567666666666667,0.028220973288200623,"Carcinoma, Spindle-Cell | Metaplasia | Pulmonary Sclerosing Hemangioma"
+FOXA1,2,"123,1337",3,35.333333333333336,30,0.9550666666666666,0.008989067434018649,Carcinoid tumor of lung | Non-squamous non-small cell lung cancer
+TP53,2,"456,789",3,38.0,21,0.9535333333333332,0.01647341292305075,Large cell carcinoma of lung | Small cell lung cancer limited stage | Small cell lung cancer recurrent
+KRAS,2,"123,789",3,41.666666666666664,41,0.9521000000000001,0.004677606225410582,Adenosquamous cell lung cancer | Non-small cell lung cancer recurrent | Non-squamous non-small cell lung cancer
+GATA3,2,"456,1337",3,36.0,19,0.9508666666666667,0.010016652800877806,Bronchioloalveolar Adenocarcinoma | Giant cell carcinoma of lung
+TYRP1,2,"123,456",2,6.0,3,0.989,0.0012727922061358025,"Carcinoma, Spindle-Cell"
+S100A1,2,"123,789",2,10.5,6,0.9803,0.009192388155425165,"Lymphoepithelial carcinoma | stage, non-small cell lung cancer"
+RPSA,2,"123,456",2,13.5,13,0.9778,0.004666904755831171,Lymphoepithelial carcinoma | Pulmonary Sclerosing Hemangioma
+LANCL1,2,"123,456",2,18.0,12,0.9755,0.009475230867899675,"Adenocarcinoma, Oxyphilic | Pulmonary Sclerosing Hemangioma"
+FGFR3,2,"42,1337",2,13.5,7,0.9744999999999999,0.0008485281374238028,Hyperplasia | Lung cancer panel
+KCNQ1,2,"123,789",2,16.0,12,0.9742999999999999,0.005232590180780464,Bronchioloalveolar Adenocarcinoma | Large cell carcinoma of lung
+ACE,2,"123,789",2,18.0,2,0.9728,0.024748737341529107,"Carcinoma, Spindle-Cell | Lung Neoplasms"
+LCN1,2,"123,789",2,20.5,5,0.9712000000000001,0.024465894629054637,Small cell lung cancer extensive stage
+MMP9,2,"789,1337",2,14.5,1,0.96985,0.03146625176280135,"Hyperplasia | stage, non-small cell lung cancer"
+ARHGEF2,2,"123,1337",2,25.0,11,0.9662,0.008061017305526658,Hyperplasia | Squamous non-small cell lung cancer
+ERBB2,2,"456,789",2,29.0,20,0.9613,0.014990663761154766,Invasive Lung Mucinous Adenocarcinoma | Pulmonary Sclerosing Hemangioma
+PIK3CG,2,"456,789",2,32.5,19,0.9580500000000001,0.020293964620053916,Adenosquamous cell lung cancer | Squamous non-small cell lung cancer
+SLPI,2,"456,789",2,34.5,28,0.95595,0.011667261889578005,Bronchioloalveolar Adenocarcinoma
+AKT1,2,"42,123",2,41.5,35,0.9533,0.013010764773832454,Large cell carcinoma of lung | Metaplasia
+ATRX,2,"789,1337",2,31.0,27,0.9518500000000001,0.003889087296526015,Large cell carcinoma of lung | Small cell carcinoma of lung
+NAPSA,1,1337,4,30.0,14,0.944875,0.023733432818143534,"Lymphoepithelial carcinoma | Pulmonary Sclerosing Hemangioma | Small cell lung cancer limited stage | stage, non-small cell lung cancer"
+CDKN1C,1,789,3,11.0,7,0.9796666666666667,0.004365012409298922,"Carcinoma, Spindle-Cell | Hyperplasia | Large cell carcinoma of lung"
+EBNA1BP2,1,456,2,9.5,8,0.9855499999999999,0.0038890872965259365,"Adenocarcinoma, Oxyphilic | Lymphoepithelial carcinoma"
+PLCE1,1,789,2,11.0,9,0.9807,0.004666904755831171,Hyperplasia | Large cell carcinoma of lung
+IGF1,1,123,2,9.0,7,0.9782,0.004101219330881995,"Hyperplasia | stage, non-small cell lung cancer"
+CALB2,1,456,2,19.5,10,0.97505,0.015344217151748118,Metaplasia | Squamous non-small cell lung cancer
+CLDN4,1,456,2,24.5,16,0.9681,0.016970562748477157,Metaplasia | Squamous non-small cell lung cancer
+HDAC6,1,123,2,26.0,21,0.9675,0.004101219330881995,"Pulmonary Sclerosing Hemangioma | stage, non-small cell lung cancer"
+HGF,1,42,2,30.5,23,0.96635,0.010960155108391496,"Metaplasia | stage, non-small cell lung cancer"
+IL9,1,789,2,26.0,21,0.96495,0.0071417784899841285,Lymphoepithelial carcinoma | Small cell carcinoma of lung
+MTHFR,1,456,2,26.5,18,0.96435,0.01689985207035847,Giant cell carcinoma of lung | Lymphoepithelial carcinoma
+GPC3,1,1337,2,20.0,3,0.9568000000000001,0.034931074990615485,Large cell carcinoma of lung | Lung cancer panel
+DHDDS,1,456,2,38.0,32,0.9519500000000001,0.008980256121069225,Small cell lung cancer extensive stage | Small cell lung cancer limited stage
+TERT,1,1337,2,26.0,23,0.9511000000000001,0.0057982756057297965,Metaplasia | Pulmonary Sclerosing Hemangioma
+MTOR,1,1337,2,25.5,6,0.94945,0.038537319574666835,Carcinoid tumor of lung | Giant cell carcinoma of lung
+DNER,1,456,2,43.0,39,0.94695,0.004737615433949857,Small cell lung cancer extensive stage | Small cell lung cancer limited stage
+DICER1,1,789,2,45.5,44,0.94435,0.0026162950903902515,Carcinoid tumor of lung | Small cell lung cancer recurrent
+NRG1,1,1337,2,34.0,21,0.93935,0.028496403281817868,Adenosquamous cell lung cancer | Giant cell carcinoma of lung
+SS18L1,1,1337,2,33.5,26,0.9393,0.014990663761154845,Lymphoepithelial carcinoma | Pulmonary Sclerosing Hemangioma
+SCLC1,1,1337,2,34.5,34,0.9391,0.004101219330881955,Small cell lung cancer limited stage | Squamous non-small cell lung cancer
+CSF3,1,456,1,1.0,1,0.9955,0.0,Hyperplasia
+SCARB1,1,456,1,3.0,3,0.9927,0.0,Hyperplasia
+PTGER1,1,123,1,1.0,1,0.9917,0.0,"Carcinoma, Spindle-Cell"
+ANXA4,1,456,1,4.0,4,0.9904,0.0,"Adenocarcinoma, Oxyphilic"
+HSPD1,1,456,1,5.0,5,0.9901,0.0,"Carcinoma, Spindle-Cell"
+TKT,1,456,1,6.0,6,0.9901,0.0,"Adenocarcinoma, Oxyphilic"
+MSLN,1,456,1,7.0,7,0.9892,0.0,"Carcinoma, Spindle-Cell"
+ATR,1,789,1,2.0,2,0.9876,0.0,"Adenocarcinoma, Oxyphilic"
+SFTPB,1,789,1,3.0,3,0.9875,0.0,"stage, non-small cell lung cancer"
+CCDC6,1,42,1,3.0,3,0.9874,0.0,"Carcinoma, Spindle-Cell"
+ERCC1,1,789,1,5.0,5,0.9869,0.0,"Adenocarcinoma, Oxyphilic"
+IL6ST,1,42,1,5.0,5,0.9829,0.0,"Adenocarcinoma, Oxyphilic"
+TNKS,1,123,1,6.0,6,0.9829,0.0,Small cell lung cancer extensive stage
+TPM3,1,1337,1,1.0,1,0.9827,0.0,"Carcinoma, Spindle-Cell"
+ENO2,1,456,1,13.0,13,0.982,0.0,Metaplasia
+MUC2,1,1337,1,2.0,2,0.9816,0.0,"Carcinoma, Spindle-Cell"
+AR,1,42,1,10.0,10,0.9811,0.0,"Carcinoma, Spindle-Cell"
+NUTM1,1,456,1,15.0,15,0.9802,0.0,Pulmonary Sclerosing Hemangioma
+FOXM1,1,42,1,12.0,12,0.9796,0.0,Combined Lung Small Cell Carcinoma
+OGG1,1,42,1,13.0,13,0.9784,0.0,"Carcinoma, Spindle-Cell"
+GLB1,1,123,1,8.0,8,0.9781,0.0,Hyperplasia
+PDE4A,1,789,1,11.0,11,0.9781,0.0,Lung cancer panel
+DLL3,1,42,1,15.0,15,0.9779,0.0,Small cell lung cancer extensive stage
+MIR499A,1,42,1,16.0,16,0.9777,0.0,Bronchioloalveolar Adenocarcinoma
+LEP,1,42,1,17.0,17,0.9773,0.0,Bronchioloalveolar Adenocarcinoma
+HTC2,1,1337,1,5.0,5,0.9768,0.0,"Adenocarcinoma, Oxyphilic"
+ARMH1,1,123,1,9.0,9,0.9766,0.0,"Adenocarcinoma, Oxyphilic"
+IL10,1,456,1,19.0,19,0.9762,0.0,Lung cancer panel
+BRAF,1,123,1,10.0,10,0.9759,0.0,"stage, non-small cell lung cancer"
+CCNB1,1,789,1,15.0,15,0.9758,0.0,Squamous non-small cell lung cancer
+STK11,1,456,1,20.0,20,0.9756,0.0,Lymphoepithelial carcinoma
+TGFBR2,1,123,1,12.0,12,0.9746,0.0,Lung cancer panel
+BTG2,1,42,1,21.0,21,0.9745,0.0,Bronchioloalveolar Adenocarcinoma
+POR,1,123,1,14.0,14,0.9745,0.0,Hyperplasia
+GJB4,1,789,1,17.0,17,0.9743,0.0,Lung cancer panel
+SELP,1,42,1,24.0,24,0.9738,0.0,Hyperplasia
+RLN3,1,123,1,16.0,16,0.9733,0.0,Large cell carcinoma of lung
+CCND1,1,789,1,18.0,18,0.9731,0.0,Hyperplasia
+AQP5,1,1337,1,8.0,8,0.9723,0.0,"stage, non-small cell lung cancer"
+AXL,1,456,1,22.0,22,0.9722,0.0,Lung cancer panel
+CSF2,1,42,1,27.0,27,0.9721,0.0,"Adenocarcinoma, Oxyphilic"
+MALAT1,1,1337,1,9.0,9,0.9721,0.0,Bronchioloalveolar Adenocarcinoma
+IL13,1,456,1,23.0,23,0.972,0.0,Bronchioloalveolar Adenocarcinoma
+CAPZB,1,1337,1,12.0,12,0.9714,0.0,"Adenocarcinoma, Oxyphilic"
+FGFR2,1,123,1,19.0,19,0.9711,0.0,Lung cancer panel
+HMGA2,1,456,1,24.0,24,0.9704,0.0,Carcinoid tumor of lung
+CSN2,1,123,1,22.0,22,0.9702,0.0,"Adenocarcinoma, Oxyphilic"
+TSC1,1,456,1,25.0,25,0.9702,0.0,Large cell carcinoma of lung
+S100B,1,123,1,23.0,23,0.9701,0.0,Squamous non-small cell lung cancer
+BRCA2,1,42,1,29.0,29,0.9694,0.0,"Adenocarcinoma, Oxyphilic"
+NPC1,1,789,1,23.0,23,0.9688,0.0,Pulmonary Sclerosing Hemangioma
+TSC2,1,42,1,30.0,30,0.9685,0.0,Large cell carcinoma of lung
+NCOA3,1,789,1,24.0,24,0.9683,0.0,"Carcinoma, Spindle-Cell"
+CTNNB1,1,1337,1,15.0,15,0.9682,0.0,Hyperplasia
+RABEPK,1,789,1,25.0,25,0.9676,0.0,Pulmonary Sclerosing Hemangioma
+CSK,1,123,1,25.0,25,0.9674,0.0,Large cell carcinoma of lung
+MPO,1,456,1,27.0,27,0.9674,0.0,Lung cancer panel
+COL11A1,1,123,1,26.0,26,0.9672,0.0,Small cell lung cancer extensive stage
+CDX1,1,42,1,34.0,34,0.9665,0.0,"stage, non-small cell lung cancer"
+MAPK1,1,789,1,26.0,26,0.9665,0.0,Lymphoepithelial carcinoma
+MGMT,1,1337,1,16.0,16,0.9656,0.0,"stage, non-small cell lung cancer"
+PIK3CB,1,1337,1,17.0,17,0.9651,0.0,Lung cancer panel
+CD44,1,123,1,30.0,30,0.9647,0.0,large cell neuroendocrine carcinoma of lung
+SERPINA1,1,123,1,29.0,29,0.9647,0.0,Squamous cell carcinoma of lung
+GRP,1,789,1,29.0,29,0.9628,0.0,Small cell lung cancer extensive stage
+CRTC1,1,123,1,36.0,36,0.9623,0.0,Small cell carcinoma of lung
+COL2A1,1,123,1,37.0,37,0.9617,0.0,Lung cancer panel
+PTEN,1,789,1,30.0,30,0.9613,0.0,Non-squamous non-small cell lung cancer
+CD34,1,123,1,38.0,38,0.961,0.0,Squamous non-small cell lung cancer
+MAP2K7,1,456,1,30.0,30,0.9599,0.0,Non-squamous non-small cell lung cancer
+TNC,1,456,1,31.0,31,0.9598,0.0,Squamous non-small cell lung cancer
+MEN1,1,123,1,40.0,40,0.9566,0.0,Metaplasia
+HRAS,1,456,1,34.0,34,0.953,0.0,Non-squamous non-small cell lung cancer
+FASLG,1,123,1,45.0,45,0.952,0.0,Lung Neoplasms
+CTH,1,456,1,36.0,36,0.9519,0.0,Lung Neoplasms
+RAD51,1,123,1,46.0,46,0.9516,0.0,Lung Neoplasms
+NKX2-1,1,42,1,42.0,42,0.9493,0.0,Proteus Syndrome
+KIF5B,1,789,1,39.0,39,0.9489,0.0,Carcinoid tumor of lung
+SMUG1,1,456,1,40.0,40,0.9482,0.0,Small cell lung cancer extensive stage
+PPARGC1A,1,42,1,44.0,44,0.948,0.0,Lung Neoplasms
+NOTCH1,1,123,1,48.0,48,0.9458,0.0,Pulmonary lymphangioleiomyomatosis
+TYMS,1,456,1,43.0,43,0.9458,0.0,Giant cell carcinoma of lung
+PINX1,1,456,1,45.0,45,0.9452,0.0,Lung Neoplasms
+AKT1S1,1,42,1,47.0,47,0.9451,0.0,Pulmonary Sclerosing Hemangioma
+VEGFA,1,1337,1,32.0,32,0.9446,0.0,Squamous non-small cell lung cancer
+SPRY2,1,789,1,46.0,46,0.9428,0.0,Lung Neoplasms
+PARP1,1,123,1,50.0,50,0.9424,0.0,Pseudosarcomatous carcinoma of lung
+GDF15,1,789,1,49.0,49,0.9417,0.0,Bronchioloalveolar Adenocarcinoma
+DLL4,1,42,1,49.0,49,0.9416,0.0,Lymphoepithelial carcinoma
+RABGEF1,1,42,1,50.0,50,0.9414,0.0,Small cell lung cancer limited stage
+KDM6B,1,1337,1,44.0,44,0.9252,0.0,Hamartoma of lung
+RRM2B,1,1337,1,48.0,48,0.9182,0.0,Hamartoma of lung
+RASSF1,1,1337,1,49.0,49,0.9173,0.0,Lymphoepithelial carcinoma
+LGALS4,1,1337,1,50.0,50,0.9159,0.0,Small cell lung cancer recurrent

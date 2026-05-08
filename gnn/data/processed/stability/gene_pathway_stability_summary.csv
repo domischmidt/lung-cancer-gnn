@@ -1,0 +1,252 @@
+candidate,Gene_label,Pathway_label,PathwayName,appears_in_seeds,seeds,mean_rank,best_rank,mean_confidence,std_confidence
+TET1 -> SUMOylation,TET1,WP2778,SUMOylation,1,789,1.0,1,0.999,0.0
+XRCC5 -> ATR signaling,XRCC5,WP3875,ATR signaling,1,789,2.0,2,0.9988,0.0
+UBXN1 -> Sialic acid metabolism,UBXN1,WP3363,Sialic acid metabolism,1,42,1.0,1,0.9987,0.0
+SLC44A1 -> Urea cycle,SLC44A1,WP4973,Urea cycle,1,123,1.0,1,0.9986,0.0
+UPB1 -> Nucleotide salvage,UPB1,WP4082,Nucleotide salvage,1,123,2.0,2,0.9986,0.0
+ATP5F1C -> Oxidative phosphorylation,ATP5F1C,WP623,Oxidative phosphorylation,1,789,3.0,3,0.9986,0.0
+TET1 -> RNA Polymerase III Transcription,TET1,WP4135,RNA Polymerase III Transcription,1,789,4.0,4,0.9984,0.0
+AOX1 -> Tryptophan catabolism,AOX1,WP4994,Tryptophan catabolism,1,42,2.0,2,0.9983,0.0
+GPR18 -> Peptide GPCRs,GPR18,WP24,Peptide GPCRs,1,42,3.0,3,0.9983,0.0
+CFH -> Formation of Fibrin Clot and the Clotting Cascade,CFH,WP1818,Formation of Fibrin Clot and the Clotting Cascade,1,1337,1.0,1,0.998,0.0
+UBXN1 -> Mitochondrial protein import,UBXN1,WP2717,Mitochondrial protein import,1,42,4.0,4,0.998,0.0
+PKP2 -> Cell junction organization,PKP2,WP1793,Cell junction organization,1,42,5.0,5,0.9979,0.0
+"PXMP2 -> Glycine metabolism, including IMDs",PXMP2,WP5028,"Glycine metabolism, including IMDs",1,123,3.0,3,0.9978,0.0
+SRRT -> mRNA processing,SRRT,WP411,mRNA processing,1,456,1.0,1,0.9977,0.0
+PLCD3 -> PI Metabolism,PLCD3,WP2747,PI Metabolism,1,1337,2.0,2,0.9977,0.0
+MRPL51 -> tRNA modification in the nucleus and cytosol,MRPL51,WP3561,tRNA modification in the nucleus and cytosol,1,123,4.0,4,0.9977,0.0
+GALNT1 -> MHC class II antigen presentation,GALNT1,WP2679,MHC class II antigen presentation,1,789,5.0,5,0.9977,0.0
+ST8SIA6 -> Globo sphingolipid metabolism,ST8SIA6,WP1424,Globo sphingolipid metabolism,1,789,6.0,6,0.9977,0.0
+SLC44A1 -> Urea cycle and metabolism of amino groups,SLC44A1,WP497,Urea cycle and metabolism of amino groups,1,123,5.0,5,0.9976,0.0
+ITPKA -> PI Metabolism,ITPKA,WP2747,PI Metabolism,1,123,6.0,6,0.9976,0.0
+SBF1 -> RAB geranylgeranylation,SBF1,WP4071,RAB geranylgeranylation,1,1337,3.0,3,0.9975,0.0
+PKP4 -> Pancreatic cancer subtypes,PKP4,WP5390,Pancreatic cancer subtypes,1,789,7.0,7,0.9974,0.0
+TET1 -> NAD+ biosynthetic pathways,TET1,WP3645,NAD+ biosynthetic pathways,1,789,8.0,8,0.9974,0.0
+GNAS -> Protein folding,GNAS,WP1892,Protein folding,1,456,2.0,2,0.9973,0.0
+ACADL -> Omega-9 fatty acid synthesis,ACADL,WP4724,Omega-9 fatty acid synthesis,1,456,3.0,3,0.9973,0.0
+UPB1 -> Nucleotide metabolism,UPB1,WP404,Nucleotide metabolism,1,123,7.0,7,0.9973,0.0
+SSRP1 -> RNA polymerase II transcribes snRNA genes,SSRP1,WP3827,RNA polymerase II transcribes snRNA genes,1,789,9.0,9,0.9973,0.0
+RAB17 -> Ion channel transport,RAB17,WP4098,Ion channel transport,1,1337,4.0,4,0.9972,0.0
+UGP2 -> Disorders of galactose metabolism ,UGP2,WP5173,Disorders of galactose metabolism ,1,123,8.0,8,0.9972,0.0
+"DCLRE1A -> DNA repair pathways, full network",DCLRE1A,WP4946,"DNA repair pathways, full network",1,123,9.0,9,0.9972,0.0
+POLR2D -> Eukaryotic transcription initiation,POLR2D,WP405,Eukaryotic transcription initiation,1,789,10.0,10,0.9972,0.0
+ADGRG2 -> Olfactory receptor activity,ADGRG2,WP3608,Olfactory receptor activity,1,456,4.0,4,0.9971,0.0
+"PXMP2 -> Leucine, isoleucine and valine metabolism",PXMP2,WP4686,"Leucine, isoleucine and valine metabolism",1,123,10.0,10,0.9971,0.0
+XRCC5 -> Fanconi anemia,XRCC5,WP5465,Fanconi anemia,1,789,11.0,11,0.9971,0.0
+SELENON -> Metabolism of water-soluble vitamins and cofactors,SELENON,WP1857,Metabolism of water-soluble vitamins and cofactors,1,789,12.0,12,0.9971,0.0
+WNK1 -> MHC class II antigen presentation,WNK1,WP2679,MHC class II antigen presentation,1,42,6.0,6,0.9969,0.0
+AIFM1 -> DDX58/IFIH1-mediated induction of interferon-alpha/beta,AIFM1,WP1904,DDX58/IFIH1-mediated induction of interferon-alpha/beta,1,1337,5.0,5,0.9968,0.0
+GNAS -> GABA receptor activation,GNAS,WP4457,GABA receptor activation,1,456,5.0,5,0.9968,0.0
+NMNAT1 -> rRNA modification in the mitochondrion,NMNAT1,WP4099,rRNA modification in the mitochondrion,1,123,11.0,11,0.9968,0.0
+ATP5F1C -> Mitochondrial complex IV assembly,ATP5F1C,WP4922,Mitochondrial complex IV assembly,1,789,13.0,13,0.9967,0.0
+"LPAR3 -> GPCRs, class A rhodopsin-like",LPAR3,WP455,"GPCRs, class A rhodopsin-like",1,1337,6.0,6,0.9966,0.0
+B3GALNT1 -> Glycosphingolipid metabolism,B3GALNT1,WP5292,Glycosphingolipid metabolism,1,42,7.0,7,0.9966,0.0
+PPP1R2 -> Multiple epiphyseal dysplasia and pseudoachondroplasia genes,PPP1R2,WP4789,Multiple epiphyseal dysplasia and pseudoachondroplasia genes,1,123,12.0,12,0.9966,0.0
+NOTCH2 -> PTF1A related regulatory pathway,NOTCH2,WP4147,PTF1A related regulatory pathway,1,789,14.0,14,0.9966,0.0
+TET1 -> Interconversion of nucleotide di- and triphosphates,TET1,WP4059,Interconversion of nucleotide di- and triphosphates,1,789,15.0,15,0.9965,0.0
+ATP5F1C -> Mitochondrial complex I assembly model OXPHOS system,ATP5F1C,WP4324,Mitochondrial complex I assembly model OXPHOS system,1,789,16.0,16,0.9965,0.0
+COPA -> Kinesins,COPA,WP1842,Kinesins,1,456,6.0,6,0.9964,0.0
+MMP20 -> Activation of Matrix Metalloproteinases,MMP20,WP2769,Activation of Matrix Metalloproteinases,1,789,17.0,17,0.9964,0.0
+AKR1C3 -> Oxidation by cytochrome P450,AKR1C3,WP43,Oxidation by cytochrome P450,1,1337,7.0,7,0.9963,0.0
+HSD3B1 -> Arachidonic acid metabolism,HSD3B1,WP2650,Arachidonic acid metabolism,1,789,18.0,18,0.9963,0.0
+POR -> Methylation pathways,POR,WP704,Methylation pathways,1,1337,8.0,8,0.9962,0.0
+ACSL5 -> Cholesterol metabolism,ACSL5,WP5304,Cholesterol metabolism,1,123,13.0,13,0.9962,0.0
+TCF21 -> GDNF/RET signaling axis,TCF21,WP4830,GDNF/RET signaling axis,1,123,14.0,14,0.9962,0.0
+SLC44A1 -> Urea cycle and related diseases,SLC44A1,WP4571,Urea cycle and related diseases,1,123,15.0,15,0.9962,0.0
+ATP5F1C -> Mitochondrial complex III assembly,ATP5F1C,WP4921,Mitochondrial complex III assembly,1,789,19.0,19,0.9962,0.0
+HS3ST3B1 -> Proteoglycan biosynthesis,HS3ST3B1,WP4784,Proteoglycan biosynthesis,1,456,7.0,7,0.9961,0.0
+FUS -> ISG15 antiviral mechanism,FUS,WP2672,ISG15 antiviral mechanism,1,1337,9.0,9,0.9961,0.0
+GADL1 -> Creatine metabolism,GADL1,WP5002,Creatine metabolism,1,123,16.0,16,0.9961,0.0
+MARCHF6 -> N-glycan biosynthesis,MARCHF6,WP5153,N-glycan biosynthesis,1,123,17.0,17,0.9961,0.0
+DYNC1H1 -> Host Interactions of HIV factors,DYNC1H1,WP2684,Host Interactions of HIV factors,1,42,8.0,8,0.996,0.0
+PXMP2 -> Mitochondrial iron-sulfur cluster biogenesis,PXMP2,WP2702,Mitochondrial iron-sulfur cluster biogenesis,1,123,18.0,18,0.996,0.0
+TYRP1 -> Splicing factor NOVA regulated synaptic proteins,TYRP1,WP4148,Splicing factor NOVA regulated synaptic proteins,1,123,19.0,19,0.9959,0.0
+LPAR4 -> G alpha (s) signaling events,LPAR4,WP4427,G alpha (s) signaling events,1,123,20.0,20,0.9959,0.0
+RXFP1 -> G alpha (i) signaling events,RXFP1,WP4423,G alpha (i) signaling events,1,42,9.0,9,0.9958,0.0
+FABP3 -> Fatty acid beta-oxidation,FABP3,WP143,Fatty acid beta-oxidation,1,1337,10.0,10,0.9958,0.0
+PIGM -> Acetylcholine binding and downstream events,PIGM,WP4454,Acetylcholine binding and downstream events,1,789,20.0,20,0.9958,0.0
+TSPOAP1 -> TYSND1 cleaves peroxisomal proteins,TSPOAP1,WP4433,TYSND1 cleaves peroxisomal proteins,1,123,21.0,21,0.9958,0.0
+ADRA1A -> Anti-inflammatory response favouring Leishmania parasite infection,ADRA1A,WP4993,Anti-inflammatory response favouring Leishmania parasite infection,1,42,10.0,10,0.9957,0.0
+KCNN3 -> Olfactory receptor activity,KCNN3,WP3608,Olfactory receptor activity,1,1337,11.0,11,0.9957,0.0
+HEPH -> Iron metabolism in placenta,HEPH,WP2007,Iron metabolism in placenta,1,42,11.0,11,0.9956,0.0
+HSD3B1 -> Alternative pathway of fetal androgen synthesis,HSD3B1,WP4524,Alternative pathway of fetal androgen synthesis,1,789,21.0,21,0.9956,0.0
+UPB1 -> Nucleobase biosynthesis,UPB1,WP4084,Nucleobase biosynthesis,1,123,22.0,22,0.9956,0.0
+DEGS2 -> Synthesis of ceramides and 1-deoxyceramides,DEGS2,WP5194,Synthesis of ceramides and 1-deoxyceramides,1,123,23.0,23,0.9956,0.0
+ACADL -> Fatty acid biosynthesis,ACADL,WP357,Fatty acid biosynthesis,1,456,8.0,8,0.9955,0.0
+"POR -> Cobalamin B12, folate B riboflavin B2 pathway into methionine cycle and folate cycle",POR,WP5488,"Cobalamin B12, folate B riboflavin B2 pathway into methionine cycle and folate cycle",1,1337,12.0,12,0.9955,0.0
+POR -> Pathways into methionine and folate cycles,POR,WP5488,Pathways into methionine and folate cycles,1,1337,12.0,12,0.9955,0.0
+ATP5MG -> Mitochondrial complex I assembly model OXPHOS system,ATP5MG,WP4324,Mitochondrial complex I assembly model OXPHOS system,1,789,22.0,22,0.9955,0.0
+RFC3 -> Mismatch Repair,RFC3,WP3381,Mismatch Repair,1,123,24.0,24,0.9955,0.0
+PXMP2 -> Branched-chain amino acid catabolism,PXMP2,WP3556,Branched-chain amino acid catabolism,1,123,25.0,25,0.9955,0.0
+B3GAT3 -> Post-translational modification: synthesis of GPI-anchored proteins,B3GAT3,WP1887,Post-translational modification: synthesis of GPI-anchored proteins,1,456,9.0,9,0.9954,0.0
+RXFP1 -> Calcium regulation in cardiac cells,RXFP1,WP536,Calcium regulation in cardiac cells,1,42,12.0,12,0.9953,0.0
+COL5A3 -> Cell junction organization,COL5A3,WP1793,Cell junction organization,1,42,13.0,13,0.9953,0.0
+TUT4 -> Major pathway of rRNA processing in the nucleolus and cytosol,TUT4,WP3797,Major pathway of rRNA processing in the nucleolus and cytosol,1,1337,13.0,13,0.9953,0.0
+UBXN1 -> N-glycan biosynthesis,UBXN1,WP5153,N-glycan biosynthesis,1,42,14.0,14,0.9953,0.0
+NDUFS2 -> Cristae formation,NDUFS2,WP4106,Cristae formation,1,123,26.0,26,0.9953,0.0
+FBF1 -> Bardet-Biedl syndrome,FBF1,WP5234,Bardet-Biedl syndrome,1,42,15.0,15,0.9952,0.0
+NMNAT1 -> Tryptophan catabolism,NMNAT1,WP4994,Tryptophan catabolism,1,123,27.0,27,0.9952,0.0
+FABP3 -> Mitochondrial fatty acid oxidation disorders,FABP3,WP5123,Mitochondrial fatty acid oxidation disorders,1,1337,14.0,14,0.9951,0.0
+"RXFP1 -> GPCRs, class A rhodopsin-like",RXFP1,WP455,"GPCRs, class A rhodopsin-like",1,42,16.0,16,0.9951,0.0
+AKR1C3 -> Phase I - Functionalization of compounds,AKR1C3,WP4085,Phase I - Functionalization of compounds,1,1337,15.0,15,0.995,0.0
+UQCR10 -> Mitochondrial complex I assembly model OXPHOS system,UQCR10,WP4324,Mitochondrial complex I assembly model OXPHOS system,1,1337,16.0,16,0.995,0.0
+CYTH4 -> RAB geranylgeranylation,CYTH4,WP4071,RAB geranylgeranylation,1,789,23.0,23,0.995,0.0
+USP19 -> NAD+ metabolism,USP19,WP3644,NAD+ metabolism,1,789,24.0,24,0.995,0.0
+UBXN1 -> Globo sphingolipid metabolism,UBXN1,WP1424,Globo sphingolipid metabolism,1,42,17.0,17,0.9949,0.0
+SAC3D1 -> miR-targeted genes in epithelium,SAC3D1,WP2002,miR-targeted genes in epithelium,1,789,25.0,25,0.9949,0.0
+COL17A1 -> O-linked glycosylation,COL17A1,WP3315,O-linked glycosylation,1,789,26.0,26,0.9949,0.0
+FBN2 -> Signaling by Activin,FBN2,WP2791,Signaling by Activin,1,789,27.0,27,0.9949,0.0
+"IRF2 -> Disorders of Mitochondrial Homeostatis, Dynamics, Protein Import, and Quality Control",IRF2,WP5504,"Disorders of Mitochondrial Homeostatis, Dynamics, Protein Import, and Quality Control",1,123,28.0,28,0.9949,0.0
+NDUFA2 -> Mitochondrial complex IV assembly,NDUFA2,WP4922,Mitochondrial complex IV assembly,1,123,29.0,29,0.9949,0.0
+SEMA3A -> Bone morphogenic protein signaling and regulation,SEMA3A,WP1425,Bone morphogenic protein signaling and regulation,1,456,10.0,10,0.9948,0.0
+ADRA1D -> Anti-inflammatory response favouring Leishmania parasite infection,ADRA1D,WP4993,Anti-inflammatory response favouring Leishmania parasite infection,1,1337,17.0,17,0.9948,0.0
+B3GALNT1 -> rRNA processing,B3GALNT1,WP3829,rRNA processing,1,42,18.0,18,0.9948,0.0
+IFNA21 -> Cytokine-cytokine receptor interaction,IFNA21,WP5473,Cytokine-cytokine receptor interaction,1,1337,18.0,18,0.9948,0.0
+USP19 -> NAD+ biosynthetic pathways,USP19,WP3645,NAD+ biosynthetic pathways,1,789,28.0,28,0.9948,0.0
+SLC44A1 -> Alanine and aspartate metabolism,SLC44A1,WP106,Alanine and aspartate metabolism,1,123,30.0,30,0.9948,0.0
+ACSL5 -> Cholesterol metabolism with Bloch and Kandutsch-Russell pathways,ACSL5,WP4718,Cholesterol metabolism with Bloch and Kandutsch-Russell pathways,1,123,31.0,31,0.9948,0.0
+HADHB -> Omega-9 fatty acid synthesis,HADHB,WP4724,Omega-9 fatty acid synthesis,1,456,11.0,11,0.9947,0.0
+DHCR7 -> Mevalonate arm of cholesterol biosynthesis pathway,DHCR7,WP4190,Mevalonate arm of cholesterol biosynthesis pathway,1,456,12.0,12,0.9947,0.0
+GDI2 -> MHC class II antigen presentation,GDI2,WP2679,MHC class II antigen presentation,1,42,19.0,19,0.9947,0.0
+RAB17 -> MHC class II antigen presentation,RAB17,WP2679,MHC class II antigen presentation,1,1337,19.0,19,0.9947,0.0
+ASCL1 -> GDNF/RET signaling axis,ASCL1,WP4830,GDNF/RET signaling axis,1,789,29.0,29,0.9947,0.0
+CHTOP -> mRNA processing,CHTOP,WP411,mRNA processing,1,789,30.0,30,0.9947,0.0
+ATP5MG -> Mitochondrial complex IV assembly,ATP5MG,WP4922,Mitochondrial complex IV assembly,1,789,31.0,31,0.9947,0.0
+B4GALT2 -> Glycosylation and related congenital defects,B4GALT2,WP4521,Glycosylation and related congenital defects,1,789,32.0,32,0.9947,0.0
+EXTL3 -> Post-translational modification: synthesis of GPI-anchored proteins,EXTL3,WP1887,Post-translational modification: synthesis of GPI-anchored proteins,1,42,20.0,20,0.9946,0.0
+SFTPA1 -> Regulation of IGF transport and uptake by IGF binding proteins,SFTPA1,WP2799,Regulation of IGF transport and uptake by IGF binding proteins,1,1337,20.0,20,0.9946,0.0
+TBX5 -> Mammalian disorder of sexual development,TBX5,WP4842,Mammalian disorder of sexual development,1,789,33.0,33,0.9946,0.0
+ACADL -> Cholesterol metabolism with Bloch and Kandutsch-Russell pathways,ACADL,WP4718,Cholesterol metabolism with Bloch and Kandutsch-Russell pathways,1,456,13.0,13,0.9945,0.0
+ADRA1D -> G alpha (z) signaling events,ADRA1D,WP4422,G alpha (z) signaling events,1,1337,21.0,21,0.9945,0.0
+UGT1A6 -> Phase I - Functionalization of compounds,UGT1A6,WP4085,Phase I - Functionalization of compounds,1,123,32.0,32,0.9945,0.0
+"ST8SIA6 -> Degradation pathway of sphingolipids, including diseases",ST8SIA6,WP4153,"Degradation pathway of sphingolipids, including diseases",1,789,34.0,34,0.9945,0.0
+GAD1 -> Purine metabolism and related disorders,GAD1,WP4224,Purine metabolism and related disorders,1,789,35.0,35,0.9945,0.0
+SH3KBP1 -> Class I MHC mediated antigen processing and presentation,SH3KBP1,WP3577,Class I MHC mediated antigen processing and presentation,1,42,21.0,21,0.9944,0.0
+CYP1A1 -> Enterohepatic circulation of bile acids,CYP1A1,WP5396,Enterohepatic circulation of bile acids,1,42,22.0,22,0.9944,0.0
+FKBP14 -> Ion channel transport,FKBP14,WP4098,Ion channel transport,1,789,36.0,36,0.9944,0.0
+TBX5 -> Somatic sex determination,TBX5,WP4814,Somatic sex determination,1,789,37.0,37,0.9944,0.0
+HMGCL -> Mitochondrial beta-oxidation,HMGCL,WP5241,Mitochondrial beta-oxidation,1,1337,22.0,22,0.9943,0.0
+AKR1C3 -> Metabolism of steroid hormones,AKR1C3,WP2749,Metabolism of steroid hormones,1,1337,23.0,23,0.9943,0.0
+POLE -> Fanconi Anemia Pathway,POLE,WP3569,Fanconi Anemia Pathway,1,42,23.0,23,0.9943,0.0
+SH3KBP1 -> Pathogenic Escherichia coli infection,SH3KBP1,WP2272,Pathogenic Escherichia coli infection,1,42,24.0,24,0.9943,0.0
+MRPL51 -> LGI-ADAM interactions,MRPL51,WP3392,LGI-ADAM interactions,1,123,33.0,33,0.9943,0.0
+NOTCH2 -> Signaling by NOTCH3,NOTCH2,WP2722,Signaling by NOTCH3,1,789,38.0,38,0.9943,0.0
+RXFP1 -> G alpha (q) signaling events,RXFP1,WP4424,G alpha (q) signaling events,1,42,25.0,25,0.9942,0.0
+GALNT1 -> COPII-mediated vesicle transport,GALNT1,WP4430,COPII-mediated vesicle transport,1,789,39.0,39,0.9942,0.0
+RGS16 -> Class A/1 (rhodopsin-like receptors),RGS16,WP4419,Class A/1 (rhodopsin-like receptors),1,42,26.0,26,0.9941,0.0
+NDUFS5 -> Mitochondrial complex III assembly,NDUFS5,WP4921,Mitochondrial complex III assembly,1,42,27.0,27,0.9941,0.0
+SLC44A1 -> Sulfur amino acid metabolism,SLC44A1,WP3574,Sulfur amino acid metabolism,1,123,34.0,34,0.9941,0.0
+HSD3B1 -> Oxidation by cytochrome P450,HSD3B1,WP43,Oxidation by cytochrome P450,1,789,40.0,40,0.9941,0.0
+MAGOHB -> Major pathway of rRNA processing in the nucleolus and cytosol,MAGOHB,WP3797,Major pathway of rRNA processing in the nucleolus and cytosol,1,789,41.0,41,0.9941,0.0
+ASCL1 -> Markers of kidney cell lineage,ASCL1,WP5236,Markers of kidney cell lineage,1,789,42.0,42,0.9941,0.0
+ADRA1D -> G alpha (s) signaling events,ADRA1D,WP4427,G alpha (s) signaling events,1,1337,24.0,24,0.994,0.0
+ADRA1A -> G alpha (s) signaling events,ADRA1A,WP4427,G alpha (s) signaling events,1,42,28.0,28,0.994,0.0
+GDI2 -> Intra-Golgi and retrograde Golgi-to-ER traffic,GDI2,WP3842,Intra-Golgi and retrograde Golgi-to-ER traffic,1,42,29.0,29,0.994,0.0
+AMPD1 -> Nucleobase catabolism,AMPD1,WP4042,Nucleobase catabolism,1,123,35.0,35,0.994,0.0
+ACSL5 -> Cholesterol biosynthesis pathway in hepatocytes,ACSL5,WP5329,Cholesterol biosynthesis pathway in hepatocytes,1,123,36.0,36,0.994,0.0
+CFB -> Complement-mediated inflammation of pulmonary alveolus in COVID-19 (hypothetical pathway),CFB,WP5148,Complement-mediated inflammation of pulmonary alveolus in COVID-19 (hypothetical pathway),1,123,37.0,37,0.994,0.0
+MCM10 -> Synthesis of DNA,MCM10,WP1925,Synthesis of DNA,1,789,43.0,43,0.994,0.0
+MICU1 -> Neurotransmitter release cycle,MICU1,WP1871,Neurotransmitter release cycle,1,456,14.0,14,0.9939,0.0
+WDR12 -> rRNA modification in the nucleus and cytosol,WDR12,WP3828,rRNA modification in the nucleus and cytosol,1,42,30.0,30,0.9939,0.0
+ASCL1 -> 8p23.1 copy number variation syndrome,ASCL1,WP5346,8p23.1 copy number variation syndrome,1,789,44.0,44,0.9939,0.0
+MMP25 -> TYROBP causal network in microglia,MMP25,WP3945,TYROBP causal network in microglia,1,456,15.0,15,0.9938,0.0
+RAB24 -> trans-Golgi Network Vesicle Budding,RAB24,WP3578,trans-Golgi Network Vesicle Budding,1,1337,25.0,25,0.9938,0.0
+B3GALT4 -> Glycosphingolipid metabolism,B3GALT4,WP5292,Glycosphingolipid metabolism,1,123,38.0,38,0.9938,0.0
+RAD51D -> RNA polymerase II transcribes snRNA genes,RAD51D,WP3827,RNA polymerase II transcribes snRNA genes,1,123,39.0,39,0.9938,0.0
+ST8SIA6 -> Glycosylation and related congenital defects,ST8SIA6,WP4521,Glycosylation and related congenital defects,1,789,45.0,45,0.9938,0.0
+FBN2 -> Signaling by NODAL,FBN2,WP2675,Signaling by NODAL,1,789,46.0,46,0.9938,0.0
+EPB41L5 -> Cell lineage map for neuronal differentiation,EPB41L5,WP5417,Cell lineage map for neuronal differentiation,1,789,47.0,47,0.9938,0.0
+UGT1A6 -> Sulfatase and aromatase pathway,UGT1A6,WP5368,Sulfatase and aromatase pathway,1,1337,26.0,26,0.9937,0.0
+GRK2 -> Platelet homeostasis,GRK2,WP1885,Platelet homeostasis,1,1337,27.0,27,0.9937,0.0
+SPC24 -> Mitotic G2-G2/M phases,SPC24,WP1859,Mitotic G2-G2/M phases,1,789,48.0,48,0.9937,0.0
+SEMA3A -> GDNF/RET signaling axis,SEMA3A,WP4830,GDNF/RET signaling axis,1,456,16.0,16,0.9936,0.0
+PTGR1 -> Phase II - Conjugation of compounds,PTGR1,WP4111,Phase II - Conjugation of compounds,1,456,17.0,17,0.9936,0.0
+GATA2 -> Post-translational protein phosphorylation,GATA2,WP4110,Post-translational protein phosphorylation,1,456,18.0,18,0.9936,0.0
+"RAB17 -> Disorders of Mitochondrial Homeostatis, Dynamics, Protein Import, and Quality Control",RAB17,WP5504,"Disorders of Mitochondrial Homeostatis, Dynamics, Protein Import, and Quality Control",1,1337,28.0,28,0.9936,0.0
+RAB24 -> Clathrin-mediated endocytosis,RAB24,WP4065,Clathrin-mediated endocytosis,1,1337,29.0,29,0.9936,0.0
+ACSM5 -> Metapathway biotransformation Phase I and II,ACSM5,WP702,Metapathway biotransformation Phase I and II,1,1337,30.0,30,0.9936,0.0
+DNM1 -> Intra-Golgi and retrograde Golgi-to-ER traffic,DNM1,WP3842,Intra-Golgi and retrograde Golgi-to-ER traffic,1,42,31.0,31,0.9936,0.0
+SRR -> Tryptophan catabolism leading to NAD+ production,SRR,WP4210,Tryptophan catabolism leading to NAD+ production,1,1337,31.0,31,0.9936,0.0
+RXFP1 -> Peptide GPCRs,RXFP1,WP24,Peptide GPCRs,1,42,32.0,32,0.9936,0.0
+CPT1B -> Cholesterol biosynthesis pathway in hepatocytes,CPT1B,WP5329,Cholesterol biosynthesis pathway in hepatocytes,1,456,19.0,19,0.9935,0.0
+FBF1 -> Protein folding,FBF1,WP1892,Protein folding,1,42,33.0,33,0.9935,0.0
+PFAS -> Purine metabolism,PFAS,WP4792,Purine metabolism,1,123,40.0,40,0.9935,0.0
+B4GALT2 -> Globo sphingolipid metabolism,B4GALT2,WP1424,Globo sphingolipid metabolism,1,789,49.0,49,0.9935,0.0
+PHKG1 -> Disorders of galactose metabolism ,PHKG1,WP5173,Disorders of galactose metabolism ,1,789,50.0,50,0.9935,0.0
+ATP5F1A -> Mitochondrial complex III assembly,ATP5F1A,WP4921,Mitochondrial complex III assembly,1,456,20.0,20,0.9934,0.0
+ACADL -> Cholesterol biosynthesis pathway in hepatocytes,ACADL,WP5329,Cholesterol biosynthesis pathway in hepatocytes,1,456,21.0,21,0.9934,0.0
+SH3KBP1 -> RHO GTPases activate WASPs and WAVEs,SH3KBP1,WP3388,RHO GTPases activate WASPs and WAVEs,1,42,34.0,34,0.9934,0.0
+PXMP2 -> Iron-sulfur cluster biogenesis,PXMP2,WP5152,Iron-sulfur cluster biogenesis,1,123,41.0,41,0.9934,0.0
+SH3GL1 -> PI Metabolism,SH3GL1,WP2747,PI Metabolism,1,1337,32.0,32,0.9933,0.0
+FABP3 -> Mitochondrial fatty acid beta-oxidation,FABP3,WP4034,Mitochondrial fatty acid beta-oxidation,1,1337,33.0,33,0.9933,0.0
+UBE2C -> Signaling by ROBO receptors,UBE2C,WP1918,Signaling by ROBO receptors,1,42,35.0,35,0.9933,0.0
+FUT3 -> Glycosphingolipid metabolism,FUT3,WP5292,Glycosphingolipid metabolism,1,42,36.0,36,0.9932,0.0
+HEPH -> Post-translational modification: synthesis of GPI-anchored proteins,HEPH,WP1887,Post-translational modification: synthesis of GPI-anchored proteins,1,123,42.0,42,0.9932,0.0
+ITPKA -> Phosphatidyl inositol phosphate pathway,ITPKA,WP5411,Phosphatidyl inositol phosphate pathway,1,123,43.0,43,0.9932,0.0
+KIF1A -> RAB geranylgeranylation,KIF1A,WP4071,RAB geranylgeranylation,1,456,22.0,22,0.9931,0.0
+HLA-B -> Neddylation,HLA-B,WP4121,Neddylation,1,456,23.0,23,0.9931,0.0
+AIFM1 -> TNF signaling,AIFM1,WP3380,TNF signaling,1,1337,34.0,34,0.9931,0.0
+GLRA1 -> Unfolded Protein Response,GLRA1,WP1939,Unfolded Protein Response,1,42,37.0,37,0.9931,0.0
+B3GALNT1 -> Synthesis of ceramides and 1-deoxyceramides,B3GALNT1,WP5194,Synthesis of ceramides and 1-deoxyceramides,1,42,38.0,38,0.9931,0.0
+SH3KBP1 -> Signaling by Rho GTPases,SH3KBP1,WP1917,Signaling by Rho GTPases,1,42,39.0,39,0.9931,0.0
+GPKOW -> mRNA processing,GPKOW,WP411,mRNA processing,1,123,44.0,44,0.9931,0.0
+AMPD1 -> Nucleobase biosynthesis,AMPD1,WP4084,Nucleobase biosynthesis,1,123,45.0,45,0.9931,0.0
+GATA2 -> Regulation of IGF transport and uptake by IGF binding proteins,GATA2,WP2799,Regulation of IGF transport and uptake by IGF binding proteins,1,456,24.0,24,0.993,0.0
+UQCR10 -> Oxidative phosphorylation,UQCR10,WP623,Oxidative phosphorylation,1,1337,35.0,35,0.993,0.0
+SFTPA1 -> Post-translational protein phosphorylation,SFTPA1,WP4110,Post-translational protein phosphorylation,1,1337,36.0,36,0.993,0.0
+HCN1 -> Splicing factor NOVA regulated synaptic proteins,HCN1,WP4148,Splicing factor NOVA regulated synaptic proteins,1,123,46.0,46,0.993,0.0
+HADHB -> Fatty acid biosynthesis,HADHB,WP357,Fatty acid biosynthesis,1,456,25.0,25,0.9929,0.0
+AIFM1 -> Iron uptake and transport,AIFM1,WP2670,Iron uptake and transport,1,1337,37.0,37,0.9929,0.0
+SPOP -> Kinesins,SPOP,WP1842,Kinesins,1,1337,38.0,38,0.9929,0.0
+CACNA2D3 -> Calcium regulation in cardiac cells,CACNA2D3,WP536,Calcium regulation in cardiac cells,1,42,40.0,40,0.9929,0.0
+RXFP1 -> G alpha (z) signaling events,RXFP1,WP4422,G alpha (z) signaling events,1,42,41.0,41,0.9929,0.0
+ITGA2B -> miRNA targets in ECM and membrane receptors,ITGA2B,WP2911,miRNA targets in ECM and membrane receptors,1,123,47.0,47,0.9929,0.0
+NDUFB2 -> Mitochondrial complex IV assembly,NDUFB2,WP4922,Mitochondrial complex IV assembly,1,123,48.0,48,0.9929,0.0
+UPB1 -> Mitochondrial protein import,UPB1,WP2717,Mitochondrial protein import,1,123,49.0,49,0.9929,0.0
+RAET1G -> Glycosylphosphatidyl inositol anchor pathway,RAET1G,WP5505,Glycosylphosphatidyl inositol anchor pathway,1,1337,39.0,39,0.9928,0.0
+SH3GL1 -> Phosphoinositides metabolism,SH3GL1,WP4971,Phosphoinositides metabolism,1,1337,40.0,40,0.9928,0.0
+CAMKK2 -> Platelet homeostasis,CAMKK2,WP1885,Platelet homeostasis,1,123,50.0,50,0.9928,0.0
+ATP5F1A -> Mitochondrial complex I assembly model OXPHOS system,ATP5F1A,WP4324,Mitochondrial complex I assembly model OXPHOS system,1,456,26.0,26,0.9927,0.0
+HCAR1 -> Olfactory receptor activity,HCAR1,WP3608,Olfactory receptor activity,1,1337,41.0,41,0.9927,0.0
+GLRA1 -> Neurexins and neuroligins,GLRA1,WP4133,Neurexins and neuroligins,1,42,42.0,42,0.9927,0.0
+IL12A -> Type II interferon signaling,IL12A,WP619,Type II interferon signaling,1,42,43.0,43,0.9927,0.0
+UBE2C -> Host Interactions of HIV factors,UBE2C,WP2684,Host Interactions of HIV factors,1,42,44.0,44,0.9927,0.0
+CES3 -> Mitochondrial biogenesis,CES3,WP3331,Mitochondrial biogenesis,1,456,27.0,27,0.9926,0.0
+SRR -> Tryptophan metabolism,SRR,WP465,Tryptophan metabolism,1,1337,42.0,42,0.9926,0.0
+ADA -> Signaling by retinoic acid,ADA,WP4421,Signaling by retinoic acid,1,42,45.0,45,0.9926,0.0
+NLGN4X -> Cardiac conduction,NLGN4X,WP3810,Cardiac conduction,1,1337,43.0,43,0.9925,0.0
+ATP5F1E -> tRNA aminoacylation,ATP5F1E,WP1938,tRNA aminoacylation,1,42,46.0,46,0.9925,0.0
+NDUFB10 -> Processing of SMDT1,NDUFB10,WP4134,Processing of SMDT1,1,42,47.0,47,0.9925,0.0
+KCTD1 -> Nephrogenesis,KCTD1,WP5052,Nephrogenesis,1,42,48.0,48,0.9925,0.0
+ADRA1D -> G alpha (i) signaling events,ADRA1D,WP4423,G alpha (i) signaling events,1,1337,44.0,44,0.9924,0.0
+PCYT1A -> Iron uptake and transport,PCYT1A,WP2670,Iron uptake and transport,1,1337,45.0,45,0.9924,0.0
+H2AB1 -> Effect of progerin on genes involved in progeria,H2AB1,WP4320,Effect of progerin on genes involved in progeria,1,1337,46.0,46,0.9924,0.0
+FBF1 -> Ciliopathies,FBF1,WP4803,Ciliopathies,1,42,49.0,49,0.9924,0.0
+ADH1C -> Surfactant metabolism,ADH1C,WP3579,Surfactant metabolism,1,42,50.0,50,0.9924,0.0
+HADHB -> Mitochondrial long chain fatty acid beta-oxidation,HADHB,WP368,Mitochondrial long chain fatty acid beta-oxidation,1,456,28.0,28,0.9923,0.0
+RNF19B -> Neddylation,RNF19B,WP4121,Neddylation,1,456,29.0,29,0.9922,0.0
+TIGIT -> TNFs bind their physiological receptors,TIGIT,WP3350,TNFs bind their physiological receptors,1,456,30.0,30,0.9922,0.0
+DHCR7 -> Mevalonate arm of cholesterol biosynthesis pathway with inhibitors,DHCR7,WP4189,Mevalonate arm of cholesterol biosynthesis pathway with inhibitors,1,456,31.0,31,0.9922,0.0
+PI4KB -> Inositol phosphate metabolism,PI4KB,WP2741,Inositol phosphate metabolism,1,456,32.0,32,0.9922,0.0
+HADHB -> Peroxisomal lipid metabolism,HADHB,WP1878,Peroxisomal lipid metabolism,1,456,33.0,33,0.9922,0.0
+HADHB -> Cholesterol biosynthesis pathway in hepatocytes,HADHB,WP5329,Cholesterol biosynthesis pathway in hepatocytes,1,456,34.0,34,0.9922,0.0
+UGT1A6 -> Vitamin A and carotenoid metabolism,UGT1A6,WP716,Vitamin A and carotenoid metabolism,1,1337,47.0,47,0.9922,0.0
+SBF1 -> Inositol phosphate metabolism,SBF1,WP2741,Inositol phosphate metabolism,1,1337,48.0,48,0.9922,0.0
+SH3GL1 -> Phosphatidyl inositol phosphate pathway,SH3GL1,WP5411,Phosphatidyl inositol phosphate pathway,1,1337,49.0,49,0.9922,0.0
+GALNT16 -> Asparagine N-linked glycosylation,GALNT16,WP1785,Asparagine N-linked glycosylation,1,1337,50.0,50,0.9922,0.0
+PQBP1 -> mRNA processing,PQBP1,WP411,mRNA processing,1,456,35.0,35,0.9921,0.0
+DHCR7 -> Mevalonate pathway,DHCR7,WP3963,Mevalonate pathway,1,456,36.0,36,0.992,0.0
+LPAR4 -> G alpha (i) signaling events,LPAR4,WP4423,G alpha (i) signaling events,1,456,37.0,37,0.9919,0.0
+CES3 -> Regulation of lipid metabolism by PPARalpha,CES3,WP2797,Regulation of lipid metabolism by PPARalpha,1,456,38.0,38,0.9919,0.0
+MMGT1 -> Mitochondrial protein import,MMGT1,WP2717,Mitochondrial protein import,1,456,39.0,39,0.9917,0.0
+TFIP11 -> mRNA processing,TFIP11,WP411,mRNA processing,1,456,40.0,40,0.9916,0.0
+PTGR1 -> Metapathway biotransformation Phase I and II,PTGR1,WP702,Metapathway biotransformation Phase I and II,1,456,41.0,41,0.9916,0.0
+MMGT1 -> Cristae formation,MMGT1,WP4106,Cristae formation,1,456,42.0,42,0.9916,0.0
+GNAS -> Potassium Channels,GNAS,WP2669,Potassium Channels,1,456,43.0,43,0.9915,0.0
+UPF2 -> Metabolism of non-coding RNA,UPF2,WP2715,Metabolism of non-coding RNA,1,456,44.0,44,0.9915,0.0
+ACADL -> Fatty acid transporters,ACADL,WP5061,Fatty acid transporters,1,456,45.0,45,0.9914,0.0
+ARHGAP18 -> G alpha (12/13) signaling events,ARHGAP18,WP4426,G alpha (12/13) signaling events,1,456,46.0,46,0.9914,0.0
+GNAS -> Activation of kainate receptors upon glutamate binding,GNAS,WP4456,Activation of kainate receptors upon glutamate binding,1,456,47.0,47,0.9913,0.0
+ECHDC1 -> Cholesterol biosynthesis,ECHDC1,WP1795,Cholesterol biosynthesis,1,456,48.0,48,0.9912,0.0
+SEMA3A -> Collagen chain trimerization,SEMA3A,WP4094,Collagen chain trimerization,1,456,49.0,49,0.9912,0.0
+LPAR4 -> Anti-inflammatory response favouring Leishmania parasite infection,LPAR4,WP4993,Anti-inflammatory response favouring Leishmania parasite infection,1,456,50.0,50,0.9911,0.0
