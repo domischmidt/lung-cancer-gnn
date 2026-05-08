@@ -1,0 +1,51 @@
+rank,Gene_label,Gene_uri,Pathway_label,PathwayName,Pathway_uri,confidence
+1,UBXN1,lucia:gene/ncbigene:51035,WP3363,Sialic acid metabolism,lucia:pathway/WP3363,0.9987
+2,AOX1,lucia:gene/ncbigene:316,WP4994,Tryptophan catabolism,lucia:pathway/WP4994,0.9983
+3,GPR18,lucia:gene/ncbigene:2841,WP24,Peptide GPCRs,lucia:pathway/WP24,0.9983
+4,UBXN1,lucia:gene/ncbigene:51035,WP2717,Mitochondrial protein import,lucia:pathway/WP2717,0.998
+5,PKP2,lucia:gene/ncbigene:5318,WP1793,Cell junction organization,lucia:pathway/WP1793,0.9979
+6,WNK1,lucia:gene/ncbigene:65125,WP2679,MHC class II antigen presentation,lucia:pathway/WP2679,0.9969
+7,B3GALNT1,lucia:gene/ncbigene:8706,WP5292,Glycosphingolipid metabolism,lucia:pathway/WP5292,0.9966
+8,DYNC1H1,lucia:gene/ncbigene:1778,WP2684,Host Interactions of HIV factors,lucia:pathway/WP2684,0.996
+9,RXFP1,lucia:gene/ncbigene:59350,WP4423,G alpha (i) signaling events,lucia:pathway/WP4423,0.9958
+10,ADRA1A,lucia:gene/ncbigene:148,WP4993,Anti-inflammatory response favouring Leishmania parasite infection,lucia:pathway/WP4993,0.9957
+11,HEPH,lucia:gene/ncbigene:9843,WP2007,Iron metabolism in placenta,lucia:pathway/WP2007,0.9956
+12,RXFP1,lucia:gene/ncbigene:59350,WP536,Calcium regulation in cardiac cells,lucia:pathway/WP536,0.9953
+13,COL5A3,lucia:gene/ncbigene:50509,WP1793,Cell junction organization,lucia:pathway/WP1793,0.9953
+14,UBXN1,lucia:gene/ncbigene:51035,WP5153,N-glycan biosynthesis,lucia:pathway/WP5153,0.9953
+15,FBF1,lucia:gene/ncbigene:85302,WP5234,Bardet-Biedl syndrome,lucia:pathway/WP5234,0.9952
+16,RXFP1,lucia:gene/ncbigene:59350,WP455,"GPCRs, class A rhodopsin-like",lucia:pathway/WP455,0.9951
+17,UBXN1,lucia:gene/ncbigene:51035,WP1424,Globo sphingolipid metabolism,lucia:pathway/WP1424,0.9949
+18,B3GALNT1,lucia:gene/ncbigene:8706,WP3829,rRNA processing,lucia:pathway/WP3829,0.9948
+19,GDI2,lucia:gene/ncbigene:2665,WP2679,MHC class II antigen presentation,lucia:pathway/WP2679,0.9947
+20,EXTL3,lucia:gene/ncbigene:2137,WP1887,Post-translational modification: synthesis of GPI-anchored proteins,lucia:pathway/WP1887,0.9946
+21,SH3KBP1,lucia:gene/ncbigene:30011,WP3577,Class I MHC mediated antigen processing and presentation,lucia:pathway/WP3577,0.9944
+22,CYP1A1,lucia:gene/ncbigene:1543,WP5396,Enterohepatic circulation of bile acids,lucia:pathway/WP5396,0.9944
+23,POLE,lucia:gene/ncbigene:5426,WP3569,Fanconi Anemia Pathway,lucia:pathway/WP3569,0.9943
+24,SH3KBP1,lucia:gene/ncbigene:30011,WP2272,Pathogenic Escherichia coli infection,lucia:pathway/WP2272,0.9943
+25,RXFP1,lucia:gene/ncbigene:59350,WP4424,G alpha (q) signaling events,lucia:pathway/WP4424,0.9942
+26,RGS16,lucia:gene/ncbigene:6004,WP4419,Class A/1 (rhodopsin-like receptors),lucia:pathway/WP4419,0.9941
+27,NDUFS5,lucia:gene/ncbigene:4725,WP4921,Mitochondrial complex III assembly,lucia:pathway/WP4921,0.9941
+28,ADRA1A,lucia:gene/ncbigene:148,WP4427,G alpha (s) signaling events,lucia:pathway/WP4427,0.994
+29,GDI2,lucia:gene/ncbigene:2665,WP3842,Intra-Golgi and retrograde Golgi-to-ER traffic,lucia:pathway/WP3842,0.994
+30,WDR12,lucia:gene/ncbigene:55759,WP3828,rRNA modification in the nucleus and cytosol,lucia:pathway/WP3828,0.9939
+31,DNM1,lucia:gene/ncbigene:1759,WP3842,Intra-Golgi and retrograde Golgi-to-ER traffic,lucia:pathway/WP3842,0.9936
+32,RXFP1,lucia:gene/ncbigene:59350,WP24,Peptide GPCRs,lucia:pathway/WP24,0.9936
+33,FBF1,lucia:gene/ncbigene:85302,WP1892,Protein folding,lucia:pathway/WP1892,0.9935
+34,SH3KBP1,lucia:gene/ncbigene:30011,WP3388,RHO GTPases activate WASPs and WAVEs,lucia:pathway/WP3388,0.9934
+35,UBE2C,lucia:gene/ncbigene:11065,WP1918,Signaling by ROBO receptors,lucia:pathway/WP1918,0.9933
+36,FUT3,lucia:gene/ncbigene:2525,WP5292,Glycosphingolipid metabolism,lucia:pathway/WP5292,0.9932
+37,GLRA1,lucia:gene/ncbigene:2741,WP1939,Unfolded Protein Response,lucia:pathway/WP1939,0.9931
+38,B3GALNT1,lucia:gene/ncbigene:8706,WP5194,Synthesis of ceramides and 1-deoxyceramides,lucia:pathway/WP5194,0.9931
+39,SH3KBP1,lucia:gene/ncbigene:30011,WP1917,Signaling by Rho GTPases,lucia:pathway/WP1917,0.9931
+40,CACNA2D3,lucia:gene/ncbigene:55799,WP536,Calcium regulation in cardiac cells,lucia:pathway/WP536,0.9929
+41,RXFP1,lucia:gene/ncbigene:59350,WP4422,G alpha (z) signaling events,lucia:pathway/WP4422,0.9929
+42,GLRA1,lucia:gene/ncbigene:2741,WP4133,Neurexins and neuroligins,lucia:pathway/WP4133,0.9927
+43,IL12A,lucia:gene/ncbigene:3592,WP619,Type II interferon signaling,lucia:pathway/WP619,0.9927
+44,UBE2C,lucia:gene/ncbigene:11065,WP2684,Host Interactions of HIV factors,lucia:pathway/WP2684,0.9927
+45,ADA,lucia:gene/ncbigene:100,WP4421,Signaling by retinoic acid,lucia:pathway/WP4421,0.9926
+46,ATP5F1E,lucia:gene/ncbigene:514,WP1938,tRNA aminoacylation,lucia:pathway/WP1938,0.9925
+47,NDUFB10,lucia:gene/ncbigene:4716,WP4134,Processing of SMDT1,lucia:pathway/WP4134,0.9925
+48,KCTD1,lucia:gene/ncbigene:284252,WP5052,Nephrogenesis,lucia:pathway/WP5052,0.9925
+49,FBF1,lucia:gene/ncbigene:85302,WP4803,Ciliopathies,lucia:pathway/WP4803,0.9924
+50,ADH1C,lucia:gene/ncbigene:126,WP3579,Surfactant metabolism,lucia:pathway/WP3579,0.9924

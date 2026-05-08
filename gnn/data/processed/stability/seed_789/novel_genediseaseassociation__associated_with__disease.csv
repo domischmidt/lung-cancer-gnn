@@ -1,0 +1,51 @@
+rank,gene_label,gene_uri,disease_label,disease_uri,confidence
+1,MMP9,lucia:gene/ncbigene:4318,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9921
+2,ATR,lucia:gene/ncbigene:545,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9876
+3,SFTPB,lucia:gene/ncbigene:6439,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9875
+4,MMP13,lucia:gene/ncbigene:4322,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9872
+5,ERCC1,lucia:gene/ncbigene:2067,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9869
+6,S100A1,lucia:gene/ncbigene:6271,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9868
+7,CDKN1C,lucia:gene/ncbigene:1028,Hyperplasia,lucia:disease/C0020507,0.9844
+8,ESR2,lucia:gene/ncbigene:2100,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9843
+9,PLCE1,lucia:gene/ncbigene:51196,Large cell carcinoma of lung,lucia:disease/C0345958,0.984
+10,CDKN1C,lucia:gene/ncbigene:1028,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9788
+11,PDE4A,lucia:gene/ncbigene:5141,Lung cancer panel,lucia:disease/C0024115,0.9781
+12,KCNQ1,lucia:gene/ncbigene:3784,Large cell carcinoma of lung,lucia:disease/C0345958,0.978
+13,PLCE1,lucia:gene/ncbigene:51196,Hyperplasia,lucia:disease/C0020507,0.9774
+14,MMP13,lucia:gene/ncbigene:4322,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9768
+15,CCNB1,lucia:gene/ncbigene:891,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.9758
+16,CDKN1C,lucia:gene/ncbigene:1028,Large cell carcinoma of lung,lucia:disease/C0345958,0.9758
+17,GJB4,lucia:gene/ncbigene:127534,Lung cancer panel,lucia:disease/C0024115,0.9743
+18,CCND1,lucia:gene/ncbigene:595,Hyperplasia,lucia:disease/C0020507,0.9731
+19,PIK3CG,lucia:gene/ncbigene:5294,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.9724
+20,ERBB2,lucia:gene/ncbigene:2064,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9719
+21,IL9,lucia:gene/ncbigene:3578,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.97
+22,BCL2L11,lucia:gene/ncbigene:10018,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.9689
+23,NPC1,lucia:gene/ncbigene:4864,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9688
+24,NCOA3,lucia:gene/ncbigene:8202,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9683
+25,RABEPK,lucia:gene/ncbigene:10244,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9676
+26,MAPK1,lucia:gene/ncbigene:5594,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9665
+27,HIF1A,lucia:gene/ncbigene:3091,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9658
+28,CHPT1,lucia:gene/ncbigene:56994,Small cell lung cancer extensive stage,lucia:disease/C0278726,0.963
+29,GRP,lucia:gene/ncbigene:2922,Small cell lung cancer extensive stage,lucia:disease/C0278726,0.9628
+30,PTEN,lucia:gene/ncbigene:5728,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9613
+31,IL9,lucia:gene/ncbigene:3578,Small cell carcinoma of lung,lucia:disease/C0149925,0.9599
+32,PIK3CD,lucia:gene/ncbigene:5293,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9582
+33,BCL2L11,lucia:gene/ncbigene:10018,Carcinoid tumor of lung,lucia:disease/C0280089,0.9555
+34,ACE,lucia:gene/ncbigene:1636,Lung Neoplasms,lucia:disease/C0024121,0.9553
+35,ATRX,lucia:gene/ncbigene:546,Small cell carcinoma of lung,lucia:disease/C0149925,0.9546
+36,LCN1,lucia:gene/ncbigene:3933,Small cell lung cancer extensive stage,lucia:disease/C0278726,0.9539
+37,BCL2L11,lucia:gene/ncbigene:10018,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.953
+38,ESR2,lucia:gene/ncbigene:2100,Small cell carcinoma of lung,lucia:disease/C0149925,0.9518
+39,KIF5B,lucia:gene/ncbigene:3799,Carcinoid tumor of lung,lucia:disease/C0280089,0.9489
+40,EGFR,lucia:gene/ncbigene:1956,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.9487
+41,SLPI,lucia:gene/ncbigene:6590,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9477
+42,KRAS,lucia:gene/ncbigene:3845,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.9467
+43,TP53,lucia:gene/ncbigene:7157,Small cell lung cancer recurrent,lucia:disease/C0278727,0.9462
+44,DICER1,lucia:gene/ncbigene:23405,Small cell lung cancer recurrent,lucia:disease/C0278727,0.9462
+45,PIK3CA,lucia:gene/ncbigene:5290,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.943
+46,SPRY2,lucia:gene/ncbigene:10253,Lung Neoplasms,lucia:disease/C0024121,0.9428
+47,DICER1,lucia:gene/ncbigene:23405,Carcinoid tumor of lung,lucia:disease/C0280089,0.9425
+48,ALK,lucia:gene/ncbigene:238,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.942
+49,GDF15,lucia:gene/ncbigene:9518,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9417
+50,KRT19,lucia:gene/ncbigene:3880,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.9415

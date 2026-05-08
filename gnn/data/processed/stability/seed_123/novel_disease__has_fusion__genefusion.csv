@@ -1,0 +1,51 @@
+rank,Disease_label,Disease_uri,GeneFusion_label,GeneFusion_uri,confidence
+1,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,SQSTM1::NTRK2,lucia:gene_fusion/SQSTM1::NTRK2,0.0311
+2,Squamous cell carcinoma of lung,lucia:disease/C0149782,SQSTM1::NTRK2,lucia:gene_fusion/SQSTM1::NTRK2,0.0119
+3,Carcinoma in situ of lung,lucia:disease/C0685053,ZNRF3::EWSR1,lucia:gene_fusion/ZNRF3::EWSR1,0.0107
+4,Carcinoma in situ of lung,lucia:disease/C0685053,CCSER1::MMRN1,lucia:gene_fusion/CCSER1::MMRN1,0.0101
+5,Carcinoma in situ of lung,lucia:disease/C0685053,CDKN2A::FOCAD,lucia:gene_fusion/CDKN2A::FOCAD,0.0093
+6,adenoid cystic carcinoma of lung,lucia:disease/C1334439,SQSTM1::NTRK2,lucia:gene_fusion/SQSTM1::NTRK2,0.0026
+7,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,CCSER1::MMRN1,lucia:gene_fusion/CCSER1::MMRN1,0.002
+8,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,ZNRF3::EWSR1,lucia:gene_fusion/ZNRF3::EWSR1,0.0019
+9,Carcinoma in situ of lung,lucia:disease/C0685053,ARHGAP5::AKAP6,lucia:gene_fusion/ARHGAP5::AKAP6,0.0015
+10,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,LYST::NID1,lucia:gene_fusion/LYST::NID1,0.0014
+11,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,KIAA1958::HSDL2,lucia:gene_fusion/KIAA1958::HSDL2,0.0013
+12,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,SEPTIN9::DNAH17,lucia:gene_fusion/SEPTIN9::DNAH17,0.0012
+13,Carcinoma in situ of lung,lucia:disease/C0685053,SLC34A2::ROS1,lucia:gene_fusion/SLC34A2::ROS1,0.0012
+14,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,SND1::BRAF,lucia:gene_fusion/SND1::BRAF,0.001
+15,Carcinoma in situ of lung,lucia:disease/C0685053,KIAA1958::HSDL2,lucia:gene_fusion/KIAA1958::HSDL2,0.001
+16,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,C3ORF33::PLCH1,lucia:gene_fusion/C3ORF33::PLCH1,0.0009
+17,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,DTD1::MACROD2,lucia:gene_fusion/DTD1::MACROD2,0.0009
+18,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,ZSWIM4::YJU2B,lucia:gene_fusion/ZSWIM4::YJU2B,0.0009
+19,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,PTPRJ::FCER1G,lucia:gene_fusion/PTPRJ::FCER1G,0.0008
+20,Carcinoma in situ of lung,lucia:disease/C0685053,CD74::ROS1,lucia:gene_fusion/CD74::ROS1,0.0007
+21,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,CAPN13::GALNT14,lucia:gene_fusion/CAPN13::GALNT14,0.0007
+22,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,CDKN2A::FOCAD,lucia:gene_fusion/CDKN2A::FOCAD,0.0007
+23,Carcinoma in situ of lung,lucia:disease/C0685053,KIF5B::RET,lucia:gene_fusion/KIF5B::RET,0.0006
+24,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,ARHGAP5::AKAP6,lucia:gene_fusion/ARHGAP5::AKAP6,0.0006
+25,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,CD74::ROS1,lucia:gene_fusion/CD74::ROS1,0.0006
+26,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,CTSB::FAR1,lucia:gene_fusion/CTSB::FAR1,0.0006
+27,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,UBAP2::APTX,lucia:gene_fusion/UBAP2::APTX,0.0006
+28,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,SFTPB::MUC1,lucia:gene_fusion/SFTPB::MUC1,0.0006
+29,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,SLC34A2::ROS1,lucia:gene_fusion/SLC34A2::ROS1,0.0006
+30,Carcinoma in situ of lung,lucia:disease/C0685053,LYST::NID1,lucia:gene_fusion/LYST::NID1,0.0006
+31,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,JMJD1C::TMEM178B,lucia:gene_fusion/JMJD1C::TMEM178B,0.0005
+32,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,SUSD6::TXNDC16,lucia:gene_fusion/SUSD6::TXNDC16,0.0005
+33,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,UBE2D2::SND1,lucia:gene_fusion/UBE2D2::SND1,0.0005
+34,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,GOSR2::UTP6,lucia:gene_fusion/GOSR2::UTP6,0.0005
+35,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,KIF5B::RET,lucia:gene_fusion/KIF5B::RET,0.0005
+36,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,CSNK1E::SPRR3,lucia:gene_fusion/CSNK1E::SPRR3,0.0005
+37,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,DDX5::PFKP,lucia:gene_fusion/DDX5::PFKP,0.0004
+38,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,TMEM87B::MERTK,lucia:gene_fusion/TMEM87B::MERTK,0.0004
+39,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,PALS1::GPHN,lucia:gene_fusion/PALS1::GPHN,0.0004
+40,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,RAB3D::SPC24,lucia:gene_fusion/RAB3D::SPC24,0.0004
+41,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,SEL1L::SERTAD2,lucia:gene_fusion/SEL1L::SERTAD2,0.0004
+42,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,EXOC4::BRAF,lucia:gene_fusion/EXOC4::BRAF,0.0004
+43,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,SPTLC2::PID1,lucia:gene_fusion/SPTLC2::PID1,0.0004
+44,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,RBM48::PPP1R3A,lucia:gene_fusion/RBM48::PPP1R3A,0.0004
+45,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,EPS8L2::DCDC1,lucia:gene_fusion/EPS8L2::DCDC1,0.0004
+46,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,TRA2A::POU6F2,lucia:gene_fusion/TRA2A::POU6F2,0.0004
+47,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,CIC::KLK11,lucia:gene_fusion/CIC::KLK11,0.0004
+48,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,PIK3CB::GRM7,lucia:gene_fusion/PIK3CB::GRM7,0.0004
+49,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,LCLAT1::ALK,lucia:gene_fusion/LCLAT1::ALK,0.0004
+50,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,FRMD8::DPF2,lucia:gene_fusion/FRMD8::DPF2,0.0004

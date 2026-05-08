@@ -1,0 +1,51 @@
+rank,Disease_label,Disease_uri,GeneFusion_label,GeneFusion_uri,confidence
+1,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,SQSTM1::NTRK2,lucia:gene_fusion/SQSTM1::NTRK2,0.0165
+2,Metaplasia,lucia:disease/C0025568,SQSTM1::NTRK2,lucia:gene_fusion/SQSTM1::NTRK2,0.0097
+3,"stage, non-small cell lung cancer",lucia:disease/C0280217,SQSTM1::NTRK2,lucia:gene_fusion/SQSTM1::NTRK2,0.0026
+4,Lung Neoplasms,lucia:disease/C0024121,SDC4::NRG1,lucia:gene_fusion/SDC4::NRG1,0.0007
+5,Lung Neoplasms,lucia:disease/C0024121,BRD1::APOL5,lucia:gene_fusion/BRD1::APOL5,0.0004
+6,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,SMYD3::ELOVL1,lucia:gene_fusion/SMYD3::ELOVL1,0.0003
+7,Lung cancer panel,lucia:disease/C0024115,MAPKAPK3::HEMK1,lucia:gene_fusion/MAPKAPK3::HEMK1,0.0002
+8,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,CCSER1::MMRN1,lucia:gene_fusion/CCSER1::MMRN1,0.0002
+9,Small cell lung cancer limited stage,lucia:disease/C0278725,EZR::ROS1,lucia:gene_fusion/EZR::ROS1,0.0001
+10,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,ECT2::KALRN,lucia:gene_fusion/ECT2::KALRN,0.0001
+11,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,PPFIA1::LRRC4C,lucia:gene_fusion/PPFIA1::LRRC4C,0.0001
+12,Metaplasia,lucia:disease/C0025568,CCSER1::MMRN1,lucia:gene_fusion/CCSER1::MMRN1,0.0001
+13,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,DNAJC1::SKIDA1,lucia:gene_fusion/DNAJC1::SKIDA1,0.0001
+14,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,JUP::EIF2AK2,lucia:gene_fusion/JUP::EIF2AK2,0.0001
+15,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,DOCK11::IL13RA1,lucia:gene_fusion/DOCK11::IL13RA1,0.0001
+16,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,INTS5::LBHD1,lucia:gene_fusion/INTS5::LBHD1,0.0001
+17,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,FAM50B::PPP1R3G,lucia:gene_fusion/FAM50B::PPP1R3G,0.0001
+18,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,ZNRF3::EWSR1,lucia:gene_fusion/ZNRF3::EWSR1,0.0001
+19,Metaplasia,lucia:disease/C0025568,TMTC2::METTL25,lucia:gene_fusion/TMTC2::METTL25,0.0001
+20,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,SLC35E4::SEC14L2,lucia:gene_fusion/SLC35E4::SEC14L2,0.0001
+21,Metaplasia,lucia:disease/C0025568,RNF216::JAZF1,lucia:gene_fusion/RNF216::JAZF1,0.0001
+22,Metaplasia,lucia:disease/C0025568,BRD9::TPPP,lucia:gene_fusion/BRD9::TPPP,0.0001
+23,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,ABCA13::CAP1,lucia:gene_fusion/ABCA13::CAP1,0.0001
+24,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,STRN3::PRKD1,lucia:gene_fusion/STRN3::PRKD1,0.0001
+25,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,CDKN2A::FOCAD,lucia:gene_fusion/CDKN2A::FOCAD,0.0001
+26,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,CSNK1G1::PPIB,lucia:gene_fusion/CSNK1G1::PPIB,0.0001
+27,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,PDE3A::CCT2,lucia:gene_fusion/PDE3A::CCT2,0.0001
+28,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,DDHD1::PLEKHG3,lucia:gene_fusion/DDHD1::PLEKHG3,0.0001
+29,Metaplasia,lucia:disease/C0025568,DYNC2I2::ZER1,lucia:gene_fusion/DYNC2I2::ZER1,0.0001
+30,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,CD74::ROS1,lucia:gene_fusion/CD74::ROS1,0.0001
+31,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,RPL26::CYSTM1,lucia:gene_fusion/RPL26::CYSTM1,0.0001
+32,Metaplasia,lucia:disease/C0025568,RPL26::CYSTM1,lucia:gene_fusion/RPL26::CYSTM1,0.0001
+33,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,FOXO1::ELF1,lucia:gene_fusion/FOXO1::ELF1,0.0001
+34,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,PPFIA1::ALDH3B1,lucia:gene_fusion/PPFIA1::ALDH3B1,0.0001
+35,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,CDC37::ELL,lucia:gene_fusion/CDC37::ELL,0.0001
+36,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,SYPL1::AKR1D1,lucia:gene_fusion/SYPL1::AKR1D1,0.0001
+37,Metaplasia,lucia:disease/C0025568,CAMKMT::ALK,lucia:gene_fusion/CAMKMT::ALK,0.0001
+38,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,RNF216::JAZF1,lucia:gene_fusion/RNF216::JAZF1,0.0001
+39,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,KIAA1958::HSDL2,lucia:gene_fusion/KIAA1958::HSDL2,0.0001
+40,Metaplasia,lucia:disease/C0025568,CREBRF::SLIT3,lucia:gene_fusion/CREBRF::SLIT3,0.0001
+41,Metaplasia,lucia:disease/C0025568,SMYD3::ELOVL1,lucia:gene_fusion/SMYD3::ELOVL1,0.0001
+42,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,CDH1::CDKL3,lucia:gene_fusion/CDH1::CDKL3,0.0001
+43,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,MIER2::NMRK2,lucia:gene_fusion/MIER2::NMRK2,0.0
+44,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,MRPS17::PSPH,lucia:gene_fusion/MRPS17::PSPH,0.0
+45,Metaplasia,lucia:disease/C0025568,CDC37::ELL,lucia:gene_fusion/CDC37::ELL,0.0
+46,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,MRPS7::GGA3,lucia:gene_fusion/MRPS7::GGA3,0.0
+47,Metaplasia,lucia:disease/C0025568,ARFGEF2::PTP4A1,lucia:gene_fusion/ARFGEF2::PTP4A1,0.0
+48,Metaplasia,lucia:disease/C0025568,PPFIA1::LRRC4C,lucia:gene_fusion/PPFIA1::LRRC4C,0.0
+49,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,CCDC126::OSBPL3,lucia:gene_fusion/CCDC126::OSBPL3,0.0
+50,Metaplasia,lucia:disease/C0025568,ZFYVE9::CGA,lucia:gene_fusion/ZFYVE9::CGA,0.0

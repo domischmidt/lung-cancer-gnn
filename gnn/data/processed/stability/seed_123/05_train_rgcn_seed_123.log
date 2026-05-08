@@ -1,0 +1,56 @@
+[Config] Loaded from best_config.json: layers=2, bases=6, hidden=128, dropout=0.15000000000000002, lr=0.00030012301808980484, epochs=200
+======================================================================
+05_train_rgcn.py (4 layers, type-aware negatives, multi-batch)
+======================================================================
+
+[1/5] Loading graph ...
+Graph: 206,151 nodes, 24 relations, 631,659 edges
+Node features: CalendarYear(1d), ChemicalLocationAssociation(1d), GeoPoliticalRegion(1d), GeographicRegion(1d), People(2d), VitalStatistics(2d), ChromoRearr(1d), Variant(3d), GeneDiseaseAssociation(1d), VariantDiseaseAssociation(2d)
+Layers: 2, Bases: 6, Hidden: 128
+Device: cuda
+
+[2/5] Splitting triples ...
+Split: 505,329 train, 63,165 val, 63,165 test
+  Filter set: 631,659 known triples
+
+[3/5] Training R-GCN ...
+    Epoch   1/200  loss=0.6479  (124 batches)
+    Epoch  20/200  loss=0.4244  (124 batches)
+    Epoch  40/200  loss=0.3257  (124 batches)
+    Epoch  60/200  loss=0.2586  (124 batches)
+    Epoch  80/200  loss=0.2289  (124 batches)
+    Epoch 100/200  loss=0.2096  (124 batches)
+    Epoch 120/200  loss=0.1994  (124 batches)
+    Epoch 140/200  loss=0.1904  (124 batches)
+    Epoch 160/200  loss=0.1829  (124 batches)
+    Epoch 180/200  loss=0.1755  (124 batches)
+    Epoch 200/200  loss=0.1703  (124 batches)
+    Done in 6502.5s
+
+[4/5] Evaluating ...
+    Overall: MRR=0.2852  H@1=0.1660  H@3=0.3420  H@10=0.5340
+    CLA - Year: MRR=0.1914  H@10=0.5315  (n=111)
+    CLA - Chemical: MRR=0.5900  H@10=1.0000  (n=105)
+    CLA - City: MRR=0.0121  H@10=0.0230  (n=87)
+    CLA - Region: MRR=0.0049  H@10=0.0000  (n=11)
+    Disease - VitalStats: MRR=1.0000  H@10=1.0000  (n=19)
+    Disease - GeneFusion: MRR=0.1458  H@10=0.1250  (n=8)
+    GDA - Disease: MRR=0.3956  H@10=0.9231  (n=13)
+    Gene - GDA: MRR=0.4921  H@10=0.7778  (n=9)
+    Gene - Pathway: MRR=0.1818  H@10=0.3636  (n=44)
+    City - Country: MRR=0.5208  H@10=1.0000  (n=4)
+    Variant - Gene: MRR=0.4507  H@10=0.6667  (n=3)
+    VitalStats - People: MRR=0.2948  H@10=0.6786  (n=28)
+    VitalStats - Year: MRR=0.1397  H@10=0.3200  (n=25)
+    VitalStats - Country: MRR=0.2082  H@10=0.5714  (n=14)
+    VitalStats - Region: MRR=0.1143  H@10=0.2353  (n=17)
+  -> rgcn_results.json, rgcn_weights.pt
+
+[5/5] Generating figures ...
+  -> figs/rgcn_training_curve.png
+  -> figs/rgcn_vs_baselines.png
+  -> figs/rgcn_gda_comparison.png
+
+======================================================================
+R-GCN: MRR=0.2852  H@1=0.1660  H@3=0.3420  H@10=0.5340
+======================================================================

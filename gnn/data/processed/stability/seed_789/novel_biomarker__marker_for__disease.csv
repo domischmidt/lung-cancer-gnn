@@ -1,0 +1,51 @@
+rank,Biomarker_label,Biomarker_uri,Disease_label,Disease_uri,confidence
+1,Retinol,lucia:biomarker/C0087161,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0052
+2,alpha-carotene,lucia:biomarker/C0051336,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0032
+3,Genistein,lucia:biomarker/C0061202,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0032
+4,Genistein,lucia:biomarker/C0061202,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0017
+5,Riboflavin,lucia:biomarker/C0035527,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0007
+6,Vitamin B12,lucia:biomarker/C0042845,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0007
+7,alpha-carotene,lucia:biomarker/C0051336,Lung Neoplasms,lucia:disease/C0024121,0.0005
+8,Equol,lucia:biomarker/C0059497,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0004
+9,Retinol,lucia:biomarker/C0087161,Lung Neoplasms,lucia:disease/C0024121,0.0003
+10,pyridoxal phosphate,lucia:biomarker/C0034266,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0003
+11,daidzein,lucia:biomarker/C0057090,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0003
+12,Riboflavin,lucia:biomarker/C0035527,Lung Neoplasms,lucia:disease/C0024121,0.0002
+13,lutein / zeaxanthin,lucia:biomarker/C2929534,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0002
+14,Beta-Cryptoxanthin,lucia:biomarker/C0896117,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0002
+15,Carotenoids,lucia:biomarker/C0007271,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0001
+16,lutein / zeaxanthin,lucia:biomarker/C2929534,Large cell carcinoma of lung,lucia:disease/C0345958,0.0001
+17,Riboflavin,lucia:biomarker/C0035527,Lung cancer panel,lucia:disease/C0024115,0.0
+18,Retinol,lucia:biomarker/C0087161,Large cell carcinoma of lung,lucia:disease/C0345958,0.0
+19,alpha-carotene,lucia:biomarker/C0051336,Lung cancer panel,lucia:disease/C0024115,0.0
+20,daidzein,lucia:biomarker/C0057090,Hyperplasia,lucia:disease/C0020507,0.0
+21,gamma-Tocopherol,lucia:biomarker/C0017054,Hyperplasia,lucia:disease/C0020507,0.0
+22,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Hyperplasia,lucia:disease/C0020507,0.0
+23,alpha-carotene,lucia:biomarker/C0051336,Large cell carcinoma of lung,lucia:disease/C0345958,0.0
+24,lutein / zeaxanthin,lucia:biomarker/C2929534,Lung cancer panel,lucia:disease/C0024115,0.0
+25,lutein / zeaxanthin,lucia:biomarker/C2929534,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+26,lutein / zeaxanthin,lucia:biomarker/C2929534,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+27,Beta-Cryptoxanthin,lucia:biomarker/C0896117,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+28,Retinol,lucia:biomarker/C0087161,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+29,Vitamin B12,lucia:biomarker/C0042845,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+30,lutein / zeaxanthin,lucia:biomarker/C2929534,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+31,lutein / zeaxanthin,lucia:biomarker/C2929534,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+32,Retinol,lucia:biomarker/C0087161,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+33,Beta-Cryptoxanthin,lucia:biomarker/C0896117,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+34,Beta-Cryptoxanthin,lucia:biomarker/C0896117,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+35,Retinol,lucia:biomarker/C0087161,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.0
+36,Equol,lucia:biomarker/C0059497,Pulmonary lymphangioleiomyomatosis,lucia:disease/C0349649,0.0
+37,Riboflavin,lucia:biomarker/C0035527,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+38,Genistein,lucia:biomarker/C0061202,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+39,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Pulmonary lymphangioleiomyomatosis,lucia:disease/C0349649,0.0
+40,Lycopene,lucia:biomarker/C0065331,Pulmonary lymphangioleiomyomatosis,lucia:disease/C0349649,0.0
+41,Retinol,lucia:biomarker/C0087161,Small cell carcinoma of lung,lucia:disease/C0149925,0.0
+42,Equol,lucia:biomarker/C0059497,Small cell carcinoma of lung,lucia:disease/C0149925,0.0
+43,daidzein,lucia:biomarker/C0057090,Small cell carcinoma of lung,lucia:disease/C0149925,0.0
+44,alpha-carotene,lucia:biomarker/C0051336,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.0
+45,Equol,lucia:biomarker/C0059497,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.0
+46,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.0
+47,Lycopene,lucia:biomarker/C0065331,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.0
+48,lutein / zeaxanthin,lucia:biomarker/C2929534,Metaplasia,lucia:disease/C0025568,0.0
+49,lutein / zeaxanthin,lucia:biomarker/C2929534,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.0
+50,Retinol,lucia:biomarker/C0087161,Hamartoma of lung,lucia:disease/C0149927,0.0

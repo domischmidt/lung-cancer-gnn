@@ -1,0 +1,51 @@
+rank,Biomarker_label,Biomarker_uri,Disease_label,Disease_uri,confidence
+1,glycitein,lucia:biomarker/C0253391,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0011
+2,beta-Carotene,lucia:biomarker/C0053396,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0009
+3,alpha-carotene,lucia:biomarker/C0051336,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0005
+4,alpha-Tocopherol,lucia:biomarker/C0969677,Lung Neoplasms,lucia:disease/C0024121,0.0002
+5,alpha-Tocopherol,lucia:biomarker/C0969677,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0001
+6,Tocopherols,lucia:biomarker/C3255108,Lung Neoplasms,lucia:disease/C0024121,0.0001
+7,alpha-carotene,lucia:biomarker/C0051336,Lung Neoplasms,lucia:disease/C0024121,0.0001
+8,alpha-Tocopherol,lucia:biomarker/C0969677,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0001
+9,Vitamin B12,lucia:biomarker/C0042845,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0001
+10,alpha-carotene,lucia:biomarker/C0051336,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0001
+11,beta-Carotene,lucia:biomarker/C0053396,Small cell carcinoma of lung,lucia:disease/C0149925,0.0
+12,daidzein,lucia:biomarker/C0057090,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0
+13,alpha-carotene,lucia:biomarker/C0051336,Lung cancer panel,lucia:disease/C0024115,0.0
+14,alpha-Tocopherol,lucia:biomarker/C0969677,Lung cancer panel,lucia:disease/C0024115,0.0
+15,Vitamin B12,lucia:biomarker/C0042845,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0
+16,gamma-Tocopherol,lucia:biomarker/C0017054,Metaplasia,lucia:disease/C0025568,0.0
+17,alpha-Tocopherol,lucia:biomarker/C0969677,Metaplasia,lucia:disease/C0025568,0.0
+18,alpha-carotene,lucia:biomarker/C0051336,Small cell carcinoma of lung,lucia:disease/C0149925,0.0
+19,Vitamin B12,lucia:biomarker/C0042845,Small cell carcinoma of lung,lucia:disease/C0149925,0.0
+20,Tocopherols,lucia:biomarker/C3255108,Metaplasia,lucia:disease/C0025568,0.0
+21,Tocopherols,lucia:biomarker/C3255108,Lung cancer panel,lucia:disease/C0024115,0.0
+22,alpha-Tocopherol,lucia:biomarker/C0969677,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0
+23,Vitamin B12,lucia:biomarker/C0042845,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0
+24,daidzein,lucia:biomarker/C0057090,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0
+25,alpha-Tocopherol,lucia:biomarker/C0969677,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.0
+26,Tocopherols,lucia:biomarker/C3255108,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.0
+27,alpha-Tocopherol,lucia:biomarker/C0969677,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+28,lutein / zeaxanthin,lucia:biomarker/C2929534,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.0
+29,alpha-Tocopherol,lucia:biomarker/C0969677,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.0
+30,alpha-Tocopherol,lucia:biomarker/C0969677,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+31,alpha-carotene,lucia:biomarker/C0051336,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+32,Vitamin B12,lucia:biomarker/C0042845,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+33,alpha-Tocopherol,lucia:biomarker/C0969677,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+34,alpha-carotene,lucia:biomarker/C0051336,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+35,alpha-carotene,lucia:biomarker/C0051336,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+36,gamma-Tocopherol,lucia:biomarker/C0017054,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0
+37,Tocopherols,lucia:biomarker/C3255108,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.0
+38,Tocopherols,lucia:biomarker/C3255108,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+39,alpha-Tocopherol,lucia:biomarker/C0969677,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.0
+40,alpha-Tocopherol,lucia:biomarker/C0969677,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+41,lutein / zeaxanthin,lucia:biomarker/C2929534,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.0
+42,Tocopherols,lucia:biomarker/C3255108,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+43,alpha-Tocopherol,lucia:biomarker/C0969677,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0
+44,alpha-Tocopherol,lucia:biomarker/C0969677,Carcinoma in situ of lung,lucia:disease/C0685053,0.0
+45,gamma-Tocopherol,lucia:biomarker/C0017054,Proteus Syndrome,lucia:disease/C0085261,0.0
+46,Tocopherols,lucia:biomarker/C3255108,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0
+47,alpha-carotene,lucia:biomarker/C0051336,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+48,Vitamin B12,lucia:biomarker/C0042845,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.0
+49,alpha-Tocopherol,lucia:biomarker/C0969677,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+50,alpha-Tocopherol,lucia:biomarker/C0969677,Proteus Syndrome,lucia:disease/C0085261,0.0

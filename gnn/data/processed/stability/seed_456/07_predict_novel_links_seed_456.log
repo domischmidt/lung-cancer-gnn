@@ -1,0 +1,107 @@
+[Config] Loaded R-GCN architecture from best_config.json: hidden=128, layers=2, bases=6, dropout=0.15000000000000002
+======================================================================
+06_predict_novel_links.py (discovery relations only)
+======================================================================
+
+[1/5] Loading graph and trained R-GCN ...
+Graph: 206,151 nodes, 24 relations, 631,659 edges
+Known triples: 631,659
+  GDA -> Gene mappings: 17,701
+
+[2/5] Computing embeddings ...
+  Embeddings shape: torch.Size([206151, 128])
+
+  Discovery relations (6):
+    GDA -> Disease
+    VDA -> Disease
+    Gene -> Pathway
+    Biomarker -> Disease
+    Disease -> ChromoRearr
+    Disease -> GeneFusion
+  Skipped relations (18):
+    ChemicalLocationAssociation > refers_to > GeoPoliticalRegion
+    VitalStatistics > has_output > People
+    Disease > detected_finding > VitalStatistics
+    ChemicalLocationAssociation > has_time_boundary > CalendarYear
+    ChemicalLocationAssociation > refers_to > Chemical
+    VitalStatistics > part_of > Country
+    VitalStatistics > has_time_boundary > CalendarYear
+    VitalStatistics > part_of > GeographicRegion
+    ChemicalLocationAssociation > refers_to > GeographicRegion
+    GeographicRegion > part_of > Country
+    GeoPoliticalRegion > part_of > Country
+    Gene > has_association > GeneDiseaseAssociation
+    Variant > has_variant_association > VariantDiseaseAssociation
+    VariantDiseaseAssociation > located_in_gene > Gene
+    Variant > located_in_gene > Gene
+    Pathway > linked_to > Disease
+    GeneProduct > part_of_pathway > Pathway
+    Disease > subtype_of > Disease
+
+[3/5] Predicting novel links ...
+
+  GDA -> Disease
+    50 preds (top=0.9955, 7.7s) -> novel_genediseaseassociation__associated_with__disease.csv
+      1. CSF3 -> Hyperplasia                                 conf=0.9955
+      2. MMP13 -> Hyperplasia                                conf=0.9944
+      3. SCARB1 -> Hyperplasia                               conf=0.9927
+      4. ANXA4 -> Adenocarcinoma, Oxyphilic                  conf=0.9904
+      5. HSPD1 -> Carcinoma, Spindle-Cell                    conf=0.9901
+
+  VDA -> Disease
+    50 preds (top=0.8538, 0.5s) -> novel_variantdiseaseassociation__variant_of__disease.csv
+      1. VDA_rs31490_C0007131 -> Small cell carcinoma of lu  conf=0.8538
+      2. VDA_rs761032372_C0007131 -> Small cell carcinoma o  conf=0.7246
+      3. VDA_rs1535045_C0149925 -> Non-Small Cell Lung Carc  conf=0.7124
+      4. VDA_rs758272654_C0007131 -> Small cell carcinoma o  conf=0.6559
+      5. VDA_rs11571833_C0149925 -> Non-Small Cell Lung Car  conf=0.6538
+
+  Gene -> Pathway
+    50 preds (top=0.9977, 7.0s) -> novel_gene__in_pathway__pathway.csv
+      1. SRRT -> WP411                                       conf=0.9977
+      2. GNAS -> WP1892                                      conf=0.9973
+      3. ACADL -> WP4724                                     conf=0.9973
+      4. ADGRG2 -> WP3608                                    conf=0.9971
+      5. GNAS -> WP4457                                      conf=0.9968
+
+  Biomarker -> Disease
+    50 preds (top=0.0011, 0.0s) -> novel_biomarker__marker_for__disease.csv
+      1. glycitein -> Non-Small Cell Lung Carcinoma          conf=0.0011
+      2. beta-Carotene -> Non-Small Cell Lung Carcinoma      conf=0.0009
+      3. alpha-carotene -> Non-Small Cell Lung Carcinoma     conf=0.0005
+      4. alpha-Tocopherol -> Lung Neoplasms                  conf=0.0002
+      5. alpha-Tocopherol -> Adenocarcinoma of lung (disord  conf=0.0001
+
+  Disease -> ChromoRearr
+    50 preds (top=0.6737, 1.1s) -> novel_disease__has_rearrangement__chromorearr.csv
+      1. Adenocarcinoma of lung (disorder) -> del(4)(p16p16  conf=0.6737
+      2. Adenocarcinoma of lung (disorder) -> der(15)(q14)   conf=0.6397
+      3. Lung Neoplasms -> der(2)(p23)                       conf=0.4569
+      4. Lung Neoplasms -> der(10)(q11)                      conf=0.4563
+      5. Lung Neoplasms -> der(6)(q22)                       conf=0.4444
+
+  Disease -> GeneFusion
+    50 preds (top=0.4874, 2.2s) -> novel_disease__has_fusion__genefusion.csv
+      1. Squamous cell carcinoma of lung -> SQSTM1::NTRK2    conf=0.4874
+      2. Small cell lung cancer extensive stage -> SQSTM1::  conf=0.1460
+      3. Lung Acinar Adenocarcinoma -> SQSTM1::NTRK2         conf=0.1454
+      4. Lung Neoplasms -> ZNRF3::EWSR1                      conf=0.0038
+      5. Lung Neoplasms -> THRA::PSMD3                       conf=0.0024
+
+[4/5] Saving results ...
+  -> novel_predictions_all.json
+
+[5/5] Generating figures ...
+  -> figs/novel_summary.png
+  -> figs/novel_top10_per_type.png
+  -> figs/novel_gene_disease.png
+
+======================================================================
+Done. Novel predictions summary:
+  GDA -> Disease                       50 preds  top=0.9955
+  VDA -> Disease                       50 preds  top=0.8538
+  Gene -> Pathway                      50 preds  top=0.9977
+  Biomarker -> Disease                 50 preds  top=0.0011
+  Disease -> ChromoRearr               50 preds  top=0.6737
+  Disease -> GeneFusion                50 preds  top=0.4874
+======================================================================

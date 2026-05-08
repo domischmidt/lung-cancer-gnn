@@ -1,0 +1,51 @@
+rank,Disease_label,Disease_uri,ChromoRearr_label,ChromoRearr_uri,confidence
+1,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,del(4)(p16p16),lucia:chromo_rearr/del(4)(p16p16),0.6737
+2,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,der(15)(q14),lucia:chromo_rearr/der(15)(q14),0.6397
+3,Lung Neoplasms,lucia:disease/C0024121,der(2)(p23),lucia:chromo_rearr/der(2)(p23),0.4569
+4,Lung Neoplasms,lucia:disease/C0024121,der(10)(q11),lucia:chromo_rearr/der(10)(q11),0.4563
+5,Lung Neoplasms,lucia:disease/C0024121,der(6)(q22),lucia:chromo_rearr/der(6)(q22),0.4444
+6,Lung Neoplasms,lucia:disease/C0024121,del(2)(p23p21),lucia:chromo_rearr/del(2)(p23p21),0.2159
+7,Lung Neoplasms,lucia:disease/C0024121,inv(10)(p11q11),lucia:chromo_rearr/inv(10)(p11q11),0.1735
+8,Squamous cell carcinoma of lung,lucia:disease/C0149782,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.1582
+9,Squamous cell carcinoma of lung,lucia:disease/C0149782,der(2)(p23),lucia:chromo_rearr/der(2)(p23),0.1444
+10,Squamous cell carcinoma of lung,lucia:disease/C0149782,der(10)(q11),lucia:chromo_rearr/der(10)(q11),0.128
+11,Squamous cell carcinoma of lung,lucia:disease/C0149782,der(6)(q22),lucia:chromo_rearr/der(6)(q22),0.1162
+12,Lung Acinar Adenocarcinoma,lucia:disease/C1332137,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.0663
+13,Fetal adenocarcinoma of lung,lucia:disease/C1708045,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.0484
+14,Lung Neoplasms,lucia:disease/C0024121,del(4)(p16p16),lucia:chromo_rearr/del(4)(p16p16),0.0341
+15,Lung cancer panel,lucia:disease/C0024115,inv(10)(q11q21),lucia:chromo_rearr/inv(10)(q11q21),0.0243
+16,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,inv(6)(q22q25),lucia:chromo_rearr/inv(6)(q22q25),0.0225
+17,Lung Neoplasms,lucia:disease/C0024121,inv(2)(p23p21),lucia:chromo_rearr/inv(2)(p23p21),0.0211
+18,Lung Neoplasms,lucia:disease/C0024121,inv(10)(q11q21),lucia:chromo_rearr/inv(10)(q11q21),0.0201
+19,Lung Neoplasms,lucia:disease/C0024121,inv(10)(q11q11),lucia:chromo_rearr/inv(10)(q11q11),0.0133
+20,Lung cancer panel,lucia:disease/C0024115,inv(10)(q11q11),lucia:chromo_rearr/inv(10)(q11q11),0.0099
+21,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,inv(6)(q22q25),lucia:chromo_rearr/inv(6)(q22q25),0.0041
+22,Lung Neoplasms,lucia:disease/C0024121,der(15)(q14),lucia:chromo_rearr/der(15)(q14),0.0034
+23,Lung cancer panel,lucia:disease/C0024115,der(10)(q11),lucia:chromo_rearr/der(10)(q11),0.0025
+24,Lung cancer panel,lucia:disease/C0024115,der(6)(q22),lucia:chromo_rearr/der(6)(q22),0.0024
+25,Lung Neoplasms,lucia:disease/C0024121,t(9;9)(p13;p21),lucia:chromo_rearr/t(9;9)(p13;p21),0.0016
+26,Lung cancer panel,lucia:disease/C0024115,der(2)(p23),lucia:chromo_rearr/der(2)(p23),0.0014
+27,Lung Neoplasms,lucia:disease/C0024121,t(17;17)(q11;q21),lucia:chromo_rearr/t(17;17)(q11;q21),0.0012
+28,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,inv(2)(p23p21),lucia:chromo_rearr/inv(2)(p23p21),0.0012
+29,Lung Neoplasms,lucia:disease/C0024121,t(2;2)(q31;q31),lucia:chromo_rearr/t(2;2)(q31;q31),0.0011
+30,Lung Neoplasms,lucia:disease/C0024121,t(3;3)(q13;q21),lucia:chromo_rearr/t(3;3)(q13;q21),0.0011
+31,Lung Neoplasms,lucia:disease/C0024121,t(10;10)(q23;q23),lucia:chromo_rearr/t(10;10)(q23;q23),0.001
+32,Lung cancer panel,lucia:disease/C0024115,inv(10)(p11q11),lucia:chromo_rearr/inv(10)(p11q11),0.0009
+33,Lung Neoplasms,lucia:disease/C0024121,t(2;2)(q13;q13),lucia:chromo_rearr/t(2;2)(q13;q13),0.0009
+34,Lung Neoplasms,lucia:disease/C0024121,t(16;16)(q23;q23),lucia:chromo_rearr/t(16;16)(q23;q23),0.0009
+35,Lung Neoplasms,lucia:disease/C0024121,t(6;6)(q22;q22),lucia:chromo_rearr/t(6;6)(q22;q22),0.0009
+36,Lung Neoplasms,lucia:disease/C0024121,t(14;14)(q22;q22),lucia:chromo_rearr/t(14;14)(q22;q22),0.0009
+37,Lung Neoplasms,lucia:disease/C0024121,t(16;16)(q22;q22),lucia:chromo_rearr/t(16;16)(q22;q22),0.0009
+38,Lung Neoplasms,lucia:disease/C0024121,t(3;3)(q12;q13),lucia:chromo_rearr/t(3;3)(q12;q13),0.0009
+39,Lung Neoplasms,lucia:disease/C0024121,t(20;20)(p12;p12),lucia:chromo_rearr/t(20;20)(p12;p12),0.0009
+40,Lung Neoplasms,lucia:disease/C0024121,t(2;2)(p25;p25),lucia:chromo_rearr/t(2;2)(p25;p25),0.0008
+41,Lung Neoplasms,lucia:disease/C0024121,t(4;4)(q12;q12),lucia:chromo_rearr/t(4;4)(q12;q12),0.0008
+42,Lung Neoplasms,lucia:disease/C0024121,t(5;5)(q31;q31),lucia:chromo_rearr/t(5;5)(q31;q31),0.0008
+43,Lung Neoplasms,lucia:disease/C0024121,t(3;3)(q23;q23),lucia:chromo_rearr/t(3;3)(q23;q23),0.0008
+44,Lung Neoplasms,lucia:disease/C0024121,t(7;7)(q21;q22),lucia:chromo_rearr/t(7;7)(q21;q22),0.0007
+45,Lung Neoplasms,lucia:disease/C0024121,t(16;16)(q24;q24),lucia:chromo_rearr/t(16;16)(q24;q24),0.0007
+46,Lung Neoplasms,lucia:disease/C0024121,t(11;11)(q12;q13),lucia:chromo_rearr/t(11;11)(q12;q13),0.0007
+47,Lung Neoplasms,lucia:disease/C0024121,t(1;8)(q21;q24),lucia:chromo_rearr/t(1;8)(q21;q24),0.0007
+48,Lung Neoplasms,lucia:disease/C0024121,t(5;5)(p13;p13),lucia:chromo_rearr/t(5;5)(p13;p13),0.0007
+49,Lung Neoplasms,lucia:disease/C0024121,t(16;16)(q12;q12),lucia:chromo_rearr/t(16;16)(q12;q12),0.0007
+50,Lung Neoplasms,lucia:disease/C0024121,t(18;18)(p11;p11),lucia:chromo_rearr/t(18;18)(p11;p11),0.0006

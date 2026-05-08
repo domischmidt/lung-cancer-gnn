@@ -1,0 +1,107 @@
+[Config] Loaded R-GCN architecture from best_config.json: hidden=128, layers=2, bases=6, dropout=0.15000000000000002
+======================================================================
+06_predict_novel_links.py (discovery relations only)
+======================================================================
+
+[1/5] Loading graph and trained R-GCN ...
+Graph: 206,151 nodes, 24 relations, 631,659 edges
+Known triples: 631,659
+  GDA -> Gene mappings: 17,701
+
+[2/5] Computing embeddings ...
+  Embeddings shape: torch.Size([206151, 128])
+
+  Discovery relations (6):
+    GDA -> Disease
+    VDA -> Disease
+    Gene -> Pathway
+    Biomarker -> Disease
+    Disease -> ChromoRearr
+    Disease -> GeneFusion
+  Skipped relations (18):
+    ChemicalLocationAssociation > refers_to > GeoPoliticalRegion
+    VitalStatistics > has_output > People
+    Disease > detected_finding > VitalStatistics
+    ChemicalLocationAssociation > has_time_boundary > CalendarYear
+    ChemicalLocationAssociation > refers_to > Chemical
+    VitalStatistics > part_of > Country
+    VitalStatistics > has_time_boundary > CalendarYear
+    VitalStatistics > part_of > GeographicRegion
+    ChemicalLocationAssociation > refers_to > GeographicRegion
+    GeographicRegion > part_of > Country
+    GeoPoliticalRegion > part_of > Country
+    Gene > has_association > GeneDiseaseAssociation
+    Variant > has_variant_association > VariantDiseaseAssociation
+    VariantDiseaseAssociation > located_in_gene > Gene
+    Variant > located_in_gene > Gene
+    Pathway > linked_to > Disease
+    GeneProduct > part_of_pathway > Pathway
+    Disease > subtype_of > Disease
+
+[3/5] Predicting novel links ...
+
+  GDA -> Disease
+    50 preds (top=0.9917, 8.4s) -> novel_genediseaseassociation__associated_with__disease.csv
+      1. PTGER1 -> Carcinoma, Spindle-Cell                   conf=0.9917
+      2. ACE -> Carcinoma, Spindle-Cell                      conf=0.9903
+      3. TYRP1 -> Carcinoma, Spindle-Cell                    conf=0.9899
+      4. SDHD -> Bronchioloalveolar Adenocarcinoma           conf=0.9887
+      5. LCN1 -> Small cell lung cancer extensive stage      conf=0.9885
+
+  VDA -> Disease
+    50 preds (top=0.6813, 0.6s) -> novel_variantdiseaseassociation__variant_of__disease.csv
+      1. VDA_rs3756668_C0149925 -> Non-Small Cell Lung Carc  conf=0.6813
+      2. VDA_rs731236_C0007131 -> Small cell carcinoma of l  conf=0.6753
+      3. VDA_rs397516982_C0007131 -> Small cell carcinoma o  conf=0.5102
+      4. VDA_rs2228001_C0007131 -> Small cell carcinoma of   conf=0.3694
+      5. VDA_rs121913682_C0149925 -> Non-Small Cell Lung Ca  conf=0.1631
+
+  Gene -> Pathway
+    50 preds (top=0.9986, 6.4s) -> novel_gene__in_pathway__pathway.csv
+      1. SLC44A1 -> WP4973                                   conf=0.9986
+      2. UPB1 -> WP4082                                      conf=0.9986
+      3. PXMP2 -> WP5028                                     conf=0.9978
+      4. MRPL51 -> WP3561                                    conf=0.9977
+      5. SLC44A1 -> WP497                                    conf=0.9976
+
+  Biomarker -> Disease
+    50 preds (top=0.0004, 0.0s) -> novel_biomarker__marker_for__disease.csv
+      1. Vitamin B12 -> Lung Carcinoma Metastatic in the Br  conf=0.0004
+      2. pyridoxal phosphate -> Lung Carcinoma Metastatic i  conf=0.0004
+      3. gamma-Tocopherol -> Lung Carcinoma Metastatic in t  conf=0.0002
+      4. Vitamin B12 -> Non-Small Cell Lung Carcinoma        conf=0.0002
+      5. alpha-carotene -> Non-Small Cell Lung Carcinoma     conf=0.0002
+
+  Disease -> ChromoRearr
+    50 preds (top=0.8145, 0.9s) -> novel_disease__has_rearrangement__chromorearr.csv
+      1. Adenocarcinoma of lung (disorder) -> del(4)(p16p16  conf=0.8145
+      2. Adenocarcinoma of lung (disorder) -> der(15)(q14)   conf=0.7362
+      3. Lung Carcinoma Metastatic in the Brain -> t(5;9)(q  conf=0.0086
+      4. Squamous cell carcinoma of lung -> t(5;9)(q35;q21)  conf=0.0040
+      5. Lung Carcinoma Metastatic in the Brain -> t(8;8)(p  conf=0.0008
+
+  Disease -> GeneFusion
+    50 preds (top=0.0311, 2.1s) -> novel_disease__has_fusion__genefusion.csv
+      1. Lung Carcinoma Metastatic in the Brain -> SQSTM1::  conf=0.0311
+      2. Squamous cell carcinoma of lung -> SQSTM1::NTRK2    conf=0.0119
+      3. Carcinoma in situ of lung -> ZNRF3::EWSR1           conf=0.0107
+      4. Carcinoma in situ of lung -> CCSER1::MMRN1          conf=0.0101
+      5. Carcinoma in situ of lung -> CDKN2A::FOCAD          conf=0.0093
+
+[4/5] Saving results ...
+  -> novel_predictions_all.json
+
+[5/5] Generating figures ...
+  -> figs/novel_summary.png
+  -> figs/novel_top10_per_type.png
+  -> figs/novel_gene_disease.png
+
+======================================================================
+Done. Novel predictions summary:
+  GDA -> Disease                       50 preds  top=0.9917
+  VDA -> Disease                       50 preds  top=0.6813
+  Gene -> Pathway                      50 preds  top=0.9986
+  Biomarker -> Disease                 50 preds  top=0.0004
+  Disease -> ChromoRearr               50 preds  top=0.8145
+  Disease -> GeneFusion                50 preds  top=0.0311
+======================================================================

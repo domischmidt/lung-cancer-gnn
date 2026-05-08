@@ -1,0 +1,1067 @@
+{
+  "summary": {
+    "GeneDiseaseAssociation__associated_with__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 0.9917,
+      "total_candidates": 761143,
+      "time_seconds": 8.4
+    },
+    "VariantDiseaseAssociation__variant_of__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 0.6813,
+      "total_candidates": 31519,
+      "time_seconds": 0.6
+    },
+    "Gene__in_pathway__Pathway": {
+      "n_predictions": 50,
+      "top_confidence": 0.9986,
+      "total_candidates": 15067708,
+      "time_seconds": 6.4
+    },
+    "Biomarker__marker_for__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 0.0004,
+      "total_candidates": 1032,
+      "time_seconds": 0.0
+    },
+    "Disease__has_rearrangement__ChromoRearr": {
+      "n_predictions": 50,
+      "top_confidence": 0.8145,
+      "total_candidates": 85699,
+      "time_seconds": 0.9
+    },
+    "Disease__has_fusion__GeneFusion": {
+      "n_predictions": 50,
+      "top_confidence": 0.0311,
+      "total_candidates": 183438,
+      "time_seconds": 2.1
+    }
+  },
+  "predictions": {
+    "GeneDiseaseAssociation__associated_with__Disease": [
+      {
+        "src_label": "GDA_ncbigene:5731_C0205642",
+        "src_uri": "lucia:gda/gda_11816",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.9917,
+        "gene_label": "PTGER1",
+        "gene_uri": "lucia:gene/ncbigene:5731",
+        "display": "PTGER1 -> Carcinoma, Spindle-Cell"
+      },
+      {
+        "src_label": "GDA_ncbigene:1636_C0205642",
+        "src_uri": "lucia:gda/gda_11584",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.9903,
+        "gene_label": "ACE",
+        "gene_uri": "lucia:gene/ncbigene:1636",
+        "display": "ACE -> Carcinoma, Spindle-Cell"
+      },
+      {
+        "src_label": "GDA_ncbigene:7306_C0205642",
+        "src_uri": "lucia:gda/gda_9898",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.9899,
+        "gene_label": "TYRP1",
+        "gene_uri": "lucia:gene/ncbigene:7306",
+        "display": "TYRP1 -> Carcinoma, Spindle-Cell"
+      },
+      {
+        "src_label": "GDA_ncbigene:6392_C4072942",
+        "src_uri": "lucia:gda/gda_11970",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.9887,
+        "gene_label": "SDHD",
+        "gene_uri": "lucia:gene/ncbigene:6392",
+        "display": "SDHD -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "GDA_ncbigene:3933_C1334363",
+        "src_uri": "lucia:gda/gda_12004",
+        "dst_label": "Small cell lung cancer extensive stage",
+        "dst_uri": "lucia:disease/C0278726",
+        "confidence": 0.9885,
+        "gene_label": "LCN1",
+        "gene_uri": "lucia:gene/ncbigene:3933",
+        "display": "LCN1 -> Small cell lung cancer extensive stage"
+      },
+      {
+        "src_label": "GDA_ncbigene:8658_C1332137",
+        "src_uri": "lucia:gda/gda_11894",
+        "dst_label": "Small cell lung cancer extensive stage",
+        "dst_uri": "lucia:disease/C0278726",
+        "confidence": 0.9829,
+        "gene_label": "TNKS",
+        "gene_uri": "lucia:gene/ncbigene:8658",
+        "display": "TNKS -> Small cell lung cancer extensive stage"
+      },
+      {
+        "src_label": "GDA_ncbigene:3479_C0345958",
+        "src_uri": "lucia:gda/gda_8299",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 0.9811,
+        "gene_label": "IGF1",
+        "gene_uri": "lucia:gene/ncbigene:3479",
+        "display": "IGF1 -> Hyperplasia"
+      },
+      {
+        "src_label": "GDA_ncbigene:2720_C0345958",
+        "src_uri": "lucia:gda/gda_10026",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 0.9781,
+        "gene_label": "GLB1",
+        "gene_uri": "lucia:gene/ncbigene:2720",
+        "display": "GLB1 -> Hyperplasia"
+      },
+      {
+        "src_label": "GDA_ncbigene:339541_C0205697",
+        "src_uri": "lucia:gda/gda_11159",
+        "dst_label": "Adenocarcinoma, Oxyphilic",
+        "dst_uri": "lucia:disease/C0205642",
+        "confidence": 0.9766,
+        "gene_label": "ARMH1",
+        "gene_uri": "lucia:gene/ncbigene:339541",
+        "display": "ARMH1 -> Adenocarcinoma, Oxyphilic"
+      },
+      {
+        "src_label": "GDA_ncbigene:673_C4509816",
+        "src_uri": "lucia:gda/gda_12110",
+        "dst_label": "stage, non-small cell lung cancer",
+        "dst_uri": "lucia:disease/C0280217",
+        "confidence": 0.9759,
+        "gene_label": "BRAF",
+        "gene_uri": "lucia:gene/ncbigene:673",
+        "display": "BRAF -> stage, non-small cell lung cancer"
+      },
+      {
+        "src_label": "GDA_ncbigene:3479_C4509816",
+        "src_uri": "lucia:gda/gda_12007",
+        "dst_label": "stage, non-small cell lung cancer",
+        "dst_uri": "lucia:disease/C0280217",
+        "confidence": 0.9753,
+        "gene_label": "IGF1",
+        "gene_uri": "lucia:gene/ncbigene:3479",
+        "display": "IGF1 -> stage, non-small cell lung cancer"
+      },
+      {
+        "src_label": "GDA_ncbigene:7048_C0020507",
+        "src_uri": "lucia:gda/gda_1455",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.9746,
+        "gene_label": "TGFBR2",
+        "gene_uri": "lucia:gene/ncbigene:7048",
+        "display": "TGFBR2 -> Lung cancer panel"
+      },
+      {
+        "src_label": "GDA_ncbigene:3921_C1334455",
+        "src_uri": "lucia:gda/gda_11908",
+        "dst_label": "Lymphoepithelial carcinoma",
+        "dst_uri": "lucia:disease/C0334254",
+        "confidence": 0.9745,
+        "gene_label": "RPSA",
+        "gene_uri": "lucia:gene/ncbigene:3921",
+        "display": "RPSA -> Lymphoepithelial carcinoma"
+      },
+      {
+        "src_label": "GDA_ncbigene:5447_C0345958",
+        "src_uri": "lucia:gda/gda_10956",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 0.9745,
+        "gene_label": "POR",
+        "gene_uri": "lucia:gene/ncbigene:5447",
+        "display": "POR -> Hyperplasia"
+      },
+      {
+        "src_label": "GDA_ncbigene:6271_C1334455",
+        "src_uri": "lucia:gda/gda_12001",
+        "dst_label": "Lymphoepithelial carcinoma",
+        "dst_uri": "lucia:disease/C0334254",
+        "confidence": 0.9738,
+        "gene_label": "S100A1",
+        "gene_uri": "lucia:gene/ncbigene:6271",
+        "display": "S100A1 -> Lymphoepithelial carcinoma"
+      },
+      {
+        "src_label": "GDA_ncbigene:117579_C0020507",
+        "src_uri": "lucia:gda/gda_2611",
+        "dst_label": "Large cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0345958",
+        "confidence": 0.9733,
+        "gene_label": "RLN3",
+        "gene_uri": "lucia:gene/ncbigene:117579",
+        "display": "RLN3 -> Large cell carcinoma of lung"
+      },
+      {
+        "src_label": "GDA_ncbigene:56994_C0278727",
+        "src_uri": "lucia:gda/gda_10255",
+        "dst_label": "Lymphoepithelial carcinoma",
+        "dst_uri": "lucia:disease/C0334254",
+        "confidence": 0.9724,
+        "gene_label": "CHPT1",
+        "gene_uri": "lucia:gene/ncbigene:56994",
+        "display": "CHPT1 -> Lymphoepithelial carcinoma"
+      },
+      {
+        "src_label": "GDA_ncbigene:1616_C4072942",
+        "src_uri": "lucia:gda/gda_11919",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.9723,
+        "gene_label": "DAXX",
+        "gene_uri": "lucia:gene/ncbigene:1616",
+        "display": "DAXX -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "GDA_ncbigene:2263_C0149782",
+        "src_uri": "lucia:gda/gda_852",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.9711,
+        "gene_label": "FGFR2",
+        "gene_uri": "lucia:gene/ncbigene:2263",
+        "display": "FGFR2 -> Lung cancer panel"
+      },
+      {
+        "src_label": "GDA_ncbigene:3784_C0025568",
+        "src_uri": "lucia:gda/gda_2365",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.9706,
+        "gene_label": "KCNQ1",
+        "gene_uri": "lucia:gene/ncbigene:3784",
+        "display": "KCNQ1 -> Bronchioloalveolar Adenocarcinoma"
+      }
+    ],
+    "VariantDiseaseAssociation__variant_of__Disease": [
+      {
+        "src_label": "VDA_rs3756668_C0149925",
+        "src_uri": "lucia:vda/vda_686",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.6813,
+        "display": "VDA_rs3756668_C0149925 -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "VDA_rs731236_C0007131",
+        "src_uri": "lucia:vda/vda_524",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 0.6753,
+        "display": "VDA_rs731236_C0007131 -> Small cell carcinoma of lung"
+      },
+      {
+        "src_label": "VDA_rs397516982_C0007131",
+        "src_uri": "lucia:vda/vda_310",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 0.5102,
+        "display": "VDA_rs397516982_C0007131 -> Small cell carcinoma of lung"
+      },
+      {
+        "src_label": "VDA_rs2228001_C0007131",
+        "src_uri": "lucia:vda/vda_574",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 0.3694,
+        "display": "VDA_rs2228001_C0007131 -> Small cell carcinoma of lung"
+      },
+      {
+        "src_label": "VDA_rs121913682_C0149925",
+        "src_uri": "lucia:vda/vda_660",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.1631,
+        "display": "VDA_rs121913682_C0149925 -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "VDA_rs1454328441_C0149925",
+        "src_uri": "lucia:vda/vda_669",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.1259,
+        "display": "VDA_rs1454328441_C0149925 -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "VDA_rs1045642_C0149925",
+        "src_uri": "lucia:vda/vda_624",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 0.0247,
+        "display": "VDA_rs1045642_C0149925 -> Hyperplasia"
+      },
+      {
+        "src_label": "VDA_rs11571833_C0149925",
+        "src_uri": "lucia:vda/vda_642",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.019,
+        "display": "VDA_rs11571833_C0149925 -> Lung Neoplasms"
+      },
+      {
+        "src_label": "VDA_rs758272654_C0007131",
+        "src_uri": "lucia:vda/vda_232",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 0.0166,
+        "display": "VDA_rs758272654_C0007131 -> Lung Carcinoma Metastatic in the Brain"
+      },
+      {
+        "src_label": "VDA_rs786201059_C0149925",
+        "src_uri": "lucia:vda/vda_718",
+        "dst_label": "Large cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0345958",
+        "confidence": 0.0156,
+        "display": "VDA_rs786201059_C0149925 -> Large cell carcinoma of lung"
+      },
+      {
+        "src_label": "VDA_rs11045585_C0007131",
+        "src_uri": "lucia:vda/vda_255",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 0.0154,
+        "display": "VDA_rs11045585_C0007131 -> Lung Carcinoma Metastatic in the Brain"
+      },
+      {
+        "src_label": "VDA_rs3756668_C0149925",
+        "src_uri": "lucia:vda/vda_686",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0154,
+        "display": "VDA_rs3756668_C0149925 -> Lung Neoplasms"
+      },
+      {
+        "src_label": "VDA_rs11571833_C0149925",
+        "src_uri": "lucia:vda/vda_642",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.01,
+        "display": "VDA_rs11571833_C0149925 -> Lung cancer panel"
+      },
+      {
+        "src_label": "VDA_rs3756668_C0149925",
+        "src_uri": "lucia:vda/vda_686",
+        "dst_label": "Adenocarcinoma, Oxyphilic",
+        "dst_uri": "lucia:disease/C0205642",
+        "confidence": 0.0086,
+        "display": "VDA_rs3756668_C0149925 -> Adenocarcinoma, Oxyphilic"
+      },
+      {
+        "src_label": "VDA_rs1057519858_C0007131",
+        "src_uri": "lucia:vda/vda_358",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 0.007,
+        "display": "VDA_rs1057519858_C0007131 -> Lung Carcinoma Metastatic in the Brain"
+      },
+      {
+        "src_label": "VDA_rs121909224_C0149925",
+        "src_uri": "lucia:vda/vda_647",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 0.0064,
+        "display": "VDA_rs121909224_C0149925 -> Hyperplasia"
+      },
+      {
+        "src_label": "VDA_rs2395655_C0007131",
+        "src_uri": "lucia:vda/vda_41",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0053,
+        "display": "VDA_rs2395655_C0007131 -> Lung Neoplasms"
+      },
+      {
+        "src_label": "VDA_rs121909224_C0149925",
+        "src_uri": "lucia:vda/vda_647",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.0041,
+        "display": "VDA_rs121909224_C0149925 -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "VDA_rs397516435_C0149925",
+        "src_uri": "lucia:vda/vda_689",
+        "dst_label": "Large cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0345958",
+        "confidence": 0.0041,
+        "display": "VDA_rs397516435_C0149925 -> Large cell carcinoma of lung"
+      },
+      {
+        "src_label": "VDA_rs11571833_C0149925",
+        "src_uri": "lucia:vda/vda_642",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.0041,
+        "display": "VDA_rs11571833_C0149925 -> Bronchioloalveolar Adenocarcinoma"
+      }
+    ],
+    "Gene__in_pathway__Pathway": [
+      {
+        "src_label": "SLC44A1",
+        "src_uri": "lucia:gene/ncbigene:23446",
+        "dst_label": "WP4973",
+        "dst_uri": "lucia:pathway/WP4973",
+        "confidence": 0.9986,
+        "display": "SLC44A1 -> WP4973"
+      },
+      {
+        "src_label": "UPB1",
+        "src_uri": "lucia:gene/ncbigene:51733",
+        "dst_label": "WP4082",
+        "dst_uri": "lucia:pathway/WP4082",
+        "confidence": 0.9986,
+        "display": "UPB1 -> WP4082"
+      },
+      {
+        "src_label": "PXMP2",
+        "src_uri": "lucia:gene/ncbigene:5827",
+        "dst_label": "WP5028",
+        "dst_uri": "lucia:pathway/WP5028",
+        "confidence": 0.9978,
+        "display": "PXMP2 -> WP5028"
+      },
+      {
+        "src_label": "MRPL51",
+        "src_uri": "lucia:gene/ncbigene:51258",
+        "dst_label": "WP3561",
+        "dst_uri": "lucia:pathway/WP3561",
+        "confidence": 0.9977,
+        "display": "MRPL51 -> WP3561"
+      },
+      {
+        "src_label": "SLC44A1",
+        "src_uri": "lucia:gene/ncbigene:23446",
+        "dst_label": "WP497",
+        "dst_uri": "lucia:pathway/WP497",
+        "confidence": 0.9976,
+        "display": "SLC44A1 -> WP497"
+      },
+      {
+        "src_label": "ITPKA",
+        "src_uri": "lucia:gene/ncbigene:3706",
+        "dst_label": "WP2747",
+        "dst_uri": "lucia:pathway/WP2747",
+        "confidence": 0.9976,
+        "display": "ITPKA -> WP2747"
+      },
+      {
+        "src_label": "UPB1",
+        "src_uri": "lucia:gene/ncbigene:51733",
+        "dst_label": "WP404",
+        "dst_uri": "lucia:pathway/WP404",
+        "confidence": 0.9973,
+        "display": "UPB1 -> WP404"
+      },
+      {
+        "src_label": "UGP2",
+        "src_uri": "lucia:gene/ncbigene:7360",
+        "dst_label": "WP5173",
+        "dst_uri": "lucia:pathway/WP5173",
+        "confidence": 0.9972,
+        "display": "UGP2 -> WP5173"
+      },
+      {
+        "src_label": "DCLRE1A",
+        "src_uri": "lucia:gene/ncbigene:9937",
+        "dst_label": "WP4946",
+        "dst_uri": "lucia:pathway/WP4946",
+        "confidence": 0.9972,
+        "display": "DCLRE1A -> WP4946"
+      },
+      {
+        "src_label": "PXMP2",
+        "src_uri": "lucia:gene/ncbigene:5827",
+        "dst_label": "WP4686",
+        "dst_uri": "lucia:pathway/WP4686",
+        "confidence": 0.9971,
+        "display": "PXMP2 -> WP4686"
+      },
+      {
+        "src_label": "NMNAT1",
+        "src_uri": "lucia:gene/ncbigene:64802",
+        "dst_label": "WP4099",
+        "dst_uri": "lucia:pathway/WP4099",
+        "confidence": 0.9968,
+        "display": "NMNAT1 -> WP4099"
+      },
+      {
+        "src_label": "PPP1R2",
+        "src_uri": "lucia:gene/ncbigene:5504",
+        "dst_label": "WP4789",
+        "dst_uri": "lucia:pathway/WP4789",
+        "confidence": 0.9966,
+        "display": "PPP1R2 -> WP4789"
+      },
+      {
+        "src_label": "ACSL5",
+        "src_uri": "lucia:gene/ncbigene:51703",
+        "dst_label": "WP5304",
+        "dst_uri": "lucia:pathway/WP5304",
+        "confidence": 0.9962,
+        "display": "ACSL5 -> WP5304"
+      },
+      {
+        "src_label": "TCF21",
+        "src_uri": "lucia:gene/ncbigene:6943",
+        "dst_label": "WP4830",
+        "dst_uri": "lucia:pathway/WP4830",
+        "confidence": 0.9962,
+        "display": "TCF21 -> WP4830"
+      },
+      {
+        "src_label": "SLC44A1",
+        "src_uri": "lucia:gene/ncbigene:23446",
+        "dst_label": "WP4571",
+        "dst_uri": "lucia:pathway/WP4571",
+        "confidence": 0.9962,
+        "display": "SLC44A1 -> WP4571"
+      },
+      {
+        "src_label": "GADL1",
+        "src_uri": "lucia:gene/ncbigene:339896",
+        "dst_label": "WP5002",
+        "dst_uri": "lucia:pathway/WP5002",
+        "confidence": 0.9961,
+        "display": "GADL1 -> WP5002"
+      },
+      {
+        "src_label": "MARCHF6",
+        "src_uri": "lucia:gene/ncbigene:10299",
+        "dst_label": "WP5153",
+        "dst_uri": "lucia:pathway/WP5153",
+        "confidence": 0.9961,
+        "display": "MARCHF6 -> WP5153"
+      },
+      {
+        "src_label": "PXMP2",
+        "src_uri": "lucia:gene/ncbigene:5827",
+        "dst_label": "WP2702",
+        "dst_uri": "lucia:pathway/WP2702",
+        "confidence": 0.996,
+        "display": "PXMP2 -> WP2702"
+      },
+      {
+        "src_label": "TYRP1",
+        "src_uri": "lucia:gene/ncbigene:7306",
+        "dst_label": "WP4148",
+        "dst_uri": "lucia:pathway/WP4148",
+        "confidence": 0.9959,
+        "display": "TYRP1 -> WP4148"
+      },
+      {
+        "src_label": "LPAR4",
+        "src_uri": "lucia:gene/ncbigene:2846",
+        "dst_label": "WP4427",
+        "dst_uri": "lucia:pathway/WP4427",
+        "confidence": 0.9959,
+        "display": "LPAR4 -> WP4427"
+      }
+    ],
+    "Biomarker__marker_for__Disease": [
+      {
+        "src_label": "Vitamin B12",
+        "src_uri": "lucia:biomarker/C0042845",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 0.0004,
+        "display": "Vitamin B12 -> Lung Carcinoma Metastatic in the Brain"
+      },
+      {
+        "src_label": "pyridoxal phosphate",
+        "src_uri": "lucia:biomarker/C0034266",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 0.0004,
+        "display": "pyridoxal phosphate -> Lung Carcinoma Metastatic in the Brain"
+      },
+      {
+        "src_label": "gamma-Tocopherol",
+        "src_uri": "lucia:biomarker/C0017054",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 0.0002,
+        "display": "gamma-Tocopherol -> Lung Carcinoma Metastatic in the Brain"
+      },
+      {
+        "src_label": "Vitamin B12",
+        "src_uri": "lucia:biomarker/C0042845",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.0002,
+        "display": "Vitamin B12 -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "alpha-carotene",
+        "src_uri": "lucia:biomarker/C0051336",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.0002,
+        "display": "alpha-carotene -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "pyridoxal phosphate",
+        "src_uri": "lucia:biomarker/C0034266",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.0002,
+        "display": "pyridoxal phosphate -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "pyridoxal phosphate",
+        "src_uri": "lucia:biomarker/C0034266",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 0.0,
+        "display": "pyridoxal phosphate -> Small cell carcinoma of lung"
+      },
+      {
+        "src_label": "pyridoxal phosphate",
+        "src_uri": "lucia:biomarker/C0034266",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0,
+        "display": "pyridoxal phosphate -> Lung Neoplasms"
+      },
+      {
+        "src_label": "Vitamin B12",
+        "src_uri": "lucia:biomarker/C0042845",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 0.0,
+        "display": "Vitamin B12 -> Small cell carcinoma of lung"
+      },
+      {
+        "src_label": "Vitamin B12",
+        "src_uri": "lucia:biomarker/C0042845",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0,
+        "display": "Vitamin B12 -> Lung Neoplasms"
+      },
+      {
+        "src_label": "Genistein",
+        "src_uri": "lucia:biomarker/C0061202",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0,
+        "display": "Genistein -> Lung Neoplasms"
+      },
+      {
+        "src_label": "25-Hydroxycholecalciferol",
+        "src_uri": "lucia:biomarker/C0006657",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 0.0,
+        "display": "25-Hydroxycholecalciferol -> Small cell carcinoma of lung"
+      },
+      {
+        "src_label": "pyridoxal phosphate",
+        "src_uri": "lucia:biomarker/C0034266",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.0,
+        "display": "pyridoxal phosphate -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "pyridoxal phosphate",
+        "src_uri": "lucia:biomarker/C0034266",
+        "dst_label": "mucoepidermoid carcinoma of lung",
+        "dst_uri": "lucia:disease/C1708778",
+        "confidence": 0.0,
+        "display": "pyridoxal phosphate -> mucoepidermoid carcinoma of lung"
+      },
+      {
+        "src_label": "folate",
+        "src_uri": "lucia:biomarker/C0178638",
+        "dst_label": "mucoepidermoid carcinoma of lung",
+        "dst_uri": "lucia:disease/C1708778",
+        "confidence": 0.0,
+        "display": "folate -> mucoepidermoid carcinoma of lung"
+      },
+      {
+        "src_label": "pyridoxal phosphate",
+        "src_uri": "lucia:biomarker/C0034266",
+        "dst_label": "Non-small cell lung cancer recurrent",
+        "dst_uri": "lucia:disease/C0278517",
+        "confidence": 0.0,
+        "display": "pyridoxal phosphate -> Non-small cell lung cancer recurrent"
+      },
+      {
+        "src_label": "pyridoxal phosphate",
+        "src_uri": "lucia:biomarker/C0034266",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 0.0,
+        "display": "pyridoxal phosphate -> Squamous cell carcinoma of lung"
+      },
+      {
+        "src_label": "Vitamin B12",
+        "src_uri": "lucia:biomarker/C0042845",
+        "dst_label": "Squamous cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149782",
+        "confidence": 0.0,
+        "display": "Vitamin B12 -> Squamous cell carcinoma of lung"
+      },
+      {
+        "src_label": "Genistein",
+        "src_uri": "lucia:biomarker/C0061202",
+        "dst_label": "mucoepidermoid carcinoma of lung",
+        "dst_uri": "lucia:disease/C1708778",
+        "confidence": 0.0,
+        "display": "Genistein -> mucoepidermoid carcinoma of lung"
+      },
+      {
+        "src_label": "Vitamin B12",
+        "src_uri": "lucia:biomarker/C0042845",
+        "dst_label": "stage, non-small cell lung cancer",
+        "dst_uri": "lucia:disease/C0280217",
+        "confidence": 0.0,
+        "display": "Vitamin B12 -> stage, non-small cell lung cancer"
+      }
+    ],
+    "Disease__has_rearrangement__ChromoRearr": [
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "del(4)(p16p16)",
+        "dst_uri": "lucia:chromo_rearr/del(4)(p16p16)",
+        "confidence": 0.8145,
+        "display": "Adenocarcinoma of lung (disorder) -> del(4)(p16p16)"
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "der(15)(q14)",
+        "dst_uri": "lucia:chromo_rearr/der(15)(q14)",
+        "confidence": 0.7362,
+        "display": "Adenocarcinoma of lung (disorder) -> der(15)(q14)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(5;9)(q35;q21)",
+        "dst_uri": "lucia:chromo_rearr/t(5;9)(q35;q21)",
+        "confidence": 0.0086,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(5;9)(q35;q21)"
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(5;9)(q35;q21)",
+        "dst_uri": "lucia:chromo_rearr/t(5;9)(q35;q21)",
+        "confidence": 0.004,
+        "display": "Squamous cell carcinoma of lung -> t(5;9)(q35;q21)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(8;8)(p11;p12)",
+        "dst_uri": "lucia:chromo_rearr/t(8;8)(p11;p12)",
+        "confidence": 0.0008,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(8;8)(p11;p12)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(2;2)(q24;q31)",
+        "dst_uri": "lucia:chromo_rearr/t(2;2)(q24;q31)",
+        "confidence": 0.0007,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(2;2)(q24;q31)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(1;14)(p36;q24)",
+        "dst_uri": "lucia:chromo_rearr/t(1;14)(p36;q24)",
+        "confidence": 0.0007,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(1;14)(p36;q24)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(9;9)(q34;q34)",
+        "dst_uri": "lucia:chromo_rearr/t(9;9)(q34;q34)",
+        "confidence": 0.0007,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(9;9)(q34;q34)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(14;14)(q23;q23)",
+        "dst_uri": "lucia:chromo_rearr/t(14;14)(q23;q23)",
+        "confidence": 0.0006,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(14;14)(q23;q23)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(4;4)(q21;q21)",
+        "dst_uri": "lucia:chromo_rearr/t(4;4)(q21;q21)",
+        "confidence": 0.0005,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(4;4)(q21;q21)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(3;3)(q13;q13)",
+        "dst_uri": "lucia:chromo_rearr/t(3;3)(q13;q13)",
+        "confidence": 0.0004,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(3;3)(q13;q13)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(6;6)(q24;q24)",
+        "dst_uri": "lucia:chromo_rearr/t(6;6)(q24;q24)",
+        "confidence": 0.0004,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(6;6)(q24;q24)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(9;9)(q32;q32)",
+        "dst_uri": "lucia:chromo_rearr/t(9;9)(q32;q32)",
+        "confidence": 0.0004,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(9;9)(q32;q32)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(8;8)(p23;p23)",
+        "dst_uri": "lucia:chromo_rearr/t(8;8)(p23;p23)",
+        "confidence": 0.0004,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(8;8)(p23;p23)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(12;12)(p11;q12)",
+        "dst_uri": "lucia:chromo_rearr/t(12;12)(p11;q12)",
+        "confidence": 0.0004,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(12;12)(p11;q12)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(3;3)(q26;q28)",
+        "dst_uri": "lucia:chromo_rearr/t(3;3)(q26;q28)",
+        "confidence": 0.0004,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(3;3)(q26;q28)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(16;16)(p13;p13)",
+        "dst_uri": "lucia:chromo_rearr/t(16;16)(p13;p13)",
+        "confidence": 0.0003,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(16;16)(p13;p13)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(2;2)(q33;q37)",
+        "dst_uri": "lucia:chromo_rearr/t(2;2)(q33;q37)",
+        "confidence": 0.0003,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(2;2)(q33;q37)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(17;17)(q23;q24)",
+        "dst_uri": "lucia:chromo_rearr/t(17;17)(q23;q24)",
+        "confidence": 0.0003,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(17;17)(q23;q24)"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "t(1;1)(q23;q24)",
+        "dst_uri": "lucia:chromo_rearr/t(1;1)(q23;q24)",
+        "confidence": 0.0003,
+        "display": "Lung Carcinoma Metastatic in the Brain -> t(1;1)(q23;q24)"
+      }
+    ],
+    "Disease__has_fusion__GeneFusion": [
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "SQSTM1::NTRK2",
+        "dst_uri": "lucia:gene_fusion/SQSTM1::NTRK2",
+        "confidence": 0.0311,
+        "display": "Lung Carcinoma Metastatic in the Brain -> SQSTM1::NTRK2"
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "SQSTM1::NTRK2",
+        "dst_uri": "lucia:gene_fusion/SQSTM1::NTRK2",
+        "confidence": 0.0119,
+        "display": "Squamous cell carcinoma of lung -> SQSTM1::NTRK2"
+      },
+      {
+        "src_label": "Carcinoma in situ of lung",
+        "src_uri": "lucia:disease/C0685053",
+        "dst_label": "ZNRF3::EWSR1",
+        "dst_uri": "lucia:gene_fusion/ZNRF3::EWSR1",
+        "confidence": 0.0107,
+        "display": "Carcinoma in situ of lung -> ZNRF3::EWSR1"
+      },
+      {
+        "src_label": "Carcinoma in situ of lung",
+        "src_uri": "lucia:disease/C0685053",
+        "dst_label": "CCSER1::MMRN1",
+        "dst_uri": "lucia:gene_fusion/CCSER1::MMRN1",
+        "confidence": 0.0101,
+        "display": "Carcinoma in situ of lung -> CCSER1::MMRN1"
+      },
+      {
+        "src_label": "Carcinoma in situ of lung",
+        "src_uri": "lucia:disease/C0685053",
+        "dst_label": "CDKN2A::FOCAD",
+        "dst_uri": "lucia:gene_fusion/CDKN2A::FOCAD",
+        "confidence": 0.0093,
+        "display": "Carcinoma in situ of lung -> CDKN2A::FOCAD"
+      },
+      {
+        "src_label": "adenoid cystic carcinoma of lung",
+        "src_uri": "lucia:disease/C1334439",
+        "dst_label": "SQSTM1::NTRK2",
+        "dst_uri": "lucia:gene_fusion/SQSTM1::NTRK2",
+        "confidence": 0.0026,
+        "display": "adenoid cystic carcinoma of lung -> SQSTM1::NTRK2"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "CCSER1::MMRN1",
+        "dst_uri": "lucia:gene_fusion/CCSER1::MMRN1",
+        "confidence": 0.002,
+        "display": "Lung Carcinoma Metastatic in the Brain -> CCSER1::MMRN1"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "ZNRF3::EWSR1",
+        "dst_uri": "lucia:gene_fusion/ZNRF3::EWSR1",
+        "confidence": 0.0019,
+        "display": "Lung Carcinoma Metastatic in the Brain -> ZNRF3::EWSR1"
+      },
+      {
+        "src_label": "Carcinoma in situ of lung",
+        "src_uri": "lucia:disease/C0685053",
+        "dst_label": "ARHGAP5::AKAP6",
+        "dst_uri": "lucia:gene_fusion/ARHGAP5::AKAP6",
+        "confidence": 0.0015,
+        "display": "Carcinoma in situ of lung -> ARHGAP5::AKAP6"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "LYST::NID1",
+        "dst_uri": "lucia:gene_fusion/LYST::NID1",
+        "confidence": 0.0014,
+        "display": "Lung Carcinoma Metastatic in the Brain -> LYST::NID1"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "KIAA1958::HSDL2",
+        "dst_uri": "lucia:gene_fusion/KIAA1958::HSDL2",
+        "confidence": 0.0013,
+        "display": "Lung Carcinoma Metastatic in the Brain -> KIAA1958::HSDL2"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "SEPTIN9::DNAH17",
+        "dst_uri": "lucia:gene_fusion/SEPTIN9::DNAH17",
+        "confidence": 0.0012,
+        "display": "Lung Carcinoma Metastatic in the Brain -> SEPTIN9::DNAH17"
+      },
+      {
+        "src_label": "Carcinoma in situ of lung",
+        "src_uri": "lucia:disease/C0685053",
+        "dst_label": "SLC34A2::ROS1",
+        "dst_uri": "lucia:gene_fusion/SLC34A2::ROS1",
+        "confidence": 0.0012,
+        "display": "Carcinoma in situ of lung -> SLC34A2::ROS1"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "SND1::BRAF",
+        "dst_uri": "lucia:gene_fusion/SND1::BRAF",
+        "confidence": 0.001,
+        "display": "Lung Carcinoma Metastatic in the Brain -> SND1::BRAF"
+      },
+      {
+        "src_label": "Carcinoma in situ of lung",
+        "src_uri": "lucia:disease/C0685053",
+        "dst_label": "KIAA1958::HSDL2",
+        "dst_uri": "lucia:gene_fusion/KIAA1958::HSDL2",
+        "confidence": 0.001,
+        "display": "Carcinoma in situ of lung -> KIAA1958::HSDL2"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "C3ORF33::PLCH1",
+        "dst_uri": "lucia:gene_fusion/C3ORF33::PLCH1",
+        "confidence": 0.0009,
+        "display": "Lung Carcinoma Metastatic in the Brain -> C3ORF33::PLCH1"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "DTD1::MACROD2",
+        "dst_uri": "lucia:gene_fusion/DTD1::MACROD2",
+        "confidence": 0.0009,
+        "display": "Lung Carcinoma Metastatic in the Brain -> DTD1::MACROD2"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "ZSWIM4::YJU2B",
+        "dst_uri": "lucia:gene_fusion/ZSWIM4::YJU2B",
+        "confidence": 0.0009,
+        "display": "Lung Carcinoma Metastatic in the Brain -> ZSWIM4::YJU2B"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "PTPRJ::FCER1G",
+        "dst_uri": "lucia:gene_fusion/PTPRJ::FCER1G",
+        "confidence": 0.0008,
+        "display": "Lung Carcinoma Metastatic in the Brain -> PTPRJ::FCER1G"
+      },
+      {
+        "src_label": "Carcinoma in situ of lung",
+        "src_uri": "lucia:disease/C0685053",
+        "dst_label": "CD74::ROS1",
+        "dst_uri": "lucia:gene_fusion/CD74::ROS1",
+        "confidence": 0.0007,
+        "display": "Carcinoma in situ of lung -> CD74::ROS1"
+      }
+    ]
+  },
+  "config": {
+    "top_k": 50,
+    "max_per_tail": 3,
+    "score_normalization": "sigmoid",
+    "discovery_relations": [
+      "VariantDiseaseAssociation__variant_of__Disease",
+      "Disease__has_fusion__GeneFusion",
+      "Gene__in_pathway__Pathway",
+      "GeneDiseaseAssociation__associated_with__Disease",
+      "Disease__has_rearrangement__ChromoRearr",
+      "Biomarker__marker_for__Disease"
+    ]
+  }
+}

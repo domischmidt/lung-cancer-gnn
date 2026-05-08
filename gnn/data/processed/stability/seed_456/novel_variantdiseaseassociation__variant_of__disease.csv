@@ -1,0 +1,51 @@
+rank,VariantDiseaseAssociation_label,VariantDiseaseAssociation_uri,Disease_label,Disease_uri,confidence
+1,VDA_rs31490_C0007131,lucia:vda/vda_176,Small cell carcinoma of lung,lucia:disease/C0149925,0.8538
+2,VDA_rs761032372_C0007131,lucia:vda/vda_532,Small cell carcinoma of lung,lucia:disease/C0149925,0.7246
+3,VDA_rs1535045_C0149925,lucia:vda/vda_671,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.7124
+4,VDA_rs758272654_C0007131,lucia:vda/vda_232,Small cell carcinoma of lung,lucia:disease/C0149925,0.6559
+5,VDA_rs11571833_C0149925,lucia:vda/vda_642,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.6538
+6,VDA_rs717620_C0149925,lucia:vda/vda_710,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.5767
+7,VDA_rs121912470_C0007131,lucia:vda/vda_108,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,0.0021
+8,VDA_rs10023113_C0007131,lucia:vda/vda_349,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0002
+9,VDA_rs1026411_C0007131,lucia:vda/vda_81,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,0.0001
+10,VDA_rs3218536_C0007131,lucia:vda/vda_410,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,0.0001
+11,VDA_rs3124599_C0149925,lucia:vda/vda_684,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+12,VDA_rs4353229_C0149925,lucia:vda/vda_693,Lung Neoplasms,lucia:disease/C0024121,0.0
+13,VDA_rs3124599_C0149925,lucia:vda/vda_684,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+14,VDA_rs10937405_C0149925,lucia:vda/vda_639,Lung Neoplasms,lucia:disease/C0024121,0.0
+15,VDA_rs6790167_C0149925,lucia:vda/vda_709,Lung Neoplasms,lucia:disease/C0024121,0.0
+16,VDA_rs7519667_C0149925,lucia:vda/vda_714,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+17,VDA_rs3124599_C0149925,lucia:vda/vda_684,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0
+18,VDA_rs10937405_C0149925,lucia:vda/vda_639,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.0
+19,VDA_rs10937405_C0149925,lucia:vda/vda_639,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0
+20,VDA_rs121434569_C0149925,lucia:vda/vda_646,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0
+21,VDA_rs121912470_C0007131,lucia:vda/vda_108,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0
+22,VDA_rs401681_C0149925,lucia:vda/vda_691,Large cell carcinoma of lung,lucia:disease/C0345958,0.0
+23,VDA_rs3124599_C0149925,lucia:vda/vda_684,Lung cancer panel,lucia:disease/C0024115,0.0
+24,VDA_rs104886003_C0007131,lucia:vda/vda_85,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0
+25,VDA_rs1778335_C0149925,lucia:vda/vda_675,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+26,VDA_rs3756668_C0149925,lucia:vda/vda_686,Large cell carcinoma of lung,lucia:disease/C0345958,0.0
+27,VDA_rs402710_C0149925,lucia:vda/vda_692,Large cell carcinoma of lung,lucia:disease/C0345958,0.0
+28,VDA_rs3756668_C0149925,lucia:vda/vda_686,Lung cancer panel,lucia:disease/C0024115,0.0
+29,VDA_rs1026411_C0007131,lucia:vda/vda_81,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0
+30,VDA_rs7519667_C0149925,lucia:vda/vda_714,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+31,VDA_rs104886003_C0149925,lucia:vda/vda_625,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+32,VDA_rs1778335_C0149925,lucia:vda/vda_675,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+33,VDA_rs121434569_C0149925,lucia:vda/vda_646,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.0
+34,VDA_rs10937405_C0149925,lucia:vda/vda_639,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+35,VDA_rs402710_C0149925,lucia:vda/vda_692,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0
+36,VDA_rs402710_C0149925,lucia:vda/vda_692,Hamartoma of lung,lucia:disease/C0149927,0.0
+37,VDA_rs17185553_C0149925,lucia:vda/vda_674,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+38,VDA_rs17185553_C0149925,lucia:vda/vda_674,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+39,VDA_rs402710_C0149925,lucia:vda/vda_692,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+40,VDA_rs401681_C0007131,lucia:vda/vda_199,Small cell lung cancer limited stage,lucia:disease/C0278725,0.0
+41,VDA_rs10937405_C0149925,lucia:vda/vda_639,Lung cancer panel,lucia:disease/C0024115,0.0
+42,VDA_rs4065_C0007131,lucia:vda/vda_314,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+43,VDA_rs3756668_C0149925,lucia:vda/vda_686,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0
+44,VDA_rs121434569_C0149925,lucia:vda/vda_646,Metaplasia,lucia:disease/C0025568,0.0
+45,VDA_rs121912470_C0007131,lucia:vda/vda_108,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+46,VDA_rs1217691063_C0007131,lucia:vda/vda_106,Lung Acinar Adenocarcinoma,lucia:disease/C1332137,0.0
+47,VDA_rs16932912_C0007131,lucia:vda/vda_29,Small cell lung cancer limited stage,lucia:disease/C0278725,0.0
+48,VDA_rs1333049_C0149925,lucia:vda/vda_663,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+49,VDA_rs402710_C0149925,lucia:vda/vda_692,Proteus Syndrome,lucia:disease/C0085261,0.0
+50,VDA_rs17185553_C0149925,lucia:vda/vda_674,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.0

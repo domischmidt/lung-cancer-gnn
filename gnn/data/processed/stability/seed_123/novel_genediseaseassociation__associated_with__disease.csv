@@ -1,0 +1,51 @@
+rank,gene_label,gene_uri,disease_label,disease_uri,confidence
+1,PTGER1,lucia:gene/ncbigene:5731,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9917
+2,ACE,lucia:gene/ncbigene:1636,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9903
+3,TYRP1,lucia:gene/ncbigene:7306,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9899
+4,SDHD,lucia:gene/ncbigene:6392,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9887
+5,LCN1,lucia:gene/ncbigene:3933,Small cell lung cancer extensive stage,lucia:disease/C0278726,0.9885
+6,TNKS,lucia:gene/ncbigene:8658,Small cell lung cancer extensive stage,lucia:disease/C0278726,0.9829
+7,IGF1,lucia:gene/ncbigene:3479,Hyperplasia,lucia:disease/C0020507,0.9811
+8,GLB1,lucia:gene/ncbigene:2720,Hyperplasia,lucia:disease/C0020507,0.9781
+9,ARMH1,lucia:gene/ncbigene:339541,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9766
+10,BRAF,lucia:gene/ncbigene:673,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9759
+11,IGF1,lucia:gene/ncbigene:3479,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9753
+12,TGFBR2,lucia:gene/ncbigene:7048,Lung cancer panel,lucia:disease/C0024115,0.9746
+13,RPSA,lucia:gene/ncbigene:3921,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9745
+14,POR,lucia:gene/ncbigene:5447,Hyperplasia,lucia:disease/C0020507,0.9745
+15,S100A1,lucia:gene/ncbigene:6271,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9738
+16,RLN3,lucia:gene/ncbigene:117579,Large cell carcinoma of lung,lucia:disease/C0345958,0.9733
+17,CHPT1,lucia:gene/ncbigene:56994,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9724
+18,DAXX,lucia:gene/ncbigene:1616,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9723
+19,FGFR2,lucia:gene/ncbigene:2263,Lung cancer panel,lucia:disease/C0024115,0.9711
+20,KCNQ1,lucia:gene/ncbigene:3784,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9706
+21,HDAC6,lucia:gene/ncbigene:10013,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9704
+22,CSN2,lucia:gene/ncbigene:1447,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9702
+23,S100B,lucia:gene/ncbigene:6285,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.9701
+24,LANCL1,lucia:gene/ncbigene:10314,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9688
+25,CSK,lucia:gene/ncbigene:1445,Large cell carcinoma of lung,lucia:disease/C0345958,0.9674
+26,COL11A1,lucia:gene/ncbigene:1301,Small cell lung cancer extensive stage,lucia:disease/C0278726,0.9672
+27,SDHD,lucia:gene/ncbigene:6392,Lung Neoplasms,lucia:disease/C0024121,0.9655
+28,KRT20,lucia:gene/ncbigene:54474,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9648
+29,SERPINA1,lucia:gene/ncbigene:5265,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9647
+30,CD44,lucia:gene/ncbigene:960,large cell neuroendocrine carcinoma of lung,lucia:disease/C1334363,0.9647
+31,HDAC6,lucia:gene/ncbigene:10013,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9646
+32,CHPT1,lucia:gene/ncbigene:56994,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9645
+33,FOXA1,lucia:gene/ncbigene:3169,Carcinoid tumor of lung,lucia:disease/C0280089,0.9645
+34,PIK3CA,lucia:gene/ncbigene:5290,Large cell carcinoma of lung,lucia:disease/C0345958,0.9628
+35,AKT1,lucia:gene/ncbigene:207,Metaplasia,lucia:disease/C0025568,0.9625
+36,CRTC1,lucia:gene/ncbigene:23373,Small cell carcinoma of lung,lucia:disease/C0149925,0.9623
+37,COL2A1,lucia:gene/ncbigene:1280,Lung cancer panel,lucia:disease/C0024115,0.9617
+38,CD34,lucia:gene/ncbigene:947,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.961
+39,ARHGEF2,lucia:gene/ncbigene:9181,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.9605
+40,MEN1,lucia:gene/ncbigene:4221,Metaplasia,lucia:disease/C0025568,0.9566
+41,KRAS,lucia:gene/ncbigene:3845,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9549
+42,KRAS,lucia:gene/ncbigene:3845,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.9547
+43,FOXA1,lucia:gene/ncbigene:3169,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9541
+44,DAXX,lucia:gene/ncbigene:1616,Metaplasia,lucia:disease/C0025568,0.9535
+45,FASLG,lucia:gene/ncbigene:356,Lung Neoplasms,lucia:disease/C0024121,0.952
+46,RAD51,lucia:gene/ncbigene:5888,Lung Neoplasms,lucia:disease/C0024121,0.9516
+47,ALK,lucia:gene/ncbigene:238,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.9484
+48,NOTCH1,lucia:gene/ncbigene:4851,Pulmonary lymphangioleiomyomatosis,lucia:disease/C0349649,0.9458
+49,EGFR,lucia:gene/ncbigene:1956,Small cell carcinoma of lung,lucia:disease/C0149925,0.9435
+50,PARP1,lucia:gene/ncbigene:142,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.9424

@@ -1,0 +1,135 @@
+[Config] Loaded R-GCN architecture from best_config.json: hidden=128, layers=2, bases=6, dropout=0.15000000000000002
+======================================================================
+09_normalize_scores.py
+======================================================================
+
+[1/6] Loading graph and model ...
+  Graph: 206,151 nodes, 24 relations, 631,659 edges
+  Known triples: 631,659
+  Model loaded
+
+[2/6] Computing embeddings ...
+  Embeddings shape: torch.Size([206151, 128])
+
+[3/6] Scoring known TRUE triples per relation ...
+  CLA -> City: 117,609 TRUE, median=0.980, max=1.000
+  VitalStatistics__has_output__People: 33,488 TRUE, median=0.909, max=0.994
+  Disease -> VitalStats: 33,488 TRUE, median=0.674, max=0.751
+  ChemicalLocationAssociation__has_time_boundary__CalendarYear: 131,610 TRUE, median=0.918, max=1.000
+  ChemicalLocationAssociation__refers_to__Chemical: 131,610 TRUE, median=0.875, max=1.000
+  VitalStats -> Country: 10,412 TRUE, median=0.950, max=0.998
+  VitalStatistics__has_time_boundary__CalendarYear: 33,488 TRUE, median=0.885, max=1.000
+  VitalStats -> Region: 23,076 TRUE, median=0.971, max=0.999
+  CLA -> Region: 14,001 TRUE, median=0.970, max=1.000
+  GeographicRegion__part_of__Country: 518 TRUE, median=0.827, max=0.986
+  GeoPoliticalRegion__part_of__Country: 3,143 TRUE, median=0.836, max=1.000
+  Gene__has_association__GeneDiseaseAssociation: 17,701 TRUE, median=0.999, max=1.000
+  GDA -> Disease: 17,701 TRUE, median=0.922, max=0.996
+  Variant__has_variant_association__VariantDiseaseAssociation: 733 TRUE, median=0.963, max=0.999
+  VDA -> Disease: 733 TRUE, median=0.718, max=0.960
+  VariantDiseaseAssociation__located_in_gene__Gene: 733 TRUE, median=0.972, max=1.000
+  Variant__located_in_gene__Gene: 783 TRUE, median=0.936, max=0.999
+  Gene -> Pathway: 54,005 TRUE, median=0.947, max=1.000
+  Pathway__linked_to__Disease: 2 TRUE, median=0.592, max=0.982
+  GeneProduct__part_of_pathway__Pathway: 168 TRUE, median=0.773, max=0.891
+  Biomarker -> Disease: 24 TRUE, median=0.707, max=0.759
+  Disease -> ChromoRearr: 2,309 TRUE, median=0.775, max=0.942
+  Disease -> GeneFusion: 4,289 TRUE, median=0.803, max=0.928
+  Disease__subtype_of__Disease: 35 TRUE, median=0.715, max=0.845
+
+[4/6] Scoring 1000 random FALSE triples per relation (type-aware) ...
+  CLA -> City: 1000 FALSE, median=0.000, max=0.986
+  VitalStatistics__has_output__People: 1000 FALSE, median=0.000, max=0.952
+  Disease -> VitalStats: 1000 FALSE, median=0.000, max=0.000
+  ChemicalLocationAssociation__has_time_boundary__CalendarYear: 1000 FALSE, median=0.000, max=0.960
+  ChemicalLocationAssociation__refers_to__Chemical: 1000 FALSE, median=0.000, max=0.900
+  VitalStats -> Country: 1000 FALSE, median=0.000, max=0.964
+  VitalStatistics__has_time_boundary__CalendarYear: 1000 FALSE, median=0.000, max=0.970
+  VitalStats -> Region: 1000 FALSE, median=0.000, max=0.965
+  CLA -> Region: 1000 FALSE, median=0.000, max=0.982
+  GeographicRegion__part_of__Country: 1000 FALSE, median=0.000, max=0.991
+  GeoPoliticalRegion__part_of__Country: 1000 FALSE, median=0.000, max=0.963
+  Gene__has_association__GeneDiseaseAssociation: 1000 FALSE, median=0.000, max=1.000
+  GDA -> Disease: 1000 FALSE, median=0.000, max=0.976
+  Variant__has_variant_association__VariantDiseaseAssociation: 1000 FALSE, median=0.000, max=0.983
+  VDA -> Disease: 1000 FALSE, median=0.000, max=0.369
+  VariantDiseaseAssociation__located_in_gene__Gene: 1000 FALSE, median=0.000, max=0.073
+  Variant__located_in_gene__Gene: 1000 FALSE, median=0.000, max=0.935
+  Gene -> Pathway: 1000 FALSE, median=0.000, max=0.988
+  Pathway__linked_to__Disease: 1000 FALSE, median=0.000, max=1.000
+  GeneProduct__part_of_pathway__Pathway: 1000 FALSE, median=0.000, max=0.237
+  Biomarker -> Disease: 1000 FALSE, median=0.000, max=0.000
+  Disease -> ChromoRearr: 1000 FALSE, median=0.000, max=0.000
+  Disease -> GeneFusion: 1000 FALSE, median=0.000, max=0.000
+  Disease__subtype_of__Disease: 1000 FALSE, median=0.000, max=0.845
+
+[5/6] Computing distribution statistics ...
+  -> score_distributions.json
+
+[6/6] Validating novel predictions ...
+  -> novel_predictions_validated.json
+
+  Generating validation figure ...
+  -> figs/score_validation.png
+
+======================================================================
+SUMMARY: True vs false score separation per relation
+======================================================================
+Relation                                        TRUE med  FALSE med    AUROC
+------------------------------------------------------------------------------
+CLA -> City                                        0.980      0.000    0.945
+VitalStatistics__has_output__People                0.909      0.000    0.978
+Disease -> VitalStats                              0.674      0.000    1.000
+ChemicalLocationAssociation__has_time_bound        0.918      0.000    0.956
+ChemicalLocationAssociation__refers_to__Che        0.875      0.000    0.963
+VitalStats -> Country                              0.950      0.000    0.954
+VitalStatistics__has_time_boundary__Calenda        0.885      0.000    0.945
+VitalStats -> Region                               0.971      0.000    0.944
+CLA -> Region                                      0.970      0.000    0.955
+GeographicRegion__part_of__Country                 0.827      0.000    0.943
+GeoPoliticalRegion__part_of__Country               0.836      0.000    0.963
+Gene__has_association__GeneDiseaseAssociati        0.999      0.000    0.999
+GDA -> Disease                                     0.922      0.000    0.975
+Variant__has_variant_association__VariantDi        0.963      0.000    0.986
+VDA -> Disease                                     0.718      0.000    0.997
+VariantDiseaseAssociation__located_in_gene_        0.972      0.000    1.000
+Variant__located_in_gene__Gene                     0.936      0.000    0.996
+Gene -> Pathway                                    0.947      0.000    0.984
+Pathway__linked_to__Disease                        0.592      0.000    0.977
+GeneProduct__part_of_pathway__Pathway              0.773      0.000    0.993
+Biomarker -> Disease                               0.707      0.000    1.000
+Disease -> ChromoRearr                             0.775      0.000    0.993
+Disease -> GeneFusion                              0.803      0.000    0.984
+Disease__subtype_of__Disease                       0.715      0.000    0.986
+
+Top novel predictions per key relation (with confidence):
+
+  GDA -> Disease:
+    1. PTGER1 -> Carcinoma, Spindle-Cell        score=0.992  vs_false=100.0%  vs_true= 99.9%  [very strong]
+    2. ACE -> Carcinoma, Spindle-Cell           score=0.990  vs_false=100.0%  vs_true= 99.9%  [very strong]
+    3. TYRP1 -> Carcinoma, Spindle-Cell         score=0.990  vs_false=100.0%  vs_true= 99.8%  [very strong]
+    4. SDHD -> Bronchioloalveolar Adenocarcinom score=0.989  vs_false=100.0%  vs_true= 99.6%  [very strong]
+    5. LCN1 -> Small cell lung cancer extensive score=0.989  vs_false=100.0%  vs_true= 99.6%  [very strong]
+
+  VDA -> Disease:
+    1. VDA_rs3756668_C0149925 -> Non-Small Cell score=0.681  vs_false=100.0%  vs_true= 24.1%  [weak]
+    2. VDA_rs731236_C0007131 -> Small cell carc score=0.675  vs_false=100.0%  vs_true= 22.6%  [weak]
+    3. VDA_rs397516982_C0007131 -> Small cell c score=0.510  vs_false=100.0%  vs_true= 17.3%  [weak]
+    4. VDA_rs2228001_C0007131 -> Small cell car score=0.369  vs_false= 99.9%  vs_true= 17.2%  [weak]
+    5. VDA_rs121913682_C0149925 -> Non-Small Ce score=0.163  vs_false= 99.9%  vs_true= 16.0%  [weak]
+
+  Gene -> Pathway:
+    1. SLC44A1 -> WP4973                        score=0.999  vs_false=100.0%  vs_true= 99.5%  [very strong]
+    2. UPB1 -> WP4082                           score=0.999  vs_false=100.0%  vs_true= 99.5%  [very strong]
+    3. PXMP2 -> WP5028                          score=0.998  vs_false=100.0%  vs_true= 99.0%  [very strong]
+    4. MRPL51 -> WP3561                         score=0.998  vs_false=100.0%  vs_true= 99.0%  [very strong]
+    5. SLC44A1 -> WP497                         score=0.998  vs_false=100.0%  vs_true= 98.9%  [very strong]
+
+  Disease -> GeneFusion:
+    1. Lung Carcinoma Metastatic in the Brain - score=0.031  vs_false=100.0%  vs_true= 20.2%  [weak]
+    2. Squamous cell carcinoma of lung -> SQSTM score=0.012  vs_false=100.0%  vs_true= 20.2%  [weak]
+    3. Carcinoma in situ of lung -> ZNRF3::EWSR score=0.011  vs_false=100.0%  vs_true= 20.2%  [weak]
+    4. Carcinoma in situ of lung -> CCSER1::MMR score=0.010  vs_false=100.0%  vs_true= 20.2%  [weak]
+    5. Carcinoma in situ of lung -> CDKN2A::FOC score=0.009  vs_false=100.0%  vs_true= 20.2%  [weak]
+
+Done.

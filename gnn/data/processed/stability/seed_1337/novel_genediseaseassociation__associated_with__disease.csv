@@ -1,0 +1,51 @@
+rank,gene_label,gene_uri,disease_label,disease_uri,confidence
+1,TPM3,lucia:gene/ncbigene:7170,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9827
+2,MUC2,lucia:gene/ncbigene:4583,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9816
+3,GPC3,lucia:gene/ncbigene:2719,Lung cancer panel,lucia:disease/C0024115,0.9815
+4,KRT20,lucia:gene/ncbigene:54474,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.9801
+5,HTC2,lucia:gene/ncbigene:3342,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9768
+6,MTOR,lucia:gene/ncbigene:2475,Giant cell carcinoma of lung,lucia:disease/C0345960,0.9767
+7,FGFR3,lucia:gene/ncbigene:2261,Lung cancer panel,lucia:disease/C0024115,0.9739
+8,AQP5,lucia:gene/ncbigene:362,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9723
+9,MALAT1,lucia:gene/ncbigene:378938,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9721
+10,PTGS2,lucia:gene/ncbigene:5743,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9719
+11,ARHGEF2,lucia:gene/ncbigene:9181,Hyperplasia,lucia:disease/C0020507,0.9719
+12,CAPZB,lucia:gene/ncbigene:832,"Adenocarcinoma, Oxyphilic",lucia:disease/C0205642,0.9714
+13,CD274,lucia:gene/ncbigene:29126,Giant cell carcinoma of lung,lucia:disease/C0345960,0.9706
+14,NAPSA,lucia:gene/ncbigene:9476,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9702
+15,CTNNB1,lucia:gene/ncbigene:1499,Hyperplasia,lucia:disease/C0020507,0.9682
+16,MGMT,lucia:gene/ncbigene:4255,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.9656
+17,PIK3CB,lucia:gene/ncbigene:5291,Lung cancer panel,lucia:disease/C0024115,0.9651
+18,ESR2,lucia:gene/ncbigene:2100,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9634
+19,GATA3,lucia:gene/ncbigene:2625,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.9622
+20,NAPSA,lucia:gene/ncbigene:9476,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9596
+21,NRG1,lucia:gene/ncbigene:3084,Giant cell carcinoma of lung,lucia:disease/C0345960,0.9595
+22,DDR2,lucia:gene/ncbigene:4921,Pulmonary lymphangioleiomyomatosis,lucia:disease/C0349649,0.9588
+23,TERT,lucia:gene/ncbigene:7015,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9552
+24,CD274,lucia:gene/ncbigene:29126,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.9534
+25,CD274,lucia:gene/ncbigene:29126,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9521
+26,SS18L1,lucia:gene/ncbigene:26039,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.9499
+27,ATRX,lucia:gene/ncbigene:546,Large cell carcinoma of lung,lucia:disease/C0345958,0.9491
+28,MMP9,lucia:gene/ncbigene:4318,Hyperplasia,lucia:disease/C0020507,0.9476
+29,TERT,lucia:gene/ncbigene:7015,Metaplasia,lucia:disease/C0025568,0.947
+30,FOXA1,lucia:gene/ncbigene:3169,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9466
+31,CD274,lucia:gene/ncbigene:29126,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.9449
+32,VEGFA,lucia:gene/ncbigene:7422,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.9446
+33,SDHD,lucia:gene/ncbigene:6392,Large cell carcinoma of lung,lucia:disease/C0345958,0.942
+34,SCLC1,lucia:gene/ncbigene:7864,Small cell lung cancer limited stage,lucia:disease/C0278725,0.942
+35,SCLC1,lucia:gene/ncbigene:7864,Squamous non-small cell lung cancer,lucia:disease/C4509816,0.9362
+36,ALK,lucia:gene/ncbigene:238,Pseudosarcomatous carcinoma of lung,lucia:disease/C1708781,0.9329
+37,GPC3,lucia:gene/ncbigene:2719,Large cell carcinoma of lung,lucia:disease/C0345958,0.9321
+38,PIK3CA,lucia:gene/ncbigene:5290,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.931
+39,CD274,lucia:gene/ncbigene:29126,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.9303
+40,NAPSA,lucia:gene/ncbigene:9476,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9287
+41,SS18L1,lucia:gene/ncbigene:26039,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9287
+42,DDR2,lucia:gene/ncbigene:4921,Invasive Lung Mucinous Adenocarcinoma,lucia:disease/C4522160,0.9277
+43,KRT20,lucia:gene/ncbigene:54474,Metaplasia,lucia:disease/C0025568,0.9254
+44,KDM6B,lucia:gene/ncbigene:23135,Hamartoma of lung,lucia:disease/C0149927,0.9252
+45,MTOR,lucia:gene/ncbigene:2475,Carcinoid tumor of lung,lucia:disease/C0280089,0.9222
+46,NAPSA,lucia:gene/ncbigene:9476,Small cell lung cancer limited stage,lucia:disease/C0278725,0.921
+47,NRG1,lucia:gene/ncbigene:3084,Adenosquamous cell lung cancer,lucia:disease/C0279557,0.9192
+48,RRM2B,lucia:gene/ncbigene:50484,Hamartoma of lung,lucia:disease/C0149927,0.9182
+49,RASSF1,lucia:gene/ncbigene:11186,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.9173
+50,LGALS4,lucia:gene/ncbigene:3960,Small cell lung cancer recurrent,lucia:disease/C0278727,0.9159

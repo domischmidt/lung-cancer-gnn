@@ -1,0 +1,107 @@
+[Config] Loaded R-GCN architecture from best_config.json: hidden=128, layers=2, bases=6, dropout=0.15000000000000002
+======================================================================
+06_predict_novel_links.py (discovery relations only)
+======================================================================
+
+[1/5] Loading graph and trained R-GCN ...
+Graph: 206,151 nodes, 24 relations, 631,659 edges
+Known triples: 631,659
+  GDA -> Gene mappings: 17,701
+
+[2/5] Computing embeddings ...
+  Embeddings shape: torch.Size([206151, 128])
+
+  Discovery relations (6):
+    GDA -> Disease
+    VDA -> Disease
+    Gene -> Pathway
+    Biomarker -> Disease
+    Disease -> ChromoRearr
+    Disease -> GeneFusion
+  Skipped relations (18):
+    ChemicalLocationAssociation > refers_to > GeoPoliticalRegion
+    VitalStatistics > has_output > People
+    Disease > detected_finding > VitalStatistics
+    ChemicalLocationAssociation > has_time_boundary > CalendarYear
+    ChemicalLocationAssociation > refers_to > Chemical
+    VitalStatistics > part_of > Country
+    VitalStatistics > has_time_boundary > CalendarYear
+    VitalStatistics > part_of > GeographicRegion
+    ChemicalLocationAssociation > refers_to > GeographicRegion
+    GeographicRegion > part_of > Country
+    GeoPoliticalRegion > part_of > Country
+    Gene > has_association > GeneDiseaseAssociation
+    Variant > has_variant_association > VariantDiseaseAssociation
+    VariantDiseaseAssociation > located_in_gene > Gene
+    Variant > located_in_gene > Gene
+    Pathway > linked_to > Disease
+    GeneProduct > part_of_pathway > Pathway
+    Disease > subtype_of > Disease
+
+[3/5] Predicting novel links ...
+
+  GDA -> Disease
+    50 preds (top=0.9921, 7.3s) -> novel_genediseaseassociation__associated_with__disease.csv
+      1. MMP9 -> stage, non-small cell lung cancer           conf=0.9921
+      2. ATR -> Adenocarcinoma, Oxyphilic                    conf=0.9876
+      3. SFTPB -> stage, non-small cell lung cancer          conf=0.9875
+      4. MMP13 -> Adenocarcinoma, Oxyphilic                  conf=0.9872
+      5. ERCC1 -> Adenocarcinoma, Oxyphilic                  conf=0.9869
+
+  VDA -> Disease
+    50 preds (top=0.6180, 0.4s) -> novel_variantdiseaseassociation__variant_of__disease.csv
+      1. VDA_rs56113850_C0007131 -> Small cell carcinoma of  conf=0.6180
+      2. VDA_rs1045494_C0149925 -> Non-Small Cell Lung Carc  conf=0.5880
+      3. VDA_rs1200399_C0007131 -> Small cell carcinoma of   conf=0.5527
+      4. VDA_rs1805388_C0007131 -> Small cell carcinoma of   conf=0.4968
+      5. VDA_rs104886003_C0149925 -> Non-Small Cell Lung Ca  conf=0.4903
+
+  Gene -> Pathway
+    50 preds (top=0.9990, 5.6s) -> novel_gene__in_pathway__pathway.csv
+      1. TET1 -> WP2778                                      conf=0.9990
+      2. XRCC5 -> WP3875                                     conf=0.9988
+      3. ATP5F1C -> WP623                                    conf=0.9986
+      4. TET1 -> WP4135                                      conf=0.9984
+      5. GALNT1 -> WP2679                                    conf=0.9977
+
+  Biomarker -> Disease
+    50 preds (top=0.0052, 0.0s) -> novel_biomarker__marker_for__disease.csv
+      1. Retinol -> Lung Carcinoma Metastatic in the Brain   conf=0.0052
+      2. alpha-carotene -> Lung Carcinoma Metastatic in the  conf=0.0032
+      3. Genistein -> Lung Carcinoma Metastatic in the Brai  conf=0.0032
+      4. Genistein -> Adenocarcinoma of lung (disorder)      conf=0.0017
+      5. Riboflavin -> Adenocarcinoma of lung (disorder)     conf=0.0007
+
+  Disease -> ChromoRearr
+    50 preds (top=0.2874, 0.9s) -> novel_disease__has_rearrangement__chromorearr.csv
+      1. Adenocarcinoma of lung (disorder) -> del(4)(p16p16  conf=0.2874
+      2. Adenocarcinoma of lung (disorder) -> der(15)(q14)   conf=0.2607
+      3. Small cell lung cancer limited stage -> t(5;9)(q35  conf=0.2338
+      4. Pulmonary Sclerosing Hemangioma -> t(5;9)(q35;q21)  conf=0.1410
+      5. Lung Acinar Adenocarcinoma -> t(5;9)(q35;q21)       conf=0.0913
+
+  Disease -> GeneFusion
+    50 preds (top=0.0294, 2.0s) -> novel_disease__has_fusion__genefusion.csv
+      1. stage, non-small cell lung cancer -> ZNRF3::EWSR1   conf=0.0294
+      2. stage, non-small cell lung cancer -> LAMA3::RMC1    conf=0.0243
+      3. stage, non-small cell lung cancer -> KIF5B::RET     conf=0.0191
+      4. stage, non-small cell lung cancer -> SND1::BRAF     conf=0.0187
+      5. stage, non-small cell lung cancer -> ZSWIM4::YJU2B  conf=0.0184
+
+[4/5] Saving results ...
+  -> novel_predictions_all.json
+
+[5/5] Generating figures ...
+  -> figs/novel_summary.png
+  -> figs/novel_top10_per_type.png
+  -> figs/novel_gene_disease.png
+
+======================================================================
+Done. Novel predictions summary:
+  GDA -> Disease                       50 preds  top=0.9921
+  VDA -> Disease                       50 preds  top=0.6180
+  Gene -> Pathway                      50 preds  top=0.9990
+  Biomarker -> Disease                 50 preds  top=0.0052
+  Disease -> ChromoRearr               50 preds  top=0.2874
+  Disease -> GeneFusion                50 preds  top=0.0294
+======================================================================

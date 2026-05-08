@@ -1,0 +1,51 @@
+rank,Disease_label,Disease_uri,ChromoRearr_label,ChromoRearr_uri,confidence
+1,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,del(4)(p16p16),lucia:chromo_rearr/del(4)(p16p16),0.8145
+2,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,der(15)(q14),lucia:chromo_rearr/der(15)(q14),0.7362
+3,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.0086
+4,Squamous cell carcinoma of lung,lucia:disease/C0149782,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.004
+5,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(8;8)(p11;p12),lucia:chromo_rearr/t(8;8)(p11;p12),0.0008
+6,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(2;2)(q24;q31),lucia:chromo_rearr/t(2;2)(q24;q31),0.0007
+7,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(1;14)(p36;q24),lucia:chromo_rearr/t(1;14)(p36;q24),0.0007
+8,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(9;9)(q34;q34),lucia:chromo_rearr/t(9;9)(q34;q34),0.0007
+9,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(14;14)(q23;q23),lucia:chromo_rearr/t(14;14)(q23;q23),0.0006
+10,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(4;4)(q21;q21),lucia:chromo_rearr/t(4;4)(q21;q21),0.0005
+11,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(3;3)(q13;q13),lucia:chromo_rearr/t(3;3)(q13;q13),0.0004
+12,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(6;6)(q24;q24),lucia:chromo_rearr/t(6;6)(q24;q24),0.0004
+13,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(9;9)(q32;q32),lucia:chromo_rearr/t(9;9)(q32;q32),0.0004
+14,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(8;8)(p23;p23),lucia:chromo_rearr/t(8;8)(p23;p23),0.0004
+15,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(12;12)(p11;q12),lucia:chromo_rearr/t(12;12)(p11;q12),0.0004
+16,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(3;3)(q26;q28),lucia:chromo_rearr/t(3;3)(q26;q28),0.0004
+17,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(16;16)(p13;p13),lucia:chromo_rearr/t(16;16)(p13;p13),0.0003
+18,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(2;2)(q33;q37),lucia:chromo_rearr/t(2;2)(q33;q37),0.0003
+19,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(17;17)(q23;q24),lucia:chromo_rearr/t(17;17)(q23;q24),0.0003
+20,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(1;1)(q23;q24),lucia:chromo_rearr/t(1;1)(q23;q24),0.0003
+21,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(7;7)(q36;q36),lucia:chromo_rearr/t(7;7)(q36;q36),0.0003
+22,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(6;22)(p24;q11),lucia:chromo_rearr/t(6;22)(p24;q11),0.0003
+23,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(1;1)(p36;p36),lucia:chromo_rearr/t(1;1)(p36;p36),0.0003
+24,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(15;15)(q23;q23),lucia:chromo_rearr/t(15;15)(q23;q23),0.0003
+25,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(5;5)(p15;p15),lucia:chromo_rearr/t(5;5)(p15;p15),0.0003
+26,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(6;6)(q16;q16),lucia:chromo_rearr/t(6;6)(q16;q16),0.0003
+27,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(13;19)(q14;p13),lucia:chromo_rearr/t(13;19)(q14;p13),0.0003
+28,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(3;3)(q13;q21),lucia:chromo_rearr/t(3;3)(q13;q21),0.0003
+29,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(7;7)(q31;q32),lucia:chromo_rearr/t(7;7)(q31;q32),0.0003
+30,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(8;8)(p11;p11),lucia:chromo_rearr/t(8;8)(p11;p11),0.0003
+31,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(1;1)(q25;q25),lucia:chromo_rearr/t(1;1)(q25;q25),0.0003
+32,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(16;16)(q12;q22),lucia:chromo_rearr/t(16;16)(q12;q22),0.0003
+33,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(3;3)(q29;q29),lucia:chromo_rearr/t(3;3)(q29;q29),0.0003
+34,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(10;10)(p13;p14),lucia:chromo_rearr/t(10;10)(p13;p14),0.0003
+35,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(19;19)(p12;p13),lucia:chromo_rearr/t(19;19)(p12;p13),0.0002
+36,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(6;20)(q22;q13),lucia:chromo_rearr/t(6;20)(q22;q13),0.0002
+37,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(20;20)(q11;q11),lucia:chromo_rearr/t(20;20)(q11;q11),0.0002
+38,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(3;3)(p25;p25),lucia:chromo_rearr/t(3;3)(p25;p25),0.0002
+39,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(4;4)(q13;q13),lucia:chromo_rearr/t(4;4)(q13;q13),0.0002
+40,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(17;17)(q24;q24),lucia:chromo_rearr/t(17;17)(q24;q24),0.0002
+41,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(1;1)(p31;p31),lucia:chromo_rearr/t(1;1)(p31;p31),0.0002
+42,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(14;14)(q23;q24),lucia:chromo_rearr/t(14;14)(q23;q24),0.0002
+43,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(5;5)(q13;q13),lucia:chromo_rearr/t(5;5)(q13;q13),0.0002
+44,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(12;12)(q21;q21),lucia:chromo_rearr/t(12;12)(q21;q21),0.0002
+45,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(5;5)(q31;q31),lucia:chromo_rearr/t(5;5)(q31;q31),0.0002
+46,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(15;15)(q25;q25),lucia:chromo_rearr/t(15;15)(q25;q25),0.0002
+47,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(3;3)(q25;q26),lucia:chromo_rearr/t(3;3)(q25;q26),0.0002
+48,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(11;22)(q13;q12),lucia:chromo_rearr/t(11;22)(q13;q12),0.0002
+49,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(22;22)(q13;q13),lucia:chromo_rearr/t(22;22)(q13;q13),0.0002
+50,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,t(9;11)(q34;q13),lucia:chromo_rearr/t(9;11)(q34;q13),0.0002

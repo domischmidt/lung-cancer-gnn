@@ -1,0 +1,1067 @@
+{
+  "summary": {
+    "GeneDiseaseAssociation__associated_with__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 0.9827,
+      "total_candidates": 761143,
+      "time_seconds": 7.5
+    },
+    "VariantDiseaseAssociation__variant_of__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 0.7969,
+      "total_candidates": 31519,
+      "time_seconds": 0.5
+    },
+    "Gene__in_pathway__Pathway": {
+      "n_predictions": 50,
+      "top_confidence": 0.998,
+      "total_candidates": 15067708,
+      "time_seconds": 5.7
+    },
+    "Biomarker__marker_for__Disease": {
+      "n_predictions": 50,
+      "top_confidence": 0.0304,
+      "total_candidates": 1032,
+      "time_seconds": 0.0
+    },
+    "Disease__has_rearrangement__ChromoRearr": {
+      "n_predictions": 50,
+      "top_confidence": 0.6753,
+      "total_candidates": 85699,
+      "time_seconds": 0.9
+    },
+    "Disease__has_fusion__GeneFusion": {
+      "n_predictions": 50,
+      "top_confidence": 0.0165,
+      "total_candidates": 183438,
+      "time_seconds": 2.0
+    }
+  },
+  "predictions": {
+    "GeneDiseaseAssociation__associated_with__Disease": [
+      {
+        "src_label": "GDA_ncbigene:7170_C0205642",
+        "src_uri": "lucia:gda/gda_11855",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.9827,
+        "gene_label": "TPM3",
+        "gene_uri": "lucia:gene/ncbigene:7170",
+        "display": "TPM3 -> Carcinoma, Spindle-Cell"
+      },
+      {
+        "src_label": "GDA_ncbigene:4583_C0205642",
+        "src_uri": "lucia:gda/gda_11726",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.9816,
+        "gene_label": "MUC2",
+        "gene_uri": "lucia:gene/ncbigene:4583",
+        "display": "MUC2 -> Carcinoma, Spindle-Cell"
+      },
+      {
+        "src_label": "GDA_ncbigene:2719_C0085261",
+        "src_uri": "lucia:gda/gda_1320",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.9815,
+        "gene_label": "GPC3",
+        "gene_uri": "lucia:gene/ncbigene:2719",
+        "display": "GPC3 -> Lung cancer panel"
+      },
+      {
+        "src_label": "GDA_ncbigene:54474_C0205642",
+        "src_uri": "lucia:gda/gda_11713",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.9801,
+        "gene_label": "KRT20",
+        "gene_uri": "lucia:gene/ncbigene:54474",
+        "display": "KRT20 -> Carcinoma, Spindle-Cell"
+      },
+      {
+        "src_label": "GDA_ncbigene:3342_C0205697",
+        "src_uri": "lucia:gda/gda_11470",
+        "dst_label": "Adenocarcinoma, Oxyphilic",
+        "dst_uri": "lucia:disease/C0205642",
+        "confidence": 0.9768,
+        "gene_label": "HTC2",
+        "gene_uri": "lucia:gene/ncbigene:3342",
+        "display": "HTC2 -> Adenocarcinoma, Oxyphilic"
+      },
+      {
+        "src_label": "GDA_ncbigene:2475_C0349649",
+        "src_uri": "lucia:gda/gda_11109",
+        "dst_label": "Giant cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0345960",
+        "confidence": 0.9767,
+        "gene_label": "MTOR",
+        "gene_uri": "lucia:gene/ncbigene:2475",
+        "display": "MTOR -> Giant cell carcinoma of lung"
+      },
+      {
+        "src_label": "GDA_ncbigene:2261_C0085261",
+        "src_uri": "lucia:gda/gda_94",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.9739,
+        "gene_label": "FGFR3",
+        "gene_uri": "lucia:gene/ncbigene:2261",
+        "display": "FGFR3 -> Lung cancer panel"
+      },
+      {
+        "src_label": "GDA_ncbigene:362_C0007120",
+        "src_uri": "lucia:gda/gda_12811",
+        "dst_label": "stage, non-small cell lung cancer",
+        "dst_uri": "lucia:disease/C0280217",
+        "confidence": 0.9723,
+        "gene_label": "AQP5",
+        "gene_uri": "lucia:gene/ncbigene:362",
+        "display": "AQP5 -> stage, non-small cell lung cancer"
+      },
+      {
+        "src_label": "GDA_ncbigene:378938_C0280217",
+        "src_uri": "lucia:gda/gda_9103",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.9721,
+        "gene_label": "MALAT1",
+        "gene_uri": "lucia:gene/ncbigene:378938",
+        "display": "MALAT1 -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "GDA_ncbigene:5743_C0205697",
+        "src_uri": "lucia:gda/gda_11112",
+        "dst_label": "Adenocarcinoma, Oxyphilic",
+        "dst_uri": "lucia:disease/C0205642",
+        "confidence": 0.9719,
+        "gene_label": "PTGS2",
+        "gene_uri": "lucia:gene/ncbigene:5743",
+        "display": "PTGS2 -> Adenocarcinoma, Oxyphilic"
+      },
+      {
+        "src_label": "GDA_ncbigene:9181_C0205697",
+        "src_uri": "lucia:gda/gda_10163",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 0.9719,
+        "gene_label": "ARHGEF2",
+        "gene_uri": "lucia:gene/ncbigene:9181",
+        "display": "ARHGEF2 -> Hyperplasia"
+      },
+      {
+        "src_label": "GDA_ncbigene:832_C0205697",
+        "src_uri": "lucia:gda/gda_11791",
+        "dst_label": "Adenocarcinoma, Oxyphilic",
+        "dst_uri": "lucia:disease/C0205642",
+        "confidence": 0.9714,
+        "gene_label": "CAPZB",
+        "gene_uri": "lucia:gene/ncbigene:832",
+        "display": "CAPZB -> Adenocarcinoma, Oxyphilic"
+      },
+      {
+        "src_label": "GDA_ncbigene:29126_C0349649",
+        "src_uri": "lucia:gda/gda_10975",
+        "dst_label": "Giant cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0345960",
+        "confidence": 0.9706,
+        "gene_label": "CD274",
+        "gene_uri": "lucia:gene/ncbigene:29126",
+        "display": "CD274 -> Giant cell carcinoma of lung"
+      },
+      {
+        "src_label": "GDA_ncbigene:9476_C0007120",
+        "src_uri": "lucia:gda/gda_12630",
+        "dst_label": "stage, non-small cell lung cancer",
+        "dst_uri": "lucia:disease/C0280217",
+        "confidence": 0.9702,
+        "gene_label": "NAPSA",
+        "gene_uri": "lucia:gene/ncbigene:9476",
+        "display": "NAPSA -> stage, non-small cell lung cancer"
+      },
+      {
+        "src_label": "GDA_ncbigene:1499_C0205697",
+        "src_uri": "lucia:gda/gda_8575",
+        "dst_label": "Hyperplasia",
+        "dst_uri": "lucia:disease/C0020507",
+        "confidence": 0.9682,
+        "gene_label": "CTNNB1",
+        "gene_uri": "lucia:gene/ncbigene:1499",
+        "display": "CTNNB1 -> Hyperplasia"
+      },
+      {
+        "src_label": "GDA_ncbigene:4255_C0007120",
+        "src_uri": "lucia:gda/gda_12398",
+        "dst_label": "stage, non-small cell lung cancer",
+        "dst_uri": "lucia:disease/C0280217",
+        "confidence": 0.9656,
+        "gene_label": "MGMT",
+        "gene_uri": "lucia:gene/ncbigene:4255",
+        "display": "MGMT -> stage, non-small cell lung cancer"
+      },
+      {
+        "src_label": "GDA_ncbigene:5291_C0085261",
+        "src_uri": "lucia:gda/gda_3003",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.9651,
+        "gene_label": "PIK3CB",
+        "gene_uri": "lucia:gene/ncbigene:5291",
+        "display": "PIK3CB -> Lung cancer panel"
+      },
+      {
+        "src_label": "GDA_ncbigene:2100_C0025568",
+        "src_uri": "lucia:gda/gda_229",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.9634,
+        "gene_label": "ESR2",
+        "gene_uri": "lucia:gene/ncbigene:2100",
+        "display": "ESR2 -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "GDA_ncbigene:2625_C0025568",
+        "src_uri": "lucia:gda/gda_2513",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.9622,
+        "gene_label": "GATA3",
+        "gene_uri": "lucia:gene/ncbigene:2625",
+        "display": "GATA3 -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "GDA_ncbigene:9476_C1334363",
+        "src_uri": "lucia:gda/gda_11985",
+        "dst_label": "Pulmonary Sclerosing Hemangioma",
+        "dst_uri": "lucia:disease/C1334455",
+        "confidence": 0.9596,
+        "gene_label": "NAPSA",
+        "gene_uri": "lucia:gene/ncbigene:9476",
+        "display": "NAPSA -> Pulmonary Sclerosing Hemangioma"
+      }
+    ],
+    "VariantDiseaseAssociation__variant_of__Disease": [
+      {
+        "src_label": "VDA_rs1131691014_C0007131",
+        "src_uri": "lucia:vda/vda_9",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 0.7969,
+        "display": "VDA_rs1131691014_C0007131 -> Small cell carcinoma of lung"
+      },
+      {
+        "src_label": "VDA_rs30259_C0007131",
+        "src_uri": "lucia:vda/vda_45",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 0.7837,
+        "display": "VDA_rs30259_C0007131 -> Small cell carcinoma of lung"
+      },
+      {
+        "src_label": "VDA_rs4134816_C0007131",
+        "src_uri": "lucia:vda/vda_506",
+        "dst_label": "Small cell carcinoma of lung",
+        "dst_uri": "lucia:disease/C0149925",
+        "confidence": 0.7313,
+        "display": "VDA_rs4134816_C0007131 -> Small cell carcinoma of lung"
+      },
+      {
+        "src_label": "VDA_rs140013431_C0149925",
+        "src_uri": "lucia:vda/vda_666",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.6705,
+        "display": "VDA_rs140013431_C0149925 -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "VDA_rs1360583020_C0149925",
+        "src_uri": "lucia:vda/vda_664",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.6484,
+        "display": "VDA_rs1360583020_C0149925 -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "VDA_rs1023835002_C0149925",
+        "src_uri": "lucia:vda/vda_622",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.644,
+        "display": "VDA_rs1023835002_C0149925 -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "VDA_rs55768116_C0007131",
+        "src_uri": "lucia:vda/vda_57",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0001,
+        "display": "VDA_rs55768116_C0007131 -> Lung Neoplasms"
+      },
+      {
+        "src_label": "VDA_rs1333049_C0149925",
+        "src_uri": "lucia:vda/vda_663",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0001,
+        "display": "VDA_rs1333049_C0149925 -> Lung Neoplasms"
+      },
+      {
+        "src_label": "VDA_rs13173911_C0007131",
+        "src_uri": "lucia:vda/vda_278",
+        "dst_label": "Malignant neoplasm of lung",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379",
+        "confidence": 0.0,
+        "display": "VDA_rs13173911_C0007131 -> Malignant neoplasm of lung"
+      },
+      {
+        "src_label": "VDA_rs1800975_C0007131",
+        "src_uri": "lucia:vda/vda_34",
+        "dst_label": "Malignant neoplasm of lung",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379",
+        "confidence": 0.0,
+        "display": "VDA_rs1800975_C0007131 -> Malignant neoplasm of lung"
+      },
+      {
+        "src_label": "VDA_rs7897947_C0007131",
+        "src_uri": "lucia:vda/vda_72",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0,
+        "display": "VDA_rs7897947_C0007131 -> Lung Neoplasms"
+      },
+      {
+        "src_label": "VDA_rs3756712_C0007131",
+        "src_uri": "lucia:vda/vda_304",
+        "dst_label": "Malignant neoplasm of lung",
+        "dst_uri": "http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379",
+        "confidence": 0.0,
+        "display": "VDA_rs3756712_C0007131 -> Malignant neoplasm of lung"
+      },
+      {
+        "src_label": "VDA_rs1333049_C0149925",
+        "src_uri": "lucia:vda/vda_663",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.0,
+        "display": "VDA_rs1333049_C0149925 -> Adenocarcinoma of lung (disorder)"
+      },
+      {
+        "src_label": "VDA_rs1333049_C0149925",
+        "src_uri": "lucia:vda/vda_663",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.0,
+        "display": "VDA_rs1333049_C0149925 -> Lung cancer panel"
+      },
+      {
+        "src_label": "VDA_rs1333049_C0149925",
+        "src_uri": "lucia:vda/vda_663",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 0.0,
+        "display": "VDA_rs1333049_C0149925 -> Lung Carcinoma Metastatic in the Brain"
+      },
+      {
+        "src_label": "VDA_rs1804429_C0007131",
+        "src_uri": "lucia:vda/vda_292",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.0,
+        "display": "VDA_rs1804429_C0007131 -> Lung cancer panel"
+      },
+      {
+        "src_label": "VDA_rs9535826_C0007131",
+        "src_uri": "lucia:vda/vda_452",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.0,
+        "display": "VDA_rs9535826_C0007131 -> Adenocarcinoma of lung (disorder)"
+      },
+      {
+        "src_label": "VDA_rs33922584_C0007131",
+        "src_uri": "lucia:vda/vda_411",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.0,
+        "display": "VDA_rs33922584_C0007131 -> Lung cancer panel"
+      },
+      {
+        "src_label": "VDA_rs55768116_C0007131",
+        "src_uri": "lucia:vda/vda_57",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.0,
+        "display": "VDA_rs55768116_C0007131 -> Adenocarcinoma of lung (disorder)"
+      },
+      {
+        "src_label": "VDA_rs1333049_C0149925",
+        "src_uri": "lucia:vda/vda_663",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.0,
+        "display": "VDA_rs1333049_C0149925 -> Carcinoma, Spindle-Cell"
+      }
+    ],
+    "Gene__in_pathway__Pathway": [
+      {
+        "src_label": "CFH",
+        "src_uri": "lucia:gene/ncbigene:3075",
+        "dst_label": "WP1818",
+        "dst_uri": "lucia:pathway/WP1818",
+        "confidence": 0.998,
+        "display": "CFH -> WP1818"
+      },
+      {
+        "src_label": "PLCD3",
+        "src_uri": "lucia:gene/ncbigene:113026",
+        "dst_label": "WP2747",
+        "dst_uri": "lucia:pathway/WP2747",
+        "confidence": 0.9977,
+        "display": "PLCD3 -> WP2747"
+      },
+      {
+        "src_label": "SBF1",
+        "src_uri": "lucia:gene/ncbigene:6305",
+        "dst_label": "WP4071",
+        "dst_uri": "lucia:pathway/WP4071",
+        "confidence": 0.9975,
+        "display": "SBF1 -> WP4071"
+      },
+      {
+        "src_label": "RAB17",
+        "src_uri": "lucia:gene/ncbigene:64284",
+        "dst_label": "WP4098",
+        "dst_uri": "lucia:pathway/WP4098",
+        "confidence": 0.9972,
+        "display": "RAB17 -> WP4098"
+      },
+      {
+        "src_label": "AIFM1",
+        "src_uri": "lucia:gene/ncbigene:9131",
+        "dst_label": "WP1904",
+        "dst_uri": "lucia:pathway/WP1904",
+        "confidence": 0.9968,
+        "display": "AIFM1 -> WP1904"
+      },
+      {
+        "src_label": "LPAR3",
+        "src_uri": "lucia:gene/ncbigene:23566",
+        "dst_label": "WP455",
+        "dst_uri": "lucia:pathway/WP455",
+        "confidence": 0.9966,
+        "display": "LPAR3 -> WP455"
+      },
+      {
+        "src_label": "AKR1C3",
+        "src_uri": "lucia:gene/ncbigene:8644",
+        "dst_label": "WP43",
+        "dst_uri": "lucia:pathway/WP43",
+        "confidence": 0.9963,
+        "display": "AKR1C3 -> WP43"
+      },
+      {
+        "src_label": "POR",
+        "src_uri": "lucia:gene/ncbigene:5447",
+        "dst_label": "WP704",
+        "dst_uri": "lucia:pathway/WP704",
+        "confidence": 0.9962,
+        "display": "POR -> WP704"
+      },
+      {
+        "src_label": "FUS",
+        "src_uri": "lucia:gene/ncbigene:2521",
+        "dst_label": "WP2672",
+        "dst_uri": "lucia:pathway/WP2672",
+        "confidence": 0.9961,
+        "display": "FUS -> WP2672"
+      },
+      {
+        "src_label": "FABP3",
+        "src_uri": "lucia:gene/ncbigene:2170",
+        "dst_label": "WP143",
+        "dst_uri": "lucia:pathway/WP143",
+        "confidence": 0.9958,
+        "display": "FABP3 -> WP143"
+      },
+      {
+        "src_label": "KCNN3",
+        "src_uri": "lucia:gene/ncbigene:3782",
+        "dst_label": "WP3608",
+        "dst_uri": "lucia:pathway/WP3608",
+        "confidence": 0.9957,
+        "display": "KCNN3 -> WP3608"
+      },
+      {
+        "src_label": "POR",
+        "src_uri": "lucia:gene/ncbigene:5447",
+        "dst_label": "WP5488",
+        "dst_uri": "lucia:pathway/WP5488",
+        "confidence": 0.9955,
+        "display": "POR -> WP5488"
+      },
+      {
+        "src_label": "TUT4",
+        "src_uri": "lucia:gene/ncbigene:23318",
+        "dst_label": "WP3797",
+        "dst_uri": "lucia:pathway/WP3797",
+        "confidence": 0.9953,
+        "display": "TUT4 -> WP3797"
+      },
+      {
+        "src_label": "FABP3",
+        "src_uri": "lucia:gene/ncbigene:2170",
+        "dst_label": "WP5123",
+        "dst_uri": "lucia:pathway/WP5123",
+        "confidence": 0.9951,
+        "display": "FABP3 -> WP5123"
+      },
+      {
+        "src_label": "AKR1C3",
+        "src_uri": "lucia:gene/ncbigene:8644",
+        "dst_label": "WP4085",
+        "dst_uri": "lucia:pathway/WP4085",
+        "confidence": 0.995,
+        "display": "AKR1C3 -> WP4085"
+      },
+      {
+        "src_label": "UQCR10",
+        "src_uri": "lucia:gene/ncbigene:29796",
+        "dst_label": "WP4324",
+        "dst_uri": "lucia:pathway/WP4324",
+        "confidence": 0.995,
+        "display": "UQCR10 -> WP4324"
+      },
+      {
+        "src_label": "ADRA1D",
+        "src_uri": "lucia:gene/ncbigene:146",
+        "dst_label": "WP4993",
+        "dst_uri": "lucia:pathway/WP4993",
+        "confidence": 0.9948,
+        "display": "ADRA1D -> WP4993"
+      },
+      {
+        "src_label": "IFNA21",
+        "src_uri": "lucia:gene/ncbigene:3452",
+        "dst_label": "WP5473",
+        "dst_uri": "lucia:pathway/WP5473",
+        "confidence": 0.9948,
+        "display": "IFNA21 -> WP5473"
+      },
+      {
+        "src_label": "RAB17",
+        "src_uri": "lucia:gene/ncbigene:64284",
+        "dst_label": "WP2679",
+        "dst_uri": "lucia:pathway/WP2679",
+        "confidence": 0.9947,
+        "display": "RAB17 -> WP2679"
+      },
+      {
+        "src_label": "SFTPA1",
+        "src_uri": "lucia:gene/ncbigene:653509",
+        "dst_label": "WP2799",
+        "dst_uri": "lucia:pathway/WP2799",
+        "confidence": 0.9946,
+        "display": "SFTPA1 -> WP2799"
+      }
+    ],
+    "Biomarker__marker_for__Disease": [
+      {
+        "src_label": "Vitamin B12",
+        "src_uri": "lucia:biomarker/C0042845",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.0304,
+        "display": "Vitamin B12 -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "beta-Carotene",
+        "src_uri": "lucia:biomarker/C0053396",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.0235,
+        "display": "beta-Carotene -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "Ascorbic Acid",
+        "src_uri": "lucia:biomarker/C0003968",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0192,
+        "display": "Ascorbic Acid -> Lung Neoplasms"
+      },
+      {
+        "src_label": "Beta-Cryptoxanthin",
+        "src_uri": "lucia:biomarker/C0896117",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0157,
+        "display": "Beta-Cryptoxanthin -> Lung Neoplasms"
+      },
+      {
+        "src_label": "Vitamin B12",
+        "src_uri": "lucia:biomarker/C0042845",
+        "dst_label": "Lung Neoplasms",
+        "dst_uri": "lucia:disease/C0024121",
+        "confidence": 0.0157,
+        "display": "Vitamin B12 -> Lung Neoplasms"
+      },
+      {
+        "src_label": "daidzein",
+        "src_uri": "lucia:biomarker/C0057090",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.0096,
+        "display": "daidzein -> Adenocarcinoma of lung (disorder)"
+      },
+      {
+        "src_label": "Homocysteine",
+        "src_uri": "lucia:biomarker/C0019878",
+        "dst_label": "Non-Small Cell Lung Carcinoma",
+        "dst_uri": "lucia:disease/C0007131",
+        "confidence": 0.0094,
+        "display": "Homocysteine -> Non-Small Cell Lung Carcinoma"
+      },
+      {
+        "src_label": "25-Hydroxycholecalciferol",
+        "src_uri": "lucia:biomarker/C0006657",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.0053,
+        "display": "25-Hydroxycholecalciferol -> Adenocarcinoma of lung (disorder)"
+      },
+      {
+        "src_label": "Tocopherols",
+        "src_uri": "lucia:biomarker/C3255108",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.004,
+        "display": "Tocopherols -> Carcinoma, Spindle-Cell"
+      },
+      {
+        "src_label": "gamma-Tocopherol",
+        "src_uri": "lucia:biomarker/C0017054",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.0034,
+        "display": "gamma-Tocopherol -> Carcinoma, Spindle-Cell"
+      },
+      {
+        "src_label": "gamma-Tocopherol",
+        "src_uri": "lucia:biomarker/C0017054",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.0032,
+        "display": "gamma-Tocopherol -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "Lycopene",
+        "src_uri": "lucia:biomarker/C0065331",
+        "dst_label": "Carcinoma, Spindle-Cell",
+        "dst_uri": "lucia:disease/C0205697",
+        "confidence": 0.0024,
+        "display": "Lycopene -> Carcinoma, Spindle-Cell"
+      },
+      {
+        "src_label": "Tocopherols",
+        "src_uri": "lucia:biomarker/C3255108",
+        "dst_label": "Adenocarcinoma, Oxyphilic",
+        "dst_uri": "lucia:disease/C0205642",
+        "confidence": 0.0024,
+        "display": "Tocopherols -> Adenocarcinoma, Oxyphilic"
+      },
+      {
+        "src_label": "daidzein",
+        "src_uri": "lucia:biomarker/C0057090",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.0019,
+        "display": "daidzein -> Lung cancer panel"
+      },
+      {
+        "src_label": "glycitein",
+        "src_uri": "lucia:biomarker/C0253391",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.0019,
+        "display": "glycitein -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "Retinol",
+        "src_uri": "lucia:biomarker/C0087161",
+        "dst_label": "Adenocarcinoma of lung (disorder)",
+        "dst_uri": "lucia:disease/C0152013",
+        "confidence": 0.0018,
+        "display": "Retinol -> Adenocarcinoma of lung (disorder)"
+      },
+      {
+        "src_label": "25-Hydroxycholecalciferol",
+        "src_uri": "lucia:biomarker/C0006657",
+        "dst_label": "Lung cancer panel",
+        "dst_uri": "lucia:disease/C0024115",
+        "confidence": 0.0018,
+        "display": "25-Hydroxycholecalciferol -> Lung cancer panel"
+      },
+      {
+        "src_label": "Tocopherols",
+        "src_uri": "lucia:biomarker/C3255108",
+        "dst_label": "Bronchioloalveolar Adenocarcinoma",
+        "dst_uri": "lucia:disease/C0007120",
+        "confidence": 0.0017,
+        "display": "Tocopherols -> Bronchioloalveolar Adenocarcinoma"
+      },
+      {
+        "src_label": "Genistein",
+        "src_uri": "lucia:biomarker/C0061202",
+        "dst_label": "Lung Carcinoma Metastatic in the Brain",
+        "dst_uri": "lucia:disease/C0684249",
+        "confidence": 0.0017,
+        "display": "Genistein -> Lung Carcinoma Metastatic in the Brain"
+      },
+      {
+        "src_label": "gamma-Tocopherol",
+        "src_uri": "lucia:biomarker/C0017054",
+        "dst_label": "Adenocarcinoma, Oxyphilic",
+        "dst_uri": "lucia:disease/C0205642",
+        "confidence": 0.0016,
+        "display": "gamma-Tocopherol -> Adenocarcinoma, Oxyphilic"
+      }
+    ],
+    "Disease__has_rearrangement__ChromoRearr": [
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "del(4)(p16p16)",
+        "dst_uri": "lucia:chromo_rearr/del(4)(p16p16)",
+        "confidence": 0.6753,
+        "display": "Adenocarcinoma of lung (disorder) -> del(4)(p16p16)"
+      },
+      {
+        "src_label": "Adenocarcinoma of lung (disorder)",
+        "src_uri": "lucia:disease/C0152013",
+        "dst_label": "der(15)(q14)",
+        "dst_uri": "lucia:chromo_rearr/der(15)(q14)",
+        "confidence": 0.6182,
+        "display": "Adenocarcinoma of lung (disorder) -> der(15)(q14)"
+      },
+      {
+        "src_label": "Proteus Syndrome",
+        "src_uri": "lucia:disease/C0085261",
+        "dst_label": "t(5;9)(q35;q21)",
+        "dst_uri": "lucia:chromo_rearr/t(5;9)(q35;q21)",
+        "confidence": 0.0497,
+        "display": "Proteus Syndrome -> t(5;9)(q35;q21)"
+      },
+      {
+        "src_label": "Lung cancer panel",
+        "src_uri": "lucia:disease/C0024115",
+        "dst_label": "t(5;9)(q35;q21)",
+        "dst_uri": "lucia:chromo_rearr/t(5;9)(q35;q21)",
+        "confidence": 0.0169,
+        "display": "Lung cancer panel -> t(5;9)(q35;q21)"
+      },
+      {
+        "src_label": "Squamous cell carcinoma of lung",
+        "src_uri": "lucia:disease/C0149782",
+        "dst_label": "t(5;9)(q35;q21)",
+        "dst_uri": "lucia:chromo_rearr/t(5;9)(q35;q21)",
+        "confidence": 0.0107,
+        "display": "Squamous cell carcinoma of lung -> t(5;9)(q35;q21)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(9;20)(q34;p11)",
+        "dst_uri": "lucia:chromo_rearr/t(9;20)(q34;p11)",
+        "confidence": 0.009,
+        "display": "Lung Neoplasms -> t(9;20)(q34;p11)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(15;15)(q14;q15)",
+        "dst_uri": "lucia:chromo_rearr/t(15;15)(q14;q15)",
+        "confidence": 0.0087,
+        "display": "Lung Neoplasms -> t(15;15)(q14;q15)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(1;17)(q23;p11)",
+        "dst_uri": "lucia:chromo_rearr/t(1;17)(q23;p11)",
+        "confidence": 0.0085,
+        "display": "Lung Neoplasms -> t(1;17)(q23;p11)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(13;13)(q13;q31)",
+        "dst_uri": "lucia:chromo_rearr/t(13;13)(q13;q31)",
+        "confidence": 0.0084,
+        "display": "Lung Neoplasms -> t(13;13)(q13;q31)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(X;1)(p11;q21)",
+        "dst_uri": "lucia:chromo_rearr/t(X;1)(p11;q21)",
+        "confidence": 0.0084,
+        "display": "Lung Neoplasms -> t(X;1)(p11;q21)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(11;13)(q24;q14)",
+        "dst_uri": "lucia:chromo_rearr/t(11;13)(q24;q14)",
+        "confidence": 0.0084,
+        "display": "Lung Neoplasms -> t(11;13)(q24;q14)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(11;16)(q12;p12)",
+        "dst_uri": "lucia:chromo_rearr/t(11;16)(q12;p12)",
+        "confidence": 0.008,
+        "display": "Lung Neoplasms -> t(11;16)(q12;p12)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(12;19)(q15;p13)",
+        "dst_uri": "lucia:chromo_rearr/t(12;19)(q15;p13)",
+        "confidence": 0.0078,
+        "display": "Lung Neoplasms -> t(12;19)(q15;p13)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(10;10)(p14;p14)",
+        "dst_uri": "lucia:chromo_rearr/t(10;10)(p14;p14)",
+        "confidence": 0.0075,
+        "display": "Lung Neoplasms -> t(10;10)(p14;p14)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(7;19)(q36;p13)",
+        "dst_uri": "lucia:chromo_rearr/t(7;19)(q36;p13)",
+        "confidence": 0.0071,
+        "display": "Lung Neoplasms -> t(7;19)(q36;p13)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(10;19)(q22;q13)",
+        "dst_uri": "lucia:chromo_rearr/t(10;19)(q22;q13)",
+        "confidence": 0.007,
+        "display": "Lung Neoplasms -> t(10;19)(q22;q13)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(X;1)(q26;p34)",
+        "dst_uri": "lucia:chromo_rearr/t(X;1)(q26;p34)",
+        "confidence": 0.0069,
+        "display": "Lung Neoplasms -> t(X;1)(q26;p34)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(1;1)(q23;q22)",
+        "dst_uri": "lucia:chromo_rearr/t(1;1)(q23;q22)",
+        "confidence": 0.0068,
+        "display": "Lung Neoplasms -> t(1;1)(q23;q22)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(6;10)(p22;q11)",
+        "dst_uri": "lucia:chromo_rearr/t(6;10)(p22;q11)",
+        "confidence": 0.0068,
+        "display": "Lung Neoplasms -> t(6;10)(p22;q11)"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "t(2;10)(p11;q22)",
+        "dst_uri": "lucia:chromo_rearr/t(2;10)(p11;q22)",
+        "confidence": 0.0068,
+        "display": "Lung Neoplasms -> t(2;10)(p11;q22)"
+      }
+    ],
+    "Disease__has_fusion__GeneFusion": [
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "SQSTM1::NTRK2",
+        "dst_uri": "lucia:gene_fusion/SQSTM1::NTRK2",
+        "confidence": 0.0165,
+        "display": "Bronchioloalveolar Adenocarcinoma -> SQSTM1::NTRK2"
+      },
+      {
+        "src_label": "Metaplasia",
+        "src_uri": "lucia:disease/C0025568",
+        "dst_label": "SQSTM1::NTRK2",
+        "dst_uri": "lucia:gene_fusion/SQSTM1::NTRK2",
+        "confidence": 0.0097,
+        "display": "Metaplasia -> SQSTM1::NTRK2"
+      },
+      {
+        "src_label": "stage, non-small cell lung cancer",
+        "src_uri": "lucia:disease/C0280217",
+        "dst_label": "SQSTM1::NTRK2",
+        "dst_uri": "lucia:gene_fusion/SQSTM1::NTRK2",
+        "confidence": 0.0026,
+        "display": "stage, non-small cell lung cancer -> SQSTM1::NTRK2"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "SDC4::NRG1",
+        "dst_uri": "lucia:gene_fusion/SDC4::NRG1",
+        "confidence": 0.0007,
+        "display": "Lung Neoplasms -> SDC4::NRG1"
+      },
+      {
+        "src_label": "Lung Neoplasms",
+        "src_uri": "lucia:disease/C0024121",
+        "dst_label": "BRD1::APOL5",
+        "dst_uri": "lucia:gene_fusion/BRD1::APOL5",
+        "confidence": 0.0004,
+        "display": "Lung Neoplasms -> BRD1::APOL5"
+      },
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "SMYD3::ELOVL1",
+        "dst_uri": "lucia:gene_fusion/SMYD3::ELOVL1",
+        "confidence": 0.0003,
+        "display": "Bronchioloalveolar Adenocarcinoma -> SMYD3::ELOVL1"
+      },
+      {
+        "src_label": "Lung cancer panel",
+        "src_uri": "lucia:disease/C0024115",
+        "dst_label": "MAPKAPK3::HEMK1",
+        "dst_uri": "lucia:gene_fusion/MAPKAPK3::HEMK1",
+        "confidence": 0.0002,
+        "display": "Lung cancer panel -> MAPKAPK3::HEMK1"
+      },
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "CCSER1::MMRN1",
+        "dst_uri": "lucia:gene_fusion/CCSER1::MMRN1",
+        "confidence": 0.0002,
+        "display": "Bronchioloalveolar Adenocarcinoma -> CCSER1::MMRN1"
+      },
+      {
+        "src_label": "Small cell lung cancer limited stage",
+        "src_uri": "lucia:disease/C0278725",
+        "dst_label": "EZR::ROS1",
+        "dst_uri": "lucia:gene_fusion/EZR::ROS1",
+        "confidence": 0.0001,
+        "display": "Small cell lung cancer limited stage -> EZR::ROS1"
+      },
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "ECT2::KALRN",
+        "dst_uri": "lucia:gene_fusion/ECT2::KALRN",
+        "confidence": 0.0001,
+        "display": "Bronchioloalveolar Adenocarcinoma -> ECT2::KALRN"
+      },
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "PPFIA1::LRRC4C",
+        "dst_uri": "lucia:gene_fusion/PPFIA1::LRRC4C",
+        "confidence": 0.0001,
+        "display": "Bronchioloalveolar Adenocarcinoma -> PPFIA1::LRRC4C"
+      },
+      {
+        "src_label": "Metaplasia",
+        "src_uri": "lucia:disease/C0025568",
+        "dst_label": "CCSER1::MMRN1",
+        "dst_uri": "lucia:gene_fusion/CCSER1::MMRN1",
+        "confidence": 0.0001,
+        "display": "Metaplasia -> CCSER1::MMRN1"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "DNAJC1::SKIDA1",
+        "dst_uri": "lucia:gene_fusion/DNAJC1::SKIDA1",
+        "confidence": 0.0001,
+        "display": "Lung Carcinoma Metastatic in the Brain -> DNAJC1::SKIDA1"
+      },
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "JUP::EIF2AK2",
+        "dst_uri": "lucia:gene_fusion/JUP::EIF2AK2",
+        "confidence": 0.0001,
+        "display": "Bronchioloalveolar Adenocarcinoma -> JUP::EIF2AK2"
+      },
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "DOCK11::IL13RA1",
+        "dst_uri": "lucia:gene_fusion/DOCK11::IL13RA1",
+        "confidence": 0.0001,
+        "display": "Bronchioloalveolar Adenocarcinoma -> DOCK11::IL13RA1"
+      },
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "INTS5::LBHD1",
+        "dst_uri": "lucia:gene_fusion/INTS5::LBHD1",
+        "confidence": 0.0001,
+        "display": "Bronchioloalveolar Adenocarcinoma -> INTS5::LBHD1"
+      },
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "FAM50B::PPP1R3G",
+        "dst_uri": "lucia:gene_fusion/FAM50B::PPP1R3G",
+        "confidence": 0.0001,
+        "display": "Bronchioloalveolar Adenocarcinoma -> FAM50B::PPP1R3G"
+      },
+      {
+        "src_label": "Lung Carcinoma Metastatic in the Brain",
+        "src_uri": "lucia:disease/C0684249",
+        "dst_label": "ZNRF3::EWSR1",
+        "dst_uri": "lucia:gene_fusion/ZNRF3::EWSR1",
+        "confidence": 0.0001,
+        "display": "Lung Carcinoma Metastatic in the Brain -> ZNRF3::EWSR1"
+      },
+      {
+        "src_label": "Metaplasia",
+        "src_uri": "lucia:disease/C0025568",
+        "dst_label": "TMTC2::METTL25",
+        "dst_uri": "lucia:gene_fusion/TMTC2::METTL25",
+        "confidence": 0.0001,
+        "display": "Metaplasia -> TMTC2::METTL25"
+      },
+      {
+        "src_label": "Bronchioloalveolar Adenocarcinoma",
+        "src_uri": "lucia:disease/C0007120",
+        "dst_label": "SLC35E4::SEC14L2",
+        "dst_uri": "lucia:gene_fusion/SLC35E4::SEC14L2",
+        "confidence": 0.0001,
+        "display": "Bronchioloalveolar Adenocarcinoma -> SLC35E4::SEC14L2"
+      }
+    ]
+  },
+  "config": {
+    "top_k": 50,
+    "max_per_tail": 3,
+    "score_normalization": "sigmoid",
+    "discovery_relations": [
+      "Gene__in_pathway__Pathway",
+      "VariantDiseaseAssociation__variant_of__Disease",
+      "Disease__has_rearrangement__ChromoRearr",
+      "Biomarker__marker_for__Disease",
+      "GeneDiseaseAssociation__associated_with__Disease",
+      "Disease__has_fusion__GeneFusion"
+    ]
+  }
+}

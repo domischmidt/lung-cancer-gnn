@@ -1,0 +1,51 @@
+rank,VariantDiseaseAssociation_label,VariantDiseaseAssociation_uri,Disease_label,Disease_uri,confidence
+1,VDA_rs56113850_C0007131,lucia:vda/vda_597,Small cell carcinoma of lung,lucia:disease/C0149925,0.618
+2,VDA_rs1045494_C0149925,lucia:vda/vda_623,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.588
+3,VDA_rs1200399_C0007131,lucia:vda/vda_104,Small cell carcinoma of lung,lucia:disease/C0149925,0.5527
+4,VDA_rs1805388_C0007131,lucia:vda/vda_149,Small cell carcinoma of lung,lucia:disease/C0149925,0.4968
+5,VDA_rs104886003_C0149925,lucia:vda/vda_625,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.4903
+6,VDA_rs1138272_C0149925,lucia:vda/vda_640,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.4784
+7,VDA_rs1057519927_C0149925,lucia:vda/vda_632,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0007
+8,VDA_rs1416580204_C0007131,lucia:vda/vda_131,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,0.0002
+9,VDA_rs77375493_C0007131,lucia:vda/vda_441,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,0.0002
+10,VDA_rs1799966_C0007131,lucia:vda/vda_289,Malignant neoplasm of lung,http://medal.ctb.upm.es/projects/LUCIA/res/sem-lucia#disease/C0242379,0.0001
+11,VDA_rs1360583020_C0149925,lucia:vda/vda_664,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0001
+12,VDA_rs121913274_C0149925,lucia:vda/vda_653,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0
+13,VDA_rs3124599_C0149925,lucia:vda/vda_684,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0
+14,VDA_rs10023113_C0007131,lucia:vda/vda_349,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0
+15,VDA_rs121913274_C0149925,lucia:vda/vda_653,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+16,VDA_rs577715207_C0149925,lucia:vda/vda_701,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+17,VDA_rs2069433_C0007131,lucia:vda/vda_397,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0
+18,VDA_rs5743551_C0007131,lucia:vda/vda_599,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,0.0
+19,VDA_rs121913273_C0149925,lucia:vda/vda_652,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+20,VDA_rs137853294_C0149925,lucia:vda/vda_665,Hamartoma of lung,lucia:disease/C0149927,0.0
+21,VDA_rs1360583020_C0149925,lucia:vda/vda_664,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+22,VDA_rs137853294_C0149925,lucia:vda/vda_665,Fetal adenocarcinoma of lung,lucia:disease/C1708045,0.0
+23,VDA_rs121913273_C0149925,lucia:vda/vda_652,Invasive Lung Mucinous Adenocarcinoma,lucia:disease/C4522160,0.0
+24,VDA_rs9308062_C0149925,lucia:vda/vda_730,Hyperplasia,lucia:disease/C0020507,0.0
+25,VDA_rs3124599_C0149925,lucia:vda/vda_684,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+26,VDA_rs137853294_C0149925,lucia:vda/vda_665,large cell neuroendocrine carcinoma of lung,lucia:disease/C1334363,0.0
+27,VDA_rs137853294_C0149925,lucia:vda/vda_665,Small cell lung cancer recurrent,lucia:disease/C0278727,0.0
+28,VDA_rs137853294_C0149925,lucia:vda/vda_665,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0
+29,VDA_rs1805388_C0007131,lucia:vda/vda_149,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+30,VDA_rs121913682_C0149925,lucia:vda/vda_660,Epidermal growth factor receptor negative non-small cell lung cancer,lucia:disease/C1960396,0.0
+31,VDA_rs121909229_C0149925,lucia:vda/vda_648,Invasive Lung Mucinous Adenocarcinoma,lucia:disease/C4522160,0.0
+32,VDA_rs942190_C0149925,lucia:vda/vda_731,"Carcinoma, Spindle-Cell",lucia:disease/C0205697,0.0
+33,VDA_rs1057519847_C0149925,lucia:vda/vda_628,Hamartoma of lung,lucia:disease/C0149927,0.0
+34,VDA_rs2032582_C0149925,lucia:vda/vda_680,Invasive Lung Mucinous Adenocarcinoma,lucia:disease/C4522160,0.0
+35,VDA_rs121909229_C0149925,lucia:vda/vda_648,Fetal adenocarcinoma of lung,lucia:disease/C1708045,0.0
+36,VDA_rs121913273_C0149925,lucia:vda/vda_652,Epidermal growth factor receptor positive non-small cell lung cancer,lucia:disease/C1960925,0.0
+37,VDA_rs9308062_C0149925,lucia:vda/vda_730,Lung cancer panel,lucia:disease/C0024115,0.0
+38,VDA_rs1057519848_C0149925,lucia:vda/vda_629,Hamartoma of lung,lucia:disease/C0149927,0.0
+39,VDA_rs1057519848_C0149925,lucia:vda/vda_629,large cell neuroendocrine carcinoma of lung,lucia:disease/C1334363,0.0
+40,VDA_rs121913273_C0149925,lucia:vda/vda_652,Small cell lung cancer limited stage,lucia:disease/C0278725,0.0
+41,VDA_rs121913507_C0149925,lucia:vda/vda_659,Fetal adenocarcinoma of lung,lucia:disease/C1708045,0.0
+42,VDA_rs2032582_C0149925,lucia:vda/vda_680,Epidermal growth factor receptor negative non-small cell lung cancer,lucia:disease/C1960396,0.0
+43,VDA_rs137853294_C0149925,lucia:vda/vda_665,Combined Lung Small Cell Carcinoma,lucia:disease/C1333125,0.0
+44,VDA_rs121913274_C0149925,lucia:vda/vda_653,Atypical pulmonary carcinoid tumor,lucia:disease/C4072942,0.0
+45,VDA_rs121913507_C0149925,lucia:vda/vda_659,large cell neuroendocrine carcinoma of lung,lucia:disease/C1334363,0.0
+46,VDA_rs121913507_C0149925,lucia:vda/vda_659,Epidermal growth factor receptor negative non-small cell lung cancer,lucia:disease/C1960396,0.0
+47,VDA_rs121913682_C0149925,lucia:vda/vda_660,adenoid cystic carcinoma of lung,lucia:disease/C1334439,0.0
+48,VDA_rs121913273_C0149925,lucia:vda/vda_652,Carcinoma in situ of lung,lucia:disease/C0685053,0.0
+49,VDA_rs137853294_C0149925,lucia:vda/vda_665,Small cell lung cancer extensive stage,lucia:disease/C0278726,0.0
+50,VDA_rs2032582_C0149925,lucia:vda/vda_680,Lung Adenocarcinoma In Situ,lucia:disease/C4521520,0.0

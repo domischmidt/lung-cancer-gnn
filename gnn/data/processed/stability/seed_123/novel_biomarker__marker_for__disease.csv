@@ -1,0 +1,51 @@
+rank,Biomarker_label,Biomarker_uri,Disease_label,Disease_uri,confidence
+1,Vitamin B12,lucia:biomarker/C0042845,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0004
+2,pyridoxal phosphate,lucia:biomarker/C0034266,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0004
+3,gamma-Tocopherol,lucia:biomarker/C0017054,Lung Carcinoma Metastatic in the Brain,lucia:disease/C0684249,0.0002
+4,Vitamin B12,lucia:biomarker/C0042845,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0002
+5,alpha-carotene,lucia:biomarker/C0051336,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0002
+6,pyridoxal phosphate,lucia:biomarker/C0034266,Non-Small Cell Lung Carcinoma,lucia:disease/C0007131,0.0002
+7,pyridoxal phosphate,lucia:biomarker/C0034266,Small cell carcinoma of lung,lucia:disease/C0149925,0.0
+8,pyridoxal phosphate,lucia:biomarker/C0034266,Lung Neoplasms,lucia:disease/C0024121,0.0
+9,Vitamin B12,lucia:biomarker/C0042845,Small cell carcinoma of lung,lucia:disease/C0149925,0.0
+10,Vitamin B12,lucia:biomarker/C0042845,Lung Neoplasms,lucia:disease/C0024121,0.0
+11,Genistein,lucia:biomarker/C0061202,Lung Neoplasms,lucia:disease/C0024121,0.0
+12,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Small cell carcinoma of lung,lucia:disease/C0149925,0.0
+13,pyridoxal phosphate,lucia:biomarker/C0034266,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0
+14,pyridoxal phosphate,lucia:biomarker/C0034266,mucoepidermoid carcinoma of lung,lucia:disease/C1708778,0.0
+15,folate,lucia:biomarker/C0178638,mucoepidermoid carcinoma of lung,lucia:disease/C1708778,0.0
+16,pyridoxal phosphate,lucia:biomarker/C0034266,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.0
+17,pyridoxal phosphate,lucia:biomarker/C0034266,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+18,Vitamin B12,lucia:biomarker/C0042845,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+19,Genistein,lucia:biomarker/C0061202,mucoepidermoid carcinoma of lung,lucia:disease/C1708778,0.0
+20,Vitamin B12,lucia:biomarker/C0042845,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+21,pyridoxal phosphate,lucia:biomarker/C0034266,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+22,pyridoxal phosphate,lucia:biomarker/C0034266,Epidermal growth factor receptor positive non-small cell lung cancer,lucia:disease/C1960925,0.0
+23,25-Hydroxycholecalciferol,lucia:biomarker/C0006657,Squamous cell carcinoma of lung,lucia:disease/C0149782,0.0
+24,pyridoxal phosphate,lucia:biomarker/C0034266,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.0
+25,Vitamin B12,lucia:biomarker/C0042845,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0
+26,Genistein,lucia:biomarker/C0061202,Bronchioloalveolar Adenocarcinoma,lucia:disease/C0007120,0.0
+27,pyridoxal phosphate,lucia:biomarker/C0034266,Pulmonary lymphangioleiomyomatosis,lucia:disease/C0349649,0.0
+28,Isoflavones,lucia:biomarker/C0022179,"stage, non-small cell lung cancer",lucia:disease/C0280217,0.0
+29,Vitamin B12,lucia:biomarker/C0042845,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.0
+30,Genistein,lucia:biomarker/C0061202,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.0
+31,folate,lucia:biomarker/C0178638,Non-squamous non-small cell lung cancer,lucia:disease/C4324656,0.0
+32,pyridoxal phosphate,lucia:biomarker/C0034266,Small cell lung cancer limited stage,lucia:disease/C0278725,0.0
+33,Vitamin B12,lucia:biomarker/C0042845,Small cell lung cancer limited stage,lucia:disease/C0278725,0.0
+34,folate,lucia:biomarker/C0178638,Small cell lung cancer limited stage,lucia:disease/C0278725,0.0
+35,folate,lucia:biomarker/C0178638,Pulmonary lymphangioleiomyomatosis,lucia:disease/C0349649,0.0
+36,pyridoxal phosphate,lucia:biomarker/C0034266,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+37,Genistein,lucia:biomarker/C0061202,Non-small cell lung cancer recurrent,lucia:disease/C0278517,0.0
+38,pyridoxal phosphate,lucia:biomarker/C0034266,carcinosarcoma of lung,lucia:disease/C1711276,0.0
+39,Vitamin B12,lucia:biomarker/C0042845,Pulmonary lymphangioleiomyomatosis,lucia:disease/C0349649,0.0
+40,Vitamin B12,lucia:biomarker/C0042845,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+41,folate,lucia:biomarker/C0178638,Small cell lung cancer recurrent,lucia:disease/C0278727,0.0
+42,Genistein,lucia:biomarker/C0061202,Lymphoepithelial carcinoma,lucia:disease/C0334254,0.0
+43,Vitamin B12,lucia:biomarker/C0042845,Small cell lung cancer recurrent,lucia:disease/C0278727,0.0
+44,pyridoxal phosphate,lucia:biomarker/C0034266,Small cell lung cancer recurrent,lucia:disease/C0278727,0.0
+45,folate,lucia:biomarker/C0178638,Epidermal growth factor receptor positive non-small cell lung cancer,lucia:disease/C1960925,0.0
+46,Genistein,lucia:biomarker/C0061202,Epidermal growth factor receptor positive non-small cell lung cancer,lucia:disease/C1960925,0.0
+47,pyridoxal phosphate,lucia:biomarker/C0034266,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+48,Vitamin B12,lucia:biomarker/C0042845,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+49,Isoflavones,lucia:biomarker/C0022179,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,0.0
+50,pyridoxal phosphate,lucia:biomarker/C0034266,Lung Acinar Adenocarcinoma,lucia:disease/C1332137,0.0

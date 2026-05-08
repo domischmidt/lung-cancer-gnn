@@ -1,0 +1,9 @@
+======================================================================
+Stability run for seed 456
+Output: gnn/data/processed/stability/seed_456
+======================================================================
+Set 05_train_rgcn.py SEED = 456
+Traceback (most recent call last):
+  File "/Users/domenicschmidt/Documents/lung-cancer-gnn/gnn/src/05_train_rgcn.py", line 37, in <module>
+    from torch_geometric.nn import RGCNConv
+ModuleNotFoundError: No module named 'torch_geometric'

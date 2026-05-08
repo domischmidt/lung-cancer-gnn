@@ -1,0 +1,51 @@
+rank,Disease_label,Disease_uri,ChromoRearr_label,ChromoRearr_uri,confidence
+1,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,del(4)(p16p16),lucia:chromo_rearr/del(4)(p16p16),0.2874
+2,Adenocarcinoma of lung (disorder),lucia:disease/C0152013,der(15)(q14),lucia:chromo_rearr/der(15)(q14),0.2607
+3,Small cell lung cancer limited stage,lucia:disease/C0278725,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.2338
+4,Pulmonary Sclerosing Hemangioma,lucia:disease/C1334455,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.141
+5,Lung Acinar Adenocarcinoma,lucia:disease/C1332137,t(5;9)(q35;q21),lucia:chromo_rearr/t(5;9)(q35;q21),0.0913
+6,Squamous cell carcinoma of lung,lucia:disease/C0149782,der(2)(p23),lucia:chromo_rearr/der(2)(p23),0.0248
+7,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(4;4)(q13;q13),lucia:chromo_rearr/t(4;4)(q13;q13),0.01
+8,Squamous cell carcinoma of lung,lucia:disease/C0149782,der(10)(q11),lucia:chromo_rearr/der(10)(q11),0.0098
+9,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(4;4)(p16;p16),lucia:chromo_rearr/t(4;4)(p16;p16),0.0073
+10,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(13;19)(q14;p13),lucia:chromo_rearr/t(13;19)(q14;p13),0.0072
+11,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(10;10)(q21;q21),lucia:chromo_rearr/t(10;10)(q21;q21),0.007
+12,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(6;6)(q21;q25),lucia:chromo_rearr/t(6;6)(q21;q25),0.0069
+13,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(16;16)(q12;q12),lucia:chromo_rearr/t(16;16)(q12;q12),0.0067
+14,Squamous cell carcinoma of lung,lucia:disease/C0149782,der(6)(q22),lucia:chromo_rearr/der(6)(q22),0.0052
+15,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(5;5)(q35;q35),lucia:chromo_rearr/t(5;5)(q35;q35),0.005
+16,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(7;7)(q36;q36),lucia:chromo_rearr/t(7;7)(q36;q36),0.0047
+17,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(14;14)(q23;q24),lucia:chromo_rearr/t(14;14)(q23;q24),0.0043
+18,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(15;15)(q21;q21),lucia:chromo_rearr/t(15;15)(q21;q21),0.0041
+19,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(4;4)(q12;q12),lucia:chromo_rearr/t(4;4)(q12;q12),0.0041
+20,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(14;14)(q12;q13),lucia:chromo_rearr/t(14;14)(q12;q13),0.004
+21,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(14;14)(q12;q12),lucia:chromo_rearr/t(14;14)(q12;q12),0.004
+22,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(17;17)(p13;p13),lucia:chromo_rearr/t(17;17)(p13;p13),0.004
+23,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(11;11)(q13;q13),lucia:chromo_rearr/t(11;11)(q13;q13),0.0039
+24,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(12;12)(q13;q24),lucia:chromo_rearr/t(12;12)(q13;q24),0.0034
+25,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(9;9)(p24;p24),lucia:chromo_rearr/t(9;9)(p24;p24),0.0032
+26,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(7;7)(q31;q31),lucia:chromo_rearr/t(7;7)(q31;q31),0.0026
+27,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(14;14)(q21;q21),lucia:chromo_rearr/t(14;14)(q21;q21),0.0025
+28,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(7;7)(p14;p15),lucia:chromo_rearr/t(7;7)(p14;p15),0.0023
+29,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(12;12)(q24;q24),lucia:chromo_rearr/t(12;12)(q24;q24),0.0021
+30,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(4;4)(q24;q24),lucia:chromo_rearr/t(4;4)(q24;q24),0.002
+31,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(12;20)(q24;p11),lucia:chromo_rearr/t(12;20)(q24;p11),0.002
+32,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(16;16)(q24;q24),lucia:chromo_rearr/t(16;16)(q24;q24),0.0019
+33,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(14;14)(q12;q22),lucia:chromo_rearr/t(14;14)(q12;q22),0.0019
+34,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(5;5)(q13;q13),lucia:chromo_rearr/t(5;5)(q13;q13),0.0019
+35,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(6;6)(p22;p22),lucia:chromo_rearr/t(6;6)(p22;p22),0.0018
+36,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(3;3)(q23;q23),lucia:chromo_rearr/t(3;3)(q23;q23),0.0017
+37,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(7;7)(q34;q34),lucia:chromo_rearr/t(7;7)(q34;q34),0.0017
+38,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(1;1)(q21;q23),lucia:chromo_rearr/t(1;1)(q21;q23),0.0017
+39,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(18;18)(p11;q22),lucia:chromo_rearr/t(18;18)(p11;q22),0.0016
+40,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(2;2)(q33;q34),lucia:chromo_rearr/t(2;2)(q33;q34),0.0016
+41,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(7;7)(p12;p13),lucia:chromo_rearr/t(7;7)(p12;p13),0.0016
+42,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(19;19)(q13;q13),lucia:chromo_rearr/t(19;19)(q13;q13),0.0016
+43,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(19;19)(p12;q13),lucia:chromo_rearr/t(19;19)(p12;q13),0.0015
+44,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(2;2)(q33;q33),lucia:chromo_rearr/t(2;2)(q33;q33),0.0015
+45,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(22;22)(q11;q12),lucia:chromo_rearr/t(22;22)(q11;q12),0.0014
+46,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(1;1)(p34;p34),lucia:chromo_rearr/t(1;1)(p34;p34),0.0014
+47,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(3;3)(q26;q26),lucia:chromo_rearr/t(3;3)(q26;q26),0.0014
+48,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(5;6)(q33;q22),lucia:chromo_rearr/t(5;6)(q33;q22),0.0013
+49,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(5;20)(p13;q11),lucia:chromo_rearr/t(5;20)(p13;q11),0.0013
+50,"stage, non-small cell lung cancer",lucia:disease/C0280217,t(7;7)(q21;q22),lucia:chromo_rearr/t(7;7)(q21;q22),0.0013
