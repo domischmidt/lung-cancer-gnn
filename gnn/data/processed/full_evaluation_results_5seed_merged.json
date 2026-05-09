@@ -1,0 +1,1184 @@
+{
+  "metadata": {
+    "description": "Merged 5-seed full evaluation from seeds [42, 123] and [456, 789, 1337].",
+    "seed_groups": {
+      "original": [
+        42,
+        123
+      ],
+      "extra": [
+        456,
+        789,
+        1337
+      ],
+      "combined": [
+        42,
+        123,
+        456,
+        789,
+        1337
+      ]
+    }
+  },
+  "multi_seed": {
+    "DotProduct": {
+      "ChemicalLocationAssociation__has_time_boundary__CalendarYear": {
+        "hits@1": {
+          "mean": 0.04393355299481922,
+          "std": 0.023925245292633904,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.4154044730134713,
+          "std": 0.03629218911394968,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.13688480961352834,
+          "std": 0.026172636675747908,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.1584452635721177,
+          "std": 0.02197935616202219,
+          "n_seeds": 5
+        }
+      },
+      "ChemicalLocationAssociation__refers_to__Chemical": {
+        "hits@1": {
+          "mean": 0.22401465469549983,
+          "std": 0.029638536330018797,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.5822807402024817,
+          "std": 0.04426421562902356,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.4546099243291666,
+          "std": 0.020853599336927448,
+          "n_seeds": 5
+        }
+      },
+      "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.00196078431372549,
+          "std": 0.00392156862745098,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.0026663858148553315,
+          "std": 0.0011281765774447546,
+          "n_seeds": 5
+        }
+      },
+      "ChemicalLocationAssociation__refers_to__GeographicRegion": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.006028510260669253,
+          "std": 0.0022662965989857253,
+          "n_seeds": 5
+        }
+      },
+      "Disease__detected_finding__VitalStatistics": {
+        "hits@1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        }
+      },
+      "Disease__has_fusion__GeneFusion": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.005218985271949025,
+          "std": 0.0024567320466611104,
+          "n_seeds": 5
+        }
+      },
+      "Disease__has_rearrangement__ChromoRearr": {},
+      "GeneDiseaseAssociation__associated_with__Disease": {
+        "hits@1": {
+          "mean": 0.08595238095238095,
+          "std": 0.048095238095238094,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.32285714285714284,
+          "std": 0.09690914930982858,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.23595238095238097,
+          "std": 0.10606441374912501,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.19209985061476997,
+          "std": 0.04663326362597498,
+          "n_seeds": 5
+        }
+      },
+      "Gene__has_association__GeneDiseaseAssociation": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.00011965464883803825,
+          "std": 1.9545371891181844e-05,
+          "n_seeds": 5
+        }
+      },
+      "Gene__in_pathway__Pathway": {
+        "hits@1": {
+          "mean": 0.23171809559004677,
+          "std": 0.05706138258111965,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.44841815366205606,
+          "std": 0.08542904876918171,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.31664836518495054,
+          "std": 0.06299669670835342,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.3075211660497798,
+          "std": 0.05814312463566312,
+          "n_seeds": 5
+        }
+      },
+      "GeoPoliticalRegion__part_of__Country": {},
+      "VitalStatistics__has_output__People": {
+        "hits@1": {
+          "mean": 0.07580645161290323,
+          "std": 0.05158848338637355,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.6783378136200716,
+          "std": 0.060517729140046085,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.20896057347670252,
+          "std": 0.06783657913470442,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.21826974059768553,
+          "std": 0.04361371558878745,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__has_time_boundary__CalendarYear": {
+        "hits@1": {
+          "mean": 0.007407407407407407,
+          "std": 0.014814814814814814,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.2551020608549771,
+          "std": 0.0744103229663876,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.03883825121895111,
+          "std": 0.007982747608057403,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.07869686240822993,
+          "std": 0.012384218271882677,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__part_of__Country": {
+        "hits@1": {
+          "mean": 0.06136363636363636,
+          "std": 0.07727272727272727,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.24257575757575758,
+          "std": 0.19788853287062802,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.09287878787878787,
+          "std": 0.10130870006523257,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.12280944201671515,
+          "std": 0.08802283061953152,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__part_of__GeographicRegion": {
+        "hits@1": {
+          "mean": 0.01111111111111111,
+          "std": 0.022222222222222223,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.04583333333333333,
+          "std": 0.06508541396588878,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.02222222222222222,
+          "std": 0.044444444444444446,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.024497579741601546,
+          "std": 0.03615390966702377,
+          "n_seeds": 5
+        }
+      },
+      "overall": {
+        "hits@1": {
+          "mean": 0.1328,
+          "std": 0.01713942822850284,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.4452,
+          "std": 0.03326499661806685,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.24559999999999998,
+          "std": 0.026993332510084785,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.22724159717486278,
+          "std": 0.020851278702018392,
+          "n_seeds": 5
+        }
+      }
+    },
+    "R-GCN": {
+      "ChemicalLocationAssociation__has_time_boundary__CalendarYear": {
+        "hits@1": {
+          "mean": 0.05536483568688659,
+          "std": 0.008049232053810116,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.5635111611931245,
+          "std": 0.09458590985069316,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.185341470838597,
+          "std": 0.03854044438082662,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.18936112491208412,
+          "std": 0.02222928027303743,
+          "n_seeds": 5
+        }
+      },
+      "ChemicalLocationAssociation__refers_to__Chemical": {
+        "hits@1": {
+          "mean": 0.37211713557661336,
+          "std": 0.054701805791193894,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.7610341399495084,
+          "std": 0.03739552452461973,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.5881935240455695,
+          "std": 0.035185898291266234,
+          "n_seeds": 5
+        }
+      },
+      "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.011911145707201753,
+          "std": 0.010306326196855821,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.004878048780487805,
+          "std": 0.00975609756097561,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.0077461788494063875,
+          "std": 0.004725199029399309,
+          "n_seeds": 5
+        }
+      },
+      "ChemicalLocationAssociation__refers_to__GeographicRegion": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.016666666666666666,
+          "std": 0.03333333333333333,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.016666666666666666,
+          "std": 0.03333333333333333,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.018929670885511767,
+          "std": 0.015542160116217028,
+          "n_seeds": 5
+        }
+      },
+      "Disease__detected_finding__VitalStatistics": {
+        "hits@1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        }
+      },
+      "Disease__has_fusion__GeneFusion": {
+        "hits@1": {
+          "mean": 0.075,
+          "std": 0.11456439237389601,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.6,
+          "std": 0.27080128015453203,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.45,
+          "std": 0.07637626158259735,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.3114483399559468,
+          "std": 0.1301370444277699,
+          "n_seeds": 5
+        }
+      },
+      "Disease__has_rearrangement__ChromoRearr": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.45,
+          "std": 0.3674234614174767,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.2520833333333333,
+          "std": 0.035721725415588004,
+          "n_seeds": 5
+        }
+      },
+      "GeneDiseaseAssociation__associated_with__Disease": {
+        "hits@1": {
+          "mean": 0.133815987933635,
+          "std": 0.05549654006882264,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.8677526395173455,
+          "std": 0.0850882569205452,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.48132730015082964,
+          "std": 0.18273798341615488,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.35037701710054653,
+          "std": 0.06264257477596168,
+          "n_seeds": 5
+        }
+      },
+      "Gene__has_association__GeneDiseaseAssociation": {
+        "hits@1": {
+          "mean": 0.06479500891265597,
+          "std": 0.06703810468176256,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.30695480989598634,
+          "std": 0.10969150837036362,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.1707488589841531,
+          "std": 0.05347842857352957,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.15580909132622103,
+          "std": 0.051415542352492884,
+          "n_seeds": 5
+        }
+      },
+      "Gene__in_pathway__Pathway": {
+        "hits@1": {
+          "mean": 0.08865636118267697,
+          "std": 0.0359613441252271,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.27023898908109434,
+          "std": 0.08370158521675561,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.15858262789841737,
+          "std": 0.05773721515566738,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.1521770132068024,
+          "std": 0.037606361631531623,
+          "n_seeds": 5
+        }
+      },
+      "GeoPoliticalRegion__part_of__Country": {
+        "hits@1": {
+          "mean": 0.5,
+          "std": 0.36514837167011077,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.9,
+          "std": 0.1527525231651947,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.5666666666666667,
+          "std": 0.2905932629027116,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.588501400560224,
+          "std": 0.2866145001525545,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__has_output__People": {
+        "hits@1": {
+          "mean": 0.21548386181638818,
+          "std": 0.08326119817188167,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.8306397848699753,
+          "std": 0.05861088667273929,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.5661534434942798,
+          "std": 0.08010225470862513,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.41957404655513,
+          "std": 0.0659929638192152,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__has_time_boundary__CalendarYear": {
+        "hits@1": {
+          "mean": 0.03811274509803921,
+          "std": 0.04310590995767875,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.3848661686896981,
+          "std": 0.07895638317440798,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.16131030189853718,
+          "std": 0.06731897371165756,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.1576880232092877,
+          "std": 0.044034134720342455,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__part_of__Country": {
+        "hits@1": {
+          "mean": 0.18214285714285713,
+          "std": 0.07674648314898189,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.7154761904761905,
+          "std": 0.19692937601668775,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.4023809523809524,
+          "std": 0.30531943051257987,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.35327573518116007,
+          "std": 0.1607468136060432,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__part_of__GeographicRegion": {
+        "hits@1": {
+          "mean": 0.03538461538461538,
+          "std": 0.030518206807503646,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.1960633484162896,
+          "std": 0.03195723581390709,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.057149321266968325,
+          "std": 0.033308085412988145,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.0912096169216339,
+          "std": 0.030117100530899558,
+          "n_seeds": 5
+        }
+      },
+      "overall": {
+        "hits@1": {
+          "mean": 0.186,
+          "std": 0.0045607017003965545,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.5472,
+          "std": 0.024252010225958576,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.3512,
+          "std": 0.014399999999999996,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.3014033903462246,
+          "std": 0.005371415421847665,
+          "n_seeds": 5
+        }
+      }
+    },
+    "TransE": {
+      "ChemicalLocationAssociation__has_time_boundary__CalendarYear": {
+        "hits@1": {
+          "mean": 0.058158758351171756,
+          "std": 0.009007972618406605,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.7045441735285056,
+          "std": 0.049317146834595586,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.1803320247341688,
+          "std": 0.014480832301874068,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.21410755135699544,
+          "std": 0.010734216120007608,
+          "n_seeds": 5
+        }
+      },
+      "ChemicalLocationAssociation__refers_to__Chemical": {
+        "hits@1": {
+          "mean": 0.2752815681025485,
+          "std": 0.05433047731096427,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.6123788691740604,
+          "std": 0.04700379565328543,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.48770106017942344,
+          "std": 0.04055774552433906,
+          "n_seeds": 5
+        }
+      },
+      "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.0022222222222222222,
+          "std": 0.0044444444444444444,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.00324997782930835,
+          "std": 0.0015605641435404247,
+          "n_seeds": 5
+        }
+      },
+      "ChemicalLocationAssociation__refers_to__GeographicRegion": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.016666666666666666,
+          "std": 0.03333333333333333,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.008509012244829002,
+          "std": 0.006348070491090612,
+          "n_seeds": 5
+        }
+      },
+      "Disease__detected_finding__VitalStatistics": {
+        "hits@1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n_seeds": 5
+        }
+      },
+      "Disease__has_fusion__GeneFusion": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.0005351993604402423,
+          "std": 2.8383077607985772e-05,
+          "n_seeds": 5
+        }
+      },
+      "GeneDiseaseAssociation__associated_with__Disease": {
+        "hits@1": {
+          "mean": 0.06424825174825174,
+          "std": 0.033802799054559525,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.9093822843822844,
+          "std": 0.05185497929562854,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.32654428904428906,
+          "std": 0.0714189072642613,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.2836184248443864,
+          "std": 0.047032978134531396,
+          "n_seeds": 5
+        }
+      },
+      "Gene__has_association__GeneDiseaseAssociation": {
+        "hits@1": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0,
+          "std": 0.0,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 8.144023085489308e-05,
+          "std": 5.616638570331266e-06,
+          "n_seeds": 5
+        }
+      },
+      "Gene__in_pathway__Pathway": {
+        "hits@1": {
+          "mean": 0.1436479583721918,
+          "std": 0.023877817487135817,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.3662218893959576,
+          "std": 0.041801432267888364,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.22476271351350596,
+          "std": 0.015238628352920317,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.21710100203188687,
+          "std": 0.020019190312836797,
+          "n_seeds": 5
+        }
+      },
+      "GeoPoliticalRegion__part_of__Country": {
+        "hits@1": {
+          "mean": 0.3833333333333333,
+          "std": 0.17159383568311662,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.925,
+          "std": 0.11456439237389601,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.6,
+          "std": 0.2,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.5422589869281046,
+          "std": 0.15598699644337966,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__has_output__People": {
+        "hits@1": {
+          "mean": 0.03713752913752914,
+          "std": 0.04227505827505827,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.7851888915682019,
+          "std": 0.051048546992519886,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.1590378586930311,
+          "std": 0.06853514576636945,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.206166415653858,
+          "std": 0.049642526142088465,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__has_time_boundary__CalendarYear": {
+        "hits@1": {
+          "mean": 0.01818181818181818,
+          "std": 0.024242424242424242,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.41880668756530837,
+          "std": 0.07709632675213411,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.1036896551724138,
+          "std": 0.05708699732759498,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.1312653043533002,
+          "std": 0.03489411647857205,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__part_of__Country": {
+        "hits@1": {
+          "mean": 0.20686813186813188,
+          "std": 0.14218353445073983,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.7135864135864136,
+          "std": 0.07231093988515035,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.31718281718281716,
+          "std": 0.07477690977796476,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.33562161795887724,
+          "std": 0.09145286438655889,
+          "n_seeds": 5
+        }
+      },
+      "VitalStatistics__part_of__GeographicRegion": {
+        "hits@1": {
+          "mean": 0.05211111111111111,
+          "std": 0.048028283847986034,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.19294949494949493,
+          "std": 0.049827389025231164,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.11099494949494951,
+          "std": 0.04611531948888662,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.11853433820018582,
+          "std": 0.03882862884885617,
+          "n_seeds": 5
+        }
+      },
+      "overall": {
+        "hits@1": {
+          "mean": 0.1544,
+          "std": 0.012986146464598343,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.5555999999999999,
+          "std": 0.023644026729810613,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.27680000000000005,
+          "std": 0.01622837022008063,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.2631002956207858,
+          "std": 0.012380113107523051,
+          "n_seeds": 5
+        }
+      }
+    }
+  },
+  "ablation": {
+    "Bio-only": {
+      "gda": {
+        "hits@1": {
+          "mean": 0.144,
+          "std": 0.05155191558031574,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.9084,
+          "std": 0.05299660366476325,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.43879999999999997,
+          "std": 0.06710707861321338,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.3549780699423602,
+          "std": 0.03624781392201519,
+          "n_seeds": 5
+        }
+      },
+      "overall": {
+        "hits@1": {
+          "mean": 0.144,
+          "std": 0.05155191558031574,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.9084,
+          "std": 0.05299660366476325,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.43879999999999997,
+          "std": 0.06710707861321338,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.3549780699423602,
+          "std": 0.03624781392201519,
+          "n_seeds": 5
+        }
+      }
+    },
+    "Combined": {
+      "gda": {
+        "hits@1": {
+          "mean": 0.1212,
+          "std": 0.01602997192761111,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.858,
+          "std": 0.03544009029333872,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.38280000000000003,
+          "std": 0.029922566734824078,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.3215242822552391,
+          "std": 0.01946964567965657,
+          "n_seeds": 5
+        }
+      },
+      "overall": {
+        "hits@1": {
+          "mean": 0.1212,
+          "std": 0.01602997192761111,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.858,
+          "std": 0.03544009029333872,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.38280000000000003,
+          "std": 0.029922566734824078,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.3215242822552391,
+          "std": 0.01946964567965657,
+          "n_seeds": 5
+        }
+      }
+    },
+    "Env-only": {
+      "gda": {
+        "hits@1": {
+          "mean": 0.06599999999999999,
+          "std": 0.07671245009775139,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.174,
+          "std": 0.06796469671822276,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0948,
+          "std": 0.06896491861809162,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.12366432977426797,
+          "std": 0.06758038727527416,
+          "n_seeds": 5
+        }
+      },
+      "overall": {
+        "hits@1": {
+          "mean": 0.06599999999999999,
+          "std": 0.07671245009775139,
+          "n_seeds": 5
+        },
+        "hits@10": {
+          "mean": 0.174,
+          "std": 0.06796469671822276,
+          "n_seeds": 5
+        },
+        "hits@3": {
+          "mean": 0.0948,
+          "std": 0.06896491861809162,
+          "n_seeds": 5
+        },
+        "mrr": {
+          "mean": 0.12366432977426797,
+          "std": 0.06758038727527416,
+          "n_seeds": 5
+        }
+      }
+    }
+  },
+  "significance_test": {
+    "note": "Significance tests are reported separately per run group because permutation distributions were not merged.",
+    "original": {
+      "observed_mean": 0.346852848245654,
+      "random_mean": 0.40861626457908995,
+      "random_std": 0.029527772196241274,
+      "p_value": 0.98,
+      "n_permutations": 500,
+      "n_chemical": 10,
+      "n_disease": 43
+    },
+    "extra": {
+      "observed_mean": 0.37451496188377226,
+      "random_mean": 0.4398764926039159,
+      "random_std": 0.03288719726970551,
+      "p_value": 0.978,
+      "n_permutations": 500,
+      "n_chemical": 10,
+      "n_disease": 43
+    }
+  }
+}
