@@ -253,7 +253,7 @@ def main():
     ax.text(0.50, -0.015,
             f"{total_nodes:,} nodes  |  {total_edges:,} edges  |  "
             f"{len(node_counts)} node types  |  {len(edge_types)} edge types  |  "
-            f"4 R-GCN layers required",
+            f"2 R-GCN layers (optimised)",
             fontsize=10, ha="center", va="top", color="#777")
 
     # ---- Legend ----
