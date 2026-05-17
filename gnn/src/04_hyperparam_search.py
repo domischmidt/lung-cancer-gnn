@@ -1,23 +1,3 @@
-"""
-04_hyperparam_search.py - Robust hyperparameter search for R-GCN via Optuna.
-
-Runs a GPU-safe Bayesian hyperparameter search for the R-GCN configuration.
-The search is designed for large heterogeneous KGs and avoids crashing the
-entire run when individual trials exceed GPU memory.
-
-Usage:
-    python gnn/src/04_hyperparam_search.py
-    python gnn/src/04_hyperparam_search.py --n_trials 30 --search_epochs 60
-
-Input:
-    gnn/data/processed/hetero_graph.pt
-
-Output:
-    gnn/data/processed/best_config.json
-    gnn/data/processed/hyperparam_search_results.json
-    gnn/data/interim/figs/hyperparam_*.png
-"""
-
 import argparse
 import gc
 import json
@@ -50,16 +30,9 @@ SEED = 42
 VAL_RATIO = 0.1
 TEST_RATIO = 0.1
 
-# Keep evaluation light enough for hyperparameter search.
 N_EVAL_SAMPLES = 300
 
-# Key relation for biological discovery.
 GDA_KEY = "GeneDiseaseAssociation__associated_with__Disease"
-
-
-# ============================================================================
-# Model
-# ============================================================================
 
 class RGCNWithFeatures(nn.Module):
     def __init__(
@@ -124,11 +97,6 @@ class RGCNWithFeatures(nn.Module):
 
     def decode(self, z, h_idx, r_idx, t_idx):
         return (z[h_idx] * self.rel_emb(r_idx) * z[t_idx]).sum(dim=-1)
-
-
-# ============================================================================
-# Utilities
-# ============================================================================
 
 def set_seed(seed):
     random.seed(seed)
@@ -280,11 +248,6 @@ def metrics_from_ranks(ranks):
         "n": int(len(r)),
     }
 
-
-# ============================================================================
-# Training and evaluation
-# ============================================================================
-
 def train_and_evaluate(
     config,
     triples,
@@ -425,11 +388,6 @@ def train_and_evaluate(
 
     return overall, gda
 
-
-# ============================================================================
-# Figures
-# ============================================================================
-
 def fig_optimization_history(study, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
 
@@ -534,11 +492,6 @@ def fig_param_importance(study, fig_dir):
 
     print("  -> figs/hyperparam_importance.png")
 
-
-# ============================================================================
-# Main
-# ============================================================================
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -633,7 +586,6 @@ def main():
 
     def objective(trial):
         config = {
-            # A6000-safe but still meaningful search space.
             "hidden_dim": trial.suggest_categorical("hidden_dim", [64, 128, 192]),
             "num_layers": trial.suggest_int("num_layers", 2, 4),
             "num_bases": trial.suggest_categorical("num_bases", [2, 4, 6]),

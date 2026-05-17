@@ -1,22 +1,3 @@
-"""
-08_full_evaluation.py - Multi-seed evaluation, ablation study, significance tests.
-
-1. Multi-seed: 5 seeds x 3 models (TransE, DotProduct, R-GCN)
-   - Type-aware negative sampling and evaluation (consistent with 03/04)
-   - Reports mean +/- std for overall and GDA->Disease metrics
-
-2. Ablation: R-GCN on Bio-only vs Env-only vs Combined graph
-   - Tests whether environmental data improves Gene-Disease predictions
-   - Key metric: GDA->Disease MRR
-
-3. Significance: Chemical-Disease embedding similarity vs random pairs
-   - Permutation test (1000 permutations)
-
-Usage:  python gnn/src/08_full_evaluation.py
-Output: gnn/data/processed/full_evaluation_results.json
-        gnn/data/interim/figs/eval_*.png
-"""
-
 import json
 import time
 import random
@@ -57,10 +38,8 @@ ABLATION_SEEDS = [42, 123, 456]
 N_EVAL_SAMPLES = 500
 N_PERMUTATIONS = 1000
 
-# The key relation for Gene-Disease evaluation (through GDA reification)
 GDA_KEY = "GeneDiseaseAssociation__associated_with__Disease"
 
-# Biological relations (for ablation split)
 BIO_RELATIONS = {
     "Gene__has_association__GeneDiseaseAssociation",
     "GeneDiseaseAssociation__associated_with__Disease",
@@ -78,11 +57,6 @@ BIO_RELATIONS = {
 }
 
 MODEL_COLORS = {"TransE": "#4c72b0", "DotProduct": "#55a868", "R-GCN": "#c44e52"}
-
-
-# =========================================================================
-# Models
-# =========================================================================
 
 class TransE(nn.Module):
     def __init__(self, n_entities, n_relations, dim):
@@ -155,11 +129,6 @@ class RGCNWithFeatures(nn.Module):
             x = F.relu(x)
             x = F.dropout(x, p=self.dropout, training=self.training)
         return x
-
-
-# =========================================================================
-# Utilities
-# =========================================================================
 
 def set_seed(seed):
     random.seed(seed)
@@ -252,11 +221,6 @@ def filter_triples_by_relations(triples, rel_to_id, keep_rels):
     mask = torch.tensor([triples[i, 1].item() in keep_ids for i in range(triples.size(0))])
     return triples[mask]
 
-
-# =========================================================================
-# Training
-# =========================================================================
-
 def train_shallow(model, train_triples, rel_ranges):
     optimizer = torch.optim.Adam(model.parameters(), lr=LR)
     model.to(DEVICE)
@@ -301,11 +265,6 @@ def train_rgcn(model, train_triples, all_triples, rel_ranges, n_entities):
             optimizer.step()
 
             z = model.encode(ei, et)
-
-
-# =========================================================================
-# Evaluation (type-aware)
-# =========================================================================
 
 @torch.no_grad()
 def evaluate_model(model, test_triples, filter_set, n_entities, edge_type_names,
@@ -365,11 +324,6 @@ def evaluate_model(model, test_triples, filter_set, n_entities, edge_type_names,
         if len(ranks) >= 3:
             results[rel] = metrics(ranks)
     return results
-
-
-# =========================================================================
-# Part 1: Multi-seed
-# =========================================================================
 
 def run_multi_seed(triples, n_entities, rel_to_id, edge_type_names,
                    rel_type_info, type_ranges, node_features, rel_ranges):
@@ -443,11 +397,6 @@ def aggregate_multi_seed(all_seed_results):
         aggregated[model_name] = model_agg
     return aggregated
 
-
-# =========================================================================
-# Part 2: Ablation
-# =========================================================================
-
 def run_ablation(triples, n_entities, rel_to_id, edge_type_names,
                  rel_type_info, type_ranges, node_features, rel_ranges):
     print("\n" + "=" * 70)
@@ -457,7 +406,6 @@ def run_ablation(triples, n_entities, rel_to_id, edge_type_names,
     bio_rels = {r for r in rel_to_id if r in BIO_RELATIONS}
     env_rels = {r for r in rel_to_id if r not in BIO_RELATIONS}
 
-    # Env-only keeps subtype_of bridge so env signals can reach Disease subtypes
     env_rels_with_bridge = env_rels | {"Disease__subtype_of__Disease"}
 
     configs = {
@@ -495,7 +443,6 @@ def run_ablation(triples, n_entities, rel_to_id, edge_type_names,
                                      NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
             train_rgcn(model, train_filtered, all_filtered, rel_ranges, n_entities)
 
-            # Always evaluate on GDA->Disease test triples
             if GDA_KEY in rel_to_id:
                 gda_test = filter_triples_by_relations(test, rel_to_id, {GDA_KEY})
                 if gda_test.size(0) > 0:
@@ -546,11 +493,6 @@ def aggregate_ablation(ablation_results):
                         for m, v in overall_metrics.items() if v},
         }
     return aggregated
-
-
-# =========================================================================
-# Part 3: Significance test
-# =========================================================================
 
 def run_significance_test(triples, n_entities, rel_to_id, edge_type_names,
                           node_offsets, node_id_maps, node_features,
@@ -628,11 +570,6 @@ def run_significance_test(triples, n_entities, rel_to_id, edge_type_names,
         "n_disease": len(disease_indices),
         "permutation_distribution": perm_means.tolist(),
     }
-
-
-# =========================================================================
-# Figures
-# =========================================================================
 
 def fig_multi_seed(aggregated, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
@@ -739,11 +676,6 @@ def fig_significance(sig_results, fig_dir):
     plt.close(fig)
     print(f"  -> figs/eval_significance_test.png")
 
-
-# =========================================================================
-# Main
-# =========================================================================
-
 def main():
     print("=" * 70)
     print("08_full_evaluation.py (type-aware, 4 layers)")
@@ -762,24 +694,20 @@ def main():
 
     rel_ranges = build_type_range_tensors(rel_type_info, type_ranges)
 
-    # Part 1
     multi_seed_results = run_multi_seed(
         triples, n_entities, rel_to_id, edge_type_names,
         rel_type_info, type_ranges, node_features, rel_ranges)
     multi_seed_agg = aggregate_multi_seed(multi_seed_results)
 
-    # Part 2
     ablation_results = run_ablation(
         triples, n_entities, rel_to_id, edge_type_names,
         rel_type_info, type_ranges, node_features, rel_ranges)
     ablation_agg = aggregate_ablation(ablation_results)
 
-    # Part 3
     sig_results = run_significance_test(
         triples, n_entities, rel_to_id, edge_type_names,
         node_offsets, node_id_maps, node_features, type_ranges, rel_type_info)
 
-    # Save
     print("\nSaving results ...")
     full_results = {
         "multi_seed": {
@@ -796,13 +724,11 @@ def main():
         json.dump(full_results, f, indent=2)
     print(f"  -> full_evaluation_results.json")
 
-    # Figures
     print("\nGenerating thesis figures ...")
     fig_multi_seed(multi_seed_agg, FIG_DIR)
     fig_ablation(ablation_agg, FIG_DIR)
     fig_significance(sig_results, FIG_DIR)
 
-    # Summary
     print("\n" + "=" * 70)
     print("SUMMARY")
     print("=" * 70)

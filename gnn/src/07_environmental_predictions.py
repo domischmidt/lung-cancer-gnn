@@ -1,17 +1,3 @@
-"""
-07_environmental_predictions.py - Environmental link predictions using trained R-GCN.
-
-Generates four types of environmental predictions from the trained model:
-  1. Region Risk Ranking: which regions are most strongly associated with lung cancer?
-  2. Chemical-Region Novel Predictions: predict unmeasured pollutant exposures
-  3. Chemical Importance: which chemicals are closest to disease in embedding space?
-  4. Temporal Trends: how do environmental-disease associations change over time?
-
-Usage:  python gnn/src/07_environmental_predictions.py
-Input:  gnn/data/processed/hetero_graph.pt, rgcn_weights.pt, node_id_maps.json, best_config.json
-Output: gnn/data/processed/env_predictions/ (CSVs + figures)
-"""
-
 import json
 import csv
 import time
@@ -28,10 +14,6 @@ import matplotlib.pyplot as plt
 
 from torch_geometric.nn import RGCNConv
 
-# =========================================================================
-# Paths and config
-# =========================================================================
-
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 PROCESSED_DIR = REPO_ROOT / "gnn" / "data" / "processed"
 OUTPUT_DIR = PROCESSED_DIR / "env_predictions"
@@ -40,7 +22,6 @@ FIG_DIR = OUTPUT_DIR / "figs"
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else
                        "cuda" if torch.cuda.is_available() else "cpu")
 
-# Load config
 with open(PROCESSED_DIR / "best_config.json") as f:
     cfg = json.load(f)
 HIDDEN_DIM = cfg.get("hidden_dim", 128)
@@ -50,11 +31,6 @@ DROPOUT = cfg.get("dropout", 0.15)
 
 print(f"[Config] layers={NUM_LAYERS}, bases={NUM_BASES}, hidden={HIDDEN_DIM}, dropout={DROPOUT}")
 print(f"[Device] {DEVICE}")
-
-
-# =========================================================================
-# Model (identical to 05_train_rgcn.py)
-# =========================================================================
 
 class RGCNWithFeatures(nn.Module):
     def __init__(self, n_nodes, n_relations, hidden_dim, num_layers, num_bases, dropout, node_features):
@@ -97,11 +73,6 @@ class RGCNWithFeatures(nn.Module):
 
     def decode(self, z, h_idx, r_idx, t_idx):
         return (z[h_idx] * self.rel_emb(r_idx) * z[t_idx]).sum(dim=-1)
-
-
-# =========================================================================
-# Graph loading (same as 05_train_rgcn.py)
-# =========================================================================
 
 def load_and_flatten():
     print("[1/6] Loading graph ...")
@@ -153,7 +124,6 @@ def load_and_flatten():
 def load_node_maps():
     with open(PROCESSED_DIR / "node_id_maps.json") as f:
         raw = json.load(f)
-    # Build idx -> label for each type
     label_maps = {}
     for ntype, entries in raw.items():
         idx_to_label = {}
@@ -171,11 +141,6 @@ def build_existing_triples(edge_index, edge_type):
     for i in range(src.size(0)):
         triples.add((src[i].item(), edge_type[i].item(), dst[i].item()))
     return triples
-
-
-# =========================================================================
-# Analysis 1: Region Risk Ranking
-# =========================================================================
 
 def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
                         label_maps, existing_triples, edge_index, edge_type):
@@ -199,12 +164,10 @@ def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
     n_diseases = disease_hi - disease_lo
     n_vs = vs_hi - vs_lo
 
-    # Build VitalStatistics -> Country mapping from existing edges
     vs_country_rel = "VitalStatistics__part_of__Country"
     vs_region_rel = "VitalStatistics__part_of__GeographicRegion"
     country_lo, country_hi = type_ranges["Country"]
 
-    # Parse edges to build VS -> Country/Region mappings
     vs_to_country = {}
     vs_to_region = {}
     src_arr = edge_index[0].numpy()
@@ -229,12 +192,10 @@ def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
             region_local = d - gr_lo
             vs_to_region[vs_local] = region_local
 
-    # Score all (Disease, detected_finding, VitalStats) triples that are NOT in training
     print(f"  Scoring {n_diseases} diseases x {n_vs} VitalStatistics nodes ...")
     print(f"  (only novel triples, filtering {len(existing_triples):,} known triples)")
 
-    # Process in batches to avoid OOM
-    country_scores = defaultdict(list)  # country_label -> [(disease_label, score)]
+    country_scores = defaultdict(list)  
     region_scores = defaultdict(list)
     all_novel = []
 
@@ -243,7 +204,6 @@ def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
         d_global = d_local + disease_lo
         d_label = label_maps["Disease"].get(d_local, f"disease_{d_local}")
 
-        # Score all VitalStats for this disease
         h_idx = torch.full((n_vs,), d_global, dtype=torch.long, device=DEVICE)
         r_idx = torch.full((n_vs,), rid, dtype=torch.long, device=DEVICE)
         t_idx = torch.arange(vs_lo, vs_hi, device=DEVICE)
@@ -254,21 +214,18 @@ def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
 
         for vs_local in range(n_vs):
             vs_global = vs_local + vs_lo
-            # Skip existing triples
             if (d_global, rid, vs_global) in existing_triples:
                 continue
 
             score = float(scores_np[vs_local])
             if score < 0.5:
-                continue  # only keep confident predictions
+                continue 
 
-            # Map to country
             if vs_local in vs_to_country:
                 c_local = vs_to_country[vs_local]
                 c_label = label_maps["Country"].get(c_local, f"country_{c_local}")
                 country_scores[c_label].append((d_label, score))
 
-            # Map to region
             if vs_local in vs_to_region:
                 r_local = vs_to_region[vs_local]
                 r_label = label_maps["GeographicRegion"].get(r_local, f"region_{r_local}")
@@ -281,7 +238,6 @@ def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
                 "country": label_maps["Country"].get(vs_to_country.get(vs_local, -1), "unknown"),
             })
 
-    # Aggregate by country: mean score and top disease
     country_risk = []
     for country, pairs in country_scores.items():
         scores_list = [s for _, s in pairs]
@@ -297,7 +253,6 @@ def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
         })
     country_risk.sort(key=lambda x: x["mean_score"], reverse=True)
 
-    # Save
     out_path = OUTPUT_DIR / "region_risk_ranking.csv"
     if country_risk:
         with open(out_path, "w", newline="") as f:
@@ -306,7 +261,6 @@ def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
             w.writerows(country_risk[:50])
         print(f"  -> {out_path.name} ({len(country_risk)} countries)")
 
-        # Print top 15
         print(f"\n  Top 15 countries by mean predicted lung cancer risk:")
         print(f"  {'Country':<25} {'Mean Score':>10} {'Max Score':>10} {'N Preds':>8} {'Top Subtype'}")
         for r in country_risk[:15]:
@@ -315,8 +269,6 @@ def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
     else:
         print("  No novel predictions with score > 0.5 found.")
         print("  Lowering threshold to 0.3 ...")
-        # Retry with lower threshold would go here, but let's output what we have
-        # Save all_novel sorted by score
         all_novel.sort(key=lambda x: x["score"], reverse=True)
         out_path = OUTPUT_DIR / "region_risk_all.csv"
         if all_novel:
@@ -327,11 +279,6 @@ def region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,
             print(f"  -> {out_path.name} ({len(all_novel)} novel predictions)")
 
     return country_risk
-
-
-# =========================================================================
-# Analysis 2: Chemical-Region Novel Predictions
-# =========================================================================
 
 def chemical_region_predictions(z, model, node_offsets, type_ranges, rel_to_id,
                                  label_maps, existing_triples, edge_index, edge_type):
@@ -359,7 +306,6 @@ def chemical_region_predictions(z, model, node_offsets, type_ranges, rel_to_id,
         n_cla = cla_hi - cla_lo
         n_reg = reg_hi - reg_lo
 
-        # Build CLA -> Chemical mapping
         chem_rel_key = "ChemicalLocationAssociation__refers_to__Chemical"
         chem_lo, chem_hi = type_ranges["Chemical"]
         cla_to_chem = {}
@@ -374,12 +320,8 @@ def chemical_region_predictions(z, model, node_offsets, type_ranges, rel_to_id,
                 chem_local = d - chem_lo
                 cla_to_chem[cla_local] = chem_local
 
-        # For each CLA, score all regions
-        # This is too large (131k x 3143), so instead:
-        # For each Chemical, find regions NOT connected to any CLA of that Chemical
         print(f"  Building Chemical -> Region coverage for {region_type} ...")
 
-        # Chemical -> set of connected regions
         chem_regions = defaultdict(set)
         if rel_key in rel_to_id:
             src_arr = edge_index[0].numpy()
@@ -393,16 +335,13 @@ def chemical_region_predictions(z, model, node_offsets, type_ranges, rel_to_id,
                     reg_local = d - reg_lo
                     chem_regions[chem_local].add(reg_local)
 
-        # For each chemical, score unconnected regions using embedding similarity
-        # Use Chemical and Region embeddings directly (cosine similarity)
         print(f"  Scoring Chemical-{region_type} novel pairs ...")
         chem_embeddings = z[chem_lo:chem_hi].detach()
         reg_embeddings = z[reg_lo:reg_hi].detach()
 
-        # Normalise for cosine similarity
         chem_norm = F.normalize(chem_embeddings, dim=1)
         reg_norm = F.normalize(reg_embeddings, dim=1)
-        sim_matrix = torch.mm(chem_norm, reg_norm.t()).cpu().numpy()  # (n_chem, n_reg)
+        sim_matrix = torch.mm(chem_norm, reg_norm.t()).cpu().numpy()  
 
         for chem_local in range(chem_hi - chem_lo):
             chem_label = label_maps["Chemical"].get(chem_local, f"chem_{chem_local}")
@@ -410,9 +349,9 @@ def chemical_region_predictions(z, model, node_offsets, type_ranges, rel_to_id,
 
             for reg_local in range(n_reg):
                 if reg_local in connected:
-                    continue  # skip existing connections
+                    continue  
                 sim = float(sim_matrix[chem_local, reg_local])
-                if sim > 0.3:  # only keep meaningful similarities
+                if sim > 0.3:  
                     reg_label = label_maps[region_type].get(reg_local, f"reg_{reg_local}")
                     results.append({
                         "chemical": chem_label,
@@ -431,7 +370,6 @@ def chemical_region_predictions(z, model, node_offsets, type_ranges, rel_to_id,
             w.writerows(results[:200])
         print(f"  -> {out_path.name} ({len(results)} novel Chemical-Region predictions)")
 
-        # Summary per chemical
         print(f"\n  Novel region predictions per chemical:")
         chem_counts = defaultdict(list)
         for r in results:
@@ -442,11 +380,6 @@ def chemical_region_predictions(z, model, node_offsets, type_ranges, rel_to_id,
         print("  No novel predictions above threshold.")
 
     return results
-
-
-# =========================================================================
-# Analysis 3: Chemical Importance for Disease
-# =========================================================================
 
 def chemical_importance(z, type_ranges, label_maps):
     """
@@ -467,13 +400,11 @@ def chemical_importance(z, type_ranges, label_maps):
     chem_norm = F.normalize(chem_emb, dim=1)
     disease_norm = F.normalize(disease_emb, dim=1)
 
-    # (n_chemicals, n_diseases) similarity matrix
     sim = torch.mm(chem_norm, disease_norm.t()).cpu().numpy()
 
     n_chem = chem_hi - chem_lo
     n_disease = disease_hi - disease_lo
 
-    # Per-chemical: mean similarity to all diseases, and top disease
     chem_importance = []
     for c in range(n_chem):
         c_label = label_maps["Chemical"].get(c, f"chem_{c}")
@@ -482,7 +413,6 @@ def chemical_importance(z, type_ranges, label_maps):
         top_disease_idx = int(np.argmax(sim[c]))
         top_disease = label_maps["Disease"].get(top_disease_idx, f"disease_{top_disease_idx}")
 
-        # Top 5 diseases for this chemical
         top5_idx = np.argsort(sim[c])[::-1][:5]
         top5 = [(label_maps["Disease"].get(int(i), f"d_{i}"), float(sim[c, i])) for i in top5_idx]
 
@@ -509,7 +439,6 @@ def chemical_importance(z, type_ranges, label_maps):
         print(f"  {r['chemical']:<30} {r['mean_disease_similarity']:>10.4f} "
               f"{r['max_disease_similarity']:>10.4f} {r['top_disease']}")
 
-    # Per-disease: which chemicals are most similar?
     disease_chem_ranking = []
     for d in range(n_disease):
         d_label = label_maps["Disease"].get(d, f"disease_{d}")
@@ -530,11 +459,9 @@ def chemical_importance(z, type_ranges, label_maps):
         w.writerows(disease_chem_ranking)
     print(f"  -> {out_path.name}")
 
-    # Figure: heatmap
     fig, ax = plt.subplots(figsize=(14, 6))
     chem_labels = [label_maps["Chemical"].get(i, f"c_{i}") for i in range(n_chem)]
     disease_labels = [label_maps["Disease"].get(i, f"d_{i}") for i in range(n_disease)]
-    # Shorten disease labels
     disease_short = [d[:30] for d in disease_labels]
 
     im = ax.imshow(sim, aspect="auto", cmap="YlOrRd")
@@ -551,11 +478,6 @@ def chemical_importance(z, type_ranges, label_maps):
 
     return chem_importance
 
-
-# =========================================================================
-# Analysis 4: Temporal Patterns
-# =========================================================================
-
 def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
                       label_maps, edge_index, edge_type):
     """
@@ -567,7 +489,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
     """
     print("\n[6/6] Temporal Analysis ...")
 
-    # Build VitalStats -> CalendarYear mapping
     vs_year_rel = "VitalStatistics__has_time_boundary__CalendarYear"
     if vs_year_rel not in rel_to_id:
         print("  SKIP: relation not found")
@@ -589,7 +510,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
         year_local = d - year_lo
         vs_to_year[vs_local] = year_local
 
-    # Also build VS -> Country mapping
     vs_country_rel = "VitalStatistics__part_of__Country"
     country_lo, country_hi = type_ranges["Country"]
     vs_to_country = {}
@@ -601,8 +521,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
             country_local = d - country_lo
             vs_to_country[vs_local] = country_local
 
-    # Score Disease-VitalStats for the parent disease (Malignant neoplasm of lung)
-    # Find the parent disease
     parent_disease_local = None
     for idx, label in label_maps["Disease"].items():
         if "malignant neoplasm of lung" in label.lower() or "neoplasm" in label.lower():
@@ -610,7 +528,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
             break
 
     if parent_disease_local is None:
-        # Use disease 0 as fallback
         parent_disease_local = 0
         print(f"  Warning: parent disease not found, using idx 0: {label_maps['Disease'].get(0, '?')}")
 
@@ -618,7 +535,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
     parent_label = label_maps["Disease"].get(parent_disease_local, "?")
     print(f"  Parent disease: {parent_label} (local idx {parent_disease_local})")
 
-    # Score all VitalStats for parent disease
     dis_vs_rel = "Disease__detected_finding__VitalStatistics"
     if dis_vs_rel not in rel_to_id:
         print("  SKIP: Disease-VitalStatistics relation not found")
@@ -634,7 +550,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
         scores = model.decode(z, h_idx, r_idx, t_idx)
     scores_np = torch.sigmoid(scores).cpu().numpy()
 
-    # Group by year
     year_scores = defaultdict(list)
     for vs_local in range(n_vs):
         if vs_local in vs_to_year:
@@ -642,7 +557,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
             year_label = label_maps["CalendarYear"].get(year_local, f"year_{year_local}")
             year_scores[year_label].append(float(scores_np[vs_local]))
 
-    # Aggregate
     year_trend = []
     for year, scores_list in sorted(year_scores.items()):
         year_trend.append({
@@ -665,10 +579,8 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
         for t in year_trend:
             print(f"  {t['year']:<8} {t['mean_score']:>10.4f} {t['max_score']:>10.4f} {t['n_vitalstats']:>12}")
 
-        # Figure: temporal trend
         years = [t["year"] for t in year_trend]
         means = [t["mean_score"] for t in year_trend]
-        # Filter to years with reasonable data (>= 1990)
         filtered = [(y, m) for y, m in zip(years, means) if int(y) >= 1990]
         if filtered:
             f_years, f_means = zip(*filtered)
@@ -679,14 +591,12 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
             ax.set_title("Temporal trend: predicted lung cancer association by year",
                          fontsize=12, fontweight="bold")
             ax.grid(True, alpha=0.3)
-            # Rotate x labels
             plt.xticks(rotation=45, ha="right")
             plt.tight_layout()
             fig.savefig(FIG_DIR / "temporal_trend.png", dpi=200, bbox_inches="tight")
             plt.close(fig)
             print(f"  -> figs/temporal_trend.png")
 
-    # Per-country temporal analysis for top 5 countries
     country_year_scores = defaultdict(lambda: defaultdict(list))
     for vs_local in range(n_vs):
         if vs_local in vs_to_year and vs_local in vs_to_country:
@@ -696,7 +606,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
             country_label = label_maps["Country"].get(country_local, "?")
             country_year_scores[country_label][year_label].append(float(scores_np[vs_local]))
 
-    # Find top 5 countries by mean score
     country_means = {}
     for country, year_data in country_year_scores.items():
         all_scores = [s for ss in year_data.values() for s in ss]
@@ -725,7 +634,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
             w.writerows(country_trends)
         print(f"  -> {out_path.name}")
 
-        # Figure: multi-country temporal trend
         fig, ax = plt.subplots(figsize=(12, 6))
         colors = ["#c44e52", "#4c72b0", "#55a868", "#8172b2", "#ccb974"]
         for i, (country, _) in enumerate(top5_countries):
@@ -750,11 +658,6 @@ def temporal_analysis(z, model, node_offsets, type_ranges, rel_to_id,
 
     return year_trend
 
-
-# =========================================================================
-# Main
-# =========================================================================
-
 def main():
     print("=" * 70)
     print("07_environmental_predictions.py")
@@ -764,14 +667,12 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     FIG_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Load graph
     (edge_index, edge_type, n_entities, n_relations,
      rel_to_id, edge_type_names, rel_type_info, type_ranges,
      node_offsets, node_features) = load_and_flatten()
 
     label_maps, raw_maps = load_node_maps()
 
-    # Load model
     print("\n[2/6] Loading trained R-GCN weights ...")
     model = RGCNWithFeatures(n_entities, n_relations, HIDDEN_DIM, NUM_LAYERS,
                               NUM_BASES, DROPOUT, node_features)
@@ -781,17 +682,14 @@ def main():
     model.eval()
     print(f"  Model loaded: {sum(p.numel() for p in model.parameters()):,} parameters")
 
-    # Encode full graph
     print("  Encoding graph ...")
     with torch.no_grad():
         z = model.encode(edge_index.to(DEVICE), edge_type.to(DEVICE))
     print(f"  Embeddings: {z.shape}")
 
-    # Build existing triples for filtering
     existing = build_existing_triples(edge_index, edge_type)
     print(f"  Known triples: {len(existing):,}")
 
-    # Run analyses
     t0 = time.time()
 
     region_risk = region_risk_ranking(z, model, node_offsets, type_ranges, rel_to_id,

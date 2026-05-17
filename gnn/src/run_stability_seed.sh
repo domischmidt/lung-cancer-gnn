@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 set -euo pipefail
 
 SEED="${1:?Usage: bash gnn/src/run_stability_seed.sh <seed>}"
@@ -13,7 +12,6 @@ echo "Stability run for seed ${SEED}"
 echo "Output: ${OUT_DIR}"
 echo "======================================================================"
 
-# Patch SEED in 05_train_rgcn.py for this run
 python - <<PY
 from pathlib import Path
 import re
@@ -31,7 +29,6 @@ python gnn/src/07_predict_novel_links.py 2>&1 | tee "${OUT_DIR}/07_predict_novel
 
 python gnn/src/10_normalize_scores.py 2>&1 | tee "${OUT_DIR}/10_normalize_scores_seed_${SEED}.log"
 
-# Copy final outputs into seed folder
 cp gnn/data/processed/rgcn_weights.pt "${OUT_DIR}/rgcn_weights.pt"
 cp gnn/data/processed/rgcn_results.json "${OUT_DIR}/rgcn_results.json"
 

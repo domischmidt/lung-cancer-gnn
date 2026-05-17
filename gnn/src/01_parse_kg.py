@@ -1,10 +1,3 @@
-"""
-01_parse_kg.py - Parse Lung-CABO KG into unified node/edge lists with schema visualizations.
-
-Usage:  python gnn/src/01_parse_kg.py
-Output: gnn/data/interim/{nodes.csv, edges.csv, schema_summary.json, figs/*.png}
-"""
-
 import json
 import csv
 import time

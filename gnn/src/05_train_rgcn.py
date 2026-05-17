@@ -1,25 +1,3 @@
-"""
-05_train_rgcn.py - R-GCN with node features on the full Lung-CABO KG.
-
-Architecture changes vs previous version:
-  - 4 R-GCN layers (was 2) to cover Chemical->CLA->Region->VitalStats->Disease
-  - 6 basis matrices (was 4) to handle ~25 relation types
-  - Type-aware negative sampling (consistent with 03_train_baselines.py)
-  - Multi-batch decode per epoch: encode() once, then iterate all training batches
-  - Type-aware evaluation: rank only against entities of the correct tail type
-
-Node features:
-  CLA (1d: concentration), VitalStats (2d: incidence+mortality),
-  GDA (1d: score), VDA (2d: DSI+DPI), People (2d: age+gender),
-  Variant (3d: chrom+cons+pos), ChromoRearr (1d: type),
-  Region (1d: population), CalendarYear (1d: year)
-
-Usage:  python gnn/src/05_train_rgcn.py
-Input:  gnn/data/processed/hetero_graph.pt
-Output: gnn/data/processed/rgcn_results.json, rgcn_weights.pt
-        gnn/data/interim/figs/rgcn_*.png
-"""
-
 import json
 import time
 import random
@@ -43,7 +21,6 @@ FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 SEED = 42
 
-# Default hyperparameters (overridden by best_config.json if available)
 HIDDEN_DIM = 128
 NUM_LAYERS = 4
 NUM_BASES = 6
@@ -80,11 +57,6 @@ def set_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
-
-
-# =========================================================================
-# Graph loading and flattening
-# =========================================================================
 
 def load_and_flatten():
     data = torch.load(PROCESSED_DIR / "hetero_graph.pt", weights_only=False)
@@ -134,11 +106,6 @@ def load_and_flatten():
     return (edge_index, edge_type, total_nodes, n_relations,
             rel_to_id, edge_type_names, rel_type_info, type_ranges,
             node_offsets, node_features)
-
-
-# =========================================================================
-# Data handling
-# =========================================================================
 
 def build_triples(edge_index, edge_type):
     return torch.stack([edge_index[0], edge_type, edge_index[1]], dim=1)
@@ -192,11 +159,6 @@ def generate_negatives_type_aware(batch, rel_ranges):
     neg[~mask, 2] = rand_tails[~mask]
     return neg
 
-
-# =========================================================================
-# Model
-# =========================================================================
-
 class RGCNWithFeatures(nn.Module):
     def __init__(self, n_nodes, n_relations, hidden_dim, num_layers, num_bases, dropout, node_features):
         super().__init__()
@@ -239,11 +201,6 @@ class RGCNWithFeatures(nn.Module):
     def decode(self, z, h_idx, r_idx, t_idx):
         return (z[h_idx] * self.rel_emb(r_idx) * z[t_idx]).sum(dim=-1)
 
-
-# =========================================================================
-# Training (encode once per epoch, decode all batches)
-# =========================================================================
-
 def train_model(model, optimizer, train_triples, edge_index, edge_type, rel_ranges, n_entities, epochs):
     ei_dev = edge_index.to(DEVICE)
     et_dev = edge_type.to(DEVICE)
@@ -252,7 +209,6 @@ def train_model(model, optimizer, train_triples, edge_index, edge_type, rel_rang
     for epoch in range(1, epochs + 1):
         model.train()
 
-        # Encode full graph once per epoch
         z = model.encode(ei_dev, et_dev)
 
         perm = torch.randperm(train_triples.size(0))
@@ -278,7 +234,6 @@ def train_model(model, optimizer, train_triples, edge_index, edge_type, rel_rang
             epoch_loss += loss.item()
             n_batches += 1
 
-            # Re-encode after weight update (embeddings changed)
             z = model.encode(ei_dev, et_dev)
 
         avg_loss = epoch_loss / max(n_batches, 1)
@@ -287,11 +242,6 @@ def train_model(model, optimizer, train_triples, edge_index, edge_type, rel_rang
             print(f"    Epoch {epoch:>3d}/{epochs}  loss={avg_loss:.4f}  ({n_batches} batches)")
 
     return losses
-
-
-# =========================================================================
-# Evaluation (type-aware)
-# =========================================================================
 
 RELATION_DISPLAY = {
     "Gene__has_association__GeneDiseaseAssociation": "Gene - GDA",
@@ -337,7 +287,6 @@ def evaluate(model, test_triples, edge_index, edge_type, filter_set,
     for i in range(test_triples.size(0)):
         h, r, t = test_triples[i].tolist()
 
-        # Type-aware: only rank against valid tail entities
         dst_type = rel_type_info[r][1]
         dst_lo, dst_hi = type_ranges[dst_type]
         n_candidates = dst_hi - dst_lo
@@ -347,7 +296,6 @@ def evaluate(model, test_triples, edge_index, edge_type, filter_set,
         r_rep = torch.full((n_candidates,), r, dtype=torch.long, device=DEVICE)
         scores = model.decode(z, h_rep, r_rep, all_ents)
 
-        # Filtered ranking
         for j, eid in enumerate(range(dst_lo, dst_hi)):
             if eid != t and (h, r, eid) in filter_set:
                 scores[j] = -1e9
@@ -373,11 +321,6 @@ def evaluate(model, test_triples, edge_index, edge_type, filter_set,
         if len(ranks) >= 3:
             results[rel] = metrics(ranks)
     return results
-
-
-# =========================================================================
-# Figures
-# =========================================================================
 
 def fig_training_curve(losses, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
@@ -429,7 +372,6 @@ def fig_comparison(rgcn_results, fig_dir):
     plt.close(fig)
     print(f"  -> figs/rgcn_vs_baselines.png")
 
-    # GDA-specific comparison (Gene -> GDA -> Disease path)
     gda_rel = "GeneDiseaseAssociation__associated_with__Disease"
     if all(gda_rel in all_results[m] for m in models):
         fig, ax = plt.subplots(figsize=(10, 5))
@@ -451,11 +393,6 @@ def fig_comparison(rgcn_results, fig_dir):
         fig.savefig(fig_dir / "rgcn_gda_comparison.png", dpi=200, bbox_inches="tight")
         plt.close(fig)
         print(f"  -> figs/rgcn_gda_comparison.png")
-
-
-# =========================================================================
-# Main
-# =========================================================================
 
 def main():
     print("=" * 70)

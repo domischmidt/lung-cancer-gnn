@@ -1,20 +1,3 @@
-"""
-09_normalize_scores.py - Validate novel predictions against score distributions.
-
-For each novel prediction, compares its R-GCN score against:
-  1. The distribution of scores of KNOWN TRUE triples of the same relation type
-  2. The distribution of scores of RANDOM FALSE triples (type-aware) of the same relation
-
-The position of a novel prediction within these distributions determines its
-confidence label (very strong / strong / moderate / weak).
-
-Usage:  python gnn/src/09_normalize_scores.py
-Input:  gnn/data/processed/{hetero_graph.pt, rgcn_weights.pt, novel_predictions_all.json}
-Output: gnn/data/processed/novel_predictions_validated.json
-        gnn/data/processed/score_distributions.json
-        gnn/data/interim/figs/score_validation.png
-"""
-
 import json
 import torch
 import torch.nn as nn
@@ -35,7 +18,6 @@ FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 SEED = 42
 
-# Default architecture; overridden by best_config.json if available
 HIDDEN_DIM = 128
 NUM_LAYERS = 4
 NUM_BASES = 6
@@ -53,7 +35,6 @@ if _config_path.exists():
           f"hidden={HIDDEN_DIM}, layers={NUM_LAYERS}, bases={NUM_BASES}, dropout={DROPOUT}")
 N_RANDOM_FALSE = 1000
 
-# Key relations to show in the validation figure
 KEY_RELS_FOR_FIGURE = [
     "GeneDiseaseAssociation__associated_with__Disease",
     "VariantDiseaseAssociation__variant_of__Disease",
@@ -125,7 +106,6 @@ def main():
     np.random.seed(SEED)
     torch.manual_seed(SEED)
 
-    # === Load graph and model ===
     print("\n[1/6] Loading graph and model ...")
     data = torch.load(PROCESSED_DIR / "hetero_graph.pt", weights_only=False)
 
@@ -177,13 +157,11 @@ def main():
     model.eval()
     print("  Model loaded")
 
-    # === Compute embeddings ===
     print("\n[2/6] Computing embeddings ...")
     with torch.no_grad():
         z = model.encode(edge_index.to(DEVICE), edge_type.to(DEVICE))
     print(f"  Embeddings shape: {z.shape}")
 
-    # === Score known true triples per relation ===
     print("\n[3/6] Scoring known TRUE triples per relation ...")
     known_scores_per_rel = {}
     with torch.no_grad():
@@ -200,7 +178,6 @@ def main():
             print(f"  {display}: {len(scores):,} TRUE, "
                   f"median={np.median(scores):.3f}, max={scores.max():.3f}")
 
-    # === Score random FALSE triples per relation (type-aware) ===
     print(f"\n[4/6] Scoring {N_RANDOM_FALSE} random FALSE triples per relation (type-aware) ...")
     random_scores_per_rel = {}
     with torch.no_grad():
@@ -234,7 +211,6 @@ def main():
             print(f"  {display}: {len(scores)} FALSE, "
                   f"median={np.median(scores):.3f}, max={scores.max():.3f}")
 
-    # === Compute distribution stats per relation ===
     print("\n[5/6] Computing distribution statistics ...")
     dist_stats = {}
     for rel in known_scores_per_rel:
@@ -268,7 +244,6 @@ def main():
                 "std": float(false_arr.std()),
             }
 
-            # Compute AUROC: P(random TRUE > random FALSE)
             t_sample = true_arr if len(true_arr) <= 1000 else np.random.choice(true_arr, 1000, replace=False)
             f_sample = false_arr if len(false_arr) <= 1000 else np.random.choice(false_arr, 1000, replace=False)
             n_better = sum((ts > f_sample).sum() for ts in t_sample)
@@ -291,7 +266,6 @@ def main():
         json.dump(dist_stats, f, indent=2)
     print(f"  -> score_distributions.json")
 
-    # === Validate novel predictions ===
     print("\n[6/6] Validating novel predictions ...")
     novel_path = PROCESSED_DIR / "novel_predictions_all.json"
     if not novel_path.exists():
@@ -319,7 +293,6 @@ def main():
             for pred in preds:
                 score = pred.get("confidence", pred.get("score", 0))
 
-                # Where does this score sit in the distributions?
                 pct_true = float((true_arr < score).sum() / len(true_arr) * 100)
                 pct_false = float((false_arr < score).sum() / len(false_arr) * 100)
 
@@ -344,7 +317,6 @@ def main():
             json.dump(validated, f, indent=2)
         print(f"  -> novel_predictions_validated.json")
 
-    # === Generate validation figure ===
     print("\n  Generating validation figure ...")
     FIG_DIR.mkdir(parents=True, exist_ok=True)
     available = [r for r in KEY_RELS_FOR_FIGURE
@@ -398,7 +370,6 @@ def main():
     else:
         print("  [SKIP] No key relations with both true and false scores")
 
-    # === Summary ===
     print("\n" + "=" * 70)
     print("SUMMARY: True vs false score separation per relation")
     print("=" * 70)

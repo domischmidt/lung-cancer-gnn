@@ -1,15 +1,3 @@
-"""
-05_evaluate.py - Final evaluation summary and thesis-ready figures.
-
-Loads results from baselines and R-GCN, produces comparison tables,
-statistical summaries, and publication-quality figures.
-
-Usage:  python gnn/src/05_evaluate.py
-Input:  gnn/data/processed/{baseline_results.json, rgcn_results.json}
-Output: gnn/data/interim/figs/final_*.png
-        gnn/data/processed/final_results_table.csv
-"""
-
 import json
 import csv
 from pathlib import Path
@@ -28,13 +16,11 @@ MODEL_COLORS = {"TransE": "#4c72b0", "DotProduct": "#55a868", "R-GCN": "#c44e52"
 METRICS = ["mrr", "hits@1", "hits@3", "hits@10"]
 
 RELATION_DISPLAY = {
-    # Biological reifications
     "Gene__has_association__GeneDiseaseAssociation": "Gene - GDA",
     "GeneDiseaseAssociation__associated_with__Disease": "GDA - Disease",
     "Variant__has_variant_association__VariantDiseaseAssociation": "Variant - VDA",
     "VariantDiseaseAssociation__variant_of__Disease": "VDA - Disease",
     "VariantDiseaseAssociation__located_in_gene__Gene": "VDA - Gene",
-    # Biological direct
     "Gene__in_pathway__Pathway": "Gene - Pathway",
     "Variant__located_in_gene__Gene": "Variant - Gene",
     "Disease__has_fusion__GeneFusion": "Disease - GeneFusion",
@@ -42,9 +28,7 @@ RELATION_DISPLAY = {
     "GeneProduct__part_of_pathway__Pathway": "GeneProduct - Pathway",
     "Biomarker__marker_for__Disease": "Biomarker - Disease",
     "Pathway__linked_to__Disease": "Pathway - Disease",
-    # Bridge
     "Disease__subtype_of__Disease": "Disease subtype_of",
-    # Environmental reifications
     "ChemicalLocationAssociation__refers_to__Chemical": "CLA - Chemical",
     "ChemicalLocationAssociation__refers_to__GeoPoliticalRegion": "CLA - City",
     "ChemicalLocationAssociation__refers_to__GeographicRegion": "CLA - Region",
@@ -54,12 +38,10 @@ RELATION_DISPLAY = {
     "VitalStatistics__part_of__Country": "VitalStats - Country",
     "VitalStatistics__has_time_boundary__CalendarYear": "VitalStats - Year",
     "VitalStatistics__has_output__People": "VitalStats - People",
-    # Environmental direct
     "GeoPoliticalRegion__part_of__Country": "City - Country",
     "GeographicRegion__part_of__Country": "Region - Country",
 }
 
-# Relations that belong to the biological side (for bio vs env comparison)
 BIO_RELS = {
     "Gene__has_association__GeneDiseaseAssociation",
     "GeneDiseaseAssociation__associated_with__Disease",
@@ -76,7 +58,6 @@ BIO_RELS = {
     "Disease__subtype_of__Disease",
 }
 
-# The key relation for Gene-Disease evaluation (through GDA reification)
 GDA_KEY = "GeneDiseaseAssociation__associated_with__Disease"
 
 
@@ -109,7 +90,6 @@ def print_summary(all_results):
         o = all_results[m]["overall"]
         print(f"{m:<12s} {o['mrr']:>8.4f} {o['hits@1']:>8.4f} {o['hits@3']:>8.4f} {o['hits@10']:>8.4f}")
 
-    # GDA-specific
     print(f"\nGDA -> DISEASE (key relation)")
     print(f"{'Model':<12s} {'MRR':>8s} {'H@1':>8s} {'H@3':>8s} {'H@10':>8s} {'n':>6s}")
     print("-" * 54)
@@ -119,7 +99,6 @@ def print_summary(all_results):
             n = o.get("n_triples", o.get("n", "?"))
             print(f"{m:<12s} {o['mrr']:>8.4f} {o['hits@1']:>8.4f} {o['hits@3']:>8.4f} {o['hits@10']:>8.4f} {n:>6}")
 
-    # Per-relation MRR
     all_rels = set()
     for m in models:
         all_rels.update(k for k in all_results[m] if k != "overall")
@@ -210,7 +189,6 @@ def fig_gda_focus(all_results, fig_dir):
 
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
-    # MRR bar chart
     vals_mrr = [all_results[m][GDA_KEY]["mrr"] for m in models]
     colors = [MODEL_COLORS.get(m, "#888") for m in models]
     bars = axes[0].bar(models, vals_mrr, color=colors, alpha=0.88, edgecolor="white", linewidth=0.5)
@@ -224,7 +202,6 @@ def fig_gda_focus(all_results, fig_dir):
     axes[0].spines["top"].set_visible(False)
     axes[0].spines["right"].set_visible(False)
 
-    # All metrics grouped
     x = np.arange(len(METRICS))
     width = 0.22
     for i, m in enumerate(models):
@@ -342,7 +319,6 @@ def fig_radar(all_results, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
     models = list(all_results.keys())
 
-    # Key relations we want to compare across models
     key_rels = [
         "GeneDiseaseAssociation__associated_with__Disease",
         "Gene__in_pathway__Pathway",

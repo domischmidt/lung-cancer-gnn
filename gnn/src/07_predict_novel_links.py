@@ -1,30 +1,3 @@
-"""
-06_predict_novel_links.py - Predict novel links for DISCOVERY edge types.
-
-Only predicts on relations where novel discoveries are meaningful:
-  - GDA -> Disease (Gene-Disease associations, mapped back to Gene-Disease pairs)
-  - CLA -> GeoPoliticalRegion / GeographicRegion (new exposure measurements)
-  - VitalStats -> GeographicRegion / Country (new cancer stats)
-  - Disease -> GeneFusion / ChromoRearr (new structural variants)
-  - VDA -> Disease (Variant-Disease associations)
-  - Gene -> in_pathway -> Pathway (new pathway memberships)
-
-Excludes definitional/structural relations (subtype_of, part_of Country,
-has_time_boundary, etc.) that cannot produce meaningful discoveries.
-
-Applies:
-  - Type-aware scoring (only correct tail types)
-  - Sigmoid normalization (scores are probabilities, not raw logits)
-  - Tail diversity filter (max N predictions per unique tail entity)
-  - Gene-Disease mapping (GDA predictions resolved to Gene-Disease pairs)
-
-Usage:  python gnn/src/06_predict_novel_links.py
-Input:  gnn/data/processed/{hetero_graph.pt, rgcn_weights.pt, node_id_maps.json}
-Output: gnn/data/processed/novel_predictions_all.json
-        gnn/data/processed/novel_*.csv
-        gnn/data/interim/figs/novel_*.png
-"""
-
 import json
 import csv
 import time
@@ -47,7 +20,6 @@ FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 
 DEVICE = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
 
-# Default architecture; overridden by best_config.json if available
 HIDDEN_DIM = 128
 NUM_LAYERS = 4
 NUM_BASES = 6
@@ -64,13 +36,9 @@ if _config_path.exists():
     print(f"[Config] Loaded R-GCN architecture from best_config.json: "
           f"hidden={HIDDEN_DIM}, layers={NUM_LAYERS}, bases={NUM_BASES}, dropout={DROPOUT}")
 TOP_K = 50
-MAX_PER_TAIL = 3       # diversity: max predictions per unique tail entity
+MAX_PER_TAIL = 3      
 MAX_CANDIDATES = 500_000
 
-# Relations where novel predictions are meaningful
-# Keep only biomedical discovery-oriented relations.
-# Exclude administrative / measurement-completion relations such as
-# CLA -> Region/Country and VitalStats -> Region/Country.
 DISCOVERY_RELATIONS = {
     "GeneDiseaseAssociation__associated_with__Disease",
     "VariantDiseaseAssociation__variant_of__Disease",
@@ -133,11 +101,6 @@ class RGCNWithFeatures(nn.Module):
     def decode(self, z, h_idx, r_idx, t_idx):
         return (z[h_idx] * self.rel_emb(r_idx) * z[t_idx]).sum(dim=-1)
 
-
-# =========================================================================
-# Graph and model loading
-# =========================================================================
-
 def load_graph_and_model():
     data = torch.load(PROCESSED_DIR / "hetero_graph.pt", weights_only=False)
 
@@ -177,12 +140,10 @@ def load_graph_and_model():
     edge_index = torch.stack([torch.cat(all_src), torch.cat(all_dst)])
     edge_type = torch.cat(all_rel)
 
-    # Known triples for filtering
     known_triples = set()
     for i in range(edge_index.size(1)):
         known_triples.add((edge_index[0, i].item(), edge_type[i].item(), edge_index[1, i].item()))
 
-    # Load model
     model = RGCNWithFeatures(total_nodes, len(rel_to_id), HIDDEN_DIM, NUM_LAYERS, NUM_BASES, DROPOUT, node_features)
     model.load_state_dict(torch.load(PROCESSED_DIR / "rgcn_weights.pt", map_location=DEVICE, weights_only=True))
     model.to(DEVICE)
@@ -197,11 +158,6 @@ def load_graph_and_model():
     return (model, edge_index, edge_type, total_nodes, rel_to_id,
             edge_type_names, edge_type_meta, node_offsets, node_counts,
             type_ranges, known_triples, node_id_maps)
-
-
-# =========================================================================
-# Label and context helpers
-# =========================================================================
 
 def build_label_maps(node_id_maps, node_offsets):
     """Build global_idx -> label map."""
@@ -240,11 +196,6 @@ def build_gda_to_gene_map(edge_index, edge_type, rel_to_id, edge_type_names, idx
 
     return gda_to_gene
 
-
-# =========================================================================
-# Novel link prediction
-# =========================================================================
-
 @torch.no_grad()
 def predict_novel_links_for_relation(model, z, rel_id, src_type, dst_type,
                                       node_offsets, node_counts, type_ranges,
@@ -269,7 +220,6 @@ def predict_novel_links_for_relation(model, z, rel_id, src_type, dst_type,
         src_global = src_local + src_offset
         h_tensor = torch.full((dst_count,), src_global, dtype=torch.long, device=DEVICE)
         scores = model.decode(z, h_tensor, r_tensor, t_tensor)
-        # Sigmoid normalization
         probs = torch.sigmoid(scores)
 
         for j in range(dst_count):
@@ -280,7 +230,6 @@ def predict_novel_links_for_relation(model, z, rel_id, src_type, dst_type,
 
     all_predictions.sort(key=lambda x: -x[2])
 
-    # Apply tail diversity filter: max MAX_PER_TAIL predictions per unique tail
     tail_counts = defaultdict(int)
     filtered = []
     for src_local, dst_global, prob in all_predictions:
@@ -312,7 +261,6 @@ def format_predictions(predictions, src_type, dst_type, idx_to_label,
             "confidence": round(prob, 4),
         }
 
-        # For GDA -> Disease: resolve back to Gene
         if gda_to_gene is not None and src_global in gda_to_gene:
             gene_info = gda_to_gene[src_global]
             entry["gene_label"] = gene_info["gene_label"]
@@ -340,11 +288,6 @@ def write_predictions_csv(predictions, path, src_type, dst_type, has_gene=False)
             for i, p in enumerate(predictions, 1):
                 w.writerow([i, p["src_label"], p["src_uri"],
                             p["dst_label"], p["dst_uri"], p["confidence"]])
-
-
-# =========================================================================
-# Figures
-# =========================================================================
 
 def fig_summary(all_novel, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
@@ -400,7 +343,6 @@ def fig_gene_disease_predictions(predictions, fig_dir):
 def fig_top_per_type(all_formatted, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
 
-    # Select relations with actual predictions
     available = [k for k, v in all_formatted.items() if v and v[0]["confidence"] > 0.1]
     available.sort(key=lambda k: -all_formatted[k][0]["confidence"])
     available = available[:6]
@@ -437,11 +379,6 @@ def fig_top_per_type(all_formatted, fig_dir):
     plt.close(fig)
     print(f"  -> figs/novel_top10_per_type.png")
 
-
-# =========================================================================
-# Main
-# =========================================================================
-
 def main():
     print("=" * 70)
     print("06_predict_novel_links.py (discovery relations only)")
@@ -462,7 +399,6 @@ def main():
         z = model.encode(edge_index.to(DEVICE), edge_type.to(DEVICE))
     print(f"  Embeddings shape: {z.shape}")
 
-    # Filter to discovery relations only
     discovery_rels = [r for r in edge_type_names if r in DISCOVERY_RELATIONS]
     skipped_rels = [r for r in edge_type_names if r not in DISCOVERY_RELATIONS]
 
@@ -486,7 +422,6 @@ def main():
 
         print(f"\n  {display}")
 
-        # Use GDA->Gene mapping for Gene-Disease predictions
         is_gda = rel_key == "GeneDiseaseAssociation__associated_with__Disease"
 
         t0 = time.time()
@@ -536,7 +471,6 @@ def main():
     fig_summary(all_novel, FIG_DIR)
     fig_top_per_type(all_formatted, FIG_DIR)
 
-    # Dedicated Gene-Disease figure (resolved from GDA)
     gda_key = "GeneDiseaseAssociation__associated_with__Disease"
     if gda_key in all_formatted:
         fig_gene_disease_predictions(all_formatted[gda_key], FIG_DIR)

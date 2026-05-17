@@ -1,22 +1,3 @@
-"""
-07_chemical_disease_analysis.py - Cross-domain chemical-disease analysis.
-
-Analyzes the relationship between air pollutant exposure and lung cancer
-using R-GCN learned embeddings and geographic co-occurrence patterns.
-
-Three analyses:
-  1. Embedding proximity: cosine similarity between Chemical and Disease
-     embeddings in the R-GCN latent space
-  2. Geographic correlation: per-country pollutant exposure vs cancer mortality
-  3. Region risk profiling: which countries have high exposure AND high mortality
-
-Usage:  python gnn/src/07_chemical_disease_analysis.py
-Input:  gnn/data/processed/{hetero_graph.pt, rgcn_weights.pt, node_id_maps.json}
-        env_data/data/processed/{eea_final.csv, ecis_final.csv, oecd_exposure_final.csv}
-Output: gnn/data/processed/chemical_disease_analysis.json
-        gnn/data/interim/figs/crossdomain_*.png
-"""
-
 import json
 import csv
 import time
@@ -139,11 +120,6 @@ def load_model_and_embeddings():
 
     return z, node_offsets, node_id_maps, data
 
-
-# =========================================================================
-# Analysis 1: Embedding proximity
-# =========================================================================
-
 def analysis_embedding_proximity(z, node_offsets, node_id_maps):
     print("\n  Computing Chemical-Disease cosine similarities ...")
 
@@ -174,11 +150,6 @@ def analysis_embedding_proximity(z, node_offsets, node_id_maps):
 
     results.sort(key=lambda x: -x["cosine_similarity"])
     return results
-
-
-# =========================================================================
-# Analysis 2: Geographic correlation
-# =========================================================================
 
 def load_exposure_data():
     exposure = defaultdict(lambda: defaultdict(list))
@@ -269,11 +240,6 @@ def analysis_geographic_correlation(exposure_data, mortality_data):
 
     return correlations
 
-
-# =========================================================================
-# Analysis 3: Risk region profiling
-# =========================================================================
-
 def analysis_risk_regions(exposure_data, mortality_data):
     print("\n  Identifying high-risk regions ...")
 
@@ -321,11 +287,6 @@ def analysis_risk_regions(exposure_data, mortality_data):
 
     regions.sort(key=lambda x: -(x["pm25_exposure"] + x["mortality_rate"]))
     return regions
-
-
-# =========================================================================
-# Figures
-# =========================================================================
 
 def fig_embedding_similarity(similarities, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
@@ -497,11 +458,6 @@ def fig_risk_quadrant(risk_regions, fig_dir):
     fig.savefig(fig_dir / "crossdomain_risk_quadrant.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
     print(f"  -> figs/crossdomain_risk_quadrant.png")
-
-
-# =========================================================================
-# Main
-# =========================================================================
 
 def main():
     print("=" * 70)

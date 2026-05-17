@@ -1,20 +1,3 @@
-"""
-03_train_baselines.py - TransE and DotProduct link prediction baselines.
-
-Trains on the full heterogeneous graph (flattened to homogeneous), evaluates
-per edge type. Uses type-aware negative sampling: corrupted entities are
-always sampled from the correct node type for the relation, so the model
-is never rewarded for trivially rejecting type mismatches.
-
-Uses filtered ranking protocol with MRR, Hits@1, Hits@3, Hits@10.
-
-Usage:  python gnn/src/03_train_baselines.py
-Input:  gnn/data/processed/hetero_graph.pt
-Output: gnn/data/processed/baseline_results.json
-        gnn/data/processed/baseline_type_ranges.json
-        gnn/data/interim/figs/baseline_*.png
-"""
-
 import json
 import time
 import random
@@ -52,17 +35,11 @@ def set_seed(seed):
     np.random.seed(seed)
     torch.manual_seed(seed)
 
-
-# =========================================================================
-# Graph loading
-# =========================================================================
-
 def load_graph():
     data = torch.load(PROCESSED_DIR / "hetero_graph.pt", weights_only=False)
 
-    # Build node type ranges (global offset, count)
     node_offsets = {}
-    type_ranges = {}  # node_type -> (start, end) in global index space
+    type_ranges = {}  
     offset = 0
     for nt in data.node_types:
         n = data[nt].num_nodes
@@ -71,11 +48,10 @@ def load_graph():
         offset += n
     total_nodes = offset
 
-    # Build relation metadata and flatten triples
     all_triples = []
     rel_to_id = {}
     edge_type_names = []
-    rel_type_info = {}  # rel_id -> (src_type, dst_type)
+    rel_type_info = {}  
 
     for et in data.edge_types:
         src_type, rel, dst_type = et
@@ -102,7 +78,6 @@ def load_graph():
         print(f"  {nt}: [{lo:,} - {hi:,}) = {hi-lo:,} nodes")
     print(f"Device: {DEVICE}")
 
-    # Save type ranges for use by other scripts
     type_ranges_serializable = {nt: [lo, hi] for nt, (lo, hi) in type_ranges.items()}
     with open(PROCESSED_DIR / "baseline_type_ranges.json", "w") as f:
         json.dump({
@@ -112,11 +87,6 @@ def load_graph():
         }, f, indent=2)
 
     return triples, total_nodes, rel_to_id, edge_type_names, rel_type_info, type_ranges
-
-
-# =========================================================================
-# Data splitting
-# =========================================================================
 
 def split_triples(triples):
     n = triples.size(0)
@@ -137,15 +107,9 @@ def build_filter_set(triples):
         s.add((h, r, t))
     return s
 
-
-# =========================================================================
-# Type-aware negative sampling
-# =========================================================================
-
 def build_type_range_tensors(rel_type_info, type_ranges):
     """Pre-compute per-relation src/dst type ranges as tensors for fast lookup."""
     n_rels = len(rel_type_info)
-    # For each relation: (src_start, src_end, dst_start, dst_end)
     rel_ranges = torch.zeros(n_rels, 4, dtype=torch.long)
     for rid, (src_type, dst_type) in rel_type_info.items():
         s_lo, s_hi = type_ranges[src_type]
@@ -155,25 +119,14 @@ def build_type_range_tensors(rel_type_info, type_ranges):
 
 
 def generate_negatives_type_aware(batch, rel_ranges):
-    """Generate type-aware negative samples.
-
-    For each positive triple (h, r, t), generate NEG_RATIO negatives by
-    corrupting either h or t. The replacement entity is sampled uniformly
-    from the correct node type for that relation.
-    """
     neg = batch.repeat(NEG_RATIO, 1)
     n_neg = neg.size(0)
 
-    # Decide which side to corrupt: 0 = head, 1 = tail
     mask = torch.randint(0, 2, (n_neg,), dtype=torch.bool)
 
-    # Look up type ranges for each relation in the batch
     rels = neg[:, 1]
-    ranges = rel_ranges[rels]  # (n_neg, 4): src_lo, src_hi, dst_lo, dst_hi
+    ranges = rel_ranges[rels]  
 
-    # Sample random entities within correct type range
-    # For head corruption: sample from [src_lo, src_hi)
-    # For tail corruption: sample from [dst_lo, dst_hi)
     head_lo = ranges[:, 0]
     head_range = (ranges[:, 1] - ranges[:, 0]).clamp(min=1)
     tail_lo = ranges[:, 2]
@@ -186,11 +139,6 @@ def generate_negatives_type_aware(batch, rel_ranges):
     neg[~mask, 2] = rand_tails[~mask]
 
     return neg
-
-
-# =========================================================================
-# Models
-# =========================================================================
 
 class TransE(nn.Module):
     def __init__(self, n_entities, n_relations, dim):
@@ -225,11 +173,6 @@ class DotProduct(nn.Module):
         neg_loss = -torch.log(1 - torch.sigmoid(neg_score) + 1e-9).mean()
         return (pos_loss + neg_loss) / 2
 
-
-# =========================================================================
-# Training
-# =========================================================================
-
 def train_model(model, train_triples, rel_ranges, epochs):
     optimizer = optim.Adam(model.parameters(), lr=LR)
     model.to(DEVICE)
@@ -263,11 +206,6 @@ def train_model(model, train_triples, rel_ranges, epochs):
 
     return losses
 
-
-# =========================================================================
-# Evaluation (type-aware filtered ranking)
-# =========================================================================
-
 @torch.no_grad()
 def evaluate(model, test_triples, filter_set, n_entities, edge_type_names,
              rel_type_info, type_ranges, n_sample=500):
@@ -284,29 +222,25 @@ def evaluate(model, test_triples, filter_set, n_entities, edge_type_names,
     for i in range(test_triples.size(0)):
         h, r, t = test_triples[i].tolist()
 
-        # Get the valid tail type range for this relation
         dst_type = rel_type_info[r][1]
         dst_lo, dst_hi = type_ranges[dst_type]
         n_candidates = dst_hi - dst_lo
 
-        # Score all entities of the correct tail type
         all_ents = torch.arange(dst_lo, dst_hi, device=DEVICE)
         h_rep = torch.full((n_candidates,), h, dtype=torch.long, device=DEVICE)
         r_rep = torch.full((n_candidates,), r, dtype=torch.long, device=DEVICE)
         scores = model.score(h_rep, r_rep, all_ents)
 
-        # Filtered: mask out known true triples (except the target)
         for j, eid in enumerate(range(dst_lo, dst_hi)):
             if eid != t and (h, r, eid) in filter_set:
                 scores[j] = -1e9
 
-        # Rank: how many candidates score >= the true tail
         t_local = t - dst_lo
         if 0 <= t_local < n_candidates:
             rank = (scores >= scores[t_local]).sum().item()
             rank = max(rank, 1)
         else:
-            rank = n_candidates  # tail not in expected type range (shouldn't happen)
+            rank = n_candidates  
 
         all_ranks.append(rank)
         rel_name = edge_type_names[r] if r < len(edge_type_names) else f"rel_{r}"
@@ -328,11 +262,6 @@ def evaluate(model, test_triples, filter_set, n_entities, edge_type_names,
             results[rel_name] = calc_metrics(data["ranks"])
 
     return results
-
-
-# =========================================================================
-# Figures
-# =========================================================================
 
 RELATION_DISPLAY = {
     "Gene__has_association__GeneDiseaseAssociation": "Gene - GDA",
@@ -445,11 +374,6 @@ def fig_per_relation(all_results, fig_dir):
     plt.close(fig)
     print(f"  -> figs/baseline_per_relation.png")
 
-
-# =========================================================================
-# Main
-# =========================================================================
-
 def main():
     print("=" * 70)
     print("03_train_baselines.py (type-aware negative sampling)")
@@ -464,7 +388,6 @@ def main():
     filter_set = build_filter_set(triples)
     print(f"  Filter set: {len(filter_set):,} known triples")
 
-    # Pre-compute type range tensors for negative sampling
     rel_ranges = build_type_range_tensors(rel_type_info, type_ranges)
 
     all_losses = {}

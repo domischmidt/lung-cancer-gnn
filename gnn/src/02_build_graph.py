@@ -1,38 +1,3 @@
-"""
-02_build_graph.py - Build PyG HeteroData preserving the full KG structure.
-
-This script keeps ALL n-ary reification nodes as first-class graph nodes,
-consistent with the Lung-CABO ontology. Each reification carries its literal
-values as node features:
-
-  Environmental reifications:
-    - ChemicalLocationAssociation: concentration value (1-dim)
-    - VitalStatistics: incidence + mortality (2-dim)
-
-  Biological reifications (NEW):
-    - GeneDiseaseAssociation: GDA score from DisGeNET (1-dim)
-    - VariantDiseaseAssociation: DSI + DPI scores (2-dim)
-
-  Other featured nodes:
-    - People: age + gender (2-dim, no ethnicity)
-    - Variant: chromosome + consequence type + position (3-dim)
-    - ChromoRearr: rearrangement type (1-dim)
-    - GeoPoliticalRegion / GeographicRegion: population (1-dim)
-    - CalendarYear: normalized year (1-dim)
-
-  Dropped nodes:
-    - Population (folded into Region features)
-    - Source (administrative only)
-
-Usage:  python gnn/src/02_build_graph.py
-Input:  gnn/data/interim/{nodes.csv, edges.csv}
-        env_data/data/processed/{graph_EEA.ttl, graph_OECD.ttl, graph_ECIS.ttl, graph_CDC.ttl}
-        bio_data/data/{gene_disease_assoc.ttl, variant_disease.ttl, ...}
-Output: gnn/data/processed/hetero_graph.pt
-        gnn/data/processed/node_id_maps.json
-        gnn/data/interim/figs/graph_schema.png
-"""
-
 import json
 import csv
 import re
@@ -67,7 +32,6 @@ BIO_NODE_TYPES = {
     "GeneDiseaseAssociation", "VariantDiseaseAssociation",
 }
 
-# Consequence type encoding for Variant features
 CONSEQUENCE_MAP = {
     "missense_variant": 0,
     "intron_variant": 1,
@@ -81,12 +45,11 @@ CONSEQUENCE_MAP = {
     "inframe_deletion": 9,
     "inframe_insertion": 10,
 }
-N_CONSEQUENCE_TYPES = len(CONSEQUENCE_MAP) + 1  # +1 for "other"
+N_CONSEQUENCE_TYPES = len(CONSEQUENCE_MAP) + 1 
 
-# ChromoRearr type encoding
 REARR_TYPE_MAP = {
     "Translocations": 0,
-    "Inverstions": 1,  # typo in source data
+    "Inverstions": 1, 
     "Inversions": 1,
     "Derivative chromosomes": 2,
     "Deletions": 3,
@@ -99,11 +62,6 @@ def normalize_features(feat_matrix):
     mean = feat_matrix.mean(dim=0, keepdim=True)
     std = feat_matrix.std(dim=0, keepdim=True).clamp(min=1e-6)
     return (feat_matrix - mean) / std
-
-
-# =========================================================================
-# Step 1: Load interim data
-# =========================================================================
 
 def load_interim():
     nodes = {}
@@ -123,11 +81,6 @@ def load_interim():
 
     print(f"  Loaded {len(nodes):,} nodes, {len(edges):,} edges from interim")
     return nodes, edges
-
-
-# =========================================================================
-# Step 2: Read literal values from env TTLs
-# =========================================================================
 
 def read_env_literal_values():
     """Read concentration, incidence, mortality, population from TTL files."""
@@ -185,11 +138,6 @@ def read_env_literal_values():
     print(f"    Population: {len(population_values):,}")
     return cla_values, vs_incidence, vs_mortality, population_values
 
-
-# =========================================================================
-# Step 3: Read bio reification data (GDA scores, VDA scores, Variant features)
-# =========================================================================
-
 def read_bio_features():
     """Parse SPARQL result TTLs for GDA scores, VDA scores, and Variant metadata."""
     import rdflib
@@ -212,8 +160,7 @@ def read_bio_features():
             rows.append(row)
         return rows
 
-    # --- GDA scores ---
-    gda_scores = {}  # (gene_uri, disease_code) -> score
+    gda_scores = {}  
     gda_path = BIO_DATA / "gene_disease_assoc.ttl"
     if gda_path.exists():
         print(f"    gene_disease_assoc.ttl ...")
@@ -223,13 +170,11 @@ def read_bio_features():
             disease_cui = r.get("DiseaseCui", "")
             score = r.get("GdaScore")
             if gene_id and disease_cui and score is not None:
-                # Use full gene_id as-is (e.g. "ncbigene:29799") to match 01's make_uri("gene", g_id)
                 gda_scores[(gene_id, disease_cui)] = float(score)
         print(f"      {len(gda_scores):,} GDA scores")
 
-    # --- VDA scores + Variant metadata ---
-    vda_scores = {}  # (variant_id, disease_code) -> {dsi, dpi, gene_num}
-    variant_meta = {}  # variant_uri -> [chrom, consequence, position]
+    vda_scores = {}  
+    variant_meta = {}  
     vda_path = BIO_DATA / "variant_disease.ttl"
     if vda_path.exists():
         print(f"    variant_disease.ttl ...")
@@ -241,7 +186,6 @@ def read_bio_features():
             dsi = r.get("DiseaseSpecificity")
             dpi = r.get("DiseasePleiotropy")
             if variant_id and disease_cui:
-                # Keep full gene_id (e.g. "ncbigene:1956") to match 01's make_uri("gene", g_id)
                 vda_scores[(variant_id, disease_cui)] = {
                     "dsi": float(dsi) if dsi is not None else 0.0,
                     "dpi": float(dpi) if dpi is not None else 0.0,
@@ -271,7 +215,6 @@ def read_bio_features():
                     variant_meta[v_uri] = [chrom_val, cons_val, pos_val]
         print(f"      {len(vda_scores):,} VDA scores, {len(variant_meta):,} variant metadata")
 
-    # --- ChromoRearr type ---
     rearr_types = {}
     rearr_path = BIO_DATA / "disease_and_chromo_arr.ttl"
     if rearr_path.exists():
@@ -286,11 +229,6 @@ def read_bio_features():
         print(f"      {len(rearr_types):,} rearrangement types")
 
     return gda_scores, vda_scores, variant_meta, rearr_types
-
-
-# =========================================================================
-# Step 4: Extract People features and Region population
-# =========================================================================
 
 def extract_people_features(nodes):
     people_features = {}
@@ -307,7 +245,6 @@ def extract_people_features(nodes):
                 age_str = p
         age_val = 0.5
         if age_str:
-            # Strip trailing + first (e.g. "85+" -> "85", "75-85+" -> "75-85")
             clean = age_str.rstrip("+")
             if "-" in clean:
                 try:
@@ -336,11 +273,6 @@ def build_region_population(nodes, edges, population_values):
                 region_pop[e["dst"]] = population_values[e["src"]]
     return region_pop
 
-
-# =========================================================================
-# Step 5: Create bio reification nodes and replace direct edges
-# =========================================================================
-
 def create_bio_reification_nodes(nodes, edges, gda_scores, vda_scores):
     """Replace direct Gene-Disease and Variant-Disease edges with reification nodes."""
     new_nodes = dict(nodes)
@@ -349,7 +281,6 @@ def create_bio_reification_nodes(nodes, edges, gda_scores, vda_scores):
     vda_counter = 0
 
     for e in edges:
-        # Replace Gene -> associated_with -> Disease
         if e["rel"] == "associated_with" and e["src_type"] == "Gene" and e["dst_type"] == "Disease":
             gene_uri = e["src"]
             disease_uri = e["dst"]
@@ -370,7 +301,6 @@ def create_bio_reification_nodes(nodes, edges, gda_scores, vda_scores):
             new_edges.append({"src": gda_uri, "src_type": "GeneDiseaseAssociation", "rel": "associated_with",
                               "dst": disease_uri, "dst_type": "Disease", "attrs": {}})
 
-        # Replace Variant -> variant_of -> Disease
         elif e["rel"] == "variant_of" and e["src_type"] == "Variant" and e["dst_type"] == "Disease":
             variant_uri = e["src"]
             disease_uri = e["dst"]
@@ -391,7 +321,6 @@ def create_bio_reification_nodes(nodes, edges, gda_scores, vda_scores):
                               "dst": vda_uri, "dst_type": "VariantDiseaseAssociation", "attrs": {}})
             new_edges.append({"src": vda_uri, "src_type": "VariantDiseaseAssociation", "rel": "variant_of",
                               "dst": disease_uri, "dst_type": "Disease", "attrs": {}})
-            # VDA -> Gene (which gene this variant belongs to)
             gene_id = vda_info["gene_id"]
             if gene_id:
                 gene_uri = f"lucia:gene/{gene_id}"
@@ -406,11 +335,6 @@ def create_bio_reification_nodes(nodes, edges, gda_scores, vda_scores):
     print(f"  Created {vda_counter:,} VDA reification nodes")
     return new_nodes, new_edges
 
-
-# =========================================================================
-# Step 6: Filter graph
-# =========================================================================
-
 def filter_graph(nodes, edges):
     remove_types = EXCLUDED_TYPES | DROP_TYPES
     kept_nodes = {uri: info for uri, info in nodes.items() if info["type"] not in remove_types}
@@ -424,11 +348,6 @@ def filter_graph(nodes, edges):
             kept_edges.append(e)
     print(f"  Filtered: {len(kept_nodes):,} nodes, {len(kept_edges):,} edges")
     return kept_nodes, kept_edges
-
-
-# =========================================================================
-# Step 7: Build PyG HeteroData
-# =========================================================================
 
 def build_pyg_heterodata(nodes, edges, cla_values, vs_incidence, vs_mortality,
                          people_features, region_population, variant_meta, rearr_types):
@@ -584,11 +503,6 @@ def build_pyg_heterodata(nodes, edges, cla_values, vs_incidence, vs_mortality,
 
     return data, node_type_to_ids
 
-
-# =========================================================================
-# Step 8: Save
-# =========================================================================
-
 def save_outputs(data, node_type_to_ids, nodes):
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     torch.save(data, PROCESSED_DIR / "hetero_graph.pt")
@@ -603,11 +517,6 @@ def save_outputs(data, node_type_to_ids, nodes):
     with open(PROCESSED_DIR / "node_id_maps.json", "w") as f:
         json.dump(id_maps, f, indent=1)
     print(f"  -> {PROCESSED_DIR / 'node_id_maps.json'}")
-
-
-# =========================================================================
-# Step 9: Figure
-# =========================================================================
 
 def fig_graph_schema(nodes, edges, fig_dir):
     fig_dir.mkdir(parents=True, exist_ok=True)
@@ -644,11 +553,6 @@ def fig_graph_schema(nodes, edges, fig_dir):
     fig.savefig(fig_dir / "graph_schema.png", dpi=200, bbox_inches="tight")
     plt.close(fig)
     print(f"  -> figs/graph_schema.png")
-
-
-# =========================================================================
-# Main
-# =========================================================================
 
 def main():
     print("=" * 70)

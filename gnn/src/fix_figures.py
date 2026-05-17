@@ -1,13 +1,3 @@
-"""
-fix_figures.py - Fix the LI -> Liechtenstein label and X-axis sorting issues.
-
-Usage: python gnn/src/fix_figures.py
-Reads: gnn/data/processed/env_predictions/temporal_trends.csv
-       gnn/data/processed/env_predictions/temporal_trends_by_country.csv
-Writes: gnn/data/processed/env_predictions/figs/temporal_trend.png
-        gnn/data/processed/env_predictions/figs/temporal_trend_by_country.png
-"""
-
 import csv
 from pathlib import Path
 from collections import defaultdict
@@ -21,7 +11,6 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 OUTPUT_DIR = REPO_ROOT / "gnn" / "data" / "processed" / "env_predictions"
 FIG_DIR = OUTPUT_DIR / "figs"
 
-# Country label fixes
 COUNTRY_LABEL_FIX = {
     "LI": "Liechtenstein",
 }
@@ -47,7 +36,6 @@ def fix_temporal_trend():
                     "n_vitalstats": int(row["n_vitalstats"]),
                 })
 
-    # Sort by year (fixes the X-axis ordering issue)
     data.sort(key=lambda x: x["year"])
 
     years = [d["year"] for d in data]
@@ -61,11 +49,9 @@ def fix_temporal_trend():
                  fontsize=12, fontweight="bold")
     ax.grid(True, alpha=0.3)
 
-    # Use integer ticks, every 2 years
     ax.set_xticks([y for y in years if y % 2 == 0])
     ax.set_xticklabels([str(y) for y in years if y % 2 == 0], rotation=45, ha="right")
 
-    # Set reasonable y-axis range
     ax.set_ylim(0.55, 0.70)
 
     plt.tight_layout()
@@ -78,7 +64,6 @@ def fix_temporal_trend_by_country():
     """Fix the per-country temporal trend: LI -> Liechtenstein, sort X-axis."""
     print("[2/2] Fixing temporal_trend_by_country.png ...")
 
-    # Read data
     country_year_data = defaultdict(list)
     with open(OUTPUT_DIR / "temporal_trends_by_country.csv") as f:
         reader = csv.DictReader(f)
@@ -88,17 +73,14 @@ def fix_temporal_trend_by_country():
             mean_score = float(row["mean_score"])
             country_year_data[country].append((year, mean_score))
 
-    # Sort each country's data by year
     for country in country_year_data:
         country_year_data[country].sort(key=lambda x: x[0])
 
-    # Determine country order by overall mean score
     country_means = {}
     for country, points in country_year_data.items():
         country_means[country] = np.mean([s for _, s in points])
     top_countries = sorted(country_means.items(), key=lambda x: x[1], reverse=True)
 
-    # Plot
     fig, ax = plt.subplots(figsize=(12, 6))
     colors = ["#c44e52", "#4c72b0", "#55a868", "#8172b2", "#ccb974"]
 
@@ -116,12 +98,10 @@ def fix_temporal_trend_by_country():
     ax.legend(fontsize=9, loc="lower right")
     ax.grid(True, alpha=0.3)
 
-    # Collect all years and set proper ticks
     all_years = sorted(set(y for pts in country_year_data.values() for y, _ in pts))
     ax.set_xticks([y for y in all_years if y % 2 == 0])
     ax.set_xticklabels([str(y) for y in all_years if y % 2 == 0], rotation=45, ha="right")
 
-    # Set reasonable y-axis
     ax.set_ylim(0.55, 0.72)
 
     plt.tight_layout()
@@ -129,7 +109,6 @@ def fix_temporal_trend_by_country():
     plt.close(fig)
     print(f"  -> {FIG_DIR / 'temporal_trend_by_country.png'}")
 
-    # Also fix the CSV
     out_path = OUTPUT_DIR / "temporal_trends_by_country.csv"
     rows = []
     with open(out_path) as f:

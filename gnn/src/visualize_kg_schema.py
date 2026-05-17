@@ -1,11 +1,3 @@
-"""
-visualize_kg_schema.py - Presentation-ready schema diagram of the KG.
-
-Usage:  python gnn/src/visualize_kg_schema.py
-Input:  gnn/data/processed/hetero_graph.pt
-Output: gnn/data/interim/figs/kg_schema_network.png
-"""
-
 import json
 import math
 from pathlib import Path
@@ -22,10 +14,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 PROCESSED_DIR = REPO_ROOT / "gnn" / "data" / "processed"
 FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 
-# ---- Layout positions (x, y) in [0,1] space ----
-# Spread nodes more for readability
 POS = {
-    # Biological (left)
     "Gene":           (0.06, 0.38),
     "Pathway":        (0.06, 0.60),
     "GeneProduct":    (0.06, 0.80),
@@ -33,15 +22,11 @@ POS = {
     "Biomarker":      (0.22, 0.82),
     "GeneFusion":     (0.22, 0.52),
     "ChromoRearr":    (0.22, 0.67),
-    # Bio reifications (center-left)
     "GeneDiseaseAssociation":    (0.36, 0.38),
     "VariantDiseaseAssociation": (0.36, 0.20),
-    # Bridge (center)
     "Disease":        (0.52, 0.48),
-    # Env reifications (center-right)
     "VitalStatistics":             (0.66, 0.58),
     "ChemicalLocationAssociation": (0.66, 0.32),
-    # Environmental (right)
     "Chemical":           (0.82, 0.18),
     "GeoPoliticalRegion": (0.82, 0.40),
     "GeographicRegion":   (0.82, 0.60),
@@ -100,8 +85,6 @@ FEAT = {
     "CalendarYear": "year 1d",
 }
 
-# ---- Manual edge label offsets to avoid overlaps ----
-# key: (src_type, dst_type) -> (dx, dy) offset from midpoint for label
 LABEL_NUDGE = {
     ("Disease", "VitalStatistics"): (0.0, 0.02),
     ("Disease", "GeneFusion"): (0.0, 0.02),
@@ -121,7 +104,6 @@ LABEL_NUDGE = {
     ("GeographicRegion", "Country"): (0.0, 0.02),
 }
 
-# ---- Discovery relations (novel predictions) - highlighted in orange ----
 DISCOVERY_EDGES = {
     ("GeneDiseaseAssociation", "Disease"),   # GDA-Disease
     ("VariantDiseaseAssociation", "Disease"), # VDA-Disease
@@ -149,7 +131,6 @@ def load_graph_schema():
             edge_types.append((src_type, rel, dst_type, n))
         return node_counts, edge_types
 
-    # Fallback: hardcoded from thesis Table 4.1 and Section 4.3.4
     print("  [INFO] hetero_graph.pt not found, using thesis values.")
     node_counts = {
         "ChemicalLocationAssociation": 131610,
@@ -227,7 +208,6 @@ def draw_arrow(ax, sx, sy, dx, dy, label, nudge=(0, 0), color="#888",
     mx = (sx + dx) / 2 + nudge[0]
     my = (sy + dy) / 2 + nudge[1]
 
-    # Compute angle so text reads left-to-right
     angle = math.degrees(math.atan2(dy - sy, dx - sx))
     if angle > 90:
         angle -= 180
@@ -259,7 +239,6 @@ def main():
     ax.set_aspect("equal")
     ax.axis("off")
 
-    # Background regions
     ax.axvspan(-0.03, 0.30, alpha=0.025, color="#534AB7")
     ax.axvspan(0.30, 0.58, alpha=0.020, color="#993C1D")
     ax.axvspan(0.58, 1.03, alpha=0.025, color="#0F6E56")
@@ -271,16 +250,13 @@ def main():
     ax.text(0.83, 0.97, "Environmental", fontsize=15, fontweight="bold", color="#0F6E56",
             ha="center", va="top", alpha=0.5)
 
-    # ---- Draw edges ----
     drawn = set()
     for src_type, rel, dst_type, n in edge_types:
         if src_type not in POS or dst_type not in POS:
             continue
 
-        # Self-loop (Disease -> subtype_of -> Disease)
         if src_type == dst_type:
             x, y = POS[src_type]
-            # Draw loop below the node
             loop_y = y + 0.06
             ax.annotate("",
                         xy=(x + 0.025, y + 0.025), xytext=(x - 0.025, y + 0.025),
@@ -303,13 +279,11 @@ def main():
         is_disc = (src_type, dst_type) in DISCOVERY_EDGES
         draw_arrow(ax, sx, sy, dx, dy, label, nudge, is_discovery=is_disc)
 
-    # ---- Draw nodes ----
     for nt, (x, y) in POS.items():
         count = node_counts.get(nt, 0)
         if count == 0:
             continue
 
-        # Circle size based on log - larger to fit full names
         radius = 400 + 220 * math.log10(max(count, 2))
         radius = min(radius, 3000)
 
@@ -318,24 +292,19 @@ def main():
         name = SHORT.get(nt, nt)
         feat = FEAT.get(nt, "")
 
-        # Draw circle
         ax.scatter(x, y, s=radius, c=fill, edgecolors=stroke, linewidth=1.8, zorder=5)
 
-        # Name inside circle
         ax.text(x, y + 0.005, name, fontsize=7.5, fontweight="bold", ha="center", va="center",
                 color=stroke, zorder=6, linespacing=0.85)
 
-        # Count below circle
         count_str = f"{count:,}"
         ax.text(x, y - 0.038, count_str, fontsize=7, ha="center", va="top",
                 color="#444", zorder=6)
 
-        # Feature annotation below count
         if feat:
             ax.text(x, y - 0.058, feat, fontsize=5.5, ha="center", va="top",
                     color="#888", style="italic", zorder=6)
 
-    # ---- Title ----
     ax.text(0.50, 1.02, "Lung-CABO Knowledge Graph Schema", fontsize=19, fontweight="bold",
             ha="center", va="bottom", color="#222")
     ax.text(0.50, -0.015,
@@ -344,7 +313,6 @@ def main():
             f"2 R-GCN layers (optimised)",
             fontsize=10, ha="center", va="top", color="#777")
 
-    # ---- Legend ----
     legend_items = [
         mpatches.Patch(facecolor="#CECBF6", edgecolor="#534AB7", label="Biological entity"),
         mpatches.Patch(facecolor="#B5D4F4", edgecolor="#185FA5", label="Bio reification (GDA, VDA)"),
