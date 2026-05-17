@@ -26,28 +26,28 @@ FIG_DIR = REPO_ROOT / "gnn" / "data" / "interim" / "figs"
 # Spread nodes more for readability
 POS = {
     # Biological (left)
-    "Gene":           (0.06, 0.40),
-    "Pathway":        (0.06, 0.62),
+    "Gene":           (0.06, 0.38),
+    "Pathway":        (0.06, 0.60),
     "GeneProduct":    (0.06, 0.80),
-    "Variant":        (0.20, 0.22),
-    "Biomarker":      (0.20, 0.80),
-    "GeneFusion":     (0.20, 0.52),
-    "ChromoRearr":    (0.20, 0.65),
+    "Variant":        (0.20, 0.20),
+    "Biomarker":      (0.22, 0.82),
+    "GeneFusion":     (0.22, 0.52),
+    "ChromoRearr":    (0.22, 0.67),
     # Bio reifications (center-left)
-    "GeneDiseaseAssociation":    (0.36, 0.40),
-    "VariantDiseaseAssociation": (0.36, 0.22),
+    "GeneDiseaseAssociation":    (0.36, 0.38),
+    "VariantDiseaseAssociation": (0.36, 0.20),
     # Bridge (center)
-    "Disease":        (0.50, 0.48),
+    "Disease":        (0.52, 0.48),
     # Env reifications (center-right)
-    "VitalStatistics":             (0.64, 0.58),
-    "ChemicalLocationAssociation": (0.64, 0.32),
+    "VitalStatistics":             (0.66, 0.58),
+    "ChemicalLocationAssociation": (0.66, 0.32),
     # Environmental (right)
-    "Chemical":           (0.80, 0.18),
-    "GeoPoliticalRegion": (0.80, 0.40),
-    "GeographicRegion":   (0.80, 0.60),
-    "Country":            (0.94, 0.50),
-    "CalendarYear":       (0.94, 0.25),
-    "People":             (0.80, 0.78),
+    "Chemical":           (0.82, 0.18),
+    "GeoPoliticalRegion": (0.82, 0.40),
+    "GeographicRegion":   (0.82, 0.60),
+    "Country":            (0.95, 0.50),
+    "CalendarYear":       (0.95, 0.25),
+    "People":             (0.82, 0.80),
 }
 
 # ---- Colors ----
@@ -75,13 +75,16 @@ STROKE = {
 }
 
 SHORT = {
-    "GeneDiseaseAssociation": "GDA",
-    "VariantDiseaseAssociation": "VDA",
-    "ChemicalLocationAssociation": "CLA",
-    "VitalStatistics": "VitalStats",
-    "GeoPoliticalRegion": "City (EEA)",
-    "GeographicRegion": "Region (OECD)",
-    "CalendarYear": "Year",
+    "GeneDiseaseAssociation": "Gene-Disease\nAssociation",
+    "VariantDiseaseAssociation": "Variant-Disease\nAssociation",
+    "ChemicalLocationAssociation": "Chemical-Location\nAssociation",
+    "VitalStatistics": "Vital\nStatistics",
+    "GeoPoliticalRegion": "Geopolitical\nRegion",
+    "GeographicRegion": "Geographic\nRegion",
+    "CalendarYear": "Calendar\nYear",
+    "ChromoRearr": "Chromosomal\nRearrangement",
+    "GeneFusion": "Gene\nFusion",
+    "GeneProduct": "Gene\nProduct",
 }
 
 FEAT = {
@@ -118,26 +121,109 @@ LABEL_NUDGE = {
     ("GeographicRegion", "Country"): (0.0, 0.02),
 }
 
+# ---- Discovery relations (novel predictions) - highlighted in orange ----
+DISCOVERY_EDGES = {
+    ("GeneDiseaseAssociation", "Disease"),   # GDA-Disease
+    ("VariantDiseaseAssociation", "Disease"), # VDA-Disease
+    ("Gene", "Pathway"),                      # Gene-Pathway
+    ("Disease", "GeneFusion"),                # Disease-GeneFusion
+    ("Disease", "ChromoRearr"),               # Disease-ChromoRearr
+    ("Biomarker", "Disease"),                 # Biomarker-Disease
+}
+DISCOVERY_COLOR = "#E07020"
+DISCOVERY_COLOR_LIGHT = "#F5A623"
+
 
 def load_graph_schema():
-    data = torch.load(PROCESSED_DIR / "hetero_graph.pt", weights_only=False)
-    node_counts = {}
-    for nt in data.node_types:
-        node_counts[nt] = data[nt].num_nodes
-    edge_types = []
-    for et in data.edge_types:
-        src_type, rel, dst_type = et
-        n = data[et].edge_index.size(1)
-        edge_types.append((src_type, rel, dst_type, n))
+    """Load schema from .pt file, or use thesis values as fallback."""
+    pt_path = PROCESSED_DIR / "hetero_graph.pt"
+    if pt_path.exists():
+        data = torch.load(pt_path, weights_only=False)
+        node_counts = {}
+        for nt in data.node_types:
+            node_counts[nt] = data[nt].num_nodes
+        edge_types = []
+        for et in data.edge_types:
+            src_type, rel, dst_type = et
+            n = data[et].edge_index.size(1)
+            edge_types.append((src_type, rel, dst_type, n))
+        return node_counts, edge_types
+
+    # Fallback: hardcoded from thesis Table 4.1 and Section 4.3.4
+    print("  [INFO] hetero_graph.pt not found, using thesis values.")
+    node_counts = {
+        "ChemicalLocationAssociation": 131610,
+        "VitalStatistics": 33488,
+        "GeneDiseaseAssociation": 17701,
+        "Gene": 10099,
+        "GeneFusion": 4266,
+        "GeoPoliticalRegion": 3143,
+        "ChromoRearr": 1993,
+        "Pathway": 1492,
+        "VariantDiseaseAssociation": 733,
+        "Variant": 709,
+        "GeographicRegion": 518,
+        "GeneProduct": 133,
+        "CalendarYear": 72,
+        "People": 66,
+        "Country": 51,
+        "Disease": 43,
+        "Biomarker": 24,
+        "Chemical": 10,
+    }
+    edge_types = [
+        ("ChemicalLocationAssociation", "refers_to", "Chemical", 131610),
+        ("ChemicalLocationAssociation", "has_time_boundary", "CalendarYear", 131610),
+        ("ChemicalLocationAssociation", "refers_to", "GeoPoliticalRegion", 117609),
+        ("ChemicalLocationAssociation", "refers_to", "GeographicRegion", 14001),
+        ("Gene", "part_of_pathway", "Pathway", 54005),
+        ("Disease", "detected_finding", "VitalStatistics", 33488),
+        ("Gene", "has_association", "GeneDiseaseAssociation", 17701),
+        ("GeneDiseaseAssociation", "associated_with", "Disease", 17701),
+        ("Disease", "has_fusion", "GeneFusion", 4289),
+        ("Disease", "has_rearrangement", "ChromoRearr", 2309),
+        ("Variant", "has_variant_association", "VariantDiseaseAssociation", 733),
+        ("VariantDiseaseAssociation", "variant_of", "Disease", 733),
+        ("VariantDiseaseAssociation", "located_in_gene", "Gene", 733),
+        ("VitalStatistics", "part_of", "GeographicRegion", 23076),
+        ("VitalStatistics", "part_of", "Country", 9228),
+        ("VitalStatistics", "has_time_boundary", "CalendarYear", 33488),
+        ("VitalStatistics", "has_subject", "People", 33488),
+        ("GeoPoliticalRegion", "part_of", "Country", 3143),
+        ("GeographicRegion", "part_of", "Country", 518),
+        ("GeneProduct", "part_of_pathway", "Pathway", 170),
+        ("Pathway", "associated_with", "Disease", 2),
+        ("Disease", "subtype_of", "Disease", 35),
+        ("Biomarker", "marker_for", "Disease", 24),
+        ("Gene", "linked_to", "ChromoRearr", 2309),
+    ]
     return node_counts, edge_types
 
 
-def draw_arrow(ax, sx, sy, dx, dy, label, nudge=(0, 0), color="#888"):
+def draw_arrow(ax, sx, sy, dx, dy, label, nudge=(0, 0), color="#888",
+               is_discovery=False):
     """Draw an arrow with a label at the midpoint."""
+    if is_discovery:
+        arrow_color = DISCOVERY_COLOR
+        arrow_lw = 1.8
+        arrow_alpha = 0.75
+        label_color = DISCOVERY_COLOR
+        label_alpha = 1.0
+        label_fontweight = "bold"
+        label_bg = "#FFF5EB"
+    else:
+        arrow_color = color
+        arrow_lw = 0.8
+        arrow_alpha = 0.45
+        label_color = "#555"
+        label_alpha = 0.85
+        label_fontweight = "normal"
+        label_bg = "white"
+
     ax.annotate("",
                 xy=(dx, dy), xytext=(sx, sy),
-                arrowprops=dict(arrowstyle="-|>", color=color, lw=0.8,
-                                shrinkA=20, shrinkB=20, alpha=0.45))
+                arrowprops=dict(arrowstyle="-|>", color=arrow_color, lw=arrow_lw,
+                                shrinkA=20, shrinkB=20, alpha=arrow_alpha))
     mx = (sx + dx) / 2 + nudge[0]
     my = (sy + dy) / 2 + nudge[1]
 
@@ -149,8 +235,9 @@ def draw_arrow(ax, sx, sy, dx, dy, label, nudge=(0, 0), color="#888"):
         angle += 180
 
     ax.text(mx, my, label, fontsize=5.5, ha="center", va="center",
-            color="#555", alpha=0.85, rotation=angle, rotation_mode="anchor",
-            bbox=dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="none", alpha=0.7))
+            color=label_color, alpha=label_alpha, fontweight=label_fontweight,
+            rotation=angle, rotation_mode="anchor",
+            bbox=dict(boxstyle="round,pad=0.15", facecolor=label_bg, edgecolor="none", alpha=0.85))
 
 
 def main():
@@ -166,7 +253,7 @@ def main():
     print(f"  {len(node_counts)} node types, {len(edge_types)} edge types")
 
     FIG_DIR.mkdir(parents=True, exist_ok=True)
-    fig, ax = plt.subplots(figsize=(22, 13))
+    fig, ax = plt.subplots(figsize=(24, 14))
     ax.set_xlim(-0.03, 1.03)
     ax.set_ylim(-0.03, 1.03)
     ax.set_aspect("equal")
@@ -174,14 +261,14 @@ def main():
 
     # Background regions
     ax.axvspan(-0.03, 0.30, alpha=0.025, color="#534AB7")
-    ax.axvspan(0.30, 0.56, alpha=0.020, color="#993C1D")
-    ax.axvspan(0.56, 1.03, alpha=0.025, color="#0F6E56")
+    ax.axvspan(0.30, 0.58, alpha=0.020, color="#993C1D")
+    ax.axvspan(0.58, 1.03, alpha=0.025, color="#0F6E56")
 
     ax.text(0.15, 0.97, "Biological", fontsize=15, fontweight="bold", color="#534AB7",
             ha="center", va="top", alpha=0.5)
-    ax.text(0.43, 0.97, "Bridge", fontsize=15, fontweight="bold", color="#993C1D",
+    ax.text(0.44, 0.97, "Bridge", fontsize=15, fontweight="bold", color="#993C1D",
             ha="center", va="top", alpha=0.5)
-    ax.text(0.82, 0.97, "Environmental", fontsize=15, fontweight="bold", color="#0F6E56",
+    ax.text(0.83, 0.97, "Environmental", fontsize=15, fontweight="bold", color="#0F6E56",
             ha="center", va="top", alpha=0.5)
 
     # ---- Draw edges ----
@@ -213,7 +300,8 @@ def main():
         dx, dy = POS[dst_type]
         label = rel.replace("_", " ")
         nudge = LABEL_NUDGE.get((src_type, dst_type), (0, 0.015))
-        draw_arrow(ax, sx, sy, dx, dy, label, nudge)
+        is_disc = (src_type, dst_type) in DISCOVERY_EDGES
+        draw_arrow(ax, sx, sy, dx, dy, label, nudge, is_discovery=is_disc)
 
     # ---- Draw nodes ----
     for nt, (x, y) in POS.items():
@@ -221,9 +309,9 @@ def main():
         if count == 0:
             continue
 
-        # Circle size based on log
-        radius = 300 + 180 * math.log10(max(count, 2))
-        radius = min(radius, 2500)
+        # Circle size based on log - larger to fit full names
+        radius = 400 + 220 * math.log10(max(count, 2))
+        radius = min(radius, 3000)
 
         fill = FILL.get(nt, "#ddd")
         stroke = STROKE.get(nt, "#888")
@@ -234,8 +322,8 @@ def main():
         ax.scatter(x, y, s=radius, c=fill, edgecolors=stroke, linewidth=1.8, zorder=5)
 
         # Name inside circle
-        ax.text(x, y + 0.005, name, fontsize=8.5, fontweight="bold", ha="center", va="center",
-                color=stroke, zorder=6)
+        ax.text(x, y + 0.005, name, fontsize=7.5, fontweight="bold", ha="center", va="center",
+                color=stroke, zorder=6, linespacing=0.85)
 
         # Count below circle
         count_str = f"{count:,}"
@@ -265,6 +353,8 @@ def main():
         mpatches.Patch(facecolor="#C0DD97", edgecolor="#3B6D11", label="Environmental entity"),
         mpatches.Patch(facecolor="#FAC775", edgecolor="#854F0B", label="Temporal (CalendarYear)"),
         mpatches.Patch(facecolor="#F4C0D1", edgecolor="#993556", label="Demographic (People)"),
+        mpatches.FancyArrow(0, 0, 0.1, 0, width=0.02, facecolor=DISCOVERY_COLOR,
+                            edgecolor=DISCOVERY_COLOR, label="Discovery relation (novel predictions)"),
     ]
     ax.legend(handles=legend_items, loc="lower left", fontsize=8.5, framealpha=0.92,
               edgecolor="#bbb", fancybox=True, borderpad=1.0)
